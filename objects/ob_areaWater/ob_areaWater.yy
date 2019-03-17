@@ -1,14 +1,14 @@
 {
-    "id": "507b4433-6be2-49f4-90c8-b655de340e2d",
+    "id": "aa3279b0-aa86-4051-95f8-7a7050934d97",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "ob_16x16",
+    "name": "ob_areaWater",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "f160ffa3-1d4c-46ec-a0b5-33beceea012f",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "6fac0921-7e66-4ef4-9bfb-761ba2d1735f",
-    "visible": false
+    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "visible": true
 }

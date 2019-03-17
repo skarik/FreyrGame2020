@@ -10,3 +10,5 @@ currentUsable = null;
 currentTillable = null;
 
 camPlayerInit();
+
+inWater = false;

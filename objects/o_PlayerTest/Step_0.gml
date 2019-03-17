@@ -1,9 +1,17 @@
 controlUpdate(false);
 
-var kMoveSpeed = 100;
+inWater = exists(collision_point(x, y + 6, ob_areaWater, false, true))
+	&& exists(collision_point(x - 5, y + 6, ob_areaWater, false, true))
+	&& exists(collision_point(x + 5, y + 6, ob_areaWater, false, true))
+	&& exists(collision_point(x, y + 6 - 4, ob_areaWater, false, true))
+	&& exists(collision_point(x, y + 6 + 4, ob_areaWater, false, true));
 
-xspeed = xAxis.value * 100;
-yspeed = yAxis.value * 100;
+var kMoveSpeed = 100;
+if (inWater)
+	kMoveSpeed *= 0.50;
+
+xspeed = xAxis.value * kMoveSpeed;
+yspeed = yAxis.value * kMoveSpeed;
 
 // If motion is not stopped, check for some sliding angle stuff
 if (sqr(xspeed) + sqr(yspeed) > 0)

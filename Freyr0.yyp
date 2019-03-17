@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0e884b1b-eaa1-4c2c-b09e-e11a8e2fe982",
+            "Value": {
+                "id": "34d237f6-87dc-41e0-a4a2-cf9171881ea8",
+                "resourcePath": "sprites\\sc_32x32_blue\\sc_32x32_blue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "11255813-b9c4-4e61-80ef-aa0e213360d9",
             "Value": {
                 "id": "ce33c043-5db5-4538-affb-a7dd24ac3081",
@@ -346,7 +354,7 @@
             "Key": "507b4433-6be2-49f4-90c8-b655de340e2d",
             "Value": {
                 "id": "3a199931-a5dd-4a49-b15a-e76ccb57471a",
-                "resourcePath": "objects\\ob_16x16\\ob_16x16.yy",
+                "resourcePath": "objects\\o_c16x16\\o_c16x16.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -522,7 +530,7 @@
             "Key": "7523da81-30c2-41ab-880d-38935b14b2a5",
             "Value": {
                 "id": "94e95c27-748c-445f-b26f-20ffd63e4376",
-                "resourcePath": "objects\\ob_32x32\\ob_32x32.yy",
+                "resourcePath": "objects\\o_c32x32\\o_c32x32.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -708,6 +716,14 @@
                 "id": "a5a2ae22-6600-4adc-bca8-e9417aea38f5",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aa3279b0-aa86-4051-95f8-7a7050934d97",
+            "Value": {
+                "id": "a0ba4a57-9af0-4dd9-8efd-b181ebeaeae2",
+                "resourcePath": "objects\\ob_areaWater\\ob_areaWater.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -940,6 +956,14 @@
                 "id": "f45d1981-72a0-4a81-a0d5-02975635311c",
                 "resourcePath": "views\\e38a50c0-a6bb-40ea-92e7-382dcd968cec.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e716f038-a1f6-495b-86ba-e54b74af5d4f",
+            "Value": {
+                "id": "c4cdca6e-372f-4c5e-ad57-0a77cdec4b34",
+                "resourcePath": "objects\\o_water32x32\\o_water32x32.yy",
+                "resourceType": "GMObject"
             }
         },
         {
