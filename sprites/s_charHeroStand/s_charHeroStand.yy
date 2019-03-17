@@ -2,14 +2,14 @@
     "id": "a33c084e-b2eb-4d4d-ab0c-6ed87e9b95dd",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite6",
+    "name": "s_charHeroStand",
     "For3D": false,
     "HTile": false,
     "VTile": false,
     "bbox_bottom": 31,
     "bbox_left": 3,
-    "bbox_right": 20,
-    "bbox_top": 7,
+    "bbox_right": 19,
+    "bbox_top": 3,
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
@@ -80,6 +80,28 @@
                     "LayerId": "e2862ee7-5d19-499f-b5ae-4775069246c1"
                 }
             ]
+        },
+        {
+            "id": "89c50edf-8ba6-41c9-b8ea-9ea8ae00fd6d",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "a33c084e-b2eb-4d4d-ab0c-6ed87e9b95dd",
+            "compositeImage": {
+                "id": "fd6830e6-328a-444c-8f4b-0cddb4b9a966",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "89c50edf-8ba6-41c9-b8ea-9ea8ae00fd6d",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "9787af54-8e44-42a4-a83a-d5537027fbf9",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "89c50edf-8ba6-41c9-b8ea-9ea8ae00fd6d",
+                    "LayerId": "e2862ee7-5d19-499f-b5ae-4775069246c1"
+                }
+            ]
         }
     ],
     "gridX": 0,
@@ -109,6 +131,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 24,
-    "xorig": 12,
+    "xorig": 11,
     "yorig": 24
 }
