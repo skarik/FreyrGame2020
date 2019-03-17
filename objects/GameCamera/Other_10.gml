@@ -1,0 +1,1 @@
+camera_set_view_pos(index, x - camera_get_view_width(index) / 2, y - camera_get_view_height(index) / 2);
