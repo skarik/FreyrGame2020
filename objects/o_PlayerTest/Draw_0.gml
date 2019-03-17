@@ -11,3 +11,8 @@ draw_ellipse(dx - 9, dy + 1, dx + 7, dy + 9, false);
 gpu_set_blendmode(bm_normal);
 gpu_set_alphatestenable(true);
 draw_self();
+
+if (Debug.visible)
+{
+	camPlayerDrawDebug();
+}

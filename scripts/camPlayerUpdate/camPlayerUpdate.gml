@@ -1,0 +1,84 @@
+var target_x = argument0;
+var target_y = argument1;
+var velocity_x = argument2;
+var velocity_y = argument3;
+
+//
+// Calculate offsets:
+
+// Create lookahead lerper
+if (abs(velocity_x) + abs(velocity_y) > 0.0)
+{
+	m_cam_lookahead_blend += Time.deltaTime * m_cam_lookahead_blend_speed;
+}
+else
+{
+	m_cam_lookahead_blend -= Time.deltaTime * m_cam_lookahead_blend_speed;
+}
+m_cam_lookahead_blend = clamp(m_cam_lookahead_blend, 0.0, 1.0);
+
+// Move the lookahead
+m_cam_lookahead_x += sign(velocity_x) * m_cam_lookahead_blend_speed_x * m_cam_lookahead_blend * Time.deltaTime;
+m_cam_lookahead_y += sign(velocity_y) * m_cam_lookahead_blend_speed_y * m_cam_lookahead_blend * Time.deltaTime;
+// Limit it
+m_cam_lookahead_x = clamp(m_cam_lookahead_x, -m_cam_lookahead_max_x, +m_cam_lookahead_max_x);
+m_cam_lookahead_y = clamp(m_cam_lookahead_y, -m_cam_lookahead_max_y, +m_cam_lookahead_max_y);
+// Perform stillness blend
+if (m_cam_lookahead_stillness_blend >= 1.00)
+{
+	var tspeed;
+	tspeed = m_cam_lookahead_stillness_blend_speed_x * Time.deltaTime;
+	if (abs(m_cam_lookahead_x) > tspeed)
+		m_cam_lookahead_x -= sign(m_cam_lookahead_x) * tspeed;
+	else
+		m_cam_lookahead_x = 0.0;
+		
+	tspeed = m_cam_lookahead_stillness_blend_speed_y * Time.deltaTime;
+	if (abs(m_cam_lookahead_y) > tspeed)
+		m_cam_lookahead_y -= sign(m_cam_lookahead_y) * tspeed;
+	else
+		m_cam_lookahead_y = 0.0;
+}
+
+
+//
+// Generate the final position:
+
+var final_x = m_cam_last_final_x;
+var final_y = m_cam_last_final_y;
+
+// Add offset
+var follow_x = target_x + m_cam_lookahead_x;
+var follow_y = target_y + m_cam_lookahead_y;
+
+// Drag the final_* along
+final_x = clamp(final_x, follow_x - m_cam_leeway_x, follow_x + m_cam_leeway_x);
+final_y = clamp(final_y, follow_y - m_cam_leeway_y, follow_y + m_cam_leeway_y);
+
+// Clamp to the room size
+final_x = clamp(final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
+final_y = clamp(final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
+
+// Apply the rounded position
+GameCamera.x = round(final_x);
+GameCamera.y = round(final_y);
+
+//
+// Update stillness based on final position:
+if (abs(final_x - m_cam_last_final_x) + abs(final_y - m_cam_last_final_y) > 0.0)
+{
+	m_cam_lookahead_stillness_blend -= Time.deltaTime * 4.0;
+}
+else
+{
+	m_cam_lookahead_stillness_blend += Time.deltaTime / m_cam_lookahead_stillness_blend_delay;
+}
+m_cam_lookahead_stillness_blend = clamp(m_cam_lookahead_stillness_blend, 0.0, 1.0);
+
+
+// Save frame info
+m_cam_last_target_x = target_x;
+m_cam_last_target_y = target_y;
+
+m_cam_last_final_x = final_x;
+m_cam_last_final_y = final_y;

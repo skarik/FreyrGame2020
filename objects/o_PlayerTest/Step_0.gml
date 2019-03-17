@@ -74,5 +74,4 @@ y += yspeed * Time.deltaTime;
 
 
 // update camera
-GameCamera.x = round(clamp(x, GameCamera.width / 2, room_width - GameCamera.width / 2));
-GameCamera.y = round(clamp(y, GameCamera.height / 2, room_height - GameCamera.height / 2));
+camPlayerUpdate(x, y, xspeed, yspeed);

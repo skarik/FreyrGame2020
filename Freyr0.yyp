@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "42ad3535-25d4-4a4d-8a66-633ba181c3a0",
+            "Value": {
+                "id": "fc7a3f6d-b1bd-4e6a-8e12-2850f357d5ba",
+                "resourcePath": "views\\42ad3535-25d4-4a4d-8a66-633ba181c3a0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "43e05fcf-79cd-4792-abc6-595710e00dfe",
             "Value": {
                 "id": "c023aece-c815-4696-8049-a261b7133434",
@@ -383,6 +391,14 @@
             }
         },
         {
+            "Key": "5ce5cef7-3a68-408b-9b50-68f745fd85fa",
+            "Value": {
+                "id": "6c26f5cd-e292-415d-b2c4-22d4f0490bd8",
+                "resourcePath": "scripts\\camPlayerInit\\camPlayerInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "60933d88-8817-4369-9da4-b5add7134285",
             "Value": {
                 "id": "b3c3f071-7253-442d-8634-4f8c5297d8b7",
@@ -460,6 +476,14 @@
                 "id": "cc23f5d6-cd35-4775-b924-980217d87cd7",
                 "resourcePath": "sprites\\sprite61\\sprite61.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6f042160-b044-4b9f-9932-19a0705ab9f6",
+            "Value": {
+                "id": "58fb6786-cbff-42ce-871f-c5d0f76a0644",
+                "resourcePath": "scripts\\camPlayerUpdate\\camPlayerUpdate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -815,6 +839,14 @@
             }
         },
         {
+            "Key": "c8117af1-cffe-4a01-b0cf-4c538ac14889",
+            "Value": {
+                "id": "6fb822d0-326b-4dc2-bef1-9ac5b57b7939",
+                "resourcePath": "scripts\\camPlayerDrawDebug\\camPlayerDrawDebug.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c8432c4c-29bd-4dda-b10c-9d5b3e17d20a",
             "Value": {
                 "id": "b1f47f23-4192-4e69-a519-755bb782e1d5",
@@ -836,6 +868,14 @@
                 "id": "d2b95f77-e77d-4750-bbc1-fd206fa7b31f",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cf0f9397-7d33-4f8c-9e27-379d76bccd89",
+            "Value": {
+                "id": "ff07cc79-3ece-4061-a55f-9eae3c2f2486",
+                "resourcePath": "views\\cf0f9397-7d33-4f8c-9e27-379d76bccd89.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1010,7 +1050,10 @@
         "4cafe67e-0c3a-44ac-bcd2-689ebb1c9567",
         "a0e5b838-bc4d-4148-99ab-f425315523f0",
         "1e4101e2-c15a-4f4a-8c6b-c4e9a52052a3",
-        "5178e1c5-11cb-4b93-9c3a-40fe68627ca0"
+        "5178e1c5-11cb-4b93-9c3a-40fe68627ca0",
+        "5ce5cef7-3a68-408b-9b50-68f745fd85fa",
+        "6f042160-b044-4b9f-9932-19a0705ab9f6",
+        "c8117af1-cffe-4a01-b0cf-4c538ac14889"
     ],
     "tutorial": ""
 }

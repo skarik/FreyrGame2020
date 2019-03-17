@@ -7,3 +7,6 @@ stats = new(o_stats);
 hud = new(o_PlayerHud);
 
 currentUsable = null;
+currentTillable = null;
+
+camPlayerInit();

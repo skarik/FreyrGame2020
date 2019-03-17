@@ -16,6 +16,10 @@ if (surface_get_width(m_surfaceLightweight) != GameCamera.width || surface_get_h
 	surface_resize(m_surfaceLightweight, GameCamera.width, GameCamera.height);
 }
 
+// reset gpu state
+gpu_set_blendenable(true);
+gpu_set_blendmode(bm_normal);
+draw_set_alpha(1.0);
 
 //
 // Outlined Surface
@@ -85,6 +89,21 @@ surface_reset_target();
 
 surface_set_target(m_surfaceLightweight);
 draw_clear_alpha(c_white, 0.0);
+
+// tillable
+if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
+{
+	var tillable = o_PlayerTest.currentTillable;
+	dx = tillable.x - (GameCamera.x - GameCamera.width / 2);
+	dy = tillable.y - (GameCamera.y - GameCamera.height / 2);
+	
+	gpu_set_blendenable(true);
+	gpu_set_blendmode(bm_normal);
+	draw_set_color(c_white);
+	draw_set_alpha(0.7);
+	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
+	draw_set_alpha(1.0);
+}
 
 // inventory
 dx = 5;

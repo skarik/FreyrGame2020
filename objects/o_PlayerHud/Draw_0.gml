@@ -1,5 +1,5 @@
 // test some day night cycles
-gpu_set_blendenable(true);
+/*gpu_set_blendenable(true);
 gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 var blend0 = 0.0;
 var blend1 = 0.0;
@@ -11,7 +11,7 @@ color0 = merge_color(color0, make_color_rgb(90, 70, 255), blend1);
 draw_set_color(merge_color(make_color_rgb(128, 128, 128), color0, 0.2));
 draw_rectangle(GameCamera.x - GameCamera.width, GameCamera.y - GameCamera.height, GameCamera.x + GameCamera.width, GameCamera.y + GameCamera.height, false);
 paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, 0.8));
-
+*/
 if (surface_exists(m_surface))
 {
 	var dx = GameCamera.x - GameCamera.width / 2;

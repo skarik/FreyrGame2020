@@ -43,12 +43,36 @@ with (ob_useable)
 	}
 }
 
-if (aButton.pressed)
+if (exists(currentUsable))
 {
-	if (!exists(ob_CtsTalker))
+	if (aButton.pressed)
 	{
-		Cts_MakeGabber(id, "Self", "It's a $bpot$$.");
+		currentUsable.m_user = id;
+		with (currentUsable)
+		{
+			event_user(0);
+		}
 		controlZero(true);
 	}
 }
 
+// tilling controls
+var tillX = x + lengthdir_x(12, facingDirection);
+var tillY = y + lengthdir_y(12, facingDirection) + 4;
+var gridSize = 16;
+tillX = round((tillX + gridSize / 2) / gridSize) * gridSize - gridSize / 2;
+tillY = round((tillY + gridSize / 2) / gridSize) * gridSize - gridSize / 2;
+
+currentTillable = collision_point(tillX, tillY, o_fieldSquare, false, true);
+if (!exists(currentTillable))
+{
+	currentTillable = null;
+}
+
+if (exists(currentTillable))
+{
+	if (bButton.pressed)
+	{
+		currentTillable.tilled = true;
+	}
+}
