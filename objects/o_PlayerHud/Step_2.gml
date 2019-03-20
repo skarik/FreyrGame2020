@@ -104,6 +104,17 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
 	draw_set_alpha(1.0);
 }
+// tillable timer
+if (o_PlayerTest.m_isTilling)
+{
+	dx = o_PlayerTest.x - (GameCamera.x - GameCamera.width / 2);
+	dy = o_PlayerTest.y - (GameCamera.y - GameCamera.height / 2);
+	
+	draw_set_color(c_black);
+	draw_rectangle(dx - 6, dy - 25, dx + 6, dy - 21, false);
+	draw_set_color(c_white);
+	draw_rectangle(dx - 5, dy - 24, dx - 5 + 10 * clamp(o_PlayerTest.m_till_timer, 0.0, 1.0), dy - 22, false);
+}
 
 // inventory
 dx = 5;

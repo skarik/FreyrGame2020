@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "088d9175-e37f-4a00-9bb9-dc65d4aca786",
+            "Value": {
+                "id": "07fbf656-842a-457e-a1a8-464547443b14",
+                "resourcePath": "scripts\\_playerInteractUsables\\_playerInteractUsables.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0e603e15-92d8-4655-95af-fcb9e203988c",
             "Value": {
                 "id": "8a052ba3-608d-4da9-865e-ab7e42347873",
@@ -84,6 +92,14 @@
                 "id": "ceed318e-d284-4212-87c0-46543170590d",
                 "resourcePath": "shaders\\sh_reference\\sh_reference.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "1dd33fe3-5cc1-40ab-8889-6c8bc05646e1",
+            "Value": {
+                "id": "ba2274ce-25e0-45d9-ae01-56f5df736379",
+                "resourcePath": "views\\1dd33fe3-5cc1-40ab-8889-6c8bc05646e1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -172,6 +188,14 @@
                 "id": "4680af97-ad6b-4868-9f7e-8f2a4e659693",
                 "resourcePath": "shaders\\sh_repaletteScene\\sh_repaletteScene.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "2e875ea2-8ea6-4603-a58f-46e58841da6d",
+            "Value": {
+                "id": "0318ce19-bd2b-46e6-b741-74d0c06efd79",
+                "resourcePath": "scripts\\playerInteractInit\\playerInteractInit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -335,6 +359,14 @@
             }
         },
         {
+            "Key": "4c162c72-c4cc-4b15-b393-e4328ae1f9a5",
+            "Value": {
+                "id": "f131b6d0-ad0e-4f5b-9477-f163988b0e84",
+                "resourcePath": "scripts\\playerMotionStop\\playerMotionStop.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4cafe67e-0c3a-44ac-bcd2-689ebb1c9567",
             "Value": {
                 "id": "620a2787-4ee9-48d8-abe1-367fab2fcf29",
@@ -451,6 +483,14 @@
             "Value": {
                 "id": "ad9ff1d0-4a77-48e0-8267-918c22e8617a",
                 "resourcePath": "scripts\\smoothstep\\smoothstep.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "67c84648-a666-47f5-af6d-6d1d4a127897",
+            "Value": {
+                "id": "469839d6-6922-4c7b-a692-e369a4252e07",
+                "resourcePath": "scripts\\playerAnimInit\\playerAnimInit.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -687,10 +727,26 @@
             }
         },
         {
+            "Key": "99e27a97-efd5-47d0-bc65-4acdb243252a",
+            "Value": {
+                "id": "325e7134-244e-4a81-abd9-61a0a1e6aa61",
+                "resourcePath": "scripts\\new2\\new2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a0e5b838-bc4d-4148-99ab-f425315523f0",
             "Value": {
                 "id": "e6d0a547-53d2-450b-8902-01aa0ed8133a",
                 "resourcePath": "scripts\\paletteDebugDisplay\\paletteDebugDisplay.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a2a14d96-67de-4544-9cd8-7c7968c5174d",
+            "Value": {
+                "id": "2501ab85-a5ac-4eb7-b9f8-23f3480a0771",
+                "resourcePath": "scripts\\playerInteractEndStep\\playerInteractEndStep.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -831,6 +887,14 @@
             }
         },
         {
+            "Key": "c2b8bb92-a935-432f-ae28-8b0c72fed9cd",
+            "Value": {
+                "id": "6dbb404a-888f-41c8-83c7-a7e9c9a068ce",
+                "resourcePath": "objects\\o_CtsReenablePlayerOnCtsEnd\\o_CtsReenablePlayerOnCtsEnd.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c490141b-fe8e-4068-8aff-aa8c6e64ff91",
             "Value": {
                 "id": "2f41f240-2cf6-47b4-b5fd-6a7306bf5b9c",
@@ -911,6 +975,14 @@
             }
         },
         {
+            "Key": "d842b212-f6e7-4072-a177-ecbd97bec994",
+            "Value": {
+                "id": "14fd0b4a-1ab2-4d80-921f-b3f96437d31b",
+                "resourcePath": "scripts\\playerMotionInit\\playerMotionInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dcc38bb9-5be6-4672-90bd-7205f5c6b768",
             "Value": {
                 "id": "9226e791-995e-459d-8689-5b3ec1c505c7",
@@ -951,11 +1023,27 @@
             }
         },
         {
+            "Key": "e3313d9d-68d1-4557-86f4-620f81e35bc3",
+            "Value": {
+                "id": "15244d6a-e3d3-4025-98ea-8adbe7dd2aa8",
+                "resourcePath": "scripts\\_playerInteractTillables\\_playerInteractTillables.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e38a50c0-a6bb-40ea-92e7-382dcd968cec",
             "Value": {
                 "id": "f45d1981-72a0-4a81-a0d5-02975635311c",
                 "resourcePath": "views\\e38a50c0-a6bb-40ea-92e7-382dcd968cec.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e65c108a-b00b-4b76-9afe-b1922ae15d59",
+            "Value": {
+                "id": "85912d4c-c9df-4dfd-ab26-762581f75056",
+                "resourcePath": "scripts\\playerMotionStep\\playerMotionStep.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1023,6 +1111,14 @@
             }
         },
         {
+            "Key": "f7daba53-3a4b-4e03-aedc-a0168e74564f",
+            "Value": {
+                "id": "51cf1236-8068-4389-acf9-fdd634c2c38d",
+                "resourcePath": "scripts\\playerAnimLateUpdate\\playerAnimLateUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9260b8e-fe14-4111-bfb8-fa8364d6c47c",
             "Value": {
                 "id": "ec2e4fb8-91da-4031-a62d-0e379c5a397e",
@@ -1050,6 +1146,7 @@
     "script_order": [
         "11890785-2da8-446b-9e14-e3b9e72b893e",
         "8ae87ec2-c497-411e-8b0e-f9e3e3481cfb",
+        "99e27a97-efd5-47d0-bc65-4acdb243252a",
         "36e542ee-3e15-4516-afa2-d30b86bafc13",
         "3b8b8f4f-c01d-4304-96f0-469aa575851f",
         "c49079db-0232-4388-a859-281831a2d506",
@@ -1077,7 +1174,16 @@
         "5178e1c5-11cb-4b93-9c3a-40fe68627ca0",
         "5ce5cef7-3a68-408b-9b50-68f745fd85fa",
         "6f042160-b044-4b9f-9932-19a0705ab9f6",
-        "c8117af1-cffe-4a01-b0cf-4c538ac14889"
+        "c8117af1-cffe-4a01-b0cf-4c538ac14889",
+        "67c84648-a666-47f5-af6d-6d1d4a127897",
+        "f7daba53-3a4b-4e03-aedc-a0168e74564f",
+        "d842b212-f6e7-4072-a177-ecbd97bec994",
+        "e65c108a-b00b-4b76-9afe-b1922ae15d59",
+        "4c162c72-c4cc-4b15-b393-e4328ae1f9a5",
+        "2e875ea2-8ea6-4603-a58f-46e58841da6d",
+        "a2a14d96-67de-4544-9cd8-7c7968c5174d",
+        "088d9175-e37f-4a00-9bb9-dc65d4aca786",
+        "e3313d9d-68d1-4557-86f4-620f81e35bc3"
     ],
     "tutorial": ""
 }
