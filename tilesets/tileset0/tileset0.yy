@@ -53,6 +53,31 @@
                 70,
                 0
             ]
+        },
+        {
+            "id": "5458e24f-3974-4ddc-b38e-321f06138ee1",
+            "modelName": "GMAutoTileSet",
+            "mvc": "1.0",
+            "closed_edge": false,
+            "name": "dirtsand",
+            "tiles": [
+                165,
+                168,
+                167,
+                149,
+                152,
+                164,
+                0,
+                148,
+                151,
+                0,
+                166,
+                150,
+                181,
+                180,
+                182,
+                0
+            ]
         }
     ],
     "macroPageTiles": {

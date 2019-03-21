@@ -62,6 +62,11 @@ final_y = clamp(final_y, GameCamera.height / 2, room_height - GameCamera.height 
 // Apply the rounded position
 GameCamera.x = round(final_x);
 GameCamera.y = round(final_y);
+// Apply the game camera position
+with (GameCamera)
+{
+	event_user(1);
+}
 
 //
 // Update stillness based on final position:

@@ -1,6 +1,8 @@
 currentUsable = null;
 currentTillable = null;
-
+currentBuildable = false;
+currentBuildableX = 0;
+currentBuildableY = 0;
 
 m_isTilling = false;
 m_till_target = null;

@@ -33,24 +33,6 @@ draw_text(0,50,string(o_PlayerTest.stats.m_health) + "/" + string(o_PlayerTest.s
 
 var dx, dy;
 
-// health bar
-
-dx = 5; dy = 5;
-draw_set_alpha(1.0);
-draw_set_color(c_gray);
-draw_rectangle(dx - 1, dy - 1, dx + o_PlayerTest.stats.m_healthMax + 1, dy + 10 + 1, false);
-draw_set_color(c_dkgray);
-draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_healthMax, dy + 10, false);
-draw_set_color(c_red);
-draw_set_alpha(0.7);
-draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_health, dy + 10, false);
-
-// health bar v2
-dx = 5;
-dy = 10;
-draw_set_alpha(1.0);
-draw_sprite(sui_roboArm, 0, dx, dy);
-
 // last usable
 if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker))
 {
@@ -81,6 +63,40 @@ if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker))
 	draw_text(dx + useXoffset + 3 * xSign, dy + 2 + useYoffset, usable.m_name);
 }
 
+// button contexts
+draw_set_font(f_04b03);
+draw_set_halign(fa_left);
+draw_set_valign(fa_bottom);
+draw_set_color(c_white);
+draw_set_alpha(1.0);
+
+dx = 40;
+dy = 80;
+draw_sprite(sui_buttonContext, 0, dx, dy);
+draw_text(dx + 20, dy + 15, "Z");
+
+dx = 20;
+dy = 100;
+draw_sprite(sui_buttonContext, 1, dx, dy);
+draw_text(dx + 20, dy + 15, "X");
+
+// health bar
+dx = 5; dy = 5;
+draw_set_alpha(1.0);
+draw_set_color(c_gray);
+draw_rectangle(dx - 1, dy - 1, dx + o_PlayerTest.stats.m_healthMax + 1, dy + 10 + 1, false);
+draw_set_color(c_dkgray);
+draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_healthMax, dy + 10, false);
+draw_set_color(c_red);
+draw_set_alpha(0.7);
+draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_health, dy + 10, false);
+
+// health bar v2
+dx = 5;
+dy = 10;
+draw_set_alpha(1.0);
+draw_sprite(sui_roboArm, 0, dx, dy);
+
 
 surface_reset_target();
 
@@ -102,6 +118,19 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
 	draw_set_color(c_white);
 	draw_set_alpha(0.7);
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
+	draw_set_alpha(1.0);
+}
+// buildable
+if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
+{
+	dx = o_PlayerTest.currentBuildableX - (GameCamera.x - GameCamera.width / 2);
+	dy = o_PlayerTest.currentBuildableY - (GameCamera.y - GameCamera.height / 2);
+	
+	gpu_set_blendenable(true);
+	gpu_set_blendmode(bm_normal);
+	draw_set_color(c_blue);
+	draw_set_alpha(0.9);
+	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 	draw_set_alpha(1.0);
 }
 // tillable timer

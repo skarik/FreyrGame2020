@@ -1,9 +1,9 @@
 // Perform area checks
-inWater = exists(collision_point(x, y + 6, ob_areaWater, false, true))
-	&& exists(collision_point(x - 5, y + 6, ob_areaWater, false, true))
-	&& exists(collision_point(x + 5, y + 6, ob_areaWater, false, true))
-	&& exists(collision_point(x, y + 6 - 4, ob_areaWater, false, true))
-	&& exists(collision_point(x, y + 6 + 4, ob_areaWater, false, true));
+inWater = exists(collision_point(x, y + 6, ob_areaWater, true, true))
+	&& exists(collision_point(x - 5, y + 6, ob_areaWater, true, true))
+	&& exists(collision_point(x + 5, y + 6, ob_areaWater, true, true))
+	&& exists(collision_point(x, y + 6 - 4, ob_areaWater, true, true))
+	&& exists(collision_point(x, y + 6 + 4, ob_areaWater, true, true));
 // Perform usage checks
 isBusyInteracting = m_isTilling;
 if (exists(ob_CtsTalker))

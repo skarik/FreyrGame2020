@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "10a84dfe-bfc7-4570-8944-a432d6b21589",
+            "Value": {
+                "id": "f85d0090-88cf-4086-bd64-ccce6cb07e7d",
+                "resourcePath": "scripts\\_playerInteractBuildables\\_playerInteractBuildables.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "11255813-b9c4-4e61-80ef-aa0e213360d9",
             "Value": {
                 "id": "ce33c043-5db5-4538-affb-a7dd24ac3081",
@@ -111,6 +119,14 @@
             }
         },
         {
+            "Key": "1ef890cf-672f-4e29-a441-3e6427b8d6bb",
+            "Value": {
+                "id": "a1ddad1b-2f55-4d99-9392-72e75fbb372c",
+                "resourcePath": "fonts\\f_04b03\\f_04b03.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "1f20d603-f71a-4e3c-ae4a-bdadee2369b0",
             "Value": {
                 "id": "a996c054-5fee-41a3-ac3c-5ba9ce5ac992",
@@ -140,6 +156,14 @@
                 "id": "15a72d04-7b03-4e28-8efd-d19126daa44f",
                 "resourcePath": "views\\2047d804-eafb-4245-8e29-c0cabc118d97.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "26cd8c8d-f29f-4d55-96e8-9948e1e9f696",
+            "Value": {
+                "id": "71394a88-f7d8-4307-950c-0c78099706c4",
+                "resourcePath": "sprites\\sui_buttonContext\\sui_buttonContext.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -175,6 +199,14 @@
             }
         },
         {
+            "Key": "297a74f6-a8aa-47d8-a65a-5fca4f02f88c",
+            "Value": {
+                "id": "41b0c404-3982-4f8d-8018-8e5be3d7d89b",
+                "resourcePath": "sprites\\sc_64r_blue\\sc_64r_blue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2a223b3f-518c-4a61-9d83-ce0f6aa11dea",
             "Value": {
                 "id": "0019f969-eae5-4a05-94c2-f527b8028fc4",
@@ -188,6 +220,14 @@
                 "id": "4680af97-ad6b-4868-9f7e-8f2a4e659693",
                 "resourcePath": "shaders\\sh_repaletteScene\\sh_repaletteScene.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "2dc30959-ae01-4f95-9008-ef399ce6f834",
+            "Value": {
+                "id": "c4b52de0-3729-4f3c-8bd9-2e5601c11d15",
+                "resourcePath": "objects\\o_waterMetaball\\o_waterMetaball.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -295,11 +335,27 @@
             }
         },
         {
+            "Key": "3f5fe000-4b83-45d4-a298-57f305fd8aad",
+            "Value": {
+                "id": "73e4989f-f281-44dd-bb3f-b12b60528eaa",
+                "resourcePath": "objects\\o_waterMetalballRenderer\\o_waterMetalballRenderer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "41fd3730-9dd6-4514-bb86-b21d2f15fd5c",
             "Value": {
                 "id": "3af04a46-01a5-4e02-a7b9-1d9c44cf428e",
                 "resourcePath": "views\\41fd3730-9dd6-4514-bb86-b21d2f15fd5c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "422668f4-3c76-4931-aa39-bd6d446354a2",
+            "Value": {
+                "id": "5626f5b4-cd54-4612-85e7-675dfb456429",
+                "resourcePath": "objects\\o_waterMetaball64\\o_waterMetaball64.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -348,6 +404,14 @@
                 "id": "6fa4dca1-99c6-4a57-ae73-ad8c2ed1f60f",
                 "resourcePath": "views\\46d4746d-af45-4189-abd3-a95235f371cb.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "46f5416e-6b69-4d16-94d6-a240a99ffcb4",
+            "Value": {
+                "id": "7eea250b-004d-46ff-8ac3-8956e61051ff",
+                "resourcePath": "sprites\\sc_32x32c_blue\\sc_32x32c_blue.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -583,6 +647,14 @@
             }
         },
         {
+            "Key": "76e54bb0-9942-4648-be66-078861ee8f06",
+            "Value": {
+                "id": "f2f6bdeb-3a8d-4844-a245-eb0af2e01c4e",
+                "resourcePath": "rooms\\rm_oasis\\rm_oasis.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "78f7dae6-d5d1-4e61-9681-c44c6b24e8c6",
             "Value": {
                 "id": "2e0f070e-46b4-42eb-8496-fd845dd859e8",
@@ -732,6 +804,14 @@
                 "id": "325e7134-244e-4a81-abd9-61a0a1e6aa61",
                 "resourcePath": "scripts\\new2\\new2.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9fba3e81-e0c2-44a4-a77d-3d655a7470b8",
+            "Value": {
+                "id": "01e86f1e-b9ce-4787-85b3-280d488378d9",
+                "resourcePath": "objects\\o_miniCanalWater\\o_miniCanalWater.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -975,6 +1055,14 @@
             }
         },
         {
+            "Key": "d7ff6b91-d0dd-4251-8b5f-6cc6221e3ba5",
+            "Value": {
+                "id": "0d1837f0-40be-45ce-ae4e-cb4ec5e3d955",
+                "resourcePath": "sprites\\s_paletteWater\\s_paletteWater.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d842b212-f6e7-4072-a177-ecbd97bec994",
             "Value": {
                 "id": "14fd0b4a-1ab2-4d80-921f-b3f96437d31b",
@@ -1036,6 +1124,14 @@
                 "id": "f45d1981-72a0-4a81-a0d5-02975635311c",
                 "resourcePath": "views\\e38a50c0-a6bb-40ea-92e7-382dcd968cec.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e46c0292-e6e3-405e-aceb-432b2b0c9427",
+            "Value": {
+                "id": "9211dcb9-3bed-4cfc-8514-7007a9fa00ee",
+                "resourcePath": "shaders\\sh_metaballWater\\sh_metaballWater.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -1141,6 +1237,14 @@
                 "resourcePath": "views\\fc0e4d22-0423-44fb-9aa6-9e138d436b84.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "fdca5424-4fc9-4629-9a76-e88817dd39f3",
+            "Value": {
+                "id": "42c97a26-8fdd-429c-80ea-0f57fb1de082",
+                "resourcePath": "views\\fdca5424-4fc9-4629-9a76-e88817dd39f3.yy",
+                "resourceType": "GMFolder"
+            }
         }
     ],
     "script_order": [
@@ -1183,7 +1287,8 @@
         "2e875ea2-8ea6-4603-a58f-46e58841da6d",
         "a2a14d96-67de-4544-9cd8-7c7968c5174d",
         "088d9175-e37f-4a00-9bb9-dc65d4aca786",
-        "e3313d9d-68d1-4557-86f4-620f81e35bc3"
+        "e3313d9d-68d1-4557-86f4-620f81e35bc3",
+        "10a84dfe-bfc7-4570-8944-a432d6b21589"
     ],
     "tutorial": ""
 }

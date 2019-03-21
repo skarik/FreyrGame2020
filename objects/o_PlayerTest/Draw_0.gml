@@ -22,8 +22,8 @@ else
 	draw_set_color(c_ltgray);
 	draw_ellipse(dx - 7 - 2, dy + 5 - 4 - 1, dx + 6 + 2, dy + 9 - 4 + 1, false);
 
-	gpu_set_blendmode(bm_add);
-	draw_set_color(c_gray);
+	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
+	draw_set_color(c_white);
 	draw_ellipse(dx - 7 + 1, dy + 5 - 4, dx + 6 - 1, dy + 9 - 4, false);
 
 	gpu_set_blendmode(bm_normal);
