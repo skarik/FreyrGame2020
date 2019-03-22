@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "2c69a8db-3414-4058-b012-2a1753187b53",
+            "Value": {
+                "id": "695650bd-e91c-48e3-825f-1e5bb614af84",
+                "resourcePath": "objects\\o_waterWaterfall\\o_waterWaterfall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2dc30959-ae01-4f95-9008-ef399ce6f834",
             "Value": {
                 "id": "c4b52de0-3729-4f3c-8bd9-2e5601c11d15",
@@ -807,6 +815,14 @@
             }
         },
         {
+            "Key": "9e20133f-992b-4a05-946a-8e75170af9c8",
+            "Value": {
+                "id": "e98c9827-885f-408e-95cd-04e4ccfffccd",
+                "resourcePath": "sprites\\s_waterWaterfall\\s_waterWaterfall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9fba3e81-e0c2-44a4-a77d-3d655a7470b8",
             "Value": {
                 "id": "01e86f1e-b9ce-4787-85b3-280d488378d9",
@@ -876,6 +892,14 @@
                 "id": "d94ea7e1-9eb6-4473-95c0-71990f03b1bb",
                 "resourcePath": "objects\\Debug\\Debug.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ae3d865e-9647-4b6e-a11c-db7b952d10cb",
+            "Value": {
+                "id": "8fb4e045-c962-4cc1-9b09-65af23cd34d0",
+                "resourcePath": "sprites\\s_oasisTree\\s_oasisTree.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

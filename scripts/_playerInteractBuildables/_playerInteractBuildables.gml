@@ -35,9 +35,15 @@ if (!m_isTilling && canMove && !isBusyInteracting
 	}
 	
 	// Now we build if we press the button
-	if (bButton.pressed)
+	if (currentBuildable)
 	{
-		// todo: check for existing canal
-		instance_create_depth(currentBuildableX, currentBuildableY, 11, o_miniCanalWater);
+		if (bButton.pressed)
+		{
+			// todo: check for existing canal
+			if (!exists(collision_rectangle(currentBuildableX + 1, currentBuildableY + 1, currentBuildableX + 14, currentBuildableY + 14, o_miniCanalWater, false, true)))
+			{
+				instance_create_depth(currentBuildableX, currentBuildableY, 11, o_miniCanalWater);
+			}
+		}
 	}
 }

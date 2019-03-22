@@ -18,7 +18,7 @@ if (exists(o_waterMetaball))
 		gpu_set_blendmode(bm_add);
 		with (o_waterMetaball)
 		{
-			draw_circle_color(x - GameCamera.view_x, y - GameCamera.view_y, 64 * image_xscale, c_gray, c_black, false);
+			event_user(0);
 		}
 		
 		gpu_set_blendmode(bm_normal);

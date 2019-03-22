@@ -1,7 +1,7 @@
 if (exists(collision_rectangle(x, y, x + 16, y + 16, ob_areaWater, true, false)))
 {
 	m_isSource = true;
-	m_waterLevel = 4;
+	m_waterLevel = 6;
 }
 else
 {

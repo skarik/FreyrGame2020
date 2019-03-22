@@ -30,6 +30,8 @@ void main()
 	// Peturb it
 	l_centerDarkness += sin(l_worldPosition.x * 0.05 + l_worldPosition.y * 0.2 + uCurrentTime * 0.5) * 0.10;
 	l_centerDarkness += sin(l_worldPosition.x * -0.1 + l_worldPosition.y * 0.4 - uCurrentTime * 0.6) * 0.05;
+	// Add the blue overrider
+	l_centerDarkness += l_pixelMetaball.b * 0.5;
 	// Select darker color if wanted
 	l_pixelPaletteSelector = (l_centerDarkness < 0.0) ? l_pixelPaletteSelector : 0.25;
 	
@@ -41,6 +43,8 @@ void main()
 	l_edgeHighlights -=     sin(l_worldPosition.x *-0.22 + l_worldPosition.y * 0.21 + uCurrentTime * 0.2)  * 0.75;
 	l_edgeHighlights -= abs(sin(l_worldPosition.x *-0.02 + l_worldPosition.y *-0.03 + uCurrentTime * 2.3)) * 0.25;
 	l_edgeHighlights -= abs(cos(l_worldPosition.x * 0.03 + l_worldPosition.y * 0.02 + uCurrentTime * 2.1)) * 0.25;
+	// Add the green overrider
+	l_edgeHighlights += max(0.0, l_pixelMetaball.r * l_pixelMetaball.g - 0.25) * 35.0;
 	// Select highlight color if wanted
 	l_pixelPaletteSelector = (l_edgeHighlights < 0.0) ? l_pixelPaletteSelector : 0.75;
 	
@@ -71,4 +75,12 @@ void main()
 	gl_FragColor = texture2D(
 		samplerPaletteLUT,
 		vec2(l_pixelPaletteSelector + 0.125, 0.0) * uPaletteAtlasCoords.zw + uPaletteAtlasCoords.xy );
+		
+	// Finally finally! Add some white highlights for shine
+	float l_whiteHighlights = l_pixelMetaball.r * l_pixelMetaball.g - 0.75;
+	// Add the highlights for peturbing
+	l_whiteHighlights += (l_centerHighlights - 0.25) * 0.1;
+	// Select white highlight of wanted
+	gl_FragColor = (l_whiteHighlights < 0.0) ? gl_FragColor : vec4(1.0, 1.0, 1.0, 1.0);
+	
 }
