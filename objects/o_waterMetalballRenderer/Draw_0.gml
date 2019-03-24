@@ -5,10 +5,13 @@ if (exists(o_waterMetaball) && surface_exists(m_surface))
 	// Get texture information
 	var texturePaletteLut = sprite_get_texture(s_paletteWater, 0);
 	var textureAtlasCoords = sprite_get_uvs(s_paletteWater, 0);
+	var texturePeturb = surface_get_texture(m_surfacePeturb);
 	
 	// Set up the shader
 	shader_set(sh_metaballWater);
 	texture_set_stage(uni_samplerPaletteLUT, texturePaletteLut);
+	texture_set_stage(uni_samplerPeturb, texturePeturb);
+	gpu_set_texfilter_ext(uni_samplerPeturb, true);
 	shader_set_uniform_f(uni_paletteAtlasCoords,
 		textureAtlasCoords[0], textureAtlasCoords[1],
 		textureAtlasCoords[2] - textureAtlasCoords[0],

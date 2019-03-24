@@ -1,0 +1,1 @@
+draw_circle_color(x - GameCamera.view_x, y - GameCamera.view_y, 64 * image_xscale, c_maroon, c_black, false);

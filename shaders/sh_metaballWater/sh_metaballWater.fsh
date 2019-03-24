@@ -8,8 +8,13 @@ varying vec4 v_vWorldPosition;
 // Input needed is the 4 color palette for the edge, deep, middle, and highlights.
 uniform sampler2D samplerPaletteLUT;
 uniform vec4 uPaletteAtlasCoords;
+// Texel size of the screen
 uniform vec2 uWaterTexelSize;
+// Current time
 uniform float uCurrentTime;
+
+// Sampler for the peturb map
+uniform sampler2D samplerPeturb;
 
 void main()
 {
@@ -43,6 +48,8 @@ void main()
 	l_edgeHighlights -=     sin(l_worldPosition.x *-0.22 + l_worldPosition.y * 0.21 + uCurrentTime * 0.2)  * 0.75;
 	l_edgeHighlights -= abs(sin(l_worldPosition.x *-0.02 + l_worldPosition.y *-0.03 + uCurrentTime * 2.3)) * 0.25;
 	l_edgeHighlights -= abs(cos(l_worldPosition.x * 0.03 + l_worldPosition.y * 0.02 + uCurrentTime * 2.1)) * 0.25;
+	// Add caustics
+	l_edgeHighlights += clamp(texture2D( samplerPeturb, fract(l_worldPosition.xy / 32.0 + 0.1 * vec2(uCurrentTime, 0.25 * uCurrentTime)) ).b * 6.0 - 2.0, 0.0, 1.0) * 1.4 - 0.3;
 	// Add the green overrider
 	l_edgeHighlights += max(0.0, l_pixelMetaball.r * l_pixelMetaball.g - 0.25) * 35.0;
 	// Select highlight color if wanted
@@ -63,13 +70,22 @@ void main()
 	// Select highlight color if wanted
 	l_pixelPaletteSelector = (l_centerHighlights < 0.0) ? l_pixelPaletteSelector : 0.75;
 	
+	// Sample the edge peturbation
+	vec4 l_peturbation = texture2D( samplerPeturb, fract(l_worldPosition.xy / 32.0) );
+	l_peturbation = (l_peturbation - 0.5) * 2.0; // Uncompress it.
+	
+	// Create edge peturbation
+	float l_edgePush1 = 1.0 + max(0.0, l_peturbation.x) * 1.0; //sin(l_worldPosition.y / 4.0 + l_peturbation.y) * 4.0;
+	float l_edgePush2 = 1.0 + max(0.0, l_peturbation.y) * 1.0; //sin(l_worldPosition.x / 4.0 + l_peturbation.x) * 4.0;
+	float l_edgePush3 = 1.0 + max(0.0,-l_peturbation.x) * 1.0; //sin(l_worldPosition.y / 4.0 - l_peturbation.y) * 4.0;
+	float l_edgePush4 = 1.0 + max(0.0,-l_peturbation.y) * 1.0; //sin(l_worldPosition.x / 4.0 - l_peturbation.x) * 4.0;
 	// Check if on edge
-	float l_pixelMetaballEdge1 = texture2D( gm_BaseTexture, v_vTexcoord + vec2(uWaterTexelSize.x, 0.0) ).a;
-	float l_pixelMetaballEdge2 = texture2D( gm_BaseTexture, v_vTexcoord + vec2(0.0, uWaterTexelSize.y) ).a;
-	float l_pixelMetaballEdge3 = texture2D( gm_BaseTexture, v_vTexcoord - vec2(uWaterTexelSize.x, 0.0) ).a;
-	float l_pixelMetaballEdge4 = texture2D( gm_BaseTexture, v_vTexcoord - vec2(0.0, uWaterTexelSize.y) ).a;
+	float l_pixelMetaballEdge1 = texture2D( gm_BaseTexture, v_vTexcoord + l_edgePush1 * vec2(uWaterTexelSize.x, 0.0) ).a;
+	float l_pixelMetaballEdge2 = texture2D( gm_BaseTexture, v_vTexcoord + l_edgePush2 * vec2(0.0, uWaterTexelSize.y) ).a;
+	float l_pixelMetaballEdge3 = texture2D( gm_BaseTexture, v_vTexcoord - l_edgePush3 * vec2(uWaterTexelSize.x, 0.0) ).a;
+	float l_pixelMetaballEdge4 = texture2D( gm_BaseTexture, v_vTexcoord - l_edgePush4 * vec2(0.0, uWaterTexelSize.y) ).a;
 	// If on the edge, select the edge color
-	l_pixelPaletteSelector = (l_pixelMetaballEdge1 * l_pixelMetaballEdge2 * l_pixelMetaballEdge3 * l_pixelMetaballEdge4 > 0.5) ? l_pixelPaletteSelector : 0.0;
+	l_pixelPaletteSelector = (l_pixelMetaballEdge1 * l_pixelMetaballEdge2 * l_pixelMetaballEdge3 * l_pixelMetaballEdge4 + l_pixelMetaball.g > 0.5) ? l_pixelPaletteSelector : 0.0;
 	
 	// Finally, select the proper color!
 	gl_FragColor = texture2D(
@@ -83,4 +99,6 @@ void main()
 	// Select white highlight of wanted
 	gl_FragColor = (l_whiteHighlights < 0.0) ? gl_FragColor : vec4(1.0, 1.0, 1.0, 1.0);
 	
+	//gl_FragColor = texture2D( samplerPeturb, fract(l_worldPosition.xy / 32.0) );
+	//gl_FragColor.a = 1.0;
 }

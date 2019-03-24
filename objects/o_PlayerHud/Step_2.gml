@@ -119,6 +119,28 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
 	draw_set_alpha(0.7);
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
 	draw_set_alpha(1.0);
+	
+	draw_set_font(f_josefinSlab9);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	draw_text(dx + 8, dy - 4, "Till");
+}
+if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker))
+{
+	dx = o_PlayerTest.m_till_x - 8 - (GameCamera.x - GameCamera.width / 2);
+	dy = o_PlayerTest.m_till_y - 8 - (GameCamera.y - GameCamera.height / 2);
+	
+	gpu_set_blendenable(true);
+	gpu_set_blendmode(bm_normal);
+	draw_set_color(c_white);
+	draw_set_alpha(0.7);
+	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
+	draw_set_alpha(1.0);
+	
+	draw_set_font(f_josefinSlab9);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	draw_text(dx + 8, dy - 4, "Plow");
 }
 // buildable
 if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
