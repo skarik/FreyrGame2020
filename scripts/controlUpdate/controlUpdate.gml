@@ -10,6 +10,8 @@ if (argument0 == false)
 	_controlStructUpdate(bButton, keyboard_check(ord("X")));
 	_controlStructUpdate(xButton, keyboard_check(ord("A")));
 	_controlStructUpdate(yButton, keyboard_check(ord("S")));
+	_controlStructUpdate(lButton, keyboard_check(ord("Q")));
+	_controlStructUpdate(rButton, keyboard_check(ord("W")));
 }
 else
 {
@@ -21,4 +23,6 @@ else
 	_controlStructUpdate(bButton, 0.0);
 	_controlStructUpdate(xButton, 0.0);
 	_controlStructUpdate(yButton, 0.0);
+	_controlStructUpdate(lButton, 0.0);
+	_controlStructUpdate(rButton, 0.0);
 }

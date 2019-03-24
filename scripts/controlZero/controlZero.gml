@@ -10,6 +10,8 @@ if (argument0 == false)
 	bButton.value = 0.0;
 	xButton.value = 0.0;
 	yButton.value = 0.0;
+	lButton.value = 0.0;
+	rButton.value = 0.0;
 }
 else
 {

@@ -5,3 +5,5 @@ delete(aButton);
 delete(bButton);
 delete(xButton);
 delete(yButton);
+delete(rButton);
+delete(lButton);
