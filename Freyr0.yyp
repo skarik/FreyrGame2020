@@ -1247,6 +1247,14 @@
             }
         },
         {
+            "Key": "b82ea919-07bc-403c-9333-467528e9783e",
+            "Value": {
+                "id": "804a3416-71fd-4522-8935-1b98039b1af4",
+                "resourcePath": "objects\\o_dayNightCycle\\o_dayNightCycle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b8eee0ec-ed14-4d8b-b7c4-4dc3f6cf1d9f",
             "Value": {
                 "id": "f9a0a164-d979-4246-b0a4-039302987eeb",

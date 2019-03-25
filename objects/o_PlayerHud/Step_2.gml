@@ -114,6 +114,18 @@ dy = 10;
 draw_set_alpha(1.0);
 draw_sprite(sui_roboArm, 0, dx, dy);
 
+// time of day
+dx = 50;
+dy = 10;
+
+draw_set_font(f_josefinSlab9);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+draw_set_alpha(1.0);
+draw_text(dx, dy, string_format(o_dayNightCycle.m_timeOfDay, 4, 2));
+draw_text(dx, dy + 15, string_format((o_dayNightCycle.m_timeOfDay + 11) % 12 + 1, 4, 2) + " " + ((o_dayNightCycle.m_timeOfDay < 12) ? "AM" : "PM"));
+
 
 surface_reset_target();
 
