@@ -19,4 +19,5 @@ if (canMove && !isBusyInteracting)
 
 _playerInteractUsables();
 _playerInteractTillables();
-_playerInteractBuildables();
+//_playerInteractBuildables();
+_playerInteractItems();

@@ -74,6 +74,23 @@ dx = 40;
 dy = 80;
 draw_sprite(sui_buttonContext, 0, dx, dy);
 draw_text(dx + 20, dy + 15, "Z");
+{
+	var inventory = o_PlayerTest.inventory;
+	// draw the item sprite
+	if (inventory.belt_object[inventory.belt_selection] != null)
+	{
+		shader_set(sh_colormask);
+		draw_set_color(c_white);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 + 1, dy + 4);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 - 1, dy + 4);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 + 1);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 - 1);
+		shader_reset();
+		draw_set_color(c_white);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4);
+	}
+}
+
 
 dx = 20;
 dy = 100;
@@ -120,10 +137,21 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
 	draw_set_alpha(1.0);
 	
+	// set target to display text properly
+	surface_reset_target();
+	surface_set_target(m_surface);
+	
 	draw_set_font(f_josefinSlab9);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
-	draw_text(dx + 8, dy - 4, "Till");
+	if (!tillable.tilled)
+	{
+		draw_text(dx + 8, dy - 4, "Till");
+	}
+	
+	// reset target to proper one
+	surface_reset_target();
+	surface_set_target(m_surfaceLightweight);
 }
 if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker))
 {
@@ -137,10 +165,18 @@ if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker))
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
 	draw_set_alpha(1.0);
 	
+	// set target to display text properly
+	surface_reset_target();
+	surface_set_target(m_surface);
+	
 	draw_set_font(f_josefinSlab9);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	draw_text(dx + 8, dy - 4, "Plow");
+	
+	// reset target to proper one
+	surface_reset_target();
+	surface_set_target(m_surfaceLightweight);
 }
 // buildable
 if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))

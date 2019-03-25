@@ -21,6 +21,23 @@ for (var i = 0; i < canalCount; ++i)
 		}
 	}
 }
+// If not watered, fall back to water zones
+if (watered == false)
+{
+	// Loop through the water volumes to find one in range
+	var waterCount = instance_number(o_waterMetaball);
+	for (var i = 0; i < waterCount; ++i)
+	{
+		var water = instance_find(o_waterMetaball, i);
+		var sqrDistance = sqr(x - water.x) + sqr(y - water.y);
+		
+		if (sqrDistance < sqr(water.sprite_width / 2) + sqrWaterDistance * 0.5)
+		{
+			watered = true;
+			break;
+		}
+	}
+}
 
 
 // Check again later

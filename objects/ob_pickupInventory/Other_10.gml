@@ -18,6 +18,8 @@ for (var i = 0; i < inventory.belt_size; ++i)
 		{
 			inventory.belt_count[i] += 1;
 			inventory.belt_name[i] = m_name;
+			inventory.belt_checkUse[i] = m_checkUseScript;
+			inventory.belt_onUse[i] = m_onUseScript;
 			event_inherited(); // Destroy self & play effects
 			exit;
 		}
@@ -32,6 +34,8 @@ for (var i = 0; i < inventory.belt_size; ++i)
 		inventory.belt_object[i] = object_index;
 		inventory.belt_count[i] = 1;
 		inventory.belt_name[i] = m_name;
+		inventory.belt_checkUse[i] = m_checkUseScript;
+		inventory.belt_onUse[i] = m_onUseScript;
 		event_inherited(); // Destroy self & play effects
 		exit;
 	}
