@@ -18,6 +18,7 @@ if (canMove && !isBusyInteracting)
 
 
 _playerInteractUsables();
+_playerInteractCrops();
 _playerInteractTillables();
 //_playerInteractBuildables();
 _playerInteractItems();

@@ -5,3 +5,5 @@ m_name           = "Shoddy Canal";
 m_maxStack       = 5;
 m_onUseScript    = canalOnUse;
 m_checkUseScript = canalCheckUse;
+
+image_speed = 0;

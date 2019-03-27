@@ -1,4 +1,4 @@
-var kWaterDistance = 16 * 5 + 8;
+var kWaterDistance = 16 * 3 + 8;
 // Dry it out
 watered = false;
 

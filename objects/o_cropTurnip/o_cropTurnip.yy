@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_cropTurnip",
     "eventList": [
-        
+        {
+            "id": "1f43fb84-fadc-4a41-b50e-9b9a30cad214",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "a4b210ed-ed77-4a9c-bc0e-6cc45adee1c1"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

@@ -6,5 +6,6 @@ persistent = true;
 
 m_overlayColor = c_black;
 
-m_day = 0;
+m_day = 1;
 m_timeOfDay = 3;
+m_hourPassed = false;

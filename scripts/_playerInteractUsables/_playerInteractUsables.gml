@@ -16,13 +16,13 @@ with (ob_useable)
 
 if (exists(currentUsable))
 {
-	if (canMove && !isBusyInteracting && aButton.pressed)
+	if (canMove && !isBusyInteracting && bButton.pressed)
 	{
 		currentUsable.m_user = id;
 		with (currentUsable)
 		{
 			event_user(0);
 		}
-		controlZero(true);
+		//controlZero(true);
 	}
 }

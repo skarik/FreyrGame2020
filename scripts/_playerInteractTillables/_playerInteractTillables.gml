@@ -57,7 +57,7 @@ if (!m_isTilling)
 			if (m_till_filldirt)
 			{
 				// Do we want to make dirt?
-				if (canMove && bButton.pressed)
+				if (canMove && bButton.pressed && !exists(currentUsable) && !exists(currentCrop))
 				{
 					m_till_target = null;
 					m_isTilling = true;
@@ -96,7 +96,7 @@ else
 					if (!exists(collision_point(m_till_x, m_till_y, o_fieldSquare, false, true)))
 					{
 						// delete any canal
-						delete(collision_point(currentBuildableX + 8, currentBuildableY + 8, o_miniCanalWater, false, true));
+						delete(collision_point(m_till_x + 8, m_till_y + 8, o_miniCanalWater, false, true));
 						// create depth
 						instance_create_depth(
 							m_till_x - gridSize / 2, m_till_y - gridSize / 2,

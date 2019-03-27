@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "148d5eac-18c8-4ac9-97ec-a122bedc844b",
+            "Value": {
+                "id": "3df4520a-c8a6-485b-9fb1-860c0dad2d1b",
+                "resourcePath": "sprites\\s_waterTrench\\s_waterTrench.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "157c0bb6-8417-4972-8c25-72b8ea22a679",
             "Value": {
                 "id": "fc37b4cc-f35d-4a4c-97f7-d8b1f1ec915d",
@@ -359,6 +367,14 @@
             }
         },
         {
+            "Key": "359f0714-7d3b-473d-afe8-de8486b2ac05",
+            "Value": {
+                "id": "f920c23b-712f-4766-9ec6-127651cb99bb",
+                "resourcePath": "scripts\\timeofdayDelta\\timeofdayDelta.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "35f30743-c456-4b74-87c5-4c92d60a7add",
             "Value": {
                 "id": "2e92d0c9-ba27-403d-887a-c737ce7149d3",
@@ -412,6 +428,14 @@
                 "id": "052bd38a-08a7-4400-95ca-8828919cc350",
                 "resourcePath": "views\\3cdc20e3-95ce-46f5-aa84-9de9ba8f4c3b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3d092466-ac33-448a-ba01-0652c66fec82",
+            "Value": {
+                "id": "e767cf99-68b3-4583-8538-eaa5c3a7426b",
+                "resourcePath": "scripts\\timeofdayGetDay\\timeofdayGetDay.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -628,6 +652,14 @@
                 "id": "23328bfe-fcff-48c8-aed7-d069a84f7181",
                 "resourcePath": "views\\58582ede-de23-4aa8-865a-961abb841b95.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "59ff4b5e-3d47-431f-85d8-541eb30cf16f",
+            "Value": {
+                "id": "243d8a20-42e6-48b5-bf51-dd8ade70f6e6",
+                "resourcePath": "scripts\\timeofdayGetHour\\timeofdayGetHour.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -855,6 +887,14 @@
             }
         },
         {
+            "Key": "7be0f790-798d-43a2-9cda-d4362d4c95fd",
+            "Value": {
+                "id": "9b321fa1-b57e-4f7e-80a7-5678ef6bcbee",
+                "resourcePath": "objects\\o_projectileTurnip\\o_projectileTurnip.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7d6cb9a0-b0c2-4345-be9a-d64379565557",
             "Value": {
                 "id": "8f48dd0f-ef87-4ec1-9159-6a9b65b2a793",
@@ -999,6 +1039,14 @@
             }
         },
         {
+            "Key": "8f9a0b79-2cab-463b-ac93-0166282d00e3",
+            "Value": {
+                "id": "6156546c-4c54-4728-88a1-60b5e8ac8b92",
+                "resourcePath": "objects\\o_pickupCrop_Turnip\\o_pickupCrop_Turnip.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90666b5f-2fa3-48fe-8059-604bc5d95b4e",
             "Value": {
                 "id": "81eae015-f2e4-48d5-99d8-fe9470bdaeb3",
@@ -1031,11 +1079,27 @@
             }
         },
         {
+            "Key": "979a4758-fe3f-4008-b75c-62ebd86a9a1d",
+            "Value": {
+                "id": "811a02dc-651e-4a9d-9b22-76f2599732b6",
+                "resourcePath": "scripts\\_playerInteractCrops\\_playerInteractCrops.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9805173b-9d11-4939-96b8-669153bd7019",
             "Value": {
                 "id": "c617af59-f354-4973-8ecf-1ae07113a2c4",
                 "resourcePath": "objects\\ob_crop\\ob_crop.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9903ade6-b2d3-4494-8842-dcd051c227e3",
+            "Value": {
+                "id": "59158d7e-014e-47d5-b586-7bc4f63a995b",
+                "resourcePath": "scripts\\timeofdayDidHourPass\\timeofdayDidHourPass.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1223,6 +1287,14 @@
             }
         },
         {
+            "Key": "b4ba7c02-51c0-4cf4-aedf-064cf6e6a556",
+            "Value": {
+                "id": "45cbe354-40d6-477b-bfb8-c2afce3e259c",
+                "resourcePath": "scripts\\turnipOnUse\\turnipOnUse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b612461d-1e9a-42c2-81f4-916e6148abde",
             "Value": {
                 "id": "ced493d2-4aa6-4d8b-8a67-38373b4ac51d",
@@ -1287,6 +1359,14 @@
             }
         },
         {
+            "Key": "c25b7626-04c8-43ab-8038-18ecf1b21ec4",
+            "Value": {
+                "id": "056a638c-1fdd-4d65-97d5-fa99cf8d8f39",
+                "resourcePath": "sprites\\s_waterTrenchF\\s_waterTrenchF.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c2b8bb92-a935-432f-ae28-8b0c72fed9cd",
             "Value": {
                 "id": "6dbb404a-888f-41c8-83c7-a7e9c9a068ce",
@@ -1300,6 +1380,14 @@
                 "id": "152a2ac4-11c4-4adc-a0c2-3e6a0678753f",
                 "resourcePath": "views\\c43c0f1f-387e-40a4-8b5e-550843c8bdd2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c478e984-2dd3-41d6-b016-faa6ed8b6ff4",
+            "Value": {
+                "id": "22ad9c90-08ea-4719-8dad-8e0731b9c182",
+                "resourcePath": "sprites\\s_itemCropTurnip\\s_itemCropTurnip.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1690,6 +1778,7 @@
         "2e875ea2-8ea6-4603-a58f-46e58841da6d",
         "a2a14d96-67de-4544-9cd8-7c7968c5174d",
         "088d9175-e37f-4a00-9bb9-dc65d4aca786",
+        "979a4758-fe3f-4008-b75c-62ebd86a9a1d",
         "e3313d9d-68d1-4557-86f4-620f81e35bc3",
         "10a84dfe-bfc7-4570-8944-a432d6b21589",
         "711eb701-45ca-4fba-a519-6d5af29a0af5",
@@ -1697,7 +1786,12 @@
         "4d409182-c3d1-45d1-8ede-72161fbb8f69",
         "20b48cab-a37a-4bda-aab2-3451a5a716c8",
         "56a84241-7e72-4cfe-8345-7b8986e62560",
-        "bec3e5f0-d50b-44db-be78-6806ed0a95b3"
+        "bec3e5f0-d50b-44db-be78-6806ed0a95b3",
+        "b4ba7c02-51c0-4cf4-aedf-064cf6e6a556",
+        "359f0714-7d3b-473d-afe8-de8486b2ac05",
+        "59ff4b5e-3d47-431f-85d8-541eb30cf16f",
+        "3d092466-ac33-448a-ba01-0652c66fec82",
+        "9903ade6-b2d3-4494-8842-dcd051c227e3"
     ],
     "tutorial": ""
 }

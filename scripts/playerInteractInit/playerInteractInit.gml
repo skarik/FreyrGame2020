@@ -1,4 +1,5 @@
 currentUsable = null;
+currentCrop = null;
 currentTillable = null;
 currentBuildable = false;
 currentBuildableX = 0;
