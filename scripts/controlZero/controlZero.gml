@@ -5,9 +5,14 @@ if (argument0 == false)
 	xAxis.value = 0.0;
 	yAxis.value = 0.0;
 	zAxis.value = 0.0;
+	
+	uAxis.value = 0.0;
+	vAxis.value = 0.0;
+	wAxis.value = 0.0;
 
 	aButton.value = 0.0;
 	bButton.value = 0.0;
+	cButton.value = 0.0;
 	xButton.value = 0.0;
 	yButton.value = 0.0;
 	lButton.value = 0.0;

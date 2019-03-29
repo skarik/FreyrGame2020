@@ -31,7 +31,7 @@ if (watered == false)
 		var water = instance_find(o_waterMetaball, i);
 		var sqrDistance = sqr(x - water.x) + sqr(y - water.y);
 		
-		if (sqrDistance < sqr(water.sprite_width / 2) + sqrWaterDistance * 0.5)
+		if (sqrDistance < sqr(water.sprite_width / 2 + sqrWaterDistance / 4))
 		{
 			watered = true;
 			break;

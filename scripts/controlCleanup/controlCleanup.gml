@@ -1,8 +1,12 @@
 delete(xAxis);
 delete(yAxis);
 delete(zAxis);
+delete(uAxis);
+delete(vAxis);
+delete(wAxis);
 delete(aButton);
 delete(bButton);
+delete(cButton);
 delete(xButton);
 delete(yButton);
 delete(rButton);

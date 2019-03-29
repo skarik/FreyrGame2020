@@ -7,7 +7,8 @@ var belt_onUse = inventory.belt_onUse[inventory.belt_selection];
 
 if (belt_object != null)
 {
-	if (aButton.pressed)
+	if (canMove && !isBusyInteracting
+		&& (aButton.pressed || (isBlocking && bButton.pressed)))
 	{
 		if (script_execute(belt_checkUse))
 		{

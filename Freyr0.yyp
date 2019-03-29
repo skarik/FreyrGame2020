@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "197f8437-e363-4895-9dde-8f6bc4511e8a",
+            "Value": {
+                "id": "556f3cd7-720e-4053-9cae-931bff193bd6",
+                "resourcePath": "scripts\\areaInWater\\areaInWater.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1dd33fe3-5cc1-40ab-8889-6c8bc05646e1",
             "Value": {
                 "id": "ba2274ce-25e0-45d9-ae01-56f5df736379",
@@ -596,6 +604,14 @@
                 "id": "3ab11aa1-38a5-4d50-ac32-deb6f4bf626e",
                 "resourcePath": "shaders\\sh_metaballFarmland\\sh_metaballFarmland.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "4f656b16-8921-4fd8-84aa-203e8ddb9fa3",
+            "Value": {
+                "id": "7f843344-b947-45ff-8066-9c589a9fb74e",
+                "resourcePath": "scripts\\warpi\\warpi.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1748,6 +1764,7 @@
         "11255813-b9c4-4e61-80ef-aa0e213360d9",
         "2a223b3f-518c-4a61-9d83-ce0f6aa11dea",
         "dc368be5-d4b3-4f4e-b962-f07477cc755f",
+        "4f656b16-8921-4fd8-84aa-203e8ddb9fa3",
         "1f20d603-f71a-4e3c-ae4a-bdadee2369b0",
         "3595ce35-1e9d-433e-9a75-7262d9f13cb9",
         "5af8ba34-7692-4310-823d-d31d9d9613ac",
@@ -1791,7 +1808,8 @@
         "359f0714-7d3b-473d-afe8-de8486b2ac05",
         "59ff4b5e-3d47-431f-85d8-541eb30cf16f",
         "3d092466-ac33-448a-ba01-0652c66fec82",
-        "9903ade6-b2d3-4494-8842-dcd051c227e3"
+        "9903ade6-b2d3-4494-8842-dcd051c227e3",
+        "197f8437-e363-4895-9dde-8f6bc4511e8a"
     ],
     "tutorial": ""
 }

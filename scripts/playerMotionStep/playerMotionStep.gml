@@ -1,9 +1,5 @@
 // Perform area checks
-inWater = exists(collision_point(x, y + 6, ob_areaWater, true, true))
-	&& exists(collision_point(x - 5, y + 6, ob_areaWater, true, true))
-	&& exists(collision_point(x + 5, y + 6, ob_areaWater, true, true))
-	&& exists(collision_point(x, y + 6 - 4, ob_areaWater, true, true))
-	&& exists(collision_point(x, y + 6 + 4, ob_areaWater, true, true));
+inWater = areaInWater(x, y);
 // Perform usage checks
 isBusyInteracting = m_isTilling;
 if (exists(ob_CtsTalker))
@@ -12,21 +8,50 @@ if (exists(ob_CtsTalker))
 }
 
 // Set up the move speed
-var kMoveSpeed = 100;
+var l_moveSpeed = kMoveSpeed;
 if (inWater)
-	kMoveSpeed *= 0.50;
+	l_moveSpeed *= kMoveSpeedWaterPercent;
+if (isBlocking)
+	l_moveSpeed *= kMoveSpeedBlockingPercent;
+if (m_isHolding)
+	l_moveSpeed *= kMoveSpeedCarryingPercent;
+
+// Generate the target motion
+var xspeedTarget = 0.0;
+var yspeedTarget = 0.0;
 
 // Begin moving!
 if (!isBusyInteracting && canMove)
 {
-	xspeed = xAxis.value * kMoveSpeed;
-	yspeed = yAxis.value * kMoveSpeed;
+	xspeedTarget = xAxis.value * l_moveSpeed;
+	yspeedTarget = yAxis.value * l_moveSpeed;
 }
 else
 {
-	xspeed = 0.0;
-	yspeed = 0.0;
+	xspeedTarget = 0.0;
+	yspeedTarget = 0.0;
 }
+
+// Limit speed target
+var totalSpeed = sqrt(sqr(xspeedTarget) + sqr(yspeedTarget));
+xspeedTarget *= min(1.0, l_moveSpeed / totalSpeed);
+yspeedTarget *= min(1.0, l_moveSpeed / totalSpeed);
+
+// Select acceleration
+var l_moveAcceleration = kMoveAcceleration;
+if (sqr(xspeedTarget) + sqr(yspeedTarget) < 0.01)
+{
+	l_moveAcceleration = kMoveAccelerationStop;
+}
+
+// Accelerate up to the target
+var accelerationDelta = l_moveAcceleration * Time.deltaTime;
+var delta = 0.0;
+delta = xspeedTarget - xspeed;
+xspeed += (abs(delta) > accelerationDelta) ? (sign(delta) * accelerationDelta) : delta;
+delta = yspeedTarget - yspeed;
+yspeed += (abs(delta) > accelerationDelta) ? (sign(delta) * accelerationDelta) : delta;
+
 
 // If motion is not stopped, check for some sliding angle stuff
 if (sqr(xspeed) + sqr(yspeed) > 0)
@@ -89,8 +114,9 @@ if (place_meeting(x, y + yspeed * Time.deltaTime, ob_collider))
 
 // Limit max speed
 var totalSpeed = sqrt(sqr(xspeed) + sqr(yspeed));
-xspeed *= min(1.0, kMoveSpeed / totalSpeed);
-yspeed *= min(1.0, kMoveSpeed / totalSpeed);
+xspeed *= min(1.0, l_moveSpeed / totalSpeed);
+yspeed *= min(1.0, l_moveSpeed / totalSpeed);
 
+// Finally move
 x += xspeed * Time.deltaTime;
 y += yspeed * Time.deltaTime;

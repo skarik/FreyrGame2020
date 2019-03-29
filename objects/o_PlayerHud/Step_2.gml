@@ -73,7 +73,7 @@ draw_set_alpha(1.0);
 dx = 40;
 dy = 80;
 draw_sprite(sui_buttonContext, 0, dx, dy);
-draw_text(dx + 20, dy + 15, "Z");
+draw_text(dx + 20, dy + 15, "F");
 {
 	var inventory = o_PlayerTest.inventory;
 	// draw the item sprite
@@ -95,7 +95,24 @@ draw_text(dx + 20, dy + 15, "Z");
 dx = 20;
 dy = 100;
 draw_sprite(sui_buttonContext, 1, dx, dy);
-draw_text(dx + 20, dy + 15, "X");
+if (o_PlayerTest.isBlocking)
+{
+	var inventory = o_PlayerTest.inventory;
+	// draw the item sprite
+	if (inventory.belt_object[inventory.belt_selection] != null)
+	{
+		shader_set(sh_colormask);
+		draw_set_color(c_white);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 + 1, dy + 4);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 - 1, dy + 4);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 + 1);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 - 1);
+		shader_reset();
+		draw_set_color(c_white);
+		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4);
+	}
+}
+draw_text(dx + 20, dy + 15, "LMB");
 
 // health bar
 dx = 5; dy = 5;
@@ -146,7 +163,7 @@ surface_set_target(m_surfaceLightweight);
 draw_clear_alpha(c_white, 0.0);
 
 // tillable
-if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
+if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking)
 {
 	var tillable = o_PlayerTest.currentTillable;
 	dx = tillable.x - (GameCamera.x - GameCamera.width / 2);
@@ -154,9 +171,11 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
 	
 	gpu_set_blendenable(true);
 	gpu_set_blendmode(bm_normal);
-	draw_set_color(c_white);
 	draw_set_alpha(0.7);
+	draw_set_color(c_white);
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
+	draw_set_color(c_blue);
+	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 	draw_set_alpha(1.0);
 	
 	// set target to display text properly
@@ -175,7 +194,7 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker))
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
 }
-if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker))
+if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking)
 {
 	dx = o_PlayerTest.m_till_x - 8 - (GameCamera.x - GameCamera.width / 2);
 	dy = o_PlayerTest.m_till_y - 8 - (GameCamera.y - GameCamera.height / 2);
@@ -183,8 +202,9 @@ if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker))
 	gpu_set_blendenable(true);
 	gpu_set_blendmode(bm_normal);
 	draw_set_color(c_white);
-	draw_set_alpha(0.7);
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
+	draw_set_color(c_blue);
+	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 	draw_set_alpha(1.0);
 	
 	// set target to display text properly
@@ -329,6 +349,30 @@ var inventory = o_PlayerTest.inventory;
 	surface_set_target(m_surfaceLightweight);
 }
 
+// aimer
+dx = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));
+dy = round(o_PlayerTest.vPosition - (GameCamera.y - GameCamera.height / 2));
+
+draw_set_color(c_red);
+draw_line(dx - 3, dy, dx + 2, dy);
+draw_line(dx, dy - 3, dx, dy + 2);
+
+dx = round(o_PlayerTest.x - (GameCamera.x - GameCamera.width / 2));
+dy = round(o_PlayerTest.y - (GameCamera.y - GameCamera.height / 2));
+
+var aimerDistanceDiv = 16.0;
+var aimerDistance = min(3.0,
+						point_distance(o_PlayerTest.x, o_PlayerTest.y,
+									   o_PlayerTest.uPosition, o_PlayerTest.vPosition) / aimerDistanceDiv - 1.0
+						);
+for (var i = 0; i < aimerDistance; ++i)
+{
+	dx += lengthdir_x(aimerDistanceDiv, o_PlayerTest.aimingDirection);
+	dy += lengthdir_y(aimerDistanceDiv, o_PlayerTest.aimingDirection);
+	
+	draw_set_color(c_red);
+	draw_circle(round(dx), round(dy), 2, true);
+}
 
 draw_set_alpha(1.0); // clear here for now
 surface_reset_target();

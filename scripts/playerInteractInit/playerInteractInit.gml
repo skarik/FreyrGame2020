@@ -1,4 +1,7 @@
 currentUsable = null;
+currentHeldUsable = null;
+m_isHolding = false;
+
 currentCrop = null;
 currentTillable = null;
 currentBuildable = false;
@@ -18,3 +21,5 @@ m_plant_dirt = null;
 m_isPlanting = false;
 m_plant_x = 0;
 m_plant_y = 0;
+
+aimingDirection = 0.0;

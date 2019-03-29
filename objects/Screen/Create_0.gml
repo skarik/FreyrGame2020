@@ -4,6 +4,9 @@ width = 1280;
 height = 720;
 pixelScale = 2;
 
+// Hide the cursor
+window_set_cursor(cr_none);
+
 // Disable automatic app-surface drawing.
 application_surface_enable(false);
 application_surface_draw_enable(false);

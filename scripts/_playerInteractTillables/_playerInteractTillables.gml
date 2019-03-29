@@ -2,9 +2,11 @@ var gridSize = 16;
 
 if (!m_isTilling)
 {
+	// Get till distance
+	var tillDistance = max(2.0, min(28.0, point_distance(x, y, uPosition, vPosition)));
 	// Find the piece of land to till:
-	var tillX = x + lengthdir_x(12, facingDirection);
-	var tillY = y + lengthdir_y(12, facingDirection) + 5;
+	var tillX = x + lengthdir_x(tillDistance, aimingDirection);
+	var tillY = y + lengthdir_y(tillDistance, aimingDirection);
 	tillX = round((tillX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 	tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 
@@ -23,7 +25,7 @@ if (!m_isTilling)
 	{
 		if (!currentTillable.tilled)
 		{
-			if (canMove && bButton.pressed)
+			if (canMove && !isBlocking && !exists(currentUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
 			{
 				m_till_target = currentTillable;
 				m_isTilling = true;
@@ -57,7 +59,7 @@ if (!m_isTilling)
 			if (m_till_filldirt)
 			{
 				// Do we want to make dirt?
-				if (canMove && bButton.pressed && !exists(currentUsable) && !exists(currentCrop))
+				if (canMove && !isBlocking && !exists(currentUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
 				{
 					m_till_target = null;
 					m_isTilling = true;

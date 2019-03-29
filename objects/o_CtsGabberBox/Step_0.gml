@@ -57,7 +57,7 @@ if (current_display_count >= string_length(display_text))
 if ( done_alpha > 0.5 )
 {
     controlUpdate(false);
-    if ( aButton.pressed )
+    if ( bButton.pressed )
     {
         if (!input_fadeout)
         {
