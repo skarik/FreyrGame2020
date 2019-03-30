@@ -15,7 +15,7 @@ if (argument0 == false)
 //	_controlStructUpdate(bButton, keyboard_check(ord("X")));
 	_controlStructUpdate(aButton, keyboard_check(ord("F")));
 	_controlStructUpdate(cButton, mouse_check_button(mb_right));
-	_controlStructUpdate(xButton, keyboard_check(ord("Q")));
+	_controlStructUpdate(xButton, keyboard_check(ord("Q")) || keyboard_check(vk_tab));
 	_controlStructUpdate(yButton, keyboard_check(ord("E")));
 	_controlStructUpdate(lButton, keyboard_check(ord("1")) + mouse_wheel_down());
 	_controlStructUpdate(rButton, keyboard_check(ord("2")) + mouse_wheel_up());

@@ -34,6 +34,14 @@ if (canMove && !isBusyInteracting)
 	}
 }
 
+// update book
+if (canMove && !isBusyInteracting)
+{
+	if (xButton.pressed)
+	{
+		o_PlayerHud.m_book_enabled = !o_PlayerHud.m_book_enabled; // todo: make this a cutscene menu
+	}
+}
 
 _playerInteractUsables();
 _playerInteractCrops();
