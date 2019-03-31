@@ -87,9 +87,21 @@ while (!file_text_eof(fp))
             if (read_object_type == SEQTYPE_CHOICES)
             {
                 var actual_map = ds_map_create();
+				
+				var target = ds_map_find_value(read_object_map, "target");
+                if (is_undefined(target))
+                    target = null;
+                else if (target == "imp")
+                    target = o_PlayerImp;
+				else if (target == "hero" || target == "player" || target == "idiot")
+					target = o_PlayerTest;
+				else if (target = "nathan")
+					target = o_chNathan;
+                else
+                    target = null;
             
                 // Go through the keys to find the maximum value and convert needed values
-                var size = ds_map_size(read_object_map);
+                /*var size = ds_map_size(read_object_map);
                 var key = ds_map_find_first(read_object_map);
                 var max_key = 0;
                 repeat (size)
@@ -106,9 +118,25 @@ while (!file_text_eof(fp))
                         }
                     }
                     key = ds_map_find_next(read_object_map, key);
-                }
+                }*/
+				
+				// Loop through the numbered keys for choices:
+				var key = 1;
+				var max_key = 0;
+				while (!is_undefined(ds_map_find_value(read_object_map, string(key))))
+				{
+					// Select max key for the count later
+                    max_key = max(max_key, key);
+					// Add the actual key
+                    ds_map_add(actual_map, key, ds_map_find_value(read_object_map, string(key)));
+					// Incremenent key
+					key += 1;
+				}
                 // Add the key count
                 ds_map_add(actual_map, SEQI_COUNT, max_key);
+				
+				// Add the target
+				ds_map_add(actual_map, SEQI_TARGET, target);
                 
                 // Delete original map
                 ds_map_destroy(read_object_map);

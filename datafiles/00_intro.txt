@@ -30,4 +30,11 @@ lines
    1 Huh?
 }
 
+choice
+{
+    target player
+    1 Yes
+    2 no
+}
+
 #ended

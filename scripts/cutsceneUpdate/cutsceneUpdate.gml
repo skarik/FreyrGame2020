@@ -96,6 +96,9 @@ case SEQTYPE_CHOICES:
     {
         // Make a talker with all the input info
         var count = ds_map_find_value(entry, SEQI_COUNT);
+		var target = ds_map_find_value(entry, SEQI_TARGET);
+		
+		var target_inst = instance_find(target, count);
         
         var gabber = new(o_CtsChoiceBox);
             gabber.input_choice_count = count;
@@ -103,6 +106,7 @@ case SEQTYPE_CHOICES:
             {
                 gabber.input_choice[i] = ds_map_find_value(entry, i+1);
             }
+			gabber.input_actor = exists(target_inst) ? target_inst : null;
         // On the next step
         cts_execute_state = 1;
         return false;
