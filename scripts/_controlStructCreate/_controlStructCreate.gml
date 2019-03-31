@@ -6,4 +6,6 @@ control.down = false;
 control.pressed = false;
 control.released = false;
 
+control.persistent = true;
+
 return control;

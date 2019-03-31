@@ -8,10 +8,16 @@ screen
     b 0
 }
 
+flags
+{
+    // sets quest flag 0 to 10. kQidIntroSequence is defined in the game.
+    set IntroSequence 10
+}
+
 lines
 {
     target  player
-    1 $0..$1..$2..$3..$4..
+    1 ..........
     2 .....mm?
     3 ....I'm alive?
     4 I thought I was going to drown...
@@ -26,15 +32,65 @@ lines
 
 lines
 {
+
    target player
    1 Huh?
 }
 
+//Cg of Nathan Weeeee
+
+lines
+{
+
+    target nathan
+    1 Are you a-a-$walright$$?
+
+}
+
+// Fade out of cg
+
+lines
+{
+
+    target nathan
+    1 $bAre$$ you alright?
+
+}
+
 choice
 {
+
     target player
-    1 Yes
-    2 no
+    1 Um..I think so?
+    1goto IThinkSo
+    2 Who...are you?
+    2goto WhoAreYou
 }
+
+// SELECTION 1 RIGHT HERE
+#IThinkSo
+    lines
+    {
+        target nathan
+        1 You don't sound too sure...
+    }
+
+    goto
+    {
+        target AfterQuestion
+    }
+
+// SELECTION 2 RIGHT HERE
+#WhoAreYou
+    lines
+    {
+        target nathan
+        1 I'm an evil cunt!
+    }
+
+    // no need for a goto here, since it'll just fall thru
+
+#AfterQuestion
+
 
 #ended

@@ -4,6 +4,7 @@ new(GameCamera);
 new(Time);
 new(Debug);
 new(Settings);
+new(Game);
 
 // Update persistance
 System.persistent = true;
