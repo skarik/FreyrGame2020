@@ -1,4 +1,6 @@
+event_inherited();
 
-image_angle += 600 * Time.deltaTime;
-x += xspeed * Time.deltaTime;
-y += yspeed * Time.deltaTime;
+if (m_moving)
+{
+	image_angle += 600 * Time.deltaTime;
+}

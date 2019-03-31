@@ -38,4 +38,10 @@ else
 if (Debug.visible)
 {
 	camPlayerDrawDebug();
+	draw_set_color(c_black);
+	draw_set_font(f_04b03);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_text(x - 4, y - 32, string(meleeAtkCurrent));
+	draw_text(x + 16, y - 32, string(meleeAtkTimer));
 }

@@ -1,7 +1,7 @@
 m_surface = null;
 m_surfaceLightweight = null;
 
-depth = -1000;
+depth = -500;
 
 m_inventory_selector = 0.0;
 m_inventory_selectorStart = 0.0;

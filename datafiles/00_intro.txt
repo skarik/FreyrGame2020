@@ -1,0 +1,33 @@
+#begin
+
+screen
+{
+    type fadein
+    r 0
+    g 0
+    b 0
+}
+
+lines
+{
+    target  player
+    1 $0..$1..$2..$3..$4..
+    2 .....mm?
+    3 ....I'm alive?
+    4 I thought I was going to drown...
+
+}
+
+lines
+{
+    target  nathan
+    1 E-e-$wexcuse me$$?
+}
+
+lines
+{
+   target player
+   1 Huh?
+}
+
+#ended

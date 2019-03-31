@@ -15,6 +15,7 @@ var penx = 0;
 var peny = 0;
 var penc = c_white;
 var penw = 2;
+var penwiggle = false;
 for (var i = 0; i < floor(current_display_count); ++i)
 {
     if ( display_flags[i] != 0 )
@@ -25,6 +26,8 @@ for (var i = 0; i < floor(current_display_count); ++i)
             penc = c_red;
         if ( display_flags[i] == ord("2") )
             penc = c_gray;
+		if ( display_flags[i] == ord("3") )
+			penc = merge_color(c_electricity, c_navy, 0.5);
         if ( display_flags[i] == ord("b") )
         {
             draw_set_font(display_font_bold);
@@ -36,7 +39,10 @@ for (var i = 0; i < floor(current_display_count); ++i)
             draw_set_font(display_font);
             text_refw = string_width("m");
             penw = 2;
+			penwiggle = false;
         }
+		if ( display_flags[i] == ord("w") )
+			penwiggle = true;
         // Newline!
         if ( display_flags[i] == ord("#") )
         {
@@ -47,11 +53,15 @@ for (var i = 0; i < floor(current_display_count); ++i)
 
     var char = string_char_at(display_text,i + 1);
     
+	var yoffset = 0;
+	if (penwiggle)
+		yoffset += round(sin(current_time / 200.0 + i * 0.76) * 3.4);
+	
     // draw the text
     draw_set_color( c_black );
-    draw_text(dx + penx, dy + peny + 1, char);    
+    draw_text(dx + penx, dy + peny + 1 + yoffset, char);    
     draw_set_color( penc );
-    draw_text(dx + penx, dy + peny, char);
+    draw_text(dx + penx, dy + peny + yoffset, char);
     
     // do a lookahead for dropping a line if currently on a space
     var override_drop = false;

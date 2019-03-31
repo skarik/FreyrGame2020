@@ -15,7 +15,11 @@ if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
 }
 
 // update facing direction
-facingDirection = (facingAngle - 1) * 90;
+//facingDirection = (facingAngle - 1) * 90;
+if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
+{
+	facingDirection = point_direction(0, 0, xAxis.value, yAxis.value);
+}
 // override facing direction with the aiming when standing or attacking, and the mouse moves
 if (sqr(xspeed) + sqr(yspeed) < 10
     && (uPosition != uPositionPrevious || vPosition != vPositionPrevious))

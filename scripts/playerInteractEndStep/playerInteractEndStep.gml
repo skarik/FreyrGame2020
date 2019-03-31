@@ -1,4 +1,19 @@
-if (cButton.down && !m_isHolding && !m_isTilling && !m_isPlanting)
+var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting;
+
+// Do dashing
+if (dashCooldown <= 0.0)
+{
+	if (cButton.pressed && !isDashing && l_canMove && !isAttacking && !exists(currentHeldUsable))
+	{
+		_playerInteractDoDash();
+	}
+}
+else if (!isDashing)
+{
+	dashCooldown -= Time.deltaTime;
+}
+// Do blocking
+if (cButton.down && l_canMove && !m_isHolding && !m_isTilling && !m_isPlanting && !exists(currentHeldUsable))
 {
 	isBlocking = true;
 }
@@ -7,7 +22,8 @@ else
 	isBlocking = false;
 }
 
-if (canMove && !isBusyInteracting)
+// Inventory selection!
+if (l_canMove)
 {
 	if (lButton.pressed)
 	{
@@ -26,7 +42,7 @@ if (canMove && !isBusyInteracting)
 }
 
 // update aiming
-if (canMove && !isBusyInteracting)
+if (l_canMove)
 {
 	if (uPosition != uPositionPrevious || vPosition != vPositionPrevious)
 	{
@@ -35,7 +51,7 @@ if (canMove && !isBusyInteracting)
 }
 
 // update book
-if (canMove && !isBusyInteracting)
+if (l_canMove)
 {
 	if (xButton.pressed)
 	{
@@ -43,8 +59,95 @@ if (canMove && !isBusyInteracting)
 	}
 }
 
-_playerInteractUsables();
-_playerInteractCrops();
-_playerInteractTillables();
+_playerInteractTillables(l_canMove && !inDelayFrame);
+_playerInteractUsables(l_canMove && !inDelayFrame);
+_playerInteractCrops(l_canMove && !inDelayFrame);
 //_playerInteractBuildables();
-_playerInteractItems();
+_playerInteractItems(l_canMove && !inDelayFrame);
+
+// do combat mode calculations
+inCombatMode = !inDelayFrame;
+//if (collision_circle(x, y, )
+// todo: loop thru near enemies, if they're hostile, then we in combat mode
+if (exists(currentUsable) || exists(currentHeldUsable))
+{
+	inCombatMode = false;
+}
+if (exists(currentCrop))
+{
+	inCombatMode = false;
+}
+if (exists(currentTillable) || m_isTilling)
+{
+	inCombatMode = false;
+}
+
+// update attacking
+if (l_canMove && !isDashing && !isBlocking)
+{
+	if (!isAttacking)
+	{
+		meleeAtkTimer += Time.deltaTime * 2.0;
+		
+		if (bButton.pressed && inCombatMode)
+		{
+			if (meleeAtkTimer > 1.0)
+			{
+				meleeAtkCurrent = 0;
+				// do the thing
+				meleeAtkTimer = 0.0;
+				isAttacking = true;
+				isDashing = false;
+				meleeAtkDirection = aimingDirection;
+			}
+			else if (meleeAtkCurrent < 3)
+			{
+				meleeAtkCurrent += 1;
+				// do the thing
+				meleeAtkTimer = 0.0;
+				isAttacking = true;
+				isDashing = false;
+				meleeAtkDirection = aimingDirection;
+			}
+			else
+			{
+				meleeAtkCurrent = 0;
+				dashCooldown = -1.0;
+				//meleeAtkTimer = +2.0;
+			}
+		}
+		else if (meleeAtkTimer > 1.0)
+		{
+			meleeAtkCurrent = 0;
+		}
+	}
+	else
+	{
+		if (cButton.pressed)
+		{
+			meleeDashQueued = true;
+			meleeAtkQueued = false;
+		}
+		else if (bButton.pressed)
+		{
+			meleeDashQueued = false;
+			meleeAtkQueued = true;
+		}
+	}
+	
+	// Combo limiter
+	if (meleeAtkCurrent > 3)
+	{
+		meleeAtkCurrent = 0;
+		dashCooldown = -1.0;
+		isAttacking = false;
+	}
+}
+else if (isDashing)
+{
+	meleeAtkTimer = +2.0;
+	meleeAtkCurrent = 0;
+}
+
+// reset delay frame
+inDelayFrame = false;

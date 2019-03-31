@@ -3,17 +3,20 @@ new(Screen);
 new(GameCamera);
 new(Time);
 new(Debug);
+new(Settings);
 
 // Update persistance
 System.persistent = true;
 Screen.persistent = true;
 GameCamera.persistent = true;
 Debug.persistent = true;
+Settings.persistent = true;
 
 // Update layers
 Screen.layer = System.layer;
 GameCamera.layer = System.layer;
 Debug.layer = System.layer;
+Settings.layer = System.layer;
 
 // Loop through each room and set the views
 var t_currentRoom = room_first;
@@ -40,6 +43,10 @@ while (room_exists(t_currentRoom))
 window_set_size(Screen.width, Screen.height);
 //surface_resize(application_surface, Screen.width, Screen.height);
 window_set_position(128,128);
+
+// Output some debug info
+debugOut("working_directory: " + working_directory);
+debugOut("program_directory: " + program_directory);
 
 // Finish and go to next room
 room_goto_next();

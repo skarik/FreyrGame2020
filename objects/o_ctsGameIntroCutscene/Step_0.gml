@@ -1,0 +1,4 @@
+/// @description ctsupdate
+if (!cutsceneUpdate())
+{
+}

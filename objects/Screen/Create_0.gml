@@ -4,6 +4,9 @@ width = 1280;
 height = 720;
 pixelScale = 2;
 
+offset_x = 0;
+offset_y = 0;
+
 // Hide the cursor
 window_set_cursor(cr_none);
 

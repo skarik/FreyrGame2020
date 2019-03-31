@@ -88,7 +88,7 @@ if (o_PlayerTest.isBlocking)
 draw_text(dx + 20, dy + 15, "LMB");
 
 // health bar
-dx = 5; dy = 5;
+/*dx = 5; dy = 5;
 draw_set_alpha(1.0);
 draw_set_color(c_gray);
 draw_rectangle(dx - 1, dy - 1, dx + o_PlayerTest.stats.m_healthMax + 1, dy + 10 + 1, false);
@@ -96,13 +96,18 @@ draw_set_color(c_dkgray);
 draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_healthMax, dy + 10, false);
 draw_set_color(c_red);
 draw_set_alpha(0.7);
-draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_health, dy + 10, false);
+draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_health, dy + 10, false);*/
 
 // health bar v2
 dx = 5;
 dy = 10;
 draw_set_alpha(1.0);
-draw_sprite(sui_roboArm, 0, dx, dy);
+draw_sprite(sui_roboArm, 1, dx, dy);
+var health_percent = clamp(o_PlayerTest.stats.m_health / o_PlayerTest.stats.m_healthMax, 0.0, 1.0);
+draw_sprite_part(sui_roboArm, 2,
+	0, 0,
+	5, 30 * health_percent,
+	dx + 16, dy + 32 + 30 * (1.0 - health_percent));
 
 // time of day
 dx = 60;

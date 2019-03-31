@@ -15,8 +15,8 @@ void main()
 	
 	// Perform the 3D lookup
 	vec2 color_lookup_coords = vec2(
-		color_scene.r * uLookupDivs.x + floor(color_scene.b * uLookupDivs.z) * uLookupDivs.w,
-		color_scene.g); // * uLookupDivs.y
+		color_scene.r * uLookupDivs.x * (254.0/255.0) + floor(color_scene.b * uLookupDivs.z) * uLookupDivs.w,
+		color_scene.g * uLookupDivs.y);
 	vec4 color_lookup	= texture2D( samplerPaletteLUT, color_lookup_coords );
     gl_FragColor = color_lookup;//abs(color_lookup - color_scene);
 	//gl_FragColor = v_vTexcoord.xyyy;

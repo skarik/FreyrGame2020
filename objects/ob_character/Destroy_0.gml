@@ -1,0 +1,3 @@
+/// @description Destruction
+
+delete(stats);

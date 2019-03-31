@@ -1,3 +1,4 @@
+var l_canMove = argument0;
 var gridSize = 16;
 
 if (!m_isTilling)
@@ -20,12 +21,20 @@ if (!m_isTilling)
 		}
 	}
 
+	// Clear out tillable if busy
+	if (exists(currentUsable) || exists(currentHeldUsable) || exists(currentCrop))
+	{
+		currentTillable = null;
+		tillX = 0;
+		tillY = 0;
+	}
+
 	// Check if button is pressed to till the land
 	if (exists(currentTillable))
 	{
 		if (!currentTillable.tilled)
 		{
-			if (canMove && !isBlocking && !exists(currentUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
+			if (l_canMove && !isBlocking && !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
 			{
 				m_till_target = currentTillable;
 				m_isTilling = true;
@@ -59,7 +68,7 @@ if (!m_isTilling)
 			if (m_till_filldirt)
 			{
 				// Do we want to make dirt?
-				if (canMove && !isBlocking && !exists(currentUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
+				if (canMove && !isBlocking && !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
 				{
 					m_till_target = null;
 					m_isTilling = true;

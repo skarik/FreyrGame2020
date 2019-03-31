@@ -23,3 +23,7 @@ m_plant_x = 0;
 m_plant_y = 0;
 
 aimingDirection = 0.0;
+
+inCombatMode = false;
+
+inDelayFrame = false;

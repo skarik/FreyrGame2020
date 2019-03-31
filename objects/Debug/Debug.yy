@@ -5,16 +5,6 @@
     "name": "Debug",
     "eventList": [
         {
-            "id": "cf273e18-5803-47ff-b608-0d5173779ac2",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 112,
-            "eventtype": 9,
-            "m_owner": "ad271f56-5e2b-4893-ba8b-ebbde06f22b1"
-        },
-        {
             "id": "9c62cb0c-985a-458e-98cd-47c9e0d7827c",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -42,6 +32,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 113,
             "eventtype": 9,
+            "m_owner": "ad271f56-5e2b-4893-ba8b-ebbde06f22b1"
+        },
+        {
+            "id": "95db5b2d-e63a-40a2-b6cb-e9b950472024",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
             "m_owner": "ad271f56-5e2b-4893-ba8b-ebbde06f22b1"
         }
     ],

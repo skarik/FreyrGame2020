@@ -1,3 +1,5 @@
+var l_canMove = argument0;
+
 // update usable
 var kMaxUseDistance = 20.0;
 currentUsable = null;
@@ -23,7 +25,7 @@ if (!exists(currentHeldUsable) || !m_isHolding)
 
 	if (exists(currentUsable))
 	{
-		if (canMove && !isBusyInteracting && bButton.pressed)
+		if (l_canMove && bButton.pressed)
 		{
 			currentUsable.m_user = id;
 			
@@ -43,6 +45,9 @@ if (!exists(currentHeldUsable) || !m_isHolding)
 					event_user(1);
 				}
 			}
+			
+			// enable delay frame
+			inDelayFrame = true;
 		}
 	}
 }
@@ -75,7 +80,10 @@ else
 			}
 			// drop it
 			currentHeldUsable = null;
-			m_isHolding = false;
+			m_isHolding = false
+			
+			// enable delay frame
+			inDelayFrame = true;
 		}
 	}
 	else

@@ -1,3 +1,5 @@
+var l_canMove = argument0;
+
 // update usable
 var kMaxUseDistance = 20.0;
 currentCrop = null;
@@ -21,7 +23,7 @@ with (ob_crop)
 
 if (exists(currentCrop))
 {
-	if (canMove && !isBusyInteracting && bButton.pressed)
+	if (l_canMove && bButton.pressed)
 	{
 		currentCrop.m_user = id;
 		with (currentCrop)

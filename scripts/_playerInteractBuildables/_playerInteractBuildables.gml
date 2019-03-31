@@ -1,6 +1,8 @@
+var l_canMove = argument0;
+
 currentBuildable = false;
 
-if (!m_isTilling && canMove && !isBusyInteracting
+if (!m_isTilling && l_canMove
 	&& room == rm_oasis)
 {
 	// Find the piece of land to till:

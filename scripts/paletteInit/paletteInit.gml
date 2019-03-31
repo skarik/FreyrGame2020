@@ -51,9 +51,9 @@ for (var u = 0; u < global.pal_lutWidth; ++u)
 				var _deltaTest = sqr(color_get_red(global.pal_color[i]) - _r)
 					+ sqr(color_get_green(global.pal_color[i]) - _g)
 					+ sqr(color_get_blue(global.pal_color[i]) - _b);
-				//var _deltaTest = sqr(color_get_value(global.pal_color[i]) - color_get_value(_rgb)) * 2.0
-				//	+ sqr(color_get_saturation(global.pal_color[i]) - color_get_saturation(_rgb)) * 0.0125
-				//	+ sqr(angle_difference(color_get_hue(global.pal_color[i]) / 255.0 * 360, color_get_hue(_rgb)  / 255.0 * 360) * (360.0 / 255)) * 0.015;
+				/*var _deltaTest = sqr(color_get_value(global.pal_color[i]) - color_get_value(_rgb)) * 0.02
+					+ sqr(color_get_saturation(global.pal_color[i]) - color_get_saturation(_rgb)) * 0.0125
+					+ sqr(angle_difference(color_get_hue(global.pal_color[i]) / 255.0 * 360, color_get_hue(_rgb)  / 255.0 * 360) * (360.0 / 255)) * 0.2;*/
 					
 				if (_deltaTest < _delta)
 				{

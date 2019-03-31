@@ -1,3 +1,10 @@
+event_inherited();
+
+// override chracter value
+m_isPlayer = true;
+
+m_team = kTeamGood;
+
 controlInit();
 
 playerMotionInit();
@@ -6,9 +13,9 @@ playerInteractInit();
 
 camPlayerInit();
 
-stats = new(o_stats);
 hud = new(o_PlayerHud);
 inventory = new(o_inventory);
+quests = new(o_PlayerQuest);
 
 // make sure there's day/night
 if (!exists(o_dayNightCycle))

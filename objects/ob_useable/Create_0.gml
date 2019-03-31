@@ -3,6 +3,7 @@
 m_name = "Usable Object";
 m_actionName = "Inspect";
 m_canPickUp = false;
+m_isSuperHeavy = false;
 m_canThrow = false;
 m_airFriction = 100;
 

@@ -1,0 +1,3 @@
+bloodDisabled = false;
+
+persistent = true;
