@@ -18,3 +18,6 @@ characterMotionInit();
 isBlocking = false;
 isDashing = false;
 isEthereal = false;
+
+// Init depth setup
+depthInit();

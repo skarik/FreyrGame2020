@@ -33,4 +33,6 @@ if (dashPercentage >= 1.0)
 	// TODO: check collision
 	//x = dashTargetX;
 	//y = dashTargetY;
+	xspeed = 0.0; // Stop at end of dash
+	yspeed = 0.0; 
 }

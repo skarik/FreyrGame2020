@@ -13,6 +13,6 @@ enum Cts
 m_state = Cts.S1DeadOverlay;
 m_timer = 0;
 
-depth = -1001;
+depth = -9101;
 
 persistent = true;

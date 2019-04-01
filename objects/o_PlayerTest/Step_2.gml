@@ -1,3 +1,5 @@
+event_inherited();
+
 // animation update
 playerAnimLateUpdate();
 

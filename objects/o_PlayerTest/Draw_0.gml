@@ -8,7 +8,7 @@ if (!inWater)
 	gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_dest_color, bm_zero);
 	draw_set_color(c_ltgray);
-	draw_ellipse(dx - 7, dy + 5, dx + 6, dy + 9, false);
+	draw_ellipse(dx - 7, dy -2, dx + 6, dy + 2, false);
 
 	gpu_set_blendmode(bm_normal);
 	gpu_set_alphatestenable(true);
@@ -20,11 +20,11 @@ else
 	gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_dest_color, bm_zero);
 	draw_set_color(c_ltgray);
-	draw_ellipse(dx - 7 - 2, dy + 5 - 4 - 1, dx + 6 + 2, dy + 9 - 4 + 1, false);
+	draw_ellipse(dx - 7 - 2, dy - 2 - 4 - 1, dx + 6 + 2, dy + 2 - 4 + 1, false);
 
 	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 	draw_set_color(c_white);
-	draw_ellipse(dx - 7 + 1, dy + 5 - 4, dx + 6 - 1, dy + 9 - 4, false);
+	draw_ellipse(dx - 7 + 1, dy - 2 - 4, dx + 6 - 1, dy + 2 - 4, false);
 
 	gpu_set_blendmode(bm_normal);
 	gpu_set_alphatestenable(true);

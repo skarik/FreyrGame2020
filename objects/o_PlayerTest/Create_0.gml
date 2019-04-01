@@ -1,4 +1,9 @@
+hud = null;
+quests = null;
+
 event_inherited();
+
+if (singleton_this()) exit;
 
 // override chracter value
 m_isPlayer = true;

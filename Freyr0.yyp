@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "1369ecf7-58ca-401b-9ec0-7880ceec1a89",
+            "Value": {
+                "id": "f55babdd-8ff8-446b-becb-1051865ec5af",
+                "resourcePath": "sprites\\s_propSticks\\s_propSticks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "141163bd-233c-4051-bb86-a532cbc9ee46",
             "Value": {
                 "id": "bea88f4e-5b91-46c7-a57b-ce04f3ebc721",
@@ -615,6 +623,14 @@
             }
         },
         {
+            "Key": "32747f96-8517-4aec-b9a3-7ea1b5a165c6",
+            "Value": {
+                "id": "b599d468-24b1-44fe-82a5-4d438de4cf5c",
+                "resourcePath": "sprites\\s_propSticksLarge\\s_propSticksLarge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "33a16ba5-1540-47fa-b42f-f12adc454fba",
             "Value": {
                 "id": "07bbde36-46a9-4e6e-8dd2-a7814d5f772c",
@@ -940,6 +956,14 @@
                 "id": "7f843344-b947-45ff-8066-9c589a9fb74e",
                 "resourcePath": "scripts\\warpi\\warpi.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5039a925-2c9b-4b99-ad19-966f7221bd43",
+            "Value": {
+                "id": "f22c9f72-0810-4a50-9b35-f1e50af3f887",
+                "resourcePath": "sprites\\s_propStickTorches\\s_propStickTorches.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1407,6 +1431,14 @@
             }
         },
         {
+            "Key": "7ded160e-a77a-4c7b-a0e4-8ff4cb077829",
+            "Value": {
+                "id": "3c31cd15-d1dc-4f66-a21f-7300e612fc9e",
+                "resourcePath": "scripts\\doodadInitOnLayer\\doodadInitOnLayer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7e50bfa1-0427-4c12-b781-ed73912169d3",
             "Value": {
                 "id": "20b00eaa-e3e3-4a7d-b900-530fe9bc291d",
@@ -1711,6 +1743,22 @@
             }
         },
         {
+            "Key": "9cb0b423-4946-43be-94ff-14eb77cd19f5",
+            "Value": {
+                "id": "f10a9ef5-2506-4a78-9e8d-1009ab453511",
+                "resourcePath": "objects\\o_assetDoodadRenderer\\o_assetDoodadRenderer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9cf2c4dc-0e9f-4276-b5d5-2ff206e805f3",
+            "Value": {
+                "id": "68ea5c42-2374-45d5-a853-37c0a41bca78",
+                "resourcePath": "views\\9cf2c4dc-0e9f-4276-b5d5-2ff206e805f3.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9dc6eef7-015e-40e8-8253-e855840ae3b4",
             "Value": {
                 "id": "84acce2f-b373-422a-b60a-c4f3faacf8d7",
@@ -1732,6 +1780,14 @@
                 "id": "01e86f1e-b9ce-4787-85b3-280d488378d9",
                 "resourcePath": "objects\\o_miniCanalWater\\o_miniCanalWater.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a02c70d0-2855-431f-a152-4b434b381889",
+            "Value": {
+                "id": "2d19588c-2b86-422f-8697-2ef4e5c6829a",
+                "resourcePath": "scripts\\depthInit\\depthInit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1844,6 +1900,14 @@
                 "id": "dabd4de7-89e9-4082-b653-4157330aeacd",
                 "resourcePath": "sprites\\sui_bookPages\\sui_bookPages.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "abdb58e4-7831-4738-a963-7f9ec0967159",
+            "Value": {
+                "id": "ba6cd031-6263-44af-8216-6d999622f4cd",
+                "resourcePath": "shaders\\sh_colormaskAlphatest\\sh_colormaskAlphatest.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -2511,6 +2575,14 @@
             }
         },
         {
+            "Key": "e78e571a-f675-4164-8163-776235d6ec09",
+            "Value": {
+                "id": "ac6d5f19-dba8-4e27-944a-fc473084f50d",
+                "resourcePath": "scripts\\doodadSetupOnRoomStart\\doodadSetupOnRoomStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e94ddbb2-e09b-4710-b56c-ce32159e8e34",
             "Value": {
                 "id": "8b8b09a2-4001-42d4-8d90-e0e5fb2ca112",
@@ -2643,6 +2715,14 @@
             "Value": {
                 "id": "f6534567-4e1d-4db5-9d10-946ede196eb6",
                 "resourcePath": "scripts\\cutsceneUpdate\\cutsceneUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f88ac528-e68c-4322-9c8b-dd4a76715d3d",
+            "Value": {
+                "id": "800aa0d7-4a52-4d69-bb00-39283aaa901f",
+                "resourcePath": "scripts\\depthUpdate\\depthUpdate.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2858,7 +2938,11 @@
         "fdbb3679-3764-4a36-89dc-9d26a9794773",
         "82a26b66-c615-49e2-9bf5-5c50f21ea1d8",
         "d0013833-85bc-4327-b83e-936197178858",
-        "1fbcfcc3-39c9-4fcc-a260-94c56424299c"
+        "1fbcfcc3-39c9-4fcc-a260-94c56424299c",
+        "e78e571a-f675-4164-8163-776235d6ec09",
+        "7ded160e-a77a-4c7b-a0e4-8ff4cb077829",
+        "a02c70d0-2855-431f-a152-4b434b381889",
+        "f88ac528-e68c-4322-9c8b-dd4a76715d3d"
     ],
     "tutorial": ""
 }
