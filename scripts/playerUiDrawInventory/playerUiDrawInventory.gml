@@ -55,16 +55,17 @@ var inventory = o_PlayerTest.inventory;
 {
 	dx = 5;
 	dy = GameCamera.height - 30;
+	var dspace = 25;
 	// inventory selector bg
 	surface_reset_target();
 	surface_set_target(m_surface);
 	var selector = m_inventory_selector;
 	draw_sprite_ext(sui_gearMedium, 0,
-		dx + 24 * selector + 15 - 6,
+		dx + dspace * selector + 15 - 6,
 		dy + 15 + 6 + 40 * smoothstep(1.0 - m_inventory_selectorBlendCruft),
 		1.0, 1.0, current_time * 0.01 - m_inventory_selector * 130.0, c_white, 1.0);
 	draw_sprite_ext(sui_gearSmall, 0,
-		dx + 24 * selector + 15 + 10,
+		dx + dspace * selector + 15 + 10,
 		dy + 15 - 10 + 40 * bouncestep(smoothstep(1.0 - m_inventory_selectorBlendCruft)),
 		1.0, 1.0, - current_time * 0.02 + m_inventory_selector * 230.0, c_white, 1.0);
 	// inventory selector
@@ -76,18 +77,18 @@ var inventory = o_PlayerTest.inventory;
 	draw_set_valign(fa_bottom);
 	for (var i = 0; i < inventory.belt_size; ++i)
 	{
-		draw_sprite(sui_bagBox, 0, dx + 24 * i, dy );
+		draw_sprite(sui_bagBox, 0, dx + dspace * i, dy );
 	
 		if (inventory.belt_object[i] != null)
 		{
-			draw_sprite(object_get_sprite(inventory.belt_object[i]), 0, dx + 24 * i + 15, dy + 15);
-			draw_text(dx + 24 * i + 25, dy + 25, string(inventory.belt_count[i]));
+			draw_sprite(object_get_sprite(inventory.belt_object[i]), 0, dx + dspace * i + 15, dy + 15);
+			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt_count[i]));
 		}
 	}
 	// inventory selector fg
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
-	draw_sprite(sui_arcaneSelect, 0, dx + 24 * selector + 15, dy + 15);
+	draw_sprite(sui_arcaneSelect, 0, dx + dspace * selector + 15, dy + 15);
 	// inventory item name
 	surface_reset_target();
 	surface_set_target(m_surface);

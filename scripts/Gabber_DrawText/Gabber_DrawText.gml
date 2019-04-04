@@ -13,7 +13,7 @@ var text_refw = string_width("m");
 var text_w = display_width;
 var penx = 0;
 var peny = 0;
-var penc = c_white;
+var penc = c_black;
 var penw = 2;
 var penwiggle = false;
 for (var i = 0; i < floor(current_display_count); ++i)
@@ -21,13 +21,15 @@ for (var i = 0; i < floor(current_display_count); ++i)
     if ( display_flags[i] != 0 )
     {
         if ( display_flags[i] == ord("0") )
-            penc = c_white;
+            penc = c_black;
         if ( display_flags[i] == ord("1") )
             penc = c_red;
         if ( display_flags[i] == ord("2") )
             penc = c_gray;
 		if ( display_flags[i] == ord("3") )
 			penc = merge_color(c_electricity, c_navy, 0.5);
+		if ( display_flags[i] == ord("4") )
+			penc = c_gold;
         if ( display_flags[i] == ord("b") )
         {
             draw_set_font(display_font_bold);
@@ -58,7 +60,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		yoffset += round(sin(current_time / 200.0 + i * 0.76) * 3.4);
 	
     // draw the text
-    draw_set_color( c_black );
+    draw_set_color( c_white );
     draw_text(dx + penx, dy + peny + 1 + yoffset, char);    
     draw_set_color( penc );
     draw_text(dx + penx, dy + peny + yoffset, char);

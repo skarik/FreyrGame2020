@@ -1,4 +1,4 @@
-var suiChoiceBox = sui_choiceBox2;
+var suiChoiceBox = sui_choiceBox3;
 var dx, dy;
 
 draw_set_font(display_font);
@@ -13,14 +13,14 @@ var offA = clamp(image_alpha*2, 0.0, 1.0);
 x = uiPosX + boxw_st * 0.5; 
 y = uiPosY + boxh;
 
-var tC = make_colour_hsv(colour_get_hue(background_colour), 255, 90);
+/*var tC = make_colour_hsv(colour_get_hue(background_colour), 255, 90);
 draw_set_color( merge_color( c_gray, tC, offA ) );
 gpu_set_blendmode_ext( bm_dest_color, bm_src_color );
 draw_rectangle( x-boxw*0.5-8,y+offYa-boxh,x+boxw*0.5+8,y+offYa+10, false );
 gpu_set_blendmode( bm_normal );
 draw_set_alpha( offA*0.7 );
 draw_set_color( make_color_rgb(39,39,39) );
-draw_rectangle( x-boxw*0.5-8,y+offYa-boxh,x+boxw*0.5+8,y+offYa+10, false );
+draw_rectangle( x-boxw*0.5-8,y+offYa-boxh,x+boxw*0.5+8,y+offYa+10, false );*/
 
 
 // Draw the box container
@@ -30,6 +30,7 @@ draw_sprite_part_ext( suiChoiceBox, 0, 0,0,15,20, x-boxw*0.5-9,y+offYa-boxh-4, 1
 draw_sprite_part_ext( suiChoiceBox, 0, 250-15,0,15,20, x+boxw*0.5+10-15,y+offYa-boxh-4, 1.0,1.0,c_white, offA ); // right corner
 draw_sprite_part_ext( suiChoiceBox, 0, 125-10,0,20,20, x-10,y+offYa-boxh-4, 1.0,1.0,c_white, offA ); // gem
 
+draw_sprite_part_ext( suiChoiceBox, 1, 125-25,0,10,20, x-boxw*0.5,y+offYa-boxh, boxw/10,boxh/20, c_white, offA ); // center
 draw_sprite_part_ext( suiChoiceBox, 1, 0,0,20,20, x-boxw*0.5-9,y+offYa-boxh, 1.0,boxh/20, c_white, offA ); //left wall
 draw_sprite_part_ext( suiChoiceBox, 1, 250-20,0,20,20, x+boxw*0.5+10-20,y+offYa-boxh, 1.0,boxh/20, c_white, offA ); //right wall
 

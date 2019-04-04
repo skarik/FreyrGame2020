@@ -14,7 +14,7 @@ var text_refw = string_width(string_hash_to_newline("m"));
 var text_w = display_width;
 var penx = 0;
 var peny = 0;
-var penc = c_white;
+var penc = c_black;
 var penw = 2;
 
 for (var option = 0; option < input_choice_count; ++option)
@@ -26,12 +26,12 @@ for (var option = 0; option < input_choice_count; ++option)
         
         // Set color based on selection
         if (option == display_choice)
-            penc = c_white;
+            penc = c_gold;
         else
-            penc = c_gray;
+            penc = c_black;
             
         // draw the text
-        draw_set_color( c_black );
+        draw_set_color( (option == display_choice) ? c_gray : c_white );
         draw_text(dx + penx, dy + peny + 1, string_hash_to_newline(char));    
         draw_set_color( penc );
         draw_text(dx + penx, dy + peny, string_hash_to_newline(char));
