@@ -8,4 +8,6 @@ m_airFriction = 100;
 
 filled = false;
 
+depthInit();
+
 event_user(0);

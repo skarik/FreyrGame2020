@@ -6,8 +6,8 @@ if (!m_isTilling && l_canMove
 	&& room == rm_oasis)
 {
 	// Find the piece of land to till:
-	var buildX = x + lengthdir_x(12, facingDirection);
-	var buildY = y + lengthdir_y(12, facingDirection) + 5;
+	var buildX = aimingStartX + lengthdir_x(12, facingDirection);
+	var buildY = aimingStartY + lengthdir_y(12, facingDirection) + 5;
 	var gridSize = 16;
 	buildX = round((buildX - gridSize / 2) / gridSize) * gridSize;
 	buildY = round((buildY - gridSize / 2) / gridSize) * gridSize;

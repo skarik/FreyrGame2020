@@ -1,3 +1,5 @@
+depthUpdate();
+
 if (!m_isPickingUp)
 {
 	// Slow down...
@@ -11,6 +13,9 @@ if (!m_isPickingUp)
 	// Reset cooldown
 	m_pickupCooldown -= Time.deltaTime;
 	m_pickupCooldown = saturate(m_pickupCooldown);
+	
+	// Fall to the ground
+	z_height = max(0, z_height + 25.0 * Time.deltaTime * (1.0 - m_pickupCooldown));
 }
 else
 {
@@ -44,6 +49,9 @@ else
 			// Need to move towards the target's position
 			x = lerp(m_pickupStartX, m_pickupTarget.x, power(m_pickupTimer, kPickupCurvePower));
 			y = lerp(m_pickupStartY, m_pickupTarget.y - 10, power(m_pickupTimer, kPickupCurvePower));
+			
+			// Raise off the ground
+			z_height = min(18, z_height + 25.0 * Time.deltaTime * (1.0 - m_pickupTimer));
 		}
 	}
 	else

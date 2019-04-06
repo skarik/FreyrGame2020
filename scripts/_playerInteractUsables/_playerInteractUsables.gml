@@ -7,10 +7,10 @@ var closestDistance = kMaxUseDistance;
 if (!exists(currentHeldUsable) || !m_isHolding)
 {
 	// Get till distance
-	var useDistanceAt = max(2.0, min(20.0, point_distance(x, y, uPosition, vPosition)));
+	var useDistanceAt = max(2.0, min(20.0, point_distance(aimingStartX, aimingStartY, uPosition, vPosition)));
 	// Find the piece of land to till:
-	var useX = x + lengthdir_x(useDistanceAt, aimingDirection);
-	var useY = y + lengthdir_y(useDistanceAt, aimingDirection);
+	var useX = aimingStartX + lengthdir_x(useDistanceAt, aimingDirection);
+	var useY = aimingStartY + lengthdir_y(useDistanceAt, aimingDirection);
 	//var useX = x + lengthdir_x(10, facingDirection);
 	//var useY = y + lengthdir_y(10, facingDirection) + 2;
 	with (ob_useable)
@@ -57,7 +57,9 @@ else
 	if (exists(currentHeldUsable))
 	{
 		currentHeldUsable.x = x;
-		currentHeldUsable.y = y - 20;
+		currentHeldUsable.y = y;
+		currentHeldUsable.z = z;
+		currentHeldUsable.z_height = 20 + z_height;
 		
 		if (canMove && !isBusyInteracting && bButton.pressed)
 		{
@@ -65,6 +67,8 @@ else
 			{
 				currentHeldUsable.x = round(x + lengthdir_x(10, aimingDirection));
 				currentHeldUsable.y = round(y + lengthdir_y(10, aimingDirection));
+				currentHeldUsable.z = z;
+				currentHeldUsable.z_height = 0;
 				with (currentHeldUsable)
 				{
 					event_user(2);

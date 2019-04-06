@@ -4,10 +4,10 @@ var gridSize = 16;
 if (!m_isTilling)
 {
 	// Get till distance
-	var tillDistance = max(2.0, min(28.0, point_distance(x, y, uPosition, vPosition)));
+	var tillDistance = max(2.0, min(28.0, point_distance(aimingStartX, aimingStartY, uPosition, vPosition)));
 	// Find the piece of land to till:
-	var tillX = x + lengthdir_x(tillDistance, aimingDirection);
-	var tillY = y + lengthdir_y(tillDistance, aimingDirection);
+	var tillX = aimingStartX + lengthdir_x(tillDistance, aimingDirection);
+	var tillY = aimingStartY + lengthdir_y(tillDistance, aimingDirection);
 	tillX = round((tillX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 	tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 

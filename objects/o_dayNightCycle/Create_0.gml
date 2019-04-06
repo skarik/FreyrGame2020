@@ -7,5 +7,5 @@ persistent = true;
 m_overlayColor = c_black;
 
 m_day = 1;
-m_timeOfDay = 3;
+m_timeOfDay = 8;
 m_hourPassed = false;

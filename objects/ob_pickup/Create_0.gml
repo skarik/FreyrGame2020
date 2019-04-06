@@ -1,3 +1,6 @@
+depthInit();
+z_height = 18;
+
 m_canPickUp = true;
 m_isPickingUp = false;
 m_pickupTarget = null;

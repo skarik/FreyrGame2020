@@ -42,11 +42,13 @@ if (l_canMove)
 }
 
 // update aiming
+aimingStartX = x;
+aimingStartY = y - (aimingHeight + z_height);
 if (l_canMove)
 {
 	if (uPosition != uPositionPrevious || vPosition != vPositionPrevious)
 	{
-		aimingDirection = point_direction(x, y, uPosition, vPosition);
+		aimingDirection = point_direction(aimingStartX, aimingStartY, uPosition, vPosition);
 	}
 }
 
