@@ -1,7 +1,11 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description update grow values
 
-if (timeofdayDidHourPass())
+if (exists(m_dirt) && m_dirt.watered)
+{
+	cropSetWateredToday();
+}
+
+/*if (timeofdayDidHourPass())
 {
 	var hour = timeofdayGetHour();
 	var isDay = (hour > 6.5 && hour < 18.5);
@@ -13,7 +17,8 @@ if (timeofdayDidHourPass())
 	{
 		m_growValue += isDay ? m_growAmountDryDay : m_growAmountDryNight;
 	}
-}
+}*/
+m_growValue = cropGetGrowValue();
 
 
 var grow_percent = m_growValue / m_growAmountMature;

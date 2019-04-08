@@ -15,7 +15,7 @@ if (!m_isPickingUp)
 	m_pickupCooldown = saturate(m_pickupCooldown);
 	
 	// Fall to the ground
-	z_height = max(0, z_height + 25.0 * Time.deltaTime * (1.0 - m_pickupCooldown));
+	z_height = max(0, z_height - 25.0 * Time.deltaTime * (1.0 - m_pickupCooldown));
 }
 else
 {

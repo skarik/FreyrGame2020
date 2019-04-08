@@ -5,8 +5,8 @@ var gridSize = 16;
 if (!m_isTilling && canMove && !isBusyInteracting)
 {
 	// Find the piece of land to till:
-	var tillX = x + lengthdir_x(12, facingDirection);
-	var tillY = y + lengthdir_y(12, facingDirection) + 5;
+	var tillX = aimingStartX + lengthdir_x(12, facingDirection);
+	var tillY = aimingStartY + lengthdir_y(12, facingDirection) + 5;
 	tillX = round((tillX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 	tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 

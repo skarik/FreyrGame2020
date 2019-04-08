@@ -7,6 +7,8 @@ m_canThrow = false;
 m_airFriction = 100;
 
 filled = false;
+charges = 0;
+kMaxCharges = 10;
 
 depthInit();
 

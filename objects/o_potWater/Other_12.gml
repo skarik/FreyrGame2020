@@ -2,7 +2,13 @@
 
 event_inherited();
 
-filled = filled || areaInWater(x, y);
+var inWater = areaInWater(x, y);
+
+filled = filled || inWater;
+if (inWater)
+{
+	charges = kMaxCharges;
+}
 
 image_index = filled ? 1 : 0;
 m_name = filled ? "Full Water Pot" : "Empty Water Pot";

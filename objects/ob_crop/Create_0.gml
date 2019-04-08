@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description set defaults
 
 image_speed = 0;
 image_index = image_number - 1;
@@ -9,6 +8,8 @@ m_dirt = null;
 m_startDay = 0;
 m_startHour = 0;
 m_itemDrop = null;
+//m_watered = array_create(30, 0);
+m_watered = ds_map_create();
 
 // Customizable values
 m_growAmountDryNight = 0;
