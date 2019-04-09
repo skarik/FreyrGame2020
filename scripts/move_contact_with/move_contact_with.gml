@@ -2,7 +2,14 @@ var xdir = argument0;
 var ydir = argument1;
 var hitClass = argument2;
 
-var length = sqrt(sqr(xdir) + sqr(ydir));
+var sqrDistance = sqr(xdir) + sqr(ydir);
+if (sqrDistance < 0.001)
+{
+	place_meeting(x, y, hitClass);
+	return other;
+}
+
+var length = sqrt(sqrDistance);
 var xdir_n = xdir / length;
 var ydir_n = ydir / length;
 
