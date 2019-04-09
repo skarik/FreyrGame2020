@@ -1,6 +1,21 @@
 /// @description update grow values
 
-if (exists(m_dirt) && m_dirt.watered)
+// make sure dirt exists
+if (!exists(m_dirt))
+{
+	m_dirt = collision_point(x, y, o_fieldSquare, true, true);
+	
+	if (!exists(m_dirt))
+	{
+		event_user(0); // on destroy
+		delete(this);
+		exit;
+	}
+}
+
+// Dirt will always exist by this point
+
+if (m_dirt.watered)
 {
 	cropSetWateredToday();
 }
@@ -25,10 +40,3 @@ var grow_percent = m_growValue / m_growAmountMature;
 
 // update the grow sprite
 image_index = max(0.0, ceil((1.0 - grow_percent) * (image_number - 1)));
-
-// make sure dirt exists
-if (!exists(m_dirt))
-{
-	event_user(0);
-	delete(this);
-}

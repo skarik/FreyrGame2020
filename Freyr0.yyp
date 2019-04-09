@@ -695,6 +695,14 @@
             }
         },
         {
+            "Key": "34b226af-3695-4967-b066-13f924135d97",
+            "Value": {
+                "id": "ca4956de-b4e2-487a-9018-08a8054e5ad9",
+                "resourcePath": "scripts\\farmLoadState\\farmLoadState.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "34e5a342-cab2-424a-a354-de7de005c907",
             "Value": {
                 "id": "3738e4bb-dfe8-4a21-8284-060be1eaf635",
@@ -847,6 +855,14 @@
             }
         },
         {
+            "Key": "4284635e-8029-477d-980f-c434a5bfa7c6",
+            "Value": {
+                "id": "aeca5ab3-bc59-4244-b913-d7945b9eb1b1",
+                "resourcePath": "scripts\\cropLoadState\\cropLoadState.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "42ad3535-25d4-4a4d-8a66-633ba181c3a0",
             "Value": {
                 "id": "fc7a3f6d-b1bd-4e6a-8e12-2850f357d5ba",
@@ -983,6 +999,14 @@
             }
         },
         {
+            "Key": "4cb9af5f-7a9f-4423-8fb3-c42dffe9ef7b",
+            "Value": {
+                "id": "a32387cd-2fd7-43a6-83ef-062046e15418",
+                "resourcePath": "scripts\\farmSaveState\\farmSaveState.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4d409182-c3d1-45d1-8ede-72161fbb8f69",
             "Value": {
                 "id": "a35fbb48-a528-4837-9744-2941b48df7aa",
@@ -1092,6 +1116,14 @@
                 "id": "bd6a1354-c6e6-4582-92d9-329c44507c4b",
                 "resourcePath": "scripts\\turnipSeedCheckUse\\turnipSeedCheckUse.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "57a7f93b-c028-48bc-842d-06e6a4851a7f",
+            "Value": {
+                "id": "62b94c68-98c8-4601-9d42-5638ec1df0ed",
+                "resourcePath": "sprites\\s_potWater2\\s_potWater2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1319,6 +1351,14 @@
             }
         },
         {
+            "Key": "6f128a61-b7e4-49f0-bc15-eba3858be44e",
+            "Value": {
+                "id": "08a5dfc4-1f64-4e07-8fe7-a24232e6e48c",
+                "resourcePath": "objects\\o_farmAreaManager\\o_farmAreaManager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6f33053a-ffc0-4e90-8b9e-7c5222292ac4",
             "Value": {
                 "id": "8e6d4c44-3195-407b-bef2-1f517e99347b",
@@ -1524,6 +1564,14 @@
                 "id": "8026d0a5-7116-4e4e-a7b0-e8792b7d3e1f",
                 "resourcePath": "views\\7f0cc697-be3f-4b01-a8a3-4ea21ec2d4d1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7fbeed61-ddbb-4052-99ac-06cf3dbd61d8",
+            "Value": {
+                "id": "58543ea6-aa44-4165-92b8-61b5932131fe",
+                "resourcePath": "scripts\\fieldSaveState\\fieldSaveState.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1788,6 +1836,14 @@
                 "id": "7a653919-9ceb-4a1a-9893-e863ea7e9742",
                 "resourcePath": "sounds\\snd_UiMenuChange\\snd_UiMenuChange.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "976dde98-d70a-4849-bde5-e05d7cdf3ebb",
+            "Value": {
+                "id": "b4864391-fe66-4122-83c6-1300786fe6dc",
+                "resourcePath": "views\\976dde98-d70a-4849-bde5-e05d7cdf3ebb.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2260,6 +2316,14 @@
                 "id": "4ee0ef45-5322-445a-9598-5d43887fc88c",
                 "resourcePath": "objects\\o_PlayerImp\\o_PlayerImp.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b9d6ab6a-64f9-40fc-b49c-2a81164ea5fd",
+            "Value": {
+                "id": "a52d101f-6318-4365-9c33-7d68e7f6e9ed",
+                "resourcePath": "scripts\\cropSaveState\\cropSaveState.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2895,6 +2959,14 @@
             }
         },
         {
+            "Key": "fa3f1342-3301-4227-baef-d02ab0c572d8",
+            "Value": {
+                "id": "605bcbcb-837a-4aab-b2cb-9effa51f749a",
+                "resourcePath": "scripts\\fieldLoadState\\fieldLoadState.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb3f2951-5948-4dec-bcac-2f44ee3112a9",
             "Value": {
                 "id": "b16f74c3-87b9-48e4-91da-c398759d0b0c",
@@ -3085,6 +3157,12 @@
         "0ec11171-9b23-4486-9242-13fd1469fb68",
         "2792d87a-c6f4-4382-9337-00616843bddb",
         "afaa5218-be90-4f98-9dea-631e67417cec",
+        "b9d6ab6a-64f9-40fc-b49c-2a81164ea5fd",
+        "4284635e-8029-477d-980f-c434a5bfa7c6",
+        "7fbeed61-ddbb-4052-99ac-06cf3dbd61d8",
+        "fa3f1342-3301-4227-baef-d02ab0c572d8",
+        "4cb9af5f-7a9f-4423-8fb3-c42dffe9ef7b",
+        "34b226af-3695-4967-b066-13f924135d97",
         "fdbb3679-3764-4a36-89dc-9d26a9794773",
         "82a26b66-c615-49e2-9bf5-5c50f21ea1d8",
         "d0013833-85bc-4327-b83e-936197178858",

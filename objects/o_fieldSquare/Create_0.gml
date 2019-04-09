@@ -1,4 +1,4 @@
-depth = 50;
+depth = 49;
 
 
 tilled = false;
