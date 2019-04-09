@@ -24,7 +24,14 @@ y += yspeed * Time.deltaTime;
 var goto_x = lerp(dashStartX, dashTargetX, dashPercentage);
 var goto_y = lerp(dashStartY, dashTargetY, dashPercentage);
 
-move_contact_with(goto_x - x, goto_y - y, ob_collider);
+if (place_meeting(x, y, ob_collider) || place_meeting(goto_x, goto_y, ob_collider))
+{
+	move_contact_with(goto_x - x, goto_y - y, ob_collider);
+}
+if (place_meeting(x, y, ob_character) || place_meeting(goto_x, goto_y, ob_character))
+{
+	move_contact_with(goto_x - x, goto_y - y, ob_character);
+}
 
 if (dashPercentage >= 1.0)
 {
