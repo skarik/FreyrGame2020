@@ -107,6 +107,8 @@ while (!file_text_eof(fp))
 					target = o_chNathan;
                 else
                     target = null;
+					
+				var name = ds_map_find_value(read_object_map, "id");
 				
 				// Loop through the numbered keys for choices:
 				var key = 1;
@@ -131,6 +133,9 @@ while (!file_text_eof(fp))
 				
 				// Add the target
 				ds_map_add(actual_map, SEQI_TARGET, target);
+				
+				// Add the ID
+				ds_map_add(actual_map, SEQI_ID, name);
                 
                 // Delete original map
                 ds_map_destroy(read_object_map);
@@ -302,6 +307,63 @@ while (!file_text_eof(fp))
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_AUDIO;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_MUSIC)
+			{
+				var new_map = ds_map_create();
+				
+				var type = SEQMUSIC_UPDATE;
+				var defaultVolume = ds_map_find_value(read_object_map, "volume");
+				var pitch = ds_map_find_value(read_object_map, "pitch");
+				
+				if (is_undefined(defaultVolume)) defaultVolume = "0.0";
+				if (is_undefined(pitch)) pitch = "1.0";
+				
+				// Loop through the numbered keys for tracks:
+				var max_i = 0;
+				for (var i = 0; i < 16; ++i)
+				{
+					// Read in the filename key
+					var key = string(i + 1);
+					if (ds_map_exists(read_object_map, key))
+					{
+						ds_map_add(new_map, i, ds_map_find_value(read_object_map, key));
+						max_i = max(max_i, i);
+						type = SEQMUSIC_PLAY;
+					}
+					else
+					{
+						ds_map_add(new_map, i, undefined);
+					}
+					
+					// Read in the volume key
+					var volume_key = key + "volume";
+					if (ds_map_exists(read_object_map, volume_key))
+					{
+						var volume = ds_map_find_value(read_object_map, volume_key);
+						if (is_undefined(volume))
+							volume = defaultVolume;
+						else
+							volume = real(volume);
+						ds_map_add(new_map, i + SEQI_MUSIC_OFFSET, volume);
+					}
+					else
+					{
+						ds_map_add(new_map, i + SEQI_MUSIC_OFFSET, real(defaultVolume));
+					}
+				}
+				
+				ds_map_add(new_map, SEQI_MUSIC_TRACKCOUNT, max_i + 1);
+				ds_map_add(new_map, SEQI_AUDIO_PITCH, real(pitch));
+				ds_map_add(new_map, SEQI_TYPE, type);
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_MUSIC;
                 cts_entry_count++;
 			}
             

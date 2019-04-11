@@ -15,3 +15,4 @@ m_initTimer = 0;
 m_playerDoodad = null;
 m_bubbleTimer = 0;
 m_logo = null;
+m_fadeLogo = false;

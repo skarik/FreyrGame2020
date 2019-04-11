@@ -1,5 +1,8 @@
 #begin
 
+// this is the cutscene for the first time through the game or on a new file.
+// the name "init" is thusly fitting
+
 wait
 {
     type input
@@ -43,6 +46,140 @@ wait
 {
     type input
     id menu
+}
+
+// NOW WE GETTING TO THE GOOD PARTS
+
+wait
+{
+    type time
+    time 0.3
+}
+
+music // start with the librarian track
+{
+    1 audio/intro_a0.ogg
+    2 audio/intro_a1.ogg
+    3 audio/intro_a2.ogg
+    4 audio/intro_a3.ogg
+    5 audio/intro_a4.ogg
+    volume 0.0
+    3volume 1.0
+    pitch 1.0
+}
+
+lines
+{
+    target  imp
+    targeti 0
+    1 Hello, I am the $bLibrarian$$.
+    2 I’ve been doing upkeep on my library and it appears some of my records on you have been $2lost$0.$p $wHow curious$$.
+    3 Well$p, that just won’t do will it?
+}
+
+// go to the first track on pre-choice
+music
+{
+    volume 0.0
+    1volume 1.0
+}
+
+lines
+{
+    target  imp
+    targeti 0
+    1 First things first$p, what are you anyway?$p I can never tell with mortals.
+}
+
+choice
+{
+    id gender
+    1 Woman
+    2 Man
+    3 Neither
+}
+
+// go to the second track after choice
+music
+{
+    volume 0.0
+    2volume 1.0
+}
+
+lines
+{
+    target  imp
+    targeti 0
+    1 Do you recall what you looked like?
+}
+
+// todo: we need a wait right here
+
+choice
+{
+    id hairstyle
+    1 I had short hair...
+    2 I had pigtails...
+    3 I had a ponytail...
+}
+
+// third track after choice
+music
+{
+    volume 0.0
+    4volume 1.0
+}
+
+lines
+{
+    target  imp
+    targeti 0
+    1 What about what you were wearing?
+}
+
+// todo: we need a second wait right here
+
+choice
+{
+    id clothes
+    1 I wore a ruffled shirt...
+    2 I wore a crop top...
+    3 I wore a plain skirt...
+}
+
+// todo: do the names properly
+
+// final track after choice
+music
+{
+    volume 0.0
+    5volume 1.0
+}
+
+lines
+{
+    target  imp
+    targeti 0
+    1 Ah, now I remember which story you’re from! Let’s get you back there shall we?
+    2 It was a pleasure meeting you in person$p, [PLAYER].
+    3 Your story is one of my favorites.
+}
+
+wait
+{
+    type time
+    time 0.5
+}
+
+music
+{
+    volume 0.0
+}
+
+wait
+{
+    type input
+    id ending
 }
 
 #ended

@@ -199,6 +199,44 @@ case SEQTYPE_AUDIO:
 	cts_entry_current++;
     cts_execute_state = 0;
 	break;
+	
+case SEQTYPE_MUSIC:
+	var type = ds_map_find_value(entry, SEQI_TYPE);
+	if (type == SEQMUSIC_PLAY)
+	{
+		var music = fmusic_create();
+		var max_i = ds_map_find_value(entry, SEQI_MUSIC_TRACKCOUNT);
+		// Create the tracks
+		for (var i = 0; i < max_i; ++i)
+		{
+			fmusic_add_track(music, ds_map_find_value(entry, i));
+		}
+		fmusic_start(music);
+		
+		// Set the volume
+		for (var i = 0; i < music.m_trackCount; ++i)
+		{
+			music.m_trackVolume[i] = ds_map_find_value(entry, i + SEQI_MUSIC_OFFSET);
+		}
+	}
+	else if (type == SEQMUSIC_UPDATE)
+	{
+		with (ob_musicPlayer)
+		{
+			if (m_fadeOut) continue;
+			
+			// Set the volume
+			for (var i = 0; i < m_trackCount; ++i)
+			{
+				m_trackVolume[i] = ds_map_find_value(entry, i + SEQI_MUSIC_OFFSET);
+			}
+		}
+	}
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
 }
 
 return true;

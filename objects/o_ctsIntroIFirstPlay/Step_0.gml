@@ -32,13 +32,49 @@ if (!cutsceneUpdate())
 			m_logo.sprite_index = sui_logo1;
 			m_logo.image_alpha = 0.0;
 			m_logo.visible = true;
+			
+			instance_create_depth(x, y + 90, 5, o_doodadPressAnything);
 		}
 		else
 		{
 			m_logo.image_alpha += Time.deltaTime * 0.5;
 			m_logo.image_alpha = saturate(m_logo.image_alpha);
 		}
+		
+		// Check input
+		if (controlAnyKey())
+		{
+			m_fadeLogo = true;
+			with (o_doodadPressAnything) fade = true;
+			cutsceneWaitEnd();
+		}
 	}
+	
+	if (cutsceneGetCurrentType() == SEQTYPE_CHOICES)
+	{
+		if (cutsceneIsChoiceReady())
+		{
+			var choice = cutsceneGetChoice();
+			if (cutsceneGetChoiceId() == "gender")
+			{
+				// female/male/neither
+				//show_message((choice == 0) ? "female" : ((choice == 1) ? "male" : "neither"));
+			}
+			else if (cutsceneGetChoiceId() == "hairstyle")
+			{
+				//short/pigtails/ponytail
+				//show_message((choice == 0) ? "short" : ((choice == 1) ? "pigtails" : "ponytail"));
+			}
+			else if (cutsceneGetChoiceId() == "clothes")
+			{
+				//ruffled/croptop/skirt
+				if (choice == 1) choice = 2;
+				else if (choice == 2) choice = 1;
+				//show_message((choice == 0) ? "ruffled" : ((choice == 1) ? "skirt" : "crop top"));
+			}
+		}
+	}
+	
 }
 
 // Create bubbles
@@ -48,3 +84,14 @@ while (m_bubbleTimer > 1.0)
 	m_bubbleTimer -= 1.0;
 	instance_create_depth(random(room_width), room_height + random(64), 55, o_fxBubbleUnderwater);
 }
+
+// Fade logo away
+if (m_fadeLogo && exists(m_logo))
+{
+	m_logo.image_alpha -= Time.deltaTime * 2.0;
+	m_logo.image_alpha = saturate(m_logo.image_alpha);
+}
+
+// Update game camera position
+GameCamera.x = x;
+GameCamera.y = y;

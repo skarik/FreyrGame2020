@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "13dbcb8e-e680-42f7-bf34-7db2b53a396c",
+            "Value": {
+                "id": "07bee8b2-9140-42db-8f53-27bea65748b4",
+                "resourcePath": "scripts\\cutsceneGetChoiceId\\cutsceneGetChoiceId.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "141163bd-233c-4051-bb86-a532cbc9ee46",
             "Value": {
                 "id": "bea88f4e-5b91-46c7-a57b-ce04f3ebc721",
@@ -1527,6 +1535,14 @@
             }
         },
         {
+            "Key": "7229edad-faf5-4390-9388-9c4d8f5c4787",
+            "Value": {
+                "id": "e91f12c0-73fe-4715-8f13-4014f5027fb8",
+                "resourcePath": "scripts\\controlAnyKey\\controlAnyKey.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "72b06c52-555f-4621-98ec-bd0740e2a284",
             "Value": {
                 "id": "e416b3d2-5293-48f9-981a-00a0dbcd8158",
@@ -1676,6 +1692,14 @@
                 "id": "8026d0a5-7116-4e4e-a7b0-e8792b7d3e1f",
                 "resourcePath": "views\\7f0cc697-be3f-4b01-a8a3-4ea21ec2d4d1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7fac7a46-84e3-4205-9b30-d69b4b5a6935",
+            "Value": {
+                "id": "9cfcb859-4621-44f3-96a2-34f11498b005",
+                "resourcePath": "objects\\o_doodadPressAnything\\o_doodadPressAnything.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1847,6 +1871,14 @@
             }
         },
         {
+            "Key": "8c8e4c2d-fdb6-481b-8d2d-76088ba9384a",
+            "Value": {
+                "id": "9e9a3b30-c4c5-4262-ad2c-dc85328f0ed0",
+                "resourcePath": "scripts\\fmusic_create\\fmusic_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8d9cd0ba-04d8-4d00-9b37-e5b14fa18501",
             "Value": {
                 "id": "fa34cd3e-b531-4561-9008-c124b5c7cc6a",
@@ -1948,6 +1980,14 @@
                 "id": "7a653919-9ceb-4a1a-9893-e863ea7e9742",
                 "resourcePath": "sounds\\snd_UiMenuChange\\snd_UiMenuChange.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "9547b16f-8c7a-4df5-90ef-69f1e58f268a",
+            "Value": {
+                "id": "a90ced5d-8fb1-4036-bc70-2fa84590dfc4",
+                "resourcePath": "scripts\\fmusic_start\\fmusic_start.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2148,6 +2188,14 @@
                 "id": "8f443557-5b47-42a7-85a7-3172031f8aa2",
                 "resourcePath": "sprites\\sui_choiceBox3\\sui_choiceBox3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a9047614-b3c5-4aac-8cab-eeb53fd1a053",
+            "Value": {
+                "id": "2764563a-2a5e-405e-9211-33ca6d9d08f4",
+                "resourcePath": "objects\\ob_musicPlayer\\ob_musicPlayer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3079,6 +3127,14 @@
             }
         },
         {
+            "Key": "f69db26e-8c72-4c26-bf28-3257457d418e",
+            "Value": {
+                "id": "89cfbd2a-48d8-450f-917e-ff1d5b3c341b",
+                "resourcePath": "scripts\\cutsceneGetCurrentType\\cutsceneGetCurrentType.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f6e28bb8-0a97-49ab-a9ca-b0b60c752b79",
             "Value": {
                 "id": "ea449803-dd7a-4e3f-b910-8ff9fede0683",
@@ -3155,6 +3211,14 @@
             "Value": {
                 "id": "b16f74c3-87b9-48e4-91da-c398759d0b0c",
                 "resourcePath": "scripts\\_playerAttack2\\_playerAttack2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fb6f19c3-ec08-4c98-aa8c-b7878677d0d6",
+            "Value": {
+                "id": "dd410083-f358-4e41-8646-b60b0548938a",
+                "resourcePath": "scripts\\fmusic_add_track\\fmusic_add_track.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3241,6 +3305,7 @@
         "85112063-7681-4dae-8941-b49ea303cb39",
         "ec3bc1c4-2bf8-4cb2-9783-c228bed86cbe",
         "ed57fd57-f999-470a-9740-dbad2a649237",
+        "7229edad-faf5-4390-9388-9c4d8f5c4787",
         "56179266-d7d6-4ee1-8be7-cf0dd9d45938",
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
@@ -3254,10 +3319,12 @@
         "f8666643-f4f5-49d3-a82c-a11aceac9895",
         "b7887d25-f443-4e32-98a9-3617c72c99f7",
         "0b0b31b7-cf68-4a33-a9df-a1230976cf4d",
+        "13dbcb8e-e680-42f7-bf34-7db2b53a396c",
         "55e3cc7b-2cc4-4d4d-ac88-0d10a0142812",
         "69e0711f-a359-45fe-8388-01af050b1243",
         "28fedc5c-65ea-4025-81ea-60c1fbf0b166",
         "dd4fca95-fbfe-4e49-9fc7-85342ccddb06",
+        "f69db26e-8c72-4c26-bf28-3257457d418e",
         "05e2ecce-71be-40ce-bff2-173284010a24",
         "700340e1-c056-4158-8f45-35938dd0ea7e",
         "3b1024cd-23b4-4818-b232-abc9b27c9c57",
@@ -3281,6 +3348,9 @@
         "fdbb3679-3764-4a36-89dc-9d26a9794773",
         "82a26b66-c615-49e2-9bf5-5c50f21ea1d8",
         "5c42d6c1-9e5f-42c2-ab9b-6fbf7d7f8c44",
+        "8c8e4c2d-fdb6-481b-8d2d-76088ba9384a",
+        "fb6f19c3-ec08-4c98-aa8c-b7878677d0d6",
+        "9547b16f-8c7a-4df5-90ef-69f1e58f268a",
         "5ce5cef7-3a68-408b-9b50-68f745fd85fa",
         "6f042160-b044-4b9f-9932-19a0705ab9f6",
         "c8117af1-cffe-4a01-b0cf-4c538ac14889",
