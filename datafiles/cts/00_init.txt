@@ -1,0 +1,48 @@
+#begin
+
+wait
+{
+    type input
+    id init
+}
+
+// do a little delay after the visual explosion
+// (even tho it would happen faster underwater)
+wait
+{
+    type time
+    time 0.4
+}
+
+audio
+{
+    play audio/intro_explosion.ogg
+}
+
+wait
+{
+    type time
+    time 5.0
+}
+
+audio
+{
+    play audio/intro_rift.ogg
+}
+wait
+{
+    type time
+    time 10.0
+}
+
+audio
+{
+    play audio/intro_title.ogg
+}
+wait
+{
+    type input
+    id menu
+}
+
+#ended

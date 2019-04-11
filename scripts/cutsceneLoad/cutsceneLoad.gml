@@ -4,7 +4,7 @@ cutsceneInit();
 
 var filename = argument0;
 
-var fp = fioTextOpenRead(filename);
+var fp = fioTextOpenRead("cts/" + filename);
 if (fp == -1)
 {
     show_error("Could not find the cutscene '" + filename + "' for open.", true);
@@ -59,6 +59,14 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_SCREEN;
 		}
+		else if (string_pos("audio", line) != 0)
+		{
+			read_object_type = SEQTYPE_AUDIO;
+		}
+		else if (string_pos("music", line) != 0)
+		{
+			read_object_type = SEQTYPE_MUSIC;
+		}
         
         // If an object was read - prepare to read it in
         if (read_object_type != SEQTYPE_NULL)
@@ -99,26 +107,6 @@ while (!file_text_eof(fp))
 					target = o_chNathan;
                 else
                     target = null;
-            
-                // Go through the keys to find the maximum value and convert needed values
-                /*var size = ds_map_size(read_object_map);
-                var key = ds_map_find_first(read_object_map);
-                var max_key = 0;
-                repeat (size)
-                {
-                    if (is_string(key))
-                    {
-                        var val = real(key);
-                        if (val != 0)
-                        {
-                            // Select max key for the count later
-                            max_key = max(max_key, val);
-                            // Add the actual key
-                            ds_map_add(actual_map, val, ds_map_find_value(read_object_map, key));
-                        }
-                    }
-                    key = ds_map_find_next(read_object_map, key);
-                }*/
 				
 				// Loop through the numbered keys for choices:
 				var key = 1;
@@ -129,6 +117,12 @@ while (!file_text_eof(fp))
                     max_key = max(max_key, key);
 					// Add the actual key
                     ds_map_add(actual_map, key, ds_map_find_value(read_object_map, string(key)));
+					// Find if there is jump information
+					var jump_key = string(key) + "goto";
+					if (ds_map_exists(read_object_map, jump_key))
+					{	// Save the jump information if there is
+						ds_map_add(actual_map, key + SEQI_JUMP_OFFSET, ds_map_find_value(read_object_map, jump_key));
+					}
 					// Incremenent key
 					key += 1;
 				}
@@ -155,16 +149,6 @@ while (!file_text_eof(fp))
                     target = null;
                 else if (target == "imp")
                     target = o_PlayerImp;
-                /*else if (target == "paladin")
-                    target = objPlayerPaladin;
-                else if (target == "princess" || target == "kyin")
-                    target = objPlayerPrincess;
-                else if (target == "tinkerer" || target == "buzzbrain")
-                    target = objPlayerTinkerer;
-                else if (target == "rebel")
-                    target = npcRebel;
-                else if (target == "guard")
-                    target = npcGuard;*/
 				else if (target == "hero" || target == "player" || target == "idiot")
 					target = o_PlayerTest;
 				else if (target = "nathan")
@@ -197,16 +181,6 @@ while (!file_text_eof(fp))
                     facing = 1;
                 else if (facing == "imp")
                     facing = o_PlayerImp;
-                /*else if (facing == "paladin")
-                    facing = objPlayerPaladin;
-                else if (facing == "princess" || facing == "kyin")
-                    facing = objPlayerPrincess;
-                else if (facing == "tinkerer" || facing == "buzzbrain")
-                    facing = objPlayerTinkerer;
-                else if (facing == "rebel")
-                    facing = npcRebel;
-                else if (facing == "guard")
-                    facing = npcGuard;*/
 				else if (target == "hero" || target == "player" || target == "idiot")
 					target = o_PlayerTest;
 				else if (target = "nathan")
@@ -291,12 +265,43 @@ while (!file_text_eof(fp))
                 else
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_NONE);
 				
-				 // Delete original map
+				// Delete original map
                 ds_map_destroy(read_object_map);
                 
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_SCREEN;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_AUDIO)
+			{
+				var file = ds_map_find_value(read_object_map, "play");
+				var stop = ds_map_find_value(read_object_map, "stop");
+				var loop = ds_map_find_value(read_object_map, "loop");
+				var stream = ds_map_find_value(read_object_map, "stream");
+				if (is_undefined(file)) file = "none";
+				if (is_undefined(stop)) stop = "none";
+				if (loop == "true" || loop == "1")
+					loop = true;
+				else
+					loop = false;
+				if (stream == "false" || stream == "0")
+					stream = false;
+				else
+					stream = true;
+				
+				var new_map = ds_map_create();
+				ds_map_add(new_map, SEQI_AUDIO_FILE, file);
+				ds_map_add(new_map, SEQI_AUDIO_STOP, stop);
+				ds_map_add(new_map, SEQI_AUDIO_LOOP, loop);
+				ds_map_add(new_map, SEQI_AUDIO_STREAMED, stream);
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_AUDIO;
                 cts_entry_count++;
 			}
             

@@ -8,7 +8,7 @@
     "exportAction": 0,
     "exportDir": "",
     "fileName": "00_intro.txt",
-    "filePath": "datafiles",
+    "filePath": "datafiles\\cts",
     "freeData": false,
     "origName": "",
     "overwrite": false,

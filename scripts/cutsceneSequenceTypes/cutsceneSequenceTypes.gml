@@ -3,6 +3,8 @@
 #macro SEQTYPE_WAIT 1
 #macro SEQTYPE_CHOICES 2
 #macro SEQTYPE_SCREEN 3
+#macro SEQTYPE_AUDIO 4
+#macro SEQTYPE_MUSIC 5
 
 #macro SEQI_SIZE -1
 #macro SEQI_COUNT -1
@@ -14,6 +16,7 @@
 #macro SEQI_ID -6
 #macro SEQI_FACING -7
 #macro SEQI_ENDACTION -8
+#macro SEQI_JUMP_OFFSET 100
 
 #macro SEQWAIT_INPUT 0
 #macro SEQWAIT_TIME 1
@@ -23,8 +26,14 @@
 #macro SEQEND_ORGANIC 2
 
 #macro SEQI_SCREEN_R -6
-#macro SEQI_SCREEN_G -6
-#macro SEQI_SCREEN_B -6
+#macro SEQI_SCREEN_G -7
+#macro SEQI_SCREEN_B -8
 #macro SEQSCREEN_NONE 0
 #macro SEQSCREEN_FADEIN 1
 #macro SEQSCREEN_FADEOUT 2
+
+#macro SEQI_AUDIO_FILE -4
+#macro SEQI_AUDIO_STOP -5
+#macro SEQI_AUDIO_LOOP -6
+#macro SEQI_AUDIO_STREAMED -7
+//#macro SEQI_MUSIC_

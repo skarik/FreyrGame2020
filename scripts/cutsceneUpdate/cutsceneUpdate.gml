@@ -179,6 +179,26 @@ case SEQTYPE_SCREEN:
 		}
 	}
 	break;
+	
+case SEQTYPE_AUDIO:
+	var file = ds_map_find_value(entry, SEQI_AUDIO_FILE);
+	var stop = ds_map_find_value(entry, SEQI_AUDIO_STOP);
+	var looped = ds_map_find_value(entry, SEQI_AUDIO_LOOP);
+	var streamed = ds_map_find_value(entry, SEQI_AUDIO_STREAMED);
+	
+	if (file != "none")
+	{
+		faudio_play_file(file, streamed, looped);
+	}
+	if (stop != "none")
+	{
+		// TODO: find the sounds that match the file and delete em
+	}
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
 }
 
 return true;
