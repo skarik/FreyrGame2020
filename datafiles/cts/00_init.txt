@@ -73,8 +73,8 @@ lines
     target  imp
     targeti 0
     1 Hello, I am the $bLibrarian$$.
-    2 I’ve been doing upkeep on my library and it appears some of my records on you have been $2lost$0.$p $wHow curious$$.
-    3 Well$p, that just won’t do will it?
+    2 I've been doing upkeep on my library and it appears some of my records on you have been $2lost$0.$p $wHow curious$$.
+    3 Well$p, that just won't do will it?
 }
 
 // go to the first track on pre-choice
@@ -160,7 +160,7 @@ lines
 {
     target  imp
     targeti 0
-    1 Ah, now I remember which story you’re from! Let’s get you back there shall we?
+    1 Ah, now I remember which story you're from! Let's get you back there shall we?
     2 It was a pleasure meeting you in person$p, [PLAYER].
     3 Your story is one of my favorites.
 }

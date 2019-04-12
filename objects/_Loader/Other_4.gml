@@ -19,6 +19,9 @@ GameCamera.layer = System.layer;
 Debug.layer = System.layer;
 Settings.layer = System.layer;
 
+// Load fonts
+fontsLoad();
+
 // Loop through each room and set the views
 var t_currentRoom = room_first;
 while (room_exists(t_currentRoom))

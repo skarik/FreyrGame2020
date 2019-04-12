@@ -1,1 +1,3 @@
-return ceil( font_get_size(display_font)*0.5 + ((font_get_size(display_font)+3) * input_choice_count));
+var kLineMargin = 5;
+
+return ceil( display_font_height*0.5 + ((display_font_height+kLineMargin) * input_choice_count));

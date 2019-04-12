@@ -1,1 +1,4 @@
-return ceil( font_get_size(display_font)*0.5 + (font_get_size(display_font)+3) * ceil(1.3 * string_width(display_text) / display_width) );
+var kMarginLine = 5;
+var kLineLeeway = 1.6;
+
+return ceil( display_font_height*0.5 + (display_font_height + kMarginLine) * ceil(kLineLeeway * string_width(display_text) / display_width) );

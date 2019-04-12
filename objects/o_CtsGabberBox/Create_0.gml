@@ -17,8 +17,9 @@ input_autoclose = false;
 
 display_text = "";
 display_flags[0] = 0;
-display_font = f_arvo9;
-display_font_bold = f_arvo9Bold;
+display_font = global.font_arvo9;
+display_font_bold = global.font_arvo9Bold;
+display_font_height = 9;
 display_font_widths[0] = 0;
 display_font_bold_widths[0] = 0;
 display_width = 150;

@@ -7,13 +7,13 @@ draw_set_valign(fa_top);
 draw_set_alpha(smoothstep((image_alpha-0.5)*2.0));
 
 draw_set_font(display_font);
-var text_dx = font_get_size(display_font);
+var text_dx = display_font_height;
 var text_refw = string_width("m");
 
 var text_w = display_width;
 var penx = 0;
 var peny = 0;
-var penc = c_black;
+var penc = exists(o_CtsBlackBoxes) ? c_white : c_black;
 var penw = 2;
 var penwiggle = false;
 for (var i = 0; i < floor(current_display_count); ++i)
@@ -21,7 +21,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
     if ( display_flags[i] != 0 )
     {
         if ( display_flags[i] == ord("0") )
-            penc = c_black;
+            penc = exists(o_CtsBlackBoxes) ? c_white : c_black;
         if ( display_flags[i] == ord("1") )
             penc = c_red;
         if ( display_flags[i] == ord("2") )
@@ -60,7 +60,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		yoffset += round(sin(current_time / 200.0 + i * 0.76) * 3.4);
 	
     // draw the text
-    draw_set_color( c_white );
+    draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : c_white );
     draw_text(dx + penx, dy + peny + 1 + yoffset, char);    
     draw_set_color( penc );
     draw_text(dx + penx, dy + peny + yoffset, char);
@@ -89,7 +89,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
     if ( override_drop || (char == " " && penx >= text_w) )
     {
         penx = 0;
-        peny += text_dx + 3;
+        peny += text_dx + 5;
     }
 }
 

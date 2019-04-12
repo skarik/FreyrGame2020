@@ -1,9 +1,9 @@
-var suiChoiceBox = sui_choiceBox3;
+var suiChoiceBox = exists(o_CtsBlackBoxes) ? sui_choiceBox3Black : sui_choiceBox3;
 var dx, dy;
 
 draw_set_font(display_font);
 var boxw_st = display_width + 8;
-var boxh_st = ceil( font_get_size(display_font)*0.5 + (font_get_size(display_font)+3) * ceil(1.3 * string_width(display_text) / display_width) );
+var boxh_st = Gabber_BoxHeight();
 var boxw = ceil( boxw_st * smoothstep(image_alpha*2) );
 var boxh = max(10, ceil( boxh_st * bouncestep((image_alpha-0.5)*2) ));
 
@@ -51,7 +51,7 @@ if (!input_disable)
     draw_set_alpha( clamp((done_alpha-0.5) * 2.0, 0,1) * image_alpha );
     //if (Input.gamepad)
     {
-        draw_text_outline(x,y+12, "X", c_ltblue,false,4-3*scale);
+        draw_text_outline(x,y+12, "X", c_gold,false,4-3*scale);
     }
     //else
     //{

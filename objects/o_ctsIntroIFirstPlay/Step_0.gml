@@ -75,6 +75,22 @@ if (!cutsceneUpdate())
 		}
 	}
 	
+	if (cutsceneGetWaitId() == "ending")
+	{
+		if (!exists(o_fxFadeOutSolid))
+		{
+			var fadeout = new(o_fxFadeOutSolid);
+				fadeout.image_blend = c_white;
+		}
+		else
+		{
+			if (o_fxFadeOutSolid.image_alpha >= 1.0)
+			{
+				// TODO: either clear all stats flags or create new flags object for player...
+				room_goto(rm_oasis_farm);
+			}
+		}
+	}
 }
 
 // Create bubbles

@@ -8,7 +8,7 @@ draw_set_valign(fa_top);
 draw_set_alpha(smoothstep((image_alpha-0.5)*2.0));
 
 draw_set_font(display_font);
-var text_dx = font_get_size(display_font);
+var text_dx = display_font_height;
 var text_refw = string_width(string_hash_to_newline("m"));
 
 var text_w = display_width;
@@ -28,10 +28,10 @@ for (var option = 0; option < input_choice_count; ++option)
         if (option == display_choice)
             penc = c_gold;
         else
-            penc = c_black;
+            penc = exists(o_CtsBlackBoxes) ? c_white : c_black;
             
         // draw the text
-        draw_set_color( (option == display_choice) ? c_gray : c_white );
+        draw_set_color( (option == display_choice) ? c_gray : (exists(o_CtsBlackBoxes) ? c_dkgray : c_white) );
         draw_text(dx + penx, dy + peny + 1, string_hash_to_newline(char));    
         draw_set_color( penc );
         draw_text(dx + penx, dy + peny, string_hash_to_newline(char));
@@ -41,7 +41,7 @@ for (var option = 0; option < input_choice_count; ++option)
     }
     // Go to next line
     penx = 0;
-    peny += text_dx + 3;
+    peny += text_dx + 5;
 }
 
 /*for (var i = 0; i < floor(current_display_count); ++i)

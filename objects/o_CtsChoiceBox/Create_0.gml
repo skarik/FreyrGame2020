@@ -9,7 +9,8 @@ input_choice[0] = "Nothing";
 input_fadeout = false;
 input_priority = true;
 
-display_font = f_arvo9;
+display_font = global.font_arvo9;
+display_font_height = 9;
 display_width = 150;
 display_choice = 0;
 

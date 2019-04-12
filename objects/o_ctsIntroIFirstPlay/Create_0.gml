@@ -16,3 +16,6 @@ m_playerDoodad = null;
 m_bubbleTimer = 0;
 m_logo = null;
 m_fadeLogo = false;
+
+// create black box set
+new(o_CtsBlackBoxes);
