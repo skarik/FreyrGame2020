@@ -3,6 +3,8 @@ with ( ob_CtsTalker )
     input_fadeout = true;
 }
 
+depth = -9005;
+
 input_actor = null;
 input_choice_count = 0;
 input_choice[0] = "Nothing";

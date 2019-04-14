@@ -43,7 +43,15 @@ var inventory = o_PlayerTest.inventory;
 			m_inventory_selectorNameTimerCd = 3.0;
 		}
 	}
-		
+	else
+	{
+		// if we're planting get rid of cooldown
+		if (inventory.belt_type[inventory.belt_selection] == kItemPickupSeed && o_PlayerTest.m_plantable)
+		{
+			m_inventory_selectorNameTimerCd = max(m_inventory_selectorNameTimerCd, 2.0);
+		}
+	}
+	
 	// Cool off the selector
 	m_inventory_selectorNameTimerCd -= Time.deltaTime;
 	// Perform that blend for the blender
@@ -83,6 +91,17 @@ var inventory = o_PlayerTest.inventory;
 		{
 			draw_sprite(object_get_sprite(inventory.belt_object[i]), 0, dx + dspace * i + 15, dy + 15);
 			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt_count[i]));
+		}
+		if (inventory.belt_type[i] == kItemPickupSeed)
+		{
+			gpu_set_blendmode(bm_add);
+			draw_set_color(c_lime);
+			draw_rectangle(
+				dx + dspace * i + 15 - 11, dy + 15 - 11,
+				dx + dspace * i + 15 + 9, dy + 15 + 9,
+				true);
+			draw_set_color(c_white);
+			gpu_set_blendmode(bm_normal);
 		}
 	}
 	// inventory selector fg

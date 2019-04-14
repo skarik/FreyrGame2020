@@ -8,6 +8,7 @@ for (var i = 0; i < belt_size; ++i)
 	belt_name[i] = "";
 	belt_checkUse[i] = nullScript;
 	belt_onUse[i] = nullScript;
+	belt_type[i] = kItemPickupNormal;
 }
 
 belt_selection = 0;

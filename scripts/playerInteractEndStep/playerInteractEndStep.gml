@@ -67,6 +67,11 @@ _playerInteractCrops(l_canMove && !inDelayFrame);
 //_playerInteractBuildables();
 _playerInteractItems(l_canMove && !inDelayFrame);
 
+var belt_type = inventory.belt_type[inventory.belt_selection];
+if (belt_type == kItemPickupSeed) {
+	_playerInteractPlantables(l_canMove && !inDelayFrame);
+}
+
 // do combat mode calculations
 inCombatMode = !inDelayFrame;
 //if (collision_circle(x, y, )

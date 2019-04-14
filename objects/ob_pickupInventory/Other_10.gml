@@ -20,6 +20,7 @@ for (var i = 0; i < inventory.belt_size; ++i)
 			inventory.belt_name[i] = m_name;
 			inventory.belt_checkUse[i] = m_checkUseScript;
 			inventory.belt_onUse[i] = m_onUseScript;
+			inventory.belt_type[i] = m_type;
 			event_inherited(); // Destroy self & play effects
 			exit;
 		}
@@ -36,6 +37,7 @@ for (var i = 0; i < inventory.belt_size; ++i)
 		inventory.belt_name[i] = m_name;
 		inventory.belt_checkUse[i] = m_checkUseScript;
 		inventory.belt_onUse[i] = m_onUseScript;
+		inventory.belt_type[i] = m_type;
 		event_inherited(); // Destroy self & play effects
 		exit;
 	}

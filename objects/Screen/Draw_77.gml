@@ -32,6 +32,9 @@ camera_apply(m_outputCamera);
 	texture_set_stage(uni_samplerPaletteLUT, surface_get_texture(global.pal_surface3d));
 	gpu_set_tex_filter_ext(uni_samplerPaletteLUT, false);
 	gpu_set_tex_repeat_ext(uni_samplerPaletteLUT, false);
+	texture_set_stage(uni_samplerPaletteLUTSecond, surface_get_texture(global.pal_surface3d2));
+	gpu_set_tex_filter_ext(uni_samplerPaletteLUTSecond, false);
+	gpu_set_tex_repeat_ext(uni_samplerPaletteLUTSecond, false);
 	shader_set_uniform_f(uni_lookupDivs,
 		1.0 / global.pal_lutWidth, 1.0, global.pal_lutWidth, 1.0 / global.pal_lutWidth);
 

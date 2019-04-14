@@ -49,14 +49,15 @@ var blend1 = 0.0;
 blend0 = min(1.0, max(0.0, +sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 3.0));
 //blend1 = min(1.0, max(0.0, -sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 1.4));
 blend1 = min(1.0, max(0.0, -sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 2.0));
+
+// generate the colors
 var color0 = merge_color(make_color_rgb(128, 128, 128), make_color_rgb(255 * 0.6, 180 * 0.6, 60 * 0.6), 1.0 - blend0);
-color0 = merge_color(color0, make_color_rgb(90, 70, 255), blend1);
+color0 = merge_color(color0, make_color_rgb(90 * 1.2, 70 * 1.2, 255), blend1);
+var ambient0 = merge_color(make_color_rgb(128, 128, 128), make_color_rgb(255 * 0.9, 180 * 0.9, 60 * 0.9), 1.0 - blend0);
+ambient0 = merge_color(ambient0, make_color_rgb(9, 7, 26), blend1);
 
 
-//var kBlendValue = 0.8;
 var kBlendValue = 1.0;
-//draw_set_color(merge_color(make_color_rgb(128, 128, 128), color0, 0.2));
-//draw_rectangle(GameCamera.x - GameCamera.width, GameCamera.y - GameCamera.height, GameCamera.x + GameCamera.width, GameCamera.y + GameCamera.height, false);
 m_overlayColor = merge_color(make_color_rgb(128, 128, 128), color0, 1.0 - kBlendValue);
-
 paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, kBlendValue));
+m_ambientLight = ambient0;

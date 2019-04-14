@@ -26,4 +26,5 @@ paletteInit();
 
 // Shader sampler info
 uni_samplerPaletteLUT = shader_get_sampler_index( sh_repaletteScene, "samplerPaletteLUT" );
+uni_samplerPaletteLUTSecond = shader_get_sampler_index( sh_repaletteScene, "samplerPaletteLUTSecond" );
 uni_lookupDivs = shader_get_uniform( sh_repaletteScene, "uLookupDivs" );

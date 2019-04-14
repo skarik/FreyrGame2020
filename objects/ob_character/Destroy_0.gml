@@ -1,3 +1,6 @@
 /// @description Destruction
 
-delete(stats);
+if (m_initialized)
+{
+	delete(stats);
+}

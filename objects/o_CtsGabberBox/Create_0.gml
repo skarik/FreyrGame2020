@@ -3,7 +3,7 @@ with ( ob_CtsTalker )
     input_fadeout = true;
 }
 
-depth = -9;
+depth = -9005;
 
 input_actor = null;
 input_name = "";

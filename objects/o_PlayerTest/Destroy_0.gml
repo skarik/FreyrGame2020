@@ -1,5 +1,9 @@
 /// @description 
+
 event_inherited();
 
-delete(hud);
-delete(quests);
+if (m_initialized)
+{
+	delete(hud);
+	delete(quests);
+}

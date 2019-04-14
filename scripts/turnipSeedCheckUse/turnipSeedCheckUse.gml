@@ -1,12 +1,14 @@
-m_plantable = false;
+/*m_plantable = false;
 
 var gridSize = 16;
 
 if (!m_isTilling && canMove && !isBusyInteracting)
 {
+	// Get till distance
+	var tillDistance = max(2.0, min(28.0, point_distance(aimingStartX, aimingStartY, uPosition, vPosition)));
 	// Find the piece of land to till:
-	var tillX = aimingStartX + lengthdir_x(12, facingDirection);
-	var tillY = aimingStartY + lengthdir_y(12, facingDirection) + 5;
+	var tillX = aimingStartX + lengthdir_x(tillDistance, aimingDirection);
+	var tillY = aimingStartY + lengthdir_y(tillDistance, aimingDirection);
 	tillX = round((tillX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 	tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 
@@ -24,4 +26,7 @@ if (!m_isTilling && canMove && !isBusyInteracting)
 	}
 }
 
+return m_plantable;*/
+
+_playerInteractPlantables(true);
 return m_plantable;

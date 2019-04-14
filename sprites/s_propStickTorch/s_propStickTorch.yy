@@ -2,7 +2,7 @@
     "id": "5039a925-2c9b-4b99-ad19-966f7221bd43",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_propStickTorches",
+    "name": "s_propStickTorch",
     "For3D": false,
     "HTile": false,
     "VTile": false,

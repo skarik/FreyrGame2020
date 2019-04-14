@@ -1,5 +1,7 @@
 var buffer = argument0;
 
+delete(ob_pickupInventory);
+
 // Load up number of field bits
 var field_count = buffer_read(buffer, buffer_s32);
 //show_message(string(field_count));
@@ -13,12 +15,25 @@ for (var i = 0; i < field_count; ++i)
 	}
 }
 
+// Load up number of jar bits
+var jar_count = buffer_read(buffer, buffer_s32);
+// Load up all the crop bits!
+for (var i = 0; i < jar_count; ++i)
+{
+	var jar_type = object_get_index(buffer_read(buffer, buffer_string));
+	var jar = new(jar_type);
+	with (jar)
+	{
+		jarLoadState(buffer);
+	}
+}
+
 // Load up number of crop bits
 var crop_count = buffer_read(buffer, buffer_s32);
 // Load up all the crop bits!
 for (var i = 0; i < crop_count; ++i)
 {
-	var crop_type = buffer_read(buffer, buffer_s32);
+	var crop_type = object_get_index(buffer_read(buffer, buffer_string));
 	var crop = new(crop_type);
 	with (crop)
 	{

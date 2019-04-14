@@ -1,9 +1,6 @@
-hud = null;
-quests = null;
+if (singleton_this()) exit;
 
 event_inherited();
-
-if (singleton_this()) exit;
 
 // override chracter value
 m_isPlayer = true;
@@ -20,7 +17,10 @@ camPlayerInit();
 
 hud = new(o_PlayerHud);
 inventory = new(o_inventory);
-quests = new(o_PlayerQuest);
+if (!exists(o_PlayerQuest))
+	quests = new(o_PlayerQuest);
+else
+	quests = instance_find(o_PlayerQuest, 0);
 
 // make sure there's day/night
 if (!exists(o_dayNightCycle))

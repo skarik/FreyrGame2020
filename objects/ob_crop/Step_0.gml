@@ -11,6 +11,10 @@ if (!exists(m_dirt))
 		delete(this);
 		exit;
 	}
+	else
+	{	// Mark owned dirt as planted
+		m_dirt.planted = true;
+	}
 }
 
 // Dirt will always exist by this point

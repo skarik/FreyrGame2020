@@ -96,7 +96,7 @@ if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker) && !o_PlayerTest.isBlo
 	surface_set_target(m_surfaceLightweight);
 }
 // buildable
-if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
+/*if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
 {
 	dx = o_PlayerTest.currentBuildableX - (GameCamera.x - GameCamera.width / 2);
 	dy = o_PlayerTest.currentBuildableY - (GameCamera.y - GameCamera.height / 2);
@@ -107,7 +107,7 @@ if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
 	draw_set_alpha(0.9);
 	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 	draw_set_alpha(1.0);
-}
+}*/
 // tillable timer
 if (o_PlayerTest.m_isTilling)
 {
@@ -118,6 +118,20 @@ if (o_PlayerTest.m_isTilling)
 	draw_rectangle(dx - 6, dy - 25, dx + 6, dy - 21, false);
 	draw_set_color(c_white);
 	draw_rectangle(dx - 5, dy - 24, dx - 5 + 10 * clamp(o_PlayerTest.m_till_timer, 0.0, 1.0), dy - 22, false);
+}
+// plantable
+if (o_PlayerTest.m_plantable)
+{
+	dx = o_PlayerTest.m_plant_x - 8 - (GameCamera.x - GameCamera.width / 2);
+	dy = o_PlayerTest.m_plant_y - 8 - (GameCamera.y - GameCamera.height / 2);
+	
+	gpu_set_blendenable(true);
+	gpu_set_blendmode(bm_normal);
+	//draw_set_color(c_blue);
+	draw_set_color(c_gold);
+	draw_set_alpha(0.9);
+	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
+	draw_set_alpha(1.0);
 }
 
 //

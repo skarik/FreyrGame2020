@@ -21,3 +21,6 @@ isEthereal = false;
 
 // Init depth setup
 depthInit();
+
+// Mark as initialized
+m_initialized = true;

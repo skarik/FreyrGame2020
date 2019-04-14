@@ -1,2 +1,5 @@
 /// @description cts cleanup
-cutsceneFree();
+if (m_initialized)
+{
+	cutsceneFree();
+}

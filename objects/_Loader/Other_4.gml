@@ -1,3 +1,5 @@
+commonStart();
+
 new(System);
 new(Screen);
 new(GameCamera);
@@ -53,4 +55,11 @@ debugOut("working_directory: " + working_directory);
 debugOut("program_directory: " + program_directory);
 
 // Finish and go to next room
-room_goto_next();
+
+// Try to load a game
+if (Debug.reset || !gameLoad())
+{
+    // If not, we just continue normally.
+	room_goto_next();
+}
+

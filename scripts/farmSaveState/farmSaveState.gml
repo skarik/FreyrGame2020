@@ -13,6 +13,20 @@ for (var i = 0; i < field_count; ++i)
 	}
 }
 
+// Save the water jars
+var jar_count = instance_number(o_potWater);
+buffer_write(buffer, buffer_s32, jar_count);
+// Save their states
+for (var i = 0; i < jar_count; ++i)
+{
+	var jar = instance_find(o_potWater, i);
+	with (jar)
+	{
+		buffer_write(buffer, buffer_string, object_get_name(object_index));
+		jarSaveState(buffer);
+	}
+}
+
 // Save number of crops
 var crop_count = instance_number(ob_crop);
 buffer_write(buffer, buffer_s32, crop_count);
@@ -22,7 +36,7 @@ for (var i = 0; i < crop_count; ++i)
 	var crop = instance_find(ob_crop, i);
 	with (crop)
 	{
-		buffer_write(buffer, buffer_s32, object_index);
+		buffer_write(buffer, buffer_string, object_get_name(object_index));
 		cropSaveState(buffer);
 	}
 }

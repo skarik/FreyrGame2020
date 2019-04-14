@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "o_chNathan",
     "eventList": [
-        
+        {
+            "id": "11992560-4dcb-4ca4-82b6-2fce2410062d",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "9369e6df-0743-4a2f-ae40-a2036fb2372a"
+        },
+        {
+            "id": "9dcd42e5-082c-4c5c-8807-4b2d1e7abd02",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "9369e6df-0743-4a2f-ae40-a2036fb2372a"
+        }
     ],
     "maskSpriteId": "082183b2-56c0-4edf-8ecc-b4a9c6fc2b69",
     "overriddenProperties": null,

@@ -24,6 +24,8 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 			doodad.image_angle = layer_sprite_get_angle(element);
 			doodad.image_blend = layer_sprite_get_blend(element);
 			doodad.image_alpha = layer_sprite_get_alpha(element);
+		
+		doodadSetGlow(doodad);
 			
 		if (do_collision)
 		{

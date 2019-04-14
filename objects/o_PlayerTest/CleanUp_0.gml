@@ -1,1 +1,4 @@
-controlCleanup();
+if (m_initialized)
+{
+	controlCleanup();
+}

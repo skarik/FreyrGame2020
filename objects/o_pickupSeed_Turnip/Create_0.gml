@@ -5,3 +5,4 @@ m_name           = "Turnip Seed";
 m_maxStack       = 10;
 m_onUseScript    = turnipSeedOnUse;
 m_checkUseScript = turnipSeedCheckUse;
+m_type           = kItemPickupSeed;
