@@ -71,13 +71,13 @@ void main()
 		color_scene.r * uLookupDivs.x * (254.0/255.0) + floor(color_scene.b * uLookupDivs.z) * uLookupDivs.w,
 		color_scene.g * uLookupDivs.y);
 	vec4 color_lookup	= texture2D( samplerPaletteLUT, color_lookup_coords );
-	vec4 color_lookup2	= texture2D( samplerPaletteLUTSecond, color_lookup_coords );
+	//vec4 color_lookup2	= texture2D( samplerPaletteLUTSecond, color_lookup_coords );
 	
 	// Get the percent between the primary and secondary lookup
-	vec2 color_distances = vec2( rgbDistanceSqr(color_scene.rgb, color_lookup.rgb), rgbDistanceSqr(color_scene.rgb, color_lookup2.rgb) );
-	float percent = calculateLinearWeight(color_distances.x, color_distances.y);
+	//vec2 color_distances = vec2( rgbDistanceSqr(color_scene.rgb, color_lookup.rgb), rgbDistanceSqr(color_scene.rgb, color_lookup2.rgb) );
+	//float percent = calculateLinearWeight(color_distances.x, color_distances.y);
 	
-	color_lookup.rgb = mix(color_lookup.rgb, color_lookup2.rgb, calculateAlphaDither(percent, floor(v_vWorldPosition.xy * 0.5)));
+	//color_lookup.rgb = mix(color_lookup.rgb, color_lookup2.rgb, calculateAlphaDither(percent, floor(v_vWorldPosition.xy)));
 	
 	//gl_FragColor = vec4(abs(color_lookup - color_scene).rgb, 1.0);
 	//gl_FragColor = vec4(percent, percent, percent, 1.0);

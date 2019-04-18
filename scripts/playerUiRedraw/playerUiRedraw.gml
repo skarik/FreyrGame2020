@@ -49,7 +49,7 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o
 	draw_set_alpha(0.7);
 	draw_set_color(c_white);
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
-	draw_set_color(c_blue);
+	draw_set_color(c_crystalblue);
 	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 	draw_set_alpha(1.0);
 	
@@ -60,6 +60,7 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o
 	draw_set_font(f_josefinSlab9);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
+	draw_set_color(c_white);
 	if (!tillable.tilled)
 	{
 		draw_text(dx + 8, dy - 4, "Till");
@@ -78,7 +79,7 @@ if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker) && !o_PlayerTest.isBlo
 	gpu_set_blendmode(bm_normal);
 	draw_set_color(c_white);
 	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
-	draw_set_color(c_blue);
+	draw_set_color(c_crystalblue);
 	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 	draw_set_alpha(1.0);
 	
@@ -89,6 +90,7 @@ if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker) && !o_PlayerTest.isBlo
 	draw_set_font(f_josefinSlab9);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
+	draw_set_color(c_white);
 	draw_text(dx + 8, dy - 4, "Plow");
 	
 	// reset target to proper one

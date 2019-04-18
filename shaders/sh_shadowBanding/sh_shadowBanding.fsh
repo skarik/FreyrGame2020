@@ -4,6 +4,8 @@
 varying vec2 v_vTexcoord;
 varying vec4 v_vWorldPosition;
 
+uniform vec2 u_pixelOffset;
+
 //============================================================================//
 // Helpers (Color):
 
@@ -68,10 +70,10 @@ float calculateAlphaDither (float alpha, vec2 clip_position)
 
 float stepValue (float value, float steps)
 {
-	return floor(value * (steps * 0.99)) / (steps - 1.0);
-	/*vec2 values = vec2(floor(value * (steps * 0.99)), ceil(value * (steps * 0.99)));
+	//return floor(value * (steps * 0.99)) / (steps - 1.0);
+	vec2 values = vec2(floor(value * (steps * 0.99)), ceil(value * (steps * 0.99))) / (steps - 1.0);
 	float percent = (value - values.x) / (values.y - values.x);
-	return mix(values.x, values.y, calculateAlphaDither(percent, floor(v_vWorldPosition.xy)));*/
+	return mix(values.x, values.y, calculateAlphaDither(percent, floor(v_vWorldPosition.xy + u_pixelOffset)));
 }
 
 void main()
@@ -81,9 +83,12 @@ void main()
 	// Roughly: need to convert to HSL, step the L, then convert back to RGB
 	
 	vec3 shadowHSV = rgb2hsv(pixelShadowing.rgb);
-	//shadowHSV.z = stepValue(shadowHSV.z, 2.0); // dithering
+	shadowHSV.z = stepValue(shadowHSV.z, 16.0); // dithering
 	//shadowHSV.z = stepValue(shadowHSV.z, 5.0);
 	vec3 shadowRGB = hsv2rgb(shadowHSV);
+	/*shadowRGB.r = stepValue(shadowRGB.r, 4.0);
+	shadowRGB.g = stepValue(shadowRGB.g, 4.0);
+	shadowRGB.b = stepValue(shadowRGB.b, 4.0);*/
 	
     gl_FragColor = vec4(shadowRGB, 1.0);
 }

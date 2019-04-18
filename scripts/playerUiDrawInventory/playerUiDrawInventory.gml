@@ -92,7 +92,7 @@ var inventory = o_PlayerTest.inventory;
 			draw_sprite(object_get_sprite(inventory.belt_object[i]), 0, dx + dspace * i + 15, dy + 15);
 			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt_count[i]));
 		}
-		if (inventory.belt_type[i] == kItemPickupSeed)
+		/*if (inventory.belt_type[i] == kItemPickupSeed)
 		{
 			gpu_set_blendmode(bm_add);
 			draw_set_color(c_lime);
@@ -102,7 +102,7 @@ var inventory = o_PlayerTest.inventory;
 				true);
 			draw_set_color(c_white);
 			gpu_set_blendmode(bm_normal);
-		}
+		}*/
 	}
 	// inventory selector fg
 	surface_reset_target();

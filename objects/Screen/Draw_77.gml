@@ -7,8 +7,10 @@ view_set_visible(1, true);
 // Pop the stack
 //surface_reset_target();
 
-// update the palette:
-global.pal_surface3d = paletteUpdate();
+// update effects
+with (o_replatte) event_user(0);
+with (o_darkness) event_user(0);
+with (o_PlayerHud) event_user(0);
 
 // Upscale to the screen
 surface_set_target(m_outputSurface);
@@ -27,23 +29,9 @@ camera_apply(m_outputCamera);
 		draw_rectangle(0, 0, Screen.width * 0.9, Screen.height * 0.9, false); // Debug blue.
 	}
 	
-	// Set up the shader
-	shader_set(sh_repaletteScene);
-	texture_set_stage(uni_samplerPaletteLUT, surface_get_texture(global.pal_surface3d));
-	gpu_set_tex_filter_ext(uni_samplerPaletteLUT, false);
-	gpu_set_tex_repeat_ext(uni_samplerPaletteLUT, false);
-	texture_set_stage(uni_samplerPaletteLUTSecond, surface_get_texture(global.pal_surface3d2));
-	gpu_set_tex_filter_ext(uni_samplerPaletteLUTSecond, false);
-	gpu_set_tex_repeat_ext(uni_samplerPaletteLUTSecond, false);
-	shader_set_uniform_f(uni_lookupDivs,
-		1.0 / global.pal_lutWidth, 1.0, global.pal_lutWidth, 1.0 / global.pal_lutWidth);
-
 	// Draw the screen
 	draw_set_color(c_white);
 	draw_surface_stretched(m_gameSurface, offset_x * pixelScale, offset_y * pixelScale, Screen.width, Screen.height);
-	
-	// Reset drawing status
-	shader_reset();
 }
 surface_reset_target();
 

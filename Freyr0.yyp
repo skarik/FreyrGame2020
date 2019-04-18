@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "0a612300-0dca-4a8e-b80b-e649410972b1",
+            "Value": {
+                "id": "c51555bd-0e91-4751-aaa3-dd7c24a0a953",
+                "resourcePath": "shaders\\sh_9tapBlur\\sh_9tapBlur.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "0ab14b05-1070-4fe4-975c-7ff2f48321f3",
             "Value": {
                 "id": "ddafed51-2fdf-47f2-9e56-ff478bf1c960",
@@ -580,6 +588,14 @@
                 "id": "3293b32f-9386-4530-8ae8-c1e5213d20fc",
                 "resourcePath": "scripts\\delete_delay\\delete_delay.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "25d22874-0bc0-4ea1-9c98-31892d9089aa",
+            "Value": {
+                "id": "5c48833a-a570-4596-a495-473bf94cbc33",
+                "resourcePath": "shaders\\sh_bloomDrop\\sh_bloomDrop.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -2311,6 +2327,14 @@
             }
         },
         {
+            "Key": "9a6564ce-9ed2-4a51-a2fa-a574542ff4d4",
+            "Value": {
+                "id": "ab0bdcd4-b7e8-428f-967e-e92b4383c672",
+                "resourcePath": "objects\\ob_screenEffect\\ob_screenEffect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9c5decd7-9806-4ee1-9d21-be738627e67b",
             "Value": {
                 "id": "58b86901-3da0-48fe-98f3-0c6370eb468a",
@@ -3339,6 +3363,14 @@
             "Value": {
                 "id": "0fb4c1a9-38c0-40c1-9f5e-dc812aa48e24",
                 "resourcePath": "objects\\ob_areaFarmable\\ob_areaFarmable.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e2434a60-5d28-4e54-8ba9-fc7435992104",
+            "Value": {
+                "id": "de796f27-8d1e-4234-bd44-7a3b89d224c5",
+                "resourcePath": "objects\\o_replatte\\o_replatte.yy",
                 "resourceType": "GMObject"
             }
         },

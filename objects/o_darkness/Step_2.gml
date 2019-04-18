@@ -4,7 +4,28 @@ if (!surface_exists(m_darkness))
 {
 	m_darkness = surface_create(GameCamera.width, GameCamera.height);
 }
+if (!surface_exists(m_bloom))
+{
+	m_bloom = surface_create(GameCamera.width / 2, GameCamera.height / 2);
+}
+if (!surface_exists(m_bloom2))
+{
+	m_bloom2 = surface_create(GameCamera.width / 2, GameCamera.height / 2);
+}
 
+// update bloom params
+if (exists(o_dayNightCycle))
+{
+	bloom_mul = 1.8 * saturate(0.8 - color_get_value(o_dayNightCycle.m_ambientLight) / 150);
+	bloom_drop = saturate(0.5 + color_get_value(o_dayNightCycle.m_ambientLight) / 255);
+}
+else
+{
+	bloom_mul = 0.5;
+	bloom_drop = 0.9;
+}
+
+// draw lights
 if (surface_exists(m_darkness))
 {
 	var offset_x = -(GameCamera.x - GameCamera.width / 2);
@@ -13,7 +34,14 @@ if (surface_exists(m_darkness))
 	surface_set_target(m_darkness);
 	
 	// clear to the ambient color
-	draw_clear_alpha(o_dayNightCycle.m_ambientLight, 1.0);
+	if (exists(o_dayNightCycle))
+	{
+		draw_clear_alpha(o_dayNightCycle.m_ambientLight, 1.0);
+	}
+	else
+	{
+		draw_clear_alpha(c_white, 1.0);
+	}
 	// double it up
 	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 	draw_set_color(c_white);
@@ -37,12 +65,13 @@ if (surface_exists(m_darkness))
 			continue;
 		
 		// Draw a small light around certain characters
-		draw_circle_color(x + offset_x, y + offset_y - z_height, 100, c_dkgray, c_black, false);
+		draw_circle_color(x + offset_x, y + offset_y - z_height, 125, merge_color(c_dkgray, c_black, 0.5), c_black, false);
 	}
 	with (o_PlayerTest) // Todo: add companions to this
 	{
 		// Draw a small light around big characters
-		draw_circle_color(x + offset_x, y + offset_y - z_height, 200, c_gray, c_black, false);
+		draw_circle_color(x + offset_x, y + offset_y - z_height, 75, merge_color(c_dkgray, c_black, 0.5), c_black, false);
+		draw_circle_color(x + offset_x, y + offset_y - z_height, 50, merge_color(c_dkgray, c_black, 0.5), c_black, false);
 	}
 	
 	// normal light sources:
