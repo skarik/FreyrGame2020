@@ -67,8 +67,8 @@ _playerInteractCrops(l_canMove && !inDelayFrame);
 //_playerInteractBuildables();
 _playerInteractItems(l_canMove && !inDelayFrame);
 
-var belt_type = inventory.belt_type[inventory.belt_selection];
-if (belt_type == kItemPickupSeed) {
+var belt = inventory.belt[inventory.belt_selection];
+if (belt.type == kItemPickupSeed) {
 	_playerInteractPlantables(l_canMove && !inDelayFrame);
 }
 

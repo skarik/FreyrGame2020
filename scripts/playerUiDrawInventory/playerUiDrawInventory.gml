@@ -34,19 +34,19 @@ var inventory = o_PlayerTest.inventory;
 		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft - Time.deltaTime * 2.0);
 		
 	// if name doesn't match, we need to swap names
-	if (m_inventory_selectorName != inventory.belt_name[inventory.belt_selection])
+	if (m_inventory_selectorName != inventory.belt[inventory.belt_selection].name)
 	{
 		m_inventory_selectorNameTimerCd = -1.0;
 		if (m_inventory_selectorNameBlend <= 0.0)
 		{
-			m_inventory_selectorName = inventory.belt_name[inventory.belt_selection];
+			m_inventory_selectorName = inventory.belt[inventory.belt_selection].name;
 			m_inventory_selectorNameTimerCd = 3.0;
 		}
 	}
 	else
 	{
 		// if we're planting get rid of cooldown
-		if (inventory.belt_type[inventory.belt_selection] == kItemPickupSeed && o_PlayerTest.m_plantable)
+		if (inventory.belt[inventory.belt_selection].type == kItemPickupSeed && o_PlayerTest.m_plantable)
 		{
 			m_inventory_selectorNameTimerCd = max(m_inventory_selectorNameTimerCd, 2.0);
 		}
@@ -87,12 +87,12 @@ var inventory = o_PlayerTest.inventory;
 	{
 		draw_sprite(sui_bagBox, 0, dx + dspace * i, dy );
 	
-		if (inventory.belt_object[i] != null)
+		if (inventory.belt[i].object != null)
 		{
-			draw_sprite(object_get_sprite(inventory.belt_object[i]), 0, dx + dspace * i + 15, dy + 15);
-			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt_count[i]));
+			draw_sprite(object_get_sprite(inventory.belt[i].object), 0, dx + dspace * i + 15, dy + 15);
+			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt[i].count));
 		}
-		/*if (inventory.belt_type[i] == kItemPickupSeed)
+		/*if (inventory.belt[i].type == kItemPickupSeed)
 		{
 			gpu_set_blendmode(bm_add);
 			draw_set_color(c_lime);

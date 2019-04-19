@@ -49,18 +49,19 @@ draw_sprite(sui_buttonContext, 0, dx, dy);
 draw_text(dx + 20, dy + 15, "F");
 {
 	var inventory = o_PlayerTest.inventory;
+	var belt = inventory.belt[inventory.belt_selection];
 	// draw the item sprite
-	if (inventory.belt_object[inventory.belt_selection] != null)
+	if (belt.object != null)
 	{
 		shader_set(sh_colormask);
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 + 1, dy + 4);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 - 1, dy + 4);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 + 1);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 - 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 + 1, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 - 1, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 + 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 - 1);
 		shader_reset();
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4);
 	}
 }
 
@@ -71,18 +72,19 @@ draw_sprite(sui_buttonContext, 1, dx, dy);
 if (o_PlayerTest.isBlocking)
 {
 	var inventory = o_PlayerTest.inventory;
+	var belt = inventory.belt[inventory.belt_selection];
 	// draw the item sprite
-	if (inventory.belt_object[inventory.belt_selection] != null)
+	if (belt.object != null)
 	{
 		shader_set(sh_colormask);
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 + 1, dy + 4);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8 - 1, dy + 4);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 + 1);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4 - 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 + 1, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 - 1, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 + 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 - 1);
 		shader_reset();
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(inventory.belt_object[inventory.belt_selection]), 0, dx + 8, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4);
 	}
 }
 draw_text(dx + 20, dy + 15, "LMB");
