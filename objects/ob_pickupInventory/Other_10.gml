@@ -9,21 +9,10 @@ if (!exists(m_pickupTarget))
 
 var inventory = m_pickupTarget.inventory;
 
-var item;
-item = itemArrayAddItemProp(inventory.belt,
-							object_index,
-							1,
-							m_maxStack,
-							m_name,
-							m_checkUseScript,
-							m_onUseScript,
-							m_type);
-								
-// todo: add shit to bag
-if (item == null)
+//if (m_type != kItemPickupResource)
 {
-	// add to either bag or seeds
-	item = itemArrayAddItemProp(m_type == kItemPickupSeed ? inventory.seed : inventory.bag,
+	var item;
+	item = itemArrayAddItemProp(inventory.belt,
 								object_index,
 								1,
 								m_maxStack,
@@ -31,13 +20,26 @@ if (item == null)
 								m_checkUseScript,
 								m_onUseScript,
 								m_type);
-}
+								
+	// todo: add shit to bag
+	if (item == null)
+	{
+		// add to either bag or seeds
+		item = itemArrayAddItemProp(m_type == kItemPickupSeed ? inventory.seed : inventory.bag,
+									object_index,
+									1,
+									m_maxStack,
+									m_name,
+									m_checkUseScript,
+									m_onUseScript,
+									m_type);
+	}
 
-
-// If item is not null by the end...
-if (item != null)
-{
-	event_inherited(); // Destroy self & play effects
+	// If item is not null by the end...
+	if (item != null)
+	{
+		event_inherited(); // Destroy self & play effects
+	}
 }
 
 // Otherwise, we drop.

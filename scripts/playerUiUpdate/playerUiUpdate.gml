@@ -1,3 +1,6 @@
 
 playerUiUpdateBook();
+playerUiUpdateInventory();
 playerUiUpdateBag();
+
+playerUiUpdateInventoryManagement();

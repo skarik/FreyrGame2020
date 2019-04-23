@@ -18,6 +18,7 @@ if (surface_exists(m_surface) && !o_PlayerTest.m_isDead)
 	var dy = GameCamera.y - GameCamera.height / 2;
 
 	draw_set_color(c_white);
+	draw_set_alpha(1.0);
 	gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_src_alpha, bm_inv_src_alpha);
 

@@ -1,69 +1,18 @@
 var dx, dy;
-
-// inventory:
 var inventory = o_PlayerTest.inventory;
-{
-	// update the selector
-	if (m_inventory_selectorTarget != inventory.belt_selection)
-	{
-		//if (m_inventory_selectorBlend <= 0.00 || m_inventory_selectorBlend >= 1.00)
-		//{
-		m_inventory_selectorStart = m_inventory_selector;
-		m_inventory_selectorBlend = 0.00;
-		//}
-		m_inventory_selectorTarget = inventory.belt_selection;
-		m_inventory_selectorTimerCd = 1.0;
-		
-		m_inventory_selectorNameTimerCd = 3.0;
-	}
-	
-	// Move the selector around
-	m_inventory_selector = lerp(
-		m_inventory_selectorStart, 
-		m_inventory_selectorTarget,
-		bouncestep(smoothstep(m_inventory_selectorBlend))
-		);
-	m_inventory_selectorBlend = saturate(m_inventory_selectorBlend + Time.deltaTime * 3.0);
-	
-	// Cool off the selector
-	m_inventory_selectorTimerCd -= Time.deltaTime;
-	// Perform that blend for the blender
-	if (m_inventory_selectorTimerCd > 0.0)
-		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft + Time.deltaTime * 6.0);
-	else
-		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft - Time.deltaTime * 2.0);
-		
-	// if name doesn't match, we need to swap names
-	if (m_inventory_selectorName != inventory.belt[inventory.belt_selection].name)
-	{
-		m_inventory_selectorNameTimerCd = -1.0;
-		if (m_inventory_selectorNameBlend <= 0.0)
-		{
-			m_inventory_selectorName = inventory.belt[inventory.belt_selection].name;
-			m_inventory_selectorNameTimerCd = 3.0;
-		}
-	}
-	else
-	{
-		// if we're planting get rid of cooldown
-		if (inventory.belt[inventory.belt_selection].type == kItemPickupSeed && o_PlayerTest.m_plantable)
-		{
-			m_inventory_selectorNameTimerCd = max(m_inventory_selectorNameTimerCd, 2.0);
-		}
-	}
-	
-	// Cool off the selector
-	m_inventory_selectorNameTimerCd -= Time.deltaTime;
-	// Perform that blend for the blender
-	if (m_inventory_selectorNameTimerCd > 0.0)
-		m_inventory_selectorNameBlend = saturate(m_inventory_selectorNameBlend + Time.deltaTime * 5.0);
-	else
-		m_inventory_selectorNameBlend = saturate(m_inventory_selectorNameBlend - Time.deltaTime * 5.0);
-}
+
+draw_set_alpha(1.0);
+
+// draw the belt
 {
 	var dspace = 25;
 	dx = 5 + smoothstep(m_bag_totalBlend) * (GameCamera.width * 0.5 - 5 - dspace * 6 * 0.5);
 	dy = GameCamera.height - 30;
+	
+	// save the position
+	m_belt_base_x = dx;
+	m_belt_base_y = dy;
+	
 	// inventory selector bg
 	surface_reset_target();
 	surface_set_target(m_surface);
@@ -103,6 +52,31 @@ var inventory = o_PlayerTest.inventory;
 			draw_set_color(c_white);
 			gpu_set_blendmode(bm_normal);
 		}*/
+		
+		// draw the hover selection
+		if (i == m_belt_hover)
+		{
+			gpu_set_blendmode(bm_add);
+			draw_set_color(merge_color(c_dkgray, c_gold, sin(current_time * 0.01) * 0.5 + 0.5));
+			draw_rectangle(
+				dx + dspace * i + 15 - 11, dy + 15 - 11,
+				dx + dspace * i + 15 + 9, dy + 15 + 9,
+				true);
+			draw_set_color(c_white);
+			gpu_set_blendmode(bm_normal);
+		}
+		// draw the REAAAAL selection
+		if (i == m_belt_selection)
+		{
+			gpu_set_blendmode(bm_add);
+			draw_set_color(c_gold);
+			draw_rectangle(
+				dx + dspace * i + 15 - 10, dy + 15 - 10,
+				dx + dspace * i + 15 + 8, dy + 15 + 8,
+				true);
+			draw_set_color(c_white);
+			gpu_set_blendmode(bm_normal);
+		}
 	}
 	// inventory selector fg
 	surface_reset_target();

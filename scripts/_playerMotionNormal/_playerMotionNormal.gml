@@ -1,7 +1,7 @@
 // Update checks
 _playerMotionCommonChecks();
 
-var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting;
+var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m_usingInventory;
 
 // Set up the move speed
 var l_moveSpeed = kMoveSpeed;

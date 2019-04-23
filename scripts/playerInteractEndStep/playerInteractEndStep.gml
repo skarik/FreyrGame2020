@@ -1,4 +1,4 @@
-var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting;
+var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m_usingInventory;
 
 // Do dashing
 if (dashCooldown <= 0.0)
@@ -39,6 +39,18 @@ if (l_canMove)
 			inventory.belt_selection -= inventory.belt_size;
 		}
 	}
+	if (belt1Button.pressed)
+		inventory.belt_selection = 0;
+	if (belt2Button.pressed)
+		inventory.belt_selection = 1;
+	if (belt3Button.pressed)
+		inventory.belt_selection = 2;
+	if (belt4Button.pressed)
+		inventory.belt_selection = 3;
+	if (belt5Button.pressed)
+		inventory.belt_selection = 4;
+	if (belt6Button.pressed)
+		inventory.belt_selection = 5;
 }
 
 // update aiming
@@ -53,7 +65,7 @@ if (l_canMove)
 }
 
 // update book
-if (l_canMove)
+if (l_canMove || m_usingInventory || m_usingBook)
 {
 	if (xButton.pressed)
 	{

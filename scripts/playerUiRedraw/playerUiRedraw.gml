@@ -164,5 +164,16 @@ playerUiDrawAimer();
 // on top of it all, draw the fuckin book
 playerUiDrawBook();
 
+// and on top of all that, draw the inventory/menu cursor
+{
+	// on top of it all, draw the cursor
+	surface_reset_target();
+	surface_set_target(m_surfaceLightweight);
+
+	draw_set_alpha(m_bag_totalBlend);
+	_playerUiDrawCursor();
+	draw_set_alpha(1.0);
+}
+
 draw_set_alpha(1.0); // clear here for now
 surface_reset_target();

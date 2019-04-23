@@ -17,3 +17,5 @@ m_inventory_selectorName = "";
 //m_book_enabled = false;
 m_book_totalBlend = 0;
 m_bag_totalBlend = 0;
+
+playerUiInit();

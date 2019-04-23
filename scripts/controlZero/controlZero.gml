@@ -18,6 +18,15 @@ if (argument0 == false)
 	lButton.value = 0.0;
 	rButton.value = 0.0;
 	itemsButton.value = 0.0;
+	selectButton.value = 0.0;
+	cancelButton.value = 0.0;
+	
+	belt1Button.value = 0.0;
+	belt2Button.value = 0.0;
+	belt3Button.value = 0.0;
+	belt4Button.value = 0.0;
+	belt5Button.value = 0.0;
+	belt6Button.value = 0.0;
 }
 else
 {

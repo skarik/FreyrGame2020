@@ -68,7 +68,7 @@ if (!m_isTilling)
 			if (m_till_filldirt)
 			{
 				// Do we want to make dirt?
-				if (canMove && !isBlocking && !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
+				if (l_canMove && !isBlocking && !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && bButton.pressed)
 				{
 					m_till_target = null;
 					m_isTilling = true;
