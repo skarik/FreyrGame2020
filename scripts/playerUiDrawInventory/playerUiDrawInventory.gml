@@ -61,9 +61,9 @@ var inventory = o_PlayerTest.inventory;
 		m_inventory_selectorNameBlend = saturate(m_inventory_selectorNameBlend - Time.deltaTime * 5.0);
 }
 {
-	dx = 5;
-	dy = GameCamera.height - 30;
 	var dspace = 25;
+	dx = 5 + smoothstep(m_bag_totalBlend) * (GameCamera.width * 0.5 - 5 - dspace * 6 * 0.5);
+	dy = GameCamera.height - 30;
 	// inventory selector bg
 	surface_reset_target();
 	surface_set_target(m_surface);
@@ -115,6 +115,7 @@ var inventory = o_PlayerTest.inventory;
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_white);
+	draw_set_alpha((1.0 - m_bag_totalBlend) * saturate(m_inventory_selectorNameBlend * 4.0));
 	draw_text(
 		dx + 8 - 100.0 * smoothstep(1.0 - m_inventory_selectorNameBlend), dy - 20,
 		m_inventory_selectorName);
@@ -122,4 +123,5 @@ var inventory = o_PlayerTest.inventory;
 	// reset target to proper one
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
+	draw_set_alpha(1.0);
 }

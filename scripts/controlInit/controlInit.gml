@@ -12,6 +12,7 @@ xButton = _controlStructCreate();
 yButton = _controlStructCreate();
 lButton = _controlStructCreate();
 rButton = _controlStructCreate();
+itemsButton = _controlStructCreate();
 
 uPosition = 0.0;
 vPosition = 0.0;

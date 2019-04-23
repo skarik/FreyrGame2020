@@ -30,3 +30,6 @@ aimingStartY = y;
 inCombatMode = false;
 
 inDelayFrame = false;
+
+m_usingBook = false;
+m_usingInventory = false;

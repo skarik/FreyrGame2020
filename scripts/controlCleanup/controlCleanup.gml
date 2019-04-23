@@ -11,3 +11,4 @@ delete(xButton);
 delete(yButton);
 delete(rButton);
 delete(lButton);
+delete(itemsButton);

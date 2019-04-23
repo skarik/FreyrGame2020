@@ -1183,6 +1183,14 @@
             }
         },
         {
+            "Key": "46dc6b75-fa65-4d0e-b21f-26bcf2d10fdb",
+            "Value": {
+                "id": "d6ed16b8-dd0f-44ce-91f7-65744b3bf28c",
+                "resourcePath": "views\\46dc6b75-fa65-4d0e-b21f-26bcf2d10fdb.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "46f5416e-6b69-4d16-94d6-a240a99ffcb4",
             "Value": {
                 "id": "7eea250b-004d-46ff-8ac3-8956e61051ff",
@@ -2359,6 +2367,14 @@
             }
         },
         {
+            "Key": "9772c02d-792f-4574-97b0-b4256c4063df",
+            "Value": {
+                "id": "652c7c78-d7ea-4b1a-a1b7-ee41579da021",
+                "resourcePath": "scripts\\playerUiDrawBag\\playerUiDrawBag.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "979a4758-fe3f-4008-b75c-62ebd86a9a1d",
             "Value": {
                 "id": "811a02dc-651e-4a9d-9b22-76f2599732b6",
@@ -2452,6 +2468,14 @@
                 "id": "e98c9827-885f-408e-95cd-04e4ccfffccd",
                 "resourcePath": "sprites\\s_waterWaterfall\\s_waterWaterfall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9ebc8a93-8e02-40cb-a94e-afe252bd35df",
+            "Value": {
+                "id": "c3d5629f-9626-4f7c-aff5-2557d933bb34",
+                "resourcePath": "scripts\\playerUiDrawAimer\\playerUiDrawAimer.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2900,6 +2924,14 @@
                 "id": "804a3416-71fd-4522-8935-1b98039b1af4",
                 "resourcePath": "objects\\o_dayNightCycle\\o_dayNightCycle.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b8642774-0704-4ca8-8204-6b741fa0e34b",
+            "Value": {
+                "id": "96b0ad41-c896-4cfc-8fc9-1188f4e11035",
+                "resourcePath": "scripts\\script_register_name\\script_register_name.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3455,6 +3487,14 @@
             }
         },
         {
+            "Key": "e0ae9f70-6e47-40b7-930b-41d129fae225",
+            "Value": {
+                "id": "0da93765-e3af-4ba6-a764-f95d86f11b13",
+                "resourcePath": "scripts\\script_get_index\\script_get_index.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e0dd48c1-5bee-4f22-917d-a95041d895d4",
             "Value": {
                 "id": "0fb4c1a9-38c0-40c1-9f5e-dc812aa48e24",
@@ -3692,6 +3732,14 @@
                 "id": "8f2e70b7-3241-4299-94d7-989847112df9",
                 "resourcePath": "views\\f13b2b75-315c-4f29-8812-dddfda14d426.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f14a3954-3bc7-4298-a0e4-75c6b22cd38b",
+            "Value": {
+                "id": "1b9ee01b-24c0-4d18-a3b1-2a58b657a32a",
+                "resourcePath": "scripts\\playerUiUpdateBag\\playerUiUpdateBag.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3967,6 +4015,8 @@
         "15e6874d-7bd4-49f3-826b-0fd448539c79",
         "eb4a6718-7934-4b13-b09f-0d9cd1f87895",
         "067a1fc3-e934-4218-a74d-17bd60d5d14b",
+        "e0ae9f70-6e47-40b7-930b-41d129fae225",
+        "b8642774-0704-4ca8-8204-6b741fa0e34b",
         "eb222c9a-807c-4ecf-90f8-dc3f5e070335",
         "9135344b-5481-4a4f-9c69-5b2dbfd261d3",
         "f8666643-f4f5-49d3-a82c-a11aceac9895",
@@ -4034,9 +4084,12 @@
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
         "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",
         "556b6c0e-5651-4289-8df8-a1c09745743b",
+        "9ebc8a93-8e02-40cb-a94e-afe252bd35df",
+        "7525d24a-a68b-42e3-852a-d11c0c766831",
+        "9772c02d-792f-4574-97b0-b4256c4063df",
         "15fdbce0-347b-4877-90a5-3a3d2aaa7b25",
         "b185a23a-9c09-41c8-adde-3ec8591e9819",
-        "7525d24a-a68b-42e3-852a-d11c0c766831",
+        "f14a3954-3bc7-4298-a0e4-75c6b22cd38b",
         "bca44c75-2ce1-44e6-b49c-5dc8c8d119cf",
         "8e8adddf-b9ac-4148-9bfe-1e7750bc2fbf",
         "e5ee5f81-7c4d-49f8-a350-c80c5fc13b8b",

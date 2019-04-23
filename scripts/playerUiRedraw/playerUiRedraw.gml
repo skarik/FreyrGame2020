@@ -6,6 +6,10 @@ if (!surface_exists(m_surfaceLightweight))
 {
 	m_surfaceLightweight = surface_create(GameCamera.width, GameCamera.height);
 }
+if (!surface_exists(m_surfaceLightweightBack))
+{
+	m_surfaceLightweightBack = surface_create(GameCamera.width, GameCamera.height);
+}
 
 if (surface_get_width(m_surface) != GameCamera.width || surface_get_height(m_surface) != GameCamera.height)
 {
@@ -15,11 +19,20 @@ if (surface_get_width(m_surfaceLightweight) != GameCamera.width || surface_get_h
 {
 	surface_resize(m_surfaceLightweight, GameCamera.width, GameCamera.height);
 }
+if (surface_get_width(m_surfaceLightweightBack) != GameCamera.width || surface_get_height(m_surfaceLightweightBack) != GameCamera.height)
+{
+	surface_resize(m_surfaceLightweightBack, GameCamera.width, GameCamera.height);
+}
 
 // reset gpu state
 gpu_set_blendenable(true);
 gpu_set_blendmode(bm_normal);
 draw_set_alpha(1.0);
+
+// clear front surface
+surface_set_target(m_surfaceLightweight);
+draw_clear_alpha(c_white, 0.0);
+surface_reset_target();
 
 //
 // Outlined Surface
@@ -34,7 +47,7 @@ surface_reset_target();
 //
 // Normal Surface
 
-surface_set_target(m_surfaceLightweight);
+surface_set_target(m_surfaceLightweightBack);
 draw_clear_alpha(c_white, 0.0);
 
 // tillable
@@ -137,45 +150,19 @@ if (o_PlayerTest.m_plantable)
 }
 
 //
+// bag, under the inventory bar
+playerUiDrawBag();
+
+//
 // inventory
 playerUiDrawInventory();
 
-if (o_PlayerTest.canMove && !o_PlayerTest.m_isDead && !exists(ob_CtsTalker))
-{
-	// aimer
-	dx = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));
-	dy = round(o_PlayerTest.vPosition - (GameCamera.y - GameCamera.height / 2));
-
-	draw_set_color(c_black);
-	draw_rectangle(dx - 3, dy - 1, dx + 3, dy + 1, false);
-	draw_rectangle(dx - 1, dy - 3, dx + 1, dy + 3, false);
-	draw_set_color(c_gold);
-	draw_line(dx - 3, dy, dx + 2, dy);
-	draw_line(dx, dy - 3, dx, dy + 2);
-
-	if (!o_PlayerTest.m_isStunned && !o_PlayerTest.isBusyInteracting)
-	{
-		// aim line
-		dx = round(o_PlayerTest.aimingStartX - (GameCamera.x - GameCamera.width / 2));
-		dy = round(o_PlayerTest.aimingStartY - (GameCamera.y - GameCamera.height / 2));
-
-		var aimerDistanceDiv = 16.0;
-		var aimerDistance = min(3.0,
-								point_distance(o_PlayerTest.aimingStartX, o_PlayerTest.aimingStartY,
-											   o_PlayerTest.uPosition, o_PlayerTest.vPosition) / aimerDistanceDiv - 1.0
-								);
-		for (var i = 0; i < aimerDistance; ++i)
-		{
-			dx += lengthdir_x(aimerDistanceDiv, o_PlayerTest.aimingDirection);
-			dy += lengthdir_y(aimerDistanceDiv, o_PlayerTest.aimingDirection);
-	
-			draw_set_color(c_gold);
-			draw_circle(round(dx), round(dy), 2, true);
-		}
-	}
-}
-draw_set_alpha(1.0); // clear here for now
-surface_reset_target();
+//
+// aimer
+playerUiDrawAimer();
 
 // on top of it all, draw the fuckin book
 playerUiDrawBook();
+
+draw_set_alpha(1.0); // clear here for now
+surface_reset_target();

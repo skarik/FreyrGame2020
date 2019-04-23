@@ -1,2 +1,3 @@
 
 playerUiUpdateBook();
+playerUiUpdateBag();

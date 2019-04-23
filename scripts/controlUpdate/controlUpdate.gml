@@ -19,6 +19,7 @@ if (argument0 == false)
 	_controlStructUpdate(yButton, keyboard_check(ord("E")));
 	_controlStructUpdate(lButton, keyboard_check(ord("1")) + mouse_wheel_down());
 	_controlStructUpdate(rButton, keyboard_check(ord("2")) + mouse_wheel_up());
+	_controlStructUpdate(itemsButton, keyboard_check(ord("I")));
 	
 	uPositionPrevious = uPosition;
 	vPositionPrevious = vPosition;
@@ -41,4 +42,5 @@ else
 	_controlStructUpdate(yButton, 0.0);
 	_controlStructUpdate(lButton, 0.0);
 	_controlStructUpdate(rButton, 0.0);
+	_controlStructUpdate(itemsButton, 0.0);
 }

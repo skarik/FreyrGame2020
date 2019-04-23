@@ -1,5 +1,6 @@
 if (m_book_totalBlend <= 0.01) exit;
 
+surface_reset_target();
 surface_set_target(m_surface);
 
 var dx, dy;
@@ -25,5 +26,3 @@ draw_text(dx + 24, dy + 30, "I should make camp.");
 draw_text(dx + 24, dy + 50, "Time for a journal entry.");
 draw_text(dx + 24, dy + 70, "Options");
 draw_text(dx + 24, dy + 90, "Quicksave and Quit");
-
-surface_reset_target();

@@ -57,7 +57,14 @@ if (l_canMove)
 {
 	if (xButton.pressed)
 	{
-		o_PlayerHud.m_book_enabled = !o_PlayerHud.m_book_enabled; // todo: make this a cutscene menu
+		//o_PlayerHud.m_book_enabled = !o_PlayerHud.m_book_enabled; // todo: make this a cutscene menu
+		m_usingInventory = false; 
+		m_usingBook = !m_usingBook; // todo: make this a cutscene menu
+	}
+	if (itemsButton.pressed)
+	{
+		m_usingBook = false;
+		m_usingInventory = !m_usingInventory;
 	}
 }
 

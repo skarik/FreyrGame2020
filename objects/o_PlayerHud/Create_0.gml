@@ -1,5 +1,6 @@
 m_surface = null;
 m_surfaceLightweight = null;
+m_surfaceLightweightBack = null;
 
 depth = -9000;
 
@@ -13,5 +14,6 @@ m_inventory_selectorNameTimerCd = 0.0;
 m_inventory_selectorNameBlend = 0.0;
 m_inventory_selectorName = "";
 
-m_book_enabled = false;
+//m_book_enabled = false;
 m_book_totalBlend = 0;
+m_bag_totalBlend = 0;

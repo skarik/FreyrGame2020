@@ -16,9 +16,16 @@ if (surface_exists(m_surface) && !o_PlayerTest.m_isDead)
 {
 	var dx = GameCamera.x - GameCamera.width / 2;
 	var dy = GameCamera.y - GameCamera.height / 2;
-	
+
 	draw_set_color(c_white);
 	gpu_set_blendenable(true);
+	gpu_set_blendmode_ext(bm_src_alpha, bm_inv_src_alpha);
+
+	// draw lightweight
+	if (surface_exists(m_surfaceLightweightBack))
+		draw_surface(m_surfaceLightweightBack, dx, dy);
+
+	// draw heavy
 	gpu_set_blendmode_ext(bm_zero, bm_inv_src_alpha);
 	for (var ix = -1; ix <= 1; ++ix)
 		for (var iy = -1; iy <= 1; ++iy)

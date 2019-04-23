@@ -17,6 +17,7 @@ if (argument0 == false)
 	yButton.value = 0.0;
 	lButton.value = 0.0;
 	rButton.value = 0.0;
+	itemsButton.value = 0.0;
 }
 else
 {
