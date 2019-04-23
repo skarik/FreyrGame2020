@@ -20,6 +20,8 @@ if (argument0 == false)
 	itemsButton.value = 0.0;
 	selectButton.value = 0.0;
 	cancelButton.value = 0.0;
+	prevUiButton.value = 0.0;
+	nextUiButton.value = 0.0;
 	
 	belt1Button.value = 0.0;
 	belt2Button.value = 0.0;

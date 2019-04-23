@@ -16,6 +16,14 @@ m_bag_base_y = 0;
 m_bag_selection = null;
 m_bag_hover = null;
 
+m_seed_base_x = 0;
+m_seed_base_y = 0;
+m_seed_selection = null;
+m_seed_hover = null;
+
+m_sbag_blend = 0.0;
+m_sbag_seeds = false;
+
 m_belt_base_x = 0;
 m_belt_base_y = 0;
 m_belt_selection = null;

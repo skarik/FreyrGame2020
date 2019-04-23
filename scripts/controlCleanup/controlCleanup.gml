@@ -14,6 +14,8 @@ delete(lButton);
 delete(itemsButton);
 delete(selectButton);
 delete(cancelButton);
+delete(prevUiButton);
+delete(nextUiButton);
 delete(belt1Button);
 delete(belt2Button);
 delete(belt3Button);

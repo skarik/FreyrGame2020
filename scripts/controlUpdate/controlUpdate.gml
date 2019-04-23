@@ -22,6 +22,8 @@ if (argument0 == false)
 	_controlStructUpdate(itemsButton, keyboard_check(ord("I")));
 	_controlStructUpdate(selectButton, mouse_check_button(mb_left) || keyboard_check(vk_enter) );
 	_controlStructUpdate(cancelButton, mouse_check_button(mb_right) || keyboard_check(vk_escape) );
+	_controlStructUpdate(prevUiButton, mouse_wheel_down() );
+	_controlStructUpdate(nextUiButton, mouse_wheel_up() + mouse_check_button(mb_middle) );
 	
 	_controlStructUpdate(belt1Button, keyboard_check(ord("1")));
 	_controlStructUpdate(belt2Button, keyboard_check(ord("2")));
@@ -54,6 +56,8 @@ else
 	_controlStructUpdate(itemsButton, 0.0);
 	_controlStructUpdate(selectButton, 0.0);
 	_controlStructUpdate(cancelButton, 0.0);
+	_controlStructUpdate(prevUiButton, 0.0);
+	_controlStructUpdate(nextUiButton, 0.0);
 	
 	_controlStructUpdate(belt1Button, 0.0);
 	_controlStructUpdate(belt2Button, 0.0);

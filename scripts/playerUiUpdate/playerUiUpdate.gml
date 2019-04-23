@@ -1,4 +1,3 @@
-
 playerUiUpdateBook();
 playerUiUpdateInventory();
 playerUiUpdateBag();

@@ -15,6 +15,8 @@ rButton = _controlStructCreate();
 itemsButton = _controlStructCreate();
 selectButton = _controlStructCreate();
 cancelButton = _controlStructCreate();
+prevUiButton = _controlStructCreate();
+nextUiButton = _controlStructCreate();
 
 belt1Button = _controlStructCreate();
 belt2Button = _controlStructCreate();
