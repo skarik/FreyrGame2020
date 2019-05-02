@@ -149,6 +149,11 @@ if (o_PlayerTest.m_plantable)
 	draw_set_alpha(1.0);
 }
 
+
+//
+// chest, underneathe the inventory
+playerUiDrawChest();
+
 //
 // bag, under the inventory bar
 playerUiDrawBag();

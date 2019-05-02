@@ -1,4 +1,5 @@
 var inventory = o_PlayerTest.inventory;
+var chest = o_PlayerTest.m_currentChest;
 
 // update sbag automatically based on the selected object in the belt
 if (o_PlayerTest.m_usingInventory)
@@ -14,6 +15,20 @@ if (o_PlayerTest.m_usingInventory)
 			m_sbag_seeds = false;
 		}
 	}
+	// do the same with chests
+	if (chest != null && m_chest_selection != null
+		&& m_chest_selection < inventoryGetCount(chest)
+		&& chest.item[m_chest_selection].object != null)
+	{
+		if (chest.item[m_chest_selection].type == kItemPickupSeed)
+		{
+			m_sbag_seeds = true;
+		}
+		else
+		{
+			m_sbag_seeds = false;
+		}
+	}
 }
 
 //
@@ -21,7 +36,7 @@ if (o_PlayerTest.m_usingInventory)
 if (o_PlayerTest.m_usingInventory)
 {
 	// Nothing is selected...
-	if (m_belt_selection == null && m_bag_selection == null && m_seed_selection == null)
+	if (m_belt_selection == null && m_bag_selection == null && m_seed_selection == null && m_chest_selection == null)
 	{
 		if (o_PlayerTest.prevUiButton.pressed || o_PlayerTest.nextUiButton.pressed)
 		{	// allow for swapping bags while nothing is selected
@@ -33,10 +48,12 @@ if (o_PlayerTest.m_usingInventory)
 			m_belt_selection = m_belt_hover;
 			m_bag_selection = m_sbag_seeds ? null : m_bag_hover;
 			m_seed_selection = m_sbag_seeds ? m_seed_hover : null;
+			m_chest_selection = m_chest_hover;
 		}
+		// todo: if nothing is selected, hide the bags
 	}
 	// If a bag object selected:
-	else if (m_belt_selection == null && m_bag_selection != null && m_seed_selection == null)
+	else if (m_belt_selection == null && m_bag_selection != null && m_seed_selection == null && m_chest_selection == null)
 	{
 		if (o_PlayerTest.selectButton.pressed)
 		{
@@ -54,6 +71,14 @@ if (o_PlayerTest.m_usingInventory)
 					inventory.bag[m_bag_selection]);
 				m_bag_selection = null;
 			}
+			else if (m_chest_hover != null)
+			{	// Swap with the chest
+				inventorySwapIntoChest(
+					o_PlayerTest.m_currentChest,
+					m_chest_hover,
+					inventory.bag[m_bag_selection]);
+				m_bag_selection = null;
+			}
 		}
 		else if (o_PlayerTest.cancelButton.pressed)
 		{	// Cancel selection
@@ -61,7 +86,7 @@ if (o_PlayerTest.m_usingInventory)
 		}
 	}
 	// If a seed object selected:
-	else if (m_belt_selection == null && m_bag_selection == null && m_seed_selection != null)
+	else if (m_belt_selection == null && m_bag_selection == null && m_seed_selection != null && m_chest_selection == null)
 	{
 		if (o_PlayerTest.selectButton.pressed)
 		{
@@ -79,6 +104,14 @@ if (o_PlayerTest.m_usingInventory)
 					inventory.seed[m_seed_selection]);
 				m_seed_selection = null;
 			}
+			else if (m_chest_hover != null)
+			{	// Swap with the chest
+				inventorySwapIntoChest(
+					o_PlayerTest.m_currentChest,
+					m_chest_hover,
+					inventory.seed[m_seed_selection]);
+				m_seed_selection = null;
+			}
 		}
 		else if (o_PlayerTest.cancelButton.pressed)
 		{	// Cancel selection
@@ -86,7 +119,7 @@ if (o_PlayerTest.m_usingInventory)
 		}
 	}
 	// If a belt object selected:
-	else if (m_belt_selection != null && m_bag_selection == null && m_seed_selection == null)
+	else if (m_belt_selection != null && m_bag_selection == null && m_seed_selection == null && m_chest_selection == null)
 	{
 		if (o_PlayerTest.selectButton.pressed)
 		{
@@ -111,10 +144,61 @@ if (o_PlayerTest.m_usingInventory)
 					inventory.belt[m_belt_selection]);
 				m_belt_selection = null;
 			}
+			else if (m_chest_hover != null)
+			{	// Swap with the chest
+				inventorySwapIntoChest(
+					o_PlayerTest.m_currentChest,
+					m_chest_hover,
+					inventory.belt[m_belt_selection]);
+				m_belt_selection = null;
+			}
 		}
 		else if (o_PlayerTest.cancelButton.pressed)
 		{	// Cancel selection
 			m_belt_selection = null;
+		}
+	}
+	// If a chest object is selected:
+	else if (m_belt_selection == null && m_bag_selection == null && m_seed_selection == null && m_chest_selection != null)
+	{
+		if (o_PlayerTest.selectButton.pressed)
+		{
+			if (m_bag_hover != null)
+			{	// Swap with the bag
+				inventorySwapIntoChest(
+					o_PlayerTest.m_currentChest,
+					m_chest_selection,
+					inventory.bag[m_bag_hover]);
+				m_chest_selection = null;
+			}
+			else if (m_seed_hover != null)
+			{	// Swap with the bag
+				inventorySwapIntoChest(
+					o_PlayerTest.m_currentChest,
+					m_chest_selection,
+					inventory.seed[m_seed_hover]);
+				m_chest_selection = null;
+			}
+			else if (m_belt_hover != null)
+			{	// Swap with the bag
+				inventorySwapIntoChest(
+					o_PlayerTest.m_currentChest,
+					m_chest_selection,
+					inventory.belt[m_belt_hover]);
+				m_chest_selection = null;
+			}
+			else if (m_chest_hover != null && m_chest_hover < inventoryGetCount(chest))
+			{	// Swap with the bag
+				inventorySwapIntoChest(
+					o_PlayerTest.m_currentChest,
+					m_chest_selection,
+					chest.item[m_chest_hover]);
+				m_chest_selection = null;
+			}
+		}
+		else if (o_PlayerTest.cancelButton.pressed)
+		{	// Cancel selection
+			m_chest_selection = null;
 		}
 	}
 }

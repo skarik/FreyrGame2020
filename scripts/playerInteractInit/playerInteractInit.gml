@@ -33,3 +33,4 @@ inDelayFrame = false;
 
 m_usingBook = false;
 m_usingInventory = false;
+m_currentChest = null;

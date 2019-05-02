@@ -28,3 +28,9 @@ m_belt_base_x = 0;
 m_belt_base_y = 0;
 m_belt_selection = null;
 m_belt_hover = null;
+
+m_chest_base_x = 0;
+m_chest_base_y = 0;
+m_chest_selection = null;
+m_chest_hover = null;
+
