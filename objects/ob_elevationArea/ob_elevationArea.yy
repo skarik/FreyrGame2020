@@ -1,10 +1,19 @@
 {
-    "id": "f160ffa3-1d4c-46ec-a0b5-33beceea012f",
+    "id": "23d9fb0d-2299-4a7a-9745-9426e766134a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "ob_collider",
+    "name": "ob_elevationArea",
     "eventList": [
-        
+        {
+            "id": "382acbe6-e674-4a96-8c78-b055036884d2",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "23d9fb0d-2299-4a7a-9745-9426e766134a"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -25,5 +34,5 @@
     "properties": null,
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",
-    "visible": true
+    "visible": false
 }
