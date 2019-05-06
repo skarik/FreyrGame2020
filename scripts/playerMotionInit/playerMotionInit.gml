@@ -7,6 +7,8 @@ kMoveSpeedCarryingPercent = 0.50;
 kMoveSpeedDeathtarPercent = 0.25;
 kMoveAcceleration = 800;
 kMoveAccelerationStop = 500;
+kMoveAccelerationAir = 200;
+kMoveAccelerationAirStop = 10;
 kDashDistance = 48;
 kDashTime = 0.15; // movespeed of about 240
 kDashCooldown = 0.5;
@@ -18,6 +20,7 @@ inWater = false;
 isBusyInteracting = false; // Controlled by script
 isBlocking = false;
 isDashing = false;
+onGround = false;
 
 dashStartX = 0.0;
 dashStartY = 0.0;

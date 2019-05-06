@@ -34,10 +34,10 @@ xspeedTarget *= min(1.0, l_moveSpeed / totalSpeed);
 yspeedTarget *= min(1.0, l_moveSpeed / totalSpeed);
 
 // Select acceleration
-var l_moveAcceleration = kMoveAcceleration;
+var l_moveAcceleration = onGround ? kMoveAcceleration : kMoveAccelerationAir;
 if (sqr(xspeedTarget) + sqr(yspeedTarget) < 0.01)
 {
-	l_moveAcceleration = kMoveAccelerationStop;
+	l_moveAcceleration = onGround ? kMoveAccelerationStop : kMoveAccelerationAirStop;
 }
 
 // Accelerate up to the target
@@ -55,7 +55,8 @@ if (sqr(xspeed) + sqr(yspeed) > 0)
 	// If up ahread is a wall, see if we can rotate left or right
 	var next_x = x + xspeed * Time.deltaTime;
 	var next_y = y + yspeed * Time.deltaTime;
-	if (place_meeting(next_x, next_y, ob_collider))
+	//if (place_meeting(next_x, next_y, ob_collider))
+	if (collision3_meeting(next_x, next_y, z, false))
 	{
 		//var motionAngle = point_direction(0, 0, xspeed, yspeed);
 		// this could be simplified if we just use cross product to get perpendicular offsets
@@ -70,7 +71,8 @@ if (sqr(xspeed) + sqr(yspeed) > 0)
 		
 		for (var i = 0; i <= kMaxSidestep; i += kMaxSidestepMovestep)
 		{
-			if (!place_meeting(next_x + motionCrossX * i, next_y + motionCrossY * i, ob_collider))
+			//if (!place_meeting(next_x + motionCrossX * i, next_y + motionCrossY * i, ob_collider))
+			if (!collision3_meeting(next_x + motionCrossX * i, next_y + motionCrossY * i, z, false))
 			{
 				x += motionCrossX * min(i, kMoveSpeed * Time.deltaTime);
 				y += motionCrossY * min(i, kMoveSpeed * Time.deltaTime);
@@ -78,7 +80,8 @@ if (sqr(xspeed) + sqr(yspeed) > 0)
 				yspeed *= 1.0 - abs(motionCrossY);
 				break;
 			}
-			if (!place_meeting(next_x - motionCrossX * i, next_y - motionCrossY * i, ob_collider))
+			//if (!place_meeting(next_x - motionCrossX * i, next_y - motionCrossY * i, ob_collider))
+			if (!collision3_meeting(next_x - motionCrossX * i, next_y - motionCrossY * i, z, false))
 			{
 				x -= motionCrossX * min(i, kMoveSpeed * Time.deltaTime);
 				y -= motionCrossY * min(i, kMoveSpeed * Time.deltaTime);
@@ -89,6 +92,65 @@ if (sqr(xspeed) + sqr(yspeed) > 0)
 		}
 	}
 }
+
+// Update the elevation if on the ground
+if (onGround)
+{
+	if (place_meeting(x, y, ob_elevationBlendArea))
+	{
+		 z = collision3_get_highest_meeting(x, y, z);
+	}
+}
+else
+{
+	var z_prev = z;
+	
+	// Get the floor z
+	z = collision3_get_highest_meeting(x, y, z);
+	
+	// Add to the height if falling
+	//if (z_prev > z)
+	{
+		y += z_prev - z;
+		z_height += z_prev - z;
+	}
+	
+	// Perform falling
+	zspeed -= Time.deltaTime * 256.0;
+	
+	// Perform on-ground check
+	if (z_height + zspeed * Time.deltaTime < 0)
+	{
+		zspeed = 0;
+		z_height = 0;
+		onGround = true;
+	}
+	
+	// Perform the actual speed
+	z_height += zspeed * Time.deltaTime;
+}
+
+// Check if jumping off the edge
+if (onGround)
+{
+	// If motion is not stopped, check for some ledge jumping stuff
+	if (sqr(xspeed) + sqr(yspeed) > 0)
+	{
+		// If up ahread is a wall, see if we can rotate left or right
+		var next_x = x + xspeed * Time.deltaTime;
+		var next_y = y + yspeed * Time.deltaTime;
+		if (collision3_meeting(next_x, next_y, z, false))
+		{
+			if (!collision3_meeting(next_x, next_y, z, true))
+			{
+				onGround = false;
+				z_height += 2;
+				zspeed = 32.0;
+			}
+		}
+	}
+}
+
 
 _playerMotionCommonCollision();
 

@@ -16,6 +16,7 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 	{
 		// Create a doodad and delete the sprite
 		var doodad = instance_create_depth(layer_sprite_get_x(element), layer_sprite_get_y(element), 0, doodad_type);
+			doodad.z = collision3_get_highest_position(doodad.x, doodad.y, layerDepth);
 			doodad.sprite_index = layer_sprite_get_sprite(element);
 			doodad.image_index = layer_sprite_get_index(element);
 			doodad.image_speed = layer_sprite_get_speed(element);
@@ -30,7 +31,8 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 		if (do_collision)
 		{
 			var collider = instance_create_depth(doodad.x, doodad.y, 0, ob_collider);
-				collider.z = layerDepth;
+				//collider.z = layerDepth;
+				collider.z = doodad.z;
 				collider.sprite_index = doodad.sprite_index;
 				collider.image_index = doodad.image_index;
 				collider.image_speed = doodad.image_speed;

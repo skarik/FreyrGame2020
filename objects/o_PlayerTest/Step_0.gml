@@ -14,6 +14,6 @@ aimerDistance = 2.0;
 
 camPlayerUpdate(
 	x + lengthdir_x(aimerDistance, aimingDirection),
-	y + lengthdir_y(aimerDistance, aimingDirection),
+	y + lengthdir_y(aimerDistance, aimingDirection) - z_height,
 	xspeed,
 	yspeed);

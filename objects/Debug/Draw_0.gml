@@ -11,6 +11,28 @@ with (ob_collider)
 		c_white, 0.5);
 }
 
+with (ob_elevationArea)
+{
+	if (z == o_PlayerTest.z)
+	{
+		draw_sprite_ext(
+			sprite_exists(mask_index) ? mask_index : sprite_index,
+			image_index,
+			x, y,
+			image_xscale, image_yscale, image_angle,
+			c_white, 0.5);
+	}
+	else
+	{
+		draw_sprite_ext(
+			sprite_exists(mask_index) ? mask_index : sprite_index,
+			image_index,
+			x, y,
+			image_xscale, image_yscale, image_angle,
+			c_gray, 0.5);
+	}
+}
+
 with (o_PlayerTest)
 {
 	draw_sprite_ext(

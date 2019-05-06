@@ -36,4 +36,5 @@ if (Debug.visible)
 	draw_set_valign(fa_top);
 	draw_text(x - 4, y - 32, string(meleeAtkCurrent));
 	draw_text(x + 16, y - 32, string(meleeAtkTimer));
+	draw_text(x + 16, y - 48, string(z));
 }
