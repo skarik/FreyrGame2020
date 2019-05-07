@@ -3,7 +3,7 @@ var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m
 // Do dashing
 if (dashCooldown <= 0.0)
 {
-	if (cButton.pressed && !isDashing && l_canMove && !isAttacking && !exists(currentHeldUsable))
+	if (cButton.pressed && !isDashing && l_canMove && onGround && !isAttacking && !exists(currentHeldUsable))
 	{
 		_playerInteractDoDash();
 	}
@@ -13,7 +13,7 @@ else if (!isDashing)
 	dashCooldown -= Time.deltaTime;
 }
 // Do blocking
-if (cButton.down && l_canMove && !m_isHolding && !m_isTilling && !m_isPlanting && !exists(currentHeldUsable))
+if (cButton.down && l_canMove && onGround && !m_isHolding && !m_isTilling && !m_isPlanting && !exists(currentHeldUsable))
 {
 	isBlocking = true;
 }
@@ -84,15 +84,15 @@ if (l_canMove || m_usingInventory || m_usingBook)
 	m_currentChest = null;
 }*/
 
-_playerInteractTillables(l_canMove && !inDelayFrame);
-_playerInteractUsables(l_canMove && !inDelayFrame);
-_playerInteractCrops(l_canMove && !inDelayFrame);
+_playerInteractTillables(l_canMove && onGround && !inDelayFrame);
+_playerInteractUsables(l_canMove && onGround && !inDelayFrame);
+_playerInteractCrops(l_canMove && onGround && !inDelayFrame);
 //_playerInteractBuildables();
 _playerInteractItems(l_canMove && !inDelayFrame);
 
 var belt = inventory.belt[inventory.belt_selection];
 if (belt.type == kItemPickupSeed) {
-	_playerInteractPlantables(l_canMove && !inDelayFrame);
+	_playerInteractPlantables(l_canMove && onGround && !inDelayFrame);
 }
 
 // do combat mode calculations

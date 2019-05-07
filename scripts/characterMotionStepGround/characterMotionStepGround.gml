@@ -1,16 +1,16 @@
-// Update checks
-_playerMotionCommonChecks();
+// Perform area checks
+inWater = areaInWater(x, y);
 
-var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m_usingInventory;
+var l_canMove = canMove && !m_isDead && !m_isStunned;// && !isBusyInteracting && !m_usingInventory;
 
 // Set up the move speed
 var l_moveSpeed = kMoveSpeed;
 if (inWater)
 	l_moveSpeed *= kMoveSpeedWaterPercent;
-if (isBlocking)
+/*if (isBlocking)
 	l_moveSpeed *= kMoveSpeedBlockingPercent;
 if (m_isHolding)
-	l_moveSpeed *= kMoveSpeedCarryingPercent;
+	l_moveSpeed *= kMoveSpeedCarryingPercent;*/
 
 // Generate the target motion
 var xspeedTarget = 0.0;

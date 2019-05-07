@@ -10,7 +10,7 @@ var buf = buffer_load(kSaveFile);
 // Create the player
 if (!exists(o_PlayerTest)) new(o_PlayerTest);
 // Read in the current player state:
-var pl = buffer_read(buf, buffer_u32);
+var pl = object_get_index(buffer_read(buf, buffer_string));
 if (pl == 0)
 {   // Check for valid file
     show_error("INVALID SAVE", true);
@@ -19,6 +19,7 @@ if (pl == 0)
 }
 else
 {   // Set the new player as the player
+	if (!exists(pl)) new(pl); // I guess???
     pl.m_isPlayer = true; 
 }
 var target_room = room_get_index(buffer_read(buf, buffer_string));

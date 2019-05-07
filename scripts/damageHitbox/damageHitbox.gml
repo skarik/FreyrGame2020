@@ -80,11 +80,24 @@ with (ob_character)
         m_isStunned = true;
         m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025);
         // Add knockback
-        var kickback = damage * 8;
-        if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )
+        var kickback = damage * 16;
+        /*if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )
             xspeed = sign(x - source.x) * kickback * 0.5;
         // Push in the air for effect
-        yspeed = -80;
+        yspeed = -80;*/
+		var tspeed = sqrt(sqr(xspeed) + sqr(yspeed));
+		if (tspeed < kickback)
+		{
+			var tdirection = point_direction(source.x, source.y, x, y);
+			xspeed += lengthdir_x(kickback, tdirection);
+			yspeed += lengthdir_y(kickback, tdirection);
+			// Push in the air for effect
+			zspeed += kickback;
+			if (zspeed > 0)
+			{
+				onGround = false;
+			}
+		}
         
         // Create knockback
         if (source.m_isPlayer)

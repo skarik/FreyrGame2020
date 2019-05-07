@@ -10,7 +10,7 @@ if (!exists(pl))
     exit;
 }
 
-buffer_write(buf, buffer_u32, pl.object_index);
+buffer_write(buf, buffer_string, object_get_name(pl.object_index));
 buffer_write(buf, buffer_string, room_get_name(room));
 buffer_write(buf, buffer_u32, pl.x);
 buffer_write(buf, buffer_u32, pl.y);

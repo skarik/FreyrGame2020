@@ -1,29 +1,32 @@
 #region Constants
 
 kMoveSpeed = 120;
+kMoveSpeedStunPercent = 0.05;
 kMoveSpeedWaterPercent = 0.50;
 kMoveSpeedBlockingPercent = 0.50;
 kMoveSpeedCarryingPercent = 0.50;
 kMoveSpeedDeathtarPercent = 0.25;
+
 kMoveAcceleration = 800;
 kMoveAccelerationStop = 500;
 kMoveAccelerationAir = 200;
 kMoveAccelerationAirStop = 10;
+
 kDashDistance = 48;
-kDashTime = 0.15; // movespeed of about 240
+kDashTime = 0.3;
 kDashCooldown = 0.5;
+kDashInAir = true;
 
 #endregion
 
-canMove = true; // Externally set!
-inWater = false;
 isBusyInteracting = false; // Controlled by script
 isBlocking = false;
 isDashing = false;
-onGround = false;
 
 dashStartX = 0.0;
 dashStartY = 0.0;
+dashStartZ = 0.0;
+dashStartZ_height = 0.0;
 dashTargetX = 0.0;
 dashTargetY = 0.0;
 dashTimer = 0.0;

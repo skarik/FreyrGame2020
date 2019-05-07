@@ -1,7 +1,14 @@
 if (global._transition_source != null)
 {
+	// Select matching sized transition
+	if (global._transition_dw != abs(32 * image_xscale)
+		|| global._transition_dh != abs(32 * image_yscale))
+	{
+		exit;
+	}
+	
     // Find matching room
-    if (target == global._transition_source)
+    if (target == global._transition_source) // todo: choose only one
     {
         var pos_x = x;
         var pos_y = y;
@@ -13,7 +20,7 @@ if (global._transition_source != null)
             if (pos_x <= 0) {
                 x = pos_x + 2;
             }
-            else if (pos_x >= room_width) {
+            else if (pos_x >= global._transition_rm_width) {
                 x = pos_x - 2;
             }
             else {
@@ -22,7 +29,7 @@ if (global._transition_source != null)
 			if (pos_y <= 0) {
                 y = pos_y + 2;
             }
-            else if (pos_y >= room_width) {
+            else if (pos_y >= global._transition_rm_height) {
                 y = pos_y - 2;
             }
             else {
@@ -33,12 +40,20 @@ if (global._transition_source != null)
             
             persistent = false;
             inventory.persistent = false;
+			
+			// update the Z now
+			z = collision3_get_highest_meeting(x, y, z);
+			z_height = 0;
         }
         with (o_PlayerHud)
         {
             persistent = false;
         }
         
+		// Message we switched rooms
+		debugOut("transition from " + room_get_name(global._transition_source) + " to " + room_get_name(room));
+		
+		// Null out the source
         global._transition_source = null;
     }
 }
