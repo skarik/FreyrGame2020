@@ -98,7 +98,7 @@ case SEQTYPE_CHOICES:
         var count = ds_map_find_value(entry, SEQI_COUNT);
 		var target = ds_map_find_value(entry, SEQI_TARGET);
 		
-		var target_inst = instance_find(target, count);
+		var target_inst = instance_find(target, 0);
         
         var gabber = new(o_CtsChoiceBox);
             gabber.input_choice_count = count;

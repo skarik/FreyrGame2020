@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "1df103d6-b1cd-43fd-914a-6842e2b6b808",
+            "Value": {
+                "id": "0f35cc5d-b2f2-46cb-8a83-41618d3e968f",
+                "resourcePath": "objects\\o_talkToCharacter\\o_talkToCharacter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1df2caee-0871-4646-9134-a9bcbba9bf23",
             "Value": {
                 "id": "8070ed68-adc5-42cb-be26-7983f752b46c",
@@ -1548,6 +1556,14 @@
                 "id": "43486546-1e4e-47e5-a701-c100e651cf04",
                 "resourcePath": "views\\53393997-999d-4bb7-a67b-57456aa8faaa.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "53a33573-1c7c-4609-8b91-8d5beeae91c5",
+            "Value": {
+                "id": "ffcc5482-3a7b-4d86-9a94-cf77b8509cd8",
+                "resourcePath": "scripts\\aiFollowerUpdate\\aiFollowerUpdate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2863,6 +2879,14 @@
             }
         },
         {
+            "Key": "a46d395a-eb58-429c-905f-d1fa3e529d26",
+            "Value": {
+                "id": "c5be3c17-872b-4d4c-87bf-249bb53d2efb",
+                "resourcePath": "views\\a46d395a-eb58-429c-905f-d1fa3e529d26.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a4b210ed-ed77-4a9c-bc0e-6cc45adee1c1",
             "Value": {
                 "id": "57e198ba-e2f8-4e35-a409-8cec8f882482",
@@ -3676,6 +3700,14 @@
                 "id": "23091026-53c1-42d4-98f4-c0e492a9e4ea",
                 "resourcePath": "sprites\\s_itemResGear\\s_itemResGear.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d1972855-3c82-4b2a-a3e6-2e216eb8d6b1",
+            "Value": {
+                "id": "a90cc3f0-3ccb-4350-9a05-9ff8959b5ecf",
+                "resourcePath": "scripts\\aiFollowerInit\\aiFollowerInit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4706,6 +4738,8 @@
         "3f9bade9-93fd-465e-b6e9-622671ebc991",
         "db203fe2-0b6f-4715-b000-ed1864603b95",
         "a63d3702-e5e8-46b4-bb8a-d83d33a39bd3",
+        "d1972855-3c82-4b2a-a3e6-2e216eb8d6b1",
+        "53a33573-1c7c-4609-8b91-8d5beeae91c5",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""

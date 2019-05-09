@@ -4,3 +4,6 @@
 event_inherited();
 
 controlInit();
+
+// Set proper Z
+//z = collision3_get_highest_meeting(x, y, z);

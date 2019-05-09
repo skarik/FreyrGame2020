@@ -33,5 +33,6 @@ done_alpha = 0;
 
 controlInit();
 
+// Set up UI for first frame
 uiPosX = 0;
 uiPosY = 0;

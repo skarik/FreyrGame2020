@@ -20,9 +20,14 @@ else
 	
 	// Add to the height if falling
 	//if (z_prev > z)
+	if (z_ready)
 	{
 		y += z_prev - z;
 		z_height += z_prev - z;
+	}
+	else
+	{
+		z_ready = true;
 	}
 	
 	// Perform falling

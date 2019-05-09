@@ -6,7 +6,7 @@ var view_hview0 = GameCamera.height;
 if (exists(input_actor))
 {
     uiPosX = input_actor.x - display_width / 2;
-    uiPosY = input_actor.y - input_actor.sprite_yoffset - Gabber_BoxHeight() - 28;
+    uiPosY = input_actor.y - input_actor.sprite_yoffset - Gabber_BoxHeight() - 18;
     
     // Limit positions to stay on screen
     uiPosX = clamp(uiPosX, view_xview0 + 20, view_xview0 + view_wview0 - 20 - display_width);
@@ -24,7 +24,7 @@ else if (exists(o_CtsKeyPoint))
 else if (exists(o_PlayerTest))
 {
     uiPosX = view_xview0 + view_wview0 / 2 - display_width / 2;
-    uiPosY = o_PlayerTest.y - o_PlayerTest.sprite_yoffset - Gabber_BoxHeight() - 28;
+    uiPosY = o_PlayerTest.y - o_PlayerTest.sprite_yoffset - Gabber_BoxHeight() - 18;
     
     // Limit positions to stay on screen
     uiPosX = clamp(uiPosX, view_xview0 + 20, view_xview0 + view_wview0 - 20 - display_width);
