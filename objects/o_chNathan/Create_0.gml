@@ -1,9 +1,6 @@
-/// @description image speed
+/// @description options
 
-event_inherited();
-image_speed = 0;
-
-m_team = kTeamGood;
+#region Per Follower Info
 
 m_name = "Nathan";
 m_interactChoices = 4;
@@ -12,8 +9,14 @@ m_interaction[1] = "Stay here.";
 m_interaction[2] = "(Crafting)";
 m_interaction[3] = "(Leave)";
 
-m_interactionObject = new(o_talkToCharacter);
-m_interactionObject.m_owner = id;
+#endregion
+
+// Perform the common init
+event_inherited();
+
+#region Post-init
+
+m_team = kTeamGood;
 
 aiFollowerInit();
 
@@ -21,5 +24,4 @@ aiFollowerInit();
 m_aiFollowing = true;
 m_isFollower = true;
 
-// they need a small inventory, since they are a follower
-inventory = inventoryCreateOrLoad("nathan#bag", kCountInfinite);
+#endregion

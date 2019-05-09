@@ -1847,6 +1847,14 @@
             }
         },
         {
+            "Key": "67e2a8b4-ded2-48fe-9617-129d3205ea9f",
+            "Value": {
+                "id": "722a0e98-2994-44f9-be74-2e986e517c0b",
+                "resourcePath": "objects\\ob_characterFollower\\ob_characterFollower.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6802ae42-9599-4bf0-ba4c-609edca1542a",
             "Value": {
                 "id": "a7761d63-6bc8-49dd-b6ce-f1eb0d678cc5",
