@@ -14,6 +14,7 @@ var entry = cts_entry[cts_entry_current];
 switch (entry_type)
 {
 case SEQTYPE_NULL:
+case SEQTYPE_LABEL:
     cts_entry_current++;
     cts_execute_state = 0;
     break;
@@ -23,6 +24,9 @@ case SEQTYPE_WAIT:
     {   // Go to timer state
         cts_execute_state = 1;
         cts_execute_timer = 0;
+		
+		// Debug output
+		debugOut("Doing waiting...");
     }
     else
     {
@@ -82,6 +86,9 @@ case SEQTYPE_LINES:
         
         // On the next step
         cts_execute_state = 1;
+		
+		// Debug output
+		debugOut("Doing lines...");
     }
     // No longer exists? We go to the enxt entry.
     else if (!exists(o_CtsTalkerBox) && !exists(o_CtsGabberBox))
@@ -107,8 +114,13 @@ case SEQTYPE_CHOICES:
                 gabber.input_choice[i] = ds_map_find_value(entry, i+1);
             }
 			gabber.input_actor = exists(target_inst) ? target_inst : null;
+			
         // On the next step
         cts_execute_state = 1;
+		
+		// Debug output
+		debugOut("Doing choices...");
+		
         return false;
     }
     // No longer exists? We go to the enxt entry.
@@ -117,8 +129,26 @@ case SEQTYPE_CHOICES:
         cts_entry_current++;
         cts_execute_state = 0;   
     }
+	// Still exists? We should check for gotos...
     else
     {
+		if (cutsceneIsChoiceReady())
+		{
+			var choice = cutsceneGetChoice();
+			// Check the "goto" key for the choice.
+			var goto = ds_map_find_value(entry, choice + 1 + SEQI_JUMP_OFFSET);
+			if (goto != undefined)
+			{
+				if (!cutsceneJumpToLabel(goto))
+				{
+					// Show error about this label
+					show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+					// We're done here. Onto the next event
+					cts_entry_current++;
+				    cts_execute_state = 0;
+				}
+			}
+		}
         return false;
     }
     break;
@@ -149,6 +179,9 @@ case SEQTYPE_SCREEN:
 		{
 			cts_execute_state = 1;
 		}
+		
+		// Debug output
+		debugOut("Doing screen effect...");
 	}
 	// No longer exists? We go to the enxt entry.
     else
@@ -195,6 +228,9 @@ case SEQTYPE_AUDIO:
 		// TODO: find the sounds that match the file and delete em
 	}
 	
+	// Debug output
+	debugOut("Doing audio...");
+	
 	// We're done here. Onto the next event
 	cts_entry_current++;
     cts_execute_state = 0;
@@ -233,9 +269,37 @@ case SEQTYPE_MUSIC:
 		}
 	}
 	
+	// Debug output
+	debugOut("Doing music...");
+	
 	// We're done here. Onto the next event
 	cts_entry_current++;
     cts_execute_state = 0;
+	break;
+	
+case SEQTYPE_GOTO:
+	var target = ds_map_find_value(entry, SEQI_TARGET);
+	if (target != undefined)
+	{
+		if (!cutsceneJumpToLabel(target))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else
+	{
+		// We're done here. Onto the next event
+		cts_entry_current++;
+	    cts_execute_state = 0;
+	}
+	
+	// Debug output
+	debugOut("Doing goto...");
+
 	break;
 }
 

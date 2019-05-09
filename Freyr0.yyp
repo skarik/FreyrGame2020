@@ -2471,6 +2471,14 @@
             }
         },
         {
+            "Key": "8c3406ce-f8e4-4751-9d41-b684c3e0fcda",
+            "Value": {
+                "id": "b71125ea-50eb-48f8-a1dd-f66fddfd35d5",
+                "resourcePath": "scripts\\cutsceneJumpToLabel\\cutsceneJumpToLabel.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8c8b5e98-9186-408e-9966-375be6e1b939",
             "Value": {
                 "id": "b1d41b2a-f56c-4793-a4aa-e5faf0559974",
@@ -4625,6 +4633,7 @@
         "dd4fca95-fbfe-4e49-9fc7-85342ccddb06",
         "f69db26e-8c72-4c26-bf28-3257457d418e",
         "05e2ecce-71be-40ce-bff2-173284010a24",
+        "8c3406ce-f8e4-4751-9d41-b684c3e0fcda",
         "700340e1-c056-4158-8f45-35938dd0ea7e",
         "3b1024cd-23b4-4818-b232-abc9b27c9c57",
         "b2dfc473-3521-4002-a1b8-1055778b26c2",

@@ -43,7 +43,24 @@ while (!file_text_eof(fp))
         
         // Check for object types
         read_object_type = SEQTYPE_NULL;
-        if (string_pos("lines", line) != 0)
+		if (string_pos("#", line) == 1)
+		{
+			read_object_type = SEQTYPE_LABEL;
+			// Labels are special. They need to be added immediately.
+			if (read_object_type == SEQTYPE_LABEL)
+			{
+				// Save the entry as a string
+	            cts_entry[cts_entry_count] = string_copy(line, 2, string_length(line) - 1);
+	            cts_entry_type[cts_entry_count] = SEQTYPE_LABEL;
+	            cts_entry_count++;
+				// Go to the next line state
+				read_state = STATE_READ_LINES;
+				// Show debug info
+				debugOut("Adding label \"" + cts_entry[cts_entry_count - 1] + "\"");
+	            continue;
+			}
+		}
+        else if (string_pos("lines", line) != 0)
         {
             read_object_type = SEQTYPE_LINES;
         }
@@ -67,6 +84,10 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_MUSIC;
 		}
+		else if (string_pos("goto", line) != 0)
+		{
+			read_object_type = SEQTYPE_GOTO;
+		}
         
         // If an object was read - prepare to read it in
         if (read_object_type != SEQTYPE_NULL)
@@ -78,14 +99,14 @@ while (!file_text_eof(fp))
     }
     if (read_state == STATE_READ_BEGIN_OBJECT)
     {   // Look for opening bracket
-        if (string_pos("{", line) != 0)
-        {
-            // Create map
-            read_object_map = ds_map_create();
-            // Go to read object state
-            read_state = STATE_READ_OBJECT;
-            continue;
-        }
+	    if (string_pos("{", line) != 0)
+	    {
+	        // Create map
+	        read_object_map = ds_map_create();
+	        // Go to read object state
+	        read_state = STATE_READ_OBJECT;
+	        continue;
+	    }
     }
     if (read_state == STATE_READ_OBJECT)
     {
@@ -366,6 +387,22 @@ while (!file_text_eof(fp))
                 cts_entry_type[cts_entry_count] = SEQTYPE_MUSIC;
                 cts_entry_count++;
 			}
+			else if (read_object_type == SEQTYPE_GOTO)
+			{
+				var target = ds_map_find_value(read_object_map, "target");
+				if (is_undefined(target)) show_error("goto objects must have a 'target' field", true);
+				
+				var new_map = ds_map_create();
+				ds_map_add(new_map, SEQI_TARGET, target);
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_GOTO;
+                cts_entry_count++;
+			}
             
             read_state = STATE_READ_LINES;
             continue;
@@ -381,10 +418,16 @@ while (!file_text_eof(fp))
         var value = string_copy(line, sep+1, string_length(line) - sep);
         value = string_rtrim(string_ltrim(value)); // Get rid of extra whitespace
         
+		// Skip empty keys
+		if (string_length(key) <= 0)
+		{
+			continue;
+		}
+		
         // Add the values to the ds_map
         if (!ds_map_add(read_object_map, key, value))
         {
-            debugOut("Sequence file had duplicate keys!");
+            debugOut("Sequence file had duplicate keys: \"" + string(key) + "\"");
         }
     }
 }
