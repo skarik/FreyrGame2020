@@ -6,7 +6,7 @@
 #macro kAiFollowState_Wandering 2
 #macro kAiFollowState_BackingOff 3
 
-m_aiFollowing = true;
+m_aiFollowing = false;
 m_aiFollow_targetX = 0;
 m_aiFollow_targetY = 0;
 m_aiFollow_timer = 0.0;

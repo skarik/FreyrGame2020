@@ -16,3 +16,10 @@ m_interactionObject = new(o_talkToCharacter);
 m_interactionObject.m_owner = id;
 
 aiFollowerInit();
+
+// override default following: we want to follow
+m_aiFollowing = true;
+m_isFollower = true;
+
+// they need a small inventory, since they are a follower
+inventory = inventoryCreateOrLoad("nathan#bag", kCountInfinite);

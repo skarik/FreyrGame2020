@@ -1,5 +1,3 @@
-
-//if (!exists(ob_CtsTalker))
 if (m_aiFollowing)
 {
 	var followTarget = o_PlayerTest;
@@ -39,6 +37,14 @@ if (m_aiFollowing)
 		{
 			// Increase the timer - we want to wander at random intervals
 			m_aiFollow_timer += Time.deltaTime / 3.0;
+			
+			// If a talker exists, disable any wandering
+			if (exists(ob_CtsTalker))
+			{
+				m_aiFollow_timer = 0.0;
+			}
+			
+			// If standing for about 3 seconds, then start wandering
 			if (m_aiFollow_timer > 1.0)
 			{
 				m_aiFollow_state = kAiFollowState_Wandering;
@@ -159,4 +165,10 @@ if (m_aiFollowing)
 		}
 		break;
 	}
+}
+else
+{
+	// Clear out the motion axes
+	_controlStructUpdate(xAxis, 0.0);
+	_controlStructUpdate(yAxis, 0.0);
 }

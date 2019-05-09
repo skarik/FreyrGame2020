@@ -11,4 +11,13 @@ with (o_PlayerHud)
 {
     persistent = true;
 }
+with (ob_character)
+{
+	if (m_isFollower)
+	{
+		persistent = true;
+		inventory.persistent = true;
+		stats.persistent = true;
+	}
+}
 room_goto(argument0);

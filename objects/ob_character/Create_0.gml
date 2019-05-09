@@ -4,6 +4,7 @@ m_team = kTeamNone;
 m_bloodType = kBloodRed;
 
 m_isPlayer = false;
+m_isFollower = false;
 m_isDead = false;
 m_isStunned = false;
 m_stunTimer = 0.0;

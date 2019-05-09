@@ -40,6 +40,7 @@ if (global._transition_source != null)
             
             persistent = false;
             inventory.persistent = false;
+			stats.persistent = false;
 			
 			// update the Z now
 			z = collision3_get_highest_meeting(x, y, z);
@@ -49,6 +50,24 @@ if (global._transition_source != null)
         {
             persistent = false;
         }
+		with (ob_character)
+		{
+			var pl = getPlayer();
+			
+			if (m_isFollower)
+			{
+				persistent = false;
+				inventory.persistent = false;
+				stats.persistent = false;
+				
+				if (exists(pl))
+				{
+					x = pl.x;
+					y = pl.y;
+					z = pl.z;
+				}
+			}
+		}
         
 		// Message we switched rooms
 		debugOut("transition from " + room_get_name(global._transition_source) + " to " + room_get_name(room));
