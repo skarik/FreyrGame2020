@@ -1,0 +1,88 @@
+#begin
+
+// this cutscene file is a little wierd because it relies a lot on the scripting to function
+// will attempt to comment as much as possible
+
+#BeforeChoice
+
+choice
+{
+    target player
+    1 Hello!
+    1goto SelectGreet
+    2 [FOLLOW]
+    // The follow code is a little special. There's two goto's that the system will automatically go to.
+    // They are "SelectFollowStart" and "SelectFollowStop"
+    3 (Crafting)
+    3goto SelectCrafting
+    4 (Leave)
+    4goto Ending
+}
+
+// Greeting. The player says "hello" and we go into whatever line of talking
+#SelectGreet
+    lines
+    {
+        target nathan
+        1 Hello...
+    }
+    goto
+    {
+        target Ending
+    }
+
+// Follow start
+#SelectFollowStart
+    lines
+    {
+        target nathan
+        1 Sure.
+    }
+    ai
+    {
+        target nathan
+        style follow
+        command start
+    }
+    goto
+    {
+        target Ending
+    }
+
+// Follow stop
+#SelectFollowStop
+    lines
+    {
+        target nathan
+        1 Okay, I'll stay here.
+    }
+    ai
+    {
+        target nathan
+        style follow
+        command stop
+    }
+    goto
+    {
+        target Ending
+    }
+
+// Crafting is a lil special. We'll just do a special wait.
+#SelectCrafting
+    wait
+    {
+        type input
+        // This is a special ID handled by the talking backend. It will bring up the crafting.
+        // When the crafting menu is closed, it will continue with the cutscene.
+        id crafting
+    }
+    // After we close the crafting, we go back to the initial choice.
+    goto
+    {
+        target BeforeChoice
+    }
+
+// Do not put anything after this. This should be the fall-thru
+#Ending
+
+#ended

@@ -21,7 +21,6 @@ lines
     2 .....mm?
     3 ....I'm alive?
     4 I thought I was going to drown...
-
 }
 
 lines
@@ -32,7 +31,6 @@ lines
 
 lines
 {
-
    target player
    1 Huh?
 }
@@ -41,25 +39,20 @@ lines
 
 lines
 {
-
     target nathan
-    1 Are you a-a-$walright$$?
-
+    1 Are you alright?
 }
 
 // Fade out of cg
 
 lines
 {
-
     target nathan
     1 $bAre$$ you alright?
-
 }
 
 choice
 {
-
     target player
     1 Um..I think so?
     1goto IThinkSo
@@ -75,22 +68,146 @@ choice
         1 You don't sound too sure...
     }
 
+    lines
+    {
+        target player
+        1 Honestly? I'm not.
+        2 I'm supposed to be with my crew.
+        3 Instead I've ended up...
+        4 $wWait$$...
+        5 Where $bam$$ I?
+        6 This isn't Primo.
+        7 $wHoly shit$$, is that a sun? A big beautiful $bthicc$$ sun?
+    }
+
+    lines
+    {
+        target nathan
+        1 Now I'm certain you're not alright.
+    }
+
+    lines
+    {
+        target player
+        1 What? Oh, no I-
+    }
+
+    lines
+    {
+        target nathan
+        1 You should really let me look at your head in town.
+        2 You appear to be bleeding.
+    }
+
+    lines
+    {
+        target player
+        1 Bleeding? Oh....
+        2 Huh, yeah maybe having you look me over isn't such a bad idea.
+    }
+
+    lines
+    {
+        target nathan
+        1 Just follow me this way then.
+    }
+
+    lines
+    {
+        target player
+       1 Right, lead the way.
+    }
+
     goto
     {
+        // Skip selection 2
         target AfterQuestion
     }
+
 
 // SELECTION 2 RIGHT HERE
 #WhoAreYou
     lines
     {
         target nathan
-        1 I'm an evil cunt!
+        1 Nathan.
+        2 And yourself?
     }
 
-    // no need for a goto here, since it'll just fall thru
+    lines
+    {
+        target  player
+        1 Oh, you can call me [PLAYER].
+        2 Atleast, I think thats my name?
+        3 Honestly, I might not be alright after all.
+        4 Where is this? Am I still on Primo?
+    }
+
+    lines
+    {
+        target player
+        // we do an AUTO end so that nathan can interrupt the player
+        end auto
+        1 I mean I fell through that portal and-
+    }
+
+    lines
+    {
+        target nathan
+        1 Primo? Portal?
+        2 You mean that big green thing you fell out of?
+    }
+
+    lines
+    {
+        target player
+        1 Yeah, it's called a $wvoid portal$$.
+        2 They're pretty rare but they happen once in a green moon.
+        3 Seriously, where is this?$w Why is it so hot?
+        4 It's almost like theres a lot of sunlight.
+        5 Wait...
+    }
+
+    lines
+    {
+        target nathan
+        1 I think you might have hit your head harder then you think.
+        2 Maybe you should let me take a look at you in town?
+    }
+
+    lines
+    {
+        target player
+        1 What? Oh...
+        2 Yeah, maybe your right about that.
+    }
+
+    lines
+    {
+        target nathan
+        1 Good$p, cause I really wasn't going to take $wno$$ for an answer anyway.
+        2 Just follow me.
+    }
+    lines
+    {
+        target player
+        1 Right. Lead the way, then.
+    }
+
+// no need for a goto here, since it'll just fall thru
 
 #AfterQuestion
+
+// Let's make Nathan lead the player up
+ai
+{
+    target nathan
+    style lead
+    command start
+    // these are the rough coordinates of the transition up to the town
+    x 480
+    y -16
+}
 
 
 #ended

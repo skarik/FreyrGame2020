@@ -2455,6 +2455,14 @@
             }
         },
         {
+            "Key": "8bc2f9c9-1974-4b68-9cda-ab6ccf95f81f",
+            "Value": {
+                "id": "7901b0fe-06fe-4869-86d1-46a089d57022",
+                "resourcePath": "datafiles_yy\\cts\\talk00_nathan.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "8bc45c54-1b3e-407a-b84d-3b5060ad075c",
             "Value": {
                 "id": "6f21918e-6516-41ab-83d5-8dd40db70f60",

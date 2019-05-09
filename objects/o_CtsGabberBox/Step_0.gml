@@ -38,7 +38,7 @@ if ( current_display_delay <= 0.0 )
     {
         // Do character-based updates
         if ( display_flags[ceil(i)] == ord("w") )
-            current_display_delay = 0.5; // Wait for five seconds           
+            current_display_delay = 0.5; // Wait for half a second
     }
 }
 else

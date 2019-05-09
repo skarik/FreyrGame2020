@@ -6,6 +6,7 @@ event_inherited();
 m_isPlayer = true;
 
 m_team = kTeamGood;
+m_name = "Cortez";
 
 controlInit();
 

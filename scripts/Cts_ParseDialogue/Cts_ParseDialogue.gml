@@ -3,6 +3,12 @@
 // inputs: input_actor, input_name, input_text
 // outputs: display_text, display_flags
 
+// Replace big system strings in input_text
+if (exists(o_PlayerTest))
+{
+	input_text = string_replace(input_text, "[PLAYER]", o_PlayerTest.m_name);
+}
+
 // Go through the input_text character by character to parse
 var str_len = 0;
 display_text = "";
