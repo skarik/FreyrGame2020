@@ -1,6 +1,6 @@
 var dx, dy;
 dx = uiPosX; 
-dy = uiPosY;
+dy = uiPosY + (exists(input_actor) ? 10 : 0);
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
@@ -30,6 +30,8 @@ for (var i = 0; i < floor(current_display_count); ++i)
 			penc = merge_color(c_electricity, c_navy, 0.5);
 		if ( display_flags[i] == ord("4") )
 			penc = c_gold;
+		if ( display_flags[i] == ord("5") )
+			penc = c_riftgreen;
         if ( display_flags[i] == ord("b") )
         {
             draw_set_font(display_font_bold);

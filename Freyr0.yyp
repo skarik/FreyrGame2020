@@ -2943,6 +2943,14 @@
             }
         },
         {
+            "Key": "a6169e20-596f-43b0-8376-16ab1aceb295",
+            "Value": {
+                "id": "6e97027a-2d07-445b-bf31-c58f456b3438",
+                "resourcePath": "sprites\\sui_buttonPress2\\sui_buttonPress2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a63d3702-e5e8-46b4-bb8a-d83d33a39bd3",
             "Value": {
                 "id": "65af704c-9025-4648-bea1-065167dfa801",

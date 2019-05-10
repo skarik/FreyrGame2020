@@ -7,6 +7,7 @@
 #macro SEQTYPE_AUDIO 4
 #macro SEQTYPE_MUSIC 5
 #macro SEQTYPE_GOTO 6
+#macro SEQTYPE_AI 7
 
 #macro SEQI_SIZE -1
 #macro SEQI_COUNT -1

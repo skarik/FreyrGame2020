@@ -3,6 +3,8 @@ var view_yview0 = GameCamera.y - GameCamera.height / 2;
 var view_wview0 = GameCamera.width;
 var view_hview0 = GameCamera.height;
 
+draw_set_font(display_font);
+
 if (exists(input_actor))
 {
     uiPosX = input_actor.x - display_width / 2;
