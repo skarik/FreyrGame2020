@@ -38,7 +38,8 @@ var results_num = collision_rectangle_list(x1, y1, x2, y2, ob_elevationArea, fal
 for (var i = 0; i < results_num; ++i)
 {
 	var area_z = results[|i].z;
-	if (falling ? (area_z > check_z) : (area_z != check_z))
+	//if (falling ? (area_z > check_z) : (area_z != check_z))
+	if (falling ? (area_z > check_z + 4) : (abs(area_z - check_z) > 4))
 	{
 		ds_list_destroy(results);
 		return true;

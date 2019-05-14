@@ -16,6 +16,8 @@ var peny = 0;
 var penc = exists(o_CtsBlackBoxes) ? c_white : c_black;
 var penw = 2;
 var penwiggle = false;
+var penshake = false;
+var penwigglex = false;
 for (var i = 0; i < floor(current_display_count); ++i)
 {
     if ( display_flags[i] != 0 )
@@ -44,9 +46,15 @@ for (var i = 0; i < floor(current_display_count); ++i)
             text_refw = string_width("m");
             penw = 2;
 			penwiggle = false;
+			penshake = false;
+			penwigglex = false;
         }
 		if ( display_flags[i] == ord("w") )
 			penwiggle = true;
+		if ( display_flags[i] == ord("s") )
+			penshake = true;
+		if ( display_flags[i] == ord("h") )
+			penwigglex = true;
         // Newline!
         if ( display_flags[i] == ord("#") )
         {
@@ -57,9 +65,16 @@ for (var i = 0; i < floor(current_display_count); ++i)
 
     var char = string_char_at(display_text,i + 1);
     
+	var xoffset = 0;
 	var yoffset = 0;
 	if (penwiggle)
 		yoffset += round(sin(current_time / 200.0 + i * 0.76) * 3.4);
+	if (penwigglex)
+		xoffset += round(sin(current_time / 230.0 + i * 0.66) * (penw + 0.4));
+	if (penshake) {
+		xoffset += round(random_range(-1.4, 1.4));
+		yoffset += round(random_range(-1.4, 1.4));
+	}
 	
     // draw the text
     draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : c_white );
