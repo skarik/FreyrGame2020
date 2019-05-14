@@ -175,7 +175,7 @@ playerUiDrawBook();
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
 
-	draw_set_alpha(m_bag_totalBlend);
+	draw_set_alpha(max(m_bag_totalBlend, m_book_totalBlend));
 	_playerUiDrawCursor();
 	draw_set_alpha(1.0);
 }

@@ -1,4 +1,4 @@
-var suiChoiceBox = exists(o_CtsBlackBoxes) ? sui_choiceBox3Black : sui_choiceBox3;
+var suiChoiceBox = exists(o_CtsBlackBoxes) ? sui_choiceBox3Black : sui_choiceBox4;
 var dx, dy;
 
 draw_set_font(display_font);
@@ -67,7 +67,10 @@ if (!input_disable)
     // Draw the continue button
     var scale = bouncestep(done_alpha * image_alpha);
     //draw_sprite_ext(sui_buttonPress, 0, x,y+12, scale,scale,0, c_white, min(1, done_alpha*4.0));
-	draw_sprite_ext(sui_buttonPress2, 0, x + boxw * 0.5 - 4, y - 4, scale, scale, 0, exists(o_CtsBlackBoxes) ? c_white : c_black, min(1, done_alpha*4.0));
+	if (exists(o_CtsBlackBoxes))
+		draw_sprite_ext(sui_buttonPress2, 0, x + boxw * 0.5 - 4, y - 4, scale, scale, 0, c_white, min(1, done_alpha*4.0));
+	else
+		draw_sprite_ext(sui_buttonPress3, 0, x + boxw * 0.5 - 2, y - 4, scale, scale, 0, c_white, min(1, done_alpha*4.0));
     // draw button
     /*draw_set_alpha( clamp((done_alpha-0.5) * 2.0, 0,1) * image_alpha );
     //if (Input.gamepad)
