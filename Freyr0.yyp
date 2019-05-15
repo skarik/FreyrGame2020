@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00386cec-9ad1-48a7-9c94-fcc880ec628c",
+            "Value": {
+                "id": "718529d4-3033-4211-bc5c-0e2ea6a77670",
+                "resourcePath": "views\\00386cec-9ad1-48a7-9c94-fcc880ec628c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0187aa55-3265-4f4e-a3ab-94933a30f548",
             "Value": {
                 "id": "2be55d97-9206-4475-84be-9dffc5cad109",
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "0befab3f-4a1a-4bb8-a6e1-678a67fd61eb",
+            "Value": {
+                "id": "8f05e54c-8f40-488e-a777-5d79c25f4f38",
+                "resourcePath": "sprites\\s_charOasis0Stand\\s_charOasis0Stand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0cf2ebb3-8109-41a2-addb-f9c95e20802b",
             "Value": {
                 "id": "891050e7-aa98-4c0e-9510-c47ec8d1f935",
@@ -212,6 +228,14 @@
                 "id": "73805216-aaf0-4e08-873f-e51f733da8c3",
                 "resourcePath": "sprites\\s_assetStones0\\s_assetStones0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0e25310a-8fdd-45d6-b458-1b99d1c321ab",
+            "Value": {
+                "id": "65404477-abf3-4937-82ea-24125ee2d497",
+                "resourcePath": "scripts\\gameBookQuit\\gameBookQuit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -548,6 +572,14 @@
                 "id": "aa48d9c7-c5cf-482f-bf4c-ac1af359549d",
                 "resourcePath": "scripts\\paletteUpdate\\paletteUpdate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1ebe2c67-e712-4959-8f7e-e8af995b8dfd",
+            "Value": {
+                "id": "6c5420c4-60fe-49fd-9576-479fa7401c95",
+                "resourcePath": "datafiles_yy\\cts\\oasis\\NPC2.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -1167,6 +1199,14 @@
             }
         },
         {
+            "Key": "406aa5c6-0be1-451b-bf88-83d9dd53b30d",
+            "Value": {
+                "id": "0101d1f3-ca9d-49d5-8f2f-dd10f123a8bc",
+                "resourcePath": "views\\406aa5c6-0be1-451b-bf88-83d9dd53b30d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "40f5d3bc-5e76-49a0-a9c0-665c530a034a",
             "Value": {
                 "id": "f61e4661-8589-4189-908b-fa2e94c3ec2e",
@@ -1548,6 +1588,14 @@
                 "id": "04bee515-63ab-457d-a22b-8da2baeaddfa",
                 "resourcePath": "sprites\\s_itemResBolt\\s_itemResBolt.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5266a0cc-8943-4e5c-878d-83565773789d",
+            "Value": {
+                "id": "44c597f9-4618-42b5-9742-a6d224750f49",
+                "resourcePath": "objects\\ob_characterGroundInteractable\\ob_characterGroundInteractable.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1959,6 +2007,14 @@
             }
         },
         {
+            "Key": "6dc57c75-3391-4505-b9f0-34b9111a3d50",
+            "Value": {
+                "id": "2d5932f3-39ac-424c-a0b8-e795f58078a5",
+                "resourcePath": "datafiles_yy\\cts\\oasis\\NPC1.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "6ee7fe05-3e7a-43ca-9359-4b4a58083b6c",
             "Value": {
                 "id": "cc23f5d6-cd35-4775-b924-980217d87cd7",
@@ -2087,6 +2143,14 @@
             }
         },
         {
+            "Key": "72c51910-49e3-4e35-b399-9fcd5e1b84b4",
+            "Value": {
+                "id": "d0b477c1-670b-409f-b5fd-a833f3978ba4",
+                "resourcePath": "datafiles_yy\\audio\\sfx\\ddag.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "72fd8e82-5f97-4140-b0d2-f53b4c63cfdc",
             "Value": {
                 "id": "2ec82982-42a2-4d4f-b6fb-a7c92689dc30",
@@ -2159,6 +2223,14 @@
             }
         },
         {
+            "Key": "76820fc6-b98c-484d-844f-6a518181a2a4",
+            "Value": {
+                "id": "d24796ca-e2bd-4036-8570-9e60d2f58510",
+                "resourcePath": "views\\76820fc6-b98c-484d-844f-6a518181a2a4.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "76e54bb0-9942-4648-be66-078861ee8f06",
             "Value": {
                 "id": "f2f6bdeb-3a8d-4844-a245-eb0af2e01c4e",
@@ -2220,6 +2292,14 @@
                 "id": "49a35a89-3965-48d7-bb4c-70c3739f2a6a",
                 "resourcePath": "scripts\\playerUiInit\\playerUiInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7b409d51-d66b-4721-a03f-aa1321d86ef9",
+            "Value": {
+                "id": "9e3a6e5b-803d-4779-a6bf-f50406fc17ba",
+                "resourcePath": "views\\7b409d51-d66b-4721-a03f-aa1321d86ef9.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2311,6 +2391,14 @@
             }
         },
         {
+            "Key": "8069aa28-c713-42f2-a91d-2d0892f36252",
+            "Value": {
+                "id": "f6b3129e-e092-4445-84b7-5c373e60cabb",
+                "resourcePath": "views\\8069aa28-c713-42f2-a91d-2d0892f36252.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "80e29831-49eb-459c-b9f6-1f663b2c32d7",
             "Value": {
                 "id": "532123a9-eb2a-4588-b0c0-5b97d286938e",
@@ -2388,6 +2476,14 @@
                 "id": "5e498799-10c6-4b6f-9900-a3baa3862fb0",
                 "resourcePath": "scripts\\Gabber_DrawBox\\Gabber_DrawBox.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "847c71f6-3a58-4626-b7ea-11d577a22f10",
+            "Value": {
+                "id": "3ff33875-b4be-4d70-bd09-54b8bc1b1b87",
+                "resourcePath": "objects\\o_chOasisNpc\\o_chOasisNpc.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2812,6 +2908,14 @@
                 "id": "0cb9a677-a87f-483d-a50f-d55d18762007",
                 "resourcePath": "views\\991ed64b-f07c-48f3-a6d3-ed3b731bef26.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "997db4f4-7f16-4c94-ba47-6ece34d2adb7",
+            "Value": {
+                "id": "466c61f7-be4c-4751-9b67-f947e21b60cd",
+                "resourcePath": "scripts\\gameCampWait\\gameCampWait.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4383,6 +4487,14 @@
             }
         },
         {
+            "Key": "ef341803-bcf7-4124-b313-c0e0ff960bdd",
+            "Value": {
+                "id": "29cb9927-19eb-469a-952e-21b23d2466a1",
+                "resourcePath": "scripts\\gameCampUntilMorning\\gameCampUntilMorning.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f077673a-8f5a-40be-a389-4826a617dfda",
             "Value": {
                 "id": "51d4a7f0-6c00-402c-b772-2d92a814d519",
@@ -4551,6 +4663,14 @@
             }
         },
         {
+            "Key": "f95c550e-3883-46fb-820a-617f09111052",
+            "Value": {
+                "id": "c30179dc-eeca-4da1-b68e-390d0f211710",
+                "resourcePath": "datafiles_yy\\cts\\oasis\\NPC3.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "f9a4eb74-11cd-446d-9887-78c0b4c899e8",
             "Value": {
                 "id": "5a0c9131-bacc-4483-8b59-664e235d7298",
@@ -4579,6 +4699,14 @@
             "Value": {
                 "id": "b16f74c3-87b9-48e4-91da-c398759d0b0c",
                 "resourcePath": "scripts\\_playerAttack2\\_playerAttack2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fb5f3748-c354-4d36-9b20-6aae4f7a34f6",
+            "Value": {
+                "id": "a73860ce-091d-4d12-ad92-80edb751560f",
+                "resourcePath": "scripts\\gameBookSave\\gameBookSave.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4857,7 +4985,6 @@
         "dc286b8b-27f9-4d4a-be5b-2dde37592d1a",
         "a6578fec-2b2d-474a-a91b-ccd674dce3f9",
         "f08e7891-bab2-4df8-a7ca-f90f337ef162",
-        "184d0fda-96eb-4a73-bb4f-29d507e9db46",
         "356c07c3-31fc-4724-9e27-e20418a20a9d",
         "01a3d350-db14-4d2b-8749-7ef2d4a43e6e",
         "c0470954-f6a9-4162-b83b-84f199004c3e",
@@ -4885,6 +5012,11 @@
         "a63d3702-e5e8-46b4-bb8a-d83d33a39bd3",
         "d1972855-3c82-4b2a-a3e6-2e216eb8d6b1",
         "53a33573-1c7c-4609-8b91-8d5beeae91c5",
+        "184d0fda-96eb-4a73-bb4f-29d507e9db46",
+        "997db4f4-7f16-4c94-ba47-6ece34d2adb7",
+        "ef341803-bcf7-4124-b313-c0e0ff960bdd",
+        "fb5f3748-c354-4d36-9b20-6aae4f7a34f6",
+        "0e25310a-8fdd-45d6-b458-1b99d1c321ab",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""

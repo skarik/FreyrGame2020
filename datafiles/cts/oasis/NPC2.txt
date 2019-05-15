@@ -1,0 +1,51 @@
+#begin
+
+choice
+
+{
+target player
+1 Hello...?
+1goto Hellotalk
+2 Bye...?
+2goto Byetalk
+}
+
+// SELECTION 1
+#Hellotalk
+
+lines
+{
+target 0
+
+1 Don't go into $5Fool's March$$ without preparation.
+2 Otherwise you might have a bad time.
+
+}
+
+audio
+{
+    play audio/sfx/ddag.ogg
+}
+
+
+goto
+{
+target ended
+}
+
+
+// SELECTION 2
+#Byetalk
+
+lines
+{
+target player
+1 Bye.
+}
+
+goto
+{
+target ended
+}
+
+#ended

@@ -1,4 +1,4 @@
-var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m_usingInventory;
+var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m_usingInventory && !m_usingBook;
 
 // Do dashing
 if (dashCooldown <= 0.0)

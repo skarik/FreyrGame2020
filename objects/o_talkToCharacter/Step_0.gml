@@ -36,7 +36,8 @@ if (m_interacting)
 			
 		}*/
 		var cts_type = cutsceneGetCurrentType();
-		if (cts_type == SEQTYPE_CHOICES)
+		if (object_get_parent(m_user.object_index) == ob_characterFollower
+			&& cts_type == SEQTYPE_CHOICES)
 		{
 			if (exists(o_CtsChoiceBox))
 			{

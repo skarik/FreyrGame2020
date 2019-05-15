@@ -1,0 +1,48 @@
+#begin
+
+choice
+
+{
+target player
+1 Hello...?
+1goto Hellotalk
+2 Bye...?
+2goto Byetalk
+}
+
+// SELECTION 1
+#Hellotalk
+
+lines
+{
+target 0
+
+1 There was a &&wstrange& noise down south. 
+2 Was it you? 
+
+}
+
+goto
+{
+target ended
+}
+
+
+// SELECTION 2
+#Byetalk
+
+lines
+{
+target player
+1 Bye.
+}
+
+goto
+{
+target ended
+}
+
+#ended
+
+
+

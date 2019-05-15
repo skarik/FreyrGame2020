@@ -1,0 +1,62 @@
+#begin
+
+choice
+
+{
+target player
+1 Hello...?
+1goto Hellotalk
+2 Bye...?
+2goto Byetalk
+}
+
+// SELECTION 1
+#Hellotalk
+
+lines
+{
+target 0
+
+1 I've never seen you around here before.
+2 Have you talked to the $$5Ai'ne$ about helping out?
+
+}
+
+lines
+{
+target player
+
+1 What's an $5Ai'ne$$?
+
+}
+
+lines
+{
+target 0
+
+1 He protects the Oasis from the $$1pMonsters$.
+2 And he $$wreads$ us stories!
+
+}
+
+goto
+{
+target ended
+}
+
+
+// SELECTION 2
+#Byetalk
+
+lines
+{
+target player
+1 Bye.
+}
+
+goto
+{
+target ended
+}
+
+#ended

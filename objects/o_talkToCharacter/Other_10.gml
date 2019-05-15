@@ -28,7 +28,7 @@ if (m_owner != null && exists(m_user) && m_user.id == o_PlayerTest.id)
 		new(o_CtsReenablePlayerOnCtsEnd);*/
 		
 		// Load up the cutscene
-		cutsceneLoad("talk00_nathan.txt");
+		cutsceneLoad(m_owner.m_interactionFile);
 		
 		// Stop moving player, until they are done talking
 		with (m_user) controlZero(true);

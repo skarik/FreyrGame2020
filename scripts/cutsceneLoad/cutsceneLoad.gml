@@ -432,5 +432,13 @@ while (!file_text_eof(fp))
     }
 }
 
+// Add the ended tag
+{
+	// Save the entry as a string
+	cts_entry[cts_entry_count] = "ended";
+	cts_entry_type[cts_entry_count] = SEQTYPE_LABEL;
+	cts_entry_count++;
+}
+
 file_text_close(fp);
 
