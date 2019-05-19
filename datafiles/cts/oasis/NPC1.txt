@@ -18,7 +18,7 @@ lines
 target 0
 
 1 I've never seen you around here before.
-2 Have you talked to the $$5Ai'ne$ about helping out?
+2 Have you talked to the $5Ai'ne$0 about helping out?
 
 }
 
@@ -26,7 +26,7 @@ lines
 {
 target player
 
-1 What's an $5Ai'ne$$?
+1 What's an $5Ai'ne$0?
 
 }
 
@@ -34,8 +34,8 @@ lines
 {
 target 0
 
-1 He protects the Oasis from the $$1pMonsters$.
-2 And he $$wreads$ us stories!
+1 He protects the Oasis from the $1Monsters$0.
+2 And he $wreads$$ us stories!
 
 }
 

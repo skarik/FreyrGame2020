@@ -1,17 +1,19 @@
-/// @description Do the death cutscene!
+/// @description Set up the cts
 
-enum CtsDeath
+enum CtsCamp
 {
-	S1DeadOverlay,
+	S1BeginSleep,
 	S2FadeOut,
 	S3Blackness,
-	S4ViggoTravel,
+	S4SleepTravel,
 	S5FadeIn,
 	S6Cleanup,
 }
 
-m_state = CtsDeath.S1DeadOverlay;
+m_waitTime = 3.0;
+m_state = CtsCamp.S1BeginSleep;
 m_timer = 0;
+
 m_startTime = 0.0;
 
 depth = -9101;

@@ -17,7 +17,7 @@ lines
 {
 target 0
 
-1 Don't go into $5Fool's March$$ without preparation.
+1 Don't go into $5Fool's March$0 without preparation.
 2 Otherwise you might have a bad time.
 
 }

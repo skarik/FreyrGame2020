@@ -1,6 +1,6 @@
 /// @description Draw the VIGGO!
 
-if (m_state == Cts.S1DeadOverlay)
+if (m_state == CtsDeath.S1DeadOverlay)
 {
 	var l_textFade = clamp(m_timer * 6.0, 0.0, 1.0) * clamp((1.0 - m_timer) * 6.0, 0.0, 1.0);
 	var l_scale = 0.8 + 0.2 * clamp(m_timer * 2.0, 0.0, 1.0);

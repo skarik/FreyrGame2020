@@ -17,7 +17,7 @@ lines
 {
 target 0
 
-1 There was a &&wstrange& noise down south. 
+1 There was a $wstrange$$ noise down south. 
 2 Was it you? 
 
 }
