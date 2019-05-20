@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "06044a10-b8e9-4ee7-a088-e2dced6a0554",
+            "Value": {
+                "id": "95562248-472e-4ac6-9ec2-8c6f42881f4e",
+                "resourcePath": "objects\\o_cts00_FeatherDropProp\\o_cts00_FeatherDropProp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "067a1fc3-e934-4218-a74d-17bd60d5d14b",
             "Value": {
                 "id": "5654b326-33c6-4bc1-a3a0-ad40621dc3cb",
@@ -1020,6 +1028,14 @@
                 "id": "4fda6722-9f93-419a-a973-ac352058d8a9",
                 "resourcePath": "views\\31463f84-0e25-4dba-a236-de8b23e1d670.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "315d680d-eeb4-4cee-9469-89415b8f8ac6",
+            "Value": {
+                "id": "783e8646-b054-4ff1-9841-c04c159d170d",
+                "resourcePath": "objects\\o_cts00_FeatherDrop\\o_cts00_FeatherDrop.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2735,6 +2751,14 @@
             }
         },
         {
+            "Key": "8e68f992-17e0-45ca-ae87-f02f7cb3d4b1",
+            "Value": {
+                "id": "9044e269-b318-484e-b34e-9b091df61ee5",
+                "resourcePath": "objects\\o_pickupJunk_CoolFeather\\o_pickupJunk_CoolFeather.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8e8adddf-b9ac-4148-9bfe-1e7750bc2fbf",
             "Value": {
                 "id": "417790fc-25d7-4483-9e9d-f59c0fcc41a4",
@@ -4044,6 +4068,14 @@
                 "id": "35310ce3-cf3c-4b84-8ffe-b97078465a79",
                 "resourcePath": "fonts\\f_arvo9Bold\\f_arvo9Bold.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "d2698b48-bd1f-4adc-a440-8e3622faa903",
+            "Value": {
+                "id": "cb8c648d-07a0-45e0-945d-81c1a06c8e9e",
+                "resourcePath": "sprites\\s_itemCoolFeather\\s_itemCoolFeather.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
