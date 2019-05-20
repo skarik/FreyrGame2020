@@ -8,6 +8,9 @@ m_isPlayer = true;
 m_team = kTeamGood;
 m_name = "Cortez";
 
+m_currentArea = kAreaNoArea;
+m_currentAreaTimer = 0.0;
+
 controlInit();
 
 playerMotionInit();
