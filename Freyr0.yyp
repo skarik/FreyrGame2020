@@ -2391,6 +2391,14 @@
             }
         },
         {
+            "Key": "7b1729a6-b29c-496a-a550-9d400eb39515",
+            "Value": {
+                "id": "6f20818d-b002-41c8-a8d2-a5b6f78cf52a",
+                "resourcePath": "shaders\\sh_normalTreeWiggle\\sh_normalTreeWiggle.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "7b409d51-d66b-4721-a03f-aa1321d86ef9",
             "Value": {
                 "id": "9e3a6e5b-803d-4779-a6bf-f50406fc17ba",
@@ -2675,6 +2683,14 @@
             "Value": {
                 "id": "65e48631-d707-42e9-9407-c54b6d570591",
                 "resourcePath": "scripts\\new\\new.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8af2478d-469c-4985-90d4-4d73836ded44",
+            "Value": {
+                "id": "239382ff-fafd-411b-b675-37648753bc63",
+                "resourcePath": "scripts\\doodadSetFinalType\\doodadSetFinalType.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3695,6 +3711,14 @@
             }
         },
         {
+            "Key": "be6cb8e1-3c0f-4414-9f73-36bacbeeadbc",
+            "Value": {
+                "id": "63d6f0a4-0ba5-462c-a43d-eb4d469ac4e5",
+                "resourcePath": "objects\\ob_doodadTreeWiggle\\ob_doodadTreeWiggle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bec3e5f0-d50b-44db-be78-6806ed0a95b3",
             "Value": {
                 "id": "93db48d4-4184-42b5-8d37-fb7e0fc64701",
@@ -4055,6 +4079,14 @@
             }
         },
         {
+            "Key": "d138cbe1-7875-4035-861f-e988e1e3c7ff",
+            "Value": {
+                "id": "a251444c-e13e-476e-a5c7-d76c3f443f45",
+                "resourcePath": "sprites\\s_charNathanWalk\\s_charNathanWalk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d1972855-3c82-4b2a-a3e6-2e216eb8d6b1",
             "Value": {
                 "id": "a90cc3f0-3ccb-4350-9a05-9ff8959b5ecf",
@@ -4156,6 +4188,14 @@
                 "id": "7ec7a73e-0f7d-401b-9e64-429a42b68958",
                 "resourcePath": "views\\d780351d-7fd1-4376-9dc8-db18be4bb34f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d784fa41-693f-48d7-89e3-f071b398be19",
+            "Value": {
+                "id": "e5a43082-ddc0-4e19-a8c8-bc1c36a2d537",
+                "resourcePath": "sprites\\s_charHeroWalk\\s_charHeroWalk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5079,6 +5119,7 @@
         "f88ac528-e68c-4322-9c8b-dd4a76715d3d",
         "c8eac5d1-98d9-4654-b3dc-c9e5b591886f",
         "446efed8-c7db-4e4b-91bd-76a3b9a6b0c6",
+        "8af2478d-469c-4985-90d4-4d73836ded44",
         "bca44c75-2ce1-44e6-b49c-5dc8c8d119cf",
         "50bfb340-09ed-40e9-bbd4-52341627a152",
         "5ce5cef7-3a68-408b-9b50-68f745fd85fa",

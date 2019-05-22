@@ -14,10 +14,14 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 	var element_type = layer_get_element_type(element);
 	if (element_type == layerelementtype_sprite)
 	{
+		var final_doodad_type = doodad_type;
+		var final_doodad_sprite = layer_sprite_get_sprite(element);
+		final_doodad_type = doodadSetFinalType(doodad_type, final_doodad_sprite);
+		
 		// Create a doodad and delete the sprite
-		var doodad = instance_create_depth(layer_sprite_get_x(element), layer_sprite_get_y(element), 0, doodad_type);
+		var doodad = instance_create_depth(layer_sprite_get_x(element), layer_sprite_get_y(element), 0, final_doodad_type);
 			doodad.z = collision3_get_highest_position(doodad.x, doodad.y, layerDepth);
-			doodad.sprite_index = layer_sprite_get_sprite(element);
+			doodad.sprite_index = final_doodad_sprite;
 			doodad.image_index = layer_sprite_get_index(element);
 			doodad.image_speed = layer_sprite_get_speed(element);
 			doodad.image_xscale = layer_sprite_get_xscale(element);
@@ -41,6 +45,7 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 				collider.image_angle = doodad.image_angle;
 				collider.image_blend = doodad.image_blend;
 				collider.image_alpha = doodad.image_alpha;
+				collider.visible = false;
 		}
 			
 		layer_sprite_destroy(element);

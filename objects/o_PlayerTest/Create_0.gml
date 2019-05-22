@@ -50,3 +50,10 @@ kDashCooldown = 0.5;
 kDashInAir = true;
 
 #endregion
+
+#region Sprites
+
+kAnimStanding = s_charHeroStand;
+kAnimWalking = s_charHeroWalk;
+
+#endregion

@@ -33,10 +33,27 @@ if (sqr(xspeed) + sqr(yspeed) < 10
 }*/
 
 //
+// Animation Select
+var move_speed = sqrt(sqr(xspeed) + sqr(yspeed));
+if (move_speed > 3.0)
+{
+	sprite_index = kAnimWalking;
+	animationSpeed = 14.0          // Start with 12 to 14 FPS
+		* move_speed / kMoveSpeed  // Base it on the movespeed
+		* (image_number / 24.0);   // Scale up for more frames in the walk animation, assuming 12 FPS 6-cycle
+}
+else
+{
+	sprite_index = kAnimStanding;
+	//animationIndex = 0.0;
+	animationSpeed = 0.0;
+}
+
+//
 // Animation Update
 
 // update sprite
-animationIndex = 0;
+animationIndex += animationSpeed * Time.deltaTime;
 
 // Do different animation depending on the number of images (3 versus 4)
 if ((image_number % 3) == 0 && (image_number % 4) != 0)

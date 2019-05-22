@@ -26,3 +26,6 @@ m_aiFollowing = true;
 m_isFollower = true;
 
 #endregion
+
+kAnimStanding = s_charNathanStand;
+kAnimWalking = s_charNathanWalk;

@@ -18,3 +18,7 @@ m_interactionObject.m_owner = id;
 //m_interactionFile = "talk00_nathan.txt";
 
 #endregion
+
+// Default sprites
+kAnimStanding = sprite_index;
+kAnimWalking = sprite_index;
