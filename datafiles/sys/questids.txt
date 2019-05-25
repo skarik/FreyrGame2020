@@ -1,1 +1,2 @@
 #macro kQidIntroSequence	0
+#macro kQidHarpyShadow		1

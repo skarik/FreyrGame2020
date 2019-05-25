@@ -8,6 +8,8 @@
 #macro SEQTYPE_MUSIC 5
 #macro SEQTYPE_GOTO 6
 #macro SEQTYPE_AI 7
+#macro SEQTYPE_PALETTE 8
+#macro SEQTYPE_SIGNAL 9
 
 #macro SEQI_SIZE -1
 #macro SEQI_COUNT -1
@@ -46,3 +48,12 @@
 #macro SEQI_MUSIC_OFFSET 100
 
 #macro SEQI_MUSIC_TRACKCOUNT -1
+
+#macro SEQI_AI_STYLE -11
+#macro SEQI_AI_COMMAND -12
+#macro SEQI_AI_POS_X -13
+#macro SEQI_AI_POS_Y -14
+#macro SEQI_AI_POS_Z -15
+#macro SEQI_AI_ANIMATION -16
+#macro SEQI_AI_LOOPED -17
+#macro SEQI_AI_SPEED -18

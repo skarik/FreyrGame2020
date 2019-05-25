@@ -301,6 +301,74 @@ case SEQTYPE_GOTO:
 	debugOut("Doing goto...");
 
 	break;
+	
+case SEQTYPE_PALETTE:
+	var type = ds_map_find_value(entry, SEQI_TYPE);
+	
+	// Change the palette
+	paletteSetCurrent(type);
+	
+	// Debug output
+	debugOut("Doing palette change to " + string(type) + "..."); 
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
+case SEQTYPE_SIGNAL:
+	// Change the palette
+	cts_last_signal = ds_map_find_value(entry, SEQI_ID);
+	cts_last_signal_consumed = false;
+	
+	// Debug output
+	debugOut("Doing signal " + cts_last_signal + "...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
+case SEQTYPE_AI:
+	// Pull common params
+	var count = ds_map_find_value(entry, SEQI_COUNT);
+    var target = ds_map_find_value(entry, SEQI_TARGET);
+    var style = ds_map_find_value(entry, SEQI_AI_STYLE);
+        
+	// Find target
+    var target_inst = instance_find(target, count);
+
+	// Apply the AI command
+	var command = ds_map_find_value(entry, SEQI_AI_COMMAND);
+	switch (command)
+	{
+		case kAiRequestCommand_Start:
+			aiscriptRequestStart(target_inst, style);
+			break;
+		case kAiRequestCommand_Stop:
+			aiscriptRequestStop(target_inst, style);
+			break;
+		case kAiRequestCommand_Animation:
+			aiscriptRequestAnimation(target_inst, style,
+									 ds_map_find_value(entry, SEQI_AI_ANIMATION),
+									 ds_map_find_value(entry, SEQI_AI_LOOPED),
+									 ds_map_find_value(entry, SEQI_AI_SPEED));
+			break;
+		case kAiRequestCommand_Move:
+			aiscriptRequestMove(target_inst, style,
+								ds_map_find_value(entry, SEQI_AI_POS_X),
+								ds_map_find_value(entry, SEQI_AI_POS_Y),
+								ds_map_find_value(entry, SEQI_AI_SPEED));
+			break;
+	}
+
+	// Debug output
+	debugOut("Doing AI command " + string(command) + " in style " + string(style) + "...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
 }
 
 return true;

@@ -6,6 +6,8 @@ with (o_PlayerTest)
     persistent = true;
     inventory.persistent = true;
 	stats.persistent = true;
+	quests.persistent = true;
+	pstats.persistent = true;
 }
 with (o_PlayerHud)
 {

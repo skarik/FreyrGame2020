@@ -34,7 +34,11 @@ if (surface_exists(m_darkness))
 	surface_set_target(m_darkness);
 	
 	// clear to the ambient color
-	if (exists(o_dayNightCycle))
+	if (exists(ob_ambientLighting))
+	{
+		draw_clear_alpha(ob_ambientLighting.m_ambientColor, 1.0);
+	}
+	else if (exists(o_dayNightCycle))
 	{
 		draw_clear_alpha(o_dayNightCycle.m_ambientLight, 1.0);
 	}

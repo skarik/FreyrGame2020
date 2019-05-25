@@ -88,7 +88,19 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_GOTO;
 		}
-        
+        else if (string_pos("palette", line) != 0)
+		{
+			read_object_type = SEQTYPE_PALETTE;	
+		}
+		else if (string_pos("signal", line) != 0)
+		{
+			read_object_type = SEQTYPE_SIGNAL;	
+		}
+		else if (string_pos("ai", line) != 0)
+		{
+			read_object_type = SEQTYPE_AI;
+		}
+		
         // If an object was read - prepare to read it in
         if (read_object_type != SEQTYPE_NULL)
         {
@@ -269,21 +281,35 @@ while (!file_text_eof(fp))
                 cts_entry_type[cts_entry_count] = SEQTYPE_WAIT;
                 cts_entry_count++;
             }
+			else if (read_object_type == SEQTYPE_SIGNAL)
+            {
+                var name = ds_map_find_value(read_object_map, "id");
+                if (is_undefined(name)) name = "";
+                
+                var new_map = ds_map_create();
+                ds_map_add(new_map, SEQI_ID, name);
+                    
+                 // Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_SIGNAL;
+                cts_entry_count++;
+            }
 			else if (read_object_type == SEQTYPE_SCREEN)
 			{
 				var type = ds_map_find_value(read_object_map, "type");
-				var r = ds_map_find_value(read_object_map, "r");
-				var g = ds_map_find_value(read_object_map, "g");
-				var b = ds_map_find_value(read_object_map, "b");
+				var rgb = ds_map_find_value(read_object_map, "rgb");
 				if (is_undefined(type)) type = "none";
-				if (is_undefined(r)) r = "0";
-				if (is_undefined(g)) g = "0";
-				if (is_undefined(b)) b = "0";
+				if (is_undefined(rgb)) rgb = "0 0 0";
+				
+				rgb_list = string_split(rgb, " ", true);
 				
 				var new_map = ds_map_create();
-                ds_map_add(new_map, SEQI_SCREEN_R, real(r));
-                ds_map_add(new_map, SEQI_SCREEN_G, real(g));
-				ds_map_add(new_map, SEQI_SCREEN_B, real(b));
+                ds_map_add(new_map, SEQI_SCREEN_R, real(rgb_list[0]));
+                ds_map_add(new_map, SEQI_SCREEN_G, real(rgb_list[1]));
+				ds_map_add(new_map, SEQI_SCREEN_B, real(rgb_list[2]));
                 if (type == "fadein")
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_FADEIN);
                 else if (type == "fadeout")
@@ -401,6 +427,115 @@ while (!file_text_eof(fp))
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_GOTO;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_PALETTE)
+			{
+				var type = ds_map_find_value(read_object_map, "type");
+				if (is_undefined(type)) type = "crushed";
+				
+				var new_map = ds_map_create();
+                if (type == "wide")
+                    ds_map_add(new_map, SEQI_TYPE, kPaletteWide);
+                else if (type == "crushed")
+                    ds_map_add(new_map, SEQI_TYPE, kPaletteCrushed);
+                else
+                    ds_map_add(new_map, SEQI_TYPE, kPaletteCrushed);
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_PALETTE;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_AI)
+			{
+				// First grab the target
+				var target = ds_map_find_value(read_object_map, "target");
+				if (is_undefined(target))
+					target = null;
+				else if (target == "imp")
+					target = o_PlayerImp;
+				else if (target == "hero" || target == "player" || target == "idiot")
+					target = o_PlayerTest;
+				else if (target = "nathan")
+					target = o_chNathan;
+				else
+					target = null;
+					
+				var targeti = ds_map_find_value(read_object_map, "targeti");
+				if (is_undefined(targeti))
+					targeti = "0";
+				
+				var style = ds_map_find_value(read_object_map, "style");
+				if (is_undefined(style))
+					style = kAiStyle_Scripted;
+				else if (style == "cutscene" || style == "cts")
+					style = kAiStyle_Scripted;
+				else if (style == "follow")
+					style = kAiStyle_Follow;
+				else if (style == "lead")
+					style = kAiStyle_Lead;
+				else
+					style = kAiStyle_Scripted;
+					
+				var command = ds_map_find_value(read_object_map, "command");
+				if (is_undefined(command))
+					command = kAiRequestCommand_Stop;
+				else if (command == "stop")
+					command = kAiRequestCommand_Stop;
+				else if (command == "start")
+					command = kAiRequestCommand_Start;
+				else if (command == "anim" || command == "animation" || command == "sprite")
+					command = kAiRequestCommand_Animation;
+				else if (command == "move")
+					command = kAiRequestCommand_Move;
+				else
+					command = kAiRequestCommand_Stop;
+				
+				var position = ds_map_find_value(read_object_map, "position");
+				if (is_undefined(position))
+					position = "0 0";
+				var position_list = string_split(position, " ", true);
+				
+				var animation = ds_map_find_value(read_object_map, "sprite");
+				if (is_undefined(animation))
+					animation = ds_map_find_value(read_object_map, "animation");
+				if (is_undefined(animation))
+					animation = ds_map_find_value(read_object_map, "anim");
+				if (is_undefined(animation))
+					animation = "";
+					
+				var loop = ds_map_find_value(read_object_map, "loop");
+				if (loop == "true" || loop == "1")
+					loop = true;
+				else
+					loop = false;
+					
+				var aspeed = ds_map_find_value(read_object_map, "speed");
+				if (is_undefined(aspeed))
+					aspeed = "1.0";
+				
+				var new_map = ds_map_create();
+                ds_map_add(new_map, SEQI_TARGET, target);
+                ds_map_add(new_map, SEQI_COUNT, real(targeti));
+				ds_map_add(new_map, SEQI_AI_STYLE, style);
+				ds_map_add(new_map, SEQI_AI_COMMAND, command);
+				ds_map_add(new_map, SEQI_AI_POS_X, position_list[0]);
+				ds_map_add(new_map, SEQI_AI_POS_Y, position_list[1]);
+				ds_map_add(new_map, SEQI_AI_POS_Z, 0.0);
+				ds_map_add(new_map, SEQI_AI_ANIMATION, animation);
+				ds_map_add(new_map, SEQI_AI_LOOPED, loop);
+				ds_map_add(new_map, SEQI_AI_SPEED, real(aspeed));
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_AI;
                 cts_entry_count++;
 			}
             

@@ -12,6 +12,9 @@ playerAnimInit();
 m_interactionObject = new(o_talkToCharacter);
 m_interactionObject.m_owner = id;
 
+// update team
+m_team = kTeamGood;
+
 #region Per Follower Info
 
 //m_name = "Random Idiot";

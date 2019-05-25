@@ -79,10 +79,10 @@ if (l_canMove || m_usingInventory || m_usingBook)
 		m_usingInventory = !m_usingInventory;
 	}
 }
-/*if (!m_usingInventory)
+if (!m_usingInventory)
 {
-	m_currentChest = null;
-}*/
+	m_currentChest = null; // hack this in for now
+}
 
 _playerInteractTillables(l_canMove && onGround && !inDelayFrame);
 _playerInteractUsables(l_canMove && onGround && !inDelayFrame);

@@ -56,6 +56,9 @@ color0 = merge_color(color0, make_color_rgb(90 * 1.2, 70 * 1.2, 255), blend1);
 var ambient0 = merge_color(make_color_rgb(128, 128, 128), make_color_rgb(255 * 0.9, 180 * 0.9, 60 * 0.9), 1.0 - blend0);
 ambient0 = merge_color(ambient0, make_color_rgb(9, 7, 26), blend1);
 
+// save the blends
+m_blendSunsetToDay = blend0;
+m_blendSunsetToNight = blend1;
 
 var kBlendValue = 1.0;
 m_overlayColor = merge_color(make_color_rgb(128, 128, 128), color0, 1.0 - kBlendValue);

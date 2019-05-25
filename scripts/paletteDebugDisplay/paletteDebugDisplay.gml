@@ -1,9 +1,12 @@
-for (var i = 0; i < global.pal_width; ++i)
+var pal_index = global.pal_current;
+var palette_color = global.pal_color[pal_index];
+
+for (var i = 0; i < global.pal_width[pal_index]; ++i)
 {
-	draw_set_color(global.pal_color[i]);
+	draw_set_color(palette_color[i]);
 	draw_rectangle(i * 8, 0, i * 8 + 8, 8, false);
 }
-draw_sprite(global.pal_sprite3d, 0, 0, 8);
+draw_sprite(global.pal_sprite3d[pal_index], 0, 0, 8);
 
 /*
 for (var u = 0; u < global.pal_lutWidth; ++u)

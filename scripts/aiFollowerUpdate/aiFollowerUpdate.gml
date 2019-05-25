@@ -1,8 +1,13 @@
 if (m_aiFollowing)
 {
 	var followTarget = o_PlayerTest;
-	m_aiFollow_targetX = followTarget.x;
-	m_aiFollow_targetY = followTarget.y;
+	var followMoved = false;
+	if (abs(m_aiFollow_targetX - followTarget.x) > 3 || abs(m_aiFollow_targetY - followTarget.y) > 3)
+	{
+		m_aiFollow_targetX = followTarget.x;
+		m_aiFollow_targetY = followTarget.y;
+		followMoved = true;
+	}
 	var followDistance = point_distance(x, y, m_aiFollow_targetX, m_aiFollow_targetY);
 	
 	// We want to enter the following state if we're in most states
@@ -22,8 +27,8 @@ if (m_aiFollowing)
 		|| m_aiFollow_state == kAiFollowState_Wandering
 		|| m_aiFollow_state == kAiFollowState_Following)
 	{
-		// If we're too close to the follow distance, we want to back off.
-		if (followDistance < 12.0)
+		// If we're too close to the follow distance (and the follow target is moving), we want to back off.
+		if (followDistance < 12.0 && followMoved)
 		{
 			m_aiFollow_state = kAiFollowState_BackingOff;
 			m_aiFollow_timer = 0.0;

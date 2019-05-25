@@ -1,0 +1,1 @@
+global.pal_current = argument0;

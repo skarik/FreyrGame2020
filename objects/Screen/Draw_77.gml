@@ -50,3 +50,14 @@ else
 	var scale_y = Screen.height / display_get_height();
 	draw_surface_stretched(m_outputSurface, 0, 0, display_get_width() * scale_x, display_get_height() * scale_y);
 }
+
+// Draw debug info in the top left corner
+draw_set_alpha(0.25);
+draw_set_color(c_white);
+gpu_set_blendenable(true);
+gpu_set_blendmode(bm_normal);
+draw_set_font(f_openSans7);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text(2, 2, "Development Build");
+draw_set_alpha(1.0);

@@ -3,6 +3,12 @@
 // this is the cutscene for the first time through the game or on a new file.
 // the name "init" is thusly fitting
 
+palette
+{
+	type wide
+	// enable wider blues and greens for this start sequence
+}
+
 wait
 {
     type input
@@ -68,13 +74,66 @@ music // start with the librarian track
     pitch 1.0
 }
 
+signal // signal to create the librarian now
+{
+    id create_imp
+}
+
 lines
 {
     target  imp
     targeti 0
     1 Hello, I am the $bLibrarian$$.
-    2 I've been doing upkeep on my library and it appears some of my records on you have been $2lost$0.$p $wHow curious$$.
-    3 Well$p, that just won't do will it?
+}
+
+// move the librarian under the text box
+ai
+{
+	target	imp
+	style cutscene
+	command move
+	position 140 200
+}
+wait
+{
+    type time
+    time 0.1
+}
+ai
+{
+	target	imp
+	style cutscene	
+	command sprite
+	sprite look_up
+	loop true
+}
+
+lines // continue with talking & the nonsense
+{
+	target	imp
+    1 I've been doing upkeep on my library and it appears some of my records on you have been $2lost$0.$p $wHow curious$$.
+}
+
+// make librarian shake her head at this
+ai
+{
+	target	imp
+	style cutscene	
+	command sprite
+	sprite shake_head
+	loop true
+}
+lines
+{
+	target	imp
+    1 Well$p, that just won't do will it?
+}
+ai
+{	// and go back to the normal look
+	target	imp
+	style cutscene	
+	command sprite
+	sprite default
 }
 
 // go to the first track on pre-choice
@@ -90,6 +149,21 @@ lines
     targeti 0
     1 First things first$p, what are you anyway?$p I can never tell with mortals.
 }
+ai
+{
+	target	imp
+	style cutscene
+	command move
+	position 500 160
+}
+ai
+{
+	target	imp
+	style cutscene	
+	command sprite
+	sprite look_up
+	loop true
+}
 
 choice
 {
@@ -97,6 +171,19 @@ choice
     1 Woman
     2 Man
     3 Neither
+}
+
+ai
+{
+	target	imp
+	style cutscene	
+	command sprite
+	sprite default
+	loop true
+}
+signal // hide the librarian
+{
+    id imp_fade
 }
 
 // go to the second track after choice
@@ -112,8 +199,6 @@ lines
     targeti 0
     1 Do you recall what you looked like?
 }
-
-// todo: we need a wait right here
 
 choice
 {
@@ -137,8 +222,6 @@ lines
     1 What about what you were wearing?
 }
 
-// todo: we need a second wait right here
-
 choice
 {
     id clothes
@@ -147,13 +230,51 @@ choice
     3 I wore a plain skirt...
 }
 
-// todo: do the names properly
+lines
+{
+    target  imp
+    targeti 0
+    1 It indicates here your name was once [PLAYER]. Is that right?
+}
+
+choice
+{
+    id name
+    1 Yes!
+	1goto NAME_CONFIRMED
+    //2 It was something else...
+	2 Yes...
+	2goto NAME_CONFIRMED
+}
+
+	wait
+	{
+		type input
+		id name
+	}
+
+// skips the wait
+#NAME_CONFIRMED
+
+// move imp back to the center
+ai
+{
+	target	imp
+	style cutscene
+	command move
+	position 320 80
+}
 
 // final track after choice
 music
 {
     volume 0.0
     5volume 1.0
+}
+
+signal // show the librarian
+{
+    id imp_show
 }
 
 lines
@@ -165,6 +286,11 @@ lines
     3 Your story is one of my favorites.
 }
 
+signal // hide the librarian
+{
+    id imp_fade
+}
+
 wait
 {
     type time
@@ -174,6 +300,12 @@ wait
 music
 {
     volume 0.0
+}
+
+palette
+{
+	type crushed
+	// go back to the drab palette
 }
 
 wait

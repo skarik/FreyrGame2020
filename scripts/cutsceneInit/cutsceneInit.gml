@@ -9,4 +9,5 @@ cts_execute_timer = 0;
 
 cts_organic = false;
 
-
+cts_last_signal = "";
+cts_last_signal_consumed = true;
