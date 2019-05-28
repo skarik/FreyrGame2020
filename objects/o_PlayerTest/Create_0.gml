@@ -19,6 +19,9 @@ playerInteractInit();
 
 camPlayerInit();
 
+// create scriptable vars for cutscenes
+aiScriptableInit();
+
 hud = new(o_PlayerHud);
 inventory = new(o_inventory);
 if (!exists(o_PlayerQuest))
@@ -50,9 +53,9 @@ kMoveAccelerationAir = 200;
 kMoveAccelerationAirStop = 10;
 //kDashDistance = 48;
 //kDashTime = 0.15; // movespeed of about 240
-kDashDistance = 48;
-kDashTime = 0.3;
-kDashCooldown = 0.5;
+kDashDistance = 72;
+kDashTime = 0.5;
+kDashCooldown = 0.3;
 kDashInAir = true;
 
 #endregion
@@ -61,5 +64,7 @@ kDashInAir = true;
 
 kAnimStanding = s_charHeroStand;
 kAnimWalking = s_charHeroWalk;
+kAnimRolling = s_charHeroRoll;
+kAnimSinkFalling = s_charHeroSinkFall;
 
 #endregion

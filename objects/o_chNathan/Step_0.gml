@@ -1,6 +1,7 @@
 /// @description follow player
 
-aiFollowerUpdate();
+//aiFollowerUpdate();
+aiScriptableUpdate();
 
 //x += xspeed * Time.deltaTime;
 //y += yspeed * Time.deltaTime;

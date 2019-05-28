@@ -19,10 +19,11 @@ event_inherited();
 
 m_team = kTeamGood;
 
+aiScriptableInit();
 aiFollowerInit();
 
 // override default following: we want to follow
-m_aiFollowing = true;
+//m_aiFollowing = true;
 m_isFollower = true;
 
 #endregion

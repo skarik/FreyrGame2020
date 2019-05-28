@@ -20,6 +20,10 @@ if (exists(o_waterMetaball))
 		{
 			event_user(0);
 		}
+		with (o_shoreMetaball)
+		{
+			event_user(0);
+		}
 		
 		gpu_set_blendmode(bm_normal);
 		surface_reset_target();

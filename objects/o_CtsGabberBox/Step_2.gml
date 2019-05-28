@@ -12,7 +12,7 @@ if (exists(input_actor))
     
     // Limit positions to stay on screen
     uiPosX = clamp(uiPosX, view_xview0 + 20, view_xview0 + view_wview0 - 20 - display_width);
-    uiPosY = clamp(uiPosY, view_yview0 + 64, view_yview0 + view_hview0 - 64 - Gabber_BoxHeight());
+    uiPosY = clamp(uiPosY, view_yview0 + 20, view_yview0 + view_hview0 - 20 - Gabber_BoxHeight());
 }
 else if (exists(o_CtsKeyPoint))
 {
@@ -21,7 +21,7 @@ else if (exists(o_CtsKeyPoint))
     
     // Limit positions to stay on screen
     uiPosX = clamp(uiPosX, view_xview0 + 20, view_xview0 + view_wview0 - 20 - display_width);
-    uiPosY = clamp(uiPosY, view_yview0 + 64, view_yview0 + view_hview0 - 64 - Gabber_BoxHeight());
+    uiPosY = clamp(uiPosY, view_yview0 + 20, view_yview0 + view_hview0 - 20 - Gabber_BoxHeight());
 }
 else if (exists(o_PlayerTest))
 {
@@ -30,7 +30,7 @@ else if (exists(o_PlayerTest))
     
     // Limit positions to stay on screen
     uiPosX = clamp(uiPosX, view_xview0 + 20, view_xview0 + view_wview0 - 20 - display_width);
-    uiPosY = clamp(uiPosY, view_yview0 + 64, view_yview0 + view_hview0 - 64 - Gabber_BoxHeight());
+    uiPosY = clamp(uiPosY, view_yview0 + 20, view_yview0 + view_hview0 - 20 - Gabber_BoxHeight());
 }
 else
 {

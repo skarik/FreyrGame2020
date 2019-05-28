@@ -2,7 +2,7 @@ var dx, dy;
 dx = round(x);
 dy = round(y);
 
-if (!inWater)
+if (!inWater || z_height > 1)
 {
 	depthDrawSelf();
 }

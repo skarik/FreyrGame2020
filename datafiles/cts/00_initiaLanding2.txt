@@ -1,0 +1,165 @@
+#begin
+
+screen
+{
+	type hold
+    rgb 0 0 0
+}
+screen
+{
+	type ctsin
+}
+
+screen
+{
+	type fadein
+    rgb 0 0 0
+}
+
+ai
+{
+	target player
+	style cts
+	command teleport
+	position 670 461
+}
+ai
+{
+	target nathan
+	style cts
+	command teleport
+	position 703 474
+}
+
+lines
+{
+    target  nathan
+    1 Oh good$p, you're alive.
+	2 I thought I might be wasting rags on a dead body.
+}
+emote
+{
+	target nathan
+	emote beat
+}
+wait
+{
+	type time
+	time 2.0
+}
+lines
+{
+    target  nathan
+	1 $bAre$$ you alive?
+}
+
+lines
+{
+    target  player
+    1c Oh good$p, you're alive.
+	1a Nah, I'm just breathing for show.
+	1p Y-yes.
+}
+
+// TODO: Cg right here
+
+lines
+{
+    target  idiot // this means the player
+	
+    1c So uh$p, I don't usually drop from the sky too often.$p Or at least, not where anyone can see.
+	3c Assuming I did...$pnot too bad of a first choice.$p Who exactly are you?
+	
+	1a $s$w$bOi!$$ Don't baby me!$p I can put on me own bandage!
+	2a Who d'ya think yah are?
+	
+	1p U-$puh t-$pthank you so much! I have no idea what happened.
+	2p I-$pI, uh, w-$pwho are you?
+}
+
+lines
+{
+	target nathan
+	1 My name is Nathan.
+	2 At least, that's what everyone calls me.
+}
+
+choice
+{
+	target player
+	1 (Be friendly)
+	1hoverc Well Nathan, my name is [PLAYER], and it's a pleasure.
+	1hovera Aigh't well, I'm [PLAYER], but just call me [PLAYER_NICKNAME].
+	1hoverp I-I'm [PLAYER]! It's nice to meet you Nathan.
+	1goto BeFriendlyA
+	
+	2 (Be reserved)
+	2hoverc Nathan, huh? Well, I'm [PLAYER].
+	2hovera Well, buddy, yah better be on the up an' up.
+	2hoverp Oh, uh, Hi. My crew calls me [PLAYER].
+	2goto BeReservedA
+}
+
+#BeFriendlyA
+	
+	lines
+	{
+		target player
+		1c Well Nathan$p, my name is [PLAYER], and it's a pleasure.
+		2c Thanks for fixing up my face. It's really the only thing I got going for me.
+		
+		1a Aigh't well$p, I'm [PLAYER], but just call me [PLAYER_NICKNAME].
+		2a Yah didn't do anything unholy while I was out, did yah?
+		
+		1p I$p-I'm [PLAYER]! It's nice to meet you Nathan.
+		2p This is a lovely...Home? $pYou...have here?
+	}
+	
+	signal
+	{
+		id offer_handshake
+	}
+	
+	lines
+	{
+		target nathan
+		1c Right.
+		1a Stay still for a moment.
+		1p That's right, this is my home.
+	}
+	
+	goto
+	{
+		target EndChoiceA
+	}
+	
+#BeReservedA
+
+	lines
+	{
+		target player
+		1c Nathan, huh? Well, I'm [PLAYER]. $pAt least, I think I am?
+		2c I think I might have bumped my head pretty hard back there.
+		
+		1a Well, buddy, yah better be on the up an' up.
+		2a Name's [PLAYER_NICKNAME]. $p
+		
+		1p Oh, uh, Hi. My crew calls me [PLAYER].
+		2p ...
+	}
+
+	goto
+	{
+		target EndChoiceA
+	}
+
+#EndChoiceA
+
+screen
+{
+	type ctsout
+}
+
+// And now we open up and let the player move about!
+
+#ended

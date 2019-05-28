@@ -13,7 +13,18 @@ var aimerDistance = min(48.0,
 aimerDistance = 2.0;
 
 camPlayerUpdate(
-	x + lengthdir_x(aimerDistance, aimingDirection),
-	y + lengthdir_y(aimerDistance, aimingDirection) - z_height,
+	round(x + lengthdir_x(aimerDistance, aimingDirection)),
+	round(y + lengthdir_y(aimerDistance, aimingDirection) - z_height),
 	xspeed,
 	yspeed);
+	
+view_update_audio();
+
+
+// HACK: apply certain cutscene commands
+if (m_aiScript_requestCommand == kAiRequestCommand_Move)
+{
+	m_aiScript_requestCommand = null;
+	x = m_aiScript_requestPositionX;
+	y = m_aiScript_requestPositionY;
+}

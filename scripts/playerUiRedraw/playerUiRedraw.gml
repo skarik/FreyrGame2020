@@ -51,7 +51,7 @@ surface_set_target(m_surfaceLightweightBack);
 draw_clear_alpha(c_white, 0.0);
 
 // tillable
-if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking)
+if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking && o_PlayerTest.moEnabled)
 {
 	var tillable = o_PlayerTest.currentTillable;
 	dx = tillable.x - (GameCamera.x - GameCamera.width / 2);
@@ -83,7 +83,7 @@ if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
 }
-if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking)
+if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking && o_PlayerTest.moEnabled)
 {
 	dx = o_PlayerTest.m_till_x - 8 - (GameCamera.x - GameCamera.width / 2);
 	dy = o_PlayerTest.m_till_y - 8 - (GameCamera.y - GameCamera.height / 2);

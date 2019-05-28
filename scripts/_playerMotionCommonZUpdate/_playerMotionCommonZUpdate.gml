@@ -44,3 +44,16 @@ else
 	// Perform the actual speed
 	z_height += zspeed * Time.deltaTime;
 }
+
+// Perform the water dumbass hacks
+if (inWater)
+{
+	if (onGround)
+	{
+		z_height = -4;
+	}
+}
+else
+{
+	z_height = max(0, z_height);
+}

@@ -19,4 +19,3 @@ global.pal_overlay_madd2 = make_color_rgb(128,128,128);
 
 // Set current palette
 global.pal_current = kPaletteCrushed;
-global.pal_current = kPaletteWide;

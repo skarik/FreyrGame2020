@@ -7,7 +7,7 @@ draw_text(0,50,string(o_PlayerTest.stats.m_health) + "/" + string(o_PlayerTest.s
 var dx, dy;
 
 // last usable
-if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker))
+if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker) && o_PlayerTest.moEnabled)
 {
 	var usable = o_PlayerTest.currentUsable;
 	dx = usable.x - (GameCamera.x - GameCamera.width / 2);
@@ -18,7 +18,7 @@ if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker))
 	if (useXoffset == 0)
 		useXoffset = 5;
 		
-	var xSign = (o_PlayerTest.facingAngle == 3) ? -1 : +1;
+	var xSign = (o_PlayerTest.facingIndex == 3) ? -1 : +1;
 	
 	draw_set_color(c_white);
 	draw_set_alpha(1.0);
@@ -27,7 +27,7 @@ if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker))
 	
 	draw_set_font(f_josefinSlab9);
 	draw_set_alpha(1.0);
-	draw_set_halign((o_PlayerTest.facingAngle == 3) ? fa_right : fa_left);
+	draw_set_halign((o_PlayerTest.facingIndex == 3) ? fa_right : fa_left);
 	draw_set_valign(fa_bottom);
 	draw_set_color(c_white);
 	draw_text(dx + useXoffset + 3 * xSign, dy - 1 + useYoffset, usable.m_actionName);

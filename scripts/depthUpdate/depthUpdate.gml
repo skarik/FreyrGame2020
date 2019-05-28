@@ -1,1 +1,1 @@
-depth = -y / 2.0 - (z + z_height) / 2.0;
+depth = -y / 2.0 - (z + z_height *  0.5) / 2.0;

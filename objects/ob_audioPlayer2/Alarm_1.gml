@@ -1,4 +1,4 @@
-/// @description Check if sounds playing
+/// @description Check for destruction
 
 if (m_streamed)
 {
@@ -7,3 +7,5 @@ if (m_streamed)
 		delete(this);
 	}
 }
+
+alarm[1] = 20;

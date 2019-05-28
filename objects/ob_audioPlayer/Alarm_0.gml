@@ -1,0 +1,9 @@
+/// @description begin playing sound
+
+audio_emitter_falloff(m_emitter, falloff_start, falloff_end, falloff_factor);
+audio_emitter_pitch(m_emitter, pitch);
+audio_emitter_gain(m_emitter, gain);
+audio_emitter_position(m_emitter, x, y, 0);
+
+m_instance = audio_play_sound_on(m_emitter, m_sound, loop, priority);
+

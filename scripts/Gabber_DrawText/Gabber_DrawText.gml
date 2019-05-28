@@ -23,7 +23,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
     if ( display_flags[i] != 0 )
     {
         if ( display_flags[i] == ord("0") )
-            penc = exists(o_CtsBlackBoxes) ? c_white : c_black;
+            penc = exists(o_CtsBlackBoxes) ? c_white : make_color_rgb(31, 36, 10);
         if ( display_flags[i] == ord("1") )
             penc = c_red;
         if ( display_flags[i] == ord("2") )
@@ -77,7 +77,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 	}
 	
     // draw the text
-    draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : c_white );
+    draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
     draw_text(dx + penx, dy + peny + 1 + yoffset, char);    
     draw_set_color( penc );
     draw_text(dx + penx, dy + peny + yoffset, char);

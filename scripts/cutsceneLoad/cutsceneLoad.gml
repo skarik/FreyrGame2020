@@ -100,6 +100,10 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_AI;
 		}
+		else if (string_pos("emote", line) != 0)
+		{
+			read_object_type = SEQTYPE_EMOTE;
+		}
 		
         // If an object was read - prepare to read it in
         if (read_object_type != SEQTYPE_NULL)
@@ -301,8 +305,12 @@ while (!file_text_eof(fp))
 			{
 				var type = ds_map_find_value(read_object_map, "type");
 				var rgb = ds_map_find_value(read_object_map, "rgb");
+				var strength = ds_map_find_value(read_object_map, "strength");
+				var length = ds_map_find_value(read_object_map, "length");
 				if (is_undefined(type)) type = "none";
 				if (is_undefined(rgb)) rgb = "0 0 0";
+				if (is_undefined(strength)) strength = "1";
+				if (is_undefined(length)) length = "1";
 				
 				rgb_list = string_split(rgb, " ", true);
 				
@@ -310,10 +318,20 @@ while (!file_text_eof(fp))
                 ds_map_add(new_map, SEQI_SCREEN_R, real(rgb_list[0]));
                 ds_map_add(new_map, SEQI_SCREEN_G, real(rgb_list[1]));
 				ds_map_add(new_map, SEQI_SCREEN_B, real(rgb_list[2]));
+				ds_map_add(new_map, SEQI_SCREEN_SHAKE, real(strength));
+				ds_map_add(new_map, SEQI_SCREEN_LENGTH, real(length));
                 if (type == "fadein")
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_FADEIN);
                 else if (type == "fadeout")
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_FADEOUT);
+				else if (type == "hold")
+                    ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_HOLD);
+				else if (type == "shake")
+                    ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_SHAKE);
+				else if (type == "ctsin")
+                    ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_CTSIN);
+				else if (type == "ctsout")
+                    ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_CTSOUT);
                 else
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_NONE);
 				
@@ -492,6 +510,8 @@ while (!file_text_eof(fp))
 					command = kAiRequestCommand_Animation;
 				else if (command == "move")
 					command = kAiRequestCommand_Move;
+				else if (command == "teleport")
+					command = kAiRequestCommand_Teleport;
 				else
 					command = kAiRequestCommand_Stop;
 				
@@ -538,7 +558,53 @@ while (!file_text_eof(fp))
                 cts_entry_type[cts_entry_count] = SEQTYPE_AI;
                 cts_entry_count++;
 			}
-            
+            else if (read_object_type == SEQTYPE_EMOTE)
+			{
+				// First grab the target
+				var target = ds_map_find_value(read_object_map, "target");
+				if (is_undefined(target))
+					target = null;
+				else if (target == "imp")
+					target = o_PlayerImp;
+				else if (target == "hero" || target == "player" || target == "idiot")
+					target = o_PlayerTest;
+				else if (target = "nathan")
+					target = o_chNathan;
+				else
+					target = null;
+					
+				var targeti = ds_map_find_value(read_object_map, "targeti");
+				if (is_undefined(targeti))
+					targeti = "0";
+				
+				var emote = ds_map_find_value(read_object_map, "emote");
+				if (is_undefined(emote))
+					emote = 0;
+				else if (emote == "beat" || emote == "pause" || emote == "ellipses")
+					emote = 0;
+				else if (emote == "question" || emote == "what" || emote == "?")
+					emote = 1;
+				else if (emote == "exclamation" || emote == "notice" || emote == "!")
+					emote = 2;
+				else if (emote == "heart" || emote == "love")
+					emote = 3;
+				else
+					emote = 0;
+				
+				var new_map = ds_map_create();
+                ds_map_add(new_map, SEQI_TARGET, target);
+                ds_map_add(new_map, SEQI_COUNT, real(targeti));
+				ds_map_add(new_map, SEQI_TYPE, emote);
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_EMOTE;
+                cts_entry_count++;
+			}
+			
             read_state = STATE_READ_LINES;
             continue;
         }

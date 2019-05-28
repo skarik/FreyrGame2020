@@ -2,7 +2,8 @@
 
 if (m_streamed)
 {
-	if (audio_is_playing(m_audio)) {
+	if (audio_is_playing(m_audio))
+	{
 		audio_stop_sound(m_audio);
 	}
 	audio_destroy_stream(m_stream);
@@ -10,4 +11,5 @@ if (m_streamed)
 else
 {
 	// todo: make audio manager.
+	audio_emitter_free(m_emitter);
 }

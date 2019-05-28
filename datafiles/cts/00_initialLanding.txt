@@ -1,0 +1,131 @@
+#begin
+
+screen
+{
+    type hold
+    rgb 0 0 0
+}
+screen
+{
+	type ctsin
+}
+
+signal
+{
+	id player_fall_setup
+}
+
+screen
+{
+    type fadein
+    rgb 0 0 0
+}
+
+flags
+{
+    // sets quest flag 0 to 10. kQidIntroSequence is defined in the game.
+    set IntroSequence 10
+}
+
+// make the player fall
+signal
+{
+	id player_fall
+}
+// wait for player to hit the ground
+wait
+{
+	type input
+	id player_fall
+}
+
+// tiny delay after hit ground
+wait
+{
+	type time
+	time 0.05
+}
+// emote nathan and turn him around
+emote
+{
+	target nathan
+	emote !
+}
+signal
+{
+	id nathan_jump
+}
+wait
+{
+	type time
+	time 1.2
+}
+wait
+{
+	type input
+	id nathan_turn
+}
+emote
+{
+	target nathan
+	emote ?
+}
+wait
+{
+	type time
+	time 1.2
+}
+// make nathan walk into the water now
+ai
+{
+	target nathan
+	style cts
+	command move
+	position 516 632
+}
+wait
+{
+	type time
+	time 2.6
+}
+ai
+{
+	target nathan
+	style cts
+	command stop // Stop the current actions
+}
+
+// let's make nathan start draggin
+signal
+{
+	id round_positions // a hack to make the dragging more smooth
+}
+signal
+{
+	id nathan_drag
+}
+wait
+{
+	type time
+	time 2.0
+}
+
+// and we fade out again
+screen
+{
+    type fadeout
+    rgb 0 0 0
+}
+screen
+{
+    type hold
+    rgb 0 0 0
+}
+
+signal
+{
+	id ended
+}
+
+#ended
+

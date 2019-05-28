@@ -175,6 +175,33 @@ case SEQTYPE_SCREEN:
 				
 			cts_execute_state = 1;
 		}
+		else if (type == SEQSCREEN_HOLD)
+		{
+			var hold = new(o_fxFadeHold);
+				hold.image_blend = make_color_rgb(r, g, b);
+				
+			cts_execute_state = 1;
+		}
+		else if (type == SEQSCREEN_CTSIN)
+		{
+			Cts_ShowBars();
+			cts_entry_current++;
+			cts_execute_state = 0;   
+		}
+		else if (type == SEQSCREEN_CTSOUT)
+		{
+			Cts_HideBars();
+			cts_entry_current++;
+			cts_execute_state = 0;   
+		}
+		else if (type == SEQSCREEN_SHAKE)
+		{
+			effectScreenShake(ds_map_find_value(entry, SEQI_SCREEN_SHAKE),
+							  ds_map_find_value(entry, SEQI_SCREEN_LENGTH),
+							  true);
+			cts_entry_current++;
+			cts_execute_state = 0;   
+		}
 		else
 		{
 			cts_execute_state = 1;
@@ -200,10 +227,14 @@ case SEQTYPE_SCREEN:
 		{
 			if (o_fxFadeOutBanded.image_alpha > 1.1)
 			{
-				delete_delay(o_fxFadeOutBanded, 0);
 				cts_entry_current++;
 			    cts_execute_state = 0;   
 			}
+		}
+		else if (type == SEQSCREEN_HOLD)
+		{	// continue to next sequence
+			cts_entry_current++;
+			cts_execute_state = 0;   
 		}
 		else
 		{
@@ -364,6 +395,28 @@ case SEQTYPE_AI:
 
 	// Debug output
 	debugOut("Doing AI command " + string(command) + " in style " + string(style) + "...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
+case SEQTYPE_EMOTE:
+	// Pull common params
+	var count = ds_map_find_value(entry, SEQI_COUNT);
+    var target = ds_map_find_value(entry, SEQI_TARGET);
+    var emote = ds_map_find_value(entry, SEQI_TYPE);
+        
+	// Find target
+    var target_inst = instance_find(target, count);
+	
+	// Create the emote
+	var emote_fx = new(o_fxEmote);
+		emote_fx.m_target = target_inst;
+		emote_fx.image_index = emote;
+	
+	// Debug output
+	debugOut("Doing emote type " + string(emote) + "..."); 
 	
 	// We're done here. Onto the next event
 	cts_entry_current++;
