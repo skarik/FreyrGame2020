@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_chOasisNpc",
     "eventList": [
-        
+        {
+            "id": "0e8a8cbd-9847-438a-aadf-3c549a6e88e8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "847c71f6-3a58-4626-b7ea-11d577a22f10"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

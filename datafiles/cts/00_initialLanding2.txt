@@ -1,5 +1,7 @@
 #begin
 
+// TODO: under the covers sprite
+
 screen
 {
 	type hold
@@ -9,6 +11,24 @@ screen
 {
 	type ctsin
 }
+ai
+{
+	target player
+	style cts
+	command teleport
+	position 670 463
+}
+ai
+{
+	target nathan
+	style cts
+	command teleport
+	position 690 462
+}
+signal
+{
+	id scene_setup
+}
 
 screen
 {
@@ -16,24 +36,21 @@ screen
     rgb 0 0 0
 }
 
-ai
+music // start with the gentle music track
 {
-	target player
-	style cts
-	command teleport
-	position 670 461
-}
-ai
-{
-	target nathan
-	style cts
-	command teleport
-	position 703 474
+    1 audio/oasis_a0.ogg
+    2 audio/oasis_a1.ogg
+    3 audio/oasis_a2.ogg
+    4 audio/oasis_a3.ogg
+    volume 0.0
+    1volume 1.0
+    pitch 1.0
 }
 
 lines
 {
     target  nathan
+	facing	player
     1 Oh good$p, you're alive.
 	2 I thought I might be wasting rags on a dead body.
 }
@@ -56,21 +73,28 @@ lines
 lines
 {
     target  player
-    1c Oh good$p, you're alive.
+	facing nathan
+    1c Oh, I am now.
 	1a Nah, I'm just breathing for show.
 	1p Y-yes.
 }
 
-// TODO: Cg right here
+//goto
+//{
+//	target EndChoiceA
+//}
+
+// TODO: Cg right here, or have nathan walk up
 
 lines
 {
-    target  idiot // this means the player
+	// this means the player
+    target idiot
 	
-    1c So uh$p, I don't usually drop from the sky too often.$p Or at least, not where anyone can see.
-	3c Assuming I did...$pnot too bad of a first choice.$p Who exactly are you?
+	1c So uh$p, I don't usually drop from the sky too often.$p Or at least, not where anyone can see.
+	2c Assuming I did...$pnot too bad of a first choice.$p Who exactly are you?
 	
-	1a $s$w$bOi!$$ Don't baby me!$p I can put on me own bandage!
+	1a $b $s $kOi!$$ Don't baby me!$p I can put on me own bandage!
 	2a Who d'ya think yah are?
 	
 	1p U-$puh t-$pthank you so much! I have no idea what happened.
@@ -80,7 +104,7 @@ lines
 lines
 {
 	target nathan
-	1 My name is Nathan.
+	1 My name is $3Nathan$0.
 	2 At least, that's what everyone calls me.
 }
 
@@ -155,9 +179,19 @@ choice
 
 #EndChoiceA
 
+music // start with the gentle music track
+{
+    volume 0.0
+    2volume 1.0
+}
+
 screen
 {
 	type ctsout
+}
+signal
+{
+	id ended
 }
 
 // And now we open up and let the player move about!

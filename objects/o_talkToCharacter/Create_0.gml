@@ -16,3 +16,4 @@ m_airFriction = 100;
 m_owner = null;
 m_interacting = false;
 m_followChoice = 0;
+m_interactingCutscene = false;

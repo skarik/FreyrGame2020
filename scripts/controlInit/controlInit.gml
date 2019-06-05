@@ -29,3 +29,8 @@ uPosition = 0.0;
 vPosition = 0.0;
 uPositionPrevious = uPosition;
 vPositionPrevious = vPosition;
+
+uPositionScreen = 0.0;
+vPositionScreen = 0.0;
+
+uvPositionStyle = 0;

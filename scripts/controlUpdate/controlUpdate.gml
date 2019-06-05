@@ -2,8 +2,8 @@
 //@param clear_input  If true, clears all input.
 if (argument0 == false)
 {
-	_controlStructUpdate(xAxis, -keyboard_check(ord("A")) + keyboard_check(ord("D")));
-	_controlStructUpdate(yAxis, -keyboard_check(ord("W")) + keyboard_check(ord("S")));
+	_controlStructUpdate(xAxis, -keyboard_check(ord("A")) + keyboard_check(ord("D")) + deadzone_bias(gamepad_axis_value(0, gp_axislh)));
+	_controlStructUpdate(yAxis, -keyboard_check(ord("W")) + keyboard_check(ord("S")) + deadzone_bias(gamepad_axis_value(0, gp_axislv)));
 	_controlStructUpdate(zAxis, keyboard_check(vk_space));
 	
 	_controlStructUpdate(uAxis, -keyboard_check(vk_left) + keyboard_check(vk_right));
@@ -11,19 +11,19 @@ if (argument0 == false)
 	_controlStructUpdate(wAxis, keyboard_check(vk_space));
 
 //	_controlStructUpdate(aButton, keyboard_check(ord("Z")));
-	_controlStructUpdate(bButton, mouse_check_button(mb_left));
+	_controlStructUpdate(bButton, mouse_check_button(mb_left)   + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderr));
 //	_controlStructUpdate(bButton, keyboard_check(ord("X")));
-	_controlStructUpdate(aButton, keyboard_check(ord("F")));
-	_controlStructUpdate(cButton, mouse_check_button(mb_right));
-	_controlStructUpdate(xButton, keyboard_check(ord("Q")) || keyboard_check(vk_tab));
+	_controlStructUpdate(aButton, keyboard_check(ord("F"))      + gamepad_button_check(0, gp_face2));
+	_controlStructUpdate(cButton, mouse_check_button(mb_right)  + gamepad_button_check(0, gp_shoulderl));
+	_controlStructUpdate(xButton, keyboard_check(ord("Q")) || keyboard_check(vk_tab)  + gamepad_button_check(0, gp_start));
 	_controlStructUpdate(yButton, keyboard_check(ord("E")));
-	_controlStructUpdate(lButton, keyboard_check(ord("K")) + mouse_wheel_down());
-	_controlStructUpdate(rButton, keyboard_check(ord("L")) + mouse_wheel_up());
-	_controlStructUpdate(itemsButton, keyboard_check(ord("I")));
-	_controlStructUpdate(selectButton, mouse_check_button(mb_left) || keyboard_check(vk_enter) );
-	_controlStructUpdate(cancelButton, mouse_check_button(mb_right) || keyboard_check(vk_escape) );
-	_controlStructUpdate(prevUiButton, mouse_wheel_down() );
-	_controlStructUpdate(nextUiButton, mouse_wheel_up() + mouse_check_button(mb_middle) );
+	_controlStructUpdate(lButton, keyboard_check(ord("K")) + mouse_wheel_down()   + gamepad_button_check(0, gp_padl));
+	_controlStructUpdate(rButton, keyboard_check(ord("L")) + mouse_wheel_up()     + gamepad_button_check(0, gp_padr));
+	_controlStructUpdate(itemsButton, keyboard_check(ord("I"))                                   + gamepad_button_check(0, gp_select));
+	_controlStructUpdate(selectButton, mouse_check_button(mb_left) || keyboard_check(vk_enter)   + gamepad_button_check(0, gp_face1));
+	_controlStructUpdate(cancelButton, mouse_check_button(mb_right) || keyboard_check(vk_escape) + gamepad_button_check(0, gp_face2) + + gamepad_button_check(0, gp_face4));
+	_controlStructUpdate(prevUiButton, mouse_wheel_down()                               + gamepad_button_check(0, gp_shoulderl) );
+	_controlStructUpdate(nextUiButton, mouse_wheel_up() + mouse_check_button(mb_middle) + gamepad_button_check(0, gp_shoulderr) );
 	
 	_controlStructUpdate(belt1Button, keyboard_check(ord("1")));
 	_controlStructUpdate(belt2Button, keyboard_check(ord("2")));
@@ -34,8 +34,28 @@ if (argument0 == false)
 	
 	uPositionPrevious = uPosition;
 	vPositionPrevious = vPosition;
-	uPosition = round(window_mouse_get_x() / Screen.pixelScale + GameCamera.view_x);
-	vPosition = round(window_mouse_get_y() / Screen.pixelScale + GameCamera.view_y);
+
+	
+	var analogX = deadzone_bias(gamepad_axis_value(0, gp_axisrh));
+	var analogY = deadzone_bias(gamepad_axis_value(0, gp_axisrv));
+	if (abs(analogX) > 0.3 || abs(analogY) > 0.3 || uvPositionStyle == 1)
+	{
+		uvPositionStyle = 1;
+		//uPosition = round(x + analogX * 128.0);
+		//vPosition = round(y + analogY * 128.0);
+		uPositionScreen += Time.deltaTime * analogX * 128.0;
+		vPositionScreen += Time.deltaTime * analogY * 128.0;
+		uPositionScreen = clamp(uPositionScreen, 0, GameCamera.width);
+		vPositionScreen = clamp(vPositionScreen, 0, GameCamera.height);
+		
+		uPosition = round(uPositionScreen + GameCamera.view_x);
+		vPosition = round(vPositionScreen + GameCamera.view_y);
+	}
+	else
+	{
+		uPosition = round(window_mouse_get_x() / Screen.pixelScale + GameCamera.view_x);
+		vPosition = round(window_mouse_get_y() / Screen.pixelScale + GameCamera.view_y);
+	}
 }
 else
 {

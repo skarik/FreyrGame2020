@@ -8,5 +8,6 @@ debug_line[0] = "";
 debug_line_count = 0;
 
 // Debug mode restart all swatch:
-reset = false;//debug_mode;
+reset = true;//debug_mode;
 
+farm_id = current_time;

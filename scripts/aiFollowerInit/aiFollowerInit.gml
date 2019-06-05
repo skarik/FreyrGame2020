@@ -23,4 +23,6 @@ m_aiFollow_backoffY = 0;
 kAiFollowBeginDistance = 100;
 kAiFollowCatchupDistance = 60;
 
+aipathInit();
+
 #endregion

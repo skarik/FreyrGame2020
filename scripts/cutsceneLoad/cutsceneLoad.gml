@@ -216,17 +216,21 @@ while (!file_text_eof(fp))
                     
                 var facing = ds_map_find_value(read_object_map, "facing");
                 if (is_undefined(facing))
-                    facing = 0;
+                    facing = null;
                 else if (facing == "left")
-                    facing = -1;
+                    facing = SEQI_FACING_LEFT;
                 else if (facing == "right")
-                    facing = 1;
+                    facing = SEQI_FACING_RIGHT;
+				else if (facing == "down")
+                    facing = SEQI_FACING_DOWN;
+				else if (facing == "up")
+                    facing = SEQI_FACING_UP;
                 else if (facing == "imp")
                     facing = o_PlayerImp;
-				else if (target == "hero" || target == "player" || target == "idiot")
-					target = o_PlayerTest;
-				else if (target = "nathan")
-					target = o_chNathan;
+				else if (facing == "hero" || facing == "player" || facing == "idiot")
+					facing = o_PlayerTest;
+				else if (facing = "nathan")
+					facing = o_chNathan;
                 else
                     facing = null;
                     
@@ -236,12 +240,23 @@ while (!file_text_eof(fp))
                 {
                     index += 1;
                     var line = ds_map_find_value(read_object_map, string(index));
+					var linec = ds_map_find_value(read_object_map, string(index) + "c");
+					var linea = ds_map_find_value(read_object_map, string(index) + "a");
+					var linep = ds_map_find_value(read_object_map, string(index) + "p");
                     var wave = ds_map_find_value(read_object_map, string(index)+"wav");
-                    if (is_undefined(line)) break; // No more lines found!
+                    if (is_undefined(line) && is_undefined(linec)
+						&& is_undefined(linea) && is_undefined(linep))
+						break; // No more lines found!
                     if (is_undefined(wave)) wave = "";
                     
                     var new_map = ds_map_create();
                     ds_map_add(new_map, SEQI_LINE, line);
+					if (!is_undefined(linec))
+						ds_map_add(new_map, SEQI_LINE + SEQI_LINE_OFFSET_MALE, linec);
+					if (!is_undefined(linea))
+						ds_map_add(new_map, SEQI_LINE + SEQI_LINE_OFFSET_FEMALE, linea);
+					if (!is_undefined(linep))
+						ds_map_add(new_map, SEQI_LINE + SEQI_LINE_OFFSET_NONBI, linep);
                     ds_map_add(new_map, SEQI_WAV, wave);
                     ds_map_add(new_map, SEQI_TARGET, target);
                     ds_map_add(new_map, SEQI_TYPE, real(targeti));
@@ -486,6 +501,16 @@ while (!file_text_eof(fp))
 				var targeti = ds_map_find_value(read_object_map, "targeti");
 				if (is_undefined(targeti))
 					targeti = "0";
+					
+				var origin = ds_map_find_value(read_object_map, "origin");
+				if (is_undefined(origin))
+					origin = null;
+				else if (origin == "hero" || origin == "player" || origin == "idiot")
+					origin = o_PlayerTest;
+				else if (origin = "nathan")
+					origin = o_chNathan;
+				else
+					origin = null;
 				
 				var style = ds_map_find_value(read_object_map, "style");
 				if (is_undefined(style))
@@ -543,9 +568,10 @@ while (!file_text_eof(fp))
                 ds_map_add(new_map, SEQI_COUNT, real(targeti));
 				ds_map_add(new_map, SEQI_AI_STYLE, style);
 				ds_map_add(new_map, SEQI_AI_COMMAND, command);
-				ds_map_add(new_map, SEQI_AI_POS_X, position_list[0]);
-				ds_map_add(new_map, SEQI_AI_POS_Y, position_list[1]);
+				ds_map_add(new_map, SEQI_AI_POS_X, real(position_list[0]));
+				ds_map_add(new_map, SEQI_AI_POS_Y, real(position_list[1]));
 				ds_map_add(new_map, SEQI_AI_POS_Z, 0.0);
+				ds_map_add(new_map, SEQI_AI_POS_ORIGIN, origin);
 				ds_map_add(new_map, SEQI_AI_ANIMATION, animation);
 				ds_map_add(new_map, SEQI_AI_LOOPED, loop);
 				ds_map_add(new_map, SEQI_AI_SPEED, real(aspeed));

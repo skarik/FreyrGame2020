@@ -22,9 +22,10 @@ view_update_audio();
 
 
 // HACK: apply certain cutscene commands
-if (m_aiScript_requestCommand == kAiRequestCommand_Move)
+if (m_aiScript_requestCommand == kAiRequestCommand_Teleport)
 {
 	m_aiScript_requestCommand = null;
 	x = m_aiScript_requestPositionX;
 	y = m_aiScript_requestPositionY;
+	z_ready = false;
 }

@@ -57,12 +57,32 @@ case SEQTYPE_LINES:
         
         var target_inst = instance_find(target, count);
     
+		// FREYR SPECIFIC:
+		// Replace the line with the player gender-specific line if possible:
+		var pl = getPlayer();
+		if (exists(pl))
+		{
+			var new_line = undefined;
+			var gender = pl.pstats.m_gender;
+			
+			if (gender == kGenderMale)
+				new_line = ds_map_find_value(entry, SEQI_LINE + SEQI_LINE_OFFSET_MALE);
+			if (gender == kGenderFemale)
+				new_line = ds_map_find_value(entry, SEQI_LINE + SEQI_LINE_OFFSET_FEMALE);
+			if (gender == kGenderNonbi)
+				new_line = ds_map_find_value(entry, SEQI_LINE + SEQI_LINE_OFFSET_NONBI);
+				
+			if (!is_undefined(new_line))
+				line = new_line;
+		}
+	
         // Make a talker with all the input info
         var gabber = Cts_MakeGabber(target_inst, "", line);
             gabber.input_priority = !cts_organic;
             gabber.input_disable = cts_organic;
             gabber.input_autoclose = (ending == SEQEND_AUTO);
             
+		// SILENT SKY SPECIFIC:
         // Update talker's sprites
         /*if (target == o_PlayerImp)
         {
@@ -74,13 +94,22 @@ case SEQTYPE_LINES:
         // Make the target face the input direction
         if (exists(target_inst))
         {
-            if (facing == -1 || facing == 1)
-            {
-                target_inst.facingDir = facing;
-            }
+            //if (facing == -1 || facing == 1)
+			if (facing == SEQI_FACING_UP)
+				target_inst.facingDirection = 90;
+			else if (facing == SEQI_FACING_DOWN)
+				target_inst.facingDirection = 270;
+			else if (facing == SEQI_FACING_LEFT)
+				target_inst.facingDirection = 180;
+			else if (facing == SEQI_FACING_RIGHT)
+				target_inst.facingDirection = 0;
+            //{
+            //    target_inst.facingDir = facing;
+            //}
             else if (exists(facing))
             {
-                target_inst.facingDir = sign(facing.x - target_inst.x);
+                //target_inst.facingDir = sign(facing.x - target_inst.x);
+				target_inst.facingDirection = point_direction(target_inst.x, target_inst.y, facing.x, facing.y);
             }
         }
         
@@ -375,6 +404,9 @@ case SEQTYPE_AI:
 	{
 		case kAiRequestCommand_Start:
 			aiscriptRequestStart(target_inst, style);
+			aiscriptRequestPushPosition(target_inst,
+										ds_map_find_value(entry, SEQI_AI_POS_X),
+										ds_map_find_value(entry, SEQI_AI_POS_Y));
 			break;
 		case kAiRequestCommand_Stop:
 			aiscriptRequestStop(target_inst, style);
@@ -386,10 +418,22 @@ case SEQTYPE_AI:
 									 ds_map_find_value(entry, SEQI_AI_SPEED));
 			break;
 		case kAiRequestCommand_Move:
+			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
+			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
+			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (exists(origin))
+			{
+				tx += origin.x;
+				ty += origin.y;
+			}
 			aiscriptRequestMove(target_inst, style,
-								ds_map_find_value(entry, SEQI_AI_POS_X),
-								ds_map_find_value(entry, SEQI_AI_POS_Y),
+								tx, ty,
 								ds_map_find_value(entry, SEQI_AI_SPEED));
+			break;
+		case kAiRequestCommand_Teleport:
+			aiscriptRequestTeleport(target_inst, style,
+									ds_map_find_value(entry, SEQI_AI_POS_X),
+									ds_map_find_value(entry, SEQI_AI_POS_Y));
 			break;
 	}
 

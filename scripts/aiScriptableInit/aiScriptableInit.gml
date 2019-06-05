@@ -22,4 +22,6 @@ m_aiScript_requestAnimation = null;
 m_aiScript_requestAnimationLoop = false;
 m_aiScript_requestSpeed = 0;
 
+aipathInit();
+
 #endregion

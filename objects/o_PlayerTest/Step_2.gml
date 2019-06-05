@@ -11,7 +11,8 @@ var next_area = areaFromRoom(room);
 if (canMove
 	&& next_area != kAreaNoArea && next_area != m_currentArea
 	&& !exists(ob_CtsTalker)
-	&& !exists(o_uiNewArea))
+	&& !exists(o_uiNewArea)
+	&& !exists(o_cts00_2_InitialWalkPast))
 {
 	m_currentAreaTimer += min(0.1, Time.deltaTime);
 	if (m_currentAreaTimer > 1.0)

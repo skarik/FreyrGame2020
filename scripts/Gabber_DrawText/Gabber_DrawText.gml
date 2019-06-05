@@ -2,6 +2,9 @@ var dx, dy;
 dx = uiPosX; 
 dy = uiPosY + (exists(input_actor) ? 10 : 0);
 
+var seed = random_get_seed();
+random_set_seed(floor(current_time / 1000.0 * 30.0));
+
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(smoothstep((image_alpha-0.5)*2.0));
@@ -70,7 +73,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 	if (penwiggle)
 		yoffset += round(sin(current_time / 200.0 + i * 0.76) * 3.4);
 	if (penwigglex)
-		xoffset += round(sin(current_time / 230.0 + i * 0.66) * (penw + 0.4));
+		xoffset += round(sin(current_time / 230.0 - i * 0.96) * (penw + 0.4));
 	if (penshake) {
 		xoffset += round(random_range(-1.4, 1.4));
 		yoffset += round(random_range(-1.4, 1.4));
@@ -78,9 +81,17 @@ for (var i = 0; i < floor(current_display_count); ++i)
 	
     // draw the text
     draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
-    draw_text(dx + penx, dy + peny + 1 + yoffset, char);    
+    draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);    
+	if (penc == c_gold)
+	{	// gold (and other colors) get a special outline
+		draw_set_color( c_black );
+		draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
+		draw_text(dx + penx + xoffset, dy + peny - 1 + yoffset, char);
+		draw_text(dx + penx + 1 + xoffset, dy + peny + yoffset, char);
+		draw_text(dx + penx - 1 + xoffset, dy + peny + yoffset, char);
+	}
     draw_set_color( penc );
-    draw_text(dx + penx, dy + peny + yoffset, char);
+    draw_text(dx + penx + xoffset, dy + peny + yoffset, char);
     
     // do a lookahead for dropping a line if currently on a space
     var override_drop = false;
@@ -109,5 +120,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
         peny += text_dx + 5;
     }
 }
+
+random_set_seed(seed);
 
 draw_set_alpha(1.0);

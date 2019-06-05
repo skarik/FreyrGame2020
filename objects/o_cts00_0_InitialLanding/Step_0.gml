@@ -63,11 +63,19 @@ if (cutsceneHasSignal())
 	{
 		o_chNathan.x -= 6.0 * Time.deltaTime;
 		pl.x -= 6.0 * Time.deltaTime;
+		
+		o_chNathan.onGround = true;
+		o_chNathan.moEnabled = true;
+		o_chNathan.zspeed = 0;
+		o_chNathan.z_height = 0;
 	}
 	else if (signal_id == "ended")
 	{
+		pl.z_height = 0;
+		pl.inWater = false;
+		
 		questSetValue(kQidIntroSequence, 10);
-		room_goto(rm_oasis_town);
+		transition_to(rm_oasis_town);
 	}
 }
 

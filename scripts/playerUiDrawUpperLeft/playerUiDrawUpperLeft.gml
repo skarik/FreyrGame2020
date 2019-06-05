@@ -44,7 +44,7 @@ draw_set_color(c_white);
 draw_set_alpha(1.0);
 
 dx = 40;
-dy = 80;
+dy = 80 - smoothstep(m_inCutsceneBlend) * 200;
 draw_sprite(sui_buttonContext, 0, dx, dy);
 draw_text(dx + 20, dy + 15, "F");
 {
@@ -67,7 +67,7 @@ draw_text(dx + 20, dy + 15, "F");
 
 
 dx = 20;
-dy = 100;
+dy = 100 - smoothstep(m_inCutsceneBlend) * 200;
 draw_sprite(sui_buttonContext, 1, dx, dy);
 if (o_PlayerTest.isBlocking)
 {
@@ -102,7 +102,7 @@ draw_rectangle(dx, dy, dx + o_PlayerTest.stats.m_health, dy + 10, false);*/
 
 // health bar v2
 dx = 5;
-dy = 10;
+dy = 10 - smoothstep(m_inCutsceneBlend) * 200;
 draw_set_alpha(1.0);
 draw_sprite(sui_roboArm, 1, dx, dy);
 var health_percent = clamp(o_PlayerTest.stats.m_health / o_PlayerTest.stats.m_healthMax, 0.0, 1.0);
@@ -111,9 +111,9 @@ draw_sprite_part(sui_roboArm, 2,
 	5, 30 * health_percent,
 	dx + 16, dy + 32 + 30 * (1.0 - health_percent));
 
-// time of day
+// time of day (the astrolabe)
 dx = 60//GameCamera.width - 47;
-dy = 10;
+dy = 10 - smoothstep(saturate(m_inCutsceneBlend - m_astrolabeForceBlend)) * 200;
 /*
 draw_set_font(f_josefinSlab9);
 draw_set_halign(fa_left);

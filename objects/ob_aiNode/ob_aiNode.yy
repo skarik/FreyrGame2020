@@ -1,38 +1,38 @@
 {
-    "id": "1cb4ad58-e645-4b8f-98fe-006eefd10619",
+    "id": "6f0f65f0-6077-48db-8bf9-c924732fab0f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_cts00_InitialLanding",
+    "name": "ob_aiNode",
     "eventList": [
         {
-            "id": "799c460f-42c3-44c5-9869-c77441a421e1",
+            "id": "2a4f3341-3ddc-42d9-8ee0-8825ad168e59",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "1cb4ad58-e645-4b8f-98fe-006eefd10619"
+            "m_owner": "6f0f65f0-6077-48db-8bf9-c924732fab0f"
         },
         {
-            "id": "52e1add2-edbb-4e67-90ad-442c4abf6829",
+            "id": "7ce3ed64-28ba-4478-9677-749560bdc99a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "1cb4ad58-e645-4b8f-98fe-006eefd10619"
+            "eventtype": 2,
+            "m_owner": "6f0f65f0-6077-48db-8bf9-c924732fab0f"
         },
         {
-            "id": "90ddb8a6-12af-4ce8-b552-b54069cffb22",
+            "id": "a600c514-8561-416b-9f62-16bcbfb093e9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 1,
-            "m_owner": "1cb4ad58-e645-4b8f-98fe-006eefd10619"
+            "eventtype": 8,
+            "m_owner": "6f0f65f0-6077-48db-8bf9-c924732fab0f"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -53,6 +53,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "02593ce6-a0ec-471b-a787-3d053751a476",
-    "visible": false
+    "spriteId": "6f6d7f11-7502-4a53-90dc-55853947b100",
+    "visible": true
 }

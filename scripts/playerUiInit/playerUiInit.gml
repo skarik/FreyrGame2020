@@ -1,3 +1,8 @@
+m_inCutscene = false;
+m_inCutsceneBlend = 0.0;
+
+m_astrolabeForceBlend = 0.0;
+
 #region Inventory
 
 m_bag_offsets = [

@@ -28,6 +28,8 @@ current_display_count = 0;
 current_display_delay = 0;
 current_display_time = 0;
 
+current_display_letterShake = false;
+
 image_alpha = 0;
 done_alpha = 0;
 

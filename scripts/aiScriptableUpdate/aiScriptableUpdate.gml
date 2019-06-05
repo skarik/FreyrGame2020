@@ -31,7 +31,7 @@ if (m_aiScript_style == kAiStyle_Follow)
 	aiFollowerUpdate();
 }
 // Update via the scripted AI style
-if (m_aiScript_style == kAiStyle_Scripted)
+else if (m_aiScript_style == kAiStyle_Scripted)
 {
 	// Work on given commands
 	if (m_aiScript_requestCommand == kAiRequestCommand_Move)
@@ -44,10 +44,36 @@ if (m_aiScript_style == kAiStyle_Scripted)
 		_controlStructUpdate(xAxis, 0.0);
 		_controlStructUpdate(yAxis, 0.0);
 	}
-	else if (m_aiScript_requestCommand == kAiRequestCommand_Move)
+	else if (m_aiScript_requestCommand == kAiRequestCommand_Teleport)
 	{
 		m_aiScript_requestCommand = null;
 		x = m_aiScript_requestPositionX;
 		y = m_aiScript_requestPositionY;
+		z_ready = false;
+		z = collision3_get_highest_position(x, y, z);
+		
+		m_aiScript_requestPositionX = 0.0;
+		m_aiScript_requestPositionY = 0.0;
 	}
+}
+// Update the leader AI style
+if (m_aiScript_style == kAiStyle_Lead)
+{
+	// Check for input commands:
+	if (m_aiScript_requestCommand == kAiRequestCommand_Start)
+	{	
+		m_aiLeadering = true;
+		m_aiScript_requestCommand = null;
+		m_aiLeader_targetX = m_aiScript_requestPositionX;
+		m_aiLeader_targetY = m_aiScript_requestPositionY;
+		
+		//show_message(string(m_aiLeader_targetX) + " " + string(m_aiLeader_targetY));
+	}
+	else if (m_aiScript_requestCommand == kAiRequestCommand_Stop)
+	{
+		m_aiLeadering = false;
+		m_aiScript_requestCommand = null;
+	}
+	
+	aiLeaderUpdate();
 }

@@ -1,5 +1,7 @@
 /// @description options
 
+if (singleton_this()) exit;
+
 #region Per Follower Info
 
 m_name = "Nathan";
@@ -21,6 +23,7 @@ m_team = kTeamGood;
 
 aiScriptableInit();
 aiFollowerInit();
+aiLeaderInit();
 
 // override default following: we want to follow
 //m_aiFollowing = true;

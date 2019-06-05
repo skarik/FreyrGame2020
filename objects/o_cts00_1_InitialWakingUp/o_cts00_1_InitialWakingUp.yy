@@ -2,7 +2,7 @@
     "id": "ed6da7ef-82fc-4707-a540-fdd16451ecbb",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_cts00_InitialWakingUp",
+    "name": "o_cts00_1_InitialWakingUp",
     "eventList": [
         {
             "id": "e5a00224-d6be-4268-bece-57c17d274cd3",

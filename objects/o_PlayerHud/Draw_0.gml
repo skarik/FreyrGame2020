@@ -12,7 +12,7 @@ draw_set_color(merge_color(make_color_rgb(128, 128, 128), color0, 0.2));
 draw_rectangle(GameCamera.x - GameCamera.width, GameCamera.y - GameCamera.height, GameCamera.x + GameCamera.width, GameCamera.y + GameCamera.height, false);
 paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, 0.8));
 */
-if (surface_exists(m_surface) && !o_PlayerTest.m_isDead)
+if (surface_exists(m_surface) && !o_PlayerTest.m_isDead && m_inCutsceneBlend < 1.0)
 {
 	var dx = GameCamera.x - GameCamera.width / 2;
 	var dy = GameCamera.y - GameCamera.height / 2;
@@ -37,4 +37,16 @@ if (surface_exists(m_surface) && !o_PlayerTest.m_isDead)
 	// draw lightweight
 	if (surface_exists(m_surfaceLightweight))
 		draw_surface(m_surfaceLightweight, dx, dy);
+}
+
+// Draw the bars at top and bottom
+if (m_inCutsceneBlend > 0.0)
+{
+	var dx = GameCamera.x - GameCamera.width / 2;
+	var dy = GameCamera.y - GameCamera.height / 2;
+	
+	draw_set_color(c_black);
+	draw_set_alpha(1.0);
+	draw_rectangle(dx, dy, dx + GameCamera.width, dy + 20 * m_inCutsceneBlend, false);
+	draw_rectangle(dx, dy + GameCamera.height - 20 * m_inCutsceneBlend, dx + GameCamera.width, dy + GameCamera.height, false);
 }

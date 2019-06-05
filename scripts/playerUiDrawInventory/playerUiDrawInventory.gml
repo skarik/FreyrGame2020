@@ -7,7 +7,7 @@ draw_set_alpha(1.0);
 {
 	var dspace = 25;
 	dx = 5 + smoothstep(m_bag_totalBlend) * (GameCamera.width * 0.5 - 5 - dspace * 6 * 0.5);
-	dy = GameCamera.height - 30;
+	dy = GameCamera.height - 30 + smoothstep(m_inCutsceneBlend) * 80;
 	
 	// save the position
 	m_belt_base_x = dx;

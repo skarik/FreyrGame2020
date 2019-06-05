@@ -1,6 +1,6 @@
 var buffer = argument0;
 
-delete(ob_pickupInventory);
+//delete(ob_pickupInventory);
 
 // Load up number of field bits
 var field_count = buffer_read(buffer, buffer_s32);

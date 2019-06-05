@@ -22,10 +22,10 @@ target 0
 
 }
 
-audio
-{
-    play audio/sfx/ddag.ogg
-}
+//audio
+//{
+//    play audio/sfx/ddag.ogg
+//}
 
 
 goto

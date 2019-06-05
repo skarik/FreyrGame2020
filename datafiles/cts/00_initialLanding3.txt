@@ -1,0 +1,544 @@
+#begin
+
+// This triggers when player tries to either go past Nathan or talk to Nathan.
+
+music // start with the gentle music track for nathan again
+{
+    volume 0.0
+    1volume 1.0
+}
+
+signal
+{
+	id lock_player
+}
+
+ai
+{
+	target nathan 
+	style cts
+	command move
+	origin player
+	position 22 0
+}
+wait
+{
+	type time
+	time 0.4s
+}
+
+lines
+{
+	target player
+	facing nathan
+	
+	1c So, where are we anyway?
+	2c I wasn't going to say anything, but it's, like, really hot.
+	
+	1a Why is it so bloody hot?
+	2a My beautiful complexion is gonna crinkle like a raisin.
+	
+	1p I-it's kind of hot, isn't it?
+	2p Must be a crowded work day on the rigs...
+}
+
+lines
+{
+	target nathan
+	facing player
+	
+	1 What are you talking about?$p It's always hot.
+}
+
+lines
+{
+	target nathan
+	facing up
+	
+	1 Maybe this bandage thing isn't the chapter I should be reading...
+}
+
+lines
+{
+	target player
+	facing nathan
+	
+	1 What $bare$$ you talking about?
+}
+
+music // start with the gentle music track again
+{
+    volume 0.0
+    2volume 1.0
+}
+
+// Now we wait for the player to push outside
+wait
+{
+	type input
+	id on_player_outside
+}
+
+music // bring in the loud track for now
+{
+    volume 0.0
+    4volume 1.0
+}
+
+signal
+{
+	id player_sun_react
+}
+lines
+{
+	target player
+	facing down
+	
+	1c Holy hell...$pis that a sun? A big beautiful$b $hthick$$ sun?
+	1a $sBirdshit on a beam$$, is that a $bsun$$?
+	1p Ah! It's a sun! It's so warm!
+}
+
+ai
+{
+	target nathan
+	style cts
+	command teleport
+	position 704 466
+}
+ai
+{
+	target nathan 
+	style cts
+	command move
+	origin player
+	position 48 20
+}
+wait
+{
+	type time
+	time 1.1
+}
+signal
+{
+	id player_sun_react_end
+}
+
+lines
+{
+	target nathan
+	facing player
+	1 Of course it's a sun...$pare you alright?
+	2 The pages I have don't say anything about falling from the sky...
+}
+
+//goto
+//{
+//	target EndChoiceB
+//}
+
+music // start with the gentle music track
+{
+    volume 0.0
+    3volume 1.0
+}
+
+lines
+{
+	target player
+	facing nathan
+	
+	1c Yeah! I'm fine! I just need uh...$p
+	2c I just need to hit a $2spa$0, or something.
+	3c Could really go for a $2tofu salad sandwich$0.
+	
+	1a I'm great! What makes you think I ain't!
+	2a Just need a bit of $2nosh$0 or something! What yah got?
+	3a I'll take an $2egg salad sandwich$0 if yah got one.
+	
+	1p Oh, I'm okay! Just kind of hungry.
+	2p You have anything to eat? Tarts? Pastries?
+	3p I could eat a $2whole cherry pie$0 right now.
+}
+
+lines
+{
+	target nathan
+	1 I'm$p not sure what $bany$$ of that is.
+	2 If it's food you're asking for, we don't have much to offer.
+}
+
+lines
+{
+	target player
+	1 No food, with all this sun?$p Where are your gardens?
+	1p W-where are all your gardens?
+}
+
+lines
+{
+	target nathan
+	1 What's a $bgarden$$? $pWait, $pI think I've read that word before...
+}
+
+// nathan needs to go back into the tent, then come out
+ai
+{
+	target nathan 
+	style cts
+	command move
+	position 700 455
+}
+wait
+{
+	type time
+	time 1.0
+}
+
+lines
+{
+	target player
+	1 Where is this place? It definitely isn't Primo...
+}
+
+// nathan comes out now
+ai
+{
+	target nathan
+	style cts
+	command teleport
+	position 704 466
+}
+ai
+{
+	target nathan 
+	style cts
+	command move
+	origin player
+	position 30 20
+}
+wait
+{
+	type time
+	time 3.0
+}
+
+lines
+{
+	target nathan
+	facing player
+	1 Before I forget, I found these lying in the sand next to you.
+}
+signal
+{
+	id show_player_astrolabe
+}
+signal
+{
+	id show_player_journal
+}
+
+lines
+{
+	target player
+	1c Bloody hell, my $4astrolabe$0 is all smucked up.
+	2c Thanks mate, I don't know what I'd do without this thing.
+	
+	1a Ah, my bloody $4astrolabe$0, it's all bent outta shape.
+	2a Weren't thinking of stealing it, were yah?
+	
+	1p Oh, it's my $4astrolabe$0! Thank you!
+	2p I wouldn't know what to do without this.
+}
+
+lines
+{
+	target nathan
+	1 I don't really know what that is, so it wouldn't really be much use to me anyway.
+}
+
+// ---------------------------------------------------------------
+// Essentially: part 2 here
+// ---------------------------------------------------------------
+
+// then CHOICE
+
+screen
+{
+	type ctsin
+}
+
+#VegetableConversation
+
+choice
+{
+	target player
+	1 (Be observant)
+	1hoverc Is that the book you mentioned? With the gardens and such?
+	1hovera Is that the book talking about the green stuff?
+	1hoverp Is that the book you mentioned? 
+	1goto BeObservantB
+	
+	2 (Stay quiet)
+	2hover (Man, I've got a bad feeling about all this.)
+	2goto BeQuietB
+}
+
+#BeObservantB
+
+	lines
+	{
+		target player
+		facing nathan
+		
+		1c Is that the book you mentioned? With the gardens and such?
+		1a Is that the book talking about the green stuff?
+		1p Is that the book you mentioned? 
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 U-uh. Well, are gardens a place where you grow food?
+		2 It mentions something about $bseeds$$? Are these the same as these?
+		
+		1p It mentions something about $bseeds$$ as well.
+		2p Is a garden where you grow food?
+	}
+	
+	signal
+	{
+		give_player_seeds
+	}
+	wait
+	{
+		type input
+		id give_player_seeds
+	}
+	
+	lines
+	{
+		target player
+		facing nathan
+		
+		1c Hey, you're pretty smart, aren'tcha? That's right. Gardens are for growing food.
+		2c These look like brassica rapa seeds.
+		
+		1a Oi, you're not dumb after all. Yeah, gardens are fo' growing food and shite.
+		2a Nice, though! These'll do. Think they're turnip seeds.
+		
+		1p Oh! Yeah! Gardens are for growing all sorts of things!
+		2p It doesn't just have to be food! Although...
+	}
+	emote
+	{
+		target nathan
+		emote beat
+	}
+	wait
+	{
+		type time
+		time 2.0
+	}
+	lines
+	{
+		target player
+		facing nathan
+		
+		1c Turnip seeds, it's a bulby looking vegetable.
+		2c Kinda bitter, but has a lot of nutrition.
+		
+		1a Turnips, yah know, like the vegetable?
+		2a Not really big on veggies, but they do in a pinch. 
+		
+		1p Turnips are a kind of vegetable.
+		2p I think in this case, growing some vegetables is probably the most practical thing to do.
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		end auto
+		
+		1 I'm not that smart.$p I just read whatever I can find -
+		1p Vegetables? Can you really make those little seed things into food?$p I'm not sure -
+	}
+	
+	lines
+	{
+		target player
+		facing nathan
+		
+		1c That book is in tatters! It's amazing you could learn anything.
+		1a $b $s $kOi!$$ If I say you're not dumb, you're not dumb!
+		1p Sure! I mean I hope so!
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 Well,$p I $2guess$0 I am one of the only people who can read in Oasis...
+		2 Anyways! Please show me how to grow food!
+		
+		1p If you could, you have to show me how,$p please!
+		2p It would be great to have something like this here.
+	}
+	
+	lines
+	{
+		target player
+		facing nathan
+		
+		1c I-$pI uh, sure! I'd love to!
+		1a Y-$pyeah sure whatever. I'll grow yah some weeds.
+		1p Oh! I can try my best! It's the least I can do! 
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 Ah!$p Good! The best place is probably around where you fell.
+		2 I've never seen that much water in one place before. Plants need water right?
+		3 Um.$p I'll take you there!
+		
+		1p Okay, good! We can try over where you fell.
+		2p I’ve never seen that much water before and plants need water so...
+		3p I can take you there!
+	}
+		
+	goto
+	{
+		target EndChoiceB
+	}
+
+#BeQuietB
+
+	lines
+	{
+		target player
+		facing nathan
+		style inner
+		
+		1 (Man, I've got a bad feeling about all this).
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 The book talks about something called $bseeds$$. I'm kind of guessing a garden is where you put those?
+	}
+	
+	signal
+	{
+		give_player_seeds
+	}
+	wait
+	{
+		type input
+		id give_player_seeds
+	}
+	
+	lines
+	{
+		target player
+		facing nathan
+		
+		1c Yeah, I mean gardens do a lot of things.
+		2c These look like brassica rapa seeds.
+		3c Kinda bitter, but has a lot of nutrition.
+		
+		1a Yeah, gardens are fo' growing food and shite. 
+		2a Nice, these'll do. Think they're turnip seeds. 
+		3a Not really big on veggies, but they do in a pinch.
+		
+		1p Oh! Yeah! Gardens are for growing all sorts of things!
+		2p It doesn't just have to be food! Although...
+		3p I think in this case, growing some vegetables is probably the most practical thing to do.
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 Do you think you could show me how to grow them?
+		2 I'd take that as payment for treating you.
+	}
+	
+	lines
+	{
+		target player
+		facing nathan
+		
+		1 Oh, sure! I don't see why not. 
+		1a Oi, no need to get smarmy.
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 We should try over where you fell.
+		2 You were submerged in quite a lot of water.
+		
+		1a We should try over where you fell.
+		2a You were submerged in quite a lot of water...and what's a smarmy? 
+	}
+	
+	lines
+	{
+		target player
+		facing nathan
+		
+		1 We're definitely going to need that to grow these. Lead the way!
+		1a Oh, nevermind. Just lead the way!
+	}
+	
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 Right! Follow me.
+	}
+	
+	goto
+	{
+		target EndChoiceB
+	}
+
+#EndChoiceB
+
+// ---------------------------------------------------------------
+// end the long dialogue chain, begin with going to the bottom
+// ---------------------------------------------------------------
+
+ai
+{
+	target nathan 
+	style lead
+	command start
+	position 490 1045
+}
+
+screen
+{
+	type ctsout
+}
+
+signal
+{
+	id ended
+}
+
+#ended

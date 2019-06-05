@@ -23,10 +23,14 @@ current_display_time += Time.dt;
 // Step through string and display characters
 if ( current_display_delay <= 0.0 )
 {
+	var display_speed = 60;
+	if (current_display_letterShake)
+		display_speed *= 0.3;
+	
     var previous_display_count = current_display_count;
     if ( image_alpha > 0.5 )
     {
-        current_display_count += Time.dt * 60;
+        current_display_count += Time.dt * display_speed;
     }
     
     // Limit the count
@@ -37,8 +41,20 @@ if ( current_display_delay <= 0.0 )
     for (var i = previous_display_count; i < index; ++i)
     {
         // Do character-based updates
-        if ( display_flags[ceil(i)] == ord("w") )
+        if ( display_flags[ceil(i)] == ord("p") )
             current_display_delay = 0.5; // Wait for half a second
+		if ( display_flags[ceil(i)] == ord("k") )
+			current_display_letterShake = true;
+		if ( display_flags[ceil(i)] == ord("$") )
+		{
+			current_display_letterShake = false;
+		}
+		
+		// Yes, do character based updates
+		if (current_display_letterShake)
+		{
+			effectScreenShake(1.0, 0.05, false);
+		}
     }
 }
 else

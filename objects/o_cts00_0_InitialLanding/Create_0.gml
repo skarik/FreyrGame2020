@@ -1,7 +1,7 @@
 /// @description Check Already Played & Init
 m_initialized = false;
 
-if (questGetValue(kQidIntroSequence) != 0)
+if (questGetValue(kQidIntroSequence) > 0)
 {
 	delete(this);
 	exit;
