@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "0b013a6a-ffe8-4bd2-8186-3961f9098eba",
+            "Value": {
+                "id": "2f122b49-9163-4f84-946e-ae0b50488bf4",
+                "resourcePath": "scripts\\Cts_GabberReset\\Cts_GabberReset.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0b0b31b7-cf68-4a33-a9df-a1230976cf4d",
             "Value": {
                 "id": "0bb6cdc0-8659-4e9f-b355-472ff20fba2c",
@@ -6035,6 +6043,7 @@
         "6802ae42-9599-4bf0-ba4c-609edca1542a",
         "b776665e-3fe9-42f7-ae54-47ec8718d410",
         "35f30743-c456-4b74-87c5-4c92d60a7add",
+        "0b013a6a-ffe8-4bd2-8186-3961f9098eba",
         "448e3175-f1b6-42a3-a070-c8a3c6bf7508",
         "acb70e71-a0cb-489d-9a8e-537b063c9102",
         "09c4f3ee-c207-4e98-bb57-7f174e0820a5",

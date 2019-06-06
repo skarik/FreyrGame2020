@@ -32,9 +32,15 @@ if (argument0 == false)
 	_controlStructUpdate(belt5Button, keyboard_check(ord("5")));
 	_controlStructUpdate(belt6Button, keyboard_check(ord("6")));
 	
+	var nextUPositionMouse = round(window_mouse_get_x() / Screen.pixelScale + GameCamera.view_x);
+	var nextVPositionMouse = round(window_mouse_get_y() / Screen.pixelScale + GameCamera.view_y);
+	if (nextUPositionMouse != uPosition && nextVPositionMouse != vPosition)
+	{
+		uvPositionStyle = 0;
+	}
+	
 	uPositionPrevious = uPosition;
 	vPositionPrevious = vPosition;
-
 	
 	var analogX = deadzone_bias(gamepad_axis_value(0, gp_axisrh));
 	var analogY = deadzone_bias(gamepad_axis_value(0, gp_axisrv));
@@ -53,8 +59,8 @@ if (argument0 == false)
 	}
 	else
 	{
-		uPosition = round(window_mouse_get_x() / Screen.pixelScale + GameCamera.view_x);
-		vPosition = round(window_mouse_get_y() / Screen.pixelScale + GameCamera.view_y);
+		uPosition = nextUPositionMouse;
+		vPosition = nextVPositionMouse;
 	}
 }
 else

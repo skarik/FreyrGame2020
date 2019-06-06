@@ -120,7 +120,9 @@ case SEQTYPE_LINES:
 		debugOut("Doing lines...");
     }
     // No longer exists? We go to the enxt entry.
-    else if (!exists(o_CtsTalkerBox) && !exists(o_CtsGabberBox))
+    //else if (!exists(o_CtsTalkerBox) && !exists(o_CtsGabberBox))
+	else if (  (!exists(o_CtsTalkerBox) /*|| o_CtsTalkerBox.input_fadeout*/)
+			&& (!exists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout))  )
     {
         cts_entry_current++;
         cts_execute_state = 0;   

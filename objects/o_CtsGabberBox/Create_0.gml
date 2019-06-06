@@ -24,6 +24,9 @@ display_font_widths[0] = 0;
 display_font_bold_widths[0] = 0;
 display_width = 150;
 
+display_height_old = 0.0;
+display_height_blend = 1.0;
+
 current_display_count = 0;
 current_display_delay = 0;
 current_display_time = 0;
