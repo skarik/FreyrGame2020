@@ -55,13 +55,21 @@ var follow_y = target_y + m_cam_lookahead_y;
 final_x = clamp(final_x, follow_x - m_cam_leeway_x, follow_x + m_cam_leeway_x);
 final_y = clamp(final_y, follow_y - m_cam_leeway_y, follow_y + m_cam_leeway_y);
 
-// Clamp to the room size
+// Clamp to the room size (needed here for look-ahead)
 final_x = clamp(final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
 final_y = clamp(final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
 
+// Override with focus
+var post_final_x = lerp(final_x, lerp(final_x, m_currentFocusX, m_currentFocusGlue), m_currentFocusBlend);
+var post_final_y = lerp(final_y, lerp(final_y, m_currentFocusY, m_currentFocusGlue), m_currentFocusBlend);
+
+// Clamp to the room size
+post_final_x = clamp(post_final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
+post_final_y = clamp(post_final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
+
 // Apply the rounded position
-GameCamera.x = round(final_x);
-GameCamera.y = round(final_y);
+GameCamera.x = round(post_final_x);
+GameCamera.y = round(post_final_y);
 // Apply the game camera position
 with (GameCamera)
 {

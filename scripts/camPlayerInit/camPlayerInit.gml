@@ -21,3 +21,20 @@ m_cam_last_target_x = 0;
 m_cam_last_target_y = 0;
 m_cam_last_final_x = 0;
 m_cam_last_final_y = 0;
+
+#region Focus State
+// Focuses are specifc points the camera will gravitate to when the player is nearby.
+// They're used for centered things upon a specific area, dramatically.
+
+// Current focus object is only used for switching between focuses
+m_currentFocus = null;
+
+// The actual focus blend state:
+m_currentFocusBlend = 0.0;
+m_currentFocusX = 0.0;
+m_currentFocusY = 0.0;
+// Glue is how much the player is followed rather than the focus.
+// The view doesn't focus at all on 0.0, but doesnt move with the player at all on 1.0.
+m_currentFocusGlue = 1.0;
+
+#endregion

@@ -20,7 +20,7 @@ if (cutsceneHasSignal())
 		pl.animationSpeed = 0.0;
 		pl.sprite_index = pl.kAnimStanding;
 		
-		with (pl) camPlayerCenter(); // Center the camera.
+		with (pl.camera) camPlayerCenter(); // Center the camera.
 		
 		if (!exists(o_chNathan))
 		{

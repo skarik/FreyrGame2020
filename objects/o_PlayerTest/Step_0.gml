@@ -12,12 +12,15 @@ var aimerDistance = min(48.0,
 // fuck the aimer for now:
 aimerDistance = 2.0;
 
-camPlayerUpdate(
-	round(x + lengthdir_x(aimerDistance, aimingDirection)),
-	round(y + lengthdir_y(aimerDistance, aimingDirection) - z_height),
-	xspeed,
-	yspeed);
-	
+var pl = id;
+with (camera)
+{
+	camPlayerUpdate(
+		round(pl.x + lengthdir_x(aimerDistance, pl.aimingDirection)),
+		round(pl.y + lengthdir_y(aimerDistance, pl.aimingDirection) - pl.z_height),
+		pl.xspeed,
+		pl.yspeed);
+}
 view_update_audio();
 
 

@@ -39,6 +39,7 @@ if (global._transition_source != null)
             y += global._transition_dy;
             
             persistent = false;
+			camera.persistent = false;
             inventory.persistent = false;
 			stats.persistent = false;
 			

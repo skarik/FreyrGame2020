@@ -10,6 +10,7 @@ gpu_set_blendenable(true);
 gpu_set_blendmode_ext(bm_dest_color, bm_zero);
 shader_set(sh_colormaskAlphatest); // shader_set is slow as FUCK
 
+// Draw Shadow A
 draw_sprite_part_ext(
 	sprite_index, image_index,
 	0, height - shadowClip,
@@ -19,6 +20,7 @@ draw_sprite_part_ext(
 	merge_color(image_blend, c_black, 0.25),
 	image_alpha);
 	
+// Draw Shadow B
 draw_sprite_part_ext(
 	sprite_index, image_index,
 	0, 0,

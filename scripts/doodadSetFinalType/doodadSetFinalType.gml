@@ -10,6 +10,10 @@ if (doodad_type == ob_doodad)
 			doodad_type = ob_doodadTreeWiggle;
 			break;
 			
+		case s_propRuinsSkull0:
+			doodad_type = (doodad_type == ob_doodad) ? ob_doodadSpecialShadow : doodad_type;
+			break;
+			
 		default:
 			break;
 	}

@@ -5,6 +5,7 @@ with (o_PlayerTest)
     
     persistent = true;
     inventory.persistent = true;
+	camera.persistent = true;
 	stats.persistent = true;
 	quests.persistent = true;
 	pstats.persistent = true;

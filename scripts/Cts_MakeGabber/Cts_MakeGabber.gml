@@ -1,5 +1,8 @@
-/// Cts_MakeGabber(character, name, string)
-// Escape sequences start with $. See engine docs for more info.
+/// @function Cts_MakeGabber(character, name, string)
+/// @description Escape sequences start with $. See engine docs for more info.
+/// @param character
+/// @param name
+/// @param string
 
 // Find existing gabber:
 var existing_gabber = null;

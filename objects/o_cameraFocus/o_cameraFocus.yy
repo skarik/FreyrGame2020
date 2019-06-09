@@ -1,0 +1,91 @@
+{
+    "id": "3d9a09d5-f1a2-4a7f-bde2-8a5e22e87d9a",
+    "modelName": "GMObject",
+    "mvc": "1.0",
+    "name": "o_cameraFocus",
+    "eventList": [
+        {
+            "id": "44d14639-1c8e-47ec-8b6f-f1778753462f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "3d9a09d5-f1a2-4a7f-bde2-8a5e22e87d9a"
+        },
+        {
+            "id": "cf2ae072-eab3-4c1a-817a-c6de8a63552b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "3d9a09d5-f1a2-4a7f-bde2-8a5e22e87d9a"
+        }
+    ],
+    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": null,
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "persistent": false,
+    "physicsAngularDamping": 0.1,
+    "physicsDensity": 0.5,
+    "physicsFriction": 0.2,
+    "physicsGroup": 0,
+    "physicsKinematic": false,
+    "physicsLinearDamping": 0.1,
+    "physicsObject": false,
+    "physicsRestitution": 0.1,
+    "physicsSensor": false,
+    "physicsShape": 1,
+    "physicsShapePoints": null,
+    "physicsStartAwake": true,
+    "properties": [
+        {
+            "id": "b9f10f4d-8599-4c6b-9580-258328caadcc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "128",
+            "varName": "m_focusHalfWidth",
+            "varType": 0
+        },
+        {
+            "id": "1b15e01a-46d4-453a-b8b8-d8e5a4817781",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "96",
+            "varName": "m_focusHalfHeight",
+            "varType": 0
+        },
+        {
+            "id": "29aeef07-f114-4ff4-bf22-9cf14dbc6cdf",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0.9",
+            "varName": "m_focusGlue",
+            "varType": 0
+        }
+    ],
+    "solid": false,
+    "spriteId": "e0eac16f-c8ae-4ba5-94db-16e326441c67",
+    "visible": false
+}

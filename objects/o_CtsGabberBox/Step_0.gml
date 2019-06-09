@@ -102,7 +102,7 @@ if ( input_disable || !input_priority )
 {
     if ( current_display_time > max(1.0, string_length(display_text) / 15) )
     {
-        //input_fadeout = true;
+        input_fadeout = true;
     }
 }
 if ( input_autoclose )
@@ -110,6 +110,6 @@ if ( input_autoclose )
     if ( current_display_count >= string_length(display_text) - 2 &&
          current_display_time > max(0.5, string_length(display_text) / 50) )
     {
-        //input_fadeout = true;
+        input_fadeout = true;
     }
 }

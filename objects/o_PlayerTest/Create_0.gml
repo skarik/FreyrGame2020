@@ -17,11 +17,10 @@ playerMotionInit();
 playerAnimInit();
 playerInteractInit();
 
-camPlayerInit();
-
 // create scriptable vars for cutscenes
 aiScriptableInit();
 
+camera = new(o_PlayerCamera);
 hud = new(o_PlayerHud);
 inventory = new(o_inventory);
 if (!exists(o_PlayerQuest))
