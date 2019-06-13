@@ -2415,6 +2415,14 @@
             }
         },
         {
+            "Key": "6c8f2dec-a919-44ea-a428-8f4323146b83",
+            "Value": {
+                "id": "e8ac300f-6186-424f-b1fd-f62144912099",
+                "resourcePath": "scripts\\point_on_camera\\point_on_camera.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6c911943-6252-44ac-a4bd-5d4b345b38b1",
             "Value": {
                 "id": "8ee6fd54-4d9e-452e-bf92-36852501c40a",
@@ -2791,6 +2799,14 @@
             }
         },
         {
+            "Key": "77c9589b-7def-4144-b0e2-b3847cdb35d1",
+            "Value": {
+                "id": "b67cd55b-b256-4e1c-939c-88d82bad785c",
+                "resourcePath": "scripts\\point_on_camera_wide\\point_on_camera_wide.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "786b4d6b-f4c2-4417-b0f3-46536bfeb311",
             "Value": {
                 "id": "2e13d271-0e14-4027-9f08-e1a46f508232",
@@ -2835,6 +2851,14 @@
             "Value": {
                 "id": "fb55f447-a0f3-484b-a05e-d6264f1d02b6",
                 "resourcePath": "scripts\\_playerMotionDashing\\_playerMotionDashing.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7a1382c6-5226-47f1-8df1-1f83ad66f4cf",
+            "Value": {
+                "id": "42fb8a53-ef98-437c-96a0-f0638548c8da",
+                "resourcePath": "scripts\\doodad_update_visibility\\doodad_update_visibility.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6230,6 +6254,9 @@
         "446efed8-c7db-4e4b-91bd-76a3b9a6b0c6",
         "8af2478d-469c-4985-90d4-4d73836ded44",
         "f92f1b14-bd67-4154-a36e-72df92e0159e",
+        "6c8f2dec-a919-44ea-a428-8f4323146b83",
+        "77c9589b-7def-4144-b0e2-b3847cdb35d1",
+        "7a1382c6-5226-47f1-8df1-1f83ad66f4cf",
         "a63d3702-e5e8-46b4-bb8a-d83d33a39bd3",
         "bca44c75-2ce1-44e6-b49c-5dc8c8d119cf",
         "50bfb340-09ed-40e9-bbd4-52341627a152",
