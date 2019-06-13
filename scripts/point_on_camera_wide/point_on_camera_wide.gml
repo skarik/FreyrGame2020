@@ -11,10 +11,10 @@ var ty = argument1;
 var margin_x = argument2;
 var margin_y = argument3;
 
-if (tx < cam.x - margin_x
-	|| tx > cam.x + cam.width + margin_x
-	|| ty < cam.y - margin_y
-	|| ty > cam.y + cam.height + margin_y)
+if (tx < cam.view_x - margin_x
+	|| tx > cam.view_x + cam.width + margin_x
+	|| ty < cam.view_y - margin_y
+	|| ty > cam.view_y + cam.height + margin_y)
 {
 	return false;	
 }

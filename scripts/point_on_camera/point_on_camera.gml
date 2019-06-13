@@ -7,10 +7,10 @@ var cam = instance_find(GameCamera, 0);
 var tx = argument0;
 var ty = argument1;
 
-if (tx < cam.x
-	|| tx > cam.x + cam.width
-	|| ty < cam.y
-	|| ty > cam.y + cam.height)
+if (tx < cam.view_x
+	|| tx > cam.view_x + cam.width
+	|| ty < cam.view_y
+	|| ty > cam.view_y + cam.height)
 {
 	return false;	
 }
