@@ -1,10 +1,9 @@
+var pl = getPlayer();
 var dx, dy;
 
 draw_set_alpha(0.2);
 draw_set_color(c_gray);
 draw_text(0,50,string(o_PlayerTest.stats.m_health) + "/" + string(o_PlayerTest.stats.m_healthMax));
-
-var dx, dy;
 
 // last usable
 if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker) && o_PlayerTest.moEnabled)
@@ -68,9 +67,26 @@ draw_text(dx + 20, dy + 15, "F");
 
 dx = 20;
 dy = 100 - smoothstep(m_inCutsceneBlend) * 200;
-draw_sprite(sui_buttonContext, 1, dx, dy);
-if (o_PlayerTest.isBlocking)
+if (!o_PlayerTest.isBlocking)
 {
+	draw_sprite(sui_buttonContext, (pl.m_currentInteractionType == kInteractionAttack) ? 1 : 0, dx, dy);
+	if (pl.m_currentInteractionType == kInteractionTill)
+	{
+		draw_sprite(s_itemToolPickaxe, 0, dx + 8, dy + 8);
+	}
+	else if (pl.m_currentInteractionType == kInteractionTill2)
+	{
+		draw_sprite(s_itemToolPickaxe, 0, dx + 8, dy + 8);
+	}
+	else if (pl.m_currentInteractionType == kInteractionUse)
+	{
+		draw_sprite(s_itemResGear, 0, dx + 8, dy + 8);
+	}
+}
+else
+{
+	draw_sprite(sui_buttonContext, 0, dx, dy);
+	
 	var inventory = o_PlayerTest.inventory;
 	var belt = inventory.belt[inventory.belt_selection];
 	// draw the item sprite
@@ -89,6 +105,11 @@ if (o_PlayerTest.isBlocking)
 }
 draw_text(dx + 20, dy + 15, "LMB");
 
+dx = 15;
+dy = 115 - smoothstep(m_inCutsceneBlend) * 200
+draw_sprite(sui_buttonContext, 0, dx, dy);
+draw_sprite(sui_useIcons, o_PlayerTest.isBlocking ? 0 : 1, dx + 8, dy + 7);
+draw_text(dx + 20, dy + 15, "RMB");
 // health bar
 /*dx = 5; dy = 5;
 draw_set_alpha(1.0);

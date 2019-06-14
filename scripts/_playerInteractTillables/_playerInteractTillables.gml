@@ -28,6 +28,14 @@ if (!m_isTilling)
 		tillX = 0;
 		tillY = 0;
 	}
+	
+	// Clear out tillable if blocked
+	if (exists(collision_circle(tillX, tillY, 4, ob_doodadBreakable, false, true)))
+	{
+		currentTillable = null;
+		tillX = 0;
+		tillY = 0;
+	}
 
 	// Check if button is pressed to till the land
 	if (exists(currentTillable))
@@ -80,6 +88,16 @@ if (!m_isTilling)
 		{
 			m_till_filldirt = false;
 		}
+	}
+	
+	// Can we till/fill?
+	if (m_till_filldirt)
+	{
+		m_currentInteractionType = kInteractionTill;
+	}
+	if (m_till_target != null)
+	{
+		m_currentInteractionType = kInteractionTill2;
 	}
 }
 // In the tilling loop!

@@ -93,12 +93,12 @@ if (!cutsceneUpdate())
 			pl.zspeed -= 128.0 * Time.deltaTime;
 			pl.z_height += pl.zspeed * Time.deltaTime;
 			
-			with (pl)
+			with (pl.camera)
 			{
 				camPlayerCenter(); // Center the camera.
-				camPlayerUpdate(round(x), round(y - z_height), 0, 0);
+				camPlayerUpdate(round(pl.x), round(pl.y - pl.z_height), 0, 0);
 				camPlayerCenter(); // Center the camera.
-				camPlayerUpdate(round(x), round(y - z_height), 0, 0);
+				camPlayerUpdate(round(pl.x), round(pl.y - pl.z_height), 0, 0);
 			}
 			
 			// Wait for player to fall to the ground

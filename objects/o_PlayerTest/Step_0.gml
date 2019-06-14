@@ -16,8 +16,8 @@ var pl = id;
 with (camera)
 {
 	camPlayerUpdate(
-		round(pl.x + lengthdir_x(aimerDistance, pl.aimingDirection)),
-		round(pl.y + lengthdir_y(aimerDistance, pl.aimingDirection) - pl.z_height),
+		round(round(pl.x) + lengthdir_x(aimerDistance, pl.aimingDirection)),
+		round(round(pl.y) + lengthdir_y(aimerDistance, pl.aimingDirection) - pl.z_height),
 		pl.xspeed,
 		pl.yspeed);
 }

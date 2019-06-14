@@ -34,3 +34,11 @@ inDelayFrame = false;
 m_usingBook = false;
 m_usingInventory = false;
 m_currentChest = null;
+
+#macro kInteractionAttack 0 
+#macro kInteractionUse 1
+#macro kInteractionTill 2 
+#macro kInteractionTill2 3
+#macro kInteractionDefault -1
+
+m_currentInteractionType = kInteractionAttack;

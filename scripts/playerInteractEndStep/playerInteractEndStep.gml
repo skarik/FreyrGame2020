@@ -84,6 +84,8 @@ if (!m_usingInventory)
 	m_currentChest = null; // hack this in for now
 }
 
+m_currentInteractionType = kInteractionDefault;
+
 _playerInteractTillables(l_canMove && onGround && !inDelayFrame);
 _playerInteractUsables(l_canMove && onGround && !inDelayFrame);
 _playerInteractCrops(l_canMove && onGround && !inDelayFrame);
@@ -110,6 +112,11 @@ if (exists(currentCrop))
 if (exists(currentTillable) || m_isTilling)
 {
 	inCombatMode = false;
+}
+
+if (inCombatMode && m_currentInteractionType == kInteractionDefault)
+{
+	m_currentInteractionType = kInteractionAttack;
 }
 
 // update attacking

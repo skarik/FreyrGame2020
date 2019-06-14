@@ -6,4 +6,6 @@ if (exists(o_PlayerTest))
 else
 {
 	alarm[0] = 1;
+	
+	questSetValue(kQidIntroSequence, m_questIntroSequence);
 }

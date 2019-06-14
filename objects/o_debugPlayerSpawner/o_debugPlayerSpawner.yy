@@ -51,10 +51,24 @@
             "rangeEnabled": false,
             "rangeMax": 10,
             "rangeMin": 0,
-            "resourceFilter": 1023,
+            "resourceFilter": 256,
             "value": "noone",
             "varName": "m_companion",
             "varType": 5
+        },
+        {
+            "id": "d5b73bbb-3c5b-4916-95b2-3200c494cbed",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_questIntroSequence",
+            "varType": 1
         }
     ],
     "solid": false,
