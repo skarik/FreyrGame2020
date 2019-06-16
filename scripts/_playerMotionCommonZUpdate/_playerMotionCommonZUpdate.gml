@@ -22,8 +22,15 @@ else
 	//if (z_prev > z)
 	if (z_ready)
 	{
-		y += z_prev - z;
+		var y_next = y + (z_prev - z);
 		z_height += z_prev - z;
+		
+		// Check the y_next:
+		var z_next = collision3_get_highest_meeting(x, y_next, z);
+		if (abs(z_next - z) < 8)
+		{
+			y = y_next;
+		}
 	}
 	else
 	{

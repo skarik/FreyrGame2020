@@ -1,4 +1,4 @@
-if (!m_isPickingUp && m_pickupCooldown <= 0.0)
+if (m_canPickUp && !m_isPickingUp && m_pickupCooldown <= 0.0)
 {
 	// Get picked up by the player!
 	m_isPickingUp = true;

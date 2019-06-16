@@ -1,28 +1,38 @@
 {
-    "id": "f160ffa3-1d4c-46ec-a0b5-33beceea012f",
+    "id": "f7dd8f92-854b-46e8-8f53-cdaafd027d10",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "ob_collider",
+    "name": "o_ptcNeatLine",
     "eventList": [
         {
-            "id": "7ca92585-0396-40eb-a807-57788888693f",
+            "id": "07b29fb3-fa83-4199-865f-1f9d1d4c0a04",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "f160ffa3-1d4c-46ec-a0b5-33beceea012f"
+            "m_owner": "f7dd8f92-854b-46e8-8f53-cdaafd027d10"
         },
         {
-            "id": "cf4e8f5c-0c6d-4477-a284-e6aba71047da",
+            "id": "5f77f445-d0ff-4cce-bafe-0f7666342a54",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 3,
+            "m_owner": "f7dd8f92-854b-46e8-8f53-cdaafd027d10"
+        },
+        {
+            "id": "5990ede6-4791-4113-84c2-181215bb5791",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 2,
-            "m_owner": "f160ffa3-1d4c-46ec-a0b5-33beceea012f"
+            "eventtype": 8,
+            "m_owner": "f7dd8f92-854b-46e8-8f53-cdaafd027d10"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -41,23 +51,8 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "3b4e5e0a-4e83-4af8-a281-3a8477207fa9",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "16",
-            "varName": "z_height",
-            "varType": 0
-        }
-    ],
+    "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "ab05b3ae-5a12-4d5d-8181-ea7051c21064",
     "visible": true
 }

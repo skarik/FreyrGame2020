@@ -2,6 +2,7 @@
 #macro kItemPickupNormal 0
 #macro kItemPickupSeed 1
 #macro kItemPickupResource 2
+#macro kItemPickupTool 3
 #endregion
 
 #region Counts
