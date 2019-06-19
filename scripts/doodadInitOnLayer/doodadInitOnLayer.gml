@@ -29,13 +29,14 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 			doodad.image_angle = layer_sprite_get_angle(element);
 			doodad.image_blend = layer_sprite_get_blend(element);
 			doodad.image_alpha = layer_sprite_get_alpha(element);
+			doodad.collider = null;
 		
 		doodadSetGlow(doodad);
 		doodadSetShadow(doodad);
 			
 		if (do_collision)
 		{
-			var collider = instance_create_depth(doodad.x, doodad.y, 0, ob_collider);
+			var collider = instance_create_depth(doodad.x, doodad.y, 0, ob_colliderDepth);
 				//collider.z = layerDepth;
 				collider.z = doodad.z;
 				collider.sprite_index = doodad.sprite_index;
@@ -47,6 +48,7 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 				collider.image_blend = doodad.image_blend;
 				collider.image_alpha = doodad.image_alpha;
 				collider.visible = false;
+			doodad.collider = collider;
 		}
 			
 		layer_sprite_destroy(element);

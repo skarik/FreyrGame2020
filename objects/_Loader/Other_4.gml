@@ -53,6 +53,7 @@ window_set_position(128,128);
 // Output some debug info
 debugOut("working_directory: " + working_directory);
 debugOut("program_directory: " + program_directory);
+debugOut("temp_directory: " + temp_directory);
 
 // Finish and go to next room
 

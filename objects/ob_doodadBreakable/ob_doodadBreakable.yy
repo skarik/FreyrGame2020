@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "ob_doodadBreakable",
     "eventList": [
-        
+        {
+            "id": "ac0469a8-b1b7-484d-8bc2-d854c0e232f6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "59fe921c-3ab8-42ef-83f7-8ec74c2972e3"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

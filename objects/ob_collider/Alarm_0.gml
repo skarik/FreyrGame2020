@@ -14,7 +14,7 @@ if (string_pos("colli", layer_name) != 0)
 		var active_z = real(num_str);
 		
 		// Now we want to create depth-collider on our position that has the given depth.
-		var collider = instance_create_layer(x, y, layer, ob_colliderDepth);
+		var collider = instance_create_depth(x, y, depth, ob_colliderDepth);
 			collider.z = active_z;
 			collider.z_height = z_height;
 			collider.sprite_index = sprite_index;
@@ -36,7 +36,7 @@ if (string_pos("colli", layer_name) != 0)
 if (using_infinite_height)
 {
 	// Now we want to create depth-collider on our position that has the given depth.
-	var collider = instance_create_layer(x, y, layer, ob_colliderNoDepth);
+	var collider = instance_create_depth(x, y, depth, ob_colliderNoDepth);
 		collider.sprite_index = sprite_index;
 		collider.image_index = image_index;
 		collider.image_speed = image_speed;

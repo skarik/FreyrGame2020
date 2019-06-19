@@ -2975,6 +2975,14 @@
             }
         },
         {
+            "Key": "7d6c5bc4-8cdb-46aa-b136-4416fd72c974",
+            "Value": {
+                "id": "c2aaceb0-bf57-4abd-a76b-2e6d3339e69a",
+                "resourcePath": "scripts\\doodadDestraOnHit\\doodadDestraOnHit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7d6cb9a0-b0c2-4345-be9a-d64379565557",
             "Value": {
                 "id": "8f48dd0f-ef87-4ec1-9159-6a9b65b2a793",
@@ -5903,6 +5911,14 @@
             }
         },
         {
+            "Key": "ed72715e-aae5-4122-9c33-15326da6137a",
+            "Value": {
+                "id": "c79266a4-28dc-4e6d-b0b6-9dbc8b42c45d",
+                "resourcePath": "scripts\\doodadDestraOnDestroy\\doodadDestraOnDestroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "edc96e42-7c65-4836-9e72-5094e7d73d9b",
             "Value": {
                 "id": "d94c737f-fe50-4acb-a5f6-4e184b6a0cbd",
@@ -6451,6 +6467,8 @@
         "69e4f011-95f1-4a9d-8c67-44dd75871b14",
         "11b3f322-6863-42cd-b93f-01ca36bb95ca",
         "bb5a859d-02b3-42ea-8a10-665e9d838737",
+        "7d6c5bc4-8cdb-46aa-b136-4416fd72c974",
+        "ed72715e-aae5-4122-9c33-15326da6137a",
         "6c8f2dec-a919-44ea-a428-8f4323146b83",
         "77c9589b-7def-4144-b0e2-b3847cdb35d1",
         "7a1382c6-5226-47f1-8df1-1f83ad66f4cf",

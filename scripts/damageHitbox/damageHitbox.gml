@@ -19,11 +19,15 @@ if (Debug.on)
 }
 
 // Perform the collision against both enemies and destroyable blox
-/*with (bloxDestroyable)
+with (ob_doodadBreakable)
 {
     if (id != source && collision_rectangle(x1,y1,x2,y2, id, true, false) != null)
     {
-        chHealth -= damage;
+        // Modify damage based on armor
+		var actualDamage = damageApplyModifiers(id, damage, type);
+		
+		// Perform damage
+        m_health -= actualDamage;
         
         // Generate intersecting BB for the effect spawning
         var c_x1 = max( x1, x-sprite_xoffset );
@@ -32,24 +36,26 @@ if (Debug.on)
         var c_y2 = min( y2, y-sprite_yoffset+sprite_height );
         
         // Create damage ticker
-        var ticker = instance_create(random_range(c_x1,c_x2), random_range(c_y1,c_y2), floaterDmgTicker);
-            ticker.value = damage;
+        var ticker = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, o_floaterDmgTicker);
+            ticker.value = actualDamage;
         
         // Create hit sound
-        var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), Sound_Impact(chBloodtype));
+        //var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(m_bloodType));
         
         // Create hit effect
-        var fx_hit = instance_create(random_range(c_x1,c_x2), random_range(c_y1,c_y2), Effect_Impact(chBloodtype));
-        
+        //var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, effectGetImpactEffect(m_bloodType));
+        // Perform normal OnHit
+		doodadDestraOnHit(id, c_x1, c_y1, c_x2, c_y2);
+		
          // Create knockback
-        if (source.moPlayer)
+        if (source.m_isPlayer)
         {
             // Shake the screen for effect
-            Effect_ScreenShake( 2, 0.1, true );
-            Effect_ControllerShake( 1.0, 0.1, true );
+			effectScreenShake( 3, 0.15, true );
+			effectControllerShake( 1.0, 0.1, true );
         }
     }
-}*/
+}
 with (ob_character)
 {
     if (id != source && ((m_team & source.m_team) == 0) && collision_rectangle(x1,y1,x2,y2, id, true, false) != null)
