@@ -11,6 +11,7 @@
 #macro SEQTYPE_PALETTE 8
 #macro SEQTYPE_SIGNAL 9
 #macro SEQTYPE_EMOTE 10
+#macro SEQTYPE_FLAGS 11
 
 #macro SEQI_SIZE -1
 #macro SEQI_COUNT -1

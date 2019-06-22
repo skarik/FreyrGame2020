@@ -23,5 +23,6 @@ onGround = false;
 moEnabled = true;
 moAnimationPlayback = false;
 moAnimationPlaybackLooped = false;
+moCanMoveUnstuck = true;
 
 #endregion

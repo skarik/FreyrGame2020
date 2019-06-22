@@ -33,3 +33,16 @@ if (collision3_meeting(x, y + yspeed * Time.deltaTime, z + z_height, !onGround))
 	// Stop motion
 	yspeed = 0;
 }*/
+
+// Check for unstuck motion
+if (moCanMoveUnstuck)
+{
+	if (xspeed == 0 && yspeed == 0 && zspeed == 0)
+	{
+		if (collision3_meeting(x, y, z + z_height, false))
+		{
+			// We need to move-unstuck.
+			_characterMoveUnstuck3();
+		}
+	}
+}

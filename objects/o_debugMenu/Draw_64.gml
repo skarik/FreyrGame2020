@@ -12,12 +12,23 @@ draw_set_valign( fa_top );
 draw_text( 10,10, string_hash_to_newline("Press tilde (`) to toggle this menu."));
 
 // Draw the debug info
+draw_set_color( c_black );
+draw_set_alpha(image_alpha * 0.5);
+for (var i = 0; i < Debug.debug_line_count; ++i)
+{
+    //draw_text( 60, 720-60 - (Debug.debug_line_count-i)*10, Debug.debug_line[i] );
+	var dx = 60;
+	var dy = 720-60 - (Debug.debug_line_count-i)*10;
+	draw_rectangle(dx - 1, dy - 1, dx + string_width(Debug.debug_line[i]), dy + string_height("Mg"), false);
+}
+
+draw_set_alpha(image_alpha);
 draw_set_color( c_red );
 draw_set_halign( fa_left );
 draw_set_valign( fa_top );
 for (var i = 0; i < Debug.debug_line_count; ++i)
 {
-    draw_text( 60, 720-60 - (Debug.debug_line_count-i)*10, string_hash_to_newline(Debug.debug_line[i]) );
+    draw_text( 60, 720-60 - (Debug.debug_line_count-i)*10, Debug.debug_line[i] );
 }
 
 // Draw the mouse position

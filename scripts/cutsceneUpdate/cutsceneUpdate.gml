@@ -17,6 +17,9 @@ case SEQTYPE_NULL:
 case SEQTYPE_LABEL:
     cts_entry_current++;
     cts_execute_state = 0;
+	
+	// Set as a no-frame event
+	return _cutsceneUpdateNoFrame();
     break;
 
 case SEQTYPE_WAIT:
@@ -467,6 +470,24 @@ case SEQTYPE_EMOTE:
 	// We're done here. Onto the next event
 	cts_entry_current++;
     cts_execute_state = 0;
+	break;
+	
+case SEQTYPE_FLAGS:
+	// Change the palette
+	var quest_id = ds_map_find_value(entry, SEQI_ID);
+	var quest_value = ds_map_find_value(entry, SEQI_TIME);
+	
+	questSetValue(quest_id, quest_value);
+	
+	// Debug output
+	debugOut("Doing flag set [" + string(quest_id) + "] to " + string(quest_value) + "...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	
+	// Set as a no-frame event
+	return _cutsceneUpdateNoFrame();
 	break;
 }
 

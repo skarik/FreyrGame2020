@@ -104,6 +104,10 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_EMOTE;
 		}
+		else if (string_pos("flags", line) != 0)
+		{
+			read_object_type = SEQTYPE_FLAGS;
+		}
 		
         // If an object was read - prepare to read it in
         if (read_object_type != SEQTYPE_NULL)
@@ -134,16 +138,7 @@ while (!file_text_eof(fp))
                 var actual_map = ds_map_create();
 				
 				var target = ds_map_find_value(read_object_map, "target");
-                if (is_undefined(target))
-                    target = null;
-                else if (target == "imp")
-                    target = o_PlayerImp;
-				else if (target == "hero" || target == "player" || target == "idiot")
-					target = o_PlayerTest;
-				else if (target = "nathan")
-					target = o_chNathan;
-                else
-                    target = null;
+                target = _cutsceneParseTarget(target);
 					
 				var name = ds_map_find_value(read_object_map, "id");
 				
@@ -187,16 +182,7 @@ while (!file_text_eof(fp))
                 // We actually need to make multiple objects
                 // First grab the target
                 var target = ds_map_find_value(read_object_map, "target");
-                if (is_undefined(target))
-                    target = null;
-                else if (target == "imp")
-                    target = o_PlayerImp;
-				else if (target == "hero" || target == "player" || target == "idiot")
-					target = o_PlayerTest;
-				else if (target = "nathan")
-					target = o_chNathan;
-                else
-                    target = null;
+                target = _cutsceneParseTarget(target);
                 var targeti = ds_map_find_value(read_object_map, "targeti");
                 if (is_undefined(targeti))
                     targeti = "0";
@@ -225,14 +211,8 @@ while (!file_text_eof(fp))
                     facing = SEQI_FACING_DOWN;
 				else if (facing == "up")
                     facing = SEQI_FACING_UP;
-                else if (facing == "imp")
-                    facing = o_PlayerImp;
-				else if (facing == "hero" || facing == "player" || facing == "idiot")
-					facing = o_PlayerTest;
-				else if (facing = "nathan")
-					facing = o_chNathan;
-                else
-                    facing = null;
+				else
+					facing = _cutsceneParseTarget(facing);
                     
                 // Now, loop through the input map and select lines
                 var index = 0;
@@ -327,7 +307,7 @@ while (!file_text_eof(fp))
 				if (is_undefined(strength)) strength = "1";
 				if (is_undefined(length)) length = "1";
 				
-				rgb_list = string_split(rgb, " ", true);
+				var rgb_list = string_split(rgb, " ", true);
 				
 				var new_map = ds_map_create();
                 ds_map_add(new_map, SEQI_SCREEN_R, real(rgb_list[0]));
@@ -487,30 +467,14 @@ while (!file_text_eof(fp))
 			{
 				// First grab the target
 				var target = ds_map_find_value(read_object_map, "target");
-				if (is_undefined(target))
-					target = null;
-				else if (target == "imp")
-					target = o_PlayerImp;
-				else if (target == "hero" || target == "player" || target == "idiot")
-					target = o_PlayerTest;
-				else if (target = "nathan")
-					target = o_chNathan;
-				else
-					target = null;
+				target = _cutsceneParseTarget(target);
 					
 				var targeti = ds_map_find_value(read_object_map, "targeti");
 				if (is_undefined(targeti))
 					targeti = "0";
 					
 				var origin = ds_map_find_value(read_object_map, "origin");
-				if (is_undefined(origin))
-					origin = null;
-				else if (origin == "hero" || origin == "player" || origin == "idiot")
-					origin = o_PlayerTest;
-				else if (origin = "nathan")
-					origin = o_chNathan;
-				else
-					origin = null;
+				origin = _cutsceneParseTarget(origin);
 				
 				var style = ds_map_find_value(read_object_map, "style");
 				if (is_undefined(style))
@@ -588,16 +552,7 @@ while (!file_text_eof(fp))
 			{
 				// First grab the target
 				var target = ds_map_find_value(read_object_map, "target");
-				if (is_undefined(target))
-					target = null;
-				else if (target == "imp")
-					target = o_PlayerImp;
-				else if (target == "hero" || target == "player" || target == "idiot")
-					target = o_PlayerTest;
-				else if (target = "nathan")
-					target = o_chNathan;
-				else
-					target = null;
+				target = _cutsceneParseTarget(target);
 					
 				var targeti = ds_map_find_value(read_object_map, "targeti");
 				if (is_undefined(targeti))
@@ -628,6 +583,31 @@ while (!file_text_eof(fp))
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_EMOTE;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_FLAGS)
+			{
+				var set = ds_map_find_value(read_object_map, "set");
+				
+				var set_list = string_split(set, " ", true);
+				var quest_id = ds_map_find_value(global.ctsBackend_QuestIds, set_list[0]);
+				if (is_undefined(quest_id))
+				{
+					var error = "Could not find quest id \"" + set_list[0] + "\" in the listing. please check spelling";
+					show_error(error, false);
+					debugOut(error);
+				}
+				
+				var new_map = ds_map_create();
+                ds_map_add(new_map, SEQI_ID, quest_id);
+                ds_map_add(new_map, SEQI_TIME, real(set_list[1]));
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_FLAGS;
                 cts_entry_count++;
 			}
 			
