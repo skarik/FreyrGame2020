@@ -105,9 +105,9 @@ _playerMotionCommonZUpdate();
 if (onGround)
 {
 	// If motion is not stopped, check for some ledge jumping stuff
-	if (sqr(xspeed) + sqr(yspeed) > 0)
+	if (sqr(xspeed) + sqr(yspeed) > 0 || z_height > 0)
 	{
-		// If up ahread is a wall, see if we can rotate left or right
+		// If up ahread is a wall, see if we can jump off of it
 		var next_x = x + xspeed * Time.deltaTime;
 		var next_y = y + yspeed * Time.deltaTime;
 		if (collision3_meeting(next_x, next_y, z, false))

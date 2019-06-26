@@ -1,6 +1,10 @@
 if (moEnabled)
 {
-	if (isDashing)
+	if (moScriptOverride != null)
+	{
+		script_execute(moScriptOverride);
+	}
+	else if (isDashing)
 	{
 		_playerMotionDashing();
 	}

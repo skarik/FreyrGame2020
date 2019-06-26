@@ -11,7 +11,7 @@ else
 	{
 		var cts = new2(o_CtsTimeExpand);
 			cts.input_priority = this.input_priority; 
-		
+			
         delete(this);
         exit;
     }

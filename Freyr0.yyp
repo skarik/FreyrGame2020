@@ -639,6 +639,14 @@
             }
         },
         {
+            "Key": "1acc4417-567a-4bf1-814f-d2b8c000ca52",
+            "Value": {
+                "id": "a47d547a-a936-4d50-8611-a8ac6992ee7f",
+                "resourcePath": "sounds\\snd_GrappleImpact\\snd_GrappleImpact.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "1c0c5ecc-875d-4e4d-864b-3814bbd20c14",
             "Value": {
                 "id": "3969c952-648b-4dff-9547-fad3de2bd3ba",
@@ -2263,6 +2271,14 @@
             }
         },
         {
+            "Key": "61da62d4-c5a7-443b-bd8f-7b339f27cb59",
+            "Value": {
+                "id": "8261d056-08e2-46ec-85b1-8c9f84ffbf83",
+                "resourcePath": "objects\\o_fakeProjectileGrappleHook\\o_fakeProjectileGrappleHook.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "61de18ee-2bba-482d-9650-57d8a73fac87",
             "Value": {
                 "id": "0bc6f8f1-6705-4331-967f-38c49d9181c3",
@@ -3319,6 +3335,14 @@
             }
         },
         {
+            "Key": "8804ead6-648a-42ac-a547-59c7fee0f7f2",
+            "Value": {
+                "id": "eb00f870-2b36-44e4-9bb7-323c2a1ff648",
+                "resourcePath": "sounds\\snd_GrappleFire\\snd_GrappleFire.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "883fb0aa-3ce3-4695-93ba-a8a2ab308693",
             "Value": {
                 "id": "47474051-2221-4b01-bab1-a8e9f92ec518",
@@ -3859,6 +3883,14 @@
             "Value": {
                 "id": "7e6dddc9-fdd2-47a5-9a45-8d40081e8924",
                 "resourcePath": "scripts\\itemEntryCopy\\itemEntryCopy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9c0de23d-a581-4a65-a754-aa5963109c05",
+            "Value": {
+                "id": "faa92e5e-9fe5-4c7c-ad87-6c52d996bb96",
+                "resourcePath": "scripts\\grappleCheckUse\\grappleCheckUse.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4559,6 +4591,14 @@
             }
         },
         {
+            "Key": "b6989f43-ad2c-4a44-8353-2a5156b6a8a0",
+            "Value": {
+                "id": "72a3cadc-c294-418e-86d5-0dfee3861a64",
+                "resourcePath": "scripts\\grappleOnUse\\grappleOnUse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b6ceb9a7-eeef-4008-8b69-3c9ae357cb49",
             "Value": {
                 "id": "49849f27-19d2-4867-84ef-e6bb9ff87689",
@@ -4660,6 +4700,14 @@
                 "id": "60afa84b-060d-4c05-b1ea-064d36cd7038",
                 "resourcePath": "views\\b9defafb-19a1-41ba-8d1f-001625243d28.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b9fd8458-26b7-45d7-96a5-511eb391bc1f",
+            "Value": {
+                "id": "ced700cf-0743-4ba4-abd2-a54a6e8f1754",
+                "resourcePath": "scripts\\collision3_point_meeting\\collision3_point_meeting.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6223,6 +6271,14 @@
             }
         },
         {
+            "Key": "f9a5a3d9-b484-4796-b1de-b2cf3d25295d",
+            "Value": {
+                "id": "ccccb77c-0b42-4247-988d-45c953244dc3",
+                "resourcePath": "scripts\\_playerMotionGrapple\\_playerMotionGrapple.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9b3ef0f-6d14-453a-9f36-6f0e6f36d89f",
             "Value": {
                 "id": "6e31c6d8-7dfe-4a2b-b444-9162d1996d20",
@@ -6524,6 +6580,7 @@
         "c8117af1-cffe-4a01-b0cf-4c538ac14889",
         "7e5be803-e523-49f7-a1bb-40b75a5ee468",
         "c7a4ec62-6c7c-46f2-8a48-79dbdf876ea5",
+        "b9fd8458-26b7-45d7-96a5-511eb391bc1f",
         "0187aa55-3265-4f4e-a3ab-94933a30f548",
         "4dbe5fe5-d7fc-4347-b58d-905196e73310",
         "e23df9bc-858c-47c9-9caf-0c3fe91b974d",
@@ -6541,6 +6598,7 @@
         "14cc191f-2a15-44a5-9562-3120beda5f09",
         "fb3f2951-5948-4dec-bcac-2f44ee3112a9",
         "f567dcd2-80ef-4646-9f04-613367ea7afb",
+        "f9a5a3d9-b484-4796-b1de-b2cf3d25295d",
         "4c162c72-c4cc-4b15-b393-e4328ae1f9a5",
         "2e875ea2-8ea6-4603-a58f-46e58841da6d",
         "a2a14d96-67de-4544-9cd8-7c7968c5174d",
@@ -6592,6 +6650,8 @@
         "b4ba7c02-51c0-4cf4-aedf-064cf6e6a556",
         "c174095e-49df-4ae5-b545-26b222669828",
         "1ce3ecc6-ae73-4e97-9a97-dd07436bbd1b",
+        "9c0de23d-a581-4a65-a754-aa5963109c05",
+        "b6989f43-ad2c-4a44-8353-2a5156b6a8a0",
         "e2a546ce-ad19-4fd2-8c93-0948bf84d891",
         "d3270700-d484-400f-abee-692a7825e513",
         "e02b8b61-3840-4665-8de5-7ec3350944cd",

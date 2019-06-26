@@ -25,4 +25,6 @@ moAnimationPlayback = false;
 moAnimationPlaybackLooped = false;
 moCanMoveUnstuck = true;
 
+moScriptOverride = null; // Current motion script override
+
 #endregion
