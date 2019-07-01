@@ -1,5 +1,7 @@
 /// @description Constants & render init
 
+if (singleton_this()) exit;
+
 width = 1280;
 height = 720;
 pixelScale = 2;
@@ -28,3 +30,8 @@ new(o_darkness);
 screenshot_auto_enabled = false;
 screenshot_timer = 0;
 screenshot_count = 0;
+
+// Variables for keeping track of record mode
+record_shot_output_count = 0;
+record_shot_count = 0;
+record_shot[0] = 0;

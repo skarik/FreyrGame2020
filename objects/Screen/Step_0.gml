@@ -7,7 +7,6 @@ if (keyboard_check_pressed(vk_f5))
 	screenshot_requested = true;
 }
 
-
 if (screenshot_requested || (screenshot_auto_enabled && surface_exists(m_outputSurface)))
 {
     screenshot_timer += Time.dt;

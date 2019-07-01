@@ -70,6 +70,7 @@ else
 // Animation Update
 
 // update sprite
+var animationIndexPrev = animationIndex;
 animationIndex += animationSpeed * Time.deltaTime;
 
 // Do different animation depending on the number of images (3 versus 4)
@@ -108,5 +109,20 @@ else
 	else
 	{
 		image_index = clamp(animationIndex, 0.0, image_number - 1.0);
+	}
+}
+
+// 
+// Animation effects
+if (sprite_index == kAnimWalking)
+{
+	var walkBasis = floor(image_number / 4);
+	var point0 = animationIndexPrev % walkBasis;
+	var point1 = animationIndex % walkBasis;
+	
+	if ((point0 < walkBasis * 0.25 && point1 >= walkBasis * 0.25)
+		|| (point0 < walkBasis * 0.75 && point1 >= walkBasis * 0.75))
+	{
+		effectOnGroundStep(x, y, point_direction(0, 0, xspeed, yspeed));
 	}
 }

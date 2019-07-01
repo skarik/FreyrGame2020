@@ -2,8 +2,9 @@ var dx, dy;
 dx = uiPosX; 
 dy = uiPosY + (exists(input_actor) ? 10 : 0);
 
-var seed = random_get_seed();
-random_set_seed(floor(current_time / 1000.0 * 30.0));
+var seed = mt19937_get_state();//random_get_seed();
+//random_set_seed(floor(current_time / 1000.0 * 30.0));
+mt19937_seed(floor(current_time / 1000.0 * 30.0));
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
@@ -75,8 +76,8 @@ for (var i = 0; i < floor(current_display_count); ++i)
 	if (penwigglex)
 		xoffset += round(sin(current_time / 230.0 - i * 0.96) * (penw + 0.4));
 	if (penshake) {
-		xoffset += round(random_range(-1.4, 1.4));
-		yoffset += round(random_range(-1.4, 1.4));
+		xoffset += round(mt19937_random_range(-1.4, 1.4));
+		yoffset += round(mt19937_random_range(-1.4, 1.4));
 	}
 	
     // draw the text
@@ -121,6 +122,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
     }
 }
 
-random_set_seed(seed);
+//random_set_seed(seed);
+mt19937_set_state(seed);
 
 draw_set_alpha(1.0);

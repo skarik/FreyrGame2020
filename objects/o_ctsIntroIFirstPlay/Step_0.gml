@@ -192,7 +192,10 @@ m_bubbleTimer += Time.deltaTime * 5.0;
 while (m_bubbleTimer > 1.0)
 {
 	m_bubbleTimer -= 1.0;
-	instance_create_depth(random(room_width), room_height + random(64), 55, o_fxBubbleUnderwater);
+	instance_create_depth(mt19937_random_range(0.0, room_width),
+						  room_height + mt19937_random_range(0.0, 64),
+						  55,
+						  o_fxBubbleUnderwater);
 }
 
 // Fade logo away

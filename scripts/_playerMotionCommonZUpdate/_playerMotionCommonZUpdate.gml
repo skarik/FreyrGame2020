@@ -43,9 +43,21 @@ else
 	// Perform on-ground check
 	if (z_height + zspeed * Time.deltaTime < 0)
 	{
-		zspeed = 0;
+		// Set on ground
 		z_height = 0;
 		onGround = true;
+		
+		// Do on-ground hit
+		if (zspeed < 0)
+		{
+			xspeed = 0.0;
+			yspeed = 0.0;
+			
+			effectOnGroundHit(x, y);
+		}
+		
+		// Stop motion
+		zspeed = 0;
 	}
 	
 	// Perform the actual speed
