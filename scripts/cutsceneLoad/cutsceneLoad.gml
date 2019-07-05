@@ -590,10 +590,11 @@ while (!file_text_eof(fp))
 				var set = ds_map_find_value(read_object_map, "set");
 				
 				var set_list = string_split(set, " ", true);
-				var quest_id = ds_map_find_value(global.ctsBackend_QuestIds, set_list[0]);
+				var quest_name = string_ltrim(string_rtrim(string_fix_whitespace(set_list[0])));
+				var quest_id = ds_map_find_value(global.ctsBackend_QuestIds, quest_name);
 				if (is_undefined(quest_id))
 				{
-					var error = "Could not find quest id \"" + set_list[0] + "\" in the listing. please check spelling";
+					var error = "Could not find quest id \"" + quest_name + "\" in the listing. please check spelling";
 					show_error(error, false);
 					debugOut(error);
 				}

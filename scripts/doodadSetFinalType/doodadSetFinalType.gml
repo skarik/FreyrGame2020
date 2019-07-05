@@ -9,6 +9,10 @@ if (doodad_type == ob_doodad)
 		case s_oasisTree:
 			doodad_type = ob_doodadTreeWiggle;
 			break;
+		
+		case s_oasisTree2:
+			doodad_type = ob_doodadTreeWiggleOasis;
+			break;
 			
 		case s_propRuinsSkull0:
 			doodad_type = (doodad_type == ob_doodad) ? ob_doodadSpecialShadow : doodad_type;

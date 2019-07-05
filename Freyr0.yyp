@@ -2255,6 +2255,14 @@
             }
         },
         {
+            "Key": "5fede730-95ae-4468-a506-466a6f28bcca",
+            "Value": {
+                "id": "c978e70e-62be-4a00-9648-7ce826d23a5f",
+                "resourcePath": "sprites\\spt_dustPoofer\\spt_dustPoofer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "60933d88-8817-4369-9da4-b5add7134285",
             "Value": {
                 "id": "b3c3f071-7253-442d-8634-4f8c5297d8b7",
@@ -3359,6 +3367,14 @@
             }
         },
         {
+            "Key": "878a2d5a-a9f3-4677-9fae-9ddeb5466eb8",
+            "Value": {
+                "id": "79b261b0-2014-4f55-ba52-46d4882e3937",
+                "resourcePath": "objects\\o_ptcFootstep\\o_ptcFootstep.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "87c9d094-b9d6-4da9-9bc6-e115e94bfe1c",
             "Value": {
                 "id": "8c7c3ef6-0627-40e1-a7ec-095406937498",
@@ -3932,6 +3948,14 @@
                 "id": "7e6dddc9-fdd2-47a5-9a45-8d40081e8924",
                 "resourcePath": "scripts\\itemEntryCopy\\itemEntryCopy.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9bba3801-c5d3-47d3-b121-ec20f25103c0",
+            "Value": {
+                "id": "024a3e80-4a28-47fb-a8ec-52aa21bcd644",
+                "resourcePath": "objects\\ob_doodadTreeWiggleOasis\\ob_doodadTreeWiggleOasis.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5383,6 +5407,14 @@
             }
         },
         {
+            "Key": "d2e0caf1-1908-4549-a91f-643c5f4f7fbb",
+            "Value": {
+                "id": "78c2ccb7-257b-430c-a5a2-e55ad9b1d0bd",
+                "resourcePath": "sprites\\s_oasisTree2\\s_oasisTree2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d2e2ec0f-762d-4421-967a-0d74f0b61e83",
             "Value": {
                 "id": "fbb6e620-0751-4556-ac0e-0f20108efe7e",
@@ -5884,6 +5916,14 @@
                 "id": "47aac1d5-5b0b-4c51-866f-2597a57e3ab2",
                 "resourcePath": "tilesets\\tileset1\\tileset1.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "e59053f4-acce-4686-8a19-40f531caf402",
+            "Value": {
+                "id": "6137ee73-09ee-47ee-b496-3c1c5078c47b",
+                "resourcePath": "objects\\o_debugRecordOverlay\\o_debugRecordOverlay.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6575,9 +6615,9 @@
         "abed9f1a-27a0-47eb-828e-53333e4055e1",
         "18b79b51-5705-4b33-b20d-642a772b34c9",
         "cd6ae5d0-43c0-4d83-b192-3dab55988ff0",
+        "75ed31bd-3f7c-4161-b1e3-e914a64eb8ac",
         "99af6c88-2109-4317-9783-c07328779503",
         "a6bad8e1-8cbb-4e0c-8c11-ab0dc53ee8c2",
-        "75ed31bd-3f7c-4161-b1e3-e914a64eb8ac",
         "61689f8e-9a11-4025-969f-849de5e2f22d",
         "39a08a28-267a-4ad3-acc3-645634fc13c9",
         "a0d51b51-d2d0-49e7-9f11-df14527a6504",

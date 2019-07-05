@@ -116,7 +116,7 @@ else
 // Animation effects
 if (sprite_index == kAnimWalking)
 {
-	var walkBasis = floor(image_number / 4);
+	var walkBasis = max(1.0, floor(image_number / 4));
 	var point0 = animationIndexPrev % walkBasis;
 	var point1 = animationIndex % walkBasis;
 	

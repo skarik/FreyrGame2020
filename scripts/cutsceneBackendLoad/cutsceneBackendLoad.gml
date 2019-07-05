@@ -21,15 +21,16 @@ while (!file_text_eof(fp))
 		sequence_keyvalue = string_fix_whitespace(sequence_keyvalue);
 		
 		var keyvalue_pos_space = string_pos(" ", sequence_keyvalue);
-		var sequence_value = string_rtrim(string_copy(sequence_keyvalue, 1, keyvalue_pos_space));
-		var sequence_key = string_copy(sequence_keyvalue, keyvalue_pos_space, string_length(sequence_keyvalue) - keyvalue_pos_space);
-		sequence_key = string_rtrim(string_ltrim(sequence_key));
-		sequence_key = real(sequence_key);
+		var sequence_key = string_rtrim(string_copy(sequence_keyvalue, 1, keyvalue_pos_space));
+		var sequence_value = string_copy(sequence_keyvalue, keyvalue_pos_space, string_length(sequence_keyvalue) - keyvalue_pos_space);
+		sequence_value = string_rtrim(string_ltrim(sequence_value));
+		sequence_value = real(sequence_value);
 		
 		// Save the key-value pair
 		global.ctsBackend_QuestIds[?sequence_key] = sequence_value;
+		//ds_map_add(global.ctsBackend_QuestIds, sequence_key, sequence_value);
 		
-		debugOut("loaded cts backend quest id: " + "\"" + sequence_value + "\" = \"" + string(sequence_key) + "\"");
+		debugOut("loaded cts backend quest id: " + "\"" + sequence_key + "\" = \"" + string(sequence_value) + "\"");
 	}
 }
 
