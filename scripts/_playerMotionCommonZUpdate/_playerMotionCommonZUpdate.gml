@@ -53,7 +53,10 @@ else
 			xspeed = 0.0;
 			yspeed = 0.0;
 			
-			effectOnGroundHit(x, y);
+			if (abs(zspeed) > 24.0)
+			{
+				effectOnGroundHit(x, y);
+			}
 		}
 		
 		// Stop motion

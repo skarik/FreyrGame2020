@@ -5,3 +5,4 @@
 #macro kBloodElectricity	0x08
 #macro kBloodStone			0x10
 #macro kBloodStraw			0x20
+#macro kBloodMetal			0x40

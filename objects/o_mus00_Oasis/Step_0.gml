@@ -2,11 +2,12 @@
 
 // todo: actually play the music
 
+
 var pl = getPlayer();
 
-with (ob_musicPlayer)
-{
-	if (m_fadeOut) continue;
+//with (ob_musicPlayer)
+//{
+	//if (m_fadeOut) continue;
 			
 	if (exists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
 	{
@@ -25,4 +26,6 @@ with (ob_musicPlayer)
 		m_trackVolume[2] = 1.0;
 		m_trackVolume[3] = 0.0;
 	}
-}
+//}
+
+event_inherited();

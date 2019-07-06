@@ -86,7 +86,7 @@ with (ob_character)
         m_isStunned = true;
         m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025);
         // Add knockback
-        var kickback = damage * 16;
+        var kickback = damage * 16 * kKickbackAmount;
         /*if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )
             xspeed = sign(x - source.x) * kickback * 0.5;
         // Push in the air for effect

@@ -4,6 +4,8 @@ zspeed = 0;
 
 #region Constants
 
+kKickbackAmount = 1.0;
+
 kMoveSpeed = 120;
 kMoveSpeedStunPercent = 0.05;
 kMoveSpeedWaterPercent = 0.50;
