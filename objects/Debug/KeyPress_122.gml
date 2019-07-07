@@ -4,9 +4,12 @@ if (recordModeEnabled == false)
 {
 	recordModeEnabled = true;
 	captureModeEnabled = true;
+	ms_prev_on = on;
+	on = false;
 }
 else
 {
+	on = ms_prev_on;
 	recordModeEnabled = false;
 	
 	// Save out to GIF

@@ -43,6 +43,13 @@ if (!moAnimationPlayback)
 		animationSpeed = 0.0;
 		animationIndex = floor((image_number / 4.0 - 0.01) * saturate(dashTimer / kDashTime));
 	}
+	else if (isAttacking)
+	{
+		//kAnimAttack1
+		animationSpeed = 0.0;
+		//animationIndex = floor((image_number / 4.0 - 0.01) * saturate(meleeAtkTimer));
+		// animation handled in movestate (dumbly)
+	}
 	else
 	{
 		var move_speed = sqrt(sqr(xspeed) + sqr(yspeed));

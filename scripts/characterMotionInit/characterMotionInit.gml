@@ -2,6 +2,8 @@ xspeed = 0;
 yspeed = 0;
 zspeed = 0;
 
+isAttacking = false;
+
 #region Constants
 
 kKickbackAmount = 1.0;

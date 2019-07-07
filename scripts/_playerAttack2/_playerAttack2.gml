@@ -76,3 +76,7 @@ if (meleeAtkTimer > meleeAtk2Time)
 	meleeAtkTimer = 0.0;
 	isAttacking = false;
 }
+
+// update animation
+sprite_index = kAnimAttack1;
+animationIndex = floor((image_number / 4.0 - 0.01) * saturate(meleeAtkTimer / meleeAtk2Time));

@@ -65,6 +65,20 @@
             "value": "noone",
             "varName": "m_wireTarget",
             "varType": 5
+        },
+        {
+            "id": "8812b0ce-2db9-42c5-87d4-8ee924d270a3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_wireDropOffset",
+            "varType": 0
         }
     ],
     "solid": false,

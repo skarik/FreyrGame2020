@@ -37,7 +37,7 @@ for (var i = 0; i <= divs; ++i)
 	var dy1 = lerp(y1, y2, blend0);
 	
 	// drop the wire
-	dy1 += sqrt(drop) * sqrt(dist) * 0.5;
+	dy1 += sqrt(drop) * (sqrt(dist) + m_wireDropOffset) * 0.5;
 	// make it sway!
 	dx1 += drop * sin(i * 0.04 + current_time * 0.001 + id) * sqrt(dist) * 0.3;
 	
