@@ -15,6 +15,7 @@ z = collision3_get_highest_position(x, y, 0);
 kBoidStateIdle = 0;
 kBoidStateFly = 1;
 aiState = kBoidStateIdle;
+aiFlyTimer = 0;
 
 xspeed = 0.0;
 yspeed = 0.0;
@@ -27,3 +28,4 @@ m_perchY = y;
 m_perchZ = z;
 m_perchZ_height = z_height;
 m_perchFacing = image_xscale;
+m_perchProp = place_meeting(x, y, ob_doodad);
