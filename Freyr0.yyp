@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "168499bc-f710-4056-834c-2c479db5d5ef",
+            "Value": {
+                "id": "cd7d8a05-4de3-4408-91b1-3662b8eea821",
+                "resourcePath": "scripts\\particleZMotionInit\\particleZMotionInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "16ecaaa0-20d8-4a38-a19c-2e1ca4a7a82d",
             "Value": {
                 "id": "dadbbfee-1ee5-48e4-aad2-39cd6cca6cb1",
@@ -724,6 +732,14 @@
                 "id": "6a0d95fe-93d4-44c7-a74f-6f93a06eb83b",
                 "resourcePath": "sprites\\s_propLantern0\\s_propLantern0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1dcd64d2-4b18-4872-8659-8dccbb978594",
+            "Value": {
+                "id": "f82720ee-81ff-477f-86e8-0ca0d42fdb14",
+                "resourcePath": "scripts\\particleZDraw\\particleZDraw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1487,6 +1503,14 @@
             }
         },
         {
+            "Key": "3bda313d-3845-407a-a8c9-4bcade7956e9",
+            "Value": {
+                "id": "276b3685-d982-4cc1-bcce-650950d56752",
+                "resourcePath": "sprites\\spt_pebbleRock\\spt_pebbleRock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3caef66e-b8c8-49da-ac0c-10dcf570d91b",
             "Value": {
                 "id": "6e7e1827-73de-45b8-b600-444eef97bc3c",
@@ -2084,6 +2108,14 @@
                 "id": "b4f8ce25-ba9b-4839-951d-7a379aa2abe5",
                 "resourcePath": "rooms\\rm_test_grapple\\rm_test_grapple.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "5538374a-22ea-4fdf-8a50-8f24f300f3e3",
+            "Value": {
+                "id": "a3e80888-cec5-4df6-8979-0d2ee8e24d27",
+                "resourcePath": "objects\\o_ptcPebble\\o_ptcPebble.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5599,6 +5631,14 @@
             }
         },
         {
+            "Key": "d622efec-1a48-41e5-96fc-8eecceb958e6",
+            "Value": {
+                "id": "4a60a763-c7a5-4ac7-8399-d353ea74363c",
+                "resourcePath": "views\\d622efec-1a48-41e5-96fc-8eecceb958e6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d6be9dd2-a2e6-41fd-9a85-19cc5d062015",
             "Value": {
                 "id": "b3fccbeb-22b5-4886-8940-9777f63a0d6f",
@@ -6631,6 +6671,14 @@
             }
         },
         {
+            "Key": "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
+            "Value": {
+                "id": "3227e26d-1bf6-4d74-b95f-70346398b051",
+                "resourcePath": "scripts\\particleZMotionUpdate\\particleZMotionUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
             "Value": {
                 "id": "c5815035-556c-432f-9752-cf9701481baa",
@@ -7008,6 +7056,9 @@
         "26ac9912-449c-47c3-8d8c-545a029f417d",
         "f14c019e-2a5d-44c0-a8c3-5f9fca987e8a",
         "a95333bf-91b2-47d4-9131-b00bff960d13",
+        "168499bc-f710-4056-834c-2c479db5d5ef",
+        "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
+        "1dcd64d2-4b18-4872-8659-8dccbb978594",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""

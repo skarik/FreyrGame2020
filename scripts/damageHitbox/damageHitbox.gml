@@ -45,7 +45,7 @@ with (ob_doodadBreakable)
         // Create hit effect
         //var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, effectGetImpactEffect(m_bloodType));
         // Perform normal OnHit
-		doodadDestraOnHit(id, c_x1, c_y1, c_x2, c_y2);
+		doodadDestraOnHit(source, c_x1, c_y1, c_x2, c_y2);
 		
          // Create knockback
         if (source.m_isPlayer)

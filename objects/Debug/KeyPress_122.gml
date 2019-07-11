@@ -50,7 +50,7 @@ else
 		for (var i = 0; i < record_shot_count; ++i)
 		{
 			//gif_add_surface(gif, record_shot[i], 2);
-			gif_add_surface(gif, temp_surface[i], 3);
+			gif_add_surface(gif, temp_surface[i], 2, 0, 0, 3);
 		}
 		// Save
 		gif_save(gif, output_filename);
