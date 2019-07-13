@@ -10,6 +10,8 @@ if (onGround)
 	{
 		onGround = false;
 	}
+	
+	time_off_ground = 0.0;
 }
 else
 {
@@ -53,7 +55,7 @@ else
 			xspeed = 0.0;
 			yspeed = 0.0;
 			
-			if (abs(zspeed) > 24.0)
+			if (abs(zspeed) > 64.0 || time_off_ground > 0.8)
 			{
 				effectOnGroundHit(x, y);
 			}
@@ -65,6 +67,9 @@ else
 	
 	// Perform the actual speed
 	z_height += zspeed * Time.deltaTime;
+	
+	// Count time off ground
+	time_off_ground += Time.deltaTime;
 }
 
 // Perform the water dumbass hacks

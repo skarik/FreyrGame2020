@@ -81,6 +81,10 @@ with (ob_character)
         
         // Create hit effect
         var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, effectGetImpactEffect(m_bloodType));
+			fx_hit.m_source = id;
+			fx_hit.m_health = stats.m_health;
+			fx_hit.m_healthMax = stats.m_healthMax;
+			fx_hit.m_damage = actualDamage;
         
         // Mark as stunned
         m_isStunned = true;

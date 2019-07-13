@@ -1,8 +1,11 @@
 xspeed = 0;
 yspeed = 0;
 zspeed = 0;
+time_off_ground = 0.0;
 
 isAttacking = false;
+isStunned = false;
+isBusyInteracting = false;
 
 #region Constants
 

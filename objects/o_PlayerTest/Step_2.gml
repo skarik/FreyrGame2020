@@ -1,7 +1,7 @@
 event_inherited();
 
 // animation update
-playerAnimLateUpdate();
+//playerAnimLateUpdate();
 
 // usable & combat update
 playerInteractEndStep();

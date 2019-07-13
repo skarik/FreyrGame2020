@@ -37,7 +37,12 @@ facingIndex = warpi(round(facingDirection / 90) + 1, 0, 4);
 // Animation Select
 if (!moAnimationPlayback)
 {
-	if (isDashing)
+	if (isStunned)
+	{
+		sprite_index = kAnimStun;
+		animationSpeed = 5.0;
+	}
+	else if (isDashing)
 	{
 		sprite_index = kAnimRolling;
 		animationSpeed = 0.0;
