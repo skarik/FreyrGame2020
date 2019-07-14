@@ -1031,6 +1031,14 @@
             }
         },
         {
+            "Key": "2797c370-254a-4d48-baeb-0ff856acede0",
+            "Value": {
+                "id": "f7ad74d8-a86d-4764-b4c5-6e7f5a79d554",
+                "resourcePath": "objects\\o_tallgrassRendererOverplayer\\o_tallgrassRendererOverplayer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "27a8b8b1-72ea-4a55-badf-cc62e0314c51",
             "Value": {
                 "id": "cadd5113-0fce-4056-a1d6-2694c7d5b4d0",
@@ -1172,6 +1180,14 @@
                 "id": "4680af97-ad6b-4868-9f7e-8f2a4e659693",
                 "resourcePath": "shaders\\sh_repaletteScene\\sh_repaletteScene.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "2bb2023a-d0cf-4a1b-8e4d-5ee2357a05af",
+            "Value": {
+                "id": "9a6fba3c-05cd-42c7-9055-0226194a581a",
+                "resourcePath": "objects\\ob_areaTallGrass\\ob_areaTallGrass.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1463,6 +1479,14 @@
             }
         },
         {
+            "Key": "3a197c63-e58f-4fdc-9c34-0826d15953fb",
+            "Value": {
+                "id": "f44b5d83-ca57-4a6f-a704-b8a21ccdabcb",
+                "resourcePath": "sprites\\sc_64r_gold\\sc_64r_gold.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3a410dec-ce62-4c80-96dc-1dbfa2dd3f1b",
             "Value": {
                 "id": "79d3aec3-6829-44a0-a3fe-0ea542063b40",
@@ -1602,7 +1626,7 @@
             "Key": "3f647b02-a636-4319-b6e5-3ebafc51a6b8",
             "Value": {
                 "id": "aa69a2a9-044d-454d-8ac7-f52196baaa3f",
-                "resourcePath": "sprites\\sc_32x32_gold\\sc_32x32_gold.yy",
+                "resourcePath": "sprites\\sc_32x32_blond\\sc_32x32_blond.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2207,6 +2231,14 @@
             }
         },
         {
+            "Key": "56c3a6b1-4a87-4f6c-a730-23bf57418e9d",
+            "Value": {
+                "id": "9a17d954-96f6-4bcb-b18b-3e7e1f3ef064",
+                "resourcePath": "objects\\o_tallgrassMetalball64\\o_tallgrassMetalball64.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "56defef2-7f45-4c04-8c8f-285880ba8c61",
             "Value": {
                 "id": "60118cc5-ae0b-4a6f-8489-ea62e253d17d",
@@ -2284,6 +2316,14 @@
                 "id": "243d8a20-42e6-48b5-bf51-dd8ade70f6e6",
                 "resourcePath": "scripts\\timeofdayGetHour\\timeofdayGetHour.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5a133193-0dec-48f0-b481-be6266483d17",
+            "Value": {
+                "id": "86f22d74-bb8d-4f89-9c0e-9fe72078acc1",
+                "resourcePath": "objects\\o_tallgrassRendererShadow\\o_tallgrassRendererShadow.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3287,6 +3327,14 @@
             }
         },
         {
+            "Key": "8053711d-717e-4e67-b72c-98ee666f782d",
+            "Value": {
+                "id": "125656c3-5411-4ac1-bbd0-4c52f5b780a8",
+                "resourcePath": "views\\8053711d-717e-4e67-b72c-98ee666f782d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8069aa28-c713-42f2-a91d-2d0892f36252",
             "Value": {
                 "id": "f6b3129e-e092-4445-84b7-5c373e60cabb",
@@ -3562,7 +3610,7 @@
             "Key": "8870efa8-3833-4450-addb-709c071481e7",
             "Value": {
                 "id": "428ef0c5-b0c0-49e7-84f0-7030f3781305",
-                "resourcePath": "sprites\\sc_32x32c_gold\\sc_32x32c_gold.yy",
+                "resourcePath": "sprites\\sc_32x32c_blond\\sc_32x32c_blond.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4308,6 +4356,14 @@
                 "id": "efe6b9ef-cb77-4862-a511-431f6d7085c8",
                 "resourcePath": "objects\\o_fxFadeHold\\o_fxFadeHold.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a289baa8-ce98-4483-8306-b475a5587405",
+            "Value": {
+                "id": "528a19c1-61ee-4d4d-b660-4bc581deea49",
+                "resourcePath": "sprites\\sui_hiddenEdges\\sui_hiddenEdges.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5060,6 +5116,14 @@
                 "id": "78c85f9b-4d15-4cd7-8f5e-35b137717410",
                 "resourcePath": "scripts\\doodadDestraHitParticleCount\\doodadDestraHitParticleCount.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bc1219a6-101a-4af8-8700-a6b5b01af9ce",
+            "Value": {
+                "id": "e2199132-3152-4fcc-a990-80c48228d854",
+                "resourcePath": "sprites\\s_assetTallGrass\\s_assetTallGrass.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6452,6 +6516,14 @@
                 "id": "0058de12-38d9-4d4c-b566-1404358d2d03",
                 "resourcePath": "sprites\\sc_tentChonk\\sc_tentChonk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f067ab13-0ab7-4cc2-bf92-ba5cab9d87d9",
+            "Value": {
+                "id": "461f0ced-66c2-436c-81ca-daf4bdb42377",
+                "resourcePath": "objects\\o_tallGrassRenderer\\o_tallGrassRenderer.yy",
+                "resourceType": "GMObject"
             }
         },
         {

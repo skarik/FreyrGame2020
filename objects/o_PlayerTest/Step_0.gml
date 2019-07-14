@@ -32,3 +32,12 @@ if (m_aiScript_requestCommand == kAiRequestCommand_Teleport)
 	y = m_aiScript_requestPositionY;
 	z_ready = false;
 }
+
+// do hidden code
+isHidden = false;
+if (position_meeting(x, y, ob_areaTallGrass)
+	&& position_meeting(x - 7, y, ob_areaTallGrass) && position_meeting(x + 7, y, ob_areaTallGrass)
+	&& position_meeting(x, y - 4, ob_areaTallGrass) && position_meeting(x, y + 4, ob_areaTallGrass))
+{
+	isHidden = true;
+}

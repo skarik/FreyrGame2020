@@ -18,3 +18,8 @@ farm_id = current_time;
 // Debug effects
 var record_overlay = new(o_debugRecordOverlay);
 	record_overlay.persistent = true;
+	
+
+// status
+gifWidth = 560;//Screen.width;// / Screen.pixelScale;
+gifHeight = 560;//Screen.height;// / Screen.pixelScale;

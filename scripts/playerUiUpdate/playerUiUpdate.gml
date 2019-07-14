@@ -14,3 +14,14 @@ if (m_inCutsceneBlend < 1.0)
 
 	playerUiUpdateInventoryManagement();
 }
+
+// edge blend
+if (getPlayer().isHidden)
+{
+	m_hiddenEdgeBlend += Time.deltaTime;
+}
+else
+{
+	m_hiddenEdgeBlend -= Time.deltaTime;
+}
+m_hiddenEdgeBlend = saturate(m_hiddenEdgeBlend);

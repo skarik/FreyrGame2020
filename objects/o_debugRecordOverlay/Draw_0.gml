@@ -8,8 +8,11 @@ with (Debug)
 		with (GameCamera)
 		{
 			var kGifUpscale = 2.0;
-			var kGifWidth = 560; //Screen.width / Screen.pixelScale;
-			var kGifHeight = 560; //Screen.height / Screen.pixelScale; 
+			//var kGifWidth = 560; //Screen.width / Screen.pixelScale;
+			//var kGifHeight = 560; //Screen.height / Screen.pixelScale; 
+			
+			var kGifWidth = Debug.gifWidth;//Screen.width / Screen.pixelScale;
+			var kGifHeight = Debug.gifHeight;//Screen.height / Screen.pixelScale; 
 		
 			draw_set_color(c_lime);
 			draw_rectangle(

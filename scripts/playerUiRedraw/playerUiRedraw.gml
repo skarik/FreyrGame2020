@@ -180,5 +180,22 @@ playerUiDrawBook();
 	draw_set_alpha(1.0);
 }
 
+// draw the overlay over that
+if (m_hiddenEdgeBlend > 0.0)
+{
+	// below it all draw the overlay
+	
+	var offx = sqr(1.0 - m_hiddenEdgeBlend) * 64 + 48;
+	var offy = sqr(1.0 - m_hiddenEdgeBlend) * 64 + 48;
+	draw_sprite_ext(sui_hiddenEdges, 0, -offx, -offy,
+		1.0, 1.0, 0.0, c_white, m_hiddenEdgeBlend * 0.7);
+	draw_sprite_ext(sui_hiddenEdges, 1, GameCamera.width + offx, -offy,
+		-1.0, 1.0, 0.0, c_white, m_hiddenEdgeBlend * 0.7);
+	draw_sprite_ext(sui_hiddenEdges, 2, GameCamera.width + offx, GameCamera.height + offy,
+		-1.0, -1.0, 0.0, c_white, m_hiddenEdgeBlend * 0.7);
+	draw_sprite_ext(sui_hiddenEdges, 1, -offx, GameCamera.height + offx,
+		1.0, -1.0, 0.0, c_white, m_hiddenEdgeBlend * 0.7);
+}
+
 draw_set_alpha(1.0); // clear here for now
 surface_reset_target();

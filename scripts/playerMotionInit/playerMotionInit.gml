@@ -20,6 +20,7 @@ kDashInAir = true;
 #endregion
 
 isBusyInteracting = false; // Controlled by script
+isHidden = false;
 isBlocking = false;
 isDashing = false;
 

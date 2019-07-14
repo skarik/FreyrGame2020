@@ -25,8 +25,12 @@ else
 		
 		// Preprocess gif
 		var kGifUpscale = 2.0;
-		var kGifWidth = 560; //Screen.width / Screen.pixelScale;
-		var kGifHeight = 560; //Screen.height / Screen.pixelScale; 
+		//var kGifWidth = 560; //Screen.width / Screen.pixelScale;
+		//var kGifHeight = 560; //Screen.height / Screen.pixelScale; 
+		
+		var kGifWidth = Debug.gifWidth;//Screen.width / Screen.pixelScale;
+		var kGifHeight = Debug.gifHeight;//Screen.height / Screen.pixelScale; 
+		
 		var temp_surface = array_create(0);
 		for (var i = 0; i < record_shot_count; ++i)
 		{
