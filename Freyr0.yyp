@@ -711,6 +711,14 @@
             }
         },
         {
+            "Key": "1c62f844-3d88-4374-a4e9-8aca3d5b0764",
+            "Value": {
+                "id": "23d08997-1a8d-4127-b185-ead85c76b0dc",
+                "resourcePath": "rooms\\rm_mithra\\rm_mithra.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1c8132cf-2323-4025-96b1-e7fd4566d97f",
             "Value": {
                 "id": "15001c49-6ead-482f-9cd5-46a0c8fef109",
@@ -1911,6 +1919,14 @@
             }
         },
         {
+            "Key": "4910689a-fc10-4668-b3c0-e7b8161511f1",
+            "Value": {
+                "id": "188beff9-7e70-4c65-841f-2356cfb466aa",
+                "resourcePath": "views\\4910689a-fc10-4668-b3c0-e7b8161511f1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4a838067-c8f7-4084-8d1e-7885e6b6713a",
             "Value": {
                 "id": "286196d1-7668-4668-b5c4-941cd5783c31",
@@ -2234,7 +2250,7 @@
             "Key": "56c3a6b1-4a87-4f6c-a730-23bf57418e9d",
             "Value": {
                 "id": "9a17d954-96f6-4bcb-b18b-3e7e1f3ef064",
-                "resourcePath": "objects\\o_tallgrassMetalball64\\o_tallgrassMetalball64.yy",
+                "resourcePath": "objects\\o_tallgrassMetaball64\\o_tallgrassMetaball64.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2364,6 +2380,14 @@
                 "id": "71bbf725-4931-4174-9df9-c8c928782f3d",
                 "resourcePath": "sprites\\s_charOasis1Stand\\s_charOasis1Stand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5ce48eff-7e75-46d1-9d25-8f74d9eb4029",
+            "Value": {
+                "id": "bbf2a357-e425-4f08-9363-d7ddb5fb731c",
+                "resourcePath": "shaders\\sh_wavyGrass\\sh_wavyGrass.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -4295,6 +4319,14 @@
             }
         },
         {
+            "Key": "a032df8d-a514-407b-9e88-ba1698d359e7",
+            "Value": {
+                "id": "f698ff8f-10c0-446c-aead-5d750ad0e87a",
+                "resourcePath": "views\\a032df8d-a514-407b-9e88-ba1698d359e7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a0c63a4d-a6db-4466-af43-02d0fa4ed3c3",
             "Value": {
                 "id": "cc7f3bc4-be4a-40e9-9706-c9fd4028a48b",
@@ -4820,6 +4852,14 @@
                 "id": "91c01293-65d9-465e-ae46-c339af56a8a7",
                 "resourcePath": "objects\\o_fxControllershake\\o_fxControllershake.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b2365bdb-2d8b-463b-9917-45880727a620",
+            "Value": {
+                "id": "0e8e678c-d578-4696-bbd6-f226e790dd67",
+                "resourcePath": "views\\b2365bdb-2d8b-463b-9917-45880727a620.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5572,6 +5612,14 @@
                 "id": "d2b95f77-e77d-4750-bbc1-fd206fa7b31f",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cc9b11c2-1c92-4f3c-93e2-067247d4762b",
+            "Value": {
+                "id": "a0506331-cec6-4ad5-9b51-d3ebd4eb1ffe",
+                "resourcePath": "sprites\\sc_32x32_gold\\sc_32x32_gold.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6804,6 +6852,14 @@
                 "id": "605bcbcb-837a-4aab-b2cb-9effa51f749a",
                 "resourcePath": "scripts\\fieldLoadState\\fieldLoadState.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fad9953f-b0a1-45b3-b7a1-bec8abedad01",
+            "Value": {
+                "id": "d29c9a4b-ca4d-4320-960b-cf2b02beadbb",
+                "resourcePath": "objects\\o_tallgrassMetasquare32\\o_tallgrassMetasquare32.yy",
+                "resourceType": "GMObject"
             }
         },
         {

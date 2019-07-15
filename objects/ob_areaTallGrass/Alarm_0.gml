@@ -33,6 +33,8 @@ m_grassBits = array_create(0);
 m_grassBitsCount = 0;
 
 var grass_sprite = s_assetTallGrass;
+var grass_width = sprite_get_width(grass_sprite);
+var grass_height = sprite_get_height(grass_sprite);
 
 for (var ix = cx1; ix < cx2; ix += random_range(2, 6))
 {
@@ -77,3 +79,70 @@ for (var ix = cx1; ix < cx2; ix += random_range(2, 6))
 		}
 	}
 }
+
+// Now, create a mesh
+vertex_format_begin();
+vertex_format_add_position();
+//vertex_format_add_colour();
+vertex_format_add_custom(vertex_type_float4, vertex_usage_color);
+vertex_format_add_texcoord();
+m_vformat = vertex_format_end();
+
+m_vbuf = vertex_create_buffer();
+vertex_begin(m_vbuf, m_vformat);
+for (var i = 0; i < m_grassBitsCount; ++i)
+{
+	var i_grass = m_grassBits[i];
+	var i_grass_uv = sprite_get_uvs(grass_sprite, i_grass[2]);
+	var i_grass_width = grass_width * i_grass_uv[6] * i_grass[3];
+	var i_grass_height = grass_height * i_grass_uv[7];
+	
+	/*vertex_position(m_vbuf, i_grass[0], i_grass[1] - grass_height);
+	vertex_color(m_vbuf, c_white, 1.0);
+	vertex_texcoord(m_vbuf, i_grass_uv[0], i_grass_uv[1]);
+	
+	vertex_position(m_vbuf, i_grass[0] + grass_width, i_grass[1] - grass_height);
+	vertex_color(m_vbuf, c_white, 1.0);
+	vertex_texcoord(m_vbuf, i_grass_uv[2], i_grass_uv[1]);
+	
+	vertex_position(m_vbuf, i_grass[0], i_grass[1]);
+	vertex_color(m_vbuf, c_white, 1.0);
+	vertex_texcoord(m_vbuf, i_grass_uv[0], i_grass_uv[3]);
+	
+	vertex_position(m_vbuf, i_grass[0] + grass_width, i_grass[1]);
+	vertex_color(m_vbuf, c_white, 1.0);
+	vertex_texcoord(m_vbuf, i_grass_uv[2], i_grass_uv[3]);*/
+	
+	// Triangle 1
+	vertex_position(m_vbuf, i_grass[0], i_grass[1] - i_grass_height); // 0
+	vertex_float4(m_vbuf, i_grass[0], i_grass[1], i, i_grass_height);
+	vertex_texcoord(m_vbuf, i_grass_uv[0], i_grass_uv[1]);
+	
+	vertex_position(m_vbuf, i_grass[0] + i_grass_width, i_grass[1] - i_grass_height); // 1
+	vertex_float4(m_vbuf, i_grass[0], i_grass[1], i, i_grass_height);
+	vertex_texcoord(m_vbuf, i_grass_uv[2], i_grass_uv[1]);
+	
+	vertex_position(m_vbuf, i_grass[0], i_grass[1]); // 2
+	vertex_float4(m_vbuf, i_grass[0], i_grass[1], i, 0.0);
+	vertex_texcoord(m_vbuf, i_grass_uv[0], i_grass_uv[3]);
+	
+	// Triangle 2
+	vertex_position(m_vbuf, i_grass[0], i_grass[1]); // 2
+	vertex_float4(m_vbuf, i_grass[0], i_grass[1], i, 0.0);
+	vertex_texcoord(m_vbuf, i_grass_uv[0], i_grass_uv[3]);
+	
+	vertex_position(m_vbuf, i_grass[0] + i_grass_width, i_grass[1] - i_grass_height); // 1
+	vertex_float4(m_vbuf, i_grass[0], i_grass[1], i, i_grass_height);
+	vertex_texcoord(m_vbuf, i_grass_uv[2], i_grass_uv[1]);
+	
+	vertex_position(m_vbuf, i_grass[0] + i_grass_width, i_grass[1]); // 3
+	vertex_float4(m_vbuf, i_grass[0], i_grass[1], i, 0.0);
+	vertex_texcoord(m_vbuf, i_grass_uv[2], i_grass_uv[3]);
+	
+}
+vertex_end(m_vbuf);
+vertex_freeze(m_vbuf);
+
+// Get shader stuff
+//u_samplerGrassTexture = shader_get_sampler_index(sh_wavyGrass, "samplerGrassTexture");
+u_animationValues = shader_get_uniform(sh_wavyGrass, "u_animationValues");

@@ -2,7 +2,7 @@
     "id": "56c3a6b1-4a87-4f6c-a730-23bf57418e9d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_tallgrassMetalball64",
+    "name": "o_tallgrassMetaball64",
     "eventList": [
         
     ],
