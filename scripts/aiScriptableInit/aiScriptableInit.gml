@@ -4,6 +4,7 @@
 #macro kAiStyle_Scripted 1
 #macro kAiStyle_Follow 2
 #macro kAiStyle_Lead 3
+#macro kAiStyle_Custom 11
 
 #macro kAiRequestCommand_Start 0
 #macro kAiRequestCommand_Stop 1
@@ -23,5 +24,10 @@ m_aiScript_requestAnimationLoop = false;
 m_aiScript_requestSpeed = 0;
 
 aipathInit();
+
+aiFollowerInit();
+aiLeaderInit();
+aiCustomInit();
+aicommonCombatInit();
 
 #endregion

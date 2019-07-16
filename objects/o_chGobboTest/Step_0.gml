@@ -1,7 +1,7 @@
 /// @description AI
 
 
-
+aiScriptableUpdate();
 
 
 // Inherit the parent event

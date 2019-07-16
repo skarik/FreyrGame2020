@@ -12,3 +12,7 @@ stats.m_healthPrev = stats.m_health;
 
 
 aiScriptableInit();
+kAiScriptDefaultStyle = kAiStyle_Custom;
+m_aiCustom_Script = aiGobboPatrolUpdate;
+aiGobboPatrolInit();
+alarm[0] = 4;

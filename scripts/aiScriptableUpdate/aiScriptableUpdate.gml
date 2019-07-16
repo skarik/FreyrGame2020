@@ -77,3 +77,9 @@ if (m_aiScript_style == kAiStyle_Lead)
 	
 	aiLeaderUpdate();
 }
+
+// Update the cutstom AI style
+if (m_aiScript_style == kAiStyle_Custom)
+{
+	aiCustomUpdate();
+}
