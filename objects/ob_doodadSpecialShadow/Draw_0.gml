@@ -12,7 +12,7 @@ draw_sprite_ext(
 	x, y,
 	image_xscale, image_yscale,
 	image_angle,
-	merge_color(image_blend, c_black, 0.125),
+	shadowSillohuetteColor(),
 	image_alpha);
 	
 shader_reset();

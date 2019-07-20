@@ -13,6 +13,10 @@ if (string_pos("colli", layer_name) != 0)
 		// Create a number from the end of the string
 		var active_z = real(num_str);
 		
+		// Check for negative
+		if (string_pos("N", layer_name) != 0)
+			active_z = -active_z;
+		
 		// Now we want to create depth-collider on our position that has the given depth.
 		var collider = instance_create_depth(x, y, depth, ob_colliderDepth);
 			collider.z = active_z;

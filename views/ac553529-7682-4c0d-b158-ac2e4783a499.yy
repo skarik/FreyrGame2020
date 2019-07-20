@@ -6,7 +6,8 @@
     "children": [
         "05844340-b620-4691-ab6c-39123587166a",
         "ac14aa61-bd24-48b7-a072-102fdf7c7928",
-        "22598710-8a21-4b62-9be3-70b851134eb4"
+        "22598710-8a21-4b62-9be3-70b851134eb4",
+        "a73a7876-78dc-45ef-a3b5-b07d776bbe25"
     ],
     "filterType": "GMSprite",
     "folderName": "fauna",

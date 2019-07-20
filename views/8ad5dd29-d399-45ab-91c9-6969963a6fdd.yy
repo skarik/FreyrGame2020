@@ -26,7 +26,14 @@
         "8dce53ad-ad64-45ff-beda-13f6e8e4cf92",
         "942055e2-d018-4c57-a3d5-570117e357e7",
         "dc7b6ec5-cc3f-4220-be52-45600a5c7e4a",
-        "de83640c-ef0f-483d-ac1f-5d317fdc0e0c"
+        "de83640c-ef0f-483d-ac1f-5d317fdc0e0c",
+        "5a6e8ad2-58d6-4ef9-9bba-776376d25959",
+        "97f990e8-7163-4d63-8635-814080db86d9",
+        "9e47a22b-a2cb-4891-85e9-2edf8f52fa84",
+        "10139b35-ef33-4361-8b94-1afa6c997c54",
+        "09e77aab-809a-4ab3-8b87-39331cb5c322",
+        "bfc43c08-37af-4046-826d-55d37558eee0",
+        "2adfafbb-40ff-478e-939f-7419d4e148c4"
     ],
     "filterType": "GMSprite",
     "folderName": "desert and ruins",

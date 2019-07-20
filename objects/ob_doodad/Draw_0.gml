@@ -17,7 +17,7 @@ draw_sprite_part_ext(
 	sprite_get_width(sprite_index), shadowClip,
 	x - sprite_xoffset, y + shadowOffset - sprite_yoffset + (height - shadowClip),
 	image_xscale, image_yscale,
-	merge_color(image_blend, c_black, 0.25),
+	shadowOcclusionColor(),
 	image_alpha);
 	
 // Draw Shadow B
@@ -27,7 +27,7 @@ draw_sprite_part_ext(
 	sprite_get_width(sprite_index), sprite_yoffset,
 	x - sprite_xoffset, y - sprite_yoffset + sprite_yoffset + height * 0.5,
 	image_xscale, -image_yscale * 0.5,
-	merge_color(image_blend, c_black, 0.125),
+	shadowSillohuetteColor(),
 	image_alpha);
 	
 shader_reset();

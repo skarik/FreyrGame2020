@@ -3,3 +3,5 @@
 
 #macro kQidIntroSequence	0
 #macro kQidHarpyShadow		1
+#macro kQidPlayerDeathCount	2
+#macro kQidTheFoolsMarch	3
