@@ -11,7 +11,8 @@ if (argument0 == false)
 	wAxis.value = 0.0;
 
 	aButton.value = 0.0;
-	bButton.value = 0.0;
+	atkButton.value = 0.0;
+	useButton.value = 0.0;
 	cButton.value = 0.0;
 	xButton.value = 0.0;
 	yButton.value = 0.0;

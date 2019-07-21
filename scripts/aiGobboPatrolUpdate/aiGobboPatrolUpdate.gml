@@ -35,16 +35,19 @@ if (!m_aiCombat_angry && !m_aiCombat_alerted)
 		// First face the direction
 		if (m_aiGobbo_timer == 0.0)
 		{
-			var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
+			/*var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
 			var patrol_direction = point_direction(x, y, patrol_point[0], patrol_point[1]);
 			_controlStructUpdate(xAxis, lengthdir_x(1.0, patrol_direction));
-			_controlStructUpdate(yAxis, lengthdir_y(1.0, patrol_direction));
+			_controlStructUpdate(yAxis, lengthdir_y(1.0, patrol_direction));*/
 		}
 		// Stop motion if not been 1 second
 		else if (m_aiGobbo_timer < 1.0)
 		{
 			_controlStructUpdate(xAxis, 0.0);
 			_controlStructUpdate(yAxis, 0.0);
+			
+			var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
+			aimotionFaceAt(patrol_point[0], patrol_point[1], 180);
 		}
 	
 		m_aiGobbo_timer += Time.deltaTime;
@@ -84,4 +87,15 @@ if (!m_aiCombat_angry && !m_aiCombat_alerted)
 		}
 	}
 	// That's all for the patrol motion.
+}
+else
+{
+	aiGobboSquadAngryUpdate();
+}
+
+// do angry check
+var pl = getPlayer();
+if (point_distance(x, y, pl.x, pl.y) < 1024)
+{
+	m_aiCombat_angry = true;
 }

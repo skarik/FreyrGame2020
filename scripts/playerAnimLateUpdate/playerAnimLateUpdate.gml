@@ -26,6 +26,7 @@ if (sqr(xspeed) + sqr(yspeed) < 10
 {
 	facingDirection = aimingDirection;
 }
+// Need a new one for locked facing while moving!
 /*else
 {
 	aimingDirection = facingDirection;

@@ -1607,6 +1607,14 @@
             }
         },
         {
+            "Key": "3c8a4afe-858d-4983-aba4-3d2f1d996a77",
+            "Value": {
+                "id": "144e64f4-63d7-4b9a-8cd4-454b6b8613b9",
+                "resourcePath": "views\\3c8a4afe-858d-4983-aba4-3d2f1d996a77.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3caef66e-b8c8-49da-ac0c-10dcf570d91b",
             "Value": {
                 "id": "6e7e1827-73de-45b8-b600-444eef97bc3c",
@@ -2327,6 +2335,14 @@
             }
         },
         {
+            "Key": "5820995c-7b91-4eaa-bc65-e0af18e93f8f",
+            "Value": {
+                "id": "e2766608-e4fa-43be-a03d-e2b83e605a69",
+                "resourcePath": "scripts\\aiGobboSquadAngryUpdate\\aiGobboSquadAngryUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "58582ede-de23-4aa8-865a-961abb841b95",
             "Value": {
                 "id": "23328bfe-fcff-48c8-aed7-d069a84f7181",
@@ -2388,6 +2404,14 @@
                 "id": "86f22d74-bb8d-4f89-9c0e-9fe72078acc1",
                 "resourcePath": "objects\\o_tallgrassRendererShadow\\o_tallgrassRendererShadow.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5a59fe95-2df5-41df-b46d-342203d6d542",
+            "Value": {
+                "id": "cdbf7a4b-0002-438b-b44f-2627853973e1",
+                "resourcePath": "scripts\\aiGobboSquad_CreateSquad\\aiGobboSquad_CreateSquad.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2707,6 +2731,14 @@
             "Value": {
                 "id": "a7761d63-6bc8-49dd-b6ce-f1eb0d678cc5",
                 "resourcePath": "scripts\\Gabber_BoxHeight\\Gabber_BoxHeight.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "686d308c-8b8e-4654-a010-7e46faaf3e8d",
+            "Value": {
+                "id": "477e3c2f-553a-4646-8adb-68fb4f7c0edf",
+                "resourcePath": "scripts\\aiGobboSquad_SetLeader\\aiGobboSquad_SetLeader.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4572,6 +4604,14 @@
                 "id": "5dd91682-9b16-48d7-824a-7cf1ad70432a",
                 "resourcePath": "sprites\\s_assetDriedPuddle\\s_assetDriedPuddle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a5bb53f5-1255-41b9-8d5f-95f693659a46",
+            "Value": {
+                "id": "0959a5ec-47d8-4b0f-9b1d-3a03aaeb7a29",
+                "resourcePath": "scripts\\aimotionFaceAt\\aimotionFaceAt.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6623,6 +6663,14 @@
             }
         },
         {
+            "Key": "eb2048f3-27b7-4a66-b53d-bfaefdf21ae9",
+            "Value": {
+                "id": "a6122db5-1336-4f93-95a7-79eaac13ce36",
+                "resourcePath": "views\\eb2048f3-27b7-4a66-b53d-bfaefdf21ae9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "eb222c9a-807c-4ecf-90f8-dc3f5e070335",
             "Value": {
                 "id": "be93032f-0685-430a-af85-9987abdd34cb",
@@ -6924,6 +6972,14 @@
                 "id": "6aee82a1-9d29-4718-836b-878fbe1f8aa7",
                 "resourcePath": "objects\\o_chSlimeRed\\o_chSlimeRed.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f77d68f2-0b9c-4bf1-807a-46f6a29b41f1",
+            "Value": {
+                "id": "a4656a20-3976-465a-8543-9f22f47a3103",
+                "resourcePath": "scripts\\aiGobboSquad_DrawDebug\\aiGobboSquad_DrawDebug.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7463,6 +7519,11 @@
         "b5b071d2-2b67-4b1b-8166-d02e5e3a7c98",
         "5d2092b0-22c7-43c8-a911-4a275a4061ad",
         "16731471-3d06-4b2a-a680-16008e4fcfe3",
+        "a5bb53f5-1255-41b9-8d5f-95f693659a46",
+        "5820995c-7b91-4eaa-bc65-e0af18e93f8f",
+        "686d308c-8b8e-4654-a010-7e46faaf3e8d",
+        "5a59fe95-2df5-41df-b46d-342203d6d542",
+        "f77d68f2-0b9c-4bf1-807a-46f6a29b41f1",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",

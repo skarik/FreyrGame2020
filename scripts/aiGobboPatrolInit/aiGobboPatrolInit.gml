@@ -14,7 +14,16 @@ m_aiGobbo_timer = 0;
 
 aipathInit();
 
-// Generate a patrol path
-
+// Set up patrol path stuff
 m_aiGobbo_patrolWaypoint = 0;
 m_aiGobbo_patrol = array_create(0);
+
+// Set up squad stuff
+m_aiGobbo_squadSize = 0;
+m_aiGobbo_squadLeader = null;
+m_aiGobbo_squad = array_create(0);
+
+m_aiGobbo_squadMember = -1;
+m_aiGobbo_squadAttacker = -1;
+
+m_aiGobbo_squadAge = 0;

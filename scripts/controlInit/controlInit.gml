@@ -6,7 +6,8 @@ vAxis = _controlStructCreate();
 wAxis = _controlStructCreate();
 
 aButton = _controlStructCreate();
-bButton = _controlStructCreate();
+atkButton = _controlStructCreate();
+useButton = _controlStructCreate();
 cButton = _controlStructCreate();
 xButton = _controlStructCreate();
 yButton = _controlStructCreate();

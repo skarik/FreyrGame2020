@@ -11,7 +11,8 @@ if (argument0 == false)
 	_controlStructUpdate(wAxis, keyboard_check(vk_space));
 
 //	_controlStructUpdate(aButton, keyboard_check(ord("Z")));
-	_controlStructUpdate(bButton, mouse_check_button(mb_left)   + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderr));
+	_controlStructUpdate(atkButton, mouse_check_button(mb_left)   + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderr));
+	_controlStructUpdate(useButton, mouse_check_button(mb_left)   + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderr));
 //	_controlStructUpdate(bButton, keyboard_check(ord("X")));
 	_controlStructUpdate(aButton, keyboard_check(ord("F"))      + gamepad_button_check(0, gp_face2));
 	_controlStructUpdate(cButton, mouse_check_button(mb_right)  + gamepad_button_check(0, gp_shoulderl));
@@ -74,7 +75,8 @@ else
 	_controlStructUpdate(wAxis, 0.0);
 
 	_controlStructUpdate(aButton, 0.0);
-	_controlStructUpdate(bButton, 0.0);
+	_controlStructUpdate(atkButton, 0.0);
+	_controlStructUpdate(useButton, 0.0);
 	_controlStructUpdate(xButton, 0.0);
 	_controlStructUpdate(yButton, 0.0);
 	_controlStructUpdate(lButton, 0.0);

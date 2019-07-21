@@ -126,7 +126,7 @@ if (l_canMove && !isDashing && !isBlocking)
 	{
 		meleeAtkTimer += Time.deltaTime * 2.0;
 		
-		if (bButton.pressed && inCombatMode)
+		if (atkButton.pressed && inCombatMode)
 		{
 			if (meleeAtkTimer > 1.0)
 			{
@@ -165,7 +165,7 @@ if (l_canMove && !isDashing && !isBlocking)
 			meleeDashQueued = true;
 			meleeAtkQueued = false;
 		}
-		else if (bButton.pressed)
+		else if (atkButton.pressed)
 		{
 			meleeDashQueued = false;
 			meleeAtkQueued = true;

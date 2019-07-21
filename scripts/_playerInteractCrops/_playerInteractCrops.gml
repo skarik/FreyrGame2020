@@ -23,7 +23,7 @@ with (ob_crop)
 
 if (exists(currentCrop))
 {
-	if (l_canMove && bButton.pressed)
+	if (l_canMove && useButton.pressed)
 	{
 		currentCrop.m_user = id;
 		with (currentCrop)

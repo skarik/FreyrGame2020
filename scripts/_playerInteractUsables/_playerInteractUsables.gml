@@ -25,7 +25,7 @@ if (!exists(currentHeldUsable) || !m_isHolding)
 
 	if (exists(currentUsable))
 	{
-		if (l_canMove && bButton.pressed)
+		if (l_canMove && useButton.pressed)
 		{
 			currentUsable.m_user = id;
 			
@@ -61,7 +61,7 @@ else
 		currentHeldUsable.z = z;
 		currentHeldUsable.z_height = 20 + z_height;
 		
-		if (canMove && !isBusyInteracting && bButton.pressed)
+		if (canMove && !isBusyInteracting && useButton.pressed)
 		{
 			if (!currentHeldUsable.m_canThrow)
 			{
