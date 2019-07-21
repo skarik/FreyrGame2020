@@ -95,7 +95,29 @@ else
 
 // do angry check
 var pl = getPlayer();
-if (point_distance(x, y, pl.x, pl.y) < 1024)
+if (!pl.isHidden)
 {
-	m_aiCombat_angry = true;
+	// do distance check
+	if (point_distance(x, y, pl.x, pl.y) < 1024)
+	{
+		// do visibility angle check
+		var dir = point_direction(x, y, pl.x, pl.y);
+		var angle_dif = angle_difference(dir, facingDirection);
+		if (angle_dif < 45)
+		{
+			// do occlusion visibility check
+			if (!collision3_line(x, y, pl.x, pl.y, z, true))
+			{
+				if (!m_aiCombat_angry)
+				{
+					// Create the emote
+					var emote_fx = new(o_fxEmote);
+						emote_fx.m_target = id;
+						emote_fx.image_index = 2;
+			
+					m_aiCombat_angry = true;
+				}
+			}
+		}
+	}
 }

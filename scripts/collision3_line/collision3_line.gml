@@ -1,7 +1,9 @@
 /// @description collision3_point_meeting(x1, y1, x2, y2, z, less_than_only)
-/// @param x
-/// @param y
-/// @param z
+/// @param x1
+/// @param y1
+/// @param x2
+/// @param y2
+/// #param z
 /// @param less_than_only
 
 var check_x1 = argument0;

@@ -455,6 +455,14 @@
             }
         },
         {
+            "Key": "11e93fac-8a57-44a5-bd90-4ccd1f75d12c",
+            "Value": {
+                "id": "36ffd5a0-9bcd-4d89-ae45-4b5aa1d724b0",
+                "resourcePath": "objects\\o_ptcBloodHud\\o_ptcBloodHud.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "12090d46-fa2f-4afc-b744-4738747400a6",
             "Value": {
                 "id": "1251a3eb-02b5-4a32-9206-47e3a25bd004",
@@ -655,6 +663,14 @@
             }
         },
         {
+            "Key": "18420bb2-1fd1-4bb2-93d4-e713dd89e7d4",
+            "Value": {
+                "id": "ff4d165d-e44e-462a-97c4-574572674cd1",
+                "resourcePath": "scripts\\characterGroundMotionStep\\characterGroundMotionStep.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "184d0fda-96eb-4a73-bb4f-29d507e9db46",
             "Value": {
                 "id": "fb534578-4987-488f-a603-d49863aa7216",
@@ -692,6 +708,14 @@
                 "id": "4223dbbb-540b-4c4c-9d99-6e4c82d67f15",
                 "resourcePath": "scripts\\_playerAttack0\\_playerAttack0.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1a178880-a69b-471f-922d-6397776a7116",
+            "Value": {
+                "id": "ba1a2216-5b73-459e-85cb-f0be1ca108e8",
+                "resourcePath": "objects\\o_fxBloodHitPunch\\o_fxBloodHitPunch.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -991,6 +1015,14 @@
             }
         },
         {
+            "Key": "243f5ac5-844d-4727-82ff-72c82f43e56c",
+            "Value": {
+                "id": "786d4da0-00ca-4ddb-968e-accabfa39465",
+                "resourcePath": "scripts\\aiGobboSquad_OnNewSquad\\aiGobboSquad_OnNewSquad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2472c157-5e3e-4a15-97c6-131367cd07fe",
             "Value": {
                 "id": "016996e4-6bad-4a9a-966b-f2b630100bfc",
@@ -1084,6 +1116,14 @@
                 "id": "685a9a09-3a25-43c5-8b96-fceb0eae3a18",
                 "resourcePath": "views\\27b3b4c9-7928-4938-99eb-a1e6339eb4d5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "27d7e956-3619-4000-81b2-2cc39b5b4b80",
+            "Value": {
+                "id": "5ac33126-4ecf-4bb1-a939-c744a42a7170",
+                "resourcePath": "sprites\\s_charGobbo0Point\\s_charGobbo0Point.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2146,7 +2186,7 @@
             "Key": "50bfb340-09ed-40e9-bbd4-52341627a152",
             "Value": {
                 "id": "abdb60be-7d20-4aa4-aa26-89880a7f71e0",
-                "resourcePath": "scripts\\characterMotionStepGround\\characterMotionStepGround.yy",
+                "resourcePath": "scripts\\_characterGroundMotionNormal\\_characterGroundMotionNormal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2791,6 +2831,14 @@
             }
         },
         {
+            "Key": "6a77a66e-ef81-4f46-8e9e-418f6d4fada8",
+            "Value": {
+                "id": "16904ccd-4af7-4c98-893c-223d91a286d8",
+                "resourcePath": "objects\\o_fxBloodHitRedWill\\o_fxBloodHitRedWill.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6a8d6bd4-8a55-44f3-972f-1fc26bd7ec84",
             "Value": {
                 "id": "88098fd1-f7e7-4499-b41f-b5b1e14da0ab",
@@ -2860,6 +2908,14 @@
                 "id": "90b5b3e3-3f66-4ca6-8f30-63e08c3cc409",
                 "resourcePath": "sprites\\sui_logo1\\sui_logo1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6d924380-1527-4115-ae5c-a72e70a184bc",
+            "Value": {
+                "id": "7718dffb-6ef2-444f-9e51-7628f8ffbfb5",
+                "resourcePath": "scripts\\characterGroundInteractInit\\characterGroundInteractInit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4023,6 +4079,14 @@
             }
         },
         {
+            "Key": "919b6725-cf54-4283-b4bf-f1b04e63c9e6",
+            "Value": {
+                "id": "570d11de-e5b3-46f2-a174-cc7fdfd48990",
+                "resourcePath": "objects\\o_ptcOutliner\\o_ptcOutliner.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "91cba62b-9e47-4128-ba00-6d1c971ed45e",
             "Value": {
                 "id": "d63734e6-4ae2-487a-9052-d7a9f5d0ae83",
@@ -5103,6 +5167,14 @@
             }
         },
         {
+            "Key": "b4b2e5c7-d52a-4841-b8fc-2e5107fd05b9",
+            "Value": {
+                "id": "6497bcd2-5cfe-4ef6-9532-78437a3a4352",
+                "resourcePath": "scripts\\_characterGobboAttack0\\_characterGobboAttack0.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b4ba7c02-51c0-4cf4-aedf-064cf6e6a556",
             "Value": {
                 "id": "45cbe354-40d6-477b-bfb8-c2afce3e259c",
@@ -5459,6 +5531,14 @@
             "Value": {
                 "id": "7054ba46-87e5-4062-a761-157e8cf6603e",
                 "resourcePath": "sprites\\s_propWoodPlanks\\s_propWoodPlanks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c164a4a0-7f0c-4dff-a45e-a1ec91cf2746",
+            "Value": {
+                "id": "d3bfee83-c78c-40ca-bb03-6d1add8ccc9a",
+                "resourcePath": "sprites\\s_charGobbo0Atk1\\s_charGobbo0Atk1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6879,6 +6959,14 @@
             }
         },
         {
+            "Key": "f2ca0b0e-29a0-4d26-8dd8-bd161da7761d",
+            "Value": {
+                "id": "8cfac14a-43ac-48cb-a314-2857c52490f1",
+                "resourcePath": "scripts\\characterGroundInteractEndStep\\characterGroundInteractEndStep.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f374f6d4-9429-4ed6-be41-074816cf1318",
             "Value": {
                 "id": "af212028-d371-42da-a2e7-884fe1dd6394",
@@ -6932,6 +7020,14 @@
                 "id": "96610da2-8bb5-4902-b65f-66c42dc9ce96",
                 "resourcePath": "scripts\\_playerAttack3\\_playerAttack3.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f5aca9ab-6e35-4d42-8aae-446ac61a6d68",
+            "Value": {
+                "id": "28459958-72b1-4443-b2ca-83d463fadaf7",
+                "resourcePath": "sprites\\spt_bloodHud\\spt_bloodHud.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7379,10 +7475,14 @@
         "7a1382c6-5226-47f1-8df1-1f83ad66f4cf",
         "a63d3702-e5e8-46b4-bb8a-d83d33a39bd3",
         "bca44c75-2ce1-44e6-b49c-5dc8c8d119cf",
-        "50bfb340-09ed-40e9-bbd4-52341627a152",
         "4a838067-c8f7-4084-8d1e-7885e6b6713a",
         "f8414e01-0c47-4dd6-8944-d1f1950d0af7",
         "ba810edf-b9db-4044-9071-2211b4fefeff",
+        "18420bb2-1fd1-4bb2-93d4-e713dd89e7d4",
+        "50bfb340-09ed-40e9-bbd4-52341627a152",
+        "6d924380-1527-4115-ae5c-a72e70a184bc",
+        "f2ca0b0e-29a0-4d26-8dd8-bd161da7761d",
+        "b4b2e5c7-d52a-4841-b8fc-2e5107fd05b9",
         "5ce5cef7-3a68-408b-9b50-68f745fd85fa",
         "6f042160-b044-4b9f-9932-19a0705ab9f6",
         "c8117af1-cffe-4a01-b0cf-4c538ac14889",
@@ -7524,6 +7624,7 @@
         "686d308c-8b8e-4654-a010-7e46faaf3e8d",
         "5a59fe95-2df5-41df-b46d-342203d6d542",
         "f77d68f2-0b9c-4bf1-807a-46f6a29b41f1",
+        "243f5ac5-844d-4727-82ff-72c82f43e56c",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",

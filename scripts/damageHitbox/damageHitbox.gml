@@ -66,6 +66,9 @@ with (ob_character)
 		// Perform damage
         stats.m_health -= actualDamage;
         
+		// Save damage
+		m_lastDamage = type;
+		
         // Generate intersecting BB for the effect spawning
         var c_x1 = max( x1, x-sprite_xoffset );
         var c_y1 = max( y1, y-sprite_yoffset );
@@ -77,10 +80,10 @@ with (ob_character)
             ticker.value = actualDamage;
         
         // Create hit sound
-        var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(m_bloodType));
+        var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(m_bloodType, type, source));
         
         // Create hit effect
-        var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, effectGetImpactEffect(m_bloodType));
+        var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, effectGetImpactEffect(m_bloodType, type, source));
 			fx_hit.m_source = id;
 			fx_hit.m_health = stats.m_health;
 			fx_hit.m_healthMax = stats.m_healthMax;
@@ -88,7 +91,7 @@ with (ob_character)
         
         // Mark as stunned
         m_isStunned = true;
-        m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025);
+        m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025) * 2.0;
         // Add knockback
         var kickback = damage * 16 * kKickbackAmount;
         /*if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )

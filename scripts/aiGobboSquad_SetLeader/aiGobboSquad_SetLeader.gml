@@ -22,5 +22,8 @@ for (var i = 0; i < array_length_1d(m_aiGobbo_squad); ++i)
 		m_aiGobbo_squadMember = i;
 		m_aiGobbo_squadLeader = source_gobbo.m_aiGobbo_squad[0];
 		m_aiGobbo_squadSize = array_length_1d(m_aiGobbo_squad);
+		
+		// Update squad infoes
+		aiGobboSquad_OnNewSquad();
 	}
 }

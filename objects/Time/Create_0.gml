@@ -7,6 +7,7 @@ persistent = true;
 unscaled_dt = 0;
 dt = 0;
 scale = 1.0;
+time = 0.0;
 
 // Aliases
 deltaTime = 0;

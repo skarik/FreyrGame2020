@@ -1,3 +1,4 @@
 /// @description Character motion
 
-characterMotionStepGround();
+//characterMotionStepGround();
+characterGroundMotionStep();

@@ -9,8 +9,14 @@
 
 var targetX = argument0;
 var targetY = argument1;
-var angleSpeed = argument2 * Time.deltaTime;
+var angleSpeed = argument2;
 var targetDirection = point_direction(x, y, targetX, targetY);
+
+// Update speed for instant moving
+if (angleSpeed < 0)
+	angleSpeed = 360.0;
+else
+	angleSpeed *= Time.deltaTime;
 
 // Change the direction to fix properly
 if (abs(targetDirection - facingDirection) > 180)
@@ -22,7 +28,7 @@ if (abs(targetDirection - facingDirection) > 180)
 }
 
 // Move to face
-if (abs(targetDirection - facingDirection) < angleSpeed)
+if (abs(targetDirection - facingDirection) <= angleSpeed)
 {
 	facingDirection = targetDirection;
 }

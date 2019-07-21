@@ -4,4 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-aiGobboSquad_DrawDebug();
+if (Debug.show_squad_info)
+	aiGobboSquad_DrawDebug();

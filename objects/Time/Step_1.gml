@@ -9,6 +9,9 @@ dt = unscaled_dt * scale;
 deltaTime = dt;
 unscaledDeltaTime = unscaled_dt;
 
+// Update time
+time += Time.deltaTime;
+
 // Update the window caption for display
 window_set_caption(
 	game_display_name

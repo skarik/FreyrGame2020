@@ -27,10 +27,10 @@ var c_y2 = target.y-target.sprite_yoffset+target.sprite_height;
 if (hitEffect)
 {
     // Create hit sound
-    var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(target.m_bloodType));
+    var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(target.m_bloodType, damageType, id));
     
     // Create hit effect
-    var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), target.depth - 5, effectGetImpactEffect(target.m_bloodType));
+    var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), target.depth - 5, effectGetImpactEffect(target.m_bloodType, damageType, id));
 }
 
 // Select the team
@@ -49,6 +49,9 @@ with (target)
 	
 	// Perform damage
 	stats.m_health -= actualDamage;
+	
+	// Save damage
+	m_lastDamage = damageType;
 	
 	// Create damage ticker
 	var ticker = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, o_floaterDmgTicker);

@@ -11,3 +11,5 @@ kAnimAttack1 = sprite_index;
 kAnimStun = sprite_index;
 
 image_speed = 0.0;
+
+moAnimationExternal = false;

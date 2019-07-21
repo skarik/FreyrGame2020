@@ -197,5 +197,11 @@ if (m_hiddenEdgeBlend > 0.0)
 		1.0, -1.0, 0.0, c_white, m_hiddenEdgeBlend * 0.7);
 }
 
+// darw blood over that
+with (o_ptcBloodHud)
+{
+	event_user(2);
+}
+
 draw_set_alpha(1.0); // clear here for now
 surface_reset_target();

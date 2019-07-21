@@ -38,7 +38,11 @@ facingIndex = warpi(round(facingDirection / 90) + 1, 0, 4);
 // Animation Select
 if (!moAnimationPlayback)
 {
-	if (isStunned)
+	if (moAnimationExternal)
+	{
+		// Nothing
+	}
+	else if (isStunned)
 	{
 		sprite_index = kAnimStun;
 		animationSpeed = 5.0;

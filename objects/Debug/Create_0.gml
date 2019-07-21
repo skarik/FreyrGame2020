@@ -4,6 +4,7 @@ convention_mode = false; // turn on for convention demos
 
 // Enable debug mode for now
 on = true;
+show_squad_info = false;
 
 // Debug lines:
 debug_line[0] = "";

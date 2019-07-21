@@ -2,6 +2,7 @@
 
 m_team = kTeamNone;
 m_bloodType = kBloodRed;
+m_lastDamage = 0;
 
 m_isPlayer = false;
 m_isFollower = false;
