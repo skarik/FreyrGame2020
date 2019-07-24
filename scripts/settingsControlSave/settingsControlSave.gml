@@ -6,7 +6,7 @@ with (Settings)
 	ctMoveRight		= _settingsControlSaveArray("moveright", ctMoveRight);
 	ctMoveUp		= _settingsControlSaveArray("moveup", ctMoveUp);
 	ctMoveDown		= _settingsControlSaveArray("movedown", ctMoveDown);
-	ctJump			= _settingsControlSaveArray("moveUp", ctJump);
+	ctJump			= _settingsControlSaveArray("jump", ctJump);
 	
 	ctAimLeft		= _settingsControlSaveArray("aimleft", ctAimLeft);
 	ctAimRight		= _settingsControlSaveArray("aimright", ctAimRight);
