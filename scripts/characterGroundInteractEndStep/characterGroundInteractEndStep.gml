@@ -3,7 +3,7 @@ var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting;// &&
 // Do dashing
 if (dashCooldown <= 0.0)
 {
-	if (cButton.pressed && !isDashing && l_canMove && onGround && !isAttacking && !exists(currentHeldUsable))
+	if (dodgeButton.pressed && !isDashing && l_canMove && onGround && !isAttacking && !exists(currentHeldUsable))
 	{
 		_playerInteractDoDash();
 	}
@@ -13,7 +13,7 @@ else if (!isDashing)
 	dashCooldown -= Time.deltaTime;
 }
 // Do blocking
-if (cButton.down && l_canMove && onGround && !m_isHolding /*&& !m_isTilling && !m_isPlanting*/ && !exists(currentHeldUsable))
+if (dodgeButton.down && l_canMove && onGround && !m_isHolding /*&& !m_isTilling && !m_isPlanting*/ && !exists(currentHeldUsable))
 {
 	isBlocking = true;
 }
@@ -25,14 +25,14 @@ else
 // Inventory selection!
 if (l_canMove)
 {
-	if (lButton.pressed)
+	if (itemPrevButton.pressed)
 	{
 		inventory.belt_selection -= 1;
 		if (inventory.belt_selection < 0) {
 			inventory.belt_selection += inventory.belt_size;
 		}
 	}
-	if (rButton.pressed)
+	if (itemNextButton.pressed)
 	{
 		inventory.belt_selection += 1;
 		if (inventory.belt_selection >= inventory.belt_size) {
@@ -67,7 +67,7 @@ if (l_canMove)
 // update book
 if (l_canMove || m_usingInventory || m_usingBook)
 {
-	if (xButton.pressed)
+	if (journalButton.pressed)
 	{
 		//o_PlayerHud.m_book_enabled = !o_PlayerHud.m_book_enabled; // todo: make this a cutscene menu
 		m_usingInventory = false; 
@@ -160,7 +160,7 @@ if (l_canMove && !isDashing && !isBlocking)
 	}
 	else
 	{
-		if (cButton.pressed)
+		if (dodgeButton.pressed)
 		{
 			meleeDashQueued = true;
 			meleeAtkQueued = false;

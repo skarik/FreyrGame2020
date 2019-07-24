@@ -10,11 +10,11 @@ if (argument0 == false)
 	vAxis.value = 0.0;
 	wAxis.value = 0.0;
 
-	aButton.value = 0.0;
+	itemUseButton.value = 0.0;
 	atkButton.value = 0.0;
 	useButton.value = 0.0;
-	cButton.value = 0.0;
-	xButton.value = 0.0;
+	dodgeButton.value = 0.0;
+	journalButton.value = 0.0;
 	yButton.value = 0.0;
 	lButton.value = 0.0;
 	rButton.value = 0.0;

@@ -2111,6 +2111,14 @@
             }
         },
         {
+            "Key": "4d456c6e-57a8-4c75-b72d-a00951adcec3",
+            "Value": {
+                "id": "e07070f7-1098-4e4e-ad75-37e792b4d8d5",
+                "resourcePath": "scripts\\settingsLoad\\settingsLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4d7c1e8a-2b48-4a4d-b429-d81256800c55",
             "Value": {
                 "id": "bfcdcc2e-cf4c-4883-8374-ecab889bd804",
@@ -2487,6 +2495,14 @@
             }
         },
         {
+            "Key": "5c198672-6dd9-424d-92ef-391e6d336eb1",
+            "Value": {
+                "id": "927d2786-512f-4dd1-ace8-b94bd030b97a",
+                "resourcePath": "views\\5c198672-6dd9-424d-92ef-391e6d336eb1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5c42d6c1-9e5f-42c2-ab9b-6fbf7d7f8c44",
             "Value": {
                 "id": "57f1d23e-0ff7-4de4-8084-69a74d6481fe",
@@ -2628,6 +2644,14 @@
                 "id": "0bc6f8f1-6705-4331-967f-38c49d9181c3",
                 "resourcePath": "views\\61de18ee-2bba-482d-9650-57d8a73fac87.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "61e1be0a-d34b-455d-97fb-812328e39b21",
+            "Value": {
+                "id": "df542554-4a65-4995-a72b-53bf8b2ff17d",
+                "resourcePath": "scripts\\controlParse\\controlParse.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2860,6 +2884,14 @@
                 "id": "946349fe-0ad2-4baa-a674-211f35e06817",
                 "resourcePath": "sprites\\sui_roboArm\\sui_roboArm.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6b91ca76-da4b-4e08-bde5-4e831d1f4265",
+            "Value": {
+                "id": "d43a0375-7043-4916-b6ae-965d2e68d9fa",
+                "resourcePath": "scripts\\settingsControlDefaults\\settingsControlDefaults.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3515,6 +3547,14 @@
             "Value": {
                 "id": "58543ea6-aa44-4165-92b8-61b5932131fe",
                 "resourcePath": "scripts\\fieldSaveState\\fieldSaveState.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "800f1941-4573-4ebe-a05a-8626fdc2945a",
+            "Value": {
+                "id": "21171f5a-834b-4be6-a201-e8f7b1b102b2",
+                "resourcePath": "scripts\\settingsSave\\settingsSave.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4463,6 +4503,14 @@
             }
         },
         {
+            "Key": "9e518392-0f6d-4719-87be-ed31e7b7c8a4",
+            "Value": {
+                "id": "b212fca5-bffb-472b-88a2-b11830b4aab6",
+                "resourcePath": "scripts\\settingsControlSave\\settingsControlSave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9e6b5361-6f45-404b-a7b8-013dbbfb6b85",
             "Value": {
                 "id": "61cf5f4b-4487-41a0-af0b-40e6c4391529",
@@ -4751,6 +4799,14 @@
             }
         },
         {
+            "Key": "a7a0010f-8954-400e-b426-f83954ef2311",
+            "Value": {
+                "id": "4559392d-251c-4965-b59b-172f1639af19",
+                "resourcePath": "scripts\\settingsControlLoad\\settingsControlLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a8b9a565-97d0-43ad-86f1-4dcb91923cc6",
             "Value": {
                 "id": "06d2fc2e-e376-4fd6-8001-b427804e02b4",
@@ -4916,6 +4972,14 @@
                 "id": "d94ea7e1-9eb6-4473-95c0-71990f03b1bb",
                 "resourcePath": "objects\\Debug\\Debug.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ad7e66ab-112e-4f16-907a-7c85b8d2ab69",
+            "Value": {
+                "id": "f3643af5-6e96-4c25-a11e-49731d426c8d",
+                "resourcePath": "scripts\\_settingsControlSaveArray\\_settingsControlSaveArray.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7143,6 +7207,14 @@
             }
         },
         {
+            "Key": "f96912fa-4c96-43c5-a9e3-cb410e0a79ee",
+            "Value": {
+                "id": "136500f4-b4d2-4085-9814-4879137d45ac",
+                "resourcePath": "scripts\\_settingsControlLoadArray\\_settingsControlLoadArray.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9a4eb74-11cd-446d-9887-78c0b4c899e8",
             "Value": {
                 "id": "5a0c9131-bacc-4483-8b59-664e235d7298",
@@ -7389,6 +7461,7 @@
         "ec3bc1c4-2bf8-4cb2-9783-c228bed86cbe",
         "ed57fd57-f999-470a-9740-dbad2a649237",
         "7229edad-faf5-4390-9388-9c4d8f5c4787",
+        "61e1be0a-d34b-455d-97fb-812328e39b21",
         "56179266-d7d6-4ee1-8be7-cf0dd9d45938",
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
@@ -7412,6 +7485,13 @@
         "e0ae9f70-6e47-40b7-930b-41d129fae225",
         "b8642774-0704-4ca8-8204-6b741fa0e34b",
         "39691aef-d2c3-497a-998b-9a205310cfb1",
+        "4d456c6e-57a8-4c75-b72d-a00951adcec3",
+        "800f1941-4573-4ebe-a05a-8626fdc2945a",
+        "6b91ca76-da4b-4e08-bde5-4e831d1f4265",
+        "a7a0010f-8954-400e-b426-f83954ef2311",
+        "9e518392-0f6d-4719-87be-ed31e7b7c8a4",
+        "f96912fa-4c96-43c5-a9e3-cb410e0a79ee",
+        "ad7e66ab-112e-4f16-907a-7c85b8d2ab69",
         "fdbb3679-3764-4a36-89dc-9d26a9794773",
         "82a26b66-c615-49e2-9bf5-5c50f21ea1d8",
         "5c42d6c1-9e5f-42c2-ab9b-6fbf7d7f8c44",

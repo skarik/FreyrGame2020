@@ -39,7 +39,7 @@ if (!m_isTilling && l_canMove
 	// Now we build if we press the button
 	if (currentBuildable)
 	{
-		if (aButton.pressed)
+		if (itemUseButton.pressed)
 		{
 			// Check for existing canal
 			if (!exists(collision_rectangle(currentBuildableX + 1, currentBuildableY + 1, currentBuildableX + 14, currentBuildableY + 14, o_miniCanalWater, false, true)))

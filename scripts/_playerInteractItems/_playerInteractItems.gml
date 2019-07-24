@@ -5,7 +5,7 @@ var belt = inventory.belt[inventory.belt_selection];
 if (belt.object != null)
 {
 	if (l_canMove
-		&& (aButton.pressed || (isBlocking && useButton.pressed)))
+		&& (itemUseButton.pressed || (isBlocking && useButton.pressed)))
 	{
 		if (script_execute(belt.checkUse))
 		{
