@@ -2,9 +2,8 @@
 //@param clear_input  If true, clears all input.
 if (argument0 == false)
 {
-	_controlStructUpdate(xAxis, -keyboard_check(ord("A")) + keyboard_check(ord("E")) + deadzone_bias(gamepad_axis_value(0, gp_axislh)));
-	//188 is a comma
-	_controlStructUpdate(yAxis, -keyboard_check(188) + keyboard_check(ord("O")) + deadzone_bias(gamepad_axis_value(0, gp_axislv)));
+	_controlStructUpdate(xAxis, -keyboard_check(ord("A")) + keyboard_check(ord("D")) + deadzone_bias(gamepad_axis_value(0, gp_axislh)));
+	_controlStructUpdate(yAxis, -keyboard_check(ord("W")) + keyboard_check(ord("S")) + deadzone_bias(gamepad_axis_value(0, gp_axislv)));
 	_controlStructUpdate(zAxis, keyboard_check(vk_space));
 	
 	_controlStructUpdate(uAxis, -keyboard_check(vk_left) + keyboard_check(vk_right));
@@ -15,15 +14,13 @@ if (argument0 == false)
 	_controlStructUpdate(atkButton, mouse_check_button(mb_left)   + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderr));
 	_controlStructUpdate(useButton, mouse_check_button(mb_left)   + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderr));
 //	_controlStructUpdate(bButton, keyboard_check(ord("X")));
-	_controlStructUpdate(aButton, keyboard_check(ord("U"))      + gamepad_button_check(0, gp_face2));
+	_controlStructUpdate(aButton, keyboard_check(ord("F"))      + gamepad_button_check(0, gp_face2));
 	_controlStructUpdate(cButton, mouse_check_button(mb_right)  + gamepad_button_check(0, gp_shoulderl));
-	//222 is for single quote
-	_controlStructUpdate(xButton, keyboard_check(222) || keyboard_check(vk_tab)  + gamepad_button_check(0, gp_start));
-	///190 is period
-	_controlStructUpdate(yButton, keyboard_check(190));
-	_controlStructUpdate(lButton, keyboard_check(ord("T")) + mouse_wheel_down()   + gamepad_button_check(0, gp_padl));
-	_controlStructUpdate(rButton, keyboard_check(ord("N")) + mouse_wheel_up()     + gamepad_button_check(0, gp_padr));
-	_controlStructUpdate(itemsButton, keyboard_check(ord("C"))                                   + gamepad_button_check(0, gp_select));
+	_controlStructUpdate(xButton, keyboard_check(ord("Q")) || keyboard_check(vk_tab)  + gamepad_button_check(0, gp_start));
+	_controlStructUpdate(yButton, keyboard_check(ord("E")));
+	_controlStructUpdate(lButton, keyboard_check(ord("K")) + mouse_wheel_down()   + gamepad_button_check(0, gp_padl));
+	_controlStructUpdate(rButton, keyboard_check(ord("L")) + mouse_wheel_up()     + gamepad_button_check(0, gp_padr));
+	_controlStructUpdate(itemsButton, keyboard_check(ord("I"))                                   + gamepad_button_check(0, gp_select));
 	_controlStructUpdate(selectButton, mouse_check_button(mb_left) || keyboard_check(vk_enter)   + gamepad_button_check(0, gp_face1));
 	_controlStructUpdate(cancelButton, mouse_check_button(mb_right) || keyboard_check(vk_escape) + gamepad_button_check(0, gp_face2) + + gamepad_button_check(0, gp_face4));
 	_controlStructUpdate(prevUiButton, mouse_wheel_down()                               + gamepad_button_check(0, gp_shoulderl) );

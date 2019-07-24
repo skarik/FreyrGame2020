@@ -20,7 +20,7 @@ if (m_timeOfDay >= 24.00)
 	m_day += 1;
 }
 
-if (keyboard_check_pressed(ord("R")))
+if (keyboard_check_pressed(ord("O")))
 {
 	m_timeOfDay -= 1.0;
 	if (m_timeOfDay < 0)
@@ -29,7 +29,7 @@ if (keyboard_check_pressed(ord("R")))
 		m_day -= 1;
 	}
 }
-if (keyboard_check_pressed(ord("L")))
+if (keyboard_check_pressed(ord("P")))
 {
 	m_timeOfDay += 1.0;
 	if (m_timeOfDay >= 24.00)
