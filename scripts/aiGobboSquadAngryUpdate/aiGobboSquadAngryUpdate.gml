@@ -86,7 +86,7 @@ if (m_aiGobbo_squadLeader == id)
 		if (m_aiGobbo_squadManage_PositionTimer < 0.0)
 		{
 			m_aiGobbo_squadManage_PositionCenter = m_angerTargetPos;
-			m_aiGobbo_squadManage_PositionTimer = 4.0;
+			m_aiGobbo_squadManage_PositionTimer = 2.0;
 		}
 		
 		// Hand out the position commands first:
@@ -235,7 +235,8 @@ else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHesitate
 		m_aiGobbo_squadStateTime += Time.deltaTime;
 		
 		// Move up to the target we're attacking
-		aipathMoveTo(m_angerTargetPos[0], m_angerTargetPos[1]);
+		var dir = point_direction(x, y, m_angerTargetPos[0], m_angerTargetPos[1]);
+		aipathMoveTo(m_angerTargetPos[0] + lengthdir_x(60, dir), m_angerTargetPos[1] + lengthdir_y(60, dir));
 		
 		var target_dist_sqr = sqr(x - m_angerTargetPos[0]) + sqr(y - m_angerTargetPos[1]);
 		if (target_dist_sqr < sqr(26))

@@ -2,7 +2,7 @@
 //@param clear_input  If true, clears all input.
 if (argument0 == false)
 {
-	_controlStructUpdate(xAxis, -keyboard_check(ord("A")) + keyboard_check(ord("D")) + deadzone_bias(gamepad_axis_value(0, gp_axislh)));
+	_controlStructUpdate(xAxis, -keyboard_check(188) + keyboard_check(ord("D")) + deadzone_bias(gamepad_axis_value(0, gp_axislh)));
 	_controlStructUpdate(yAxis, -keyboard_check(ord("W")) + keyboard_check(ord("S")) + deadzone_bias(gamepad_axis_value(0, gp_axislv)));
 	_controlStructUpdate(zAxis, keyboard_check(vk_space));
 	
