@@ -20,26 +20,28 @@ if (m_timeOfDay >= 24.00)
 	m_day += 1;
 }
 
-if (keyboard_check_pressed(ord("O")))
+if (Debug.visible)
 {
-	m_timeOfDay -= 1.0;
-	if (m_timeOfDay < 0)
+	if (keyboard_check_pressed(ord("O")))
 	{
-		m_timeOfDay += 24.00;
-		m_day -= 1;
+		m_timeOfDay -= 1.0;
+		if (m_timeOfDay < 0)
+		{
+			m_timeOfDay += 24.00;
+			m_day -= 1;
+		}
+	}
+	if (keyboard_check_pressed(ord("P")))
+	{
+		m_timeOfDay += 1.0;
+		if (m_timeOfDay >= 24.00)
+		{
+			m_timeOfDay -= 24.00;
+			m_day += 1;
+		}
+		m_hourPassed = true;
 	}
 }
-if (keyboard_check_pressed(ord("P")))
-{
-	m_timeOfDay += 1.0;
-	if (m_timeOfDay >= 24.00)
-	{
-		m_timeOfDay -= 24.00;
-		m_day += 1;
-	}
-	m_hourPassed = true;
-}
-
 
 // test some day night cycles
 
