@@ -21,10 +21,21 @@ if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
 	facingDirection = point_direction(0, 0, xAxis.value, yAxis.value);
 }
 // override facing direction with the aiming when standing or attacking, and the mouse moves
-if (sqr(xspeed) + sqr(yspeed) < 10
-    && (uPosition != uPositionPrevious || vPosition != vPositionPrevious))
+if (lastControlType == kControlKB || lastControlType == kControlMouse)
 {
-	facingDirection = aimingDirection;
+	if (sqr(xspeed) + sqr(yspeed) < 10
+	    && (uPosition != uPositionPrevious || vPosition != vPositionPrevious))
+	{
+		facingDirection = aimingDirection;
+	}
+}
+else if (lastControlType == kControlGamepad)
+{
+	if (sqr(xspeed) + sqr(yspeed) < 10
+	    && (abs(uAxis.value) > 0.1 || abs(vAxis.value) > 0.1))
+	{
+		facingDirection = aimingDirection;
+	}
 }
 // Need a new one for locked facing while moving!
 /*else

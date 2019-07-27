@@ -35,3 +35,5 @@ uPositionScreen = 0.0;
 vPositionScreen = 0.0;
 
 uvPositionStyle = 0;
+
+lastControlType = kControlKB;

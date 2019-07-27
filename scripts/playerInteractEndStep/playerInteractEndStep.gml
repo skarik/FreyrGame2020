@@ -58,9 +58,23 @@ aimingStartX = x;
 aimingStartY = y - (aimingHeight + z_height);
 if (l_canMove)
 {
-	if (uPosition != uPositionPrevious || vPosition != vPositionPrevious)
+	if (lastControlType == kControlKB || lastControlType == kControlMouse)
 	{
-		aimingDirection = point_direction(aimingStartX, aimingStartY, uPosition, vPosition);
+		if (uPosition != uPositionPrevious || vPosition != vPositionPrevious)
+		{
+			aimingDirection = point_direction(aimingStartX, aimingStartY, uPosition, vPosition);
+		}
+	}
+	else if (lastControlType == kControlGamepad)
+	{
+		if (sqr(uAxis.value) + sqr(vAxis.value) > sqr(0.1))
+		{
+			aimingDirection = point_direction(0, 0, uAxis.value, vAxis.value);
+		}
+		else if (sqr(xAxis.value) + sqr(yAxis.value) > sqr(0.1))
+		{
+			aimingDirection = point_direction(0, 0, xAxis.value, yAxis.value);
+		}
 	}
 }
 

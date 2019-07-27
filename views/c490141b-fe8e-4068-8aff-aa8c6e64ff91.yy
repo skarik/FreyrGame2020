@@ -11,7 +11,8 @@
         "4f656b16-8921-4fd8-84aa-203e8ddb9fa3",
         "60f5f6b9-6a8a-4f69-9043-608a37a19aa8",
         "81a9e470-0f52-4f6e-b645-ce565fe63ca7",
-        "08b30e07-226e-4518-b4c8-754025ce15af"
+        "08b30e07-226e-4518-b4c8-754025ce15af",
+        "95dd9f43-3e42-44f1-b3ef-6994a858309c"
     ],
     "filterType": "GMScript",
     "folderName": "Parametric",
