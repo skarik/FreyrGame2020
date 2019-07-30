@@ -67,6 +67,7 @@ kAnimWalking = s_charHeroWalk;
 kAnimRolling = s_charHeroRoll;
 kAnimSinkFalling = s_charHeroSinkFall;
 kAnimAttack1 = s_charHeroAtk1;
+kAnimDig1 = s_charHeroPunchDig;
 
 #endregion
 

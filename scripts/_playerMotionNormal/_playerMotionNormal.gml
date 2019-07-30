@@ -11,6 +11,8 @@ if (isBlocking)
 	l_moveSpeed *= kMoveSpeedBlockingPercent;
 if (m_isHolding)
 	l_moveSpeed *= kMoveSpeedCarryingPercent;
+if (useButton.value > 0.8)
+	l_moveSpeed *= kMoveSpeedUsingPercent;
 
 // Generate the target motion
 var xspeedTarget = 0.0;

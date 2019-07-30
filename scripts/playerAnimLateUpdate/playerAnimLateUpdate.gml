@@ -71,6 +71,12 @@ if (!moAnimationPlayback)
 		//animationIndex = floor((image_number / 4.0 - 0.01) * saturate(meleeAtkTimer));
 		// animation handled in movestate (dumbly)
 	}
+	else if (m_isPlayer && m_isTilling)
+	{
+		sprite_index = kAnimDig1;
+		animationSpeed = 0.0;
+		animationIndex = floor((image_number / 4.0 - 0.01) * saturate(m_till_timer));
+	}
 	else
 	{
 		var move_speed = sqrt(sqr(xspeed) + sqr(yspeed));

@@ -6,6 +6,7 @@ kMoveSpeedWaterPercent = 0.50;
 kMoveSpeedBlockingPercent = 0.50;
 kMoveSpeedCarryingPercent = 0.50;
 kMoveSpeedDeathtarPercent = 0.25;
+kMoveSpeedUsingPercent = 0.50;
 
 kMoveAcceleration = 800;
 kMoveAccelerationStop = 500;

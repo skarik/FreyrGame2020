@@ -41,7 +41,9 @@ if (!m_isTilling)
 	{
 		if (!currentTillable.tilled)
 		{
-			if (l_canMove && !isBlocking && !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && useButton.pressed)
+			if (l_canMove && !isAttacking && !isDashing && !isBlocking
+				&& !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding
+				&& useButton.value > 0.8)
 			{
 				m_till_target = currentTillable;
 				m_isTilling = true;
@@ -75,7 +77,9 @@ if (!m_isTilling)
 			if (m_till_filldirt)
 			{
 				// Do we want to make dirt?
-				if (l_canMove && !isBlocking && !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && useButton.pressed)
+				if (l_canMove && !isAttacking && !isDashing && !isBlocking
+					&& !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding
+					&& useButton.value > 0.8)
 				{
 					m_till_target = null;
 					m_isTilling = true;
@@ -108,7 +112,26 @@ else
 	{
 		if (m_till_timer < 1.0)
 		{
-			m_till_timer += Time.deltaTime / m_till_time;
+			var previous_timer = m_till_timer;
+			
+			// Incremeent timer
+			if (!m_till_filldirt)
+				m_till_timer += Time.deltaTime / m_till_time;
+			else
+				m_till_timer += Time.deltaTime / m_till_timedirt;
+				
+			// Do visuals
+			if (previous_timer < 2.5/7 && m_till_timer >= 2.5/7)
+			{
+				if (m_till_filldirt)
+				{
+					effectOnTillDigHit(m_till_x, m_till_y);
+				}
+				else
+				{
+					effectOnTillTillHit(m_till_x, m_till_y);
+				}
+			}
 			
 			// Till the land about halfway through the animation
 			if (m_till_timer > 0.5)
