@@ -23,9 +23,14 @@ m_plant_x = 0;
 m_plant_y = 0;
 
 aimingDirection = 0.0;
-aimingHeight = 10;
+aimingHeight = 11;
 aimingStartX = x;
 aimingStartY = y;
+
+aiming2Direction = 0.0;
+aiming2Height = 1;
+aiming2StartX = x;
+aiming2StartY = y;
 
 inCombatMode = false;
 

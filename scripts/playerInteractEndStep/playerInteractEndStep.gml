@@ -78,6 +78,31 @@ if (l_canMove)
 	}
 }
 
+// update aiming2
+aiming2StartX = x;
+aiming2StartY = y - (aiming2Height + z_height);
+if (l_canMove)
+{
+	if (lastControlType == kControlKB || lastControlType == kControlMouse)
+	{
+		if (uPosition != uPositionPrevious || vPosition != vPositionPrevious)
+		{
+			aiming2Direction = point_direction(aiming2StartX, aiming2StartY, uPosition, vPosition);
+		}
+	}
+	else if (lastControlType == kControlGamepad)
+	{
+		if (sqr(uAxis.value) + sqr(vAxis.value) > sqr(0.1))
+		{
+			aiming2Direction = point_direction(0, 0, uAxis.value, vAxis.value);
+		}
+		else if (sqr(xAxis.value) + sqr(yAxis.value) > sqr(0.1))
+		{
+			aiming2Direction = point_direction(0, 0, xAxis.value, yAxis.value);
+		}
+	}
+}
+
 // update book
 if (l_canMove || m_usingInventory || m_usingBook)
 {

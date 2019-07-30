@@ -23,7 +23,7 @@ with (Settings)
 	ctUseItem		= [kControlKB, ord("F"), kControlGamepad, gp_face2];
 	ctDodge			= [kControlMouse, mb_right, kControlGamepad, gp_shoulderl];
 	
-	ctInventory		= [kControlKB, ord("I"), kControlGamepad, gp_select];
+	ctInventory		= [kControlKB, ord("I"), kControlGamepad, gp_select, kControlGamepad, gp_padu];
 	ctJournal		= [kControlKB, ord("Q"), kControlKB, vk_tab, kControlGamepad, gp_start];
 	ctMap			= [kControlKB, ord("M")];
 	

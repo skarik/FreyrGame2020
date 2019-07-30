@@ -2279,6 +2279,14 @@
             }
         },
         {
+            "Key": "5244909b-a23f-4c1e-8fb4-226a7991e2fa",
+            "Value": {
+                "id": "988a554c-74b3-409d-ac5d-9e3e799a818e",
+                "resourcePath": "scripts\\_playerInteract_GetAimPosition\\_playerInteract_GetAimPosition.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5266a0cc-8943-4e5c-878d-83565773789d",
             "Value": {
                 "id": "44c597f9-4618-42b5-9742-a6d224750f49",
@@ -7721,6 +7729,7 @@
         "711eb701-45ca-4fba-a519-6d5af29a0af5",
         "11665623-6580-4aee-a5e8-f5c36027bc8b",
         "feac471a-191f-4fa0-b351-8ad9933e7e7b",
+        "5244909b-a23f-4c1e-8fb4-226a7991e2fa",
         "81173471-4fa3-495d-963a-a0585aba9bd9",
         "7af7373b-ec41-4459-86d1-d9db63b98ac0",
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
