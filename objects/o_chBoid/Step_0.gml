@@ -1,5 +1,8 @@
 /// @description Update depth and AI
 
+if (!m_initialized)
+	exit;
+
 var pl;
 pl = getPlayer();
 
