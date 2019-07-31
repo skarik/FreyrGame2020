@@ -2191,6 +2191,14 @@
             }
         },
         {
+            "Key": "4cf286e6-cee5-46bd-969a-fb3163cd153e",
+            "Value": {
+                "id": "61a67ca4-93c6-4878-a4b4-197bdf6ffda5",
+                "resourcePath": "views\\4cf286e6-cee5-46bd-969a-fb3163cd153e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4d16f30e-58e7-49c4-9879-552ae8bb6fb9",
             "Value": {
                 "id": "71c9207d-6fcf-4df0-83f0-fa32261fa1e5",
@@ -3695,6 +3703,14 @@
             }
         },
         {
+            "Key": "7f48d98d-e89c-43fd-8dc4-b72de15f9ac6",
+            "Value": {
+                "id": "c626016c-7cd0-47d0-8911-8075f8fc25f4",
+                "resourcePath": "views\\7f48d98d-e89c-43fd-8dc4-b72de15f9ac6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7fac7a46-84e3-4205-9b30-d69b4b5a6935",
             "Value": {
                 "id": "9cfcb859-4621-44f3-96a2-34f11498b005",
@@ -4012,6 +4028,14 @@
                 "id": "428ef0c5-b0c0-49e7-84f0-7030f3781305",
                 "resourcePath": "sprites\\sc_32x32c_blond\\sc_32x32c_blond.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "896d2c12-b342-4730-8385-698cb45dcda0",
+            "Value": {
+                "id": "39438347-f653-4579-9af7-90e0a11ff46c",
+                "resourcePath": "objects\\ob_elevationAreaLift\\ob_elevationAreaLift.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5380,6 +5404,14 @@
                 "id": "13345fa7-d77a-426e-be10-39e28af660eb",
                 "resourcePath": "objects\\o_lightEmissiveDepth\\o_lightEmissiveDepth.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b2d3dc46-3d3d-45bb-bde7-72e027b78cd2",
+            "Value": {
+                "id": "d23ceff2-e9b2-4a05-a9dc-b848439c2081",
+                "resourcePath": "views\\b2d3dc46-3d3d-45bb-bde7-72e027b78cd2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
