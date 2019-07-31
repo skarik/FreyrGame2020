@@ -6,4 +6,5 @@ var item = argument0;
 	item.name		= "";
 	item.checkUse	= nullScript;
 	item.onUse		= nullScript;
+	item.onDeplete	= nullScript;
 	item.type		= kItemPickupNormal;

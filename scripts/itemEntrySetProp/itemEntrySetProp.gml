@@ -12,4 +12,5 @@ var item = argument0;
 	item.name		= argument3;
 	item.checkUse	= argument4;
 	item.onUse		= argument5;
-	item.type		= argument6;
+	item.onDeplete	= argument6;
+	item.type		= argument7;

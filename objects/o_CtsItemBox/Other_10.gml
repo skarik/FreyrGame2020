@@ -19,6 +19,7 @@ with (input_actor)
 									m_name,
 									m_checkUseScript,
 									m_onUseScript,
+									m_onDepleteScript,
 									m_type);
 								
 		// todo: add shit to bag
@@ -32,6 +33,7 @@ with (input_actor)
 										m_name,
 										m_checkUseScript,
 										m_onUseScript,
+										m_onDepleteScript,
 										m_type);
 		}
 

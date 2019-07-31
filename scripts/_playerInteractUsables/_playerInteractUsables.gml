@@ -56,11 +56,19 @@ else
 	// update usable position
 	if (exists(currentHeldUsable))
 	{
+		// Move to player position
 		currentHeldUsable.x = x;
 		currentHeldUsable.y = y;
 		currentHeldUsable.z = z;
 		currentHeldUsable.z_height = 20 + z_height;
+		// Add animation bobs
+		var checkAnimIndex = floor(animationIndex % ceil(image_number / 4 - 0.01));
+		if (sprite_index == kAnimWalking && (checkAnimIndex == 2 || checkAnimIndex == 5))
+		{
+			currentHeldUsable.z_height -= 1;
+		}
 		
+		// Behavior for throwing/dropping
 		if (canMove && !isBusyInteracting && useButton.pressed)
 		{
 			if (!currentHeldUsable.m_canThrow)
@@ -88,11 +96,41 @@ else
 			
 			// enable delay frame
 			inDelayFrame = true;
+			
+			// update usables quickly
+			_playerInteractUsables(l_canMove && !inDelayFrame);
+		}
+		// Behavior for when attacked
+		else if (m_isStunned)
+		{
+			// Drop the object:
+			{
+				currentHeldUsable.x = round(x + lengthdir_x(10, aimingDirection));
+				currentHeldUsable.y = round(y + lengthdir_y(10, aimingDirection));
+				currentHeldUsable.z = z;
+				currentHeldUsable.z_height = 0;
+				with (currentHeldUsable)
+				{
+					event_user(2);
+				}
+			}
+			// drop it
+			currentHeldUsable = null;
+			m_isHolding = false
+			
+			// enable delay frame
+			inDelayFrame = true;
 		}
 	}
 	else
 	{
 		currentHeldUsable = null;
 		m_isHolding = false;
+		
+		// enable delay frame
+		inDelayFrame = true;
+		
+		// update usables quickly
+		_playerInteractUsables(l_canMove && !inDelayFrame);
 	}
 }
