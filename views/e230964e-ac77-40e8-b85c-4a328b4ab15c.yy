@@ -6,7 +6,8 @@
     "children": [
         "76e54bb0-9942-4648-be66-078861ee8f06",
         "90c4a19e-4bbf-4989-89ae-9b97ac759980",
-        "6f5dfdfb-64c5-46f0-8ef0-1313f8ba762d"
+        "6f5dfdfb-64c5-46f0-8ef0-1313f8ba762d",
+        "f1b3c59d-45a4-4bf8-b03c-ff8c9cdb2e3d"
     ],
     "filterType": "GMRoom",
     "folderName": "Oasis",
