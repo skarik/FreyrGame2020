@@ -1,0 +1,1 @@
+image_index += Time.deltaTime * 15.0;

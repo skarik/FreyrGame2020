@@ -8,7 +8,7 @@ draw_sprite_ext(target.sprite_index, target.image_index,
 				target.x + xoffset, target.y - target.z_height + yoffset,
 				target.image_xscale, target.image_yscale,
 				target.image_angle,
-				target.image_blend,
-				target.image_alpha);
+				color_multiply(target.image_blend, image_blend),
+				target.image_alpha * image_alpha);
 if (mask)
 	shader_reset();
