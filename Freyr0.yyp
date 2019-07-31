@@ -1079,6 +1079,14 @@
             }
         },
         {
+            "Key": "247f468f-7f9e-4cb9-b558-4ef9b97a5323",
+            "Value": {
+                "id": "4df6afab-74f5-4c21-98bb-f62224cd4d82",
+                "resourcePath": "views\\247f468f-7f9e-4cb9-b558-4ef9b97a5323.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "24ac4ceb-2490-41d2-9219-f66823e9271c",
             "Value": {
                 "id": "3293b32f-9386-4530-8ae8-c1e5213d20fc",
@@ -2828,6 +2836,14 @@
                 "id": "a1a2244c-2e23-47eb-8caf-fe7302c40653",
                 "resourcePath": "scripts\\questInitialize\\questInitialize.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "65635c15-806f-4a38-bd69-f644ddd44ea5",
+            "Value": {
+                "id": "34b6d0c7-d527-42d3-a4c9-fbc5504e0a61",
+                "resourcePath": "objects\\o_mus00_FoolsMarchNorth\\o_mus00_FoolsMarchNorth.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6351,6 +6367,14 @@
             }
         },
         {
+            "Key": "d31ad18f-01f9-4cd4-9166-9276d4989c10",
+            "Value": {
+                "id": "be28f3fa-12e9-42b2-8186-c08002b3017b",
+                "resourcePath": "sprites\\sbg_horizon0\\sbg_horizon0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d3270700-d484-400f-abee-692a7825e513",
             "Value": {
                 "id": "8c5e4248-88dd-4b4f-a3c1-aaeacbefdba7",
@@ -6548,6 +6572,14 @@
                 "id": "67fcc5b9-6dbe-436f-a1ab-2a3acc75a8c9",
                 "resourcePath": "sprites\\sui_f_arvo9\\sui_f_arvo9.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d89f263d-7a01-4222-854f-37fb5c934a71",
+            "Value": {
+                "id": "d9809bf4-6fb1-4f9b-9d50-e10856b19927",
+                "resourcePath": "rooms\\rm_fools_march_north\\rm_fools_march_north.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
