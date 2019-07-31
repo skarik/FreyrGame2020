@@ -17,7 +17,8 @@ var max_count = argument3;
 var new_name = argument4;
 var new_checkUse = argument5;
 var new_onUse = argument6;
-var new_type = argument7;
+var new_onDeplete = argument7;
+var new_type = argument8;
 
 // Loop through the inventory, if find a matching item
 for (var i = 0; i < itemArrayLength; ++i)
@@ -30,6 +31,7 @@ for (var i = 0; i < itemArrayLength; ++i)
 			itemArray[i].name = new_name;
 			itemArray[i].checkUse = new_checkUse;
 			itemArray[i].onUse = new_onUse;
+			itemArray[i].onDeplete = new_onDeplete;
 			itemArray[i].type = new_type;
 			return itemArray[i];
 		}
@@ -46,6 +48,7 @@ for (var i = 0; i < itemArrayLength; ++i)
 		itemArray[i].name = new_name;
 		itemArray[i].checkUse = new_checkUse;
 		itemArray[i].onUse = new_onUse;
+		itemArray[i].onDeplete = new_onDeplete;
 		itemArray[i].type = new_type;
 		return itemArray[i];
 	}

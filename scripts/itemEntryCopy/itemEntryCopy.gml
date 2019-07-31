@@ -13,4 +13,5 @@ var item = argument0;
 	item.name		= source.name;
 	item.checkUse	= source.checkUse;
 	item.onUse		= source.onUse;
+	item.onDeplete	= source.onDeplete;
 	item.type		= source.type;

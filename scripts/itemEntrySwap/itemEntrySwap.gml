@@ -9,4 +9,5 @@ swap = item0.count;		item0.count = item1.count;			item1.count = swap;
 swap = item0.name;		item0.name = item1.name;			item1.name = swap;
 swap = item0.checkUse;	item0.checkUse = item1.checkUse;	item1.checkUse = swap;
 swap = item0.onUse;		item0.onUse = item1.onUse;			item1.onUse = swap;
+swap = item0.onDeplete;	item0.onDeplete = item1.onDeplete;	item1.onDeplete = swap;
 swap = item0.type;		item0.type = item1.type;			item1.type = swap;

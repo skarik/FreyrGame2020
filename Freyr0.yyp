@@ -2410,7 +2410,7 @@
             "Key": "56a84241-7e72-4cfe-8345-7b8986e62560",
             "Value": {
                 "id": "bd6a1354-c6e6-4582-92d9-329c44507c4b",
-                "resourcePath": "scripts\\turnipSeedCheckUse\\turnipSeedCheckUse.yy",
+                "resourcePath": "scripts\\plantableDirtCheckUse\\plantableDirtCheckUse.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7447,6 +7447,14 @@
             }
         },
         {
+            "Key": "fbc61ae6-a559-45ff-bc4e-b2f12a1ca0a6",
+            "Value": {
+                "id": "2edd682d-6c61-4643-be80-cbbea1b1fc44",
+                "resourcePath": "scripts\\plantableOnDeplete\\plantableOnDeplete.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fbf60dd8-3495-4027-b419-045e706ea62c",
             "Value": {
                 "id": "465a92c4-84b2-45f7-ac6c-eb62da520636",
@@ -7791,6 +7799,7 @@
         "20b48cab-a37a-4bda-aab2-3451a5a716c8",
         "bec3e5f0-d50b-44db-be78-6806ed0a95b3",
         "56a84241-7e72-4cfe-8345-7b8986e62560",
+        "fbc61ae6-a559-45ff-bc4e-b2f12a1ca0a6",
         "b4ba7c02-51c0-4cf4-aedf-064cf6e6a556",
         "c174095e-49df-4ae5-b545-26b222669828",
         "1ce3ecc6-ae73-4e97-9a97-dd07436bbd1b",
