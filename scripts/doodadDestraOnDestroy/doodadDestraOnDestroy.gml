@@ -14,3 +14,11 @@ if (exists(collider))
 {
 	delete(collider);
 }
+if (exists(light))
+{
+	delete(light);
+}
+if (exists(emissive))
+{
+	delete(emissive);
+}

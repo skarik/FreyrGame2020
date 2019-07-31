@@ -1,0 +1,1 @@
+draw_sprite(sprite_index, image_index, x - GameCamera.view_x, y - GameCamera.view_y);

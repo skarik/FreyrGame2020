@@ -30,6 +30,8 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 			doodad.image_blend = layer_sprite_get_blend(element);
 			doodad.image_alpha = layer_sprite_get_alpha(element);
 			doodad.collider = null;
+			doodad.light = null;
+			doodad.emissive = null;
 		
 		doodadSetGlow(doodad);
 		doodadSetShadow(doodad);
