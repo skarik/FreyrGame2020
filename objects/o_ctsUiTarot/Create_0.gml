@@ -6,190 +6,43 @@ controlInit();
 
 m_ending = false;
 
-m_tarotBaseSprite = sui_tarotTextureBase;
-m_tarotBaseWidth = sprite_get_width(m_tarotBaseSprite);
-m_tarotBaseHeight = sprite_get_height(m_tarotBaseSprite);
-m_tarotBaseDepth = 10;
+// set up available deck
+#macro kTarotSuitStaves 0
+#macro kTarotSuitCups 1
+#macro kTarotSuitSwords 2
+#macro kTarotSuitRings 3
+#macro kTarotValueAce 1
 
-// Now, create a mesh
-vertex_format_begin();
-vertex_format_add_position_3d();
-vertex_format_add_color();
-vertex_format_add_texcoord();
-vertex_format_add_normal();
-m_vformat = vertex_format_end();
+m_deck[0] = [kTarotSuitStaves, kTarotValueAce, sui_tarotStaveAce, tarotStavesAce];
+m_deck[1] = [kTarotSuitCups, kTarotValueAce, sui_tarotCupAce, tarotCupsAce];
+m_deck[2] = [kTarotSuitSwords, kTarotValueAce, sui_tarotSwordAce, tarotSwordsAce];
+m_deck[3] = [kTarotSuitRings, kTarotValueAce, sui_tarotRingAce, tarotRingsAce];
 
-m_vbuf = vertex_create_buffer();
-vertex_begin(m_vbuf, m_vformat);
+// set up game state
+m_card_selection[0] = -1;
+m_card_selection[1] = -1;
+m_card_selection[2] = -1;
+m_card_flipped[0] = false;
+m_card_flipped[1] = false;
+m_card_flipped[2] = false;
 
-// front face:
-vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.0, 0.0);
-vertex_normal(m_vbuf, 0, 0, -1);
-vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.25, 0.0);
-vertex_normal(m_vbuf, 0, 0, -1);
-vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.0, 1.0);
-vertex_normal(m_vbuf, 0, 0, -1);
+#macro kTarotGameState_FortuneGenerate 0
+#macro kTarotGameState_FortuneDeal 1
+#macro kTarotGameState_FortuneChoose 2
+#macro kTarotGameState_FortuneChosen 3
+#macro kTarotGameState_FortuneGiven 4
+m_state = kTarotGameState_FortuneGenerate;
 
-vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.25, 0.0);
-vertex_normal(m_vbuf, 0, 0, -1);
-vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.25, 1.0);
-vertex_normal(m_vbuf, 0, 0, -1);
-vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.0, 1.0);
-vertex_normal(m_vbuf, 0, 0, -1);
+m_state_blend_background = 0.0;
+m_state_blend_deal = 0.0;
+m_state_blend_select = 0.0;
+m_state_blend_select_remove = 0.0;
+m_state_blend_select_continue = 0.0;
+m_state_blend_panout = 0.0;
 
-// back face:
-vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.25, 0.0);
-vertex_normal(m_vbuf, 0, 0, 1);
-vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.50, 0.0);
-vertex_normal(m_vbuf, 0, 0, 1);
-vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.25, 1.0);
-vertex_normal(m_vbuf, 0, 0, 1);
+m_state_selection = 1;
 
-vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.50, 0.0);
-vertex_normal(m_vbuf, 0, 0, 1);
-vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.50, 1.0);
-vertex_normal(m_vbuf, 0, 0, 1);
-vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, m_tarotBaseDepth/2);
-vertex_color(m_vbuf, c_white, 1.0);
-vertex_texcoord(m_vbuf, 0.25, 1.0);
-vertex_normal(m_vbuf, 0, 0, 1);
-
-// create side faces
-{
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 0.0);
-	vertex_normal(m_vbuf, -1, 0, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, -1, 0, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, -1, 0, 0);
-
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, -1, 0, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 1.0);
-	vertex_normal(m_vbuf, -1, 0, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, -1, 0, 0);
-}
-{
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 0.0);
-	vertex_normal(m_vbuf, +1, 0, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, +1, 0, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, +1, 0, 0);
-
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, +1, 0, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 1.0);
-	vertex_normal(m_vbuf, +1, 0, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, +1, 0, 0);
-}
-// create top and bottom bits
-{
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 0.0);
-	vertex_normal(m_vbuf, 0, -1, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, 0, -1, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, 0, -1, 0);
-
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, 0, -1, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, -m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 1.0);
-	vertex_normal(m_vbuf, 0, -1, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, -m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, 0, -1, 0);
-}
-{
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 0.0);
-	vertex_normal(m_vbuf, 0, +1, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, 0, +1, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, 0, +1, 0);
-
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, -m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 0.0);
-	vertex_normal(m_vbuf, 0, +1, 0);
-	vertex_position_3d(m_vbuf, +m_tarotBaseWidth/2, +m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.75, 1.0);
-	vertex_normal(m_vbuf, 0, +1, 0);
-	vertex_position_3d(m_vbuf, -m_tarotBaseWidth/2, +m_tarotBaseHeight/2, +m_tarotBaseDepth/2);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, 0.50, 1.0);
-	vertex_normal(m_vbuf, 0, +1, 0);
-}
-
-vertex_end(m_vbuf);
-vertex_freeze(m_vbuf);
-
-
-uTexSheetCoords = shader_get_uniform(sh_tarotCard, "uTexSheetCoords");
-//uMatrixMVP = shader_get_uniform(sh_tarotCard, "uMatrixMVP");
+// create tarot cards
+m_card[0] = instance_create_depth(0, -500, depth, o_ctsUiTarotCard);
+m_card[1] = instance_create_depth(0, -500, depth, o_ctsUiTarotCard);
+m_card[2] = instance_create_depth(0, -500, depth, o_ctsUiTarotCard);

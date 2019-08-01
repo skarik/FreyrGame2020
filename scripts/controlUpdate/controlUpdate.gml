@@ -1,5 +1,5 @@
-//@description Update inputs.
-//@param clear_input  If true, clears all input.
+///@description Update inputs.
+///@param clear_input  If true, clears all input.
 if (argument0 == false)
 {
 	//_controlStructUpdate(xAxis, -keyboard_check(ord("A")) + keyboard_check(ord("D")) + deadzone_bias(gamepad_axis_value(0, gp_axislh)));

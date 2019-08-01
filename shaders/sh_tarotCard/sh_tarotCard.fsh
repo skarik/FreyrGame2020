@@ -14,6 +14,7 @@ void main()
 	vec2 validTexCoord = v_vTexcoord / v_vFutzValues.x;
     vec4 textureColor = v_vColour * texture2D( gm_BaseTexture,  validTexCoord * uTexSheetCoords.zw + uTexSheetCoords.xy );
 	
+	// Get rid of the transparent areas
 	if (textureColor.a < 0.5)
 		discard;
 		

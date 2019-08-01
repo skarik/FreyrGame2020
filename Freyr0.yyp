@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "10f8e386-c794-4cb0-b0da-81aad6ae255b",
+            "Value": {
+                "id": "1d4c4fb8-111d-4f55-a100-6d20fe0bc49a",
+                "resourcePath": "sprites\\sui_tarotCupAce\\sui_tarotCupAce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "11255813-b9c4-4e61-80ef-aa0e213360d9",
             "Value": {
                 "id": "ce33c043-5db5-4538-affb-a7dd24ac3081",
@@ -935,6 +943,14 @@
             }
         },
         {
+            "Key": "1ef96f9f-6861-4905-b4d6-1787c8ff66fe",
+            "Value": {
+                "id": "bd1c8baf-2a08-4c5e-9cba-03990f2cacb3",
+                "resourcePath": "scripts\\tarotSwordsAce\\tarotSwordsAce.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1f20d603-f71a-4e3c-ae4a-bdadee2369b0",
             "Value": {
                 "id": "a996c054-5fee-41a3-ac3c-5ba9ce5ac992",
@@ -1295,6 +1311,14 @@
             }
         },
         {
+            "Key": "2a18e71e-ad78-401b-a62c-3f31c0eefdac",
+            "Value": {
+                "id": "d58e18ad-9836-4d94-80c1-4fced375eb55",
+                "resourcePath": "objects\\o_ctsUiTarotCard\\o_ctsUiTarotCard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2a1d9997-0676-47eb-aa8e-9c0a1e0da3b0",
             "Value": {
                 "id": "b1939be4-6ab2-4655-b37c-246ef26bf828",
@@ -1463,6 +1487,14 @@
             }
         },
         {
+            "Key": "2e694784-ad82-45cb-b477-a78df2e8f32e",
+            "Value": {
+                "id": "732fd155-91fe-47d1-8875-2b70d379d533",
+                "resourcePath": "sprites\\sui_tarotRingAce\\sui_tarotRingAce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2e875ea2-8ea6-4603-a58f-46e58841da6d",
             "Value": {
                 "id": "0318ce19-bd2b-46e6-b741-74d0c06efd79",
@@ -1572,6 +1604,14 @@
                 "id": "8fb478a1-bcfb-4941-8632-a3854cba18d2",
                 "resourcePath": "sprites\\s_propStool\\s_propStool.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "345350f8-60ee-4bc5-8c3c-c760b79d45a7",
+            "Value": {
+                "id": "b19784db-3bd7-4e18-b5da-9262749c1ab6",
+                "resourcePath": "scripts\\tarotStavesAce\\tarotStavesAce.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1895,6 +1935,14 @@
             }
         },
         {
+            "Key": "40c30287-09e9-4a05-84ed-64a3242ee92e",
+            "Value": {
+                "id": "6882dab9-eedd-4c58-87cb-5646ad9e4dba",
+                "resourcePath": "sprites\\sui_tarotStaveAce\\sui_tarotStaveAce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "40ef29d6-2b7a-4df6-acfe-3f8da4271861",
             "Value": {
                 "id": "3c7f27f2-a9a1-4160-bb3d-e68d307bdbf2",
@@ -2139,6 +2187,14 @@
             "Value": {
                 "id": "d177ca33-3d8a-4c9e-a95b-c657a7217094",
                 "resourcePath": "scripts\\inventoryCopyAddItem\\inventoryCopyAddItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "47bbbf36-54a1-4f98-9f36-2417c633b589",
+            "Value": {
+                "id": "dc83edf4-f00e-434d-be88-bd0d879d9d0d",
+                "resourcePath": "scripts\\tarotCupsAce\\tarotCupsAce.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2727,6 +2783,14 @@
             }
         },
         {
+            "Key": "5c79468e-2b2b-44a2-a306-88c6cee20211",
+            "Value": {
+                "id": "b6b2288f-c7dd-473a-8a70-a8e1212ebf66",
+                "resourcePath": "scripts\\tarotRingsAce\\tarotRingsAce.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5c86a910-c3c1-4c5d-85a3-8e16b21f6568",
             "Value": {
                 "id": "71bbf725-4931-4174-9df9-c8c928782f3d",
@@ -2819,6 +2883,14 @@
             "Value": {
                 "id": "c978e70e-62be-4a00-9648-7ce826d23a5f",
                 "resourcePath": "sprites\\spt_dustPoofer\\spt_dustPoofer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6020e0b4-29b7-451e-8782-403cdd86f4a2",
+            "Value": {
+                "id": "ba6a3630-1c7a-4692-9978-5b3d9e8a0130",
+                "resourcePath": "sprites\\sui_tarotTextureMaskStrip\\sui_tarotTextureMaskStrip.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4143,6 +4215,14 @@
             }
         },
         {
+            "Key": "896fd398-cfcc-455b-9a2e-1360ffd36751",
+            "Value": {
+                "id": "ea5d530c-2495-427f-af66-994df5fb59e5",
+                "resourcePath": "scripts\\bounceOut\\bounceOut.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8986e543-8706-4504-90b6-8d19c3335b48",
             "Value": {
                 "id": "ff5fca3f-c368-45d8-81c2-437242d1bd36",
@@ -4404,6 +4484,14 @@
                 "id": "c952075c-1e44-4506-8655-e0fd415ffddf",
                 "resourcePath": "objects\\o_pickupRes_Bolt\\o_pickupRes_Bolt.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "900c3f27-809c-4cb3-b27c-9b1f3a386d29",
+            "Value": {
+                "id": "c61fbf74-ee81-4117-b628-49c171b8039c",
+                "resourcePath": "sprites\\sui_tarotSwordAce\\sui_tarotSwordAce.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5143,6 +5231,14 @@
             }
         },
         {
+            "Key": "a74f9091-2d9a-454f-b48e-98f0c94bb20d",
+            "Value": {
+                "id": "ef7c19ef-9e30-427d-bd99-51f96329abe1",
+                "resourcePath": "shaders\\sh_tarotCardArtMask\\sh_tarotCardArtMask.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "a76a3de1-3209-4958-8bd3-893df3040940",
             "Value": {
                 "id": "66f292b3-f93a-46b0-bc4a-b04bb5e779d8",
@@ -5771,6 +5867,14 @@
             "Value": {
                 "id": "9fffaf8d-fc37-4620-bb60-61176023c206",
                 "resourcePath": "scripts\\Cts_MakeGabber\\Cts_MakeGabber.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b778584d-5b55-4179-8b7a-752bd53941a7",
+            "Value": {
+                "id": "5ac5a270-73e7-4625-8b48-7466339ef1ae",
+                "resourcePath": "scripts\\tarotConstants\\tarotConstants.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7999,6 +8103,14 @@
             }
         },
         {
+            "Key": "ff4718c1-5460-4703-b502-951b8df17766",
+            "Value": {
+                "id": "df55fd87-ace9-4ab2-95b6-3d1ce460a5e1",
+                "resourcePath": "views\\ff4718c1-5460-4703-b502-951b8df17766.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ff8f2ed5-cc76-44cb-bdb7-d9cd4f1aa5cc",
             "Value": {
                 "id": "b8e6a098-42c3-45fd-a177-1d16e1e961cf",
@@ -8042,6 +8154,7 @@
         "81a9e470-0f52-4f6e-b645-ce565fe63ca7",
         "08b30e07-226e-4518-b4c8-754025ce15af",
         "95dd9f43-3e42-44f1-b3ef-6994a858309c",
+        "896fd398-cfcc-455b-9a2e-1360ffd36751",
         "2b1bf104-c3af-47cd-a4d2-87dcff4e222f",
         "86833a0d-6038-462d-b9b4-6d262e80d960",
         "2a1d9997-0676-47eb-aa8e-9c0a1e0da3b0",
@@ -8339,6 +8452,11 @@
         "1dcd64d2-4b18-4872-8659-8dccbb978594",
         "a909e678-0753-4cb1-9af6-8c1554e98fbd",
         "40039c77-c4ca-4020-bae1-7f3401c84ccf",
+        "b778584d-5b55-4179-8b7a-752bd53941a7",
+        "345350f8-60ee-4bc5-8c3c-c760b79d45a7",
+        "47bbbf36-54a1-4f98-9f36-2417c633b589",
+        "1ef96f9f-6861-4905-b4d6-1787c8ff66fe",
+        "5c79468e-2b2b-44a2-a306-88c6cee20211",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""

@@ -2,4 +2,6 @@
 
 controlCleanup();
 
-vertex_delete_buffer(m_vbuf);
+delete(m_card[0]);
+delete(m_card[1]);
+delete(m_card[2]);

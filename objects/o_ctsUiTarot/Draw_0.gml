@@ -1,38 +1,59 @@
-/// @description Draw tarot cards
+/// @description Draw tarot card labels
 
-var uvs = sprite_get_uvs(sui_tarotTextureStrip, 0);
+var dx = GameCamera.x;
+var dy = GameCamera.y;
 
-// Save old matrix stack
-matrix_stack_push(matrix_get(matrix_world));
-matrix_stack_push(matrix_get(matrix_view));
-matrix_stack_push(matrix_get(matrix_projection));
+// Create a faded in background
+draw_set_color(c_black);
+draw_set_alpha(0.5 * m_state_blend_background);
+draw_rectangle(0, 0, room_width, room_height, false);
+draw_set_alpha(1.0);
 
-var mat_projection = matrix_build_projection_perspective_fov(55, Screen.width / Screen.height, 1, 2000);
-var mat_view = matrix_build_lookat(0, 0, -500, 0, 0, 0, 0, -1, 0);
-//var mat_world = matrix_build(GameCamera.width * 0.5, GameCamera.height * 0.5, 0.0, 0, current_time * 0.1, 0, 1, 1, 1);
-var mat_world = matrix_build(0, 0, 10.0, 0, current_time * 0.05, current_time * 0.08, 1, 1, 1);
-matrix_set(matrix_world, mat_world);
-matrix_set(matrix_view, mat_view);
-matrix_set(matrix_projection, mat_projection);
+// Create the dealing prompt
+if (m_state_blend_deal > 0.0 && m_state_blend_select < 1.0)
+{
+	draw_set_color(c_white);
+	draw_set_font(global.font_arvo9);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+	var spaced_string = "Select a card.";
+	for (var i = 1; i <= string_length(spaced_string); ++i)
+	{
+		var char = string_char_at(spaced_string, i);
+		var offset = (i - string_length(spaced_string) * 0.5) * 8;
+		
+		draw_set_alpha((1.0 - m_state_blend_select) * saturate(m_state_blend_deal * (string_length(spaced_string) + 1) - i));
+		draw_text(dx + offset, dy - GameCamera.height * 0.5 + 64, char);
+	}
+	draw_set_alpha(1.0);
+}
 
-// enable depth testing
-//gpu_set_zwriteenable(true);
-gpu_set_ztestenable(true);
-//gpu_set_zfunc(cmpfunc_lessequal);
-
-shader_set(sh_tarotCard);
-shader_set_uniform_f(uTexSheetCoords, uvs[0], uvs[1], uvs[2] - uvs[0], uvs[3] - uvs[1])
-//shader_set_uniform_matrix(uMatrixMVP);
-
-vertex_submit(m_vbuf, pr_trianglelist, sprite_get_texture(sui_tarotTextureStrip, 0));
-shader_reset();
-
-gpu_set_ztestenable(false);
-
-// Restore matrix stack
-matrix_set(matrix_projection, matrix_stack_top());
-matrix_stack_pop();
-matrix_set(matrix_view, matrix_stack_top());
-matrix_stack_pop();
-matrix_set(matrix_world, matrix_stack_top());
-matrix_stack_pop();
+// Show the chosen card
+if (m_state_blend_select > 0.0)
+{
+	draw_set_alpha(saturate(m_state_blend_select * 2.0 - 1.0));
+	
+	draw_set_color(c_white);
+	draw_set_font(global.font_arvo9);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+	var spaced_string = m_card[m_state_selection].m_name;
+	for (var i = 1; i <= string_length(spaced_string); ++i)
+	{
+		var char = string_char_at(spaced_string, i);
+		var offset = (i - string_length(spaced_string) * 0.5) * 10;
+		draw_text(dx + offset, dy - GameCamera.height * 0.5 + 40, char);
+	}
+	draw_set_alpha(1.0);
+}
+if (m_state_blend_select_continue > 0.0)
+{
+	draw_sprite_ext(sui_buttonPress3, 0,
+					dx,
+					dy + GameCamera.height * 0.5 - 40,
+					bouncestep(m_state_blend_select_continue),
+					bouncestep(m_state_blend_select_continue),
+					0.0,
+					c_white,
+					1.0);
+}

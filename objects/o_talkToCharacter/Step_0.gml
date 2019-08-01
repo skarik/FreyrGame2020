@@ -98,6 +98,7 @@ if (m_interacting)
 						else if (o_ctsUiTarot.m_ending)
 						{
 							cutsceneWaitEnd();
+							cutscenePlayerUnlock();
 						}
 					}
 				}
