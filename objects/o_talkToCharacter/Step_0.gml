@@ -86,6 +86,21 @@ if (m_interacting)
 						cutsceneWaitEnd();
 					}
 				}
+				else if (wait_id == "fortune")
+				{
+					if (!exists(o_CtsChoiceBox))
+					{
+						if (!exists(o_ctsUiTarot))
+						{
+							cutscenePlayerLock();
+							new(o_ctsUiTarot);
+						}
+						else if (o_ctsUiTarot.m_ending)
+						{
+							cutsceneWaitEnd();
+						}
+					}
+				}
 			}
 		}
 	

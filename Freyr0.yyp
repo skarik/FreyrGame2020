@@ -1687,6 +1687,14 @@
             }
         },
         {
+            "Key": "39c9d75f-1004-444a-8648-e1c073cb1731",
+            "Value": {
+                "id": "427a4eff-8349-4477-99fb-595adfeda6a1",
+                "resourcePath": "views\\39c9d75f-1004-444a-8648-e1c073cb1731.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3a197c63-e58f-4fdc-9c34-0826d15953fb",
             "Value": {
                 "id": "f44b5d83-ca57-4a6f-a704-b8a21ccdabcb",
@@ -2511,6 +2519,14 @@
             }
         },
         {
+            "Key": "55e87eae-5ed0-4b92-8253-2d4037b86a17",
+            "Value": {
+                "id": "57416860-f80b-4285-8f90-bf4ea01b7091",
+                "resourcePath": "views\\55e87eae-5ed0-4b92-8253-2d4037b86a17.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "55ee7344-8e73-4b3a-826b-64364eedaadd",
             "Value": {
                 "id": "e27b1bc4-0c9e-42aa-83a9-84a1434bb51a",
@@ -2939,6 +2955,14 @@
             "Value": {
                 "id": "6b77cf4d-507d-4566-96c9-5bbbdaccad62",
                 "resourcePath": "sprites\\s_charHeroDeadFloat\\s_charHeroDeadFloat.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "65acffd8-73bb-47b0-82ae-3687b7117e3f",
+            "Value": {
+                "id": "aeca9b98-bd1d-4c62-a23c-b4dd5fd26339",
+                "resourcePath": "sprites\\sui_tarotTextureBase\\sui_tarotTextureBase.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5799,6 +5823,14 @@
             }
         },
         {
+            "Key": "b8f12a62-6756-4801-ab6b-9c2dc3a6ff3b",
+            "Value": {
+                "id": "919e66aa-0a12-4d23-aee4-eb910985f0b0",
+                "resourcePath": "sprites\\sui_tarotTextureStrip\\sui_tarotTextureStrip.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b9a3c0c7-5e0f-4655-b75a-8e6478d64aaa",
             "Value": {
                 "id": "4ee0ef45-5322-445a-9598-5d43887fc88c",
@@ -6359,6 +6391,14 @@
             }
         },
         {
+            "Key": "cba48218-ca51-499c-8116-d6b1448d253b",
+            "Value": {
+                "id": "27c58e8b-a6e9-450c-8e8d-80eefd1dd867",
+                "resourcePath": "shaders\\sh_tarotCard\\sh_tarotCard.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "cbbe2b06-cebf-4475-988b-22d57c91cbb7",
             "Value": {
                 "id": "e6ac42de-7334-461c-a714-b045bbe0a85d",
@@ -6708,6 +6748,14 @@
                 "id": "850aa8f8-e8d5-4f57-9a27-0695d21b447a",
                 "resourcePath": "sprites\\s_propLaundry\\s_propLaundry.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d76f3275-4222-40b9-9f00-59ff1f540425",
+            "Value": {
+                "id": "0a298928-e6ba-4236-89e5-933cf3d0da3b",
+                "resourcePath": "rooms\\rm_test_tarot\\rm_test_tarot.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -7548,6 +7596,14 @@
                 "id": "8cfac14a-43ac-48cb-a314-2857c52490f1",
                 "resourcePath": "scripts\\characterGroundInteractEndStep\\characterGroundInteractEndStep.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f32e0c22-e522-4d59-8ec5-ccb2e1439485",
+            "Value": {
+                "id": "89a2571d-f114-4948-9584-dc43ebee5ab6",
+                "resourcePath": "objects\\o_ctsUiTarot\\o_ctsUiTarot.yy",
+                "resourceType": "GMObject"
             }
         },
         {
