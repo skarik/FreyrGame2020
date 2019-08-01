@@ -23,6 +23,9 @@ m_isPlanting = false;
 m_plant_x = 0;
 m_plant_y = 0;
 
+m_voidPunch_fill = 1.0;
+m_voidPunch_charged = 0.0;
+
 aimingDirection = 0.0;
 aimingHeight = 11;
 aimingStartX = x;

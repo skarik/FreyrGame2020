@@ -16,3 +16,6 @@ this.visible = false;
 m_isPickingUp = false;
 m_canPickUp = false;
 //delete(this);
+
+var pl = getPlayer();
+pl.pstats.m_pitem[kPitemGrapple] = 1;

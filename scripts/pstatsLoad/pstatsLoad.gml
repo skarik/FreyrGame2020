@@ -1,0 +1,1 @@
+var buffer = argument0;

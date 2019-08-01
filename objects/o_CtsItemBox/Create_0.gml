@@ -14,6 +14,7 @@ input_priority = true;
 input_disable = false;
 input_audio = null;
 input_autoclose = false;
+input_addItem = true;
 
 display_text = "";
 display_flags[0] = 0;

@@ -29,6 +29,9 @@ pl.y            = buffer_read(buf, buffer_u32);
 with (pl.inventory) {
 	inventoryLoad(buf);
 }
+with (pl.pstats) {
+	pstatsLoad(buf);
+}
 //pl.facingDir    = buffer_read(buf, buffer_f32);
 // load time of day
 if (!exists(o_dayNightCycle)) {

@@ -18,6 +18,10 @@ buffer_write(buf, buffer_u32, pl.y);
 with (pl.inventory) {
 	inventorySave(buf);
 }
+// write stats
+with (pl.pstats) {
+	pstatsSave(buf);
+}
 //buffer_write(buf, buffer_f32, sign(pl.facingDir));
 // save time of day
 buffer_write(buf, buffer_f64, o_dayNightCycle.m_timeOfDay);

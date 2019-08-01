@@ -71,3 +71,12 @@ enum Tabs {
 m_book_tab = Tabs.kMain;
 
 #endregion
+
+#region Arm Scripting
+
+m_arm_center_blend = 0.0;
+m_arm_flash = 0.0;
+m_arm_voidcap_draw_intro = 0.0;
+m_arm_voidcap_blend = 0.0;
+
+#endregion
