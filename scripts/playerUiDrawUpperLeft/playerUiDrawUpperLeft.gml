@@ -209,3 +209,30 @@ for (var i = 0; i <= string_length(day_string); ++i)
 			1.0, 1.0,
 			pen_angle - 270);
 }
+
+// draw the tarot up there
+dx += 36;
+dy -= 9;
+var fortune = pl.pstats.m_fortune;
+var fortune_flipped = pl.pstats.m_fortune_flipped;
+if (array_length_1d(fortune) > 0)
+{
+	var scale = 18/220;
+	
+	draw_sprite_part_ext(fortune[2],
+						 0,
+						 0, 0,
+						 220, 340,
+						 dx + (fortune_flipped ? (220 * scale) : 0.0), dy + (fortune_flipped ? (340 * scale) : 0.0),
+						 scale * (fortune_flipped ? -1.0 : 1.0), scale * (fortune_flipped ? -1.0 : 1.0),
+						 c_white,
+						 1.0);
+	draw_sprite_part_ext(sui_tarotTextureStrip,
+						 0,
+						 0, 0,
+						 220, 340,
+						 dx + (fortune_flipped ? (220 * scale) : 0.0), dy + (fortune_flipped ? (340 * scale) : 0.0),
+						 scale * (fortune_flipped ? -1.0 : 1.0), scale * (fortune_flipped ? -1.0 : 1.0),
+						 c_white,
+						 1.0);
+}
