@@ -18,3 +18,5 @@ for (var i = 0; i < kPitem_MAX; ++i)
 {
 	m_pitem[i] = 0;
 }
+
+m_fortune = null;

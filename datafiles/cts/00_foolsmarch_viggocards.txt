@@ -1,0 +1,29 @@
+#begin
+
+wait
+{
+	type input
+	id approach1
+}
+
+lines
+{
+    target  viggo
+	facing	player
+    1 Do I hear a new visitor down there?
+}
+
+wait
+{
+	type input
+	id approach2
+}
+
+lines
+{
+    target  viggo
+	facing	player
+    1 Ah, newcomer! Would you enjoy a$5 $bfortune$0?$$ Come closer if you would.
+}
+
+#end

@@ -1,0 +1,91 @@
+#begin
+
+lines
+{
+	target viggo
+	1 Well met! $pI am $bViggo$$.
+}
+
+signal
+{
+	// magical signal that sets the correct name
+	id reveal_name
+}
+
+lines
+{
+	target viggo
+	1 What brings you here today?
+}
+
+// this cutscene file is a little wierd because it relies a lot on the scripting to function
+// will attempt to comment as much as possible
+
+#BeforeChoice
+
+choice
+{
+    target player
+    1 A fortune.
+    1goto SelectFortune
+    2 A greeting.
+	2goto SelectGreeting
+    3 (Leave)
+    3goto Ending
+}
+
+// Fortune. Let's get funky.
+#SelectFortune
+    wait
+    {
+        type input
+        // This is a special ID handled by the talking backend. It will bring up the crafting.
+        // When the crafting menu is closed, it will continue with the cutscene.
+        id fortune
+    }
+	
+    goto
+    {
+        target Ending
+    }
+
+// Greeting. The player says "hello" and we go into whatever line of talking
+#SelectGreeting
+	lines
+    {
+        target player
+		1a Oi, some weather innit? An awful bright sun.
+		1p Hi, I guess. Sure is a hot sun. Bright too.
+		1c Hello! Awful weather, ey? Spitefully bright.
+    }
+	
+	lines
+    {
+        target viggo
+		1 Bright, is it? It's a little hard for me to tell.
+    }
+	
+	lines
+    {
+        target player
+		1a Ah. I think a'll just...head out?
+		1p Right. I think I'm going to go.
+		1c Well. I'm gonna get going here.
+    }
+
+    goto
+    {
+        target Ending
+    }
+
+
+// Do not put anything after this. This should be the fall-thru
+#Ending
+
+lines
+{
+	target viggo
+	1 Heh heh. Travel well.
+}
+
+#ended

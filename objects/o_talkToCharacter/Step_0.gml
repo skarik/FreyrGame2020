@@ -22,6 +22,24 @@ if (m_interacting)
 	// In cutscene file mode:
 	if (m_interactingCutscene)
 	{
+		if (cutsceneHasSignal())
+		{
+			var signal_id = cutsceneGetSignal();
+			
+			if (signal_id == "reveal_name")
+			{
+				// Set the name
+				switch (m_owner.object_index)
+				{
+				case o_chNathan:	m_owner.m_name = "Nathan"; break;
+				case o_chViggo:		m_owner.m_name = "Viggo"; break;
+				}
+				
+				// Consume the signal
+				cutsceneSignalConsume();
+			}
+		}
+		
 		if (!cutsceneUpdate())
 		{
 			/*if (cutsceneIsChoiceReady())
@@ -76,5 +94,7 @@ if (m_interacting)
 			cutsceneFree();
 			m_interacting = false;
 		}
-	}
+		
+	} // End cutscene mode
+	
 }

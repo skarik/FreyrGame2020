@@ -1023,6 +1023,14 @@
             }
         },
         {
+            "Key": "21bc83d3-5177-427f-acb2-fbea66ca2f17",
+            "Value": {
+                "id": "83eec7f6-b3a1-490a-9ec8-8c084a8de21e",
+                "resourcePath": "datafiles_yy\\cts\\00_foolsmarch_viggocards.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "21c34bee-98d9-4ab6-bd50-b7544aa63b8e",
             "Value": {
                 "id": "af269f72-2e3b-4bd4-9658-a9662c88bcef",
@@ -1631,6 +1639,14 @@
             }
         },
         {
+            "Key": "36783e6c-b220-4360-9756-4a0463341039",
+            "Value": {
+                "id": "ae86e180-b8fb-4dbe-a0ee-789b09f98582",
+                "resourcePath": "sprites\\s_charViggoSit\\s_charViggoSit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3692130a-372f-403f-8617-5b2fd7b43d9a",
             "Value": {
                 "id": "87eb78b5-a7e8-417e-b86e-26bbb12ec175",
@@ -1843,6 +1859,14 @@
             "Value": {
                 "id": "393efc1d-a9a0-45ec-a20c-c1501480619b",
                 "resourcePath": "scripts\\itemEntrySave\\itemEntrySave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "40039c77-c4ca-4020-bae1-7f3401c84ccf",
+            "Value": {
+                "id": "a16027ca-92a5-42b9-a56c-b85ef4887f00",
+                "resourcePath": "scripts\\cutscenePlayerUnlock\\cutscenePlayerUnlock.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2188,6 +2212,14 @@
                 "id": "48176892-cffa-44df-a1b1-c66fcc94f013",
                 "resourcePath": "objects\\o_debugMenu\\o_debugMenu.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4bd0aa66-ccdd-4224-a629-be807c4db956",
+            "Value": {
+                "id": "74c6cdce-515b-4e70-bc41-c339fca5745e",
+                "resourcePath": "sprites\\s_assetTRug0\\s_assetTRug0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2660,6 +2692,14 @@
                 "id": "927d2786-512f-4dd1-ace8-b94bd030b97a",
                 "resourcePath": "views\\5c198672-6dd9-424d-92ef-391e6d336eb1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5c2c91ef-f33b-4d0e-8b12-244be001394a",
+            "Value": {
+                "id": "738ab0ef-d62b-462d-882a-74fff89c7808",
+                "resourcePath": "objects\\o_cts00_ViggoFirstCards_FoolsMarch\\o_cts00_ViggoFirstCards_FoolsMarch.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4127,6 +4167,14 @@
             }
         },
         {
+            "Key": "8b5d19e2-2411-4a4c-aa95-ff7874487ff9",
+            "Value": {
+                "id": "486f7bd0-1310-41b7-835e-b3bf11ac75c4",
+                "resourcePath": "views\\8b5d19e2-2411-4a4c-aa95-ff7874487ff9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8b74f134-ee5b-4165-8812-8f17f0b61228",
             "Value": {
                 "id": "e9740c50-7918-45ee-bb23-de747393061e",
@@ -4292,6 +4340,14 @@
                 "id": "04277e08-7008-4116-b62b-d837eb08d1b1",
                 "resourcePath": "scripts\\questLoad\\questLoad.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8f7f8895-3ee1-4b3a-8219-b7989865eb7a",
+            "Value": {
+                "id": "ac863261-4ac8-460c-856e-d040f2fd7004",
+                "resourcePath": "objects\\o_chViggo\\o_chViggo.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5119,6 +5175,14 @@
             }
         },
         {
+            "Key": "a909e678-0753-4cb1-9af6-8c1554e98fbd",
+            "Value": {
+                "id": "4c6bfe29-7d37-42e9-804f-93b9d993d815",
+                "resourcePath": "scripts\\cutscenePlayerLock\\cutscenePlayerLock.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "a5a2ae22-6600-4adc-bca8-e9417aea38f5",
@@ -5132,6 +5196,14 @@
                 "id": "a0966471-66ca-4905-9078-896fd2e55450",
                 "resourcePath": "scripts\\timeofdayIsDaytime\\timeofdayIsDaytime.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a9c47237-0f24-4178-b97b-f81ac0c22d65",
+            "Value": {
+                "id": "f74f7148-99be-4dfe-8ce4-ae567de4040e",
+                "resourcePath": "sprites\\s_assetRRug0\\s_assetRRug0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5503,6 +5575,14 @@
             }
         },
         {
+            "Key": "b43a1c23-ae6b-4c75-9a10-b15d5a21d345",
+            "Value": {
+                "id": "d6e5c6f0-20f4-43f4-ba32-3116245a522c",
+                "resourcePath": "sprites\\s_charViggoStand\\s_charViggoStand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b44c27b7-1864-4c3e-a649-ac0793228d12",
             "Value": {
                 "id": "72c40b82-a8a1-4a6e-ad79-4a0473899945",
@@ -5836,6 +5916,14 @@
                 "id": "f698b258-e727-4fa6-894f-fc72bea2270e",
                 "resourcePath": "views\\bef6aae2-eaf6-4d72-974e-46ea8b0d5588.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bf0e3e57-3020-4473-8b73-32cd8a992aa6",
+            "Value": {
+                "id": "3722c7c2-ef1a-4bc5-998f-09d115b79874",
+                "resourcePath": "sprites\\s_assetRRug1\\s_assetRRug1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6551,6 +6639,14 @@
             }
         },
         {
+            "Key": "d4e76d2f-4355-47f9-9934-16cc766b6888",
+            "Value": {
+                "id": "5a922ce4-d7b4-45ca-99e7-1587080d498d",
+                "resourcePath": "datafiles_yy\\cts\\talk00_viggo.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "d5320e8c-1f40-4761-8ae8-b3c96a5109a1",
             "Value": {
                 "id": "ffcc66dc-d411-4793-a164-77c0ff5b4e00",
@@ -6955,6 +7051,14 @@
             "Value": {
                 "id": "cdc31513-5130-4937-8c79-7c65afb9bc2e",
                 "resourcePath": "sprites\\sui_astrolabeSeason\\sui_astrolabeSeason.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e1a419d9-7ac2-4324-ac8c-9195259dfe8f",
+            "Value": {
+                "id": "2b1671b3-8b10-47f3-944e-53a08ed86dec",
+                "resourcePath": "sprites\\s_assetCards0\\s_assetCards0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8177,6 +8281,8 @@
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
         "1dcd64d2-4b18-4872-8659-8dccbb978594",
+        "a909e678-0753-4cb1-9af6-8c1554e98fbd",
+        "40039c77-c4ca-4020-bae1-7f3401c84ccf",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""
