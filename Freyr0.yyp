@@ -2399,6 +2399,14 @@
             }
         },
         {
+            "Key": "5038ab4c-b9a6-4386-90fe-5d96c742b006",
+            "Value": {
+                "id": "4ecd9b99-2206-4f58-a169-5e611df9468c",
+                "resourcePath": "sprites\\sbg_cloudlayer1\\sbg_cloudlayer1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5039a925-2c9b-4b99-ad19-966f7221bd43",
             "Value": {
                 "id": "f22c9f72-0810-4a50-9b35-f1e50af3f887",
@@ -3231,6 +3239,14 @@
             }
         },
         {
+            "Key": "6befc9cf-1907-4cc1-8e72-c0522f1f8934",
+            "Value": {
+                "id": "0ada2505-2963-4cc4-b2c2-520b7aa70ec6",
+                "resourcePath": "sprites\\sbg_cloudlayer0\\sbg_cloudlayer0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6bfd7f37-71ef-4dd1-9b7f-29940c0b5bcc",
             "Value": {
                 "id": "5712ea87-b05e-4591-ab94-0d66abfdf308",
@@ -3924,6 +3940,14 @@
                 "id": "125656c3-5411-4ac1-bbd0-4c52f5b780a8",
                 "resourcePath": "views\\8053711d-717e-4e67-b72c-98ee666f782d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "80641241-12c3-46cf-a65c-ca2d4ad907cd",
+            "Value": {
+                "id": "d3408b1b-ed89-45f1-91c6-a1a4030c7c7b",
+                "resourcePath": "sprites\\ssy_background\\ssy_background.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4860,6 +4884,14 @@
                 "id": "faa92e5e-9fe5-4c7c-ad87-6c52d996bb96",
                 "resourcePath": "scripts\\grappleCheckUse\\grappleCheckUse.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9c3f9853-06db-425b-94eb-05d8f9e29feb",
+            "Value": {
+                "id": "e83883ff-036d-43f9-a27c-9f9e63187cfa",
+                "resourcePath": "objects\\o_bg00_overlook\\o_bg00_overlook.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5820,6 +5852,14 @@
                 "id": "01121835-d88a-4259-af1a-8da14df4e5e4",
                 "resourcePath": "scripts\\Cts_HideBars\\Cts_HideBars.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b66f8a23-9b00-4f20-9e4f-b230f98177dd",
+            "Value": {
+                "id": "23efed46-24c9-4fd8-955a-88124f73426c",
+                "resourcePath": "sprites\\s_propRuinStatue0\\s_propRuinStatue0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
