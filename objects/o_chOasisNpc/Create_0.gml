@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Set up NPC
 
 // Inherit the parent event
 event_inherited();
@@ -14,3 +13,9 @@ var standing = [
 var selector = id % array_length_1d(standing);
 
 kAnimStanding = standing[selector];
+
+aiScriptableInit();
+kAiScriptDefaultStyle = kAiStyle_Custom;
+m_aiCustom_Script = aiNPCLookBusyUpdate;
+aiNPCLookBusyInit();
+alarm[0] = 4;
