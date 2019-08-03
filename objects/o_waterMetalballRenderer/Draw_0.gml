@@ -27,4 +27,21 @@ if (exists(o_waterMetaball) && surface_exists(m_surface))
 	
 	// Reset drawing status
 	shader_reset();
+	
+	//gpu_set_blendmode(bm_add);
+	// Draw the reflections with alpha-testing for blending
+	gpu_set_alphatestenable(false);
+	draw_surface_ext(m_surfaceReflect,
+					GameCamera.view_x, GameCamera.view_y + GameCamera.height,
+					1.0, -1.0,
+					0.0,
+					c_white,
+					1.0);
+	/*draw_surface_ext(m_surfaceDepthHack,
+					GameCamera.view_x, GameCamera.view_y + GameCamera.height,
+					1.0, -1.0,
+					0.0,
+					c_white,
+					1.0);*/
+	gpu_set_blendmode(bm_normal);
 }

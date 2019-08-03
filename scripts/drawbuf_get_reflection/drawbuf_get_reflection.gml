@@ -1,0 +1,1 @@
+return m_drawbuf_is_reflection;
