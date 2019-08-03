@@ -22,7 +22,7 @@ for (var pathi = 0; pathi < 2; pathi++)
 	path_dir_prev = dir;
 	
 	// Choose a distance
-	var dist = 128.0;
+	var dist = 64.0;
 	
 	// Walk along that line (distance & direction)
 	var step_amount = 4.0;
