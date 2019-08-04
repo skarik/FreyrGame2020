@@ -20,3 +20,5 @@ boidDirectionAccel = 0.0;
 m_initialized = false;
 
 alarm[0] = 1;
+
+isPassthru = true;

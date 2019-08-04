@@ -14,3 +14,5 @@ m_lightEmissive.mask = false;
 m_lightSmall = new(o_lightCrystalSmallGentle);
 
 m_lightSmall2 = new(o_lightCrystalSmall);
+
+isPassthru = true;
