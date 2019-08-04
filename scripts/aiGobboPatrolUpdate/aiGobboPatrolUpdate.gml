@@ -98,7 +98,7 @@ var pl = getPlayer();
 if (!pl.isHidden)
 {
 	// do distance check
-	if (point_distance(x, y, pl.x, pl.y) < 1024)
+	if (point_distance(x, y, pl.x, pl.y) < 192)
 	{
 		// do visibility angle check
 		var dir = point_direction(x, y, pl.x, pl.y);
