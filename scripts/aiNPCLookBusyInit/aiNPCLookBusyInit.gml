@@ -10,8 +10,8 @@ m_aiNPC_centerY = ystart;
 #macro kArrivalDistance 10
 
 m_aiNPC_state = kAiNPCPatrolState_Stand;
+m_aiNPC_prev_state = kAiNPCPatrolState_Stand;
 m_aiNPC_timer = 0;
-
 aipathInit();
 
 // Set up patrol path stuff
