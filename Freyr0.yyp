@@ -1927,6 +1927,14 @@
             }
         },
         {
+            "Key": "3f6c57b5-b05b-4270-8206-2f7ecdce97ae",
+            "Value": {
+                "id": "4e8be8a2-2002-4c7d-9d33-8fe774cf41a5",
+                "resourcePath": "objects\\o_lightCrystalSlugGlow\\o_lightCrystalSlugGlow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3f9bade9-93fd-465e-b6e9-622671ebc991",
             "Value": {
                 "id": "393efc1d-a9a0-45ec-a20c-c1501480619b",
