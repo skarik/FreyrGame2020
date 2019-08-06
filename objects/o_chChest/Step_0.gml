@@ -29,6 +29,11 @@ if (animationIndexPrev < animationKeyPoint && animationIndex >= animationKeyPoin
 	}
 	
 	// Dispense the object
+	repeat (max(1, m_itemDropAmount))
+	{
+		var item = instance_create_depth(x, y + 4, depth, m_itemDrop);
+			item.z_height = 16;
+	}
 }
 
 // Override motion to keep it still

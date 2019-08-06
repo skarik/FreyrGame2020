@@ -21,7 +21,8 @@ if (!cutsceneUpdate())
 			cutscenePlayerUnlock();
 				
 			// Check if player is outside
-			if (point_distance(x, y, pl.x, pl.y) < 220)
+			if (point_distance(x, y, pl.x, pl.y) < 220
+				|| point_distance(viggo.x, viggo.y, pl.x, pl.y) < 150)
 			{
 				cutscenePlayerLock();
 					

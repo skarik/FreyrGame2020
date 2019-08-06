@@ -67,7 +67,7 @@ if (m_running)
 		if (signal_id == "give_player_seeds")
 		{
 			// Create seed item
-			repeat (10)
+			repeat (20)
 				instance_create_depth(pl.x, pl.y, pl.depth - 1, o_pickupSeed_Turnip);
 			
 			// Consume the signal
