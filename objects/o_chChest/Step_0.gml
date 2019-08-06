@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description All chest behavior
 
 // Inherit the parent event
 event_inherited();
@@ -29,10 +28,18 @@ if (animationIndexPrev < animationKeyPoint && animationIndex >= animationKeyPoin
 	}
 	
 	// Dispense the object
-	repeat (max(1, m_itemDropAmount))
+	var item_amount = max(1, m_itemDropAmount);
+	var halfAngle = min(90, (item_amount - 1) * 30);
+	for (var i = 0; i < item_amount; ++i)
 	{
-		var item = instance_create_depth(x, y + 4, depth, m_itemDrop);
-			item.z_height = 16;
+		var angle = 2 * halfAngle * (i / item_amount) + 270 - halfAngle;
+		var sped = random_range(140, 180);
+		
+		var item = instance_create_depth(x, y + 16, depth, m_itemDrop);
+			item.z_height = 24;
+			item.z = z;
+			item.m_pickupSpeedX = lengthdir_x(sped, angle);
+			item.m_pickupSpeedY = lengthdir_y(sped, angle);
 	}
 }
 

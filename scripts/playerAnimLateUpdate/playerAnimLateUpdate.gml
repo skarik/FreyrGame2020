@@ -56,7 +56,7 @@ if (!moAnimationPlayback)
 	{
 		// Nothing
 	}
-	else if (isStunned)
+	else if (m_isStunned)
 	{
 		sprite_index = kAnimStun;
 		animationSpeed = 5.0;

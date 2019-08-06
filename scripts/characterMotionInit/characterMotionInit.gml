@@ -4,7 +4,7 @@ zspeed = 0;
 time_off_ground = 0.0;
 
 isAttacking = false;
-isStunned = false;
+m_isStunned = false;
 isBusyInteracting = false;
 
 #region Constants

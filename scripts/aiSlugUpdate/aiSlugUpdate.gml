@@ -55,7 +55,7 @@ if (m_aiState == 2)
 	m_aiAttackTimer += Time.deltaTime;
 	
 	// If stunned, reset timer
-	if (isStunned)
+	if (m_isStunned)
 	{
 		m_aiAttackTimer = min(0.5, m_aiAttackTimer);
 	}
