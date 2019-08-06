@@ -68,8 +68,16 @@ else if (m_aiState_hangState == 1)
 	if (z_height <= 0.0)
 	{
 		if (m_aiState_hangFallblendValue == 0.0)
+		{
 			m_aiState_hangFallblendStart = image_yscale;
-			
+			// Create a ripple effect
+			/*var circle = instance_create_depth(x, y, depth + 1, o_ptcCircleHit);
+				circle.image_blend = c_crystalblue;
+				circle.growSpeed = 40;
+				circle.slowAccel = circle.growSpeed;
+				circle.fadeSpeed = 1.5;*/
+		}
+		
 		m_aiState_hangFallblendValue += Time.deltaTime * 4.0;
 		// Perform proper blend
 		image_yscale = lerp(0.8, 1.0, bouncestep(m_aiState_hangFallblendValue));
@@ -91,9 +99,17 @@ else if (m_aiState_hangState == 2)
 	isPassthru = false;
 	
 	characterGroundMotionStep();
+	
+	aiSlugUpdate();
 }
 
 // Update light
 m_light.x = x;
 m_light.y = y - z_height;
-m_light.image_alpha = 0.5 * image_alpha;
+m_light.image_alpha = 0.5 * image_alpha + 0.5 * m_aiAttackTimer;
+m_light2.x = x;
+m_light2.y = y - z_height;
+if (sqr(m_aiAttackTimer) > m_light2.image_alpha)
+	m_light2.image_alpha = sqr(m_aiAttackTimer);
+else
+	m_light2.image_alpha = saturate(m_light2.image_alpha - Time.deltaTime * 4.0);

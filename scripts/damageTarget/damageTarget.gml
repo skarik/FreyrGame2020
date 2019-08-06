@@ -1,15 +1,14 @@
-//@function  damageTarget(target, damage, damageType, hitEffect, hitShake)
-//@description Apply damage to the target. Source is the callee.
-//@param target Target we're damaging
-//@param damage Amount of damage
-//@param damageType Type of the damage
-//@param source Source of the target
-//@param hitEffect should particles and sound be emitted
-//@param hitShake should screen shake for the damage
+/// @function  damageTarget(target, damage, damageType, hitEffect, hitShake)
+/// @description Apply damage to the target. Source is the callee.
+/// @param target Target we're damaging
+/// @param damage Amount of damage
+/// @param damageType Type of the damage
+/// @param hitEffect should particles and sound be emitted
+/// @param hitShake should screen shake for the damage
 
 var target = argument0;
 var damage = argument1;
-var damageType = argument2;
+var type = argument2;
 var source = id;
 var hitEffect = argument3;
 var hitShake = argument4;
@@ -24,14 +23,27 @@ var c_y1 = target.y-target.sprite_yoffset;
 var c_x2 = target.x-target.sprite_xoffset+target.sprite_width;
 var c_y2 = target.y-target.sprite_yoffset+target.sprite_height;
 
-if (hitEffect)
+/*if (hitEffect)
 {
     // Create hit sound
-    var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(target.m_bloodType, damageType, id));
+    //var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(target.m_bloodType, damageType, id));
     
     // Create hit effect
-    var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), target.depth - 5, effectGetImpactEffect(target.m_bloodType, damageType, id));
-}
+    //var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), target.depth - 5, effectGetImpactEffect(target.m_bloodType, damageType, id));
+	
+	with (target)
+	{
+		// Create hit sound
+		var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(m_bloodType, type, source));
+        
+		// Create hit effect
+		var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, effectGetImpactEffect(m_bloodType, type, source));
+			fx_hit.m_source = id;
+			fx_hit.m_health = stats.m_health;
+			fx_hit.m_healthMax = stats.m_healthMax;
+			fx_hit.m_damage = actualDamage;
+	}
+}*/
 
 // Select the team
 var damageTeam = kTeamNone;
@@ -45,31 +57,53 @@ with (target)
 		continue; // Skip things we can't hurt
 		
 	// Modify the damage
-	var actualDamage = damageApplyModifiers(target, damage, damageType);
+	var actualDamage = damageApplyModifiers(target, damage, type);
 	
 	// Perform damage
 	stats.m_health -= actualDamage;
 	
 	// Save damage
-	m_lastDamage = damageType;
+	m_lastDamage = type;
 	
 	// Create damage ticker
 	var ticker = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, o_floaterDmgTicker);
 		ticker.value = actualDamage;
 	
-	// Create knockback
-	/*if (source.m_isPlayer)
+	if (hitEffect)
 	{
-	    // Mark as stunned
-	    isStunned = true;
-	    stunTimer = max(0, stunTimer) + (min(damage,50) * 0.015);
-	    // Add knockback
-	    var kickback = damage * 8;
-	    if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )
-	        xspeed = sign(x - source.x) * kickback * 0.5;
-	    // Push in the air for effect
-	    yspeed = -40;
-	}*/
+		// Create hit sound
+		var sound_hit = sound_play_at(random_range(c_x1,c_x2), random_range(c_y1,c_y2), effectGetImpactSound(m_bloodType, type, source));
+        
+		// Create hit effect
+		var fx_hit = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, effectGetImpactEffect(m_bloodType, type, source));
+			fx_hit.m_source = id;
+			fx_hit.m_health = stats.m_health;
+			fx_hit.m_healthMax = stats.m_healthMax;
+			fx_hit.m_damage = actualDamage;
+	}
+	
+	// Mark as stunned
+    m_isStunned = true;
+    m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025) * 2.0;
+    // Add knockback
+    var kickback = damage * 16 * kKickbackAmount;
+    /*if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )
+        xspeed = sign(x - source.x) * kickback * 0.5;
+    // Push in the air for effect
+    yspeed = -80;*/
+	var tspeed = sqrt(sqr(xspeed) + sqr(yspeed));
+	if (tspeed < kickback)
+	{
+		var tdirection = point_direction(source.x, source.y, x, y);
+		xspeed += lengthdir_x(kickback, tdirection);
+		yspeed += lengthdir_y(kickback, tdirection);
+		// Push in the air for effect
+		zspeed += kickback;
+		if (zspeed > 0)
+		{
+			onGround = false;
+		}
+	}
 }
 
 if (hitShake && source.m_isPlayer)

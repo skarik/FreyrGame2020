@@ -20,3 +20,21 @@ fxtimer_hangdropS = 0;
 fxtimer_hangdrop = 0;
 
 m_light = instance_create_depth(x, y, depth, o_lightCrystalSlugGlow);
+m_light2 = instance_create_depth(x, y, depth, o_lightCrystalSlugGlow);
+
+aiSlugInit();
+
+#region Constants
+
+kKickbackAmount = 1.0;
+
+kMoveSpeed = 30;
+kMoveSpeedStunPercent = 0.05;
+kMoveSpeedWaterPercent = 0.50;
+
+kMoveAcceleration = 800 / 8;
+kMoveAccelerationStop = 500  / 8;
+kMoveAccelerationAir = 200  / 8;
+kMoveAccelerationAirStop = 10;
+
+#endregion

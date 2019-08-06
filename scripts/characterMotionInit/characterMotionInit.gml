@@ -32,6 +32,8 @@ moAnimationPlayback = false;
 moAnimationPlaybackLooped = false;
 moCanMoveUnstuck = true;
 
+moHitWall = false;
+
 moScriptOverride = null; // Current motion script override
 
 #endregion

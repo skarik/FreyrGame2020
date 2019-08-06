@@ -4,3 +4,4 @@
 event_inherited();
 
 delete(m_light);
+delete(m_light2);
