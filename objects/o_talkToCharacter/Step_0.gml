@@ -1,11 +1,17 @@
 /// @description Update params and sprite
 
-if (m_owner != null)
+if (m_owner != null && exists(m_owner))
 {
 	m_name = m_owner.m_name;
 	sprite_index = m_owner.mask_index;
 	x = m_owner.x;
 	y = m_owner.y;
+}
+
+if (m_owner != null && !exists(m_owner))
+{
+	delete(this);
+	exit;
 }
 
 if (m_interacting)
