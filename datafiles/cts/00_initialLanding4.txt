@@ -1,0 +1,40 @@
+#begin
+
+lines
+{
+    target  nathan
+	facing	player
+	end organic
+    1 Okay, so how does a garden work?
+}
+
+wait
+{
+	type input
+	id on_player_till
+}
+
+lines
+{
+    target  nathan
+	facing	player
+	end organic
+    1 Punch the ground, got it.
+}
+
+wait
+{
+	type input
+	id on_player_till2
+}
+
+lines
+{
+    target  nathan
+	facing	player
+	end organic
+    1 Punch the ground into special lines, okay.
+}
+
+
+#end

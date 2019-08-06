@@ -7,7 +7,8 @@
         "356c07c3-31fc-4724-9e27-e20418a20a9d",
         "01a3d350-db14-4d2b-8749-7ef2d4a43e6e",
         "c0470954-f6a9-4162-b83b-84f199004c3e",
-        "6536cffb-6463-4156-abfd-83e4aa206a85"
+        "6536cffb-6463-4156-abfd-83e4aa206a85",
+        "4b5b37c7-6330-47f8-84c5-e7331175d68f"
     ],
     "filterType": "GMScript",
     "folderName": "Quests",

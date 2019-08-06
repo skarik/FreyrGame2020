@@ -24,6 +24,15 @@ if (m_aipath_listing == null || m_aipath_current >= array_length_1d(m_aipath_lis
 {	// The target is just...the target. Straight shot.
 	next_x = target_x;
 	next_y = target_y;
+	
+	// Provide a mechanism to repath if failed to make a path
+	if (m_aipath_listing == null)
+	{
+		m_aipath_repathtime += Time.deltaTime;
+		if (m_aipath_failtime > 2.0) {
+			m_aipath_newpath = true; // Request a repath every 2 seconds
+		}
+	}
 }
 else
 {
@@ -87,6 +96,7 @@ if (m_aipath_newpath)
 	
 	// We no longer need a new path
 	m_aipath_newpath = false;
+	m_aipath_repathtime = 0.0;
 	
 	if (m_aipath_listing != null)
 	{

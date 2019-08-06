@@ -55,7 +55,7 @@ if (global._transition_source != null)
 		{
 			var pl = getPlayer();
 			
-			if (m_isFollower)
+			if (m_isFollower && m_isFollowing)
 			{
 				persistent = false;
 				inventory.persistent = false;
@@ -66,6 +66,11 @@ if (global._transition_source != null)
 					x = pl.x;
 					y = pl.y;
 					z = pl.z;
+					
+					var hardness = new(o_scrSolidifyFollower);
+						hardness.target = id;
+						hardness.original_state = isPassthru;
+					isPassthru = true;
 				}
 			}
 		}

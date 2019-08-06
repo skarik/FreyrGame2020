@@ -37,6 +37,33 @@ else if (m_aiScript_style == kAiStyle_Scripted)
 	if (m_aiScript_requestCommand == kAiRequestCommand_Move)
 	{
 		aipathMoveTo(m_aiScript_requestPositionX, m_aiScript_requestPositionY);
+		if (!moHitWall)
+		{
+			// Resume motion & reset wallbash if done
+			m_aiScript_wallTimer = max(0.0, m_aiScript_wallTimer - Time.deltaTime);
+			if (m_aiScript_wallTimer <= 0.0) {
+				m_aiScript_wallBashCount = 0;
+			}
+		}
+		else
+		{
+			m_aiScript_wallTimer += 5.0 * Time.deltaTime;
+			if (m_aiScript_wallTimer >= 1.0)
+			{
+				m_aiScript_wallBashCount += 1; // Count wallbashes.
+				
+				// Stop input when smashing against a wall
+				_controlStructUpdate(xAxis, 0.0);
+				_controlStructUpdate(yAxis, 0.0);
+			}
+		}
+		// Stop all bashing
+		if (m_aiScript_wallBashCount >= 3)
+		{
+			// Stop input when smashing against a wall a ton
+			_controlStructUpdate(xAxis, 0.0);
+			_controlStructUpdate(yAxis, 0.0);
+		}
 	}
 	else if (m_aiScript_requestCommand == kAiRequestCommand_Stop)
 	{

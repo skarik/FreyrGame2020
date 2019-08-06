@@ -742,7 +742,7 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "colliders64",
+            "name": "collidersSTATIC",
             "id": "bbcc7e3b-5fe2-4fc3-866d-254dc305d964",
             "depth": 6,
             "grid_x": 32,

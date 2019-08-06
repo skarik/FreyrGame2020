@@ -1,6 +1,7 @@
 /// @description The classic moveStepUnstuck from Withstand, modified for Freyr.
 
 //if ( place_meeting( x,y-1, ob_collider ) )
+if (collision3_meeting(x, y, z + z_height, false))
 {
     var dist, angle, tx, ty, meeting;
     meeting = true;
@@ -16,7 +17,7 @@
                 {
                     tx = x + lengthdir_x(dist, angle);
                     ty = y + lengthdir_y(dist, angle);
-					if (collision3_meeting(tx, ty, z + z_height, false))
+					if (!collision3_meeting(tx, ty, z + z_height, false))
                     {
                         debugOut("Warning 003: Player stuck inside platform. Automatically finding new position. This can be saftely ignored.");
                         meeting = false;

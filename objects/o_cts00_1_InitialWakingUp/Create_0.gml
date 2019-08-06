@@ -1,6 +1,8 @@
 /// @description Check Already Played & Init
 m_initialized = false;
 
+//questSetValue(kQidIntroSequence, 10); // DEBUG
+
 if (questGetValue(kQidIntroSequence) != 10)
 {
 	new(o_mus00_Oasis);

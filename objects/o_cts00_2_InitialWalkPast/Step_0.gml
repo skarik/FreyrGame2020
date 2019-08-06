@@ -8,10 +8,13 @@ if (questGetValue(kQidIntroSequence) < 20)
 
 if (!m_running)
 {
+	o_chNathan.isPassthru = true;
+	
 	o_chNathan.m_interactChoices = 2;
 	o_chNathan.m_interaction[0] = "(Isn't it hot?)"
 	o_chNathan.m_interaction[1] = "(Leave)";
 	o_chNathan.m_interactionFile = "";
+	o_chNathan.m_interactionObject.m_actionName = "Talk";
 	
 	if (exists(o_CtsChoiceBox))
 	{
@@ -35,6 +38,7 @@ else
 	//o_chNathan.m_interaction[0] = "Say hello!"
 	//o_chNathan.m_interaction[1] = "(Leave)";
 	o_chNathan.m_interactionFile = "";//"talk00_nathan.txt";
+	o_chNathan.m_interactionObject.m_actionName = "Greet";
 }
 
 if (m_running)
@@ -71,6 +75,8 @@ if (m_running)
 		}
 		if (signal_id == "ended")
 		{
+			// Make nathan not passthru
+			o_chNathan.isPassthru = false;
 			// Unlock player
 			pl.canMove = true;
 			pl.moEnabled = true;

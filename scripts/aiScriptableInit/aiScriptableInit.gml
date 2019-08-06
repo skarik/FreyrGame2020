@@ -23,6 +23,9 @@ m_aiScript_requestAnimation = null;
 m_aiScript_requestAnimationLoop = false;
 m_aiScript_requestSpeed = 0;
 
+m_aiScript_wallTimer = 0.0;
+m_aiScript_wallBashCount = 0;
+
 aipathInit();
 
 aiFollowerInit();

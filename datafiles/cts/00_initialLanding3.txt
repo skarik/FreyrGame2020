@@ -215,7 +215,7 @@ ai
 	style cts
 	command move
 	origin player
-	position 30 20
+	position 30 1
 }
 wait
 {
@@ -310,7 +310,7 @@ choice
 	
 	signal
 	{
-		give_player_seeds
+		id give_player_seeds
 	}
 	wait
 	{
@@ -528,7 +528,8 @@ ai
 	target nathan 
 	style lead
 	command start
-	position 490 1045
+	//position 490 1045
+	position 490 1072
 }
 
 screen

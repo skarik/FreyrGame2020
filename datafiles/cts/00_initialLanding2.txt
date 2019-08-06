@@ -79,10 +79,12 @@ lines
 	1p Y-yes.
 }
 
+// DEBUG HERE
 //goto
 //{
 //	target EndChoiceA
 //}
+// END DEBUG
 
 // TODO: Cg right here, or have nathan walk up
 

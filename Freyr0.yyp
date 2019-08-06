@@ -1087,6 +1087,14 @@
             }
         },
         {
+            "Key": "230bf394-fd11-4e1f-a454-cbbf39979d47",
+            "Value": {
+                "id": "6966b5ed-bf17-4b10-9db2-ddef151d6efd",
+                "resourcePath": "views\\230bf394-fd11-4e1f-a454-cbbf39979d47.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "231c46a1-e7ef-4434-8a86-c3374245347c",
             "Value": {
                 "id": "5363c256-2df3-4c81-8c59-42ce7957a54c",
@@ -1331,6 +1339,14 @@
             "Value": {
                 "id": "7ae756c7-85fa-4c9b-8fd4-132a1d51799d",
                 "resourcePath": "objects\\o_pickupCrop_Cabbage\\o_pickupCrop_Cabbage.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "29deffe4-2225-48ff-ace1-21505433ff3e",
+            "Value": {
+                "id": "29ed7af1-ebbe-4c44-8843-9f4d0b3f8d07",
+                "resourcePath": "objects\\o_scrSolidifyFollower\\o_scrSolidifyFollower.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2323,6 +2339,14 @@
             "Value": {
                 "id": "361d729a-93c3-4298-8e22-2492268ccee7",
                 "resourcePath": "scripts\\gameLoad\\gameLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4b5b37c7-6330-47f8-84c5-e7331175d68f",
+            "Value": {
+                "id": "da060554-c052-408f-a7d5-b839392ee229",
+                "resourcePath": "scripts\\questDebugDisplayFlags\\questDebugDisplayFlags.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7103,6 +7127,14 @@
             }
         },
         {
+            "Key": "d7b4074b-d444-499f-9e33-5407c340c984",
+            "Value": {
+                "id": "4bd1bd67-59df-4e9e-9be0-cde2f453b57c",
+                "resourcePath": "datafiles_yy\\cts\\00_initialLanding4.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "d7bfca4c-05a8-4bff-8a12-f3fa3bbbeda4",
             "Value": {
                 "id": "0ab481a4-38ca-4054-8466-8f99b11d68fc",
@@ -7156,6 +7188,14 @@
                 "id": "14fd0b4a-1ab2-4d80-921f-b3f96437d31b",
                 "resourcePath": "scripts\\playerMotionInit\\playerMotionInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d847106a-4f13-4eaf-a6a6-1930f04b7421",
+            "Value": {
+                "id": "87224b79-de83-49d9-b245-13c7b1e2c5ce",
+                "resourcePath": "objects\\o_cts00_5_initialPreventFollow\\o_cts00_5_initialPreventFollow.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8687,6 +8727,7 @@
         "01a3d350-db14-4d2b-8749-7ef2d4a43e6e",
         "c0470954-f6a9-4162-b83b-84f199004c3e",
         "6536cffb-6463-4156-abfd-83e4aa206a85",
+        "4b5b37c7-6330-47f8-84c5-e7331175d68f",
         "0ec11171-9b23-4486-9242-13fd1469fb68",
         "2792d87a-c6f4-4382-9337-00616843bddb",
         "afaa5218-be90-4f98-9dea-631e67417cec",

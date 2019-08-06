@@ -20,7 +20,7 @@ if (m_aiState == 0)
 	// Only wander for N time or stop on walls
 	m_aiWanderTimer += Time.deltaTime;
 	
-	if (m_aiWanderTimer > 3.0 || moHitWall)
+	if (m_aiWanderTimer > 2.0 || moHitWall)
 	{
 		aimotionMoveAt(0, 0, 0);
 		

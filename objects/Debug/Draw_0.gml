@@ -83,4 +83,3 @@ with (GameCamera)
 		view_y + height - 8,
 		true);
 }
-

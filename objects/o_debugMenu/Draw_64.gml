@@ -37,3 +37,5 @@ draw_arrow( uiMouseX+16, uiMouseY+16, uiMouseX, uiMouseY, 16 );
 
 draw_set_alpha(1.0);
 
+// draw the quest flags
+questDebugDisplayFlags();
