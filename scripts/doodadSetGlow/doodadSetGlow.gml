@@ -18,6 +18,13 @@ if (doodad.sprite_index == s_propStickTorch
 		}
 	}
 }
+else if (doodad.sprite_index == s_propRuinCandle0)
+{
+	with (doodad)
+	{
+		light = instance_create_depth(x, y - 5, 0, o_lightFireSuperTiny);
+	}
+}
 else if (doodad.sprite_index == s_propCMush0)
 {
 	with (doodad)
