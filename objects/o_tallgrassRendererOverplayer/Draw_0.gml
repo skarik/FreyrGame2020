@@ -7,6 +7,9 @@ gpu_set_alphatestenable(true);
 
 with (ob_areaTallGrass)
 {
+	if (!visible)
+		continue;
+	
 	// draw grass
 	for (var i = 0; i < m_grassBitsCount; ++i)
 	{

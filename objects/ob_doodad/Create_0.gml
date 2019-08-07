@@ -1,5 +1,5 @@
 depthInit();
 
-//alarm[0] = 1;
+alarm[0] = 5;
 
 drawbuf_set_reflection(false);

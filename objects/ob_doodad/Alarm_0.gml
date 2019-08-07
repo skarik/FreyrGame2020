@@ -3,4 +3,4 @@
 event_user(0); // Actual visibility
 
 // Update visibility pretty often.
-alarm[0] = max(2, choose(ceil(300 / fps), 2, 5, 10));
+alarm[0] = max(4, choose(ceil(300 / fps), 4, 8, 16));

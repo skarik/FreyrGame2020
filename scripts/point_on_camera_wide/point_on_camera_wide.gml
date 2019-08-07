@@ -5,7 +5,7 @@
 /// @param margin_x 
 /// @param margin_y
 
-var cam = instance_find(GameCamera, 0);
+var cam = GameCamera.id;//instance_find(GameCamera, 0);
 var tx = argument0;
 var ty = argument1;
 var margin_x = argument2;
