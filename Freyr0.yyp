@@ -3639,6 +3639,14 @@
             }
         },
         {
+            "Key": "70759f78-4c62-430d-b02d-e42f4a69b556",
+            "Value": {
+                "id": "a1580f53-559b-4ea1-8da0-bc8c94036c7d",
+                "resourcePath": "sprites\\s_assetTowerRuinsLarge1\\s_assetTowerRuinsLarge1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "709923e0-9bce-4b35-ba28-c7b0db528c15",
             "Value": {
                 "id": "a4b29fd4-1312-45dc-83d3-eba2ca272dc4",
@@ -4228,6 +4236,14 @@
                 "id": "0cd87bdf-75d6-4d17-af4b-c254991c21cf",
                 "resourcePath": "objects\\o_fxScreenShield\\o_fxScreenShield.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "83cbd1c2-5a9c-40ee-ac35-b407fd65c53f",
+            "Value": {
+                "id": "7562dc3b-59a4-4cad-8ee3-7539f1fce753",
+                "resourcePath": "sprites\\s_assetTowerRuinsLarge0\\s_assetTowerRuinsLarge0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
