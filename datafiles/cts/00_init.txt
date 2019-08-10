@@ -20,7 +20,7 @@ wait
 wait
 {
     type time
-    time 0.4
+    time 0.35
 }
 
 audio
@@ -31,7 +31,7 @@ audio
 wait
 {
     type time
-    time 5.0
+    time 4.6
 }
 
 audio
@@ -41,7 +41,7 @@ audio
 wait
 {
     type time
-    time 10.0
+    time 9.7
 }
 
 audio

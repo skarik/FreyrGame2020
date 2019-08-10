@@ -95,6 +95,9 @@ else
 
 // do angry check
 var pl = getPlayer();
+
+m_aiCombat_aggroTimer -= Time.deltaTime;
+
 if (!pl.isHidden)
 {
 	// do distance check
@@ -107,17 +110,55 @@ if (!pl.isHidden)
 		{
 			// do occlusion visibility check
 			if (!collision3_line(x, y, pl.x, pl.y, z, true))
-			{
+			{	
 				if (!m_aiCombat_angry)
 				{
-					// Create the emote
-					var emote_fx = new(o_fxEmote);
-						emote_fx.m_target = id;
-						emote_fx.image_index = 2;
+					if (m_aiCombat_aggroTimer <= 0.0)
+					{
+						// Create the ? emote
+						var emote_fx = new(o_fxEmote);
+							emote_fx.m_target = id;
+							emote_fx.image_index = 1;
+					}
+					
+					m_aiCombat_aggroTimer += Time.deltaTime * 2.0;
+					
+					if (m_aiCombat_aggroTimer > 1.0)
+					{
+						// Create the ! emote
+						var emote_fx = new(o_fxEmote);
+							emote_fx.m_target = id;
+							emote_fx.image_index = 2;
 			
-					m_aiCombat_angry = true;
+						m_aiCombat_angry = true;
+					}
 				}
 			}
 		}
 	}
 }
+m_aiCombat_aggroTimer = clamp(m_aiCombat_aggroTimer, 0.0, 1.0);
+
+// hacky de-aggro
+m_aiCombat_deaggroTimer -= Time.deltaTime;
+if (m_aiCombat_angry)
+{
+	if (
+		(pl.isHidden && point_distance(x, y, pl.x, pl.y) > 48)
+		|| (point_distance(x, y, pl.x, pl.y) > 212)
+		)
+	{
+		m_aiCombat_deaggroTimer += Time.deltaTime * 2.0;
+		
+		if (m_aiCombat_deaggroTimer > 1.0)
+		{
+			// Create the ? emote
+			var emote_fx = new(o_fxEmote);
+				emote_fx.m_target = id;
+				emote_fx.image_index = 1;
+			
+			m_aiCombat_angry = false;
+		}
+	}
+}
+m_aiCombat_deaggroTimer = clamp(m_aiCombat_deaggroTimer, 0.0, 1.0);

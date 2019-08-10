@@ -8,7 +8,7 @@ if (questGetValue(kQidIntroSequence) != 30)
 	if (questGetValue(kQidIntroSequence) > 30)
 	{
 		// Create music manager
-		new(o_mus00_Oasis);
+		new(o_mus00_DayDesert);
 	}
 	
 	delete(this);

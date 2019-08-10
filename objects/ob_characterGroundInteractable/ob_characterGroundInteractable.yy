@@ -79,6 +79,20 @@
             "value": "oasis\/NPC3.txt",
             "varName": "m_interactionFile",
             "varType": 2
+        },
+        {
+            "id": "17e421ca-3894-4053-b013-df2418ebdced",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "m_interactionObject",
+            "varType": 4
         }
     ],
     "solid": false,

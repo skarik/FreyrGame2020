@@ -16,7 +16,14 @@
         "c91afbcd-0a99-4437-9685-354fdc58103d",
         "455bdb1c-445f-481c-aef4-7b93ca7f9acf",
         "5db55d6b-821d-43c1-a340-f2b96462687f",
-        "d1304db1-d772-47fa-bb60-6ebfa9b70090"
+        "d1304db1-d772-47fa-bb60-6ebfa9b70090",
+        "181e80f3-6b12-4da6-afb2-b120604d45d5",
+        "da671400-3121-4cf3-bd57-5d04a50a0576",
+        "b67bc780-aeaf-4e50-8efa-dcdd9f916e6a",
+        "44cb46bf-9ed2-4d25-89ff-dd7b5a668414",
+        "d10cb709-a394-4b11-96ce-fd1b9461f095",
+        "bf63e722-a85c-40ee-8b56-4654b6905a0b",
+        "e35aada9-9c0a-48d6-a9b4-13a25ca5eee3"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "audio",

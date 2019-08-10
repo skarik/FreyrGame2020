@@ -1,17 +1,10 @@
 // Get the current time:
 var currentTime = timeofdayGetTotalHours();
 
-// Dry out after 18 hours during the day
-if (abs(currentTime - m_wateredTime) > 18.0 && timeofdayIsDaytime())
-{
-	// Dry it out!
-	watered = false;
-}
-
 // If dried out, then we nned to check for water.
 if (watered == false)
-{
-	var kWaterDistance = 16 * 3 + 8;
+{	
+	/*var kWaterDistance = 16 * 3 + 8;
 	// Needs prev watered state for charges
 	var wasWatered = watered;
 
@@ -82,8 +75,25 @@ if (watered == false)
 	}
 	
 	// If now watered, record the watered day
-	m_wateredTime = currentTime;
+	m_wateredTime = currentTime;*/
+}
+
+if (m_wasWatered != watered)
+{
+	if (watered)
+	{
+		// If now watered, record the watered day
+		m_wateredTime = currentTime;
+	}
+	m_wasWatered = watered;
+}
+
+// Dry out after 18 hours during the day
+if (abs(currentTime - m_wateredTime) > 18.0 && timeofdayIsDaytime())
+{
+	// Dry it out!
+	watered = false;
 }
 
 // Check again later
-alarm[0] = 50 + floor(random(room_speed * 5));
+alarm[0] = 10;//50 + floor(random(room_speed * 5));

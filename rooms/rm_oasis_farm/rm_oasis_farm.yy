@@ -329,7 +329,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_58A06206","id": "1f4dd6f5-a381-4220-9854-c75e6ae5e87b","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": true,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_58A06206","objId": "1cb4ad58-e645-4b8f-98fe-006eefd10619","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 520,"y": 536},
+{"name": "inst_58A06206","id": "1f4dd6f5-a381-4220-9854-c75e6ae5e87b","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_58A06206","objId": "1cb4ad58-e645-4b8f-98fe-006eefd10619","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 520,"y": 536},
 {"name": "inst_13FF84F1","id": "cf99eae5-a1ee-4208-bfaf-5b2057cf850d","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_13FF84F1","objId": "29fcd62f-e20c-409b-883b-6504a664755c","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 368,"y": 488}
             ],
             "layers": [
@@ -708,7 +708,7 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "colliders5",
+            "name": "collidersFive",
             "id": "ac93fe74-710b-4343-a942-4b616c15fe1f",
             "depth": 5,
             "grid_x": 16,

@@ -1,5 +1,5 @@
 /// @description update area & motion
-
+exit;
 
 // move up and down
 if (place_meeting(x, y, o_PlayerTest))

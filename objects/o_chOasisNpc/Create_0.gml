@@ -13,6 +13,8 @@ var standing = [
 var selector = id % array_length_1d(standing);
 
 kAnimStanding = standing[selector];
+kAnimWalking = kAnimStanding;
+kAnimStun = kAnimStanding;
 
 aiScriptableInit();
 kAiScriptDefaultStyle = kAiStyle_Custom;

@@ -56,7 +56,7 @@ else
 		o_chNathan.m_interactionFile = "talk00_nathan.txt";
 
 		// Create music manager
-		new(o_mus00_Oasis);
+		new(o_mus00_DayDesert);
 	
 		questSetValue(kQidIntroSequence, 40);
 		delete(this);

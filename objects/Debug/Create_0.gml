@@ -1,6 +1,6 @@
 captureModeEnabled = false;
 recordModeEnabled = false;
-convention_mode = false; // turn on for convention demos
+convention_mode = true; // turn on for convention demos
 
 // Enable debug mode for now
 on = true;
@@ -24,3 +24,8 @@ var record_overlay = new(o_debugRecordOverlay);
 // status
 gifWidth = 560;//Screen.width;// / Screen.pixelScale;
 gifHeight = 560;//Screen.height;// / Screen.pixelScale;
+
+if (convention_mode)
+{
+	window_set_fullscreen(true);
+}
