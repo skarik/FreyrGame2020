@@ -6,11 +6,10 @@ m_plantable = false;
 if (!m_isTilling && canMove && !isBusyInteracting
     && l_canMove && !isBlocking /*&& !exists(currentUsable)*/ && !exists(currentHeldUsable) /*&& !exists(currentCrop)*/ && !m_isHolding)
 {
-	// Get till distance
-	var tillDistance = max(2.0, min(28.0, point_distance(aimingStartX, aimingStartY, uPosition, vPosition)));
 	// Find the piece of land to till:
-	var tillX = aimingStartX + lengthdir_x(tillDistance, aimingDirection);
-	var tillY = aimingStartY + lengthdir_y(tillDistance, aimingDirection);
+	var tillPosition = _playerInteract_GetAimPosition(1, 2.0, 28.0, 16.0 * 0.5 + 1.0);
+	var tillX = tillPosition[0];
+	var tillY = tillPosition[1];
 	tillX = round((tillX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 	tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 
