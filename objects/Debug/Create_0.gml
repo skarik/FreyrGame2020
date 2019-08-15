@@ -1,6 +1,6 @@
 captureModeEnabled = false;
 recordModeEnabled = false;
-convention_mode = true; // turn on for convention demos
+convention_mode = false; // turn on for convention demos
 
 // Enable debug mode for now
 on = true;
