@@ -26,13 +26,16 @@ belt4Button = _controlStructCreate();
 belt5Button = _controlStructCreate();
 belt6Button = _controlStructCreate();
 
-uPosition = 0.0;
-vPosition = 0.0;
+uPosition = GameCamera.width / 2;
+vPosition = GameCamera.height / 2;
 uPositionPrevious = uPosition;
 vPositionPrevious = vPosition;
 
-uPositionScreen = 0.0;
-vPositionScreen = 0.0;
+prevUPositionMouse = 0.0;
+prevVPositionMouse = 0.0;
+
+uPositionScreen = GameCamera.width / 2;
+vPositionScreen = GameCamera.height / 2;
 
 uvPositionStyle = 0;
 
