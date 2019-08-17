@@ -51,6 +51,10 @@ if (o_PlayerTest.m_usingInventory)
 			m_chest_selection = m_chest_hover;
 		}
 		// todo: if nothing is selected, hide the bags
+		if(o_PlayerTest.cancelButton.pressed)
+		{
+			o_PlayerTest.m_usingInventory = false;
+		}
 	}
 	// If a bag object selected:
 	else if (m_belt_selection == null && m_bag_selection != null && m_seed_selection == null && m_chest_selection == null)
