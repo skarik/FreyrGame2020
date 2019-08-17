@@ -21,7 +21,7 @@ if (o_PlayerTest.m_usingBook)
 	{
 		m_book_main_hover = null;
 	}
-	
+	//Check which item the mouse is hovering over
 	for (var i = 0; i < ((m_book_main_selection == null) ? 5 : 7); ++i)
 	{
 		var offsets = m_book_offsets_main[i];
@@ -64,10 +64,10 @@ if (o_PlayerTest.m_usingBook && m_book_tab == Tabs.kMain)
 					m_book_tab = Tabs.kOptions;
 				}
 			}
-			else if (o_PlayerTest.cancelButton.pressed)
-			{	// We want to put away the book
-				o_PlayerTest.m_usingBook = false;
-			}
+		}
+		if (o_PlayerTest.cancelButton.pressed)
+		{	// We want to put away the book
+			o_PlayerTest.m_usingBook = false;
 		}
 	}
 	else if (m_book_main_selection != null)
