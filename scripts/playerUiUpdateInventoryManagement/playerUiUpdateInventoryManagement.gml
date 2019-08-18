@@ -53,6 +53,7 @@ if (o_PlayerTest.m_usingInventory)
 		// todo: if nothing is selected, hide the bags
 		if(o_PlayerTest.cancelButton.pressed)
 		{
+			//Close the inventory
 			o_PlayerTest.m_usingInventory = false;
 		}
 	}
