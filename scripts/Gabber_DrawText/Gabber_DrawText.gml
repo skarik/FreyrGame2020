@@ -110,7 +110,8 @@ for (var i = 0; i < floor(current_display_count); ++i)
             }
             n++;
         }
-        until (next_char == " " || n >= floor(current_display_count) || override_drop);
+		until (next_char == " " || n >= string_length(display_text) || override_drop);
+        //until (next_char == " " || n >= floor(current_display_count) || override_drop);
     }
     
     // move the pen
