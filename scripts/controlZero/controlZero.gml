@@ -16,8 +16,8 @@ if (argument0 == false)
 	dodgeButton.value = 0.0;
 	journalButton.value = 0.0;
 	yButton.value = 0.0;
-	lButton.value = 0.0;
-	rButton.value = 0.0;
+	itemPrevButton.value = 0.0;
+	itemNextButton.value = 0.0;
 	itemsButton.value = 0.0;
 	selectButton.value = 0.0;
 	cancelButton.value = 0.0;

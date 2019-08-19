@@ -1,7 +1,7 @@
 currentBuildable = false;
 
 if (!m_isTilling && canMove && !isBusyInteracting
-	&& room == rm_oasis)
+	&& room == rm_oasis_farm)
 {
 	// Find the piece of land to till:
 	var buildX = x + lengthdir_x(12, facingDirection);

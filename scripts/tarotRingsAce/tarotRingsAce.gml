@@ -11,3 +11,5 @@ case kTarotData_AquireThought:
 		return "Today feels like you wont find any junk.";
 	
 }
+
+return undefined;

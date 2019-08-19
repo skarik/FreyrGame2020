@@ -11,3 +11,5 @@ case kTarotData_AquireThought:
 		return "You feel particularly inquisitive of people.";
 	
 }
+
+return undefined;

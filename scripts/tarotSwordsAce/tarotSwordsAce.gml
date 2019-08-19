@@ -11,3 +11,5 @@ case kTarotData_AquireThought:
 		return "Your mind feels slightly clouded today.";
 	
 }
+
+return undefined;

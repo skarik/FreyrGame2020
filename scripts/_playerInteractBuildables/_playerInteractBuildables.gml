@@ -3,7 +3,7 @@ var l_canMove = argument0;
 currentBuildable = false;
 
 if (!m_isTilling && l_canMove
-	&& room == rm_oasis)
+	&& room == rm_oasis_farm)
 {
 	// Find the piece of land to till:
 	var buildX = aimingStartX + lengthdir_x(12, facingDirection);

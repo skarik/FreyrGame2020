@@ -11,3 +11,5 @@ case kTarotData_AquireThought:
 		return "You feel momentarily lost.";
 	
 }
+
+return undefined;
