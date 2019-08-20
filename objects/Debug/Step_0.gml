@@ -5,10 +5,12 @@ if ( keyboard_check_pressed(192) )
     if ( !exists(o_debugMenu) ) {
         new( o_debugMenu );
         visible = true;
+		on = true;
     }
     else {
         delete( o_debugMenu );
         visible = false;
+		on = false;
     }
 }
 
