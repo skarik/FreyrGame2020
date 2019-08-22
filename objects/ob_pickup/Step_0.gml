@@ -16,6 +16,14 @@ if (!m_isPickingUp)
 	
 	// Fall to the ground
 	z_height = max(0, z_height - 25.0 * Time.deltaTime * (1.0 - m_pickupCooldown));
+	
+	var results = ds_list_create();
+	var results_count = collision_point_list(x, y, ob_collider, true, true, results, false);
+	if (results_count > 0)
+	{
+		y += 0.5; //Make it slide down the cliff.	
+	}
+	ds_list_destroy(results);
 }
 else
 {
