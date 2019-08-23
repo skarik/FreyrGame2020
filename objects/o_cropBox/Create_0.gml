@@ -15,3 +15,4 @@ m_airFriction = 100;
 #endregion
 
 m_inventory = inventoryCreateOrLoad(kBoxCropSending, kCountInfinite);
+m_dailyPickup = false;
