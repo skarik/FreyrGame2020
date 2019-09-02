@@ -63,42 +63,58 @@ if (argument0 == false)
 	_controlStructUpdate(belt6Button, controlParse(Settings.ctItem6));
 	
 	//Check if the mouse has moved since the last check
-	var nextUPositionMouse = round(window_mouse_get_x() / Screen.pixelScale + GameCamera.view_x);
-	var nextVPositionMouse = round(window_mouse_get_y() / Screen.pixelScale + GameCamera.view_y);
-	if (nextUPositionMouse != prevUPositionMouse && nextVPositionMouse != prevVPositionMouse)
+	//var nextUPositionMouse = round(window_mouse_get_x() / Screen.pixelScale + GameCamera.view_x);
+	//var nextVPositionMouse = round(window_mouse_get_y() / Screen.pixelScale + GameCamera.view_y);
+	//var nextUPositionMouse = round(window_mouse_get_x() / Screen.pixelScale);
+	//var nextVPositionMouse = round(window_mouse_get_y() / Screen.pixelScale);
+	var windowMouseX = window_mouse_get_x();
+	var windowMouseY = window_mouse_get_y();
+	//if (nextUPositionMouse != prevUPositionMouse && nextVPositionMouse != prevVPositionMouse)
+	if (windowMouseX != windowMouseXPrevious || windowMouseY != windowMouseYPrevious)
 	{
-		uvPositionStyle = 0;
-		prevUPositionMouse = uPosition;
-		prevVPositionMouse = vPosition;
+		uvPositionStyle = kControlUvStyle_Mouse;
+		//prevUPositionMouse = uPosition;
+		//prevVPositionMouse = vPosition;
+		windowMouseXPrevious = windowMouseX;
+		windowMouseYPrevious = windowMouseY;
 	}
 	
 	uPositionPrevious = uPosition;
 	vPositionPrevious = vPosition;
 	
 	//Check if the analog stick was moved
-	var analogX = deadzone_bias(gamepad_axis_value(0, gp_axisrh));
-	var analogY = deadzone_bias(gamepad_axis_value(0, gp_axisrv));
-	if (abs(analogX) > 0.3 || abs(analogY) > 0.3 || uvPositionStyle == 1)
+	var analogX = uAxis.value;//deadzone_bias(gamepad_axis_value(0, gp_axisrh));
+	var analogY = vAxis.value;//deadzone_bias(gamepad_axis_value(0, gp_axisrv));
+	if (abs(analogX) > 0.3 || abs(analogY) > 0.3 || uvPositionStyle == kControlUvStyle_FakeMouse)
 	{
-		uvPositionStyle = 1;
-		//uPosition = round(x + analogX * 128.0);
-		//vPosition = round(y + analogY * 128.0);
+		uvPositionStyle = kControlUvStyle_Unused;
+		
 		uPositionScreen += Time.deltaTime * analogX * 128.0;
 		vPositionScreen += Time.deltaTime * analogY * 128.0;
 		uPositionScreen = clamp(uPositionScreen, 0, GameCamera.width);
 		vPositionScreen = clamp(vPositionScreen, 0, GameCamera.height);
 		
-		uPosition = round(uPositionScreen + GameCamera.view_x);
-		vPosition = round(vPositionScreen + GameCamera.view_y);
+		if (uvPositionStyle == kControlUvStyle_FakeMouse)
+		{
+			uPosition = round(uPositionScreen + GameCamera.view_x);
+			vPosition = round(vPositionScreen + GameCamera.view_y);
+		}
+		else if (uvPositionStyle == kControlUvStyle_Unused)
+		{
+			uPosition = 0.0;
+			vPosition = 0.0;
+		}
 	}
 	else 
 	{
 		//If the mouse was last moved,
-		if (uvPositionStyle == 0)
+		if (uvPositionStyle == kControlUvStyle_Mouse)
 		{
 			//Move the cursor to the mouse
-			uPosition = nextUPositionMouse;
-			vPosition = nextVPositionMouse;
+			//uPosition = nextUPositionMouse;
+			//vPosition = nextVPositionMouse;
+			uPosition = round(windowMouseXPrevious / Screen.pixelScale + GameCamera.view_x);
+			vPosition = round(windowMouseYPrevious / Screen.pixelScale + GameCamera.view_y);
 		}
 	}
 }

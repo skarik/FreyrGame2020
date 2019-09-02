@@ -3919,6 +3919,14 @@
             }
         },
         {
+            "Key": "76f16a71-bba5-4c2c-93a5-d92114041ceb",
+            "Value": {
+                "id": "bff6d1e2-b984-4646-8b7a-b1b0e7d8944b",
+                "resourcePath": "objects\\o_ctsFarmMusicCreator\\o_ctsFarmMusicCreator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "76f20ad6-4d96-4fef-890a-b75b37fdce7e",
             "Value": {
                 "id": "a8ece10a-d14c-415b-bf9f-3bf568891291",

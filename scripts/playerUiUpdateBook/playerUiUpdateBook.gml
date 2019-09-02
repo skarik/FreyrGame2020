@@ -22,16 +22,53 @@ if (o_PlayerTest.m_usingBook)
 		m_book_main_hover = null;
 	}
 	//Check which item the mouse is hovering over
-	for (var i = 0; i < ((m_book_main_selection == null) ? 5 : 7); ++i)
+	if (m_book_main_hover == null)
 	{
-		var offsets = m_book_offsets_main[i];
-		var check_x = m_book_base_x + offsets[0];
-		var check_y = m_book_base_y + offsets[1];
-	
-		if (sqr(check_x - cursor_x) + sqr(check_y - cursor_y) < sqr(25))
+		for (var i = 0; i < ((m_book_main_selection == null) ? 5 : 7); ++i)
 		{
-			m_book_main_hover = i;
-			break;
+			var offsets = m_book_offsets_main[i];
+			var check_x = m_book_base_x + offsets[0];
+			var check_y = m_book_base_y + offsets[1];
+	
+			if (sqr(check_x - cursor_x) + sqr(check_y - cursor_y) < sqr(25))
+			{
+				m_book_main_hover = i;
+				break;
+			}
+		}
+	}
+	// Perform keyboard controls
+	if (o_PlayerTest.uvPositionStyle == kControlUvStyle_Unused)
+	{
+		// Menu selection for the 5 choices
+		if (m_book_main_selection == null)
+		{
+			if (o_PlayerTest.nextUiButton.pressed)
+			{
+				m_book_main_hover += 1;
+				if (m_book_main_hover >= 5)
+					m_book_main_hover = 0;
+			}
+			if (o_PlayerTest.prevUiButton.pressed)
+			{
+				m_book_main_hover -= 1;
+				if (m_book_main_hover < 0)
+					m_book_main_hover = 5 - 1;
+			}
+			m_book_main_hover = clamp(m_book_main_hover, 0, 4);
+		}
+		// Selecting accept or cancel
+		else
+		{
+			if (o_PlayerTest.nextUiButton.pressed)
+			{
+				m_book_main_hover += 1;
+			}
+			if (o_PlayerTest.prevUiButton.pressed)
+			{
+				m_book_main_hover -= 1;
+			}
+			m_book_main_hover = clamp(m_book_main_hover, 5, 6);
 		}
 	}
 }

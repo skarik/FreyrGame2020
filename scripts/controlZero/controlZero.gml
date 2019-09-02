@@ -33,6 +33,10 @@ if (argument0 == false)
 }
 else
 {
+	var l_uvPositionStyle = uvPositionStyle;
+	
 	controlCleanup();
 	controlInit();
+	
+	uvPositionStyle = l_uvPositionStyle;
 }
