@@ -23,7 +23,8 @@ if (moEnabled)
 		facingDirection = point_direction(0, 0, xAxis.value, yAxis.value);
 	}
 	// override facing direction with the aiming when standing or attacking, and the mouse moves
-	if (lastControlType == kControlKB || lastControlType == kControlMouse)
+	//if (lastControlType == kControlKB || lastControlType == kControlMouse)
+	if (uvPositionStyle == kControlUvStyle_Mouse || uvPositionStyle == kControlUvStyle_FakeMouse)
 	{
 		if (sqr(xspeed) + sqr(yspeed) < 10
 		    && (uPosition != uPositionPrevious || vPosition != vPositionPrevious))
@@ -31,7 +32,8 @@ if (moEnabled)
 			facingDirection = aimingDirection;
 		}
 	}
-	else if (lastControlType == kControlGamepad)
+	//else if (lastControlType == kControlGamepad)
+	else if (uvPositionStyle == kControlUvStyle_Unused)
 	{
 		if (sqr(xspeed) + sqr(yspeed) < 10
 		    && (abs(uAxis.value) > 0.1 || abs(vAxis.value) > 0.1))
