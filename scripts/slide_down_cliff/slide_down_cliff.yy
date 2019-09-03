@@ -1,5 +1,5 @@
 {
-    "id": "47f2881d-9df8-4616-9baa-da4d55e7a241",
+    "id": "59d1f763-2eb5-4606-8f1d-677e64651de7",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "slide_down_cliff",

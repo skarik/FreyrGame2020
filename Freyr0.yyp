@@ -2911,6 +2911,14 @@
             }
         },
         {
+            "Key": "59d1f763-2eb5-4606-8f1d-677e64651de7",
+            "Value": {
+                "id": "aa0aba55-56d6-4dd9-b511-b2a59c7a15f2",
+                "resourcePath": "scripts\\slide_down_cliff\\slide_down_cliff.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "59fe921c-3ab8-42ef-83f7-8ec74c2972e3",
             "Value": {
                 "id": "e55d587b-b320-4fe9-b473-33297c58569d",
@@ -9203,6 +9211,7 @@
         "1ef96f9f-6861-4905-b4d6-1787c8ff66fe",
         "5c79468e-2b2b-44a2-a306-88c6cee20211",
         "b5d4f76c-5464-44da-ad96-7ac31a7a5cdf",
+        "59d1f763-2eb5-4606-8f1d-677e64651de7",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""
