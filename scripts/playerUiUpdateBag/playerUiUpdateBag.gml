@@ -39,6 +39,13 @@ if (o_PlayerTest.m_usingInventory)
 			var offset = m_bag_offsets[i];
 			var box_x = m_bag_base_x + offset[0];
 			var box_y = m_bag_base_y + offset[1];
+			m_bag_abs_offsets[i] = [box_x, box_y];
+		}
+		for (var i = 0; i < bag_size; ++i)
+		{
+			var offset = m_bag_offsets[i];
+			var box_x = m_bag_base_x + offset[0];
+			var box_y = m_bag_base_y + offset[1];
 		
 			if (cursor_x >= box_x && cursor_x <= box_x + 20
 				&& cursor_y >= box_y && cursor_y <= box_y + 20)
@@ -57,6 +64,13 @@ if (o_PlayerTest.m_usingInventory)
 			var offset = m_seed_offsets[i];
 			var box_x = m_seed_base_x + offset[0];
 			var box_y = m_seed_base_y + offset[1];
+			m_seed_abs_offsets[i] = [box_x, box_y];
+		}
+		for (var i = 0; i < seed_size; ++i)
+		{
+			var offset = m_seed_offsets[i];
+			var box_x = m_seed_base_x + offset[0];
+			var box_y = m_seed_base_y + offset[1];
 		
 			if (cursor_x >= box_x && cursor_x <= box_x + 20
 				&& cursor_y >= box_y && cursor_y <= box_y + 20)
@@ -67,32 +81,7 @@ if (o_PlayerTest.m_usingInventory)
 		}
 		m_bag_hover = null;
 	}
-	// Perform directional controls
-	if (o_PlayerTest.uvPositionStyle == kControlUvStyle_Unused)
-	{
-		var uv_info = playerUiControlCollectUV();
-		var prevAxis = uv_info[0];
-		var currAxis = uv_info[1];
-		var prevAxisMagnitude = uv_info[2];
-		var currAxisMagnitude = uv_info[3];
-		var prevAxisNormalized = uv_info[4];
-		var currAxisNormalized = uv_info[5];
-		var axisDirectionChange = uv_info[6];
-		
-		// Menu selection for the 5 choices
-		if (!m_sbag_seeds)
-		{
-			m_bag_hover = playerUiControlSelectFromArray(uv_info, m_bag_hover, m_bag_offsets, 8.0);
-			if (m_bag_hover == null
-				&& m_belt_hover == null && m_chest_hover == null) m_bag_hover = 0;
-		}
-		else
-		{
-			m_seed_hover = playerUiControlSelectFromArray(uv_info, m_seed_hover, m_seed_offsets, 8.0);
-			if (m_seed_hover == null
-				&& m_belt_hover == null && m_chest_hover == null) m_seed_hover = 0;
-		}
-	}
+	// UVdir controls under InventoryManagement
 }
 else
 {

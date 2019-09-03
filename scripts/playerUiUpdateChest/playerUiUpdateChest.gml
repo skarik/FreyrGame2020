@@ -21,10 +21,19 @@ if (chest != null && exists(chest))
 	
 	// Update the mouse-over 
 	var dspace = 20;
-	for (var i = 0; i < max(1, inventoryGetCount(chest) + ((inventoryGetSize(chest) == kCountInfinite) ? 1 : 0)); ++i)
+	var chest_size = max(1, inventoryGetCount(chest) + ((inventoryGetSize(chest) == kCountInfinite) ? 1 : 0));
+	m_chest_abs_offsets = array_create(chest_size);
+	for (var i = 0; i < chest_size; ++i)
 	{
 		var box_x = m_chest_base_x;
 		var box_y = m_chest_base_y + dspace * i + 8;
+		m_chest_abs_offsets[i] = [box_x, box_y];
+	}
+	for (var i = 0; i < chest_size; ++i)
+	{
+		var box_pos = m_chest_abs_offsets[i];
+		var box_x = box_pos[0];
+		var box_y = box_pos[1];
 		
 		if (cursor_x >= box_x && cursor_x <= box_x + 100
 			&& cursor_y >= box_y && cursor_y <= box_y + dspace)
@@ -32,6 +41,15 @@ if (chest != null && exists(chest))
 			m_chest_hover = i;
 			break;
 		}
+	}
+	// UVdir controls under InventoryManagement
+}
+else
+{
+	// Empty out the UI positions for the position checking
+	if (array_length_1d(m_chest_abs_offsets) > 0)
+	{
+		m_chest_abs_offsets = array_create(0);
 	}
 }
 

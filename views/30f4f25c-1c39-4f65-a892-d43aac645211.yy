@@ -8,7 +8,8 @@
         "df7f10a9-204b-4597-903d-1dc7ff3b123a",
         "c490141b-fe8e-4068-8aff-aa8c6e64ff91",
         "2c987005-2eab-4221-a748-1ae3399ab0d6",
-        "87df082a-3b68-4182-b2f7-66910951bd59"
+        "87df082a-3b68-4182-b2f7-66910951bd59",
+        "2ae6bcdf-e526-4cc0-b441-22f82ff6ccaf"
     ],
     "filterType": "GMScript",
     "folderName": "Core",
