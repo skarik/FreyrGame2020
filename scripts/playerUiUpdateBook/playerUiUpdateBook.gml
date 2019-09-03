@@ -40,60 +40,19 @@ if (o_PlayerTest.m_usingBook)
 	// Perform directional controls
 	if (o_PlayerTest.uvPositionStyle == kControlUvStyle_Unused)
 	{
-		var prevAxis = [o_PlayerTest.uAxis.previous, o_PlayerTest.vAxis.previous];
-		var currAxis = [o_PlayerTest.uAxis.value, o_PlayerTest.vAxis.value];
-			
-		var prevAxisMagnitude = avec2_length(prevAxis);
-		var currAxisMagnitude = avec2_length(currAxis);
-		
-		var prevAxisNormalized = avec2_divide(prevAxis, prevAxisMagnitude);
-		var currAxisNormalized = avec2_divide(currAxis, currAxisMagnitude);
-		
-		var axisDirectionChange = avec2_dot(prevAxisNormalized, currAxisNormalized);
+		var uv_info = playerUiControlCollectUV();
+		var prevAxis = uv_info[0];
+		var currAxis = uv_info[1];
+		var prevAxisMagnitude = uv_info[2];
+		var currAxisMagnitude = uv_info[3];
+		var prevAxisNormalized = uv_info[4];
+		var currAxisNormalized = uv_info[5];
+		var axisDirectionChange = uv_info[6];
 		
 		// Menu selection for the 5 choices
 		if (m_book_main_selection == null)
 		{
-			if ((prevAxisMagnitude < kControlChoice_Margin && currAxisMagnitude >= kControlChoice_Margin)
-				|| axisDirectionChange < 0.8)
-			{
-				var l_currOptionPos = [0, 0];
-				if (m_book_main_hover != null)
-					l_currOptionPos = m_book_offsets_main[m_book_main_hover];
-				var l_checkPos = [
-					l_currOptionPos[0] + currAxisNormalized[0] * 32,
-					l_currOptionPos[1] + currAxisNormalized[1] * 32
-					];
-				var l_closestChoice = null;
-				var l_closestDistance = 1000;
-				
-				// Find the next closest option to the direction we're going:
-				for (var i = 0; i < 5; ++i) 
-				{
-					if (i == m_book_main_hover) continue;
-					
-					var l_checkOptionPos = m_book_offsets_main[i];
-					var l_checkDelta = avec2_subtract(l_checkOptionPos, l_checkPos);
-					
-					// Make sure the option is in the cone of the direction
-					var l_checkDeltaNormalized = avec2_normalized(l_checkDelta);
-					if (avec2_dot(l_checkDeltaNormalized, currAxisNormalized) < 0.0)
-						continue;
-					
-					// Make sure the option is the closest
-					var l_checkDistance = avec2_length(l_checkDelta);
-					if (l_checkDistance < l_closestDistance)
-					{
-						l_closestChoice = i;
-						l_closestDistance = l_checkDistance;
-					}
-				}
-				
-				if (l_closestChoice != null)
-				{
-					m_book_main_hover = l_closestChoice;
-				}
-			}
+			m_book_main_hover = playerUiControlSelectFromArray(uv_info, m_book_main_hover, m_book_offsets_main, 32.0);
 			m_book_main_hover = clamp(m_book_main_hover, 0, 4);
 		}
 		// Selecting accept or cancel

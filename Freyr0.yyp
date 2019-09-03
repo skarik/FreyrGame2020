@@ -2927,6 +2927,14 @@
             }
         },
         {
+            "Key": "5a45960e-f715-43cf-8517-2992b26097ad",
+            "Value": {
+                "id": "a93a7fd1-7b2d-42e2-b0ea-72958ce7bf2a",
+                "resourcePath": "views\\5a45960e-f715-43cf-8517-2992b26097ad.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5a59fe95-2df5-41df-b46d-342203d6d542",
             "Value": {
                 "id": "cdbf7a4b-0002-438b-b44f-2627853973e1",
@@ -3411,6 +3419,14 @@
             "Value": {
                 "id": "8deb7ed4-de44-40cb-9078-35d1b6b9158c",
                 "resourcePath": "scripts\\doodadDestraGenerateDrop\\doodadDestraGenerateDrop.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6a48b505-ed79-4694-96d0-33a48ca56607",
+            "Value": {
+                "id": "6b719292-68d2-4439-8375-eb06a4abc1e8",
+                "resourcePath": "scripts\\playerUiControlCollectUV\\playerUiControlCollectUV.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8423,6 +8439,14 @@
             }
         },
         {
+            "Key": "f5d1d1bb-5234-4f01-a85c-3f2349499bde",
+            "Value": {
+                "id": "187cff70-f681-4157-a76c-fd7c9460dd19",
+                "resourcePath": "scripts\\playerUiControlSelectFromArray\\playerUiControlSelectFromArray.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f61c1fd2-48df-4e54-a0d9-564f25e930b5",
             "Value": {
                 "id": "62d9b5aa-1dc6-478b-90b8-7ee0b5aae42a",
@@ -9034,6 +9058,8 @@
         "f14a3954-3bc7-4298-a0e4-75c6b22cd38b",
         "0cf2ebb3-8109-41a2-addb-f9c95e20802b",
         "8c8b5e98-9186-408e-9966-375be6e1b939",
+        "6a48b505-ed79-4694-96d0-33a48ca56607",
+        "f5d1d1bb-5234-4f01-a85c-3f2349499bde",
         "8e8adddf-b9ac-4148-9bfe-1e7750bc2fbf",
         "e5ee5f81-7c4d-49f8-a350-c80c5fc13b8b",
         "c9fbd701-14a5-4304-8b79-784575659840",

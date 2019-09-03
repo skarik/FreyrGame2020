@@ -47,6 +47,7 @@ if (o_PlayerTest.m_usingInventory)
 				break;
 			}
 		}
+		m_seed_hover = null;
 	}
 	else
 	{
@@ -63,6 +64,33 @@ if (o_PlayerTest.m_usingInventory)
 				m_seed_hover = i;
 				break;
 			}
+		}
+		m_bag_hover = null;
+	}
+	// Perform directional controls
+	if (o_PlayerTest.uvPositionStyle == kControlUvStyle_Unused)
+	{
+		var uv_info = playerUiControlCollectUV();
+		var prevAxis = uv_info[0];
+		var currAxis = uv_info[1];
+		var prevAxisMagnitude = uv_info[2];
+		var currAxisMagnitude = uv_info[3];
+		var prevAxisNormalized = uv_info[4];
+		var currAxisNormalized = uv_info[5];
+		var axisDirectionChange = uv_info[6];
+		
+		// Menu selection for the 5 choices
+		if (!m_sbag_seeds)
+		{
+			m_bag_hover = playerUiControlSelectFromArray(uv_info, m_bag_hover, m_bag_offsets, 8.0);
+			if (m_bag_hover == null
+				&& m_belt_hover == null && m_chest_hover == null) m_bag_hover = 0;
+		}
+		else
+		{
+			m_seed_hover = playerUiControlSelectFromArray(uv_info, m_seed_hover, m_seed_offsets, 8.0);
+			if (m_seed_hover == null
+				&& m_belt_hover == null && m_chest_hover == null) m_seed_hover = 0;
 		}
 	}
 }
