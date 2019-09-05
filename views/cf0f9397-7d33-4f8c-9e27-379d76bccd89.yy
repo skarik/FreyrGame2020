@@ -21,7 +21,9 @@
         "b1c16ba5-c9de-4e02-940d-be10d602af42",
         "d622efec-1a48-41e5-96fc-8eecceb958e6",
         "8b5d19e2-2411-4a4c-aa95-ff7874487ff9",
-        "ff4718c1-5460-4703-b502-951b8df17766"
+        "ff4718c1-5460-4703-b502-951b8df17766",
+        "b5d4f76c-5464-44da-ad96-7ac31a7a5cdf",
+        "59d1f763-2eb5-4606-8f1d-677e64651de7"
     ],
     "filterType": "GMScript",
     "folderName": "Game",

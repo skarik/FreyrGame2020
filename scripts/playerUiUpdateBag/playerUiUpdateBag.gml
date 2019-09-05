@@ -39,6 +39,13 @@ if (o_PlayerTest.m_usingInventory)
 			var offset = m_bag_offsets[i];
 			var box_x = m_bag_base_x + offset[0];
 			var box_y = m_bag_base_y + offset[1];
+			m_bag_abs_offsets[i] = [box_x, box_y];
+		}
+		for (var i = 0; i < bag_size; ++i)
+		{
+			var offset = m_bag_offsets[i];
+			var box_x = m_bag_base_x + offset[0];
+			var box_y = m_bag_base_y + offset[1];
 		
 			if (cursor_x >= box_x && cursor_x <= box_x + 20
 				&& cursor_y >= box_y && cursor_y <= box_y + 20)
@@ -47,10 +54,18 @@ if (o_PlayerTest.m_usingInventory)
 				break;
 			}
 		}
+		m_seed_hover = null;
 	}
 	else
 	{
 		var seed_size = array_length_1d(m_seed_offsets);
+		for (var i = 0; i < seed_size; ++i)
+		{
+			var offset = m_seed_offsets[i];
+			var box_x = m_seed_base_x + offset[0];
+			var box_y = m_seed_base_y + offset[1];
+			m_seed_abs_offsets[i] = [box_x, box_y];
+		}
 		for (var i = 0; i < seed_size; ++i)
 		{
 			var offset = m_seed_offsets[i];
@@ -64,7 +79,9 @@ if (o_PlayerTest.m_usingInventory)
 				break;
 			}
 		}
+		m_bag_hover = null;
 	}
+	// UVdir controls under InventoryManagement
 }
 else
 {

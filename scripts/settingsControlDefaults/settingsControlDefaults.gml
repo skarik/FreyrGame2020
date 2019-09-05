@@ -36,8 +36,8 @@ with (Settings)
 	ctItemPrevious	= [kControlMouse, kMouseWheelDown, kControlGamepad, gp_padl];
 	ctItemNext		= [kControlMouse, kMouseWheelUp, kControlGamepad, gp_padr];
 	
-	ctUiPrevious	= [kControlKB, vk_left, kControlMouse, kMouseWheelDown];
-	ctUiNext		= [kControlKB, vk_right, kControlMouse, kMouseWheelUp, kControlMouse, mb_middle];
+	ctUiPrevious	= [kControlKB, vk_pageup, kControlGamepad, gp_shoulderl, kControlMouse, kMouseWheelDown];
+	ctUiNext		= [kControlKB, vk_pagedown, kControlGamepad, gp_shoulderr, kControlMouse, kMouseWheelUp, kControlMouse, mb_middle];
 	ctUiSelect		= [kControlMouse, mb_left, kControlKB, vk_enter, kControlGamepad, gp_face1];
 	ctUiCancel		= [kControlMouse, mb_right, kControlKB, vk_escape, kControlGamepad, gp_face2, kControlGamepad, gp_face4];
 }

@@ -1,8 +1,8 @@
 {
-    "id": "59d1f763-2eb5-4606-8f1d-677e64651de7",
+    "id": "f5d1d1bb-5234-4f01-a85c-3f2349499bde",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "slide_down_cliff",
+    "name": "playerUiControlSelectFromArray",
     "IsCompatibility": false,
     "IsDnD": false
 }

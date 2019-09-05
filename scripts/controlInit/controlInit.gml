@@ -1,3 +1,13 @@
+#macro kControlUvStyle_Mouse 0
+#macro kControlUvStyle_FakeMouse 1 
+#macro kControlUvStyle_Unused 2
+
+#macro kControlGamepad_XInput 0
+#macro kControlGamepad_Playstation 1
+#macro kControlGamepad_Generic 2
+
+#macro kControlChoice_Margin 0.33
+
 xAxis = _controlStructCreate();
 yAxis = _controlStructCreate();
 zAxis = _controlStructCreate();
@@ -31,12 +41,14 @@ vPosition = GameCamera.height / 2;
 uPositionPrevious = uPosition;
 vPositionPrevious = vPosition;
 
-prevUPositionMouse = 0.0;
-prevVPositionMouse = 0.0;
+windowMouseXPrevious = 0.0;
+windowMouseYPrevious = 0.0;
 
 uPositionScreen = GameCamera.width / 2;
 vPositionScreen = GameCamera.height / 2;
 
-uvPositionStyle = 0;
+uvPositionStyle = kControlUvStyle_Mouse;
 
 lastControlType = kControlKB;
+lastGamepadName = gamepad_get_description(0);
+lastGamepadType = (string_count("xinput", string_lower(lastGamepadName)) > 0) ? kControlGamepad_XInput : kControlGamepad_Generic;

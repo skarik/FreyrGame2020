@@ -22,16 +22,48 @@ if (o_PlayerTest.m_usingBook)
 		m_book_main_hover = null;
 	}
 	//Check which item the mouse is hovering over
-	for (var i = 0; i < ((m_book_main_selection == null) ? 5 : 7); ++i)
+	if (m_book_main_hover == null)
 	{
-		var offsets = m_book_offsets_main[i];
-		var check_x = m_book_base_x + offsets[0];
-		var check_y = m_book_base_y + offsets[1];
-	
-		if (sqr(check_x - cursor_x) + sqr(check_y - cursor_y) < sqr(25))
+		for (var i = 0; i < ((m_book_main_selection == null) ? 5 : 7); ++i)
 		{
-			m_book_main_hover = i;
-			break;
+			var offsets = m_book_offsets_main[i];
+			var check_x = m_book_base_x + offsets[0];
+			var check_y = m_book_base_y + offsets[1];
+	
+			if (sqr(check_x - cursor_x) + sqr(check_y - cursor_y) < sqr(25))
+			{
+				m_book_main_hover = i;
+				break;
+			}
+		}
+	}
+	// Perform directional controls
+	if (o_PlayerTest.uvPositionStyle == kControlUvStyle_Unused)
+	{
+		var uv_info = playerUiControlCollectUV();
+		var prevAxis = uv_info[0];
+		var currAxis = uv_info[1];
+		var prevAxisMagnitude = uv_info[2];
+		var currAxisMagnitude = uv_info[3];
+		var prevAxisNormalized = uv_info[4];
+		var currAxisNormalized = uv_info[5];
+		var axisDirectionChange = uv_info[6];
+		
+		// Menu selection for the 5 choices
+		if (m_book_main_selection == null)
+		{
+			m_book_main_hover = playerUiControlSelectFromArray(uv_info, m_book_main_hover, m_book_offsets_main, 32.0);
+			m_book_main_hover = clamp(m_book_main_hover, 0, 4);
+		}
+		// Selecting accept or cancel
+		else
+		{
+			if ((prevAxisMagnitude < kControlChoice_Margin && currAxisMagnitude >= kControlChoice_Margin)
+				|| axisDirectionChange < 0.8)
+			{
+				m_book_main_hover += sign(currAxis[0] + currAxis[1]);
+			}
+			m_book_main_hover = clamp(m_book_main_hover, 5, 6);
 		}
 	}
 }
@@ -98,7 +130,11 @@ if (o_PlayerTest.m_usingBook && m_book_tab == Tabs.kMain)
 		}
 		else if (m_book_main_hover == 5)
 		{
-			if (o_PlayerTest.selectButton.pressed)
+			if (o_PlayerTest.cancelButton.pressed)
+			{	// Clear out selection
+				m_book_main_selection = null;
+			}
+			else if (o_PlayerTest.selectButton.pressed)
 			{
 				// Depending on the selection, do different things
 				if (m_book_main_selection == 0)

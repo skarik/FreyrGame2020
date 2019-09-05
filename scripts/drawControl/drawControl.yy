@@ -1,8 +1,8 @@
 {
-    "id": "59d1f763-2eb5-4606-8f1d-677e64651de7",
+    "id": "b5d4f76c-5464-44da-ad96-7ac31a7a5cdf",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "slide_down_cliff",
+    "name": "drawControl",
     "IsCompatibility": false,
     "IsDnD": false
 }
