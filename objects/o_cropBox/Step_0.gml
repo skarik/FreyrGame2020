@@ -9,8 +9,8 @@ if (m_dailyPickup == true && currentTime < 1)
 
 if (m_dailyPickup == false && currentTime > 8)
 {
-	show_debug_message("Pickup time.")
 	m_dailyPickup = true;
+	
 	//Empty the inventory for now. It will eventually have to go to a secondary 
-	itemArrayFree(m_inventory);
+	itemArrayFree(m_inventory.item);
 }

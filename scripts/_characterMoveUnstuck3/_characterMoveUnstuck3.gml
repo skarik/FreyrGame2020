@@ -19,7 +19,7 @@ if (collision3_meeting(x, y, z + z_height, false))
                     ty = y + lengthdir_y(dist, angle);
 					if (!collision3_meeting(tx, ty, z + z_height, false))
                     {
-                        debugOut("Warning 003: Player stuck inside platform. Automatically finding new position. This can be saftely ignored.");
+                        debugOut("Warning 003: Player stuck inside platform. Automatically finding new position. This can be safely ignored.");
                         meeting = false;
                         x += lengthdir_x(dist + 1, angle);
                         y += lengthdir_y(dist + 1, angle);
