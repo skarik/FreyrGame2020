@@ -1,7 +1,9 @@
-/// @description inventory = inventoryCleanupInfinite(inventory_to_modify)
-/// @param inventory_to_modify : Inventory to clean up
+/// @description inventory = inventoryCleanup(inventory, compact)
+/// @param inventory : Inventory to clean up
+/// @param compact : If all empty spaces should be removed
 
 var inventory = argument0;
+var compact = argument1;
 if (exists(inventory))
 {
 	if (inventoryGetSize(inventory) != kCountInfinite)
@@ -14,20 +16,44 @@ if (exists(inventory))
 	var current_max_check = inventoryGetCount(inventory);
 	var current_spots_cleaned = 0;
 	
-	for (var i_check = 0; i_check < current_max_check; ++i_check)
+	if (compact)
 	{
-		var item = inventory.item[i_check];
-		if (item == null || item.object == null)
+		for (var i_check = 0; i_check < current_max_check; ++i_check)
 		{
-			current_spots_cleaned += 1;
-			for (var i = i_check; i < current_max_check - 1; ++i)
+			var item = inventory.item[i_check];
+			if (item == null || item.object == null)
 			{
-				// Copy it down (to shift it)
-				itemEntryCopy(inventory.item[i], inventory.item[i + 1]);
+				current_spots_cleaned += 1;
+				for (var i = i_check; i < current_max_check - 1; ++i)
+				{
+					// Copy it down (to shift it)
+					itemEntryCopy(inventory.item[i], inventory.item[i + 1]);
+				}
+				// Clear out the top item
+				itemEntryClear(inventory.item[current_max_check - 1]);
 			}
-			// Clear out the top item
-			itemEntryClear(inventory.item[current_max_check - 1]);
 		}
+	}
+	else
+	{	// Only check blank spots at the end
+		for (var i_check = current_max_check - 1; i_check > 0; --i_check)
+		{
+			var item = inventory.item[i_check];
+			if (item == null || item.object == null)
+			{
+				current_spots_cleaned += 1;
+			}
+			else
+			{	// Stop checking if found an item.
+				break;
+			}
+		}
+	}
+	
+	// No need to do anything if no spots to clean
+	if (current_spots_cleaned == 0)
+	{
+		return inventory;
 	}
 	
 	// Now we need a new item array since arrays can only get larger
