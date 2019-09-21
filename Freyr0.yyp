@@ -2383,14 +2383,6 @@
             }
         },
         {
-            "Key": "47f2881d-9df8-4616-9baa-da4d55e7a241",
-            "Value": {
-                "id": "6b27886b-39a2-492a-afd8-131808cb40f4",
-                "resourcePath": "scripts\\slide_down_cliff\\slide_down_cliff.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "480fbedd-fcd3-4af8-a9c2-205fa550d690",
             "Value": {
                 "id": "47355aeb-6b0e-4753-b62e-7c9398d316dc",
@@ -6735,6 +6727,14 @@
             }
         },
         {
+            "Key": "c308f0cd-0ab1-4c9d-a41a-2cf6347a233c",
+            "Value": {
+                "id": "d84b9622-e3b9-47c8-b671-201babefd98d",
+                "resourcePath": "scripts\\farmPlaceReturnItem\\farmPlaceReturnItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c3d5c169-b483-4c03-a0f5-f685b8f54146",
             "Value": {
                 "id": "7181bb27-5b29-4fae-8638-b5f2920857a2",
@@ -8915,7 +8915,6 @@
         "61e1be0a-d34b-455d-97fb-812328e39b21",
         "a48ea4a0-20a5-40bc-95b8-a15962795732",
         "56179266-d7d6-4ee1-8be7-cf0dd9d45938",
-        "47f2881d-9df8-4616-9baa-da4d55e7a241",
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "468f285d-b321-4679-894b-b76382e119d3",
@@ -9221,6 +9220,7 @@
         "5c79468e-2b2b-44a2-a306-88c6cee20211",
         "b5d4f76c-5464-44da-ad96-7ac31a7a5cdf",
         "59d1f763-2eb5-4606-8f1d-677e64651de7",
+        "c308f0cd-0ab1-4c9d-a41a-2cf6347a233c",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""
