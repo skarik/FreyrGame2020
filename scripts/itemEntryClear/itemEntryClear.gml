@@ -8,3 +8,4 @@ var item = argument0;
 	item.onUse		= nullScript;
 	item.onDeplete	= nullScript;
 	item.type		= kItemPickupNormal;
+	item.tradeItem	= [null, 0];

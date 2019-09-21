@@ -15,3 +15,4 @@ var item = argument0;
 	item.onUse		= source.onUse;
 	item.onDeplete	= source.onDeplete;
 	item.type		= source.type;
+	item.tradeItem	= source.tradeItem;
