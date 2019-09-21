@@ -3711,6 +3711,14 @@
             }
         },
         {
+            "Key": "6f8c02a7-fe29-4a20-95f4-82ca3e686d7b",
+            "Value": {
+                "id": "d3e95a7a-2ca7-4999-a43d-22773ed77208",
+                "resourcePath": "scripts\\inventoryCleanupInfinite\\inventoryCleanupInfinite.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6f927dcc-8fe5-492f-a775-744aa8fb66db",
             "Value": {
                 "id": "d73c9e37-e6e4-4804-b82b-813e6750c84d",
@@ -9101,6 +9109,7 @@
         "c2bce2a9-c2e6-4b6b-8f45-d24010631733",
         "7cdc86b6-93c7-4a01-9f5a-b0675d7f7153",
         "595d7641-71d1-4347-bfcb-487e043bf839",
+        "6f8c02a7-fe29-4a20-95f4-82ca3e686d7b",
         "13555fd4-a744-4528-9d3b-2b18406e5d6c",
         "4d409182-c3d1-45d1-8ede-72161fbb8f69",
         "20b48cab-a37a-4bda-aab2-3451a5a716c8",
