@@ -1,4 +1,4 @@
-/// @description itemArrayAddItemProp(array, object, count, maxCount, name, checkUse, onUse, type)
+/// @description itemArrayAddItemProp(array, object, count, maxCount, name, checkUse, onUse, type, tradeItem)
 /// @param array
 /// @param object
 /// @param count
@@ -7,6 +7,7 @@
 /// @param checkUse
 /// @param onUse
 /// @param type
+/// @param tradeItem
 
 var itemArray = argument0;
 var itemArrayLength = array_length_1d(itemArray);
@@ -19,6 +20,7 @@ var new_checkUse = argument5;
 var new_onUse = argument6;
 var new_onDeplete = argument7;
 var new_type = argument8;
+var new_tradeItem = argument9;
 
 // Loop through the inventory, if find a matching item
 for (var i = 0; i < itemArrayLength; ++i)
@@ -33,6 +35,7 @@ for (var i = 0; i < itemArrayLength; ++i)
 			itemArray[i].onUse = new_onUse;
 			itemArray[i].onDeplete = new_onDeplete;
 			itemArray[i].type = new_type;
+			itemArray[i].tradeItem = new_tradeItem;
 			return itemArray[i];
 		}
 	}
@@ -50,6 +53,7 @@ for (var i = 0; i < itemArrayLength; ++i)
 		itemArray[i].onUse = new_onUse;
 		itemArray[i].onDeplete = new_onDeplete;
 		itemArray[i].type = new_type;
+		itemArray[i].tradeItem = new_tradeItem;
 		return itemArray[i];
 	}
 }

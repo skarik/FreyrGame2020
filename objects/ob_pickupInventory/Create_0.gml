@@ -7,3 +7,5 @@ m_onUseScript    = nullScript;
 m_checkUseScript = nullScript;
 m_onDepleteScript= nullScript;
 m_type           = kItemPickupNormal;
+m_tradeItem      = [object_index, 1];
+

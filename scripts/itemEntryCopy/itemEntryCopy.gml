@@ -1,11 +1,6 @@
 /// @description itemEntryCopy(entry, source)
 /// @param entry inits item to given params
 /// @param source item!
-/// @param count
-/// @param name 
-/// @param checkUse 
-/// @param onUse 
-/// @param type 
 var source = argument1;
 var item = argument0;
 	item.object		= source.object;
@@ -15,3 +10,4 @@ var item = argument0;
 	item.onUse		= source.onUse;
 	item.onDeplete	= source.onDeplete;
 	item.type		= source.type;
+	item.tradeItem	= source.tradeItem;

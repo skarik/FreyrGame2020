@@ -5,3 +5,4 @@ m_name           = "Turnip";
 m_maxStack       = 10;
 m_onUseScript    = turnipOnUse;
 m_checkUseScript = nullScript;
+m_tradeItem      = [o_pickupRes_Gear, 5];

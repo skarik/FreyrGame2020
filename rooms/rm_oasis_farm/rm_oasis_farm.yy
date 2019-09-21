@@ -310,7 +310,7 @@
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "InstancesN20",
+            "name": "InstancesN20_cutsceneobjects",
             "id": "3dca970a-b605-47e0-8ec0-4aea5c204f70",
             "depth": -20,
             "grid_x": 8,
