@@ -55,10 +55,15 @@ debugOut("working_directory: " + working_directory);
 debugOut("program_directory: " + program_directory);
 debugOut("temp_directory: " + temp_directory);
 
-// Finish and go to next room
+// Finish and go to next room:
 
-// Try to load a game
-if (Debug.reset || !gameLoad())
+// Either take the override...
+if (room_exists(Settings.startup_roomOverride))
+{
+	room_goto(Settings.startup_roomOverride);
+}
+// or try to load a game
+else if (Debug.reset || !gameLoad())
 {
     // If not, we just continue normally.
 	room_goto_next();

@@ -1415,6 +1415,14 @@
             }
         },
         {
+            "Key": "29f3bc31-ee7c-43bb-af3a-f6c47fbd8d7e",
+            "Value": {
+                "id": "2694dfd5-d445-441f-84f6-72fb6eac50d1",
+                "resourcePath": "scripts\\settingsStartupLoad\\settingsStartupLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "29fcd62f-e20c-409b-883b-6504a664755c",
             "Value": {
                 "id": "172d2bb6-abb7-4a56-828d-af361b44d144",
@@ -2767,6 +2775,14 @@
             }
         },
         {
+            "Key": "556b0606-8df0-4b4a-a841-26e7da69f09a",
+            "Value": {
+                "id": "4a432f86-a6b5-4670-910e-ee9733b8a47c",
+                "resourcePath": "scripts\\settingsStartupDefaults\\settingsStartupDefaults.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "556b6c0e-5651-4289-8df8-a1c09745743b",
             "Value": {
                 "id": "99cfff1a-f06f-47bd-ba2a-24dfd9aff53e",
@@ -2931,6 +2947,14 @@
             "Value": {
                 "id": "243d8a20-42e6-48b5-bf51-dd8ade70f6e6",
                 "resourcePath": "scripts\\timeofdayGetHour\\timeofdayGetHour.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5a099e9a-bea6-4c59-b44a-75bab0b61a5e",
+            "Value": {
+                "id": "0020abde-7b04-4886-b2d2-6f24792a677e",
+                "resourcePath": "scripts\\settingsStartupSave\\settingsStartupSave.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8956,6 +8980,9 @@
         "9e518392-0f6d-4719-87be-ed31e7b7c8a4",
         "f96912fa-4c96-43c5-a9e3-cb410e0a79ee",
         "ad7e66ab-112e-4f16-907a-7c85b8d2ab69",
+        "556b0606-8df0-4b4a-a841-26e7da69f09a",
+        "29f3bc31-ee7c-43bb-af3a-f6c47fbd8d7e",
+        "5a099e9a-bea6-4c59-b44a-75bab0b61a5e",
         "89e6f090-2e48-4530-8e2b-4fe17896008e",
         "ea01f43b-f383-4a27-bcea-a0e103dba76b",
         "5b83a500-320a-4c22-87b8-1c4f0e26ddbc",

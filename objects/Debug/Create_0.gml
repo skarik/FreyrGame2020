@@ -11,7 +11,7 @@ debug_line[0] = "";
 debug_line_count = 0;
 
 // Debug mode restart all swatch:
-reset = convention_mode || debug_mode;
+reset = convention_mode;// || debug_mode;
 // Farm id
 farm_id = current_time;
 

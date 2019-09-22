@@ -1,4 +1,5 @@
 
 settingsControlDefaults();
 settingsControlLoad();
-
+settingsStartupDefaults();
+settingsStartupLoad();
