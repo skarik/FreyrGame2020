@@ -11,8 +11,9 @@ if (valid)
 	item.onUse     = script_get_index(buffer_read(buffer, buffer_string));
 	item.onDeplete = script_get_index(buffer_read(buffer, buffer_string));
 	item.type      = buffer_read(buffer, buffer_s32);
-	item.tradeItem = [object_get_index(buffer_read(buffer, buffer_string)),
-					  buffer_read(buffer, buffer_s32)];
+	item.tradeItem = [null, 0];
+	item.tradeItem[0] = object_get_index(buffer_read(buffer, buffer_string));
+	item.tradeItem[1] = buffer_read(buffer, buffer_s32);
 }
 else
 {
