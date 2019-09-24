@@ -4,6 +4,8 @@ with (Settings)
     
 	startup_roomOverride	= ini_read_string("startup", "override", "");
 	startup_roomOverride	= room_get_index(startup_roomOverride);
+	
+	startup_overrideSave	= ini_read_real("startup", "overridesave", false);
 
     ini_close();
 }

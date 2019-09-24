@@ -2,4 +2,5 @@
 with (Settings)
 {
 	startup_roomOverride = null;
+	startup_overrideSave = false;
 }
