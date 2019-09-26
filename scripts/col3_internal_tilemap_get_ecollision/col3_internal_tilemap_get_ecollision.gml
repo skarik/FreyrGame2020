@@ -1,5 +1,3 @@
-#macro kElevationInvalid -9999
-
 var check_x = argument0;
 var check_y = argument1;
 
@@ -15,16 +13,23 @@ for (var i = 0; i < array_length_1d(global.collidable_layers); ++i)
 	var tile = tilemap_get(tilemap, cel_x, cel_y);
 	var tile_id = tile & 0xFF;
 
-	if (tile_id >= 16 && tile_id < 32)
+	if (tile_id >= 32 && tile_id < 48)
 	{
-		tile_elevation = (tile_id - 16) * 16;
+		tile_elevation = (tile_id - 32) * 16;
 		break;
 	}
-	else if (tile_id >= 48 && tile_id < 64)
+	else if (tile_id >= 64 && tile_id < 80)
 	{
-		tile_elevation = (tile_id - 48) * -16;
+		tile_elevation = (tile_id - 64) * -16;
 		break;
 	}
 }
 
-return tile_elevation;
+if (tile_elevation != kElevationInvalid)
+{
+	return [tile_elevation];
+}
+else
+{
+	return [];
+}

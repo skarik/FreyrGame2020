@@ -30,7 +30,7 @@ for (var i = 0; i < results_num; ++i)
 }
 ds_list_destroy(results);
 
-if (results_num == 0)
+if (results_num == 0 && tile_elevation == kElevationInvalid)
 {
 	return check_z;
 }

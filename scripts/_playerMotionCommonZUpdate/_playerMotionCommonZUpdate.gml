@@ -1,7 +1,8 @@
 // Update the elevation if on the ground
 if (onGround)
 {
-	if (place_meeting(x, y, ob_elevationBlendArea))
+	//if (place_meeting(x, y, ob_elevationBlendArea))
+	if (collision3_transition_meeting(x, y))
 	{
 		 z = collision3_get_highest_meeting(x, y, z);
 	}

@@ -14,10 +14,39 @@ var x2 = check_x - sprite_get_xoffset(mask_index) + sprite_get_bbox_right(mask_i
 var y1 = check_y - sprite_get_yoffset(mask_index) + sprite_get_bbox_top(mask_index);
 var y2 = check_y - sprite_get_yoffset(mask_index) + sprite_get_bbox_bottom(mask_index);
 
+// Check for all tile colliders at the given area
+if (col3_internal_tilemap_get_collision(x1, y1)
+	|| col3_internal_tilemap_get_collision(x2, y1)
+	|| col3_internal_tilemap_get_collision(x1, y2)
+	|| col3_internal_tilemap_get_collision(x2, y2))
+{
+	return true;
+}
+
 // Check for all colliders at the given area
 if (place_meeting(check_x, check_y, ob_colliderNoDepth))
 {
 	return true;
+}
+
+// Check for elevation tile colliders (fastish!)
+var results_tile_colliders =
+	array_concat(
+		array_concat(
+			array_concat(
+				col3_internal_tilemap_get_ecollision(x1, y1),
+				col3_internal_tilemap_get_ecollision(x2, y1)),
+			col3_internal_tilemap_get_ecollision(x1, y2)),
+		col3_internal_tilemap_get_ecollision(x2, y2));
+var results_tile_colliders_num = array_length_1d(results_tile_colliders);
+for (var i = 0; i < results_tile_colliders_num; ++i)
+{
+	var collider_z = results_tile_colliders[i];
+	var collider_z_height = 16;
+	if (collider_z + collider_z_height > check_z + 4)
+	{
+		return true;
+	}
 }
 
 // Check for elevation colliders
@@ -43,15 +72,34 @@ ds_list_destroy(results_colliders);
 //if (position_meeting(check_x, check_y, ob_elevationBlendArea))
 //if (exists(collision_rectangle(check_x - 4, check_y - 4, check_x + 4, check_y + 4, ob_elevationBlendArea, false, true)))
 //if (place_meeting(check_x, check_y, ob_elevationBlendArea))
-if (position_meeting(x1, y1, ob_elevationBlendArea) 
+/*if (position_meeting(x1, y1, ob_elevationBlendArea) 
 	&& position_meeting(x2, y1, ob_elevationBlendArea)
 	&& position_meeting(x1, y2, ob_elevationBlendArea)
-	&& position_meeting(x2, y2, ob_elevationBlendArea))
+	&& position_meeting(x2, y2, ob_elevationBlendArea))*/
+if (collision3_transition_point_meeting(x1, y1) 
+	&& collision3_transition_point_meeting(x2, y1)
+	&& collision3_transition_point_meeting(x1, y2)
+	&& collision3_transition_point_meeting(x2, y2))
 {
 	return false;
 }
 
-// Check for all transition zones at the given area
+// Check for the tile collision at the given point (fast)
+var result_tile = max(
+	col3_internal_tilemap_get_elevation(x1, y1),
+	col3_internal_tilemap_get_elevation(x2, y1),
+	col3_internal_tilemap_get_elevation(x1, y2),
+	col3_internal_tilemap_get_elevation(x2, y2)); // hack relies on invalid elevation being super low
+if (result_tile != kElevationInvalid)
+{
+	var area_z = result_tile;
+	if (falling ? (area_z > check_z + 4) : (abs(area_z - check_z) > 4))
+	{
+		return true;
+	}
+}
+
+// Check for all transition zones at the given area (slow)
 var results = ds_list_create();
 var results_num = collision_rectangle_list(x1, y1, x2, y2, ob_elevationArea, false, true, results, false);
 // Find the one with the highest z

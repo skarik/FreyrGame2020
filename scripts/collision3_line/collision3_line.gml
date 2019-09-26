@@ -13,6 +13,8 @@ var check_y2 = argument3;
 var check_z = argument4;
 var falling = argument5;
 
+debugUntestedCall();
+
 // Check for all colliders at the given area
 if (exists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_colliderNoDepth, false, true)))
 {
