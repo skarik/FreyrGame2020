@@ -28,7 +28,10 @@ else
 			if (wait_id == "on_player_till")
 			{
 				if (exists(o_fieldSquare))
+				{
 					cutsceneWaitEnd();
+					m_music_state = 1;
+				}
 			}
 			if (wait_id == "on_player_till2")
 			{
@@ -40,13 +43,17 @@ else
 				}
 				
 				if (l_tilled)
+				{
 					cutsceneWaitEnd();
+					m_music_state = 2;
+				}
 			}
 		}
 	}
 	
 	if (cutsceneIsDone())
 	{
+		m_music_state = 3;
 		//m_name = "Nathan";
 		/*m_interactChoices = 4;
 		m_interaction[0] = "Hello!";
@@ -56,7 +63,7 @@ else
 		o_chNathan.m_interactionFile = "talk00_nathan.txt";
 
 		// Create music manager
-		new(o_mus00_DayDesert);
+		//new(o_mus00_DayDesert);
 	
 		questSetValue(kQidIntroSequence, 40);
 		delete(this);

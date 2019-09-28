@@ -1,11 +1,11 @@
 #begin
 
-// This triggers when player tries to either go past Nathan or talk to Nathan.
-
 music // start with the gentle music track for nathan again
 {
     volume 0.0
-    1volume 1.0
+    3volume 1.0
+	7volume 1.0
+	8volume 1.0
 }
 
 signal
@@ -69,7 +69,7 @@ lines
 music // start with the gentle music track again
 {
     volume 0.0
-    2volume 1.0
+    7volume 1.0
 }
 
 // Now we wait for the player to push outside
@@ -79,10 +79,12 @@ wait
 	id on_player_outside
 }
 
-music // bring in the loud track for now
+music // bring in the loud track for BIRDSHIT ON A BEAM
 {
     volume 0.0
-    4volume 1.0
+    1volume 1.0
+	2volume 1.0
+	//9volume 1.0
 }
 
 signal
@@ -137,10 +139,12 @@ lines
 //	target EndChoiceB
 //}
 
-music // start with the gentle music track
+music // start with the gentle music track (bring in some strings)
 {
     volume 0.0
-    3volume 1.0
+    1volume 1.0
+	2volume 1.0
+	5volume 1.0
 }
 
 lines

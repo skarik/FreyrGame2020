@@ -34,3 +34,9 @@ for (var i = 0; i < m_trackCount; ++i)
 		audio_sound_gain(m_track[i], m_trackCurrentVolume[i], 0);
 	}
 }
+
+// todo: sync up all track positions
+if (m_trackMasterId != null)
+{
+	// TODO
+}

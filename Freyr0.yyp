@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "06737b5c-a205-47a9-8d39-6402ddcc9b14",
+            "Value": {
+                "id": "792ecb05-786c-4913-b4cc-7ab253a132f6",
+                "resourcePath": "datafiles_yy\\audio\\oasis_5_str_stacc.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "067a1fc3-e934-4218-a74d-17bd60d5d14b",
             "Value": {
                 "id": "5654b326-33c6-4bc1-a3a0-ad40621dc3cb",
@@ -759,11 +767,27 @@
             }
         },
         {
+            "Key": "16e1c640-37b6-433d-a9e7-50fadaf98a5f",
+            "Value": {
+                "id": "395cec60-e7f1-447a-98a8-d0558d98727d",
+                "resourcePath": "datafiles_yy\\audio\\oasis_9_perc_bells.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "16ecaaa0-20d8-4a38-a19c-2e1ca4a7a82d",
             "Value": {
                 "id": "dadbbfee-1ee5-48e4-aad2-39cd6cca6cb1",
                 "resourcePath": "views\\16ecaaa0-20d8-4a38-a19c-2e1ca4a7a82d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1734abf2-bcab-48aa-816a-031f697fa87e",
+            "Value": {
+                "id": "e182a3df-8be1-4bde-b188-a5aec01dc318",
+                "resourcePath": "datafiles_yy\\audio\\oasis_10_piano_solo.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -780,14 +804,6 @@
                 "id": "2bc141ac-6fa7-4cd6-b008-5a16d8359057",
                 "resourcePath": "sprites\\sui_arcaneSelect\\sui_arcaneSelect.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "181e80f3-6b12-4da6-afb2-b120604d45d5",
-            "Value": {
-                "id": "72e47db1-df46-4d07-8ed8-bc88585ac0f7",
-                "resourcePath": "datafiles_yy\\audio\\oasis_a4_north.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -996,6 +1012,14 @@
                 "id": "8070ed68-adc5-42cb-be26-7983f752b46c",
                 "resourcePath": "sprites\\sce6_32x32\\sce6_32x32.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1e3806bc-5e67-4616-b1b9-a4ea3e04da4b",
+            "Value": {
+                "id": "c566ce0e-2d58-45b3-9581-2655831727fc",
+                "resourcePath": "datafiles_yy\\audio\\oasis_6_str_leg.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -2303,14 +2327,6 @@
             }
         },
         {
-            "Key": "455bdb1c-445f-481c-aef4-7b93ca7f9acf",
-            "Value": {
-                "id": "50f978c8-2c2e-41f0-8985-9ec636e68ba5",
-                "resourcePath": "datafiles_yy\\audio\\oasis_a1.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "458cd206-3e3f-497b-afec-0ffce25297a0",
             "Value": {
                 "id": "735bde71-1ca9-48d4-a4da-c6dcfb42be9c",
@@ -2887,6 +2903,14 @@
             }
         },
         {
+            "Key": "56b1e331-10a2-4f61-aeab-bfe22ea45773",
+            "Value": {
+                "id": "251fc5e5-c1b5-48da-8cc5-81bfe5233134",
+                "resourcePath": "datafiles_yy\\audio\\oasis_2_gt1.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "56c3a6b1-4a87-4f6c-a730-23bf57418e9d",
             "Value": {
                 "id": "9a17d954-96f6-4bcb-b18b-3e7e1f3ef064",
@@ -3103,6 +3127,14 @@
             }
         },
         {
+            "Key": "5c605b08-960b-4e2e-919b-291d03adbb8f",
+            "Value": {
+                "id": "a3a6fbc9-a6a9-4468-9a84-0102f16860c8",
+                "resourcePath": "datafiles_yy\\audio\\oasis_3_gt2_strum.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "5c79468e-2b2b-44a2-a306-88c6cee20211",
             "Value": {
                 "id": "b6b2288f-c7dd-473a-8a70-a8e1212ebf66",
@@ -3183,14 +3215,6 @@
             }
         },
         {
-            "Key": "5db55d6b-821d-43c1-a340-f2b96462687f",
-            "Value": {
-                "id": "0ff10057-a38d-4080-be84-b12788ba2614",
-                "resourcePath": "datafiles_yy\\audio\\oasis_a2.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "5e4bef73-57dc-4402-b910-3381428b1abe",
             "Value": {
                 "id": "0f842b09-1e8c-4fcd-af32-aa816a3d17c8",
@@ -3236,6 +3260,14 @@
                 "id": "b3c3f071-7253-442d-8634-4f8c5297d8b7",
                 "resourcePath": "views\\60933d88-8817-4369-9da4-b5add7134285.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "60995c43-0975-42fb-a2fa-11fb3de04635",
+            "Value": {
+                "id": "57e64b5b-f869-450a-b426-773a38b0213a",
+                "resourcePath": "datafiles_yy\\audio\\oasis_1_bass.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3295,6 +3327,14 @@
             }
         },
         {
+            "Key": "627ba1aa-b063-4959-adc4-82899f51b0a0",
+            "Value": {
+                "id": "7c669288-3d4d-40e5-90b7-470f720ed74b",
+                "resourcePath": "datafiles_yy\\audio\\oasis_8_perc_hard.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "62efac6d-29fe-489f-8724-3f81a7d57ca7",
             "Value": {
                 "id": "c396989c-a464-46f7-b77b-564ce085ed1b",
@@ -3332,6 +3372,14 @@
                 "id": "6d1f31c5-5a90-4fa2-8f6d-868e3d06e23a",
                 "resourcePath": "sprites\\s_propDCactusMedium\\s_propDCactusMedium.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "64be5d0e-65ea-4655-acdb-5c825327c458",
+            "Value": {
+                "id": "7d4950c0-6dfa-4986-9092-dce890ca21e6",
+                "resourcePath": "datafiles_yy\\audio\\oasis_4_gt2_solo.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -5036,6 +5084,14 @@
                 "id": "453b8841-e002-4ac1-8d74-c8a512130b13",
                 "resourcePath": "sprites\\s_potWater\\s_potWater.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "929a85ac-34d4-4dec-91c0-d7c7958e4ecc",
+            "Value": {
+                "id": "7f8c315c-41b1-457c-a43b-3138c5b8387f",
+                "resourcePath": "datafiles_yy\\audio\\oasis_11_piano_flute.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7071,14 +7127,6 @@
             }
         },
         {
-            "Key": "c91afbcd-0a99-4437-9685-354fdc58103d",
-            "Value": {
-                "id": "4b1e9251-999d-4f36-a4ea-411b4650c263",
-                "resourcePath": "datafiles_yy\\audio\\oasis_a0.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "c952166e-bf64-4c7e-bc61-da72659c83c7",
             "Value": {
                 "id": "b3cd345e-7ed1-40d2-b126-9939e9658ca3",
@@ -7292,14 +7340,6 @@
                 "id": "62f7df5a-f80f-4a8f-a815-a0c7f6856907",
                 "resourcePath": "sprites\\s_propRuinsPillar0\\s_propRuinsPillar0.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "d1304db1-d772-47fa-bb60-6ebfa9b70090",
-            "Value": {
-                "id": "56136387-b0c0-473d-913b-396e2f7e8ce9",
-                "resourcePath": "datafiles_yy\\audio\\oasis_a3.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7660,14 +7700,6 @@
                 "id": "20f193a6-d5b5-4c95-af4b-910c2045b88c",
                 "resourcePath": "objects\\o_farmland32x32\\o_farmland32x32.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "da671400-3121-4cf3-bd57-5d04a50a0576",
-            "Value": {
-                "id": "e8daf2e7-2eca-4d53-9c89-f30c36be757a",
-                "resourcePath": "datafiles_yy\\audio\\oasis_a5_cave.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -8516,6 +8548,14 @@
                 "id": "8cfac14a-43ac-48cb-a314-2857c52490f1",
                 "resourcePath": "scripts\\characterGroundInteractEndStep\\characterGroundInteractEndStep.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f2cf7467-134f-4b38-a74a-03fd0c5db5d0",
+            "Value": {
+                "id": "dca9420a-e686-4f64-b38a-94f5fcc788c5",
+                "resourcePath": "datafiles_yy\\audio\\oasis_7_perc_light.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

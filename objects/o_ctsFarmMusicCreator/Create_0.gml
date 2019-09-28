@@ -5,13 +5,25 @@ if (questGetValue(kQidIntroSequence) > 30
 	)
 {
 	// Create music manager
-	if (timeofdayIsDaytime())
+	/*if (timeofdayIsDaytime())
 	{
 		new(o_mus00_DayDesert);
 	}
 	else
 	{
 		new(o_mus00_NightDesert);
+	}*/
+	if (!exists(o_mus00_Oasis))
+	{
+		new(o_mus00_Oasis);
+		//questSetValue(kQidIntroSequence, 40); // HACK
+	}
+}
+else if (questGetValue(kQidIntroSequence) > 10)
+{
+	if (!exists(o_mus00_Oasis))
+	{
+		new(o_mus00_Oasis);
 	}
 }
 
