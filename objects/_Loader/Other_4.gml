@@ -58,7 +58,7 @@ debugOut("temp_directory: " + temp_directory);
 // Finish and go to next room:
 
 // Either take the override...
-if ((!Settings.startup_overrideSave && !gameLoad()) || room_exists(Settings.startup_roomOverride))
+if ((!Settings.startup_overrideSave && !gameLoad()) && room_exists(Settings.startup_roomOverride))
 {
 	room_goto(Settings.startup_roomOverride);
 }
