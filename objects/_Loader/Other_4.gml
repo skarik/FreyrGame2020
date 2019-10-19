@@ -58,8 +58,14 @@ debugOut("temp_directory: " + temp_directory);
 // Finish and go to next room:
 
 // Either take the override...
-if ((!Settings.startup_overrideSave && !gameLoad()) && room_exists(Settings.startup_roomOverride))
+//if ((!Settings.startup_overrideSave && !gameLoad()) && room_exists(Settings.startup_roomOverride))
+if (Settings.startup_overrideSave && !gameLoad() && room_exists(Settings.startup_roomOverride))
 {
+	// force update quest stuff now that player is ready
+	if (Settings.startup_overrideSave) {
+		dcmdRunString(Settings.startup_command);
+		Settings.startup_command = "";
+	}
 	room_goto(Settings.startup_roomOverride);
 }
 // or try to load a game

@@ -16,3 +16,6 @@ for (var i = 0; i < kQuestNumber; ++i)
 
 // set persistence
 persistent = true;
+
+// initialized quest system
+debugOut("initialized quest state array");
