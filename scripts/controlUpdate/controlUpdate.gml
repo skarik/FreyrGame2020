@@ -1,6 +1,6 @@
 ///@description Update inputs.
 ///@param clear_input  If true, clears all input.
-if (argument0 == false)
+if (argument0 == false && !(Debug.on && exists(o_debugCmdline) && o_debugCmdline.focused))
 {
 	//_controlStructUpdate(xAxis, -keyboard_check(ord("A")) + keyboard_check(ord("D")) + deadzone_bias(gamepad_axis_value(0, gp_axislh)));
 	//_controlStructUpdate(yAxis, -keyboard_check(ord("W")) + keyboard_check(ord("S")) + deadzone_bias(gamepad_axis_value(0, gp_axislv)));

@@ -1,19 +1,25 @@
 // Is tilde pressed?
 if ( keyboard_check_pressed(192) )
 {
-    // Toggle the menu when it is pressed down.
-    if ( !exists(o_debugMenu) ) {
-        new( o_debugMenu );
-        visible = true;
+    // Toggle the menu when it is pressed down:
+	if (!on)
+	{
+		// Enable & create debug menu
 		on = true;
-    }
-    else {
-        delete( o_debugMenu );
-        visible = false;
+		visible = true;
+		if (!exists(o_debugMenu)) {
+			new(o_debugMenu);	
+		}
+	}
+	else
+	{
+		// Disable debug menu
 		on = false;
-    }
+		visible = false;
+	}
 }
 
+// Debug toggles for the palette swatcher.
 if ( keyboard_check(vk_control) && keyboard_check_pressed(ord("8")) )
 {
 	paletteSetCurrent(kPaletteCrushed);

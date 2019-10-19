@@ -16,7 +16,6 @@ draw_set_color( c_black );
 draw_set_alpha(image_alpha * 0.5);
 for (var i = 0; i < Debug.debug_line_count; ++i)
 {
-    //draw_text( 60, 720-60 - (Debug.debug_line_count-i)*10, Debug.debug_line[i] );
 	var dx = 60;
 	var dy = 720-60 - (Debug.debug_line_count-i)*10;
 	draw_rectangle(dx - 1, dy - 1, dx + string_width(Debug.debug_line[i]), dy + string_height("Mg"), false);

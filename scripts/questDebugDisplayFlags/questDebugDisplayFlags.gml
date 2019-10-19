@@ -12,7 +12,7 @@ for (var i = 0; i < map_size; ++i)
 	var str = key + " (" + string(value) + ")";
 	
 	draw_set_color(c_black);
-	draw_set_alpha(0.65);
+	draw_set_alpha(image_alpha * 0.65);
 	draw_rectangle(32,
 				   128 + 9 * i - 8,
 				   32 + 256,
@@ -20,7 +20,7 @@ for (var i = 0; i < map_size; ++i)
 				   false);
 	
 	draw_set_color(c_white);
-	draw_set_alpha(1.0);
+	draw_set_alpha(image_alpha * 1.0);
 	draw_text(32,
 			  128 + 9 * i,
 			  str);
