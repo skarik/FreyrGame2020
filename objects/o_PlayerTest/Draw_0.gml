@@ -2,6 +2,13 @@ var dx, dy;
 dx = round(x);
 dy = round(y);
 
+if (Debug.visible)
+{
+	draw_set_color(c_lime);
+	draw_line(x, y - z_height, x, y);
+	draw_circle(x, y, 3, false);
+}
+
 if (!inWater || z_height > 1)
 {
 	depthDrawSelf();
@@ -41,6 +48,7 @@ if (Debug.visible)
 	draw_text(x + 16, y - 32, string(meleeAtkTimer));
 	draw_text(x - 4, y - 48, "z: " + string(z));
 	draw_text(x + 16, y - 48, "z_height: " + string(z_height));
+	draw_text(x - 4, y - 40, "depth: " + string(depth));
 	draw_text(x - 4, y + 8, string(uAxis.value));
 	draw_text(x + 16, y + 8, string(vAxis.value));
 }

@@ -12,7 +12,8 @@
         "d8165ced-479e-45e7-b8f0-3ef6f23ab9b2",
         "ad2d36be-d81f-4fd0-94aa-08ba26708845",
         "121ab2ee-a617-46a9-bd08-ab26f8b3d775",
-        "91a78ace-2967-4010-a11d-b2ea9ae4c8c6"
+        "91a78ace-2967-4010-a11d-b2ea9ae4c8c6",
+        "019583ad-b915-461e-a00f-27580c1f10c7"
     ],
     "filterType": "GMScript",
     "folderName": "Collision 3",

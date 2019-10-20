@@ -9,7 +9,10 @@
         "ca6238b9-a7c1-40e9-8b43-7ce31e9bbb09",
         "55ee7344-8e73-4b3a-826b-64364eedaadd",
         "e6105f0d-806a-482d-bd7f-850d0735a8df",
-        "f20de884-5989-4164-a71b-f1af26db57d0"
+        "f20de884-5989-4164-a71b-f1af26db57d0",
+        "ca34c33c-566e-40a3-90d9-33980ca6aced",
+        "1d0b2088-de85-454b-92b6-faaab5876ccc",
+        "f13a0a44-51c3-4013-a4bd-2bfaf0f7dbb3"
     ],
     "filterType": "GMScript",
     "folderName": "Effect",

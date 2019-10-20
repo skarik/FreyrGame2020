@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "019583ad-b915-461e-a00f-27580c1f10c7",
+            "Value": {
+                "id": "498a3416-cffe-471b-9ce1-61ae1bc86cb9",
+                "resourcePath": "scripts\\platform3_set_z\\platform3_set_z.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "01a3d350-db14-4d2b-8749-7ef2d4a43e6e",
             "Value": {
                 "id": "7f57699c-3c8e-4728-bc63-447d02616586",
@@ -963,6 +971,14 @@
             "Value": {
                 "id": "21d05c5d-a144-4eb8-8495-9e2cb0914f5d",
                 "resourcePath": "scripts\\melonSeedOnUse\\melonSeedOnUse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1d0b2088-de85-454b-92b6-faaab5876ccc",
+            "Value": {
+                "id": "5bc0409d-9874-4e4b-8a0e-57cadf847f71",
+                "resourcePath": "scripts\\vtileGetMaterial\\vtileGetMaterial.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7231,6 +7247,14 @@
             }
         },
         {
+            "Key": "ca34c33c-566e-40a3-90d9-33980ca6aced",
+            "Value": {
+                "id": "a5a05cc1-84d2-4ea8-8334-013517be97ca",
+                "resourcePath": "scripts\\vtileGetAtPosition\\vtileGetAtPosition.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ca6238b9-a7c1-40e9-8b43-7ce31e9bbb09",
             "Value": {
                 "id": "e5dbf3d6-5e47-4ef9-9e2e-9702ba189ab0",
@@ -8567,6 +8591,14 @@
             }
         },
         {
+            "Key": "f13a0a44-51c3-4013-a4bd-2bfaf0f7dbb3",
+            "Value": {
+                "id": "45c69088-1a39-45c2-b5b8-0ce35a1f6c2f",
+                "resourcePath": "scripts\\vtileGetMaterialAtPosition\\vtileGetMaterialAtPosition.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f13b2b75-315c-4f29-8812-dddfda14d426",
             "Value": {
                 "id": "8f2e70b7-3241-4299-94d7-989847112df9",
@@ -9331,6 +9363,7 @@
         "4c513815-010f-4321-8d03-b98232a277ce",
         "121ab2ee-a617-46a9-bd08-ab26f8b3d775",
         "91a78ace-2967-4010-a11d-b2ea9ae4c8c6",
+        "019583ad-b915-461e-a00f-27580c1f10c7",
         "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
         "67c84648-a666-47f5-af6d-6d1d4a127897",
         "f7daba53-3a4b-4e03-aedc-a0168e74564f",
@@ -9418,6 +9451,9 @@
         "55ee7344-8e73-4b3a-826b-64364eedaadd",
         "e6105f0d-806a-482d-bd7f-850d0735a8df",
         "f20de884-5989-4164-a71b-f1af26db57d0",
+        "ca34c33c-566e-40a3-90d9-33980ca6aced",
+        "1d0b2088-de85-454b-92b6-faaab5876ccc",
+        "f13a0a44-51c3-4013-a4bd-2bfaf0f7dbb3",
         "356c07c3-31fc-4724-9e27-e20418a20a9d",
         "01a3d350-db14-4d2b-8749-7ef2d4a43e6e",
         "c0470954-f6a9-4162-b83b-84f199004c3e",

@@ -19,7 +19,7 @@ var tile_elevation = max(
 	col3_internal_tilemap_get_elevation(x1, y2),
 	col3_internal_tilemap_get_elevation(x2, y2));
 
-// Check for all transition zones at the given area
+// Check all elevation zones at the given area
 var max_z = tile_elevation;
 var results = ds_list_create();
 var results_num = collision_rectangle_list(x1, y1, x2, y2, ob_elevationArea, false, true, results, false);
