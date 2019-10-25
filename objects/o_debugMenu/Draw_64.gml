@@ -22,7 +22,7 @@ for (var i = 0; i < Debug.debug_line_count; ++i)
 }
 
 draw_set_alpha(image_alpha);
-draw_set_color( c_red );
+draw_set_color( c_electricity );
 draw_set_halign( fa_left );
 draw_set_valign( fa_top );
 for (var i = 0; i < Debug.debug_line_count; ++i)

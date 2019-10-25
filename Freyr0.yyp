@@ -839,6 +839,14 @@
             }
         },
         {
+            "Key": "1880f226-45e1-4fbe-97df-5d2545a993b6",
+            "Value": {
+                "id": "3a96d23d-590f-40ce-9fe4-6f2da74f97ce",
+                "resourcePath": "views\\1880f226-45e1-4fbe-97df-5d2545a993b6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "18b79b51-5705-4b33-b20d-642a772b34c9",
             "Value": {
                 "id": "357ff69e-f949-4a3b-ac63-0fce7554ef20",
@@ -3396,6 +3404,14 @@
                 "id": "081d72fa-5b55-4b69-bb8b-9644f6eae52f",
                 "resourcePath": "views\\62fda01a-a047-4576-9526-ed35634df0e2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "63118223-c896-4070-8a1a-1948f4083c96",
+            "Value": {
+                "id": "c4ffcfee-07fa-4a1c-aed7-eca1b0041a05",
+                "resourcePath": "scripts\\draw_pie\\draw_pie.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7255,6 +7271,14 @@
             }
         },
         {
+            "Key": "ca614f09-bdb3-498c-a904-05d49ea40110",
+            "Value": {
+                "id": "99861f28-35ef-49c4-9da0-48fa43121630",
+                "resourcePath": "views\\ca614f09-bdb3-498c-a904-05d49ea40110.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ca6238b9-a7c1-40e9-8b43-7ce31e9bbb09",
             "Value": {
                 "id": "e5dbf3d6-5e47-4ef9-9e2e-9702ba189ab0",
@@ -7348,6 +7372,14 @@
                 "id": "5050e590-2ea8-41ff-88a1-107900f5216b",
                 "resourcePath": "sprites\\s_propRuinsPillar2\\s_propRuinsPillar2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ce109e40-5293-4606-9b3b-6c89d8d573d0",
+            "Value": {
+                "id": "364365b5-9039-42b8-9d14-7fc0f878829b",
+                "resourcePath": "objects\\o_debugAiVisualizer\\o_debugAiVisualizer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8023,6 +8055,14 @@
             }
         },
         {
+            "Key": "e0130299-74e7-481f-a581-889d220fcfc1",
+            "Value": {
+                "id": "74afedd5-1b34-4bee-a528-cfeb5178286a",
+                "resourcePath": "views\\e0130299-74e7-481f-a581-889d220fcfc1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e02b8b61-3840-4665-8de5-7ec3350944cd",
             "Value": {
                 "id": "d121cdb0-9066-4998-9a44-3564ef9f7f42",
@@ -8356,6 +8396,14 @@
                 "id": "481aa93d-02fb-40a8-933a-b8bd0ba1d8d6",
                 "resourcePath": "sprites\\s_assetTRuinTile\\s_assetTRuinTile.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e8ecb7a0-1e63-481c-add5-8bacb0987e3a",
+            "Value": {
+                "id": "aa62140c-4645-40ec-8910-c4ac44cec15b",
+                "resourcePath": "views\\e8ecb7a0-1e63-481c-add5-8bacb0987e3a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -9135,6 +9183,14 @@
             }
         },
         {
+            "Key": "ff433783-eea7-4202-b637-d84f970a1b7b",
+            "Value": {
+                "id": "29704f7f-4ba1-4d98-bedf-ac9ba7659459",
+                "resourcePath": "scripts\\duiGetAlphaGlobal\\duiGetAlphaGlobal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ff4718c1-5460-4703-b502-951b8df17766",
             "Value": {
                 "id": "df55fd87-ace9-4ab2-95b6-3d1ce460a5e1",
@@ -9221,6 +9277,7 @@
         "a48ea4a0-20a5-40bc-95b8-a15962795732",
         "56179266-d7d6-4ee1-8be7-cf0dd9d45938",
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
+        "63118223-c896-4070-8a1a-1948f4083c96",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "468f285d-b321-4679-894b-b76382e119d3",
         "24ac4ceb-2490-41d2-9219-f66823e9271c",
@@ -9309,6 +9366,7 @@
         "8f9bb50b-0d6e-44e3-b16c-422d9614f46a",
         "db581aac-0bb5-46e8-98bd-45aeeca3ba49",
         "8f433b14-dd00-4c3b-a5fa-44ae2c64b0a5",
+        "ff433783-eea7-4202-b637-d84f970a1b7b",
         "8ac013f0-1a87-4caa-ae79-eb1180ab1d1a",
         "f2de7ab7-0612-4a31-bfd5-cd1d5d682d92",
         "13451517-122d-495a-b84b-e3f5f7f1c599",

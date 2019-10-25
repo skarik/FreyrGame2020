@@ -101,12 +101,12 @@ m_aiCombat_aggroTimer -= Time.deltaTime;
 if (!pl.isHidden)
 {
 	// do distance check
-	if (point_distance(x, y, pl.x, pl.y) < 192)
+	if (point_distance(x, y, pl.x, pl.y) < m_aiCombat_noticeDistance)
 	{
 		// do visibility angle check
 		var dir = point_direction(x, y, pl.x, pl.y);
 		var angle_dif = angle_difference(dir, facingDirection);
-		if (angle_dif < 45)
+		if (angle_dif < m_aiCombat_noticeAngle)
 		{
 			// do occlusion visibility check
 			if (!collision3_line(x, y, pl.x, pl.y, z, true))
