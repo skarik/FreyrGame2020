@@ -1183,6 +1183,14 @@
             }
         },
         {
+            "Key": "21970815-37d0-488b-b0ef-c3f959fb901c",
+            "Value": {
+                "id": "ed536e3a-8125-4ad6-953c-1323672a5882",
+                "resourcePath": "sounds\\snd_physStepGrass1\\snd_physStepGrass1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "21bc83d3-5177-427f-acb2-fbea66ca2f17",
             "Value": {
                 "id": "83eec7f6-b3a1-490a-9ec8-8c084a8de21e",
@@ -2719,6 +2727,14 @@
             }
         },
         {
+            "Key": "4fcb1fac-ce09-4c12-b4e3-ac5235ac6de8",
+            "Value": {
+                "id": "e443ac21-191e-46be-9be6-8f62532fef84",
+                "resourcePath": "sounds\\snd_physStepDirt2\\snd_physStepDirt2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5038ab4c-b9a6-4386-90fe-5d96c742b006",
             "Value": {
                 "id": "4ecd9b99-2206-4f58-a169-5e611df9468c",
@@ -3348,6 +3364,14 @@
                 "id": "696c7973-87c8-4e98-9585-ee1c623ab487",
                 "resourcePath": "objects\\Screen\\Screen.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "61b0d285-411b-4319-9c54-89854552f4cb",
+            "Value": {
+                "id": "03f48e1c-858a-40a0-b9f9-0b6c6b65619f",
+                "resourcePath": "sounds\\snd_physStepGrass2\\snd_physStepGrass2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5783,6 +5807,14 @@
             }
         },
         {
+            "Key": "a42afb61-3b1b-4b06-9999-92079cfde02f",
+            "Value": {
+                "id": "add0d5ef-0580-43db-be96-f9520285eef4",
+                "resourcePath": "sounds\\snd_physStepGrass3\\snd_physStepGrass3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "a4366471-c6bb-454e-9dd2-f573e4b66005",
             "Value": {
                 "id": "8489a2f8-2ca1-44f0-91c0-a94c23a493df",
@@ -6636,6 +6668,14 @@
                 "id": "2c4bd121-4b75-4429-995a-685c99ffc7cd",
                 "resourcePath": "scripts\\cutsceneFree\\cutsceneFree.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b7a2d1c1-ee2d-479b-a820-9f7e828d1070",
+            "Value": {
+                "id": "1763845d-c18e-4f2a-97c2-332d6518b840",
+                "resourcePath": "sounds\\snd_physStepDirt1\\snd_physStepDirt1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
