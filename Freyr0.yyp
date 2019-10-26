@@ -2079,6 +2079,14 @@
             }
         },
         {
+            "Key": "3bf36e13-e9bf-498b-b0cd-1c7ab4d922b2",
+            "Value": {
+                "id": "e826015f-2b44-4a62-9644-21aa8cc912c6",
+                "resourcePath": "sounds\\snd_physLandSand1\\snd_physLandSand1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "3c4ad268-0d0c-4ef8-a0f1-72d8fbb6d218",
             "Value": {
                 "id": "175076a4-3d1c-4efd-9cfd-8319880b8499",
@@ -2967,6 +2975,14 @@
             }
         },
         {
+            "Key": "56692e26-d3cc-4119-bffa-4bb127aa16ad",
+            "Value": {
+                "id": "d3e6a16e-2c8b-4b38-8b00-aeba635f64da",
+                "resourcePath": "sounds\\snd_physStepSand2\\snd_physStepSand2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "56a84241-7e72-4cfe-8345-7b8986e62560",
             "Value": {
                 "id": "bd6a1354-c6e6-4582-92d9-329c44507c4b",
@@ -3612,6 +3628,14 @@
                 "id": "e3959edc-2f75-495a-8b63-6435c14519be",
                 "resourcePath": "sprites\\s_charLibrarianBig\\s_charLibrarianBig.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "68dbb4a5-2080-4811-9dbc-ceb9a1999010",
+            "Value": {
+                "id": "d27910c8-0a6c-4438-bac8-7343cfed9998",
+                "resourcePath": "sounds\\snd_physStepWater2\\snd_physStepWater2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5212,6 +5236,14 @@
                 "id": "7f8c315c-41b1-457c-a43b-3138c5b8387f",
                 "resourcePath": "datafiles_yy\\audio\\oasis_11_piano_flute.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "92f62474-1f3d-4cbf-b91d-0925f1619ee1",
+            "Value": {
+                "id": "38872bbb-8c3a-4941-a194-3659d301669f",
+                "resourcePath": "sounds\\snd_physLandWater1\\snd_physLandWater1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -8167,6 +8199,14 @@
             }
         },
         {
+            "Key": "e1562b19-c837-4f5e-9518-5a44f5ca1dc7",
+            "Value": {
+                "id": "00d44029-46e9-4701-9f6d-3e9652344b63",
+                "resourcePath": "sounds\\snd_physStepSand3\\snd_physStepSand3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e1a419d9-7ac2-4324-ac8c-9195259dfe8f",
             "Value": {
                 "id": "2b1671b3-8b10-47f3-944e-53a08ed86dec",
@@ -8679,6 +8719,14 @@
             }
         },
         {
+            "Key": "f0a80e06-3c16-437a-8f78-47eaed48a746",
+            "Value": {
+                "id": "bab5b642-21c2-48a8-b049-9ea49797f999",
+                "resourcePath": "sounds\\snd_physStepSand1\\snd_physStepSand1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "f13a0a44-51c3-4013-a4bd-2bfaf0f7dbb3",
             "Value": {
                 "id": "45c69088-1a39-45c2-b5b8-0ce35a1f6c2f",
@@ -9132,6 +9180,14 @@
                 "id": "3227e26d-1bf6-4d74-b95f-70346398b051",
                 "resourcePath": "scripts\\particleZMotionUpdate\\particleZMotionUpdate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fc35f74a-fcfe-49c5-8352-914c85367cb4",
+            "Value": {
+                "id": "69950f7b-6419-490e-940d-1bf675c715a3",
+                "resourcePath": "sounds\\snd_physStepWater1\\snd_physStepWater1.yy",
+                "resourceType": "GMSound"
             }
         },
         {

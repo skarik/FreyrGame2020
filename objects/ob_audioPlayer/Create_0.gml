@@ -3,10 +3,12 @@ priority = 5;
 
 falloff_start = 100;
 falloff_end = 1000;
-falloff_factor = 1;
+falloff_factor = 1.0;
 
 gain = 1.0;
 pitch = 1.0;
+
+parent = null;
 
 // System:
 m_sound = null;

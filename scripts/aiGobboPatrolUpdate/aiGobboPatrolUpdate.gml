@@ -105,7 +105,7 @@ if (!pl.isHidden)
 	{
 		// do visibility angle check
 		var dir = point_direction(x, y, pl.x, pl.y);
-		var angle_dif = angle_difference(dir, facingDirection);
+		var angle_dif = abs(angle_difference(dir, facingDirection));
 		if (angle_dif < m_aiCombat_noticeAngle)
 		{
 			// do occlusion visibility check
