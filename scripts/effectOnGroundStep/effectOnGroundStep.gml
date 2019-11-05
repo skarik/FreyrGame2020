@@ -2,7 +2,7 @@ var tx = argument0;
 var ty = argument1;
 var tdir = argument2;
 
-var poof, footstep, fader;
+var poof, footstep, fader, sound_hit;
 
 // Skip for certain types of NPCs
 if (object_index == o_chCaveSlug
@@ -44,6 +44,19 @@ if (ground_material == kTileMaterial_Sand)
 	footstep.x += random_range(-4, +4);
 	footstep.y += random_range(-2, +2);
 	footstep.image_angle = tdir;
+	
+	// make sound
+	sound_hit = sound_play_at(
+		random_range(x - 4, x + 4),
+		random_range(y - 4, y + 4),
+		choose(snd_physStepSand1, snd_physStepSand2, snd_physStepSand3)
+		);
+	sound_hit.pitch = random_range(0.9, 1.1);
+	sound_hit.gain = 0.8;
+	sound_hit.falloff_start = 20;
+	sound_hit.falloff_end = 800;
+	sound_hit.falloff_factor = 1;
+	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Stone)
 {
@@ -58,6 +71,19 @@ else if (ground_material == kTileMaterial_Stone)
 		poof.m_size = 6.0;
 		poof.image_blend = c_gray;
 	}
+	
+	// make sound
+	sound_hit = sound_play_at(
+		random_range(x - 4, x + 4),
+		random_range(y - 4, y + 4),
+		choose(snd_physStepDirt1, snd_physStepDirt2)
+		);
+	sound_hit.pitch = random_range(0.7, 0.8);
+	sound_hit.gain = 0.7;
+	sound_hit.falloff_start = 20;
+	sound_hit.falloff_end = 800;
+	sound_hit.falloff_factor = 1;
+	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Water)
 {
@@ -69,4 +95,32 @@ else if (ground_material == kTileMaterial_Water)
 		fader.image_xscale = 1 / 64.0;
 		fader.image_yscale = fader.image_xscale * 0.75;
 	}
+	
+	// make sound
+	sound_hit = sound_play_at(
+		random_range(x - 4, x + 4),
+		random_range(y - 4, y + 4),
+		choose(snd_physStepWater1, snd_physStepWater2)
+		);
+	sound_hit.pitch = random_range(0.9, 1.1);
+	sound_hit.gain = 0.8;
+	sound_hit.falloff_start = 20;
+	sound_hit.falloff_end = 800;
+	sound_hit.falloff_factor = 1;
+	sound_hit.parent = id;
+}
+else if (ground_material == kTileMaterial_Grass)
+{
+	// make sound
+	sound_hit = sound_play_at(
+		random_range(x - 4, x + 4),
+		random_range(y - 4, y + 4),
+		choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
+		);
+	sound_hit.pitch = random_range(0.95, 1.2);
+	sound_hit.gain = random_range(0.7, 0.9) * 0.6;
+	sound_hit.falloff_start = 20;
+	sound_hit.falloff_end = 800;
+	sound_hit.falloff_factor = 1;
+	sound_hit.parent = id;
 }

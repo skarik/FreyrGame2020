@@ -839,6 +839,14 @@
             }
         },
         {
+            "Key": "1880f226-45e1-4fbe-97df-5d2545a993b6",
+            "Value": {
+                "id": "3a96d23d-590f-40ce-9fe4-6f2da74f97ce",
+                "resourcePath": "views\\1880f226-45e1-4fbe-97df-5d2545a993b6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "18b79b51-5705-4b33-b20d-642a772b34c9",
             "Value": {
                 "id": "357ff69e-f949-4a3b-ac63-0fce7554ef20",
@@ -1172,6 +1180,14 @@
                 "id": "6109a3d2-5577-44a0-bcfa-493f9af8a113",
                 "resourcePath": "objects\\o_e32x32_e0\\o_e32x32_e0.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "21970815-37d0-488b-b0ef-c3f959fb901c",
+            "Value": {
+                "id": "ed536e3a-8125-4ad6-953c-1323672a5882",
+                "resourcePath": "sounds\\snd_physStepGrass1\\snd_physStepGrass1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2063,6 +2079,14 @@
             }
         },
         {
+            "Key": "3bf36e13-e9bf-498b-b0cd-1c7ab4d922b2",
+            "Value": {
+                "id": "e826015f-2b44-4a62-9644-21aa8cc912c6",
+                "resourcePath": "sounds\\snd_physLandSand1\\snd_physLandSand1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "3c4ad268-0d0c-4ef8-a0f1-72d8fbb6d218",
             "Value": {
                 "id": "175076a4-3d1c-4efd-9cfd-8319880b8499",
@@ -2711,6 +2735,14 @@
             }
         },
         {
+            "Key": "4fcb1fac-ce09-4c12-b4e3-ac5235ac6de8",
+            "Value": {
+                "id": "e443ac21-191e-46be-9be6-8f62532fef84",
+                "resourcePath": "sounds\\snd_physStepDirt2\\snd_physStepDirt2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5038ab4c-b9a6-4386-90fe-5d96c742b006",
             "Value": {
                 "id": "4ecd9b99-2206-4f58-a169-5e611df9468c",
@@ -2940,6 +2972,14 @@
                 "id": "da0958e1-cd2b-4060-90b4-1d501041d2ba",
                 "resourcePath": "sprites\\s_charLibrarianBigLookUp\\s_charLibrarianBigLookUp.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "56692e26-d3cc-4119-bffa-4bb127aa16ad",
+            "Value": {
+                "id": "d3e6a16e-2c8b-4b38-8b00-aeba635f64da",
+                "resourcePath": "sounds\\snd_physStepSand2\\snd_physStepSand2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3343,6 +3383,14 @@
             }
         },
         {
+            "Key": "61b0d285-411b-4319-9c54-89854552f4cb",
+            "Value": {
+                "id": "03f48e1c-858a-40a0-b9f9-0b6c6b65619f",
+                "resourcePath": "sounds\\snd_physStepGrass2\\snd_physStepGrass2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "61da62d4-c5a7-443b-bd8f-7b339f27cb59",
             "Value": {
                 "id": "8261d056-08e2-46ec-85b1-8c9f84ffbf83",
@@ -3396,6 +3444,14 @@
                 "id": "081d72fa-5b55-4b69-bb8b-9644f6eae52f",
                 "resourcePath": "views\\62fda01a-a047-4576-9526-ed35634df0e2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "63118223-c896-4070-8a1a-1948f4083c96",
+            "Value": {
+                "id": "c4ffcfee-07fa-4a1c-aed7-eca1b0041a05",
+                "resourcePath": "scripts\\draw_pie\\draw_pie.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3572,6 +3628,14 @@
                 "id": "e3959edc-2f75-495a-8b63-6435c14519be",
                 "resourcePath": "sprites\\s_charLibrarianBig\\s_charLibrarianBig.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "68dbb4a5-2080-4811-9dbc-ceb9a1999010",
+            "Value": {
+                "id": "d27910c8-0a6c-4438-bac8-7343cfed9998",
+                "resourcePath": "sounds\\snd_physStepWater2\\snd_physStepWater2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5175,6 +5239,14 @@
             }
         },
         {
+            "Key": "92f62474-1f3d-4cbf-b91d-0925f1619ee1",
+            "Value": {
+                "id": "38872bbb-8c3a-4941-a194-3659d301669f",
+                "resourcePath": "sounds\\snd_physLandWater1\\snd_physLandWater1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "930ee58e-d0dd-4560-95a0-0908ec2ac30d",
             "Value": {
                 "id": "821ebc68-4846-40b8-9d81-24f9f9527681",
@@ -5764,6 +5836,14 @@
                 "id": "d34a9f87-4676-461c-b878-ac1624caab99",
                 "resourcePath": "objects\\o_fxBloodHitRed\\o_fxBloodHitRed.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a42afb61-3b1b-4b06-9999-92079cfde02f",
+            "Value": {
+                "id": "add0d5ef-0580-43db-be96-f9520285eef4",
+                "resourcePath": "sounds\\snd_physStepGrass3\\snd_physStepGrass3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -6623,6 +6703,14 @@
             }
         },
         {
+            "Key": "b7a2d1c1-ee2d-479b-a820-9f7e828d1070",
+            "Value": {
+                "id": "1763845d-c18e-4f2a-97c2-332d6518b840",
+                "resourcePath": "sounds\\snd_physStepDirt1\\snd_physStepDirt1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b7cba433-dab3-42a1-97d5-1895dd0d9044",
             "Value": {
                 "id": "cfb1f203-9200-4ebc-ab19-cc63e3b9a659",
@@ -7255,6 +7343,14 @@
             }
         },
         {
+            "Key": "ca614f09-bdb3-498c-a904-05d49ea40110",
+            "Value": {
+                "id": "99861f28-35ef-49c4-9da0-48fa43121630",
+                "resourcePath": "views\\ca614f09-bdb3-498c-a904-05d49ea40110.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ca6238b9-a7c1-40e9-8b43-7ce31e9bbb09",
             "Value": {
                 "id": "e5dbf3d6-5e47-4ef9-9e2e-9702ba189ab0",
@@ -7348,6 +7444,14 @@
                 "id": "5050e590-2ea8-41ff-88a1-107900f5216b",
                 "resourcePath": "sprites\\s_propRuinsPillar2\\s_propRuinsPillar2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ce109e40-5293-4606-9b3b-6c89d8d573d0",
+            "Value": {
+                "id": "364365b5-9039-42b8-9d14-7fc0f878829b",
+                "resourcePath": "objects\\o_debugAiVisualizer\\o_debugAiVisualizer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8023,6 +8127,14 @@
             }
         },
         {
+            "Key": "e0130299-74e7-481f-a581-889d220fcfc1",
+            "Value": {
+                "id": "74afedd5-1b34-4bee-a528-cfeb5178286a",
+                "resourcePath": "views\\e0130299-74e7-481f-a581-889d220fcfc1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e02b8b61-3840-4665-8de5-7ec3350944cd",
             "Value": {
                 "id": "d121cdb0-9066-4998-9a44-3564ef9f7f42",
@@ -8084,6 +8196,14 @@
                 "id": "cdc31513-5130-4937-8c79-7c65afb9bc2e",
                 "resourcePath": "sprites\\sui_astrolabeSeason\\sui_astrolabeSeason.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e1562b19-c837-4f5e-9518-5a44f5ca1dc7",
+            "Value": {
+                "id": "00d44029-46e9-4701-9f6d-3e9652344b63",
+                "resourcePath": "sounds\\snd_physStepSand3\\snd_physStepSand3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -8359,6 +8479,14 @@
             }
         },
         {
+            "Key": "e8ecb7a0-1e63-481c-add5-8bacb0987e3a",
+            "Value": {
+                "id": "aa62140c-4645-40ec-8910-c4ac44cec15b",
+                "resourcePath": "views\\e8ecb7a0-1e63-481c-add5-8bacb0987e3a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e8f36a73-6c56-41eb-b42f-c8f7813ed878",
             "Value": {
                 "id": "5c88b457-bdba-4c56-b001-2155d118bad1",
@@ -8588,6 +8716,14 @@
                 "id": "56f42af6-b0f9-4a9e-b04c-1a00175de989",
                 "resourcePath": "scripts\\effectGetImpactEffect\\effectGetImpactEffect.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f0a80e06-3c16-437a-8f78-47eaed48a746",
+            "Value": {
+                "id": "bab5b642-21c2-48a8-b049-9ea49797f999",
+                "resourcePath": "sounds\\snd_physStepSand1\\snd_physStepSand1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -9047,6 +9183,14 @@
             }
         },
         {
+            "Key": "fc35f74a-fcfe-49c5-8352-914c85367cb4",
+            "Value": {
+                "id": "69950f7b-6419-490e-940d-1bf675c715a3",
+                "resourcePath": "sounds\\snd_physStepWater1\\snd_physStepWater1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
             "Value": {
                 "id": "c5815035-556c-432f-9752-cf9701481baa",
@@ -9132,6 +9276,14 @@
                 "id": "34f9706b-fe35-4c33-af6a-94633b580be7",
                 "resourcePath": "sprites\\sc_16x16char\\sc_16x16char.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ff433783-eea7-4202-b637-d84f970a1b7b",
+            "Value": {
+                "id": "29704f7f-4ba1-4d98-bedf-ac9ba7659459",
+                "resourcePath": "scripts\\duiGetAlphaGlobal\\duiGetAlphaGlobal.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -9221,6 +9373,7 @@
         "a48ea4a0-20a5-40bc-95b8-a15962795732",
         "56179266-d7d6-4ee1-8be7-cf0dd9d45938",
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
+        "63118223-c896-4070-8a1a-1948f4083c96",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "468f285d-b321-4679-894b-b76382e119d3",
         "24ac4ceb-2490-41d2-9219-f66823e9271c",
@@ -9309,6 +9462,7 @@
         "8f9bb50b-0d6e-44e3-b16c-422d9614f46a",
         "db581aac-0bb5-46e8-98bd-45aeeca3ba49",
         "8f433b14-dd00-4c3b-a5fa-44ae2c64b0a5",
+        "ff433783-eea7-4202-b637-d84f970a1b7b",
         "8ac013f0-1a87-4caa-ae79-eb1180ab1d1a",
         "f2de7ab7-0612-4a31-bfd5-cd1d5d682d92",
         "13451517-122d-495a-b84b-e3f5f7f1c599",
