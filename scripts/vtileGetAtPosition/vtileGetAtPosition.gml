@@ -21,7 +21,8 @@ for (var i = 0; i < array_length_1d(all_layers); ++i)
 		//var tile_id = tile & 0xFF;
 
 		//return tile_id + offset;
-		return tile_get_index(tile) + offset; // slow, probably
+		if (tile != 0)
+			return tile_get_index(tile) + offset; // slow, probably
 	}
 }
 

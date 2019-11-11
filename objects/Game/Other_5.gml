@@ -1,3 +1,3 @@
-/// @description Reset collision storage
+/// @description Reset all states
 
-col3_internal_query_reset();
+roomPrepassCleanup();

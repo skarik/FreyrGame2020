@@ -1,4 +1,3 @@
-/// @description Set up all doodads
+/// @description Set up the room
 
-doodadSetupOnRoomStart();
-col3_internal_query_collision_maps();
+roomPrepassPrepare();

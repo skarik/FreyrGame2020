@@ -8,4 +8,5 @@ global._cutscene_main = null;
 cutsceneBackendLoad();
 
 // Initial state of collision storage
-col3_internal_query_reset();
+//col3_internal_query_reset();
+roomPrepassCleanup();

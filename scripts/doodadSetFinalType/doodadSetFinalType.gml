@@ -21,6 +21,20 @@ if (doodad_type == ob_doodad)
 			doodad_type = (doodad_type == ob_doodad) ? ob_doodadSpecialShadow : doodad_type;
 			break;
 			
+		case s_propWWoodPole0:
+			doodad_type = ob_doodadInWater;
+			break;
+			
+		case s_propWFlower1:
+		case s_propWPlant1:
+		case s_propWWood0:
+			doodad_type = ob_doodadInWaterWobble;
+			break;
+			
+		case s_propWPlant2:
+			doodad_type = ob_doodadInWater;
+			break;
+			
 		default:
 			break;
 	}

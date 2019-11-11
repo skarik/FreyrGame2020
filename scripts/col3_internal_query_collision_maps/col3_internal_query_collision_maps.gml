@@ -1,6 +1,5 @@
 if (!global.collidable_layers_ready)
 {
-	// set up all the collision layers too
 	var all_layers = layer_get_all();
 
 	global.collidable_layers = [];
