@@ -32,6 +32,7 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 			doodad.collider = null;
 			doodad.light = null;
 			doodad.emissive = null;
+			doodad.source_layer = targetLayer;
 		
 		doodadSetGlow(doodad);
 		doodadSetShadow(doodad);
@@ -50,6 +51,7 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 				collider.image_blend = doodad.image_blend;
 				collider.image_alpha = doodad.image_alpha;
 				collider.visible = false;
+				collider.source_layer = targetLayer;
 			doodad.collider = collider;
 		}
 			

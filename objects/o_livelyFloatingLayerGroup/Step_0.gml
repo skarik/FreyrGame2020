@@ -19,3 +19,10 @@ for (var i = 0; i < layer_count; ++i)
 			 * (minimum_depth - layersMinDepth) + minimum_depth);*/
 	}
 }
+
+var doodad_count = array_length_1d(doodads);
+for (var i = 0; i < doodad_count; ++i)
+{
+	var current_doodad = doodads[i];
+	current_doodad.y = doodadsY[i] + y_position_offset;
+}

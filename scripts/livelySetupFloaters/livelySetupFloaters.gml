@@ -1,9 +1,14 @@
+#macro kLayerYProcessed 101
+
 var layers_all = layer_get_all();
 var layer_count = array_length_1d(layers_all);
 
 for (var i = 0; i < layer_count; ++i)
 {
 	var current_layer = layers_all[i];
+	
+	if (layer_get_y(current_layer) == kLayerYProcessed)
+		continue;
 	
 	//debugOut(layer_get_name(current_layer));
 	// Does this layer's name have "float" in it?
@@ -54,9 +59,36 @@ for (var i = 0; i < layer_count; ++i)
 					layersMaxDepth = max(layersDepth[next_index], layersMaxDepth);
 					layersMinDepth = max(layersDepth[next_index], layersMinDepth);
 				}
+				
+				// If the layer is a doodad layer...
+				if (string_pos("doodad", target_layer_name))
+				{
+					// Find all doodads with matching name
+					with (ob_doodad)
+					{
+						if (source_layer == target_layer)
+						{
+							var next_index = array_length_1d(floater_manager.doodads);
+							floater_manager.doodads[next_index] = id;
+							floater_manager.doodadsY[next_index] = y;
+						}
+					}
+				}
 			}
+			
+			// Replace layer name now
+			//layer_
+			layer_y(target_layer, kLayerYProcessed);
 		}
 		
 		// Onto the next layer group!
 	}
+}
+
+// Reset all the Y-fucking
+for (var i = 0; i < layer_count; ++i)
+{
+	var current_layer = layers_all[i];
+	if (layer_get_y(current_layer) == kLayerYProcessed)
+		layer_y(current_layer, 0);
 }
