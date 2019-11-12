@@ -1,5 +1,5 @@
 // Perform area checks
-inWater = areaInWater(x, y, z);
+inWater = areaInWater(x, y, z + z_height);
 // Perform usage checks
 isBusyInteracting = m_isTilling;
 if (exists(ob_CtsTalker))

@@ -6,7 +6,7 @@ var poof, footstep, fader, sound_hit;
 //
 // Select the proper material
 var ground_material = 0;
-if (!areaInWater(x, y, z))
+if (!areaInWater(x, y, z + z_height))
 {
 	ground_material = vtileGetMaterialAtPosition(x, y);	
 }
