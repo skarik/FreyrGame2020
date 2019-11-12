@@ -40,3 +40,10 @@ with (o_ptcFootstep)
 		}
 	}
 }
+
+var linstance_count = array_length_1d(instances);
+for (var i = 0; i < linstance_count; ++i)
+{
+	var current_instance = instances[i];
+	current_instance.y = instancesY[i] + y_position_offset;
+}

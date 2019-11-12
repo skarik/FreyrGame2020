@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "0275b2ba-8190-45a2-9914-19f30635881a",
+            "Value": {
+                "id": "5855979a-84ea-4fdf-a5b1-71c4dcac8afe",
+                "resourcePath": "objects\\o_doodadMithraBridgeEndpoint\\o_doodadMithraBridgeEndpoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "027d0818-fc7e-4ec8-89f5-5f219725e63e",
             "Value": {
                 "id": "0d4393f6-543b-417d-a273-10144f153ba1",
@@ -1372,6 +1380,14 @@
                 "id": "5c48833a-a570-4596-a495-473bf94cbc33",
                 "resourcePath": "shaders\\sh_bloomDrop\\sh_bloomDrop.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "25f4c336-1ea3-47a0-92ca-12a42209fea6",
+            "Value": {
+                "id": "b12a1261-ff9a-4387-950d-cef3c96dbe13",
+                "resourcePath": "objects\\o_doodadMithraBridgeStart\\o_doodadMithraBridgeStart.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7460,6 +7476,14 @@
                 "id": "659ec131-e797-4cec-8822-322c80278eb8",
                 "resourcePath": "views\\c7183be6-0a81-4223-a3df-d2696338d633.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c780047d-856a-4043-a020-2ed7f760f40c",
+            "Value": {
+                "id": "dda4c7ee-ab23-4a8b-9fea-88be891b1e83",
+                "resourcePath": "sprites\\s_propMithraBridge1\\s_propMithraBridge1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

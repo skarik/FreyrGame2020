@@ -89,6 +89,13 @@ for (var i = 0; i < layer_count; ++i)
 							var next_index = array_length_1d(floater_manager.elevationSources);
 							floater_manager.elevationSources[next_index] = instance;
 						}
+						else if (instance.object_index == o_doodadMithraBridgeEndpoint
+							|| instance.object_index == o_doodadMithraBridgeEndpoint)
+						{
+							var next_index = array_length_1d(floater_manager.instances);
+							floater_manager.instances[next_index] = instance;
+							floater_manager.instancesY[next_index] = instance.y;
+						}
 					}
 				}
 			}
