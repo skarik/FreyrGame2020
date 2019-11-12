@@ -9,7 +9,12 @@ draw_set_font(f_04b03);
 // Draw helper 
 draw_set_halign( fa_left );
 draw_set_valign( fa_top );
-draw_text( 10,10, string_hash_to_newline("Press tilde (`) to toggle this menu."));
+draw_text( 10,10, "Press tilde (`) to toggle this menu.");
+
+// draw more helpers
+draw_text( 10, 24, "(F5) Screenshot");
+draw_text( 10, 32, "(F11) Capture GIF");
+draw_text( 10, 40, "(F3) Frame limiter");
 
 // Draw the debug info
 draw_set_color( c_black );

@@ -36,6 +36,20 @@
             "value": "0",
             "varName": "z",
             "varType": 0
+        },
+        {
+            "id": "f1963797-a6b0-49f9-83a8-fd48824e6af2",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "ignore_below",
+            "varType": 3
         }
     ],
     "solid": false,

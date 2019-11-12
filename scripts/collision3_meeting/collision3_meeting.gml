@@ -130,7 +130,7 @@ var result_tile = max(
 	col3_internal_tilemap_get_elevation(x1, y2),
 	col3_internal_tilemap_get_elevation(x2, y2)); // hack relies on invalid elevation being super low
 
-// Check for all transition zones at the given area (slow)
+// Check for all elevation zones at the given area (slow)
 var results = ds_list_create();
 var results_num = collision_rectangle_list(x1, y1, x2, y2, ob_elevationArea, false, true, results, false);
 // Find the one with the highest z
@@ -138,6 +138,8 @@ var area_z_max = result_tile;
 for (var i = 0; i < results_num; ++i)
 {
 	var area_z = results[|i].z;
+	if (results[|i].ignore_below && check_z < area_z)
+		continue;
 	area_z_max = max(area_z_max, area_z);
 }
 // Check against the highest Z

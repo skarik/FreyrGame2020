@@ -7383,6 +7383,14 @@
             }
         },
         {
+            "Key": "c626b703-15c8-4f70-8151-70e88103e44a",
+            "Value": {
+                "id": "a6ac08cf-3abd-449e-aabd-9c0c39b73100",
+                "resourcePath": "objects\\o_e32x32_e32_nobelow\\o_e32x32_e32_nobelow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c628d3a7-7dab-4cd9-91d0-dffb5f30679c",
             "Value": {
                 "id": "4a61c4f1-bba4-44f3-a427-d2662b92a04e",
