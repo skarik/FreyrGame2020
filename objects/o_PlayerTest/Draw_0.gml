@@ -47,7 +47,7 @@ if (Debug.visible)
 	draw_text(x - 4, y - 32, string(meleeAtkCurrent));
 	draw_text(x + 16, y - 32, string(meleeAtkTimer));
 	draw_text(x - 4, y - 48, "z: " + string(z));
-	draw_text(x + 16, y - 48, "z_height: " + string(z_height));
+	draw_text(x + 24, y - 48, "z_height: " + string(z_height));
 	draw_text(x - 4, y - 40, "depth: " + string(depth));
 	draw_text(x - 4, y + 8, string(uAxis.value));
 	draw_text(x + 16, y + 8, string(vAxis.value));

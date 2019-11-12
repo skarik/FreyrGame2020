@@ -17,7 +17,7 @@ var results_num = collision_point_list(check_x, check_y, ob_elevationArea, false
 for (var i = 0; i < results_num; ++i)
 {
 	var area_z = results[|i].z;
-	if (results[|i].ignore_below && check_z < area_z)
+	if (results[|i].ignore_below && check_z < area_z - 6)
 		continue;
 	max_z = max(max_z, area_z);
 }

@@ -1,10 +1,25 @@
 // Update the elevation if on the ground
 if (onGround)
 {
-	//if (place_meeting(x, y, ob_elevationBlendArea))
+	// Check transition
 	if (collision3_transition_meeting(x, y))
 	{
 		 z = collision3_get_highest_meeting(x, y, z);
+	}
+	// Check stairs
+	else
+	{
+		var found_z = collision3_get_highest_meeting(x, y, z);
+		// If step is close enough, automatically move.
+		if (abs(z - found_z) < 6)
+		{
+			// Do y-offset based on horizontal motion
+			var verticalMotion = saturate(abs(xspeed / (yspeed + 1.0)) / kMoveSpeed);
+			y += verticalMotion * (z - found_z);
+			
+			// Set new Z now
+			z = found_z;
+		}
 	}
 	// Check if we should be falling
 	if (z_height > 1.0)

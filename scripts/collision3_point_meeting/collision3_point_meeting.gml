@@ -82,6 +82,8 @@ var area_z_max = -1024;
 for (var i = 0; i < results_num; ++i)
 {
 	var area_z = results[|i].z;
+	if (results[|i].ignore_below && check_z < area_z - 6)
+		continue;
 	area_z_max = max(area_z_max, area_z);
 }
 // Loop through all of them to check collision

@@ -25,4 +25,12 @@ for (var i = 0; i < m_plankCount; ++i)
 	m_zones[i].x = m_planks[i].x;
 	m_zones[i].y = m_planks[i].y;
 	platform3_set_z(m_zones[i], round(lerp(z, m_bridgeTarget.z, plank_t)));
+	
+	// update the visuals' depth
+	m_planks[i].z = m_zones[i].z;
+	with (m_planks[i])
+	{
+		z_height = 0;
+		depthUpdate();
+	}
 }

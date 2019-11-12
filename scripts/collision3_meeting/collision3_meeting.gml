@@ -138,7 +138,7 @@ var area_z_max = result_tile;
 for (var i = 0; i < results_num; ++i)
 {
 	var area_z = results[|i].z;
-	if (results[|i].ignore_below && check_z < area_z)
+	if (results[|i].ignore_below && check_z < area_z - 6)
 		continue;
 	area_z_max = max(area_z_max, area_z);
 }
