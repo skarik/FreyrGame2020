@@ -1,5 +1,5 @@
 // Perform area checks
-inWater = areaInWater(x, y);
+inWater = areaInWater(x, y, z);
 
 var l_canMove = canMove && !m_isDead && !m_isStunned;// && !isBusyInteracting && !m_usingInventory;
 

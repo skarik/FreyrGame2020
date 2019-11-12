@@ -26,3 +26,17 @@ for (var i = 0; i < doodad_count; ++i)
 	var current_doodad = doodads[i];
 	current_doodad.y = doodadsY[i] + y_position_offset;
 }
+
+// Handle other effects
+var elevation_count = array_length_1d(elevationSources);
+var lively = id;
+with (o_ptcFootstep)
+{	// todo: cache footsteps
+	for (var i = 0; i < elevation_count; ++i)
+	{
+		if (place_meeting(x, y, lively.elevationSources[i]))
+		{
+			y = ystart + y_position_offset;
+		}
+	}
+}

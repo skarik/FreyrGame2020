@@ -1,6 +1,6 @@
 // Update checks
 //_playerMotionCommonChecks();
-inWater = areaInWater(x, y);
+inWater = areaInWater(x, y, z);
 
 // Set up the move speed
 var l_moveSpeed = kMoveSpeed;

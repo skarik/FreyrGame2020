@@ -13,7 +13,7 @@ if (object_index == o_chCaveSlug
 //
 // Select the proper material
 var ground_material = 0;
-if (!areaInWater(x, y))
+if (!areaInWater(x, y, z))
 {
 	ground_material = vtileGetMaterialAtPosition(x, y);	
 }
@@ -94,6 +94,8 @@ else if (ground_material == kTileMaterial_Water)
 		fader.y += random_range(-1, +1);
 		fader.image_xscale = 1 / 64.0;
 		fader.image_yscale = fader.image_xscale * 0.75;
+		fader.xspeed = xspeed * 0.2;
+		fader.yspeed = yspeed * 0.2;
 	}
 	
 	// make sound

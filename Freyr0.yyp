@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "01541d16-6bd8-4f12-8da4-65d0e9977a6b",
+            "Value": {
+                "id": "47d4a4c5-9150-451e-9ed7-b164cc589701",
+                "resourcePath": "scripts\\area3_internal_tilemap_get_water_height\\area3_internal_tilemap_get_water_height.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0187aa55-3265-4f4e-a3ab-94933a30f548",
             "Value": {
                 "id": "2be55d97-9206-4475-84be-9dffc5cad109",
@@ -1047,6 +1055,14 @@
             }
         },
         {
+            "Key": "1db0bf3f-398f-4e68-a745-986353802891",
+            "Value": {
+                "id": "52e0ecb6-b353-43f1-a2ac-0d8852b36287",
+                "resourcePath": "sprites\\s_propMithraStoneBridgeL0\\s_propMithraStoneBridgeL0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1dcd64d2-4b18-4872-8659-8dccbb978594",
             "Value": {
                 "id": "f82720ee-81ff-477f-86e8-0ca0d42fdb14",
@@ -1356,6 +1372,14 @@
                 "id": "5c48833a-a570-4596-a495-473bf94cbc33",
                 "resourcePath": "shaders\\sh_bloomDrop\\sh_bloomDrop.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "26868dfe-8568-4f3e-a1ea-b1205fdb9663",
+            "Value": {
+                "id": "3fed3444-3091-4f0c-8e84-d8514cb9de5e",
+                "resourcePath": "sprites\\s_propMithraStoneBridgeT0\\s_propMithraStoneBridgeT0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1884,6 +1908,14 @@
                 "id": "783e8646-b054-4ff1-9841-c04c159d170d",
                 "resourcePath": "objects\\o_cts00_FeatherDrop\\o_cts00_FeatherDrop.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3204d686-cc99-4983-b070-b13ecbfcf42e",
+            "Value": {
+                "id": "3137421a-05ff-41f5-bca3-d420053e326c",
+                "resourcePath": "scripts\\effectOnGroundStepContinuous\\effectOnGroundStepContinuous.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7695,6 +7727,14 @@
             }
         },
         {
+            "Key": "cf60c59a-1e98-444b-8aa3-afbe87fffb27",
+            "Value": {
+                "id": "e4b3039c-da72-4ca9-a79c-ae203468c6ce",
+                "resourcePath": "objects\\o_e32x32_eN32_nobelow\\o_e32x32_eN32_nobelow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d0013833-85bc-4327-b83e-936197178858",
             "Value": {
                 "id": "8b4f6fa0-b553-4dee-b16d-a36c1f89845f",
@@ -9800,6 +9840,7 @@
         "27a1aec8-202c-413c-a887-16531e5425ff",
         "4c513815-010f-4321-8d03-b98232a277ce",
         "1bc5b016-d8d7-4c95-8d92-c662fcd8548e",
+        "01541d16-6bd8-4f12-8da4-65d0e9977a6b",
         "d9df770c-9ae1-4d32-8a43-ef9f73762458",
         "45b7713f-f55f-4b1c-909c-a38eecc5eab4",
         "121ab2ee-a617-46a9-bd08-ab26f8b3d775",
@@ -9892,6 +9933,7 @@
         "55ee7344-8e73-4b3a-826b-64364eedaadd",
         "e6105f0d-806a-482d-bd7f-850d0735a8df",
         "f20de884-5989-4164-a71b-f1af26db57d0",
+        "3204d686-cc99-4983-b070-b13ecbfcf42e",
         "ca34c33c-566e-40a3-90d9-33980ca6aced",
         "1d0b2088-de85-454b-92b6-faaab5876ccc",
         "f13a0a44-51c3-4013-a4bd-2bfaf0f7dbb3",

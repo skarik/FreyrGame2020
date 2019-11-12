@@ -38,7 +38,7 @@ if (charges > 0)
 }
 
 // fill with water
-var inWater = areaInWater(x, y);
+var inWater = areaInWater(x, y, -128);
 filled = filled || inWater;
 if (inWater)
 {

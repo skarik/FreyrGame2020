@@ -7,3 +7,5 @@ layersMaxDepth = -1000;
 
 doodads = [];
 doodadsY = [];
+
+elevationSources = [];

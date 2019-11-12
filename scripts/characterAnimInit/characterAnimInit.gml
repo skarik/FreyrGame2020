@@ -13,3 +13,5 @@ kAnimStun = sprite_index;
 image_speed = 0.0;
 
 moAnimationExternal = false;
+
+stepContinuousTimer = 0.0;

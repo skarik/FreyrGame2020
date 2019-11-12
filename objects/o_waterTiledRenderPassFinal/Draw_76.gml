@@ -1,5 +1,10 @@
 /// @description Update needed surfaces
 
+// Disable any metaballs
+if (exists(o_waterMetalballRenderer))
+	o_waterMetalballRenderer.visible = false;
+
+// Grab the main surface we need to work with
 var game_surface = view_get_surface_id(0);
 if (!surface_exists(game_surface))
 	exit;
@@ -30,6 +35,20 @@ draw_clear_alpha(c_black, 0.0);
 	{
 		var tilemap_to_render = ds_priority_delete_max(render_queue);
 		draw_tilemap(tilemap_to_render, -GameCamera.view_x, -GameCamera.view_y + y_position_offset);
+	}
+	// Add the metaball density onto it
+	{
+		gpu_set_blendenable(true);
+		gpu_set_blendmode(bm_add);
+		with (o_waterMetaball)
+		{
+			event_user(0);
+		}
+		with (o_shoreMetaball)
+		{
+			event_user(0);
+		}
+		gpu_set_blendmode(bm_normal);
 	}
 surface_reset_target();
 

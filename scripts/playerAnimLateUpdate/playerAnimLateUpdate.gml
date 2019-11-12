@@ -164,4 +164,11 @@ if (sprite_index == kAnimWalking)
 	{
 		effectOnGroundStep(x, y, point_direction(0, 0, xspeed, yspeed));
 	}
+	
+	stepContinuousTimer += Time.deltaTime * 10.0;
+	if (stepContinuousTimer > 1.0)
+	{
+		effectOnGroundStepContinuous(x, y, point_direction(0, 0, xspeed, yspeed));
+		stepContinuousTimer = min(1.0, stepContinuousTimer - 1.0);
+	}
 }

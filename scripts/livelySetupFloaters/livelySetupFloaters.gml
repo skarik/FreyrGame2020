@@ -74,6 +74,23 @@ for (var i = 0; i < layer_count; ++i)
 						}
 					}
 				}
+				
+				var all_elements = layer_get_all_elements(target_layer);
+				var all_elements_count = array_length_1d(all_elements);
+				
+				// If the layer has any elevation areas...
+				if (all_elements_count > 0 && layer_get_element_type(all_elements[0]) == layerelementtype_instance)
+				{
+					for (var i = 0; i < all_elements_count; ++i)
+					{
+						var instance = layer_instance_get_instance(all_elements[i]);
+						if (object_get_parent(instance.object_index) == ob_elevationArea)
+						{
+							var next_index = array_length_1d(floater_manager.elevationSources);
+							floater_manager.elevationSources[next_index] = instance;
+						}
+					}
+				}
 			}
 			
 			// Replace layer name now

@@ -2,7 +2,7 @@
 
 event_inherited();
 
-var inWater = areaInWater(x, y);
+var inWater = areaInWater(x, y, -128);
 
 filled = filled || inWater;
 if (inWater)
