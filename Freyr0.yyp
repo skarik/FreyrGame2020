@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "085b2bfa-7df4-4a43-b36a-e10bf50d2783",
+            "Value": {
+                "id": "1cdc89db-51bd-4991-ae7c-f8f723d5d44b",
+                "resourcePath": "sprites\\s_propMithraBuilding1\\s_propMithraBuilding1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "088d9175-e37f-4a00-9bb9-dc65d4aca786",
             "Value": {
                 "id": "07fbf656-842a-457e-a1a8-464547443b14",
@@ -1367,6 +1375,14 @@
             }
         },
         {
+            "Key": "24da2e5e-01c1-4a5e-a754-daf8e13e51df",
+            "Value": {
+                "id": "ba7b81af-2014-4888-8120-1b0fde40d1d9",
+                "resourcePath": "sprites\\s_propMithraBuilding3\\s_propMithraBuilding3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "24dac189-e16f-4269-a8c0-eb0ccd7ca851",
             "Value": {
                 "id": "2bfe9a99-23fc-466e-b27a-ba1057d0f080",
@@ -2047,6 +2063,14 @@
             }
         },
         {
+            "Key": "36647849-117c-4a35-b176-fa07f83a1d50",
+            "Value": {
+                "id": "b33089ab-4ad2-4178-ab08-d468f504e488",
+                "resourcePath": "views\\36647849-117c-4a35-b176-fa07f83a1d50.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "366db1d2-e972-4ff5-8468-abe9281a56a0",
             "Value": {
                 "id": "5c04c60d-9869-4aa2-b8e7-2c735d51fab5",
@@ -2444,6 +2468,14 @@
                 "id": "c023aece-c815-4696-8049-a261b7133434",
                 "resourcePath": "views\\43e05fcf-79cd-4792-abc6-595710e00dfe.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "43e76429-1a7a-466b-9418-bf72b4a464bb",
+            "Value": {
+                "id": "9186c24f-f2b3-4307-b1ba-a8c9c8526c1e",
+                "resourcePath": "sprites\\s_propMithraBuildingExt1\\s_propMithraBuildingExt1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3468,6 +3500,14 @@
                 "id": "171f802f-1078-48e5-8ab3-3f2a8dfabb40",
                 "resourcePath": "tilesets\\tilesetCollision\\tilesetCollision.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "5e11206d-e5e5-45e3-9c28-78210b320c4b",
+            "Value": {
+                "id": "98ae21e1-e501-4be3-ab90-bdf5f83e916b",
+                "resourcePath": "views\\5e11206d-e5e5-45e3-9c28-78210b320c4b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6431,6 +6471,14 @@
             }
         },
         {
+            "Key": "acd8235d-6b22-4d39-b9e6-78bf8f64b262",
+            "Value": {
+                "id": "bf4737df-95b4-4635-a7f5-ca3b1d7e7bf4",
+                "resourcePath": "views\\acd8235d-6b22-4d39-b9e6-78bf8f64b262.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "acdf7ab5-8951-4ac9-ae86-7abf8a3a6979",
             "Value": {
                 "id": "b7994515-0753-4563-8c3a-bd4e89536aad",
@@ -7483,6 +7531,14 @@
             "Value": {
                 "id": "dda4c7ee-ab23-4a8b-9fea-88be891b1e83",
                 "resourcePath": "sprites\\s_propMithraBridge1\\s_propMithraBridge1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c781c304-13aa-4ebd-919f-ca1eabba8e31",
+            "Value": {
+                "id": "3de96cfe-63c6-4ed7-b3f2-d9d2d46a9c51",
+                "resourcePath": "sprites\\s_propMithraBuildingExt0\\s_propMithraBuildingExt0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8623,6 +8679,14 @@
             }
         },
         {
+            "Key": "e3e2f54b-b37f-41a6-baa5-9379937d8533",
+            "Value": {
+                "id": "cd2cddc8-ef80-4547-984c-6ff16f93a718",
+                "resourcePath": "sprites\\s_assetGraffiti0\\s_assetGraffiti0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e3fef9fc-711f-46c5-9c6a-24bfadf47c69",
             "Value": {
                 "id": "e10faf3e-e6da-4162-9697-906997d271fb",
@@ -8852,6 +8916,14 @@
                 "id": "86d619d7-2371-47ec-85bd-d3d05ae3fdf4",
                 "resourcePath": "objects\\o_pickupRes_BoneShard\\o_pickupRes_BoneShard.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e98e47ca-c0f8-4072-9b3f-4801afea926f",
+            "Value": {
+                "id": "f01e03c5-840c-4f56-8f03-c3eccd66752d",
+                "resourcePath": "sprites\\s_propMithraBuilding2\\s_propMithraBuilding2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9380,6 +9452,14 @@
                 "id": "a4a4de1a-9c3c-47a4-98d6-2e9259fd5ab1",
                 "resourcePath": "scripts\\doodadSetShadow\\doodadSetShadow.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f9586c3e-13b2-4496-9463-c890bc95d28e",
+            "Value": {
+                "id": "7d2abecb-a3aa-4a9a-bd57-b6ce94825c5d",
+                "resourcePath": "sprites\\s_propMithraBuilding0\\s_propMithraBuilding0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
