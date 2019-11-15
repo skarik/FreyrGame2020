@@ -6,29 +6,6 @@ var cy1 = y - sprite_get_yoffset(sprite_index) * image_yscale;
 var cx2 = x + (-sprite_get_xoffset(sprite_index) + sprite_get_width(sprite_index)) * image_xscale;
 var cy2 = y + (-sprite_get_yoffset(sprite_index) + sprite_get_height(sprite_index)) * image_yscale;
 
-// for now, make some doodads of grass
-/*for (var ix = cx1; ix < cx2; ix += random_range(4, 8))
-{
-	for (var iy = cy1; iy < cy2; iy += random_range(4, 8))
-	{
-		var dx = round(ix + random_range(-2, +2));
-		var dy = round(iy + random_range(-2, +2));
-		
-		// Create a doodad and delete the sprite
-		var doodad = instance_create_depth(dx, dy, 0, ob_doodadTreeWiggle);
-			doodad.z = collision3_get_highest_position(doodad.x, doodad.y, 0);
-			doodad.sprite_index = s_assetTallGrass;
-			doodad.image_index = floor(random(sprite_get_number(s_assetTallGrass)));
-			doodad.image_speed = 0.0;
-			doodad.image_xscale = choose(-1, 1);
-			doodad.image_yscale = 1.0;
-			doodad.image_angle = 0.0;
-			doodad.image_blend = c_white;
-			doodad.image_alpha = 1.0
-			doodad.collider = null;
-	}
-}*/
-
 m_grassBits = array_create(0);
 m_grassBitsCount = 0;
 
@@ -96,22 +73,6 @@ for (var i = 0; i < m_grassBitsCount; ++i)
 	var i_grass_uv = sprite_get_uvs(grass_sprite, i_grass[2]);
 	var i_grass_width = grass_width * i_grass_uv[6] * i_grass[3];
 	var i_grass_height = grass_height * i_grass_uv[7];
-	
-	/*vertex_position(m_vbuf, i_grass[0], i_grass[1] - grass_height);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, i_grass_uv[0], i_grass_uv[1]);
-	
-	vertex_position(m_vbuf, i_grass[0] + grass_width, i_grass[1] - grass_height);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, i_grass_uv[2], i_grass_uv[1]);
-	
-	vertex_position(m_vbuf, i_grass[0], i_grass[1]);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, i_grass_uv[0], i_grass_uv[3]);
-	
-	vertex_position(m_vbuf, i_grass[0] + grass_width, i_grass[1]);
-	vertex_color(m_vbuf, c_white, 1.0);
-	vertex_texcoord(m_vbuf, i_grass_uv[2], i_grass_uv[3]);*/
 	
 	// Triangle 1
 	vertex_position(m_vbuf, i_grass[0], i_grass[1] - i_grass_height); // 0

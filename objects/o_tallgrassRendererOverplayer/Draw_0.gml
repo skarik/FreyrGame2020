@@ -5,6 +5,8 @@ var pl = getPlayer();
 gpu_set_blendmode(bm_normal);
 gpu_set_alphatestenable(true);
 
+var kMaxDist = 50;
+
 with (ob_areaTallGrass)
 {
 	if (!visible)
@@ -22,7 +24,7 @@ with (ob_areaTallGrass)
 		var pl_dist = sqr(i_grass[0] - pl.x) + sqr(i_grass[1] - pl.y) * 3.0;
 		
 		// Skip far from player
-		if (pl_dist > sqr(50))
+		if (pl_dist > sqr(kMaxDist))
 			continue;
 	
 		var grass_angle = 0.0;
@@ -32,7 +34,13 @@ with (ob_areaTallGrass)
 		grass_angle += sin(i_grass[0] * 0.042 + i_grass[1] * 0.016 + current_time * 0.0017) * 10.0;
 		
 		var grass_color = merge_color(c_white, c_black, abs(3.0 - grass_angle) / 90.0);
+		
+		var grass_alpha = saturate((1.0 - sqrt(pl_dist)/kMaxDist) * 3.0);
 	
-		draw_sprite_ext(s_assetTallGrass, i_grass[2], i_grass[0], i_grass[1], i_grass[3], 1.0, grass_angle, grass_color, 1.0);
+		draw_sprite_ext(
+			s_assetTallGrass, i_grass[2],
+			i_grass[0], i_grass[1],
+			i_grass[3], 1.0,
+			grass_angle, grass_color, grass_alpha);
 	}
 }

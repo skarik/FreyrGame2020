@@ -9,6 +9,8 @@ gpu_set_blendmode(bm_normal);
 
 debugOut(string(application_surface) + " : " + string(Screen.m_gameSurface))*/
 
+gpu_set_alphatestenable(false);
+
 var game_surface = view_get_surface_id(0);
 
 //debugOut(string(game_surface) + " : " + string(Screen.m_gameSurface))

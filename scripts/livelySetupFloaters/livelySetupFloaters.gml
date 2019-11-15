@@ -98,11 +98,17 @@ for (var i = 0; i < layer_count; ++i)
 						}
 					}
 				}
+				
+				// Everything set up. Tell floater manager that:
+				with (floater_manager)
+				{
+					event_user(0);
+				}
+				
+				// Replace layer name now
+				//layer_
+				layer_y(target_layer, kLayerYProcessed);
 			}
-			
-			// Replace layer name now
-			//layer_
-			layer_y(target_layer, kLayerYProcessed);
 		}
 		
 		// Onto the next layer group!

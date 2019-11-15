@@ -35,7 +35,8 @@ void main()
 	
 	float grass_angle = 0.0;
 	grass_angle += sin(in_Colour.z * 32.13124 + u_animationValues.x * 0.002 * 1000.0) * 2.0;
-	grass_angle += sin(in_Colour.x * 0.042 + in_Colour.y * 0.016 + u_animationValues.x * 0.0017 * 1000.0) * 10.0;
+	grass_angle += sin(in_Colour.x * 0.042 + in_Colour.y * 0.016 + u_animationValues.x * 1.7) * 10.0;
+	grass_angle -= atan(u_animationValues.z * 0.05 * (sin(in_Colour.x * 0.053 + in_Colour.y * 0.017 + u_animationValues.x * 1.9) * 0.5 + 1.0) ) * 14.0;
 	
 	vec3 grass_color = mix(vec3(1.0, 1.0, 1.0), vec3(0.2, 0.0, 0.0), abs(grass_angle - 3.0) / 60.0);
 	

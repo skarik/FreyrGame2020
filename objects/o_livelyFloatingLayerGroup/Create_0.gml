@@ -9,6 +9,9 @@ doodads = [];
 doodadsY = [];
 
 elevationSources = [];
+elevationLifts = [];
+elevationLiftsRefY = [];
+elevationLiftsRefZ = [];
 
 instances = [];
 instancesY = [];

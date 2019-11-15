@@ -27,6 +27,16 @@ for (var i = 0; i < doodad_count; ++i)
 	current_doodad.y = doodadsY[i] + y_position_offset;
 }
 
+// update elevation~
+var lifts_count = array_length_1d(elevationLifts);
+for (var i = 0; i < lifts_count; ++i)
+{
+	var lifts = elevationLifts[i];
+	lifts.y = elevationLiftsRefY[i] + y_position_offset;
+	platform3_set_z(lifts, elevationLiftsRefZ[i] - y_position_offset);
+}
+
+
 // Handle other effects
 var elevation_count = array_length_1d(elevationSources);
 var lively = id;
