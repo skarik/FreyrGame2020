@@ -2015,6 +2015,14 @@
             }
         },
         {
+            "Key": "352076c1-2d0c-4477-a26c-416e4c452bc4",
+            "Value": {
+                "id": "934dae16-bdd8-4740-a70e-6c0546cd9bf0",
+                "resourcePath": "sprites\\s_propMithraWindmillNarrow\\s_propMithraWindmillNarrow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "356c07c3-31fc-4724-9e27-e20418a20a9d",
             "Value": {
                 "id": "1d0b0c4d-e3b5-4847-ae8e-e687b9b402d2",
@@ -6943,6 +6951,14 @@
             }
         },
         {
+            "Key": "b7103545-c228-4234-80d9-d91ab35918bd",
+            "Value": {
+                "id": "3118a474-1071-499f-8c6e-97af3c79bc36",
+                "resourcePath": "sprites\\s_propCrystalMithra\\s_propCrystalMithra.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b72e3909-ef47-426d-96b2-d0d0caae096b",
             "Value": {
                 "id": "b042eb68-7870-4da0-975c-64e4d80efc8f",
@@ -7047,6 +7063,14 @@
             }
         },
         {
+            "Key": "b96355f4-9282-4db2-96e5-200965a9a61f",
+            "Value": {
+                "id": "e3d151cd-7675-4702-a80c-e81811979116",
+                "resourcePath": "sprites\\s_propCrystalShardMithra\\s_propCrystalShardMithra.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b9a3c0c7-5e0f-4655-b75a-8e6478d64aaa",
             "Value": {
                 "id": "4ee0ef45-5322-445a-9598-5d43887fc88c",
@@ -7076,6 +7100,14 @@
                 "id": "ced700cf-0743-4ba4-abd2-a54a6e8f1754",
                 "resourcePath": "scripts\\collision3_point_meeting\\collision3_point_meeting.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ba34647b-445f-481f-be2b-f3a195a0ada9",
+            "Value": {
+                "id": "2d4e877a-618b-4022-b791-2fe35d2c98da",
+                "resourcePath": "sprites\\s_propWindmillArms\\s_propWindmillArms.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7471,11 +7503,27 @@
             }
         },
         {
+            "Key": "c5b1f0fa-154c-4e51-8a43-17e2e0f1f9a1",
+            "Value": {
+                "id": "1c43c195-f209-4990-aab8-da0a3391e292",
+                "resourcePath": "sprites\\s_propMithraBuilding2b\\s_propMithraBuilding2b.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c5f482dc-f4f5-424a-9a64-35bb84b6dc46",
             "Value": {
                 "id": "116f093e-c76c-4431-9303-885243d30dec",
                 "resourcePath": "scripts\\aiCustomInit\\aiCustomInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c5fd6d11-263e-43d9-84ad-259782f2b03c",
+            "Value": {
+                "id": "3240c6f3-6504-4bba-be40-d2a1f495a555",
+                "resourcePath": "sprites\\s_propMithraTestWindmill\\s_propMithraTestWindmill.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8063,6 +8111,14 @@
             }
         },
         {
+            "Key": "d6640ea3-72f7-4656-b957-c0117ec21743",
+            "Value": {
+                "id": "b6e54b25-727d-435e-a216-4fe8f7b3c455",
+                "resourcePath": "views\\d6640ea3-72f7-4656-b957-c0117ec21743.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d6be9dd2-a2e6-41fd-9a85-19cc5d062015",
             "Value": {
                 "id": "b3fccbeb-22b5-4886-8940-9777f63a0d6f",
@@ -8148,6 +8204,14 @@
                 "id": "412f5e1f-1811-409c-bd3e-fa573b977cfe",
                 "resourcePath": "scripts\\aiNPCLookBusyInit\\aiNPCLookBusyInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d7e7b124-9ad7-42ae-899b-4bf157316355",
+            "Value": {
+                "id": "20fc90f8-105b-497a-8733-70c1fc6aa186",
+                "resourcePath": "objects\\ob_doodadWindmillSpinner\\ob_doodadWindmillSpinner.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8399,6 +8463,14 @@
             }
         },
         {
+            "Key": "dde180ee-5771-49bc-9773-78bc89d167b9",
+            "Value": {
+                "id": "e68b27c9-7fea-4e2c-a876-2f05c24ffd61",
+                "resourcePath": "sprites\\s_propBigWoodGate\\s_propBigWoodGate.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "de1d4772-f2a5-4403-9454-f7f2d8a57daf",
             "Value": {
                 "id": "cad2d369-71b5-476a-851e-8b9ee442afd3",
@@ -8620,6 +8692,14 @@
                 "id": "de796f27-8d1e-4234-bd44-7a3b89d224c5",
                 "resourcePath": "objects\\o_replatte\\o_replatte.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e272d258-bcae-4751-b7ee-237fba06b3aa",
+            "Value": {
+                "id": "3d3e5eaa-e8b2-4a1f-8c7e-6e57bd3ae260",
+                "resourcePath": "sprites\\s_propBuildingFlags\\s_propBuildingFlags.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

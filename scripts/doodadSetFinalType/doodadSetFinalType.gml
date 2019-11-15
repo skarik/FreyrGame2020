@@ -5,6 +5,7 @@ if (doodad_type == ob_doodad)
 {
 	switch (sprite)
 	{
+		// Shrubbery and trees:
 		case s_propDTree0: case s_propDBushes0: case s_propDGrass:
 		case s_oasisTree: case s_propDPalm0:
 		case s_propViggoTrainCar_Flowers:
@@ -12,15 +13,29 @@ if (doodad_type == ob_doodad)
 			doodad_type = ob_doodadTreeWiggle;
 			break;
 		
+		// Special tree:
 		case s_oasisTree2:
 			doodad_type = ob_doodadTreeWiggleOasis;
 			break;
 			
+		// Hand-drawn shadows:
 		case s_propRuinsSkull0:
 		case s_propViggoRuins0:
 			doodad_type = (doodad_type == ob_doodad) ? ob_doodadSpecialShadow : doodad_type;
 			break;
 			
+		// Spinny windmills:
+		case s_propWindmillArms:
+			doodad_type = ob_doodadWindmillSpinner;
+			break;
+			
+		// Buildings, modular system:
+			//break;
+			
+		// Buildings, large:
+			//break;
+			
+		// Water doodads:
 		case s_propWWoodPole0:
 			doodad_type = ob_doodadInWater;
 			break;

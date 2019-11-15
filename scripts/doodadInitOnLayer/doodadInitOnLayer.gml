@@ -54,7 +54,11 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 				collider.source_layer = targetLayer;
 			doodad.collider = collider;
 		}
-			
+		
+		// Do user-post info
+		with (doodad)
+			event_user(1);
+		
 		layer_sprite_destroy(element);
 	}
 }
