@@ -2,6 +2,7 @@
 event_inherited();
 
 m_name           = "Generic Pickup";
+m_description    = "Generic description.";
 m_maxStack       = 10;
 m_onUseScript    = nullScript;
 m_checkUseScript = nullScript;

@@ -1,8 +1,11 @@
 /// @description Set sprites and init
 
-kAnimStand = s_charBirdStand;
+kAnimStanding = s_charBirdStand;
 kAnimFly = s_charBirdFly;
 animationIndex = 0.0;
+
+kAnimSpeedStand = 0.0;
+kAnimSpeedFly = 20.0;
 
 // Init depth
 depthInit();
@@ -22,3 +25,11 @@ m_initialized = false;
 alarm[0] = 1;
 
 isPassthru = true;
+
+kScareDistance = 100.0;
+
+// Set motion constants
+kBoidAcceleration = 1000.0;
+kBoidMaxSpeed = 150.0;
+kBoidDirectionAcceleration = 600.0;
+kBoidDirectionAccelerationMax = 300.0;

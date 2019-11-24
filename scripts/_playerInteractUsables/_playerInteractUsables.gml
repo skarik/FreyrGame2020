@@ -15,6 +15,7 @@ if (!exists(currentHeldUsable) || !m_isHolding)
 	//var useY = y + lengthdir_y(10, facingDirection) + 2;
 	with (ob_useable)
 	{
+		if (!m_usable) continue; // Skip unusable usables.
 		var useDistance = point_distance(x, y, useX, useY);
 		if (useDistance < closestDistance)
 		{

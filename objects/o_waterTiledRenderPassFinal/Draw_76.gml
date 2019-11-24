@@ -31,6 +31,10 @@ var y_position_offset = 0.0;//round(sin(current_time * 0.0014) * 1.4) - 1;
 // Render all the tiled water onto a surface
 surface_set_target(surface_tilemapComposite);
 draw_clear_alpha(c_black, 0.0);
+
+	gpu_set_blendenable(false);
+	gpu_set_blendmode(bm_normal);
+	gpu_set_alphatestenable(true);
 	while (!ds_priority_empty(render_queue))
 	{
 		var tilemap_to_render = ds_priority_delete_max(render_queue);
@@ -40,6 +44,7 @@ draw_clear_alpha(c_black, 0.0);
 	{
 		gpu_set_blendenable(true);
 		gpu_set_blendmode(bm_add);
+		gpu_set_alphatestenable(false);
 		with (o_waterMetaball)
 		{
 			event_user(0);

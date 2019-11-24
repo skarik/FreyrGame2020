@@ -50,6 +50,11 @@ if (moEnabled)
 // always update the facing direction, though
 facingIndex = warpi(round(facingDirection / 90) + 1, 0, 4);
 
+// Hack for running anim
+if (kAnimRunning == kAnimInvalid) {
+	kAnimRunning = kAnimWalking;
+}
+
 //
 // Animation Select
 if (!moAnimationPlayback)
@@ -85,18 +90,25 @@ if (!moAnimationPlayback)
 	else
 	{
 		var move_speed = sqrt(sqr(xspeed) + sqr(yspeed));
-		if (move_speed < 3.0)
+		if (move_speed < 2.0)
 		{
 			sprite_index = kAnimStanding;
 			//animationIndex = 0.0;
 			animationSpeed = 0.0;
 		}
-		else
+		else if (move_speed < kMoveSpeed * 0.866)
 		{
 			sprite_index = kAnimWalking;
 			animationSpeed = 14.0          // Start with 12 to 14 FPS
 				* move_speed / kMoveSpeed  // Base it on the movespeed
 				* (image_number / 24.0);   // Scale up for more frames in the walk animation, assuming 12 FPS 6-cycle
+		}
+		else
+		{
+			sprite_index = kAnimRunning;
+			animationSpeed = 14.0          // Start with 12 to 14 FPS
+				* move_speed / kMoveSpeed  // Base it on the movespeed
+				* (image_number / 32.0);   // Scale up for more frames in the walk animation, assuming 12 FPS 8-cycle
 		}
 	}
 }
@@ -153,7 +165,7 @@ else
 
 // 
 // Animation effects
-if (sprite_index == kAnimWalking)
+if (sprite_index == kAnimWalking || sprite_index == kAnimRunning)
 {
 	var walkBasis = max(1.0, floor(image_number / 4));
 	var point0 = animationIndexPrev % walkBasis;

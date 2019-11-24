@@ -12,12 +12,16 @@ if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker) && o_Pl
 	dx = usable.x - (GameCamera.x - GameCamera.width / 2);
 	dy = usable.y - (GameCamera.y - GameCamera.height / 2);
 	
-	var useXoffset = lengthdir_x(20, o_PlayerTest.facingDirection);
-	var useYoffset = lengthdir_y(20, o_PlayerTest.facingDirection);
+	var offset_direction = point_direction(o_PlayerTest.x, o_PlayerTest.y, usable.x, usable.y);
+	//offset_direction = o_PlayerTest.facingDirection
+	
+	var useXoffset = lengthdir_x(20, offset_direction);
+	var useYoffset = lengthdir_y(20, offset_direction);
 	if (useXoffset == 0)
 		useXoffset = 5;
 		
-	var xSign = (o_PlayerTest.facingIndex == 3) ? -1 : +1;
+	//var xSign = (o_PlayerTest.facingIndex == 3) ? -1 : +1;
+	var xSign = (useXoffset < 0.0) ? -1 : +1;
 	
 	draw_set_color(c_white);
 	draw_set_alpha(1.0);
@@ -26,7 +30,7 @@ if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker) && o_Pl
 	
 	draw_set_font(f_josefinSlab9);
 	draw_set_alpha(1.0);
-	draw_set_halign((o_PlayerTest.facingIndex == 3) ? fa_right : fa_left);
+	draw_set_halign((xSign < 0.0) ? fa_right : fa_left);
 	draw_set_valign(fa_bottom);
 	draw_set_color(c_white);
 	draw_text(dx + useXoffset + 3 * xSign, dy - 1 + useYoffset, usable.m_actionName);

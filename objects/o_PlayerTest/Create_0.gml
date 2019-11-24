@@ -15,7 +15,8 @@ m_currentAreaTimer = 0.0;
 controlInit();
 
 playerMotionInit();
-playerAnimInit();
+//playerAnimInit();
+characterAnimInit();
 playerInteractInit();
 
 // create scriptable vars for cutscenes
@@ -63,6 +64,7 @@ kDashInAir = true;
 
 kAnimStanding = s_charHeroStand;
 kAnimWalking = s_charHeroWalk;
+kAnimRunning = s_charHeroRun;
 kAnimRolling = s_charHeroRoll;
 kAnimSinkFalling = s_charHeroSinkFall;
 kAnimAttack1 = s_charHeroAtk1;

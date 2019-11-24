@@ -12,7 +12,7 @@ depthUpdate();
 if (aiState == kBoidStateIdle)
 {
 	// If player gets close
-	if (sqr(pl.x - x) + sqr(pl.y - y) < sqr(100))
+	if (sqr(pl.x - x) + sqr(pl.y - y) < sqr(kScareDistance))
 	{
 		// Fly away
 		aiState = kBoidStateFly;
@@ -25,7 +25,7 @@ if (aiState == kBoidStateIdle)
 		yspeed = lengthdir_y(100, dir);
 	}
 	
-	sprite_index = kAnimStand;
+	sprite_index = kAnimStanding;
 	image_xscale = m_perchFacing;
 	animationIndex = 0.0;
 }
@@ -45,12 +45,16 @@ else if (aiState == kBoidStateFly)
 
 	
 	// Set motion constants
-	var kBoidAcceleration = 1000.0;
-	var kBoidMaxSpeed = 150.0;
+	//var kBoidAcceleration = 1000.0;
+	var l_BoidMaxSpeed = kBoidMaxSpeed;
+	//var kBoidDirectionAcceleration = 600.0;
+	//var kBoidDirectionAccelerationMax = 300.0;
 	
 	// Do boid motion
-	boidDirectionAccel = clamp(boidDirectionAccel + random_range(-600, +600) * Time.deltaTime, -300.0, +300.0);
+	boidDirectionAccel = clamp(boidDirectionAccel + random_range(-kBoidDirectionAcceleration, +kBoidDirectionAcceleration) * Time.deltaTime, -kBoidDirectionAccelerationMax, +kBoidDirectionAccelerationMax);
 	boidDirection += boidDirectionAccel * Time.deltaTime;
+	// Fix angle for now
+	boidDirection = boidDirection mod 360;
 	
 	// Apply acceleration
 	xspeed += lengthdir_x(kBoidAcceleration * (return_home ? 0.1 : 1.0), boidDirection) * Time.deltaTime;
@@ -91,23 +95,23 @@ else if (aiState == kBoidStateFly)
 	
 	// Home distance dropper:
 	var home_distance = sqr(x - m_perchX) + sqr(y - m_perchY);
-	var distance_multiplier = min(1.0, sqrt(home_distance) / (kBoidMaxSpeed * 1.0));
+	var distance_multiplier = min(1.0, sqrt(home_distance) / (l_BoidMaxSpeed * 1.0));
 	
 	// Drop max speed if returning home
 	if (return_home)
 	{
 		var high_distance = max(0.2 * distance_multiplier, min(1.0, abs(z_height - m_perchZ_height) / 100.0));
-		kBoidMaxSpeed *= max(high_distance, distance_multiplier);
+		l_BoidMaxSpeed *= max(high_distance, distance_multiplier);
 	}
 	
 	// Limit the top speed
 	var boid_speed = sqrt(sqr(xspeed) + sqr(yspeed));
-	xspeed = xspeed * min(kBoidMaxSpeed / boid_speed, 1.0);
-	yspeed = yspeed * min(kBoidMaxSpeed / boid_speed, 1.0);
+	xspeed = xspeed * min(l_BoidMaxSpeed / boid_speed, 1.0);
+	yspeed = yspeed * min(l_BoidMaxSpeed / boid_speed, 1.0);
 	
 	// Move bird around
 	x += xspeed * Time.deltaTime;
-	y += yspeed * Time.deltaTime;
+	y += yspeed * Time.deltaTime * 0.8;
 	
 	// Fly up (or down)
 	var target_z_height = 160 + sin(current_time / 2000.0 + id) * 20.0;
@@ -130,7 +134,7 @@ else if (aiState == kBoidStateFly)
 	
 	// Update anims
 	sprite_index = kAnimFly;
-	animationIndex += Time.deltaTime * 20.0;
+	animationIndex += Time.deltaTime * kAnimSpeedFly;
 	
 	// Update facing
 	image_xscale = sign(xspeed);

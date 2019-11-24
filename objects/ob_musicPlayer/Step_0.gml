@@ -1,4 +1,4 @@
-/// @description update track volumes
+/// @description update track volumes & sync
 
 // if fading out, set all targets to 0.0
 if (m_fadeOut)

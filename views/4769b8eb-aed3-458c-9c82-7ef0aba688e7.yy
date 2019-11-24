@@ -6,7 +6,8 @@
     "children": [
         "950d0745-4ca7-485d-b88d-14f0ee141ac1",
         "3caef66e-b8c8-49da-ac0c-10dcf570d91b",
-        "cb35a8dc-5197-4563-9b3a-743a11bdde31"
+        "cb35a8dc-5197-4563-9b3a-743a11bdde31",
+        "8d20cafb-9d8f-4345-b1ac-0db2d1b034ca"
     ],
     "filterType": "GMObject",
     "folderName": "Fauna",

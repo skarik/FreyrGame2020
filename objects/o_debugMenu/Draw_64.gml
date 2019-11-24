@@ -14,7 +14,8 @@ draw_text( 10,10, "Press tilde (`) to toggle this menu.");
 // draw more helpers
 draw_text( 10, 24, "(F5) Screenshot");
 draw_text( 10, 32, "(F11) Capture GIF");
-draw_text( 10, 40, "(F3) Frame limiter");
+draw_text( 10, 40, "(F2) Frame limiter");
+draw_text( 10, 48, "(F3) Reset (freezes game)");
 
 // Draw the debug info
 draw_set_color( c_black );

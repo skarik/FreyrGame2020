@@ -10,7 +10,9 @@
         "3b52ae70-ca26-4a06-9386-cc811a3e5044",
         "025b6853-a45b-4ac5-8d42-06bf6f5959ef",
         "2ea8d77b-874b-482e-973b-bf3d72d49a26",
-        "1df103d6-b1cd-43fd-914a-6842e2b6b808"
+        "1df103d6-b1cd-43fd-914a-6842e2b6b808",
+        "5427816c-0e2b-4322-95ec-12270a255b8f",
+        "5a6102e3-969d-4e61-a4ac-693fe56e5878"
     ],
     "filterType": "GMObject",
     "folderName": "Usables",

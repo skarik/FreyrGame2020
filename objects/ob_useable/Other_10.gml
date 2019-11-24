@@ -1,6 +1,6 @@
 /// @description Default inspection
 
-if (exists(m_user) && m_user.id == o_PlayerTest.id)
+if (m_usable && exists(m_user) && m_user.id == o_PlayerTest.id)
 {
 	if (!exists(ob_CtsTalker))
 	{

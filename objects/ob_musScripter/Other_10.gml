@@ -1,4 +1,4 @@
-/// @description find the music
+/// @description create the music
 
 // find the music that belongs to this object
 if (!exists(m_music))

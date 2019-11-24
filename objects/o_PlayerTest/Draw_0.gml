@@ -51,4 +51,6 @@ if (Debug.visible)
 	draw_text(x - 4, y - 40, "depth: " + string(depth));
 	draw_text(x - 4, y + 8, string(uAxis.value));
 	draw_text(x + 16, y + 8, string(vAxis.value));
+	draw_text(x - 4, y - 56, "xsp: " + string(xspeed));
+	draw_text(x + 24, y - 56, "ysp: " + string(yspeed));
 }

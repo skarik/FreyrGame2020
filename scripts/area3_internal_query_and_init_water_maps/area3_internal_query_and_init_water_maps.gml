@@ -22,6 +22,7 @@ if (!global.water_layers_ready)
 			
 			// Save new water map.
 			global.water_layers[new_water_layer_index] = tilemap;
+			global.water_zposition[new_water_layer_index] = 256;
 		
 			debugOut("Found water collision map \"" + layer_get_name(all_layers[i]) + "\"");
 		
@@ -39,11 +40,15 @@ if (!global.water_layers_ready)
 					if (first_water_tile != 0)
 					{
 						// Save elevation of this water map.
-						global.water_zposition[new_water_layer_index] = col3_internal_tilemap_get_elevation(ix * 16, iy * 16);
-						if (global.water_zposition[new_water_layer_index] == kElevationInvalid)
+						var next_collision = col3_internal_tilemap_get_elevation(ix * 16, iy * 16);
+						if (next_collision == kElevationInvalid)
 						{
 							// Invalid elevation sample? We keep searching.
-							first_water_tile = 0;
+							//first_water_tile = 0;
+						}
+						else
+						{
+							global.water_zposition[new_water_layer_index] = min(next_collision, global.water_zposition[new_water_layer_index]);
 						}
 					}
 				}

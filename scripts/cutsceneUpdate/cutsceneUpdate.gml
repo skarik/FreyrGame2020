@@ -59,6 +59,7 @@ case SEQTYPE_LINES:
         var ending = ds_map_find_value(entry, SEQI_ENDACTION);
         
         var target_inst = instance_find(target, count);
+		var l_organic = (ending == SEQEND_ORGANIC) || cts_organic;
     
 		// FREYR SPECIFIC:
 		// Replace the line with the player gender-specific line if possible:
@@ -81,8 +82,8 @@ case SEQTYPE_LINES:
 	
         // Make a talker with all the input info
         var gabber = Cts_MakeGabber(target_inst, "", line);
-            gabber.input_priority = !cts_organic;
-            gabber.input_disable = cts_organic;
+            gabber.input_priority = !l_organic;
+            gabber.input_disable = l_organic;
             gabber.input_autoclose = (ending == SEQEND_AUTO);
             
 		// SILENT SKY SPECIFIC:

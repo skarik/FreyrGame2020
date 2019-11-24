@@ -6,7 +6,7 @@ event_inherited();
 // Stop spinning
 image_speed = 0;
 // Update animation
-playerAnimInit();
+characterAnimInit();
 
 // Create the interaction object
 m_interactionObject = new(o_talkToCharacter);
