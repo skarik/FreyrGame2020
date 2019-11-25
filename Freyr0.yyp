@@ -1695,6 +1695,14 @@
             }
         },
         {
+            "Key": "2b44f070-d370-4e73-bd73-760b2c03c25d",
+            "Value": {
+                "id": "a9e78a69-bf99-4df5-960a-846091c15258",
+                "resourcePath": "objects\\o_genMapTool\\o_genMapTool.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2b6b179e-cb49-43dc-b26a-8288a5f1c308",
             "Value": {
                 "id": "6c3a1a1f-c313-40fa-bfb1-30c73c728344",
@@ -2140,6 +2148,14 @@
                 "id": "44529357-80b8-47bb-8e9f-85eb1f5578a9",
                 "resourcePath": "scripts\\motion1d_to\\motion1d_to.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "399a010f-bbef-480d-9e50-f275a02a9508",
+            "Value": {
+                "id": "4f6bcab2-c263-44c6-b9a1-d4942e12159d",
+                "resourcePath": "datafiles_yy\\sys\\mapinfo.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -2719,6 +2735,14 @@
             }
         },
         {
+            "Key": "48e98b0e-b39a-4e78-9bc4-ba4e8c11d9d8",
+            "Value": {
+                "id": "685337da-ec2b-4605-9d78-19ec758fcbaa",
+                "resourcePath": "scripts\\playerUiDrawBottomRightMap\\playerUiDrawBottomRightMap.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4910565e-7c2e-4e96-a2ea-1ecebf6209c5",
             "Value": {
                 "id": "0d099d88-f26b-43a3-bc7e-b46fdd434792",
@@ -2892,6 +2916,14 @@
                 "id": "bfcdcc2e-cf4c-4883-8374-ecab889bd804",
                 "resourcePath": "scripts\\inventoryCreateOrLoad\\inventoryCreateOrLoad.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4d91561d-b311-4a8e-a2a3-e13c1b3bdaad",
+            "Value": {
+                "id": "ada76403-0cd1-4184-81c0-b1f30ebf651c",
+                "resourcePath": "rooms\\rm_map_editor\\rm_map_editor.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -3260,6 +3292,14 @@
                 "id": "62b94c68-98c8-4601-9d42-5638ec1df0ed",
                 "resourcePath": "sprites\\s_potWater2\\s_potWater2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "57a87495-542f-43f9-b9d8-fd744521bbf6",
+            "Value": {
+                "id": "1e300e17-7a50-4b40-9a1d-564d63b1d6fb",
+                "resourcePath": "views\\57a87495-542f-43f9-b9d8-fd744521bbf6.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -8607,6 +8647,14 @@
             }
         },
         {
+            "Key": "df6d72ad-d537-4938-9e7b-46486afc7608",
+            "Value": {
+                "id": "1675ece8-1b7d-48a1-aad7-96a812d5026e",
+                "resourcePath": "objects\\o_PlayerMap\\o_PlayerMap.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "df7f10a9-204b-4597-903d-1dc7ff3b123a",
             "Value": {
                 "id": "0048cfd6-74c8-4b26-a9d8-5babff9d264f",
@@ -10162,6 +10210,7 @@
         "9772c02d-792f-4574-97b0-b4256c4063df",
         "cd38e36f-ab3b-40bf-baf8-f44a24a8fd3e",
         "d58ce0e2-1819-4f50-a8f8-ab85fbb182ab",
+        "48e98b0e-b39a-4e78-9bc4-ba4e8c11d9d8",
         "15fdbce0-347b-4877-90a5-3a3d2aaa7b25",
         "b185a23a-9c09-41c8-adde-3ec8591e9819",
         "4910565e-7c2e-4e96-a2ea-1ecebf6209c5",

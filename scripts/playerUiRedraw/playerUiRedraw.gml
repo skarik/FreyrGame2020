@@ -149,6 +149,9 @@ if (o_PlayerTest.m_plantable)
 	draw_set_alpha(1.0);
 }
 
+//
+// map
+playerUiDrawBottomRightMap();
 
 //
 // chest, underneathe the inventory
