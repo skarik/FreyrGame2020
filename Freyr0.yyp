@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "0229d8bd-c37d-4cc4-817c-4a4bd5cbe21d",
+            "Value": {
+                "id": "727d017c-9ac6-4b64-aa05-978a16192252",
+                "resourcePath": "scripts\\settingsAudioDefaults\\settingsAudioDefaults.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "02593ce6-a0ec-471b-a787-3d053751a476",
             "Value": {
                 "id": "fa4dd3f8-7b00-4626-9f59-5ad938673096",
@@ -4303,6 +4311,14 @@
             }
         },
         {
+            "Key": "706cf677-ed33-45a7-b17d-61e41165c63b",
+            "Value": {
+                "id": "8c6725bd-8418-43c7-a0b2-c068e28614db",
+                "resourcePath": "scripts\\settingsAudioLoad\\settingsAudioLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "706e4a9f-836c-4a34-bba0-0b0bcb995b8e",
             "Value": {
                 "id": "1ad4539c-ac50-433e-99d0-9cf88e5a09cb",
@@ -6108,6 +6124,14 @@
                 "id": "01e86f1e-b9ce-4787-85b3-280d488378d9",
                 "resourcePath": "objects\\o_miniCanalWater\\o_miniCanalWater.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9fe542f5-9287-40b9-80c3-db8851dcf6e5",
+            "Value": {
+                "id": "608d85fe-ff38-485c-8adf-84cda9968042",
+                "resourcePath": "scripts\\settingsAudioSave\\settingsAudioSave.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -10074,6 +10098,9 @@
         "556b0606-8df0-4b4a-a841-26e7da69f09a",
         "29f3bc31-ee7c-43bb-af3a-f6c47fbd8d7e",
         "5a099e9a-bea6-4c59-b44a-75bab0b61a5e",
+        "0229d8bd-c37d-4cc4-817c-4a4bd5cbe21d",
+        "706cf677-ed33-45a7-b17d-61e41165c63b",
+        "9fe542f5-9287-40b9-80c3-db8851dcf6e5",
         "89e6f090-2e48-4530-8e2b-4fe17896008e",
         "ea01f43b-f383-4a27-bcea-a0e103dba76b",
         "5b83a500-320a-4c22-87b8-1c4f0e26ddbc",
