@@ -5,6 +5,20 @@ m_astrolabeForceBlend = 0.0;
 
 m_hiddenEdgeBlend = 0.0;
 
+m_player = o_PlayerTest;
+
+#region Farm overlay fading
+
+m_farmoverlay_blend = 0.0;
+m_farmoverlay_cooldown_time = 0.0;
+m_farmoverlay_cooldown_movetime = 0.0;
+
+m_farmoverlay_targetString = "";
+m_farmoverlay_targetColor = c_crystalblue;
+m_farmoverlay_targetPosition = [0, 0];
+
+#endregion
+
 #region Inventory
 
 m_bag_offsets = [

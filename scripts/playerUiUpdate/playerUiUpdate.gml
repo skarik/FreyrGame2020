@@ -13,6 +13,8 @@ if (m_inCutsceneBlend < 1.0)
 	playerUiUpdateChest();
 
 	playerUiUpdateInventoryManagement();
+	
+	playerUiUpdateFarmOverlay();
 }
 
 // edge blend

@@ -73,7 +73,7 @@ if (l_canMove)
 		{
 			aimingDirection = point_direction(0, 0, uAxis.value, vAxis.value);
 		}
-		else if (sqr(xAxis.value) + sqr(yAxis.value) > sqr(0.1))
+		else if (sqr(xAxis.value) + sqr(yAxis.value) > sqr(0.05))
 		{
 			aimingDirection = point_direction(0, 0, xAxis.value, yAxis.value);
 		}
@@ -98,7 +98,7 @@ if (l_canMove)
 		{
 			aiming2Direction = point_direction(0, 0, uAxis.value, vAxis.value);
 		}
-		else if (sqr(xAxis.value) + sqr(yAxis.value) > sqr(0.1))
+		else if (sqr(xAxis.value) + sqr(yAxis.value) > sqr(0.05))
 		{
 			aiming2Direction = point_direction(0, 0, xAxis.value, yAxis.value);
 		}

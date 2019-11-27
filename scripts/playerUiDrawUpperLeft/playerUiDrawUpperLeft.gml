@@ -5,7 +5,7 @@ draw_set_alpha(0.2);
 draw_set_color(c_gray);
 draw_text(0,50,string(o_PlayerTest.stats.m_health) + "/" + string(o_PlayerTest.stats.m_healthMax));
 
-// last usable
+// Draw current usable active
 if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker) && o_PlayerTest.moEnabled)
 {
 	var usable = o_PlayerTest.currentUsable;
