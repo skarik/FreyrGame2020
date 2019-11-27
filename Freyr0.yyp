@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "00aaef0d-2adf-44fa-88d7-97e2a5d1a0c8",
+            "Value": {
+                "id": "29900af7-d212-4234-a0f8-65e211aa0fa6",
+                "resourcePath": "sprites\\s_itemSeedCabbage\\s_itemSeedCabbage.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "01108ead-01c9-4039-a631-6b39266fe732",
             "Value": {
                 "id": "80b137b8-5f7c-4179-a702-c78796ecff58",
@@ -92,6 +100,14 @@
                 "id": "7f57699c-3c8e-4728-bc63-447d02616586",
                 "resourcePath": "scripts\\questGetValue\\questGetValue.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "021beb4f-31db-4cd8-8ee1-09444c33a711",
+            "Value": {
+                "id": "afb3834b-ab31-43c4-bcad-92670338276d",
+                "resourcePath": "sprites\\s_itemSeedMelon\\s_itemSeedMelon.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
