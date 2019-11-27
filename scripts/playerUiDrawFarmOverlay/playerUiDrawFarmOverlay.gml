@@ -5,14 +5,17 @@ if (m_farmoverlay_blend > 0.0)
 	dx = m_farmoverlay_targetPosition[0] - (GameCamera.x - GameCamera.width / 2);
 	dy = m_farmoverlay_targetPosition[1] - (GameCamera.y - GameCamera.height / 2);
 	
+	// make it shrink in
+	var l_wo = floor(sqr(1.0 - m_farmoverlay_blend) * 16.0);
+	
 	// draw selection reticle
 	gpu_set_blendenable(true);
 	gpu_set_blendmode(bm_normal);
 	draw_set_alpha(0.8 * m_farmoverlay_blend);
 	draw_set_color(c_white);
-	draw_rectangle(dx, dy, dx + 15, dy + 15, true);
+	draw_rectangle(dx - l_wo, dy - l_wo, dx + 15 + l_wo, dy + 15 + l_wo, true);
 	draw_set_color(m_farmoverlay_targetColor);
-	draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
+	draw_rectangle(dx + 1 - l_wo, dy + 1 - l_wo, dx + 14 + l_wo, dy + 14 + l_wo, true);
 	draw_set_alpha(1.0 * m_farmoverlay_blend);
 	
 	// set target to display text properly (w/ outline)

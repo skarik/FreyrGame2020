@@ -23,7 +23,8 @@ if (input_addItem)
 										m_onUseScript,
 										m_onDepleteScript,
 										m_type,
-										m_tradeItem);
+										m_tradeItem,
+										m_userInfo, m_userInfoString);
 								
 			// todo: add shit to bag
 			if (item == null)
@@ -38,7 +39,8 @@ if (input_addItem)
 											m_onUseScript,
 											m_onDepleteScript,
 											m_type,
-											m_tradeItem);
+											m_tradeItem,
+											m_userInfo, m_userInfoString);
 			}
 
 			// If item is not null by the end...

@@ -8,4 +8,8 @@ if (exists(m_plant_dirt))
 	plant.m_startDay = timeofdayGetDay();
 	
 	_playerInteractItemDecrementBelt();
+	
+	// Play animation
+	m_isPlanting = true;
+	m_plant_timer = 0.0;
 }

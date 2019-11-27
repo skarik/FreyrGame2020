@@ -17,11 +17,14 @@ m_till_time = 0.3;
 m_till_x = 0;
 m_till_y = 0;
 
+m_isPlanting = false;
 m_plantable = false;
 m_plant_dirt = null;
 m_isPlanting = false;
 m_plant_x = 0;
 m_plant_y = 0;
+m_plant_timer = 0.0;
+m_plant_time = 0.3;
 
 m_voidPunch_fill = 1.0;
 m_voidPunch_charged = 0.0;

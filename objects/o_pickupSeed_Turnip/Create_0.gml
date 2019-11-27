@@ -2,8 +2,10 @@
 event_inherited();
 
 m_name           = "Turnip Seed";
-m_maxStack       = 10;
-m_onUseScript    = turnipSeedOnUse;
+m_maxStack       = 99;
+m_onUseScript    = generalSeedOnUse;
 m_checkUseScript = plantableDirtCheckUse;
 m_onDepleteScript= plantableOnDeplete;
 m_type           = kItemPickupSeed;
+m_userInfo       = o_cropTurnip;
+m_userInfoString = object_get_name(m_userInfo);

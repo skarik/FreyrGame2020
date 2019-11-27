@@ -10,6 +10,7 @@ m_startHour = 0;
 m_itemDrop = null;
 //m_watered = array_create(30, 0);
 m_watered = ds_map_create();
+m_visible_timer = 0.0;
 
 // Customizable values
 m_growAmountDryNight = 0;

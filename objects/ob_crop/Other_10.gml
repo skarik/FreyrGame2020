@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description CoNsUmE DiRt
 
 if (m_growValue >= m_growAmountMature)
 {

@@ -138,6 +138,11 @@ if (belt.type == kItemPickupSeed) {
 	_playerInteractPlantables(l_canMove && onGround && !inDelayFrame);
 }
 
+// not planting if not in animation
+//if (!moAnimationPlayback) {
+//	m_isPlanting = false;
+//} // Shitty hack anyways
+
 // do combat mode calculations
 inCombatMode = !inDelayFrame;
 //if (collision_circle(x, y, )

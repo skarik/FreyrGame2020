@@ -2743,6 +2743,14 @@
             }
         },
         {
+            "Key": "484bb4f7-d043-4989-9448-811523a329bd",
+            "Value": {
+                "id": "eb027fa2-8365-4a4e-88ef-796e02711fb7",
+                "resourcePath": "scripts\\cutscenePlayerPlayAnimation\\cutscenePlayerPlayAnimation.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "48e98b0e-b39a-4e78-9bc4-ba4e8c11d9d8",
             "Value": {
                 "id": "685337da-ec2b-4605-9d78-19ec758fcbaa",
@@ -5959,6 +5967,14 @@
             }
         },
         {
+            "Key": "9b0e0b37-953f-4b4e-8854-8e1451395353",
+            "Value": {
+                "id": "cd0ef3e8-cfeb-462b-9edb-1e5bcb75d506",
+                "resourcePath": "scripts\\generalSeedOnUse\\generalSeedOnUse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9b19ec7c-2abd-4e3b-b4e2-e0733bf878c9",
             "Value": {
                 "id": "648326ce-167a-4734-a7c9-9f0ed370b483",
@@ -8471,6 +8487,14 @@
             }
         },
         {
+            "Key": "da9036ca-910d-4a03-b7ac-2cad3f3c3749",
+            "Value": {
+                "id": "21d9f5d7-1e1b-435d-94a9-e3335f178c64",
+                "resourcePath": "scripts\\effectOnPlantingHit\\effectOnPlantingHit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "daacbef2-a6a6-47d4-bac3-2dc8046d98e6",
             "Value": {
                 "id": "185293a6-75e6-49f8-8066-98192b60478d",
@@ -9332,6 +9356,14 @@
                 "id": "29cb9927-19eb-469a-952e-21b23d2466a1",
                 "resourcePath": "scripts\\gameCampUntilMorning\\gameCampUntilMorning.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "efb6d6ef-21d5-417a-84db-5a8d940d0f85",
+            "Value": {
+                "id": "5c643064-bdd9-4b77-aa96-8e2a9e624e29",
+                "resourcePath": "sprites\\s_itemSeedTurnip\\s_itemSeedTurnip.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -10287,13 +10319,14 @@
         "4d409182-c3d1-45d1-8ede-72161fbb8f69",
         "20b48cab-a37a-4bda-aab2-3451a5a716c8",
         "bec3e5f0-d50b-44db-be78-6806ed0a95b3",
-        "56a84241-7e72-4cfe-8345-7b8986e62560",
         "fbc61ae6-a559-45ff-bc4e-b2f12a1ca0a6",
         "b4ba7c02-51c0-4cf4-aedf-064cf6e6a556",
+        "56a84241-7e72-4cfe-8345-7b8986e62560",
         "c174095e-49df-4ae5-b545-26b222669828",
         "1ce3ecc6-ae73-4e97-9a97-dd07436bbd1b",
         "9c0de23d-a581-4a65-a754-aa5963109c05",
         "b6989f43-ad2c-4a44-8353-2a5156b6a8a0",
+        "9b0e0b37-953f-4b4e-8854-8e1451395353",
         "e2a546ce-ad19-4fd2-8c93-0948bf84d891",
         "d3270700-d484-400f-abee-692a7825e513",
         "e02b8b61-3840-4665-8de5-7ec3350944cd",
@@ -10304,6 +10337,7 @@
         "ca6238b9-a7c1-40e9-8b43-7ce31e9bbb09",
         "55ee7344-8e73-4b3a-826b-64364eedaadd",
         "e6105f0d-806a-482d-bd7f-850d0735a8df",
+        "da9036ca-910d-4a03-b7ac-2cad3f3c3749",
         "f20de884-5989-4164-a71b-f1af26db57d0",
         "3204d686-cc99-4983-b070-b13ecbfcf42e",
         "ca34c33c-566e-40a3-90d9-33980ca6aced",
@@ -10402,6 +10436,7 @@
         "1dcd64d2-4b18-4872-8659-8dccbb978594",
         "a909e678-0753-4cb1-9af6-8c1554e98fbd",
         "40039c77-c4ca-4020-bae1-7f3401c84ccf",
+        "484bb4f7-d043-4989-9448-811523a329bd",
         "b778584d-5b55-4179-8b7a-752bd53941a7",
         "345350f8-60ee-4bc5-8c3c-c760b79d45a7",
         "47bbbf36-54a1-4f98-9f36-2417c633b589",

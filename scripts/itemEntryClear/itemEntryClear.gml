@@ -9,3 +9,5 @@ var item = argument0;
 	item.onDeplete	= nullScript;
 	item.type		= kItemPickupNormal;
 	item.tradeItem	= [null, 0];
+	item.userInfo	= 0;
+	item.userInfoS	= "";

@@ -13,6 +13,8 @@ if (item.object != null)
 	buffer_write(buffer, buffer_s32, item.type);
 	buffer_write(buffer, buffer_string, object_get_name(item.tradeItem[0]));
 	buffer_write(buffer, buffer_s32, item.tradeItem[1]);
+	buffer_write(buffer, buffer_s32, item.userInfo);
+	buffer_write(buffer, buffer_string, item.userInfoS);
 }
 else
 {

@@ -12,3 +12,5 @@ swap = item0.onUse;		item0.onUse = item1.onUse;			item1.onUse = swap;
 swap = item0.onDeplete;	item0.onDeplete = item1.onDeplete;	item1.onDeplete = swap;
 swap = item0.type;		item0.type = item1.type;			item1.type = swap;
 swap = item0.tradeItem;	item0.tradeItem = item1.tradeItem;	item1.tradeItem = swap;
+swap = item0.userInfo;	item0.userInfo = item1.userInfo;	item1.userInfo = swap;
+swap = item0.userInfoS;	item0.userInfoS = item1.userInfoS;	item1.userInfoS = swap;

@@ -87,6 +87,12 @@ if (!moAnimationPlayback)
 		animationSpeed = 0.0;
 		animationIndex = floor((image_number / 4.0 - 0.01) * saturate(m_till_timer));
 	}
+	else if (m_isPlayer && m_isPlanting)
+	{
+		sprite_index = kAnimDig1;
+		animationSpeed = 0.0;
+		animationIndex = floor((image_number / 4.0 - 0.01) * saturate(m_plant_timer));
+	}
 	else
 	{
 		var move_speed = sqrt(sqr(xspeed) + sqr(yspeed));
@@ -160,6 +166,12 @@ else
 	else
 	{
 		image_index = clamp(animationIndex, 0.0, image_number - 1.0);
+		if (moAnimationPlaybackEndOnFinish && animationIndex >= image_number)
+		{
+			moAnimationPlaybackEndOnFinish = false;
+			moAnimationPlayback = false;
+			
+		}
 	}
 }
 

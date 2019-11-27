@@ -11,3 +11,5 @@ var item = argument0;
 	item.onDeplete	= source.onDeplete;
 	item.type		= source.type;
 	item.tradeItem	= source.tradeItem;
+	item.userInfo	= source.userInfo;
+	item.userInfoS	= source.userInfoS;

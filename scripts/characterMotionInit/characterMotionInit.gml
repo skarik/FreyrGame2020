@@ -28,8 +28,6 @@ canMove = true; // Externally set!
 inWater = false;
 onGround = false;
 moEnabled = true;
-moAnimationPlayback = false;
-moAnimationPlaybackLooped = false;
 moCanMoveUnstuck = true;
 
 moHitWall = false;

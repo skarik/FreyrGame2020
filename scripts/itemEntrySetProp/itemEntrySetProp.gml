@@ -1,4 +1,4 @@
-/// @description itemEntrySetProp(entry, object, count, name, checkUse, onUse, type, tradeItem)
+/// @description itemEntrySetProp(entry, object, count, name, checkUse, onUse, type, tradeItem, userInfo, userInfoString)
 /// @param entry inits item to given params
 /// @param object 
 /// @param count
@@ -7,6 +7,8 @@
 /// @param onUse 
 /// @param type 
 /// @param tradeItem
+/// @param userInfo
+/// @param userInfoString
 var item = argument0;
 	item.object		= argument1;
 	item.count		= argument2;
@@ -16,3 +18,5 @@ var item = argument0;
 	item.onDeplete	= argument6;
 	item.type		= argument7;
 	item.tradeItem	= argument8;
+	item.userInfo	= argument9;
+	item.userInfoS	= argument10;

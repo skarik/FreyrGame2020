@@ -9,4 +9,5 @@ m_checkUseScript = nullScript;
 m_onDepleteScript= nullScript;
 m_type           = kItemPickupNormal;
 m_tradeItem      = [object_index, 1];
-
+m_userInfo       = 0;
+m_userInfoString = "";

@@ -21,7 +21,8 @@ var inventory = m_pickupTarget.inventory;
 								m_onUseScript,
 								m_onDepleteScript,
 								m_type,
-								m_tradeItem);
+								m_tradeItem,
+								m_userInfo, m_userInfoString);
 								
 	// todo: add shit to bag
 	if (item == null)
@@ -36,7 +37,8 @@ var inventory = m_pickupTarget.inventory;
 									m_onUseScript,
 									m_onDepleteScript,
 									m_type,
-									m_tradeItem);
+									m_tradeItem,
+									m_userInfo, m_userInfoString);
 	}
 
 	// If item is not null by the end...

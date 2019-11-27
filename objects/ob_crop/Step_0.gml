@@ -44,3 +44,11 @@ var grow_percent = m_growValue / m_growAmountMature;
 
 // update the grow sprite
 image_index = max(0.0, ceil((1.0 - grow_percent) * (image_number - 1)));
+
+// make visible on timer
+if (m_visible_timer > 0.0)
+{
+	m_visible_timer -= Time.deltaTime;
+	if (m_visible_timer <= 0.0)
+		visible = true;
+}
