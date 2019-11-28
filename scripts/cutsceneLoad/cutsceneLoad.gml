@@ -693,6 +693,8 @@ while (!file_text_eof(fp))
 				
 				var alignment = ds_map_find_value(read_object_map, "alignment");
 				if (is_undefined(alignment))
+					alignment = ds_map_find_value(read_object_map, "align");
+				if (is_undefined(alignment))
 					alignment = "";
 				if (alignment == "left")
 					alignment = kPortraitAlignLeft;

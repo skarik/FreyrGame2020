@@ -23,16 +23,35 @@ if (index < 0 || index >= kPortraitIndex_Max)
 var portrait_renderer = o_CtsPortraitRenderer;
 with (portrait_renderer)
 {
+	// Set initial state fast if invisible
+	if (params_alpha[index] <= 0.0)
+	{
+		//params_alpha[index] = 0.0;
+		params_position[index] = x_pos_percent;
+		params_alignment[index] = alignment;
+	}
+	
 	// Save previous state
+	preparams_alpha[index] = params_alpha[index];
+	preparams_position[index] = params_position[index];
+	preparams_alignment[index] = params_alignment[index];
 	
 	// Set new state
-	state_sprite[index] = sprite;
-	params_alpha[index] = 1.0;
-	params_position[index] = x_pos_percent;
-	params_alignment[index] = alignment;
-	state_facing[index] = facing;
+	if (state_sprite[index] != null && sprite == null)
+	{
+		preparams_alpha[index] = 1.0;
+		params_alpha[index] = 0.0;
+	}
+	else
+	{
+		state_sprite[index] = sprite;
+		params_alpha[index] = 1.0;
+		params_position[index] = x_pos_percent;
+		params_alignment[index] = alignment;
+		state_facing[index] = facing;
 	
-	state_blend[index] = 0.0;
+		state_blend[index] = 0.0;
+	}
 }
 
 
