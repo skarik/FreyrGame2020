@@ -39,3 +39,4 @@ else
 
 // Update the aiming to match the facing for now
 aimingDirection = facingDirection;
+aiming2Direction = facingDirection;

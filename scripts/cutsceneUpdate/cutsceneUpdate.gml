@@ -437,9 +437,28 @@ case SEQTYPE_AI:
 								ds_map_find_value(entry, SEQI_AI_SPEED));
 			break;
 		case kAiRequestCommand_Teleport:
+			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
+			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
+			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (exists(origin))
+			{
+				tx += origin.x;
+				ty += origin.y;
+			}
 			aiscriptRequestTeleport(target_inst, style,
-									ds_map_find_value(entry, SEQI_AI_POS_X),
-									ds_map_find_value(entry, SEQI_AI_POS_Y));
+									tx, ty);
+			break;
+		case kAiRequestCommand_Face:
+			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
+			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
+			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (exists(origin))
+			{
+				tx += origin.x;
+				ty += origin.y;
+			}
+			aiscriptRequestFace(target_inst, style,
+								tx, ty);
 			break;
 	}
 

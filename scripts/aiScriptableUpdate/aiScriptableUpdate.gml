@@ -82,6 +82,10 @@ else if (m_aiScript_style == kAiStyle_Scripted)
 		m_aiScript_requestPositionX = 0.0;
 		m_aiScript_requestPositionY = 0.0;
 	}
+	else if (m_aiScript_requestCommand == kAiRequestCommand_Face)
+	{
+		aimotionFaceAt(m_aiScript_requestPositionX, m_aiScript_requestPositionY, -1);
+	}
 }
 // Update the leader AI style
 if (m_aiScript_style == kAiStyle_Lead)

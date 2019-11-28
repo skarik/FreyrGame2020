@@ -1,4 +1,5 @@
 #begin
+// This is first cutscene where player is falling out of the hole.
 
 screen
 {

@@ -40,7 +40,7 @@ if (Debug.visible)
 	{
 		camPlayerDrawDebug();
 	}
-	draw_set_color(c_black);
+	draw_set_color(c_red);
 	draw_set_font(f_04b03);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
@@ -53,4 +53,7 @@ if (Debug.visible)
 	draw_text(x + 16, y + 8, string(vAxis.value));
 	draw_text(x - 4, y - 56, "xsp: " + string(xspeed));
 	draw_text(x + 24, y - 56, "ysp: " + string(yspeed));
+	draw_text(x - 16, y - 64, "fce:" + string(round(facingDirection)));
+	draw_text(x + 24, y - 64, "aim:" + string(round(aimingDirection)));
+	draw_text(x - 16, y - 72, "am2:" + string(round(aiming2Direction)));
 }

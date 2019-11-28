@@ -60,51 +60,51 @@ while (!file_text_eof(fp))
 	            continue;
 			}
 		}
-        else if (string_pos("lines", line) != 0)
+        else if (string_pos("lines", line) == 1)
         {
             read_object_type = SEQTYPE_LINES;
         }
-        else if (string_pos("choice", line) != 0)
+        else if (string_pos("choice", line) == 1)
         {
             read_object_type = SEQTYPE_CHOICES;
         }
-        else if (string_pos("wait", line) != 0)
+        else if (string_pos("wait", line) == 1)
         {
             read_object_type = SEQTYPE_WAIT;
         }
-		else if (string_pos("screen", line) != 0)
+		else if (string_pos("screen", line) == 1)
 		{
 			read_object_type = SEQTYPE_SCREEN;
 		}
-		else if (string_pos("audio", line) != 0)
+		else if (string_pos("audio", line) == 1)
 		{
 			read_object_type = SEQTYPE_AUDIO;
 		}
-		else if (string_pos("music", line) != 0)
+		else if (string_pos("music", line) == 1)
 		{
 			read_object_type = SEQTYPE_MUSIC;
 		}
-		else if (string_pos("goto", line) != 0)
+		else if (string_pos("goto", line) == 1)
 		{
 			read_object_type = SEQTYPE_GOTO;
 		}
-        else if (string_pos("palette", line) != 0)
+        else if (string_pos("palette", line) == 1)
 		{
 			read_object_type = SEQTYPE_PALETTE;	
 		}
-		else if (string_pos("signal", line) != 0)
+		else if (string_pos("signal", line) == 1)
 		{
 			read_object_type = SEQTYPE_SIGNAL;	
 		}
-		else if (string_pos("ai", line) != 0)
+		else if (string_pos("ai", line) == 1)
 		{
 			read_object_type = SEQTYPE_AI;
 		}
-		else if (string_pos("emote", line) != 0)
+		else if (string_pos("emote", line) == 1)
 		{
 			read_object_type = SEQTYPE_EMOTE;
 		}
-		else if (string_pos("flags", line) != 0)
+		else if (string_pos("flags", line) == 1)
 		{
 			read_object_type = SEQTYPE_FLAGS;
 		}
@@ -501,6 +501,8 @@ while (!file_text_eof(fp))
 					command = kAiRequestCommand_Move;
 				else if (command == "teleport")
 					command = kAiRequestCommand_Teleport;
+				else if (command == "face")
+					command = kAiRequestCommand_Face;
 				else
 					command = kAiRequestCommand_Stop;
 				

@@ -13,12 +13,15 @@ if (cutsceneHasSignal())
 		pl.onGround = false;
 		pl.moEnabled = false;
 		pl.zspeed = 0.0;
+		pl.xspeed = 0.0;
+		pl.yspeed = 0.0;
 		
 		// Set up the animation
-		pl.moAnimationPlayback = true;
-		pl.moAnimationPlaybackLooped = true;
-		pl.animationSpeed = 0.0;
-		pl.sprite_index = pl.kAnimStanding;
+		//pl.moAnimationPlayback = true;
+		//pl.moAnimationPlaybackLooped = true;
+		//pl.moAnimationPlaybackEndOnFinish = false;
+		//pl.animationSpeed = 0.0;
+		//pl.sprite_index = pl.kAnimStanding;
 		
 		with (pl.camera) camPlayerCenter(); // Center the camera.
 		

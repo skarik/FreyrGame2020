@@ -11,6 +11,7 @@
 #macro kAiRequestCommand_Animation 2
 #macro kAiRequestCommand_Move 3
 #macro kAiRequestCommand_Teleport 4
+#macro kAiRequestCommand_Face 5
 
 m_aiScript_style = kAiStyle_Default;
 kAiScriptDefaultStyle = kAiStyle_Default;

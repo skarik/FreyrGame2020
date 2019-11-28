@@ -32,6 +32,38 @@ if (m_aiScript_requestCommand == kAiRequestCommand_Teleport)
 	y = m_aiScript_requestPositionY;
 	z_ready = false;
 }
+else if (m_aiScript_requestCommand == kAiRequestCommand_Face)
+{
+	m_aiScript_requestCommand = null;
+	aimotionFaceAt(m_aiScript_requestPositionX, m_aiScript_requestPositionY, -1);
+}
+else if (m_aiScript_requestCommand == kAiRequestCommand_Animation)
+{
+	m_aiScript_requestCommand = null;
+	
+	var sprite_target = null;
+	if (m_aiScript_requestAnimation == "wakeup0")
+	{
+		sprite_target = sc_16x16char;
+	}
+	else if (m_aiScript_requestAnimation == "wakeup1")
+	{
+		sprite_target = sc_16x16char;
+	}
+	
+	if (sprite_target != null)
+	{
+		moAnimationPlayback = true;
+		moAnimationPlaybackLooped = m_aiScript_requestAnimationLoop;
+		moAnimationPlaybackEndOnFinish = false;
+		animationSpeed = m_aiScript_requestSpeed;
+		sprite_index = sprite_target;
+	}
+	else
+	{
+		moAnimationPlayback = false;
+	}
+}
 
 // do hidden code
 isHidden = false;

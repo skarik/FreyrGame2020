@@ -15,7 +15,6 @@ if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
 }
 
 // update facing direction
-//facingDirection = (facingIndex - 1) * 90;
 if (moEnabled)
 {
 	if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
