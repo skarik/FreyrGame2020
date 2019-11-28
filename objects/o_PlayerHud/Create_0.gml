@@ -2,7 +2,8 @@ m_surface = null;
 m_surfaceLightweight = null;
 m_surfaceLightweightBack = null;
 
-depth = -9000;
+#macro kUiDepthHudBase -9000
+depth = kUiDepthHudBase;
 
 m_inventory_selector = 0.0;
 m_inventory_selectorStart = 0.0;

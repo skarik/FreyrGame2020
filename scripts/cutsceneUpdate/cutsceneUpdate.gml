@@ -57,6 +57,7 @@ case SEQTYPE_LINES:
         var line = ds_map_find_value(entry, SEQI_LINE);
         var facing = ds_map_find_value(entry, SEQI_FACING);
         var ending = ds_map_find_value(entry, SEQI_ENDACTION);
+		var style = ds_map_find_value(entry, SEQI_STYLE);
         
         var target_inst = instance_find(target, count);
 		var l_organic = (ending == SEQEND_ORGANIC) || cts_organic;
@@ -474,7 +475,7 @@ case SEQTYPE_EMOTE:
 	// Pull common params
 	var count = ds_map_find_value(entry, SEQI_COUNT);
     var target = ds_map_find_value(entry, SEQI_TARGET);
-    var emote = ds_map_find_value(entry, SEQI_TYPE);
+    var emote = ds_map_find_value(entry, SEQI_TYPE); 
         
 	// Find target
     var target_inst = instance_find(target, count);
@@ -508,6 +509,50 @@ case SEQTYPE_FLAGS:
 	
 	// Set as a no-frame event
 	return _cutsceneUpdateNoFrame();
+	break;
+	
+case SEQTYPE_WORLD:
+	var command = ds_map_find_value(entry, SEQI_WORLD_COMMAND);
+	var arg = ds_map_find_value(entry, SEQI_WORLD_CMD_ARG);
+	
+	if (command == SEQWORLD_TIME)
+	{
+		worldSetTimeRunning((arg != -1) ? arg : true);
+	}
+	else if (command = SEQWORLD_EVENT)
+	{
+		worldEventCreate(arg);
+	}
+	
+	// Debug out
+	debugOut("Doing world command [" + string(command) + "](" + string(arg) + ")");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
+case SEQTYPE_PORTRAIT:
+	var index = ds_map_find_value(entry, SEQI_PORTRAIT_INDEX);
+	var action = ds_map_find_value(entry, SEQI_PORTRAIT_ACTION);
+	var position = ds_map_find_value(entry, SEQI_PORTRAIT_POS);
+	var alignment = ds_map_find_value(entry, SEQI_PORTRAIT_ALIGNMENT);
+	//var character = ds_map_find_value(entry, SEQI_TARGET);
+	//var face = ds_map_find_value(entry, SEQI_PORTRAIT_FACE);
+	var sprite = ds_map_find_value(entry, SEQI_PORTRAIT_SPRITE);
+	var facing = ds_map_find_value(entry, SEQI_PORTRAIT_FACING);
+
+	if (action == kPortraitActionShow)
+	{
+		portraitShowImage(index, sprite, position, alignment, facing);
+	}
+
+	// Debug out
+	debugOut("Doing portrait...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
 	break;
 }
 

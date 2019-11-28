@@ -16,7 +16,9 @@
         "09c4f3ee-c207-4e98-bb57-7f174e0820a5",
         "a0c63a4d-a6db-4466-af43-02d0fa4ed3c3",
         "f07b9a4f-9b3e-48db-8496-977e1ba8deba",
-        "b636099e-54bb-48e8-9886-737371fa4f0e"
+        "b636099e-54bb-48e8-9886-737371fa4f0e",
+        "c2ddcb57-3609-49df-812d-68ab60ffef6e",
+        "8274eef0-fa5b-4337-a768-54a90b5f7899"
     ],
     "filterType": "GMScript",
     "folderName": "Backend",

@@ -14,4 +14,6 @@ m_day = 1;
 m_timeOfDay = 8;
 m_hourPassed = false;
 
+m_timeRunning = true;
+
 if (!exists(o_darkness)) new(o_darkness);

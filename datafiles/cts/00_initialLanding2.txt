@@ -156,7 +156,8 @@ portrait
 	action show
 	position 1.0
 	align right
-	target nathan
+	face left
+	character nathan
 	face questioning
 }
 

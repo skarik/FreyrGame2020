@@ -3,7 +3,7 @@ with ( ob_CtsTalker )
     input_fadeout = true;
 }
 
-depth = -9005;
+depth = kUiDepthGabber;
 
 input_actor = null;
 input_choice_count = 0;

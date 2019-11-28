@@ -3,7 +3,8 @@ with ( ob_CtsTalker )
     input_fadeout = true;
 }
 
-depth = -9005;
+#macro kUiDepthGabber -9005
+depth = kUiDepthGabber;
 
 input_actor = null;
 input_name = "";

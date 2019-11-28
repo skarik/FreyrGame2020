@@ -108,6 +108,14 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_FLAGS;
 		}
+		else if (string_pos("world", line) == 1)
+		{
+			read_object_type = SEQTYPE_WORLD;
+		}
+		else if (string_pos("portrait", line) == 1)
+		{
+			read_object_type = SEQTYPE_PORTRAIT;
+		}
 		
         // If an object was read - prepare to read it in
         if (read_object_type != SEQTYPE_NULL)
@@ -183,9 +191,7 @@ while (!file_text_eof(fp))
                 // First grab the target
                 var target = ds_map_find_value(read_object_map, "target");
                 target = _cutsceneParseTarget(target);
-                var targeti = ds_map_find_value(read_object_map, "targeti");
-                if (is_undefined(targeti))
-                    targeti = "0";
+				
                 var object = ds_map_find_value(read_object_map, "object");
                 if (is_undefined(object))
                     object = "0";
@@ -213,6 +219,14 @@ while (!file_text_eof(fp))
                     facing = SEQI_FACING_UP;
 				else
 					facing = _cutsceneParseTarget(facing);
+					
+				var style = ds_map_find_value(read_object_map, "style");
+				if (is_undefined(style))
+					style = kLinesStyle_Default;
+				else if (style == "portrait")
+					style = kLinesStyle_Portrait;
+				else
+					style = kLinesStyle_Default;
                     
                 // Now, loop through the input map and select lines
                 var index = 0;
@@ -239,10 +253,10 @@ while (!file_text_eof(fp))
 						ds_map_add(new_map, SEQI_LINE + SEQI_LINE_OFFSET_NONBI, linep);
                     ds_map_add(new_map, SEQI_WAV, wave);
                     ds_map_add(new_map, SEQI_TARGET, target);
-                    ds_map_add(new_map, SEQI_TYPE, real(targeti));
                     ds_map_add(new_map, SEQI_COUNT, real(object));
                     ds_map_add(new_map, SEQI_FACING, facing);
                     ds_map_add(new_map, SEQI_ENDACTION, ending);
+					ds_map_add(new_map, SEQI_STYLE, style);
                     
                     // Save the new map data
                     cts_entry[cts_entry_count] = new_map;
@@ -613,6 +627,124 @@ while (!file_text_eof(fp))
                 cts_entry_type[cts_entry_count] = SEQTYPE_FLAGS;
                 cts_entry_count++;
 			}
+			else if (read_object_type == SEQTYPE_WORLD)
+			{
+				// Create map at the start since this one branches very quickly
+				var new_map = ds_map_create();
+				
+				var time = ds_map_find_value(read_object_map, "time");
+				var event = ds_map_find_value(read_object_map, "event");
+				if (!is_undefined(time))
+				{
+					if (time == "stop")
+						time = 0;
+					else if (time == "start")
+						time = 1;
+					else 
+						time = -1;
+						
+					ds_map_add(new_map, SEQI_WORLD_COMMAND, SEQWORLD_TIME);
+					ds_map_add(new_map, SEQI_WORLD_CMD_ARG, time);
+				}
+				else if (!is_undefined(event))
+				{
+					if (event == "riftpulse")
+						event = kWorldEvent_Riftpulse;
+					else
+						event = kWorldEvent_NoEvent;
+					
+					ds_map_add(new_map, SEQI_WORLD_COMMAND, SEQWORLD_EVENT);
+					ds_map_add(new_map, SEQI_WORLD_CMD_ARG, event);
+				}
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_WORLD;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_PORTRAIT)
+			{
+				var index = ds_map_find_value(read_object_map, "index");
+				if (is_undefined(index))
+					index = "0";
+					
+				var action = ds_map_find_value(read_object_map, "action");
+				if (is_undefined(action))
+					action = kPortraitActionShow;
+				else if (action == "show")
+					action = kPortraitActionShow;
+				else if (action == "hide")
+					action = kPortraitActionHide;
+				else if (action == "hideall")
+					action = kPortraitActionHideAll;
+				else if (action == "move")
+					action = kPortraitActionMove;
+				else
+					action = kPortraitActionShow;
+					
+				var position = ds_map_find_value(read_object_map, "position");
+				if (is_undefined(position))
+					position = ds_map_find_value(read_object_map, "pos");
+				if (is_undefined(position))
+					position = "0.0";
+				
+				var alignment = ds_map_find_value(read_object_map, "alignment");
+				if (is_undefined(alignment))
+					alignment = "";
+				if (alignment == "left")
+					alignment = kPortraitAlignLeft;
+				else if (alignment == "right")
+					alignment = kPortraitAlignRight;
+				else if (alignment == "center")
+					alignment = kPortraitAlignCenter;
+				else
+					alignment = kPortraitAlignLeft;
+				
+				var character = ds_map_find_value(read_object_map, "character");
+				character = _cutsceneParseTarget(character);
+				
+				var expression = ds_map_find_value(read_object_map, "face");
+				if (is_undefined(expression))
+					expression = "";
+				if (expression == "neutral")
+					expression = kPortraitExpressionNeutral;
+				else if (expression == "question" || expression == "questioning")
+					expression = kPortraitExpressionQuestioning;
+				else
+					expression = kPortraitExpressionNeutral;
+					
+				var facing = ds_map_find_value(read_object_map, "facing");
+				if (is_undefined(facing))
+					facing = ds_map_find_value(read_object_map, "face");
+				if (is_undefined(facing))
+					facing = 1.0;
+				else if (facing == "left")
+					facing = 1.0;
+				else if (facing == "right")
+					facing = -1.0;
+				
+				var new_map = ds_map_create();
+                ds_map_add(new_map, SEQI_PORTRAIT_INDEX, index);
+				ds_map_add(new_map, SEQI_PORTRAIT_ACTION, action);
+				ds_map_add(new_map, SEQI_PORTRAIT_POS, real(position));
+				ds_map_add(new_map, SEQI_PORTRAIT_ALIGNMENT, alignment);
+				ds_map_add(new_map, SEQI_TARGET, character);
+				ds_map_add(new_map, SEQI_PORTRAIT_FACING, facing);
+				ds_map_add(new_map, SEQI_PORTRAIT_EXPRESSION, expression);
+				ds_map_add(new_map, SEQI_PORTRAIT_SPRITE, _cutsceneParsePortrait(character, expression));
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_PORTRAIT;
+                cts_entry_count++;
+			}
+			
 			
             read_state = STATE_READ_LINES;
             continue;

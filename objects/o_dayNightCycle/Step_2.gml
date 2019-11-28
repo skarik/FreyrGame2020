@@ -3,10 +3,13 @@
 // update the time of day
 //m_timeOfDay += Time.deltaTime;
 var timeOfDayPrev = m_timeOfDay;
-if (Debug.convention_mode)
-	m_timeOfDay += Time.deltaTime / 60.0 * 3.0;
-else
+if (m_timeRunning)
+{
+	if (Debug.convention_mode)
+		m_timeOfDay += Time.deltaTime / 60.0 * 3.0;
+	else
 	m_timeOfDay += Time.deltaTime / 60.0;// * 5.0;
+}
 // Perform on-the-hour checks
 if (frac(m_timeOfDay) < frac(timeOfDayPrev))
 {
