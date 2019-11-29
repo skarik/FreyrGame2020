@@ -556,6 +556,17 @@ case SEQTYPE_PORTRAIT:
 	{
 		ctsPortraitShowImage(index, sprite, position, alignment, facing);
 	}
+	else if (action = kPortraitActionHide)
+	{
+		ctsPortraitShowImage(index, null, 0, 0, 0);
+	}
+	else if (action = kPortraitActionHideAll)
+	{
+		for (var i = 0; i < kPortraitIndex_Max; ++i)
+		{
+			ctsPortraitShowImage(i, null, 0, 0, 0);
+		}
+	}
 
 	// Debug out
 	debugOut("Doing portrait...");

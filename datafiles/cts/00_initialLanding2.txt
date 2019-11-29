@@ -149,9 +149,9 @@ wait
 	time 2.0
 }
 
-// slide in the portrait here
+// slide in the portraits here:
 portrait
-{
+{	// Nathan portrait
 	index 0
 	action show
 	position 1.0
@@ -160,11 +160,20 @@ portrait
 	character nathan
 	face questioning
 }
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.0
+	align left
+	face right
+	character player
+	face questioning
+}
 
 lines
 {
-    //target  nathan
-	object 
+    target  nathan
 	style portrait
 	object 0
 	1 $bAre$$ you alive?
@@ -194,6 +203,8 @@ lines
 {
 	// this means the player
     target idiot
+	style portrait
+	object 1
 	
 	1c So uh$p, I don't usually drop from the sky too often.$p Or at least, not where anyone can see.
 	2c Assuming I did...$pnot too bad of a first choice.$p Who exactly are you?
@@ -208,6 +219,9 @@ lines
 lines
 {
 	target nathan
+	style portrait
+	object 0
+	
 	1 My name is $3Nathan$0.
 	2 At least, that's what everyone calls me.
 }
@@ -233,6 +247,8 @@ choice
 	lines
 	{
 		target player
+		style portrait
+		object 1
 		1c Well Nathan$p, my name is [PLAYER], and it's a pleasure.
 		2c Thanks for fixing up my face. It's really the only thing I got going for me.
 		
@@ -251,6 +267,8 @@ choice
 	lines
 	{
 		target nathan
+		style portrait
+		object 0
 		1c Right.
 		1a Stay still for a moment.
 		1p That's right, this is my home.
@@ -266,6 +284,8 @@ choice
 	lines
 	{
 		target player
+		style portrait
+		object 1
 		1c Nathan, huh? Well, I'm [PLAYER]. $pAt least, I think I am?
 		2c I think I might have bumped my head pretty hard back there.
 		
@@ -288,6 +308,18 @@ music // start with the gentle music track (perc + guitar)
     volume 0.0
     3volume 1.0
 	7volume 1.0
+}
+
+// hide portraits
+portrait
+{
+	index 0
+	action hide
+}
+portrait
+{
+	index 1
+	action hide
 }
 
 screen
