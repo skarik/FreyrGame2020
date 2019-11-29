@@ -1,2 +1,2 @@
-Choice_Draw();
+_choiceDraw();
 

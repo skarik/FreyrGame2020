@@ -1,0 +1,3 @@
+
+_talkerDrawBox();
+_gabberDrawText();

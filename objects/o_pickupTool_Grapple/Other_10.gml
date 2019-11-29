@@ -10,7 +10,7 @@ var talker;
 	talker.display_item_starty = y;
 	
 	//talker.display_text = talker.input_text;
-	with (talker) Cts_ParseDialogue();
+	with (talker) ctsParseDialogue();
 
 this.visible = false;
 m_isPickingUp = false;

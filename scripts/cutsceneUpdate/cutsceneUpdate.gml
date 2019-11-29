@@ -59,7 +59,7 @@ case SEQTYPE_LINES:
         var ending = ds_map_find_value(entry, SEQI_ENDACTION);
 		var style = ds_map_find_value(entry, SEQI_STYLE);
         
-        var target_inst = instance_find(target, count);
+        var target_inst = instance_find(target, (style != kLinesStyle_Portrait) ? count : 0);
 		var l_organic = (ending == SEQEND_ORGANIC) || cts_organic;
     
 		// FREYR SPECIFIC:
@@ -82,10 +82,20 @@ case SEQTYPE_LINES:
 		}
 	
         // Make a talker with all the input info
-        var gabber = Cts_MakeGabber(target_inst, "", line);
-            gabber.input_priority = !l_organic;
-            gabber.input_disable = l_organic;
-            gabber.input_autoclose = (ending == SEQEND_AUTO);
+		if (style == kLinesStyle_Default)
+		{
+	        var gabber = ctsMakeGabber(target_inst, "", line);
+	            gabber.input_priority = !l_organic;
+	            gabber.input_disable = l_organic;
+	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+		}
+		else if (style == kLinesStyle_Portrait)
+		{
+			var gabber = ctsMakeTalker(target_inst, count, "", line);
+	            gabber.input_priority = !l_organic;
+	            gabber.input_disable = l_organic;
+	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+		}
             
 		// SILENT SKY SPECIFIC:
         // Update talker's sprites
@@ -220,13 +230,13 @@ case SEQTYPE_SCREEN:
 		}
 		else if (type == SEQSCREEN_CTSIN)
 		{
-			Cts_ShowBars();
+			ctsShowBars();
 			cts_entry_current++;
 			cts_execute_state = 0;   
 		}
 		else if (type == SEQSCREEN_CTSOUT)
 		{
-			Cts_HideBars();
+			ctsHideBars();
 			cts_entry_current++;
 			cts_execute_state = 0;   
 		}
@@ -544,7 +554,7 @@ case SEQTYPE_PORTRAIT:
 
 	if (action == kPortraitActionShow)
 	{
-		portraitShowImage(index, sprite, position, alignment, facing);
+		ctsPortraitShowImage(index, sprite, position, alignment, facing);
 	}
 
 	// Debug out

@@ -4,7 +4,7 @@ if (m_owner != null && exists(m_user) && m_user.id == o_PlayerTest.id)
 {
 	if (!exists(ob_CtsTalker) && !m_interacting)
 	{
-		/*Cts_MakeGabber(m_user, "Self", "It's a $b" + m_name + "$$.");*/
+		/*ctsMakeGabber(m_user, "Self", "It's a $b" + m_name + "$$.");*/
 		
 		/*draw_set_font(global.font_arvo9); // Set font for the width prediction
 		

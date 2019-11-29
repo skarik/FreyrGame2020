@@ -11,7 +11,7 @@ var talker;
 	talker.input_addItem = false;
 	
 	//talker.display_text = talker.input_text;
-	with (talker) Cts_ParseDialogue();
+	with (talker) ctsParseDialogue();
 
 this.visible = false;
 m_isPickingUp = false;
