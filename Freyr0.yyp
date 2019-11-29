@@ -1607,6 +1607,14 @@
             }
         },
         {
+            "Key": "293afe3d-3d71-42ab-9d93-9664f0687a00",
+            "Value": {
+                "id": "29d202a7-9e1d-4de8-9473-b7fdc8830cc7",
+                "resourcePath": "scripts\\draw_text_spaced\\draw_text_spaced.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2941b7e7-df15-4f1c-826e-7cae0985a6eb",
             "Value": {
                 "id": "31012f59-60e8-470c-89fc-5a31dd6ba5b4",
@@ -10272,6 +10280,7 @@
         "56179266-d7d6-4ee1-8be7-cf0dd9d45938",
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
         "63118223-c896-4070-8a1a-1948f4083c96",
+        "293afe3d-3d71-42ab-9d93-9664f0687a00",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "24ac4ceb-2490-41d2-9219-f66823e9271c",
         "46bdd690-bda6-41cb-905d-54e029ff18fb",

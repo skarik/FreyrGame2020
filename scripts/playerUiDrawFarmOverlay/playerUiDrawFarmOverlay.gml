@@ -24,22 +24,10 @@ if (m_farmoverlay_blend > 0.0)
 	
 	draw_set_alpha(1.0 * sqrt(saturate(m_farmoverlay_blend * 2.0 - 1.0)));
 	draw_set_font(global.font_arvo9);
-	draw_set_halign(fa_left);
+	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	draw_set_color(c_white);
-	var l_renderString = m_farmoverlay_targetString;
-	var l_renderStringLength = string_length(l_renderString);
-	var l_pixelWidth = string_width(l_renderString);
-	var l_pixelLetterPadding = 2;
-	var l_pixelWidthModded = l_pixelWidth + l_pixelLetterPadding * (l_renderStringLength - 1);
-	var l_pixelHalfWidthCenter = floor((l_pixelWidthModded + string_length("m")) * 0.5);
-	var l_penX = 0;
-	for (var i = 1; i <= l_renderStringLength; ++i)
-	{
-		var l_character = string_char_at(l_renderString, i);
-		draw_text(dx + 8 - l_pixelHalfWidthCenter + l_penX, dy - 4, l_character);
-		l_penX += ceil(string_width(l_character) + l_pixelLetterPadding);
-	}
+	draw_text_spaced(dx + 8, dy - 4, m_farmoverlay_targetString, 2);
 	draw_set_alpha(1.0);
 
 	// reset target to original one
