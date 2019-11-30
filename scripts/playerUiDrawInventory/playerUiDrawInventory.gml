@@ -85,14 +85,14 @@ draw_set_alpha(1.0);
 	// inventory item name
 	surface_reset_target();
 	surface_set_target(m_surface);
-	draw_set_font(f_josefinSlab9);
+	draw_set_font(global.font_arvo9);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_white);
 	draw_set_alpha((1.0 - m_bag_totalBlend) * saturate(m_inventory_selectorNameBlend * 4.0));
-	draw_text(
+	draw_text_spaced(
 		dx + 8 - 100.0 * smoothstep(1.0 - m_inventory_selectorNameBlend), dy - 20,
-		m_inventory_selectorName);
+		m_inventory_selectorName, 3);
 		
 	// reset target to proper one
 	surface_reset_target();

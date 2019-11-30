@@ -6,7 +6,8 @@
     "children": [
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
         "63118223-c896-4070-8a1a-1948f4083c96",
-        "293afe3d-3d71-42ab-9d93-9664f0687a00"
+        "293afe3d-3d71-42ab-9d93-9664f0687a00",
+        "c676649c-6bae-4657-8846-f81f78f9c4ba"
     ],
     "filterType": "GMScript",
     "folderName": "Drawing",

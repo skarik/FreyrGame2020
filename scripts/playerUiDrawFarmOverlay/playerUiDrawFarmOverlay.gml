@@ -35,7 +35,7 @@ if (m_farmoverlay_blend > 0.0)
 	surface_set_target(m_surfaceLightweight);
 }
 
-if (0)
+/*if (0)
 {
 	// tillable
 	if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking && o_PlayerTest.moEnabled)
@@ -98,7 +98,7 @@ if (0)
 		surface_set_target(m_surfaceLightweight);
 	}
 	// buildable
-	/*if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
+	if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
 	{
 		dx = o_PlayerTest.currentBuildableX - (GameCamera.x - GameCamera.width / 2);
 		dy = o_PlayerTest.currentBuildableY - (GameCamera.y - GameCamera.height / 2);
@@ -109,7 +109,7 @@ if (0)
 		draw_set_alpha(0.9);
 		draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 		draw_set_alpha(1.0);
-	}*/
+	}
 	// tillable timer
 	if (o_PlayerTest.m_isTilling)
 	{
@@ -135,4 +135,4 @@ if (0)
 		draw_rectangle(dx + 1, dy + 1, dx + 14, dy + 14, true);
 		draw_set_alpha(1.0);
 	}
-}
+}*/

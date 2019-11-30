@@ -21,22 +21,28 @@ if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker) && o_Pl
 		useXoffset = 5;
 		
 	//var xSign = (o_PlayerTest.facingIndex == 3) ? -1 : +1;
-	var xSign = (useXoffset < 0.0) ? -1 : +1;
+	//var xSign = (useXoffset < 0.0) ? -1 : +1;
+	var xSign = clamp(useXoffset * 0.4, -1.0, +1.0);
 	
 	draw_set_color(c_white);
 	draw_set_alpha(1.0);
 	draw_line(dx, dy, dx + useXoffset, dy + useYoffset);
 	draw_line(dx + useXoffset, dy + useYoffset, dx + useXoffset + 20 * xSign, dy + useYoffset);
 	
-	draw_set_font(f_josefinSlab9);
+	var string_xsize = 0.0;
 	draw_set_alpha(1.0);
-	draw_set_halign((xSign < 0.0) ? fa_right : fa_left);
+	//draw_set_halign((xSign < 0.0) ? fa_right : fa_left);
+	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	draw_set_color(c_white);
-	draw_text(dx + useXoffset + 3 * xSign, dy - 1 + useYoffset, usable.m_actionName);
+	draw_set_font(global.font_arvo9Bold);
+	string_xsize = string_width_spaced(usable.m_actionName, 2);
+	draw_text_spaced(dx + useXoffset + 3 * xSign + string_xsize * xSign * 0.5, dy - 1 + useYoffset, usable.m_actionName, 2);
 	draw_set_valign(fa_top);
 	draw_set_color(c_gray);
-	draw_text(dx + useXoffset + 3 * xSign, dy + 2 + useYoffset, usable.m_name);
+	draw_set_font(global.font_arvo9);
+	string_xsize = string_width_spaced(usable.m_name, 2);
+	draw_text_spaced(dx + useXoffset + 3 * xSign + string_xsize * xSign * 0.5, dy + 2 + useYoffset, usable.m_name, 2);
 }
 
 // button contexts

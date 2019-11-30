@@ -74,12 +74,12 @@ if (o_PlayerTest.m_currentChest != null)
 	
 	if (chest_size == 0)
 	{
-		draw_set_font(f_josefinSlab9);
+		draw_set_font(global.font_arvo9);
 		draw_set_alpha(1.0);
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_middle);
 		draw_set_color(c_black);
-		draw_text(dx_text, dy_text + dspace * 0.5, "[Empty Chest]");
+		draw_text_spaced(dx_text + 1, dy_text + dspace * 0.5, "[Empty Chest]", 2);
 	}
 	else
 	{
@@ -96,21 +96,21 @@ if (o_PlayerTest.m_currentChest != null)
 				draw_set_valign(fa_bottom);
 				draw_text(dx_text + 30, dy_text + 16 + i * dspace, string(chest.item[i].count));
 				
-				draw_set_font(f_josefinSlab9);
+				draw_set_font(global.font_arvo9);
 				draw_set_alpha(1.0);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_middle);
 				draw_set_color(c_black);
-				draw_text(dx_text + 45, dy_text + i * dspace + dspace * 0.5, string(chest.item[i].name));
+				draw_text_spaced(dx_text + 45, dy_text + i * dspace + dspace * 0.5, string(chest.item[i].name), 2);
 			}
 			else
 			{
-				draw_set_font(f_josefinSlab9);
+				draw_set_font(global.font_arvo9);
 				draw_set_alpha(1.0);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_middle);
 				draw_set_color(c_black);
-				draw_text(dx_text + 45, dy_text + i * dspace + dspace * 0.5, "[Empty Spot]");
+				draw_text_spaced(dx_text + 45, dy_text + i * dspace + dspace * 0.5, "[Empty Spot]", 2);
 			}
 		}
 	}
