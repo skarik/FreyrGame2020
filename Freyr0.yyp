@@ -2087,6 +2087,14 @@
             }
         },
         {
+            "Key": "34ca9abb-d72e-42d3-9168-ad838680299c",
+            "Value": {
+                "id": "2375fde6-8d49-4ba1-b410-70e7a2645009",
+                "resourcePath": "sprites\\sui_portraitPlayerCQuestioning\\sui_portraitPlayerCQuestioning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "34e5a342-cab2-424a-a354-de7de005c907",
             "Value": {
                 "id": "3738e4bb-dfe8-4a21-8284-060be1eaf635",
@@ -2492,6 +2500,14 @@
                 "id": "f61e4661-8589-4189-908b-fa2e94c3ec2e",
                 "resourcePath": "views\\40f5d3bc-5e76-49a0-a9c0-665c530a034a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "41313994-3421-4132-9552-cf149fdc01e6",
+            "Value": {
+                "id": "99d77c73-67ab-4634-bc85-df2a60650ca6",
+                "resourcePath": "scripts\\cutsceneGetPortrait\\cutsceneGetPortrait.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3711,6 +3727,14 @@
             }
         },
         {
+            "Key": "60820fee-bed6-4996-8df0-c49310fac46c",
+            "Value": {
+                "id": "4aa3f446-3381-4ea4-8b64-9276970b21e6",
+                "resourcePath": "sprites\\sui_portraitPlayerCnekkidQuestioning\\sui_portraitPlayerCnekkidQuestioning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "60933d88-8817-4369-9da4-b5add7134285",
             "Value": {
                 "id": "b3c3f071-7253-442d-8634-4f8c5297d8b7",
@@ -4668,6 +4692,14 @@
                 "id": "b67cd55b-b256-4e1c-939c-88d82bad785c",
                 "resourcePath": "scripts\\point_on_camera_wide\\point_on_camera_wide.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "783f62f9-fe72-4293-8ca8-7e64b332faec",
+            "Value": {
+                "id": "6024e802-eb36-4cb7-8f10-ece929e4af46",
+                "resourcePath": "sprites\\sui_portraitPlayerPQuestioning\\sui_portraitPlayerPQuestioning.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7439,6 +7471,14 @@
             }
         },
         {
+            "Key": "bb625673-af31-40e1-9dfd-78d8ce17796f",
+            "Value": {
+                "id": "3a415992-e952-4b2a-b197-6dfc7e71093f",
+                "resourcePath": "sprites\\sui_portraitPlayerAQuestioning\\sui_portraitPlayerAQuestioning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bc1219a6-101a-4af8-8700-a6b5b01af9ce",
             "Value": {
                 "id": "e2199132-3152-4fcc-a990-80c48228d854",
@@ -9031,6 +9071,14 @@
             }
         },
         {
+            "Key": "e19156e8-05a1-4e99-a73d-e9969a550955",
+            "Value": {
+                "id": "0883d0ab-e99c-4006-8131-a137e5d6f79e",
+                "resourcePath": "sprites\\sui_portraitPlayerAnekkidQuestioning\\sui_portraitPlayerAnekkidQuestioning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e1a419d9-7ac2-4324-ac8c-9195259dfe8f",
             "Value": {
                 "id": "2b1671b3-8b10-47f3-944e-53a08ed86dec",
@@ -9991,6 +10039,14 @@
             }
         },
         {
+            "Key": "fa79d696-15b5-4f13-a961-2c78f581bd9d",
+            "Value": {
+                "id": "87ad372e-e076-43cb-bfaf-c28b481ffc38",
+                "resourcePath": "sprites\\sui_portraitPlayerPnekkidQuestioning\\sui_portraitPlayerPnekkidQuestioning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "faacf7ed-ee79-430e-91cb-472fb1fa5658",
             "Value": {
                 "id": "925f2318-5379-421e-8191-4480bf9614e3",
@@ -10632,6 +10688,7 @@
         "a909e678-0753-4cb1-9af6-8c1554e98fbd",
         "40039c77-c4ca-4020-bae1-7f3401c84ccf",
         "484bb4f7-d043-4989-9448-811523a329bd",
+        "41313994-3421-4132-9552-cf149fdc01e6",
         "b778584d-5b55-4179-8b7a-752bd53941a7",
         "345350f8-60ee-4bc5-8c3c-c760b79d45a7",
         "47bbbf36-54a1-4f98-9f36-2417c633b589",

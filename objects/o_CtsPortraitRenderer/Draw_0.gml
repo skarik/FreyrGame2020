@@ -3,7 +3,8 @@
 var dx = GameCamera.view_x;
 var dy = GameCamera.view_y;
 
-for (var i = 0; i < kPortraitIndex_Max; ++i)
+//for (var i = 0; i < kPortraitIndex_Max; ++i)
+for (var i = kPortraitIndex_Max - 1; i >= 0; --i)
 {
 	if (state_sprite[i] != null && state_alpha[i] > 0.0)
 	{

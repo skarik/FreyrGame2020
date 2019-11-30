@@ -650,6 +650,10 @@ while (!file_text_eof(fp))
 				{
 					if (event == "riftpulse")
 						event = kWorldEvent_Riftpulse;
+					else if (event == "makePlayerShirtless")
+						event = kWorldEvent_MakePlayerShirtless;
+					else if (event == "makePlayerShirtmore")
+						event = kWorldEvent_MakePlayerShirtmore;
 					else
 						event = kWorldEvent_NoEvent;
 					
@@ -708,7 +712,7 @@ while (!file_text_eof(fp))
 				var character = ds_map_find_value(read_object_map, "character");
 				character = _cutsceneParseTarget(character);
 				
-				var expression = ds_map_find_value(read_object_map, "face");
+				var expression = ds_map_find_value(read_object_map, "expression");
 				if (is_undefined(expression))
 					expression = "";
 				if (expression == "neutral")

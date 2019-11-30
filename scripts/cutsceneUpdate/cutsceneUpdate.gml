@@ -547,10 +547,12 @@ case SEQTYPE_PORTRAIT:
 	var action = ds_map_find_value(entry, SEQI_PORTRAIT_ACTION);
 	var position = ds_map_find_value(entry, SEQI_PORTRAIT_POS);
 	var alignment = ds_map_find_value(entry, SEQI_PORTRAIT_ALIGNMENT);
-	//var character = ds_map_find_value(entry, SEQI_TARGET);
-	//var face = ds_map_find_value(entry, SEQI_PORTRAIT_FACE);
+	var character = ds_map_find_value(entry, SEQI_TARGET);
+	var face = ds_map_find_value(entry, SEQI_PORTRAIT_EXPRESSION);
 	var sprite = ds_map_find_value(entry, SEQI_PORTRAIT_SPRITE);
 	var facing = ds_map_find_value(entry, SEQI_PORTRAIT_FACING);
+	
+	sprite = cutsceneGetPortrait(character, face);
 
 	if (action == kPortraitActionShow)
 	{

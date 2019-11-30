@@ -58,8 +58,12 @@ screen
 }
 
 world
-{
+{	// Stop the time of day from advancing during this intro sequence
 	time stop
+}
+world
+{	// :)
+	event makePlayerShirtless
 }
 
 //music // start with the gentle music track
@@ -158,7 +162,7 @@ portrait
 	align right
 	face left
 	character nathan
-	face questioning
+	expression questioning
 }
 portrait
 {	// Player portrait
@@ -168,7 +172,7 @@ portrait
 	align left
 	face right
 	character player
-	face questioning
+	expression questioning
 }
 
 lines
@@ -329,6 +333,12 @@ screen
 signal
 {
 	id ended
+}
+
+// TODO: Animation with a shirt
+world
+{
+	event makePlayerShirtmore
 }
 
 // And now we open up and let the player move about!
