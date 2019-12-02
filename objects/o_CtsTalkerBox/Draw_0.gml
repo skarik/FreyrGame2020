@@ -1,1 +1,1 @@
-_talkerDraw();
+//_talkerDraw();

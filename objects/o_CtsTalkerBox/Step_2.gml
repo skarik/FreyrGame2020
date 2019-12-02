@@ -48,3 +48,6 @@ else
     uiPosX = view_xview0 + 64;
     uiPosY = view_yview0 + 64;
 }
+
+uiPosX -= GameCamera.view_x;
+uiPosY -= GameCamera.view_y;

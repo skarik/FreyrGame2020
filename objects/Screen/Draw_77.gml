@@ -1,4 +1,4 @@
-/// @description Upscale & push to screen
+/// @description Effects, upscale, push
 
 view_set_camera(1, m_outputCamera);
 view_set_visible(0, false);
@@ -11,6 +11,8 @@ view_set_visible(1, true);
 with (o_replatte) event_user(0);
 with (o_darkness) event_user(0);
 with (o_PlayerHud) event_user(0);
+with (o_CtsPortraitRenderer) event_user(0);
+with (o_CtsTalkerBox) event_user(0);
 
 // Upscale to the screen
 surface_set_target(m_outputSurface);
