@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "04ad5e61-cfb9-4c1b-8a88-dcfca90eadce",
+            "Value": {
+                "id": "bfaf8b6a-83f2-446b-9125-b32f6587cb36",
+                "resourcePath": "rooms\\rm_NOHUAFOOLS\\rm_NOHUAFOOLS.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "04b447aa-ceaa-49d1-a893-4f1685ca0cce",
             "Value": {
                 "id": "d44f0122-ed3a-47d8-9e7c-1b4056d9e0f4",
@@ -548,6 +556,14 @@
                 "id": "22cca4bb-afe0-4361-8528-27b39f361572",
                 "resourcePath": "sprites\\sui_inventory_bag_1_closed\\sui_inventory_bag_1_closed.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0fcdfde7-8cb9-4662-a84e-5ee4824839fb",
+            "Value": {
+                "id": "ee7cf714-9920-4977-823d-041d9bb9f4c2",
+                "resourcePath": "rooms\\rm_NOHUAFOOLS1\\rm_NOHUAFOOLS1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1420,6 +1436,14 @@
                 "id": "2bfe9a99-23fc-466e-b27a-ba1057d0f080",
                 "resourcePath": "sprites\\s_assetCCatPuddle\\s_assetCCatPuddle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2529e65f-a83b-4fd1-af1b-65ec73bbc1e2",
+            "Value": {
+                "id": "8bdf98a4-c114-4789-bc8a-e0203f6836bf",
+                "resourcePath": "rooms\\rm_NOHUAFOOLS2\\rm_NOHUAFOOLS2.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -7367,6 +7391,14 @@
             }
         },
         {
+            "Key": "b7d241fb-b733-4815-92c1-943de7d253b7",
+            "Value": {
+                "id": "029bd929-c364-4e58-a014-4e48859fba7a",
+                "resourcePath": "rooms\\rm_NOHUAFOOLS3\\rm_NOHUAFOOLS3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "b7f54975-0516-42e2-89fc-02a6e2c7acb8",
             "Value": {
                 "id": "af69f6b4-1d8c-4ccb-be51-4aff2cd521d1",
@@ -10212,6 +10244,14 @@
                 "id": "c3e562f9-fb9b-4d0a-a581-b6e5dca1a9ac",
                 "resourcePath": "objects\\o_lightOuterglowGrad\\o_lightOuterglowGrad.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fe6ab3b4-522f-4ff2-862f-bdc6c5a7620e",
+            "Value": {
+                "id": "f644c64f-db94-4840-9a01-7a2fa17a5830",
+                "resourcePath": "views\\fe6ab3b4-522f-4ff2-862f-bdc6c5a7620e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
