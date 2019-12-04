@@ -3343,6 +3343,14 @@
             }
         },
         {
+            "Key": "569b8e60-4be4-43a3-9bae-9f1391b08daf",
+            "Value": {
+                "id": "16dd52a1-ad31-401e-ad88-743a6a58ff21",
+                "resourcePath": "rooms\\rm_fools_tower\\rm_fools_tower.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "56a84241-7e72-4cfe-8345-7b8986e62560",
             "Value": {
                 "id": "bd6a1354-c6e6-4582-92d9-329c44507c4b",
@@ -8676,6 +8684,14 @@
                 "id": "5695a828-d153-4595-be07-6ee52019362d",
                 "resourcePath": "scripts\\ctsMakeTalker\\ctsMakeTalker.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d8fd5398-bad0-48d2-8441-c4c8fa607b0e",
+            "Value": {
+                "id": "bdef6c68-0bee-42f9-94c8-ee05b3fafa93",
+                "resourcePath": "views\\d8fd5398-bad0-48d2-8441-c4c8fa607b0e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
