@@ -10119,6 +10119,14 @@
             }
         },
         {
+            "Key": "fb023a45-be22-4f8d-9669-4205559cc402",
+            "Value": {
+                "id": "70040be2-ecb3-407a-9829-52f87a8fd2ba",
+                "resourcePath": "scripts\\_camPlayerUpdateFocus\\_camPlayerUpdateFocus.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb3f2951-5948-4dec-bcac-2f44ee3112a9",
             "Value": {
                 "id": "b16f74c3-87b9-48e4-91da-c398759d0b0c",
@@ -10542,6 +10550,7 @@
         "6f042160-b044-4b9f-9932-19a0705ab9f6",
         "c8117af1-cffe-4a01-b0cf-4c538ac14889",
         "7e5be803-e523-49f7-a1bb-40b75a5ee468",
+        "fb023a45-be22-4f8d-9669-4205559cc402",
         "c7a4ec62-6c7c-46f2-8a48-79dbdf876ea5",
         "b9fd8458-26b7-45d7-96a5-511eb391bc1f",
         "0187aa55-3265-4f4e-a3ab-94933a30f548",
