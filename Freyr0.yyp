@@ -2431,6 +2431,14 @@
             }
         },
         {
+            "Key": "3e28fa4f-4265-46db-83dd-c2fe5e0f3248",
+            "Value": {
+                "id": "fae712cd-3f19-4655-bf11-c757453cc4fc",
+                "resourcePath": "objects\\ob_ambientTowerEntrance\\ob_ambientTowerEntrance.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3f248f63-9c12-47b8-b536-df5e65ea64a4",
             "Value": {
                 "id": "4d76a86a-d809-42a3-929a-7e309401fc34",
@@ -9868,6 +9876,14 @@
                 "id": "28459958-72b1-4443-b2ca-83d463fadaf7",
                 "resourcePath": "sprites\\spt_bloodHud\\spt_bloodHud.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f5ad6926-d9a7-4ba5-b888-1f89f9989790",
+            "Value": {
+                "id": "5a130737-8ea4-42df-86a5-aa51d89c0ad3",
+                "resourcePath": "rooms\\rm_fools_tower_entrance\\rm_fools_tower_entrance.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

@@ -14,10 +14,26 @@ if (!surface_exists(m_bloom2))
 }
 
 // update bloom params
-if (exists(o_dayNightCycle))
+if (exists(o_dayNightCycle) || exists(ob_ambientLighting))
 {
-	bloom_mul = 1.8 * saturate(0.8 - color_get_value(o_dayNightCycle.m_ambientLight) / 150);
-	bloom_drop = saturate(0.5 + color_get_value(o_dayNightCycle.m_ambientLight) / 255);
+	var ambient_color = c_black;
+	if (exists(ob_ambientLighting))
+	{
+		ambient_color = ob_ambientLighting.m_ambientColor;
+	}
+	else if (exists(o_dayNightCycle))
+	{
+		ambient_color = o_dayNightCycle.m_ambientLight;
+	}
+	
+	bloom_mul = 1.8 * saturate(0.8 - color_get_value(ambient_color) / 150);
+	bloom_drop = saturate(0.5 + color_get_value(ambient_color) / 255);
+	
+	if (exists(ob_ambientLighting))
+	{
+		bloom_mul += ob_ambientLighting.m_bloomMulOffset;
+		bloom_drop += ob_ambientLighting.m_bloomDropOffset;
+	}
 }
 else
 {

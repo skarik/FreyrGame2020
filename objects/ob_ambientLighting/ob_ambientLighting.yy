@@ -49,6 +49,34 @@
             "resourceFilter": 1023,
             "value": "$FFFFFFFF",
             "varName": "m_overlayColor",
+            "varType": 7
+        },
+        {
+            "id": "7f894727-843f-4821-9a2c-72ee46b205e3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_bloomMulOffset",
+            "varType": 0
+        },
+        {
+            "id": "6d0ff71c-a99c-4410-9d4b-64dfb60778bc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_bloomDropOffset",
             "varType": 0
         }
     ],
