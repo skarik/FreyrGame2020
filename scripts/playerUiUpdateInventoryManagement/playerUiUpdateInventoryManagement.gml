@@ -5,7 +5,7 @@ var chest = o_PlayerTest.m_currentChest;
 if (o_PlayerTest.m_usingInventory)
 {
 	// Perform directional controls
-	if (o_PlayerTest.uvPositionStyle == kControlUvStyle_Unused)
+	if (o_PlayerTest.uvPositionStyle == kControlUvStyle_Unused && o_PlayerTest.m_prevInventoryActive == true)
 	{
 		var uv_info = playerUiControlCollectUV();
 		var prevAxis = uv_info[0];
@@ -59,7 +59,13 @@ if (o_PlayerTest.m_usingInventory)
 		else
 			m_seed_hover = current_selection - array_length_1d(m_belt_abs_offsets) - array_length_1d(m_chest_abs_offsets);
 	}
+	
 }
+
+if (o_PlayerTest.m_usingInventory)
+	o_PlayerTest.m_prevInventoryActive = true;	
+else
+	o_PlayerTest.m_prevInventoryActive = false;
 
 // update sbag automatically based on the selected object in the belt
 if (o_PlayerTest.m_usingInventory)
