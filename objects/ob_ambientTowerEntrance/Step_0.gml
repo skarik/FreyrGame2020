@@ -11,6 +11,9 @@ if (exists(o_dayNightCycle))
 	// Lighten the ambient as we get higher.
 	m_ambientColor = merge_color(m_ambientColor, c_black, positional_blend);
 	// Spike the bloom as we get higher
-	m_bloomDropOffset = lerp(-0.1, 0.0, positional_blend);
-	m_bloomMulOffset  = lerp( 0.5, 0.0, positional_blend);
+	m_bloomDropOffset = lerp(-0.15,-0.10, positional_blend);
+	m_bloomMulOffset  = lerp( 0.90,-0.20, positional_blend);
+	
+	// Use indoor character lighting rules
+	m_ambientIndoors = true;
 }

@@ -1,32 +1,33 @@
 /// @description update the darkness
 
 if (!surface_exists(m_darkness))
-{
 	m_darkness = surface_create(GameCamera.width, GameCamera.height);
-}
+	
 if (!surface_exists(m_bloom))
-{
 	m_bloom = surface_create(GameCamera.width / 2, GameCamera.height / 2);
-}
+	
 if (!surface_exists(m_bloom2))
-{
 	m_bloom2 = surface_create(GameCamera.width / 2, GameCamera.height / 2);
-}
+
+var outdoor_lighting = true;
+if (exists(ob_ambientLighting))
+	outdoor_lighting = !ob_ambientLighting.m_ambientIndoors;
 
 // update bloom params
 if (exists(o_dayNightCycle) || exists(ob_ambientLighting))
 {
 	var ambient_color = c_black;
-	if (exists(ob_ambientLighting))
-	{
-		ambient_color = ob_ambientLighting.m_ambientColor;
-	}
-	else if (exists(o_dayNightCycle))
-	{
-		ambient_color = o_dayNightCycle.m_ambientLight;
-	}
 	
+	if (exists(ob_ambientLighting))
+		ambient_color = ob_ambientLighting.m_ambientColor;
+	else if (exists(o_dayNightCycle))
+		ambient_color = o_dayNightCycle.m_ambientLight;
+	
+	// Bloom multiply is mapped from 0 to 120 matching 0.0 to 1.44.
+	// This makes bloom not appear at all unless the ambient is below about 50% brightness.
 	bloom_mul = 1.8 * saturate(0.8 - color_get_value(ambient_color) / 150);
+	// Bloom drop value is mapped from 0 to 128 matching 0.5 to 1.0.
+	// This makes bloom essentially not appear at all unless the ambient is below 50% brightness.
 	bloom_drop = saturate(0.5 + color_get_value(ambient_color) / 255);
 	
 	if (exists(ob_ambientLighting))
@@ -51,17 +52,12 @@ if (surface_exists(m_darkness))
 	
 	// clear to the ambient color
 	if (exists(ob_ambientLighting))
-	{
 		draw_clear_alpha(ob_ambientLighting.m_ambientColor, 1.0);
-	}
 	else if (exists(o_dayNightCycle))
-	{
 		draw_clear_alpha(o_dayNightCycle.m_ambientLight, 1.0);
-	}
 	else
-	{
 		draw_clear_alpha(c_white, 1.0);
-	}
+		
 	// double it up
 	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 	draw_set_color(c_white);
@@ -76,7 +72,7 @@ if (surface_exists(m_darkness))
 	// TODO:
 	
 	// character light sources:
-	gpu_set_blendmode_ext(bm_src_alpha, bm_one);
+	gpu_set_blendmode_ext(bm_src_alpha, bm_inv_src_color);
 	
 	with (ob_character)
 	{	
@@ -85,13 +81,13 @@ if (surface_exists(m_darkness))
 			continue;
 		
 		// Draw a small light around certain characters
-		draw_circle_color(x + offset_x, y + offset_y - z_height, 125, merge_color(c_dkgray, c_black, 0.5), c_black, false);
+		draw_circle_color(x + offset_x, y + offset_y - z_height, 125, merge_color(c_dkgray, c_black, outdoor_lighting ? 0.5 : 0.8), c_black, false);
 	}
 	with (o_PlayerTest) // Todo: add companions to this
 	{
 		// Draw a small light around big characters
-		draw_circle_color(x + offset_x, y + offset_y - z_height, 75, merge_color(c_dkgray, c_black, 0.5), c_black, false);
-		draw_circle_color(x + offset_x, y + offset_y - z_height, 50, merge_color(c_dkgray, c_black, 0.5), c_black, false);
+		draw_circle_color(x + offset_x, y + offset_y - z_height, 75, merge_color(c_dkgray, c_black, outdoor_lighting ? 0.5 : 0.8), c_black, false);
+		draw_circle_color(x + offset_x, y + offset_y - z_height, 50, merge_color(c_dkgray, c_black, outdoor_lighting ? 0.5 : 0.8), c_black, false);
 	}
 	
 	// normal light sources:

@@ -78,6 +78,20 @@
             "value": "0",
             "varName": "m_bloomDropOffset",
             "varType": 0
+        },
+        {
+            "id": "0ec7c345-1870-4df3-ab53-87474c0960ec",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "False",
+            "varName": "m_ambientIndoors",
+            "varType": 3
         }
     ],
     "solid": false,
