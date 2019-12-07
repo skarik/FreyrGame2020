@@ -37,4 +37,11 @@ m_currentFocusY = 0.0;
 // The view doesn't focus at all on 0.0, but doesnt move with the player at all on 1.0.
 m_currentFocusGlue = 1.0;
 
+// Previous states used for blending:
+m_previousFocus = null;
+m_previousFocusX = 0.0;
+m_previousFocusY = 0.0;
+m_previousFocusGlue = 1.0;
+m_previousToCurrentFocusBlend = 0.0;
+
 #endregion

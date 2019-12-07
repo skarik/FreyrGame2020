@@ -34,7 +34,7 @@ gpu_set_tex_filter(false);
 shader_reset();
 
 // draw the darkness to screen
-surface_set_target(Screen.m_gameSurface);
+/*surface_set_target(Screen.m_gameSurface);
 {
 	// Multiply effect
 	gpu_set_blendenable(true);
@@ -63,6 +63,46 @@ surface_set_target(Screen.m_gameSurface);
 	gpu_set_tex_filter(false);
 	
 	// Reset blend state
+	gpu_set_blendmode(bm_normal);
+}
+surface_reset_target();*/
+
+if (!surface_exists(m_compositingBuffer))
+{
+	m_compositingBuffer = surface_create(surface_get_width(Screen.m_gameSurface), surface_get_height(Screen.m_gameSurface));
+}
+
+// composite the darkness & bloom with the main scene
+surface_set_target(m_compositingBuffer);
+{
+	gpu_set_blendenable(false);
+	gpu_set_blendmode_ext(bm_one, bm_zero);
+	
+	// Set up the shader
+	shader_set(sh_lightingComposite);
+	shader_set_uniform_f(uPixelOffset, (GameCamera.x % 4), (GameCamera.y % 4));
+	shader_set_uniform_f(uBloomParams, bloom_drop, bloom_mul);
+	texture_set_stage(samplerDynamicLights, surface_get_texture(m_darkness));
+	texture_set_stage(samplerBloom, surface_get_texture(m_bloom));
+	gpu_set_tex_filter_ext(samplerBloom, true);
+	
+	// Draw the screen
+	draw_surface(Screen.m_gameSurface, 0, 0);
+	
+	// Reset drawing status
+	shader_reset();
+	gpu_set_blendmode(bm_normal);
+}
+surface_reset_target();
+
+// copy back
+surface_set_target(Screen.m_gameSurface);
+{
+	gpu_set_blendenable(false);
+	gpu_set_blendmode_ext(bm_one, bm_zero);
+	
+	draw_surface(m_compositingBuffer, 0, 0);
+	
 	gpu_set_blendmode(bm_normal);
 }
 surface_reset_target();

@@ -4,6 +4,10 @@ var velocity_x = argument2;
 var velocity_y = argument3;
 
 //
+// Update focuses:
+_camPlayerUpdateFocus();
+
+//
 // Calculate offsets:
 
 // Create lookahead lerper
