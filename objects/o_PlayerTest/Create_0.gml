@@ -40,6 +40,8 @@ m_name = pstats.m_name;
 if (!exists(o_dayNightCycle))
 	new(o_dayNightCycle);
 
+m_prevInventoryActive = false;
+
 #region Constants
 
 kMoveSpeed = 120;
