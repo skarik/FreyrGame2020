@@ -1,3 +1,5 @@
+/// @desc DO_NOT_CALL
+/// This function should not be called directly.
 if (!global.collidable_layers_ready)
 {
 	var all_layers = layer_get_all();

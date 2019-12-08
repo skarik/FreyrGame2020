@@ -1,7 +1,9 @@
 /// @description Updates values for the color overlay
 
+//
 // update the time of day
-//m_timeOfDay += Time.deltaTime;
+//
+
 var timeOfDayPrev = m_timeOfDay;
 if (m_timeRunning)
 {
@@ -26,6 +28,7 @@ if (m_timeOfDay >= 24.00)
 	m_day += 1;
 }
 
+// debug junk for moving time forward & back.
 if (Debug.visible)
 {
 	if (keyboard_check_pressed(ord("O")))
@@ -49,26 +52,41 @@ if (Debug.visible)
 	}
 }
 
-// test some day night cycles
+//
+// Generate the day/night cycle colors
+//
 
-var blend0 = 0.0;
-var blend1 = 0.0;
-//blend0 = min(1.0, max(0.0, +sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 1.4));
+var blend0 = 0.0; // Daytime blend
+var blend1 = 0.0; // Nighttime blend
+//blend0 = min(1.0, max(0.0, +sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 1.4));	// 1.4 wasn't sharp enough of a blend???
 blend0 = min(1.0, max(0.0, +sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 3.0));
 //blend1 = min(1.0, max(0.0, -sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 1.4));
 blend1 = min(1.0, max(0.0, -sin((m_timeOfDay / 12.0 - 0.5) * 3.14159) * 2.0));
 
-// generate the colors
-var color0 = merge_color(make_color_rgb(128, 128, 128), make_color_rgb(255 * 0.6, 180 * 0.6, 60 * 0.6), 1.0 - blend0);
-color0 = merge_color(color0, make_color_rgb(25 * 1.2,25 * 1.2, 112),blend1);
-var ambient0 = merge_color(make_color_rgb(128, 128, 128), make_color_rgb(255 * 0.9, 180 * 0.9, 60 * 0.9), 1.0 - blend0);
-ambient0 = merge_color(ambient0, make_color_rgb(9, 7, 26), blend1);
+// Color0 is the blend for the pallete. It is a mulx2 color.
+var color0 = merge_color(make_color_rgb(128, 128, 128),						// Daylight (no change)
+						 make_color_rgb(255 * 0.6, 180 * 0.6, 60 * 0.6),	// Sunrise/sunset
+						 1.0 - blend0);
+color0 = merge_color(color0,
+					 make_color_rgb(25 * 1.2,25 * 1.2, 112),				// Nighttime
+					 blend1);
+					 
+// Ambient0 is the base lighting value. It is a mulx2 color.
+var ambient0 = merge_color(make_color_rgb(128, 128, 128),					// Daylight (fullbright)
+						   make_color_rgb(255 * 0.9, 180 * 0.9, 60 * 0.9),	// Sunrise/sunset
+						   1.0 - blend0);
+ambient0 = merge_color(ambient0,
+					   make_color_rgb(9, 7, 26),							// Nighttime
+					   blend1);
 
-// save the blends
+//
+// Save the blends 
+// 
+
 m_blendSunsetToDay = blend0;
 m_blendSunsetToNight = blend1;
 
-var kBlendValue = 1.0;
+var kBlendValue = 1.0; // Switch between overlay (0.0) and madd2 (1.0). Overlay is in-palette. Madd2 changes the palette itself.
 m_overlayColor = merge_color(make_color_rgb(128, 128, 128), color0, 1.0 - kBlendValue);
-paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, kBlendValue));
+paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, kBlendValue));	// This affects te palette
 m_ambientLight = ambient0;

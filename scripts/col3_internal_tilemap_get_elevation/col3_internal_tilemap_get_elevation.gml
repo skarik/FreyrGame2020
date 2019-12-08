@@ -1,3 +1,5 @@
+/// @desc DO_NOT_CALL
+/// This function should not be called directly.
 #macro kElevationInvalid -9999
 
 var check_x = argument0;

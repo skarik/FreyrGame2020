@@ -1,3 +1,5 @@
+/// @desc DO_NOT_CALL
+/// This function should not be called directly.
 var check_x = argument0;
 var check_y = argument1;
 
