@@ -391,6 +391,14 @@
             }
         },
         {
+            "Key": "0a912e9d-02e3-4e10-bc1c-bafd18c0fda3",
+            "Value": {
+                "id": "44f6fae8-c155-42c0-9828-5e58817c8e70",
+                "resourcePath": "objects\\ob_ambientTowerFloor1\\ob_ambientTowerFloor1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a9aa3fa-35eb-47b8-b7a8-703209120b3d",
             "Value": {
                 "id": "c071ed2e-2c54-464e-9c1a-77add62dfb8d",
