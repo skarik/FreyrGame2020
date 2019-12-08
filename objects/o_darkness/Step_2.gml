@@ -39,7 +39,7 @@ if (exists(o_dayNightCycle) || exists(ob_ambientLighting))
 else
 {
 	bloom_mul = 0.5;
-	bloom_drop = 0.9;
+	bloom_drop = 1.0;
 }
 
 // draw lights

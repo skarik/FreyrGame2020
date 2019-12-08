@@ -96,10 +96,28 @@ void main()
 	// Bloom
 	vec3	bloomHSV;
 	vec3	bloomRGB;
-	pixelBloom.rgb = max(vec3(0.0, 0.0, 0.0), pixelBloom.rgb - uBloomParams.x) * uBloomParams.y;
-	bloomHSV = rgb2hsv(pixelBloom.rgb);
+	//vec3	bloomHSV_original;
+#if 1
+	bloomRGB = mix(pixelBloom.rgb * pixelScene.rgb, pixelBloom.rgb, 0.5);	// Get a world-modulated color
+	bloomRGB = max(vec3(0.0, 0.0, 0.0), bloomRGB - uBloomParams.x) * uBloomParams.y;
+	bloomHSV = rgb2hsv(bloomRGB);
 	bloomHSV.z = stepValue(bloomHSV.z, 16.0); // dithering
 	bloomRGB = hsv2rgb(bloomHSV);
+
+	/*bloomHSV_original = rgb2hsv(bloomRGB);
+	bloomRGB = pixelBloom.rgb * pixelScene.rgb * 2.0;
+	bloomRGB = max(vec3(0.0, 0.0, 0.0), bloomRGB - uBloomParams.x) * uBloomParams.y;
+	bloomHSV = rgb2hsv(bloomRGB);
+	bloomHSV.y = (bloomHSV.y + bloomHSV_original.y) * 0.5;
+	bloomHSV.z = stepValue(bloomHSV.z, 16.0); // dithering
+	bloomRGB = hsv2rgb(bloomHSV);*/
+#else
+	bloomRGB = pixelBloom.rgb;
+	bloomRGB = max(vec3(0.0, 0.0, 0.0), bloomRGB - uBloomParams.x) * uBloomParams.y;
+	bloomHSV = rgb2hsv(bloomRGB);
+	bloomHSV.z = stepValue(bloomHSV.z, 16.0); // dithering
+	bloomRGB = hsv2rgb(bloomHSV);
+#endif
 	
 	//
 	// Lighting recalculation
