@@ -22,7 +22,8 @@
         "447ce243-d6ba-420d-ab09-b6246d16b86e",
         "6f0f65f0-6077-48db-8bf9-c924732fab0f",
         "c7183be6-0a81-4223-a3df-d2696338d633",
-        "77482e45-c3ff-4662-bc78-746926c0582f"
+        "77482e45-c3ff-4662-bc78-746926c0582f",
+        "3a494e99-0e06-4672-a5da-c5074abd20cd"
     ],
     "filterType": "GMObject",
     "folderName": "Gameplay",

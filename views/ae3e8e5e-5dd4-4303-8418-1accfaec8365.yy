@@ -19,7 +19,9 @@
         "22bede1b-f24e-4acf-af9d-7950c254bf8c",
         "28bb6e72-dffa-4526-aab0-a4dfc16db198",
         "25f4c336-1ea3-47a0-92ca-12a42209fea6",
-        "0275b2ba-8190-45a2-9914-19f30635881a"
+        "0275b2ba-8190-45a2-9914-19f30635881a",
+        "b1a74d94-d9f4-459a-af1b-a167128fdb6e",
+        "c2e2d5fb-effa-4b13-be7b-64ae1fa97067"
     ],
     "filterType": "GMObject",
     "folderName": "Doodad",

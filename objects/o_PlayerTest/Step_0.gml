@@ -50,6 +50,10 @@ else if (m_aiScript_requestCommand == kAiRequestCommand_Animation)
 	{
 		sprite_target = sc_16x16char;
 	}
+	else if (m_aiScript_requestAnimation == "sleepSnore")
+	{
+		sprite_target = s_charHeroSleepSnore;
+	}
 	
 	if (sprite_target != null)
 	{
