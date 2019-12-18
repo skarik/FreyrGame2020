@@ -2218,7 +2218,7 @@
             "Key": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
             "Value": {
                 "id": "c852cab3-f988-4ccc-8603-87be9d18cf26",
-                "resourcePath": "objects\\o_livelyPoweredInfoTest\\o_livelyPoweredInfoTest.yy",
+                "resourcePath": "objects\\ob_livelyPowered\\ob_livelyPowered.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2404,6 +2404,14 @@
                 "id": "39c60366-3361-4d7a-9b50-61f6f257343b",
                 "resourcePath": "objects\\ob_audioAmbient\\ob_audioAmbient.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3a505045-ca98-4243-93da-92d468454e4b",
+            "Value": {
+                "id": "aa002dd4-b78b-4a01-93cc-fceab75150ad",
+                "resourcePath": "scripts\\object_get_base_parent\\object_get_base_parent.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3047,14 +3055,6 @@
             }
         },
         {
-            "Key": "49bf3aa4-64c3-4827-b541-0869a1541389",
-            "Value": {
-                "id": "4cbd03a4-23fc-43a8-bd2e-d425068557b5",
-                "resourcePath": "scripts\\powerLogicUpdate\\powerLogicUpdate.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "4a2931d4-830c-442b-83ed-6c4c08ce700d",
             "Value": {
                 "id": "47e4bcb0-4e7a-46b7-90ed-c11e6f1ce32d",
@@ -3203,6 +3203,14 @@
             "Value": {
                 "id": "e07070f7-1098-4e4e-ad75-37e792b4d8d5",
                 "resourcePath": "scripts\\settingsLoad\\settingsLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4d464d83-dbe6-4ace-9d10-d97771dfbcd0",
+            "Value": {
+                "id": "82cbf52d-70cc-4720-a8bb-1c1e531c8cba",
+                "resourcePath": "scripts\\powerLogic_DemuxSupply\\powerLogic_DemuxSupply.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5063,6 +5071,14 @@
             }
         },
         {
+            "Key": "7a5f1634-0760-4723-9e78-341f453a5c44",
+            "Value": {
+                "id": "63777b1f-7da8-4602-bbfc-9337aef3e695",
+                "resourcePath": "objects\\o_usablePoweredMuxer\\o_usablePoweredMuxer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7a70af73-8409-41ab-a7c4-a66cd5fe32b7",
             "Value": {
                 "id": "a037ef1d-ddcf-45cb-a852-fd5551e6c55e",
@@ -5420,6 +5436,14 @@
                 "id": "d49fb5c8-f49e-4d77-94fe-2870b1cb2450",
                 "resourcePath": "scripts\\transition_to\\transition_to.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "82b86a6d-3b76-47b0-b029-1621768ccd77",
+            "Value": {
+                "id": "2b433351-5ab7-4b19-8775-f9eebb4b92fa",
+                "resourcePath": "objects\\o_livelyPoweredDemux\\o_livelyPoweredDemux.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6668,6 +6692,14 @@
                 "id": "f698ff8f-10c0-446c-aead-5d750ad0e87a",
                 "resourcePath": "views\\a032df8d-a514-407b-9e88-ba1698d359e7.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a07dcf9a-800d-437e-abea-7a3eeb76f1e7",
+            "Value": {
+                "id": "52f384c4-2896-4bd1-9157-e5dd97c826e1",
+                "resourcePath": "scripts\\powerLogic_BasicSupply\\powerLogic_BasicSupply.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -9815,6 +9847,14 @@
             }
         },
         {
+            "Key": "e815a4b5-d816-49b5-bbc6-cf518e3614e2",
+            "Value": {
+                "id": "53d370ed-c19b-4f1b-a0fc-d41ac1e90b13",
+                "resourcePath": "objects\\o_debugPowerVisualizer\\o_debugPowerVisualizer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e8272a81-479d-4ca8-b109-3e2c5635322a",
             "Value": {
                 "id": "a3c60c8e-abec-43e5-881a-c73dd6114011",
@@ -10909,6 +10949,7 @@
         "e50e7cad-ce0d-4738-b34a-c62b63765b8c",
         "736c8de5-b118-4b85-8b1d-a10c8577c51c",
         "bc23ef90-0ac0-4990-9608-472c0f777d36",
+        "3a505045-ca98-4243-93da-92d468454e4b",
         "82a26b66-c615-49e2-9bf5-5c50f21ea1d8",
         "fdbb3679-3764-4a36-89dc-9d26a9794773",
         "5c42d6c1-9e5f-42c2-ab9b-6fbf7d7f8c44",
@@ -11213,9 +11254,10 @@
         "a3e1ed20-12bb-489d-84ab-a3299630c503",
         "0629223d-f9c4-444b-a152-e4cd918d9cab",
         "686f3ecf-aefd-4303-9516-5c71e18d879e",
-        "49bf3aa4-64c3-4827-b541-0869a1541389",
         "873ebe0e-0837-4969-a8b3-fe31969861c7",
         "a15ddcac-5ec9-4ecb-a2fd-26120efc8357",
+        "a07dcf9a-800d-437e-abea-7a3eeb76f1e7",
+        "4d464d83-dbe6-4ace-9d10-d97771dfbcd0",
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",

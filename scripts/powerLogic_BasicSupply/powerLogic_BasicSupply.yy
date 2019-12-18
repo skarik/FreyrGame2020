@@ -1,8 +1,8 @@
 {
-    "id": "49bf3aa4-64c3-4827-b541-0869a1541389",
+    "id": "a07dcf9a-800d-437e-abea-7a3eeb76f1e7",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "powerLogicUpdate",
+    "name": "powerLogic_BasicSupply",
     "IsCompatibility": false,
     "IsDnD": false
 }

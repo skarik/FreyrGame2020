@@ -1,33 +1,33 @@
 {
-    "id": "bfa1c07d-f948-43db-9f9e-ac7bff4f00d1",
+    "id": "7a5f1634-0760-4723-9e78-341f453a5c44",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_livelyDoodadTowerWire",
+    "name": "o_usablePoweredMuxer",
     "eventList": [
         {
-            "id": "66c9d0b9-16f4-4b46-9664-eb1737e7a17e",
+            "id": "8385858d-9f9b-450b-981f-baebc20d5905",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "bfa1c07d-f948-43db-9f9e-ac7bff4f00d1"
+            "m_owner": "7a5f1634-0760-4723-9e78-341f453a5c44"
         },
         {
-            "id": "0298d2e6-32f1-485c-b472-898f229b852e",
+            "id": "4199f636-e060-4e06-a60b-a00d342864e9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "bfa1c07d-f948-43db-9f9e-ac7bff4f00d1"
+            "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "7a5f1634-0760-4723-9e78-341f453a5c44"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
+    "parentObjectId": "e78376aa-a4f5-4296-a5c7-e9195679b750",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -41,8 +41,23 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "d9a58142-a4d0-400e-9bb7-eda760d4da84",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "null",
+            "varName": "m_powerSource",
+            "varType": 5
+        }
+    ],
     "solid": false,
-    "spriteId": "1be85126-dfcb-45f6-9444-6e001193e083",
+    "spriteId": "1ce1d028-2922-4117-bcf1-a8d918cee08f",
     "visible": true
 }

@@ -9,3 +9,4 @@ image_alpha = 0.0;
 uiListing = ds_list_create();
 ds_list_add(uiListing, new(o_debugCmdline));
 ds_list_add(uiListing, new(o_debugAiVisualizer));
+ds_list_add(uiListing, new(o_debugPowerVisualizer));

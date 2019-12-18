@@ -6,3 +6,5 @@ emissive.target = id;
 emissive.mask = true;
 
 depthInit();
+
+event_inherited();

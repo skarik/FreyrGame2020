@@ -16,7 +16,8 @@
         "39691aef-d2c3-497a-998b-9a205310cfb1",
         "5c198672-6dd9-424d-92ef-391e6d336eb1",
         "026ec23c-0805-4e6e-ac34-b97679ff4b05",
-        "d21e7103-595d-451b-bba4-955b28a57db2"
+        "d21e7103-595d-451b-bba4-955b28a57db2",
+        "3a505045-ca98-4243-93da-92d468454e4b"
     ],
     "filterType": "GMScript",
     "folderName": "Core2",
