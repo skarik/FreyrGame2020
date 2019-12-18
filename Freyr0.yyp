@@ -1071,6 +1071,14 @@
             }
         },
         {
+            "Key": "1be85126-dfcb-45f6-9444-6e001193e083",
+            "Value": {
+                "id": "1af2f828-ef69-4d38-be1c-3e1a2b95efc3",
+                "resourcePath": "sprites\\s_wiresTFloor\\s_wiresTFloor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1c0c5ecc-875d-4e4d-864b-3814bbd20c14",
             "Value": {
                 "id": "3969c952-648b-4dff-9547-fad3de2bd3ba",
@@ -1815,6 +1823,14 @@
             }
         },
         {
+            "Key": "2b141255-27bd-44ea-a14c-86e5fcd600bc",
+            "Value": {
+                "id": "ffbe96d1-1cdc-4c18-9671-5c602e6f6024",
+                "resourcePath": "scripts\\powerLogic_BasicOutput\\powerLogic_BasicOutput.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2b1bf104-c3af-47cd-a4d2-87dcff4e222f",
             "Value": {
                 "id": "b48343e0-b781-4a44-a3cb-7fa5a22de156",
@@ -2196,6 +2212,14 @@
                 "id": "ca4956de-b4e2-487a-9018-08a8054e5ad9",
                 "resourcePath": "scripts\\farmLoadState\\farmLoadState.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
+            "Value": {
+                "id": "c852cab3-f988-4ccc-8603-87be9d18cf26",
+                "resourcePath": "objects\\o_livelyPoweredInfoTest\\o_livelyPoweredInfoTest.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3020,6 +3044,14 @@
                 "id": "356a6b54-ad13-4fe4-ac31-07295e7c2a9b",
                 "resourcePath": "sprites\\s_propWoodThickPole0\\s_propWoodThickPole0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "49bf3aa4-64c3-4827-b541-0869a1541389",
+            "Value": {
+                "id": "4cbd03a4-23fc-43a8-bd2e-d425068557b5",
+                "resourcePath": "scripts\\powerLogicUpdate\\powerLogicUpdate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4243,6 +4275,14 @@
             "Value": {
                 "id": "477e3c2f-553a-4646-8adb-68fb4f7c0edf",
                 "resourcePath": "scripts\\aiGobboSquad_SetLeader\\aiGobboSquad_SetLeader.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "686f3ecf-aefd-4303-9516-5c71e18d879e",
+            "Value": {
+                "id": "ee58eda3-6067-41fa-a993-c1679148f236",
+                "resourcePath": "scripts\\powerLogicInit\\powerLogicInit.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5527,6 +5567,14 @@
             }
         },
         {
+            "Key": "873ebe0e-0837-4969-a8b3-fe31969861c7",
+            "Value": {
+                "id": "d3c28e15-8d06-4918-9fe3-fb565860392d",
+                "resourcePath": "scripts\\powerLogicGlobalInit\\powerLogicGlobalInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8741f56a-64d5-42d3-a840-40ed428decea",
             "Value": {
                 "id": "bb4b225e-de22-4f86-96e6-1c27505a27b4",
@@ -6643,6 +6691,14 @@
             "Value": {
                 "id": "e6d0a547-53d2-450b-8902-01aa0ed8133a",
                 "resourcePath": "scripts\\paletteDebugDisplay\\paletteDebugDisplay.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a15ddcac-5ec9-4ecb-a2fd-26120efc8357",
+            "Value": {
+                "id": "80a0ef18-4362-404d-9421-3d49533d12ce",
+                "resourcePath": "scripts\\powerLogicGlobalUpdate\\powerLogicGlobalUpdate.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7916,6 +7972,14 @@
                 "id": "ffebdee3-f114-422f-94c1-d833a60e71bd",
                 "resourcePath": "scripts\\aiNPCLookBusyInitDelayed\\aiNPCLookBusyInitDelayed.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bfa1c07d-f948-43db-9f9e-ac7bff4f00d1",
+            "Value": {
+                "id": "a3f706ad-e52f-48b7-ab77-34fcf2414159",
+                "resourcePath": "objects\\o_livelyDoodadTowerWire\\o_livelyDoodadTowerWire.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -11148,6 +11212,11 @@
         "e546caa3-3ff4-482e-8107-86575c3d34e7",
         "a3e1ed20-12bb-489d-84ab-a3299630c503",
         "0629223d-f9c4-444b-a152-e4cd918d9cab",
+        "686f3ecf-aefd-4303-9516-5c71e18d879e",
+        "49bf3aa4-64c3-4827-b541-0869a1541389",
+        "873ebe0e-0837-4969-a8b3-fe31969861c7",
+        "a15ddcac-5ec9-4ecb-a2fd-26120efc8357",
+        "2b141255-27bd-44ea-a14c-86e5fcd600bc",
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
         "1dcd64d2-4b18-4872-8659-8dccbb978594",

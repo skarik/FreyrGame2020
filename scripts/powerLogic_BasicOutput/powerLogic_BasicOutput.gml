@@ -1,0 +1,1 @@
+return m_powerInput; // Directly route input to the output
