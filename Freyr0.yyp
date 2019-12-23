@@ -5007,6 +5007,14 @@
             }
         },
         {
+            "Key": "78007474-7d3d-48d3-8ab2-f304e110587c",
+            "Value": {
+                "id": "64b0237a-c0af-4251-b2ca-bc10237933ca",
+                "resourcePath": "objects\\o_livelyPoweredRelay\\o_livelyPoweredRelay.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "783f62f9-fe72-4293-8ca8-7e64b332faec",
             "Value": {
                 "id": "6024e802-eb36-4cb7-8f10-ece929e4af46",
