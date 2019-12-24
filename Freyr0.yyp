@@ -3911,6 +3911,14 @@
             }
         },
         {
+            "Key": "5d3b6093-ea94-4078-9284-96cd4c6f6295",
+            "Value": {
+                "id": "7c78d9f1-1441-457c-8b48-d9a4e356a445",
+                "resourcePath": "objects\\o_livelyPoweredDoorHorizontal\\o_livelyPoweredDoorHorizontal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5d4a2e3c-aca6-40f8-be79-eaf124a2b122",
             "Value": {
                 "id": "4c9d386a-6fb4-40d2-81f2-5af45c426276",
@@ -7003,6 +7011,14 @@
             "Value": {
                 "id": "963e1aca-eac0-44ef-a398-a782a1cc9a67",
                 "resourcePath": "objects\\o_cropBox\\o_cropBox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a7935099-1d64-414a-a021-752236e0813d",
+            "Value": {
+                "id": "8bd0e3d0-d4cc-4470-a841-8b47e53cff7c",
+                "resourcePath": "objects\\o_lightEmissiveDepth_User\\o_lightEmissiveDepth_User.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -10356,6 +10372,14 @@
                 "id": "96610da2-8bb5-4902-b65f-66c42dc9ce96",
                 "resourcePath": "scripts\\_playerAttack3\\_playerAttack3.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f5ab2727-2486-4ad2-801a-b4924add985b",
+            "Value": {
+                "id": "9083e384-927d-459e-848e-35133d7febe4",
+                "resourcePath": "sprites\\s_propTDoor0\\s_propTDoor0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
