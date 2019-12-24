@@ -1,3 +1,6 @@
+/// @function controlParseAndPoll(control)
+/// @desc Polls the given input array and returns input from -1.0 to 1.0.
+/// @param control {array} Input array structure
 var control = argument0;
 var control_length = array_length_1d(control);
 var value = 0.0;
@@ -10,7 +13,7 @@ for (var i = 0; i < control_length; i += 2)
 	// Check keyboard (simple!)
 	if (l_context == kControlKB)
 	{
-		value += _controlParseCheckType(keyboard_check(l_input), kControlKB);
+		value += _controlParseAndPollCheckType(keyboard_check(l_input), kControlKB);
 	}
 	// Check mouse control
 	else if (l_context == kControlMouse)
@@ -20,7 +23,7 @@ for (var i = 0; i < control_length; i += 2)
 		else if (l_input == kMouseWheelDown)
 			value += mouse_wheel_down();
 		else 
-			value += _controlParseCheckType(mouse_check_button(l_input), kControlMouse);
+			value += _controlParseAndPollCheckType(mouse_check_button(l_input), kControlMouse);
 	}
 	// Check gamepad control
 	else if (l_context == kControlGamepad)
@@ -37,11 +40,11 @@ for (var i = 0; i < control_length; i += 2)
 			|| l_input == gp_axisrh || l_input == gp_axisrv)
 		{
 			var value_in = deadzone_bias(gamepad_axis_value(0, l_input)) * (flip ? -1.0 : 1.0);
-			value += _controlParseCheckType(value_in, kControlGamepad);
+			value += _controlParseAndPollCheckType(value_in, kControlGamepad);
 		}
 		else
 		{
-			value += _controlParseCheckType(gamepad_button_check(0, l_input), kControlGamepad);
+			value += _controlParseAndPollCheckType(gamepad_button_check(0, l_input), kControlGamepad);
 		}
 	}
 	

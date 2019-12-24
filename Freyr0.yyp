@@ -3183,6 +3183,14 @@
             }
         },
         {
+            "Key": "4d041f7c-51a2-4687-9ef0-747d2f47765f",
+            "Value": {
+                "id": "5aafb868-c69f-473f-b132-83db12e7850b",
+                "resourcePath": "scripts\\controlDraw\\controlDraw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4d16f30e-58e7-49c4-9879-552ae8bb6fb9",
             "Value": {
                 "id": "71c9207d-6fcf-4df0-83f0-fa32261fa1e5",
@@ -4042,7 +4050,7 @@
             "Key": "61e1be0a-d34b-455d-97fb-812328e39b21",
             "Value": {
                 "id": "df542554-4a65-4995-a72b-53bf8b2ff17d",
-                "resourcePath": "scripts\\controlParse\\controlParse.yy",
+                "resourcePath": "scripts\\controlParseAndPoll\\controlParseAndPoll.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7599,6 +7607,14 @@
             }
         },
         {
+            "Key": "b55dc72a-9409-4c63-8e8e-00586693bf0a",
+            "Value": {
+                "id": "ed4895ec-cbe2-42bb-85c7-ef45739f5d4f",
+                "resourcePath": "scripts\\inputGet\\inputGet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b5b071d2-2b67-4b1b-8166-d02e5e3a7c98",
             "Value": {
                 "id": "b8d782a8-b931-4b34-98cf-1b9e829a0715",
@@ -9231,6 +9247,14 @@
             }
         },
         {
+            "Key": "dae7e484-2889-4745-aad1-504a00474cf5",
+            "Value": {
+                "id": "d82a5ed3-b497-43f6-b7e1-cef2b60a7b6f",
+                "resourcePath": "scripts\\controlGetName\\controlGetName.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "db09363d-54cd-470d-906b-650e725c0773",
             "Value": {
                 "id": "a88aaa5a-e1d5-4834-a05b-514a4e6985a8",
@@ -10719,6 +10743,14 @@
             }
         },
         {
+            "Key": "fcf2c270-213a-45c5-badb-410658da8898",
+            "Value": {
+                "id": "fc47ab1c-76f2-4ba6-8301-af3f40d5425f",
+                "resourcePath": "scripts\\inputSet\\inputSet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fd051e19-fff4-4204-bcd4-28015ff37be7",
             "Value": {
                 "id": "a4079871-1139-48cf-82c4-0ff905cff547",
@@ -10909,6 +10941,8 @@
         "7229edad-faf5-4390-9388-9c4d8f5c4787",
         "61e1be0a-d34b-455d-97fb-812328e39b21",
         "a48ea4a0-20a5-40bc-95b8-a15962795732",
+        "fcf2c270-213a-45c5-badb-410658da8898",
+        "b55dc72a-9409-4c63-8e8e-00586693bf0a",
         "56179266-d7d6-4ee1-8be7-cf0dd9d45938",
         "7037ec63-ed0d-4412-a13d-8aacdad16050",
         "63118223-c896-4070-8a1a-1948f4083c96",
@@ -10951,6 +10985,8 @@
         "0229d8bd-c37d-4cc4-817c-4a4bd5cbe21d",
         "706cf677-ed33-45a7-b17d-61e41165c63b",
         "9fe542f5-9287-40b9-80c3-db8851dcf6e5",
+        "dae7e484-2889-4745-aad1-504a00474cf5",
+        "4d041f7c-51a2-4687-9ef0-747d2f47765f",
         "89e6f090-2e48-4530-8e2b-4fe17896008e",
         "ea01f43b-f383-4a27-bcea-a0e103dba76b",
         "5b83a500-320a-4c22-87b8-1c4f0e26ddbc",

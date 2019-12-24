@@ -1,5 +1,6 @@
-//@description Zero out inputs
-//@param clear_all  If true, re-inits entire state.
+/// @function controlZero(clear_all)
+/// @description Zero out inputs
+/// @param clear_all {boolean} If true, re-inits entire state.
 if (argument0 == false)
 {
 	xAxis.value = 0.0;

@@ -1,3 +1,7 @@
+/// @func _controlStructUpdate(DO NOT CALL)
+/// @desc This function should not be called directly.
+/// @param control {object}
+/// @param newValue {real}
 var control = argument0;
 var newValue = argument1;
 

@@ -1,8 +1,8 @@
 {
-    "id": "61e1be0a-d34b-455d-97fb-812328e39b21",
+    "id": "fcf2c270-213a-45c5-badb-410658da8898",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "controlParse",
+    "name": "inputSet",
     "IsCompatibility": false,
     "IsDnD": false
 }
