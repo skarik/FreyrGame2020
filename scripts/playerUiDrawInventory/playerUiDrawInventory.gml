@@ -42,15 +42,17 @@ draw_set_alpha(1.0);
 			draw_set_valign(fa_bottom);
 			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt[i].count));
 			
+			// Run UI script
 			if (inventory.belt[i].onUi != itemNullUiScript)
 			{
-				script_execute(inventory.belt[i].onUi, inventory.belt[i].object,
-													   dx + dspace * i + 15, dy + 15,
-													   saturate(1.0 - abs(i - m_inventory_selector)),
-													   //m_inventory_selectorNameBlend,
-													   i == inventory.belt_selection,
-													   kItemUiCategoryBelt);
-				
+				var is_hovered = (i == m_belt_hover) || (i == m_belt_selection);
+				var y_offset = -8.0 * saturate(1.5 - abs(i - m_inventory_selector) * 2.0);
+				script_execute(inventory.belt[i].onUi, // Following are arguments for onUi
+							   inventory.belt[i].object,
+							   dx + dspace * i + 15, dy + 15 + y_offset,
+							   saturate( saturate(1.5 - abs(i - m_inventory_selector) * 2.0) + (is_hovered ? 1.0 : 0.0) ),
+							   (i == inventory.belt_selection) || is_hovered, 
+							   kItemUiCategoryBelt);
 				draw_set_alpha(1.0);
 			}
 		}

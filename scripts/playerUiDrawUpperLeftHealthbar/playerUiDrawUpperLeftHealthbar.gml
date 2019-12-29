@@ -40,7 +40,7 @@ draw_sprite_ext(sui_heart, 0,
 				dx + 16 + 14, l_healthTextY + 2,
 				1.0, 1.0, 0.0, c_white, 1.0);
 {
-	var l_textSurface = surface_create(32, 32);
+	var l_textSurface = surface_create(32, 16);
 	surface_set_target(l_textSurface);
 	// Clear to transparent first
 	draw_clear_alpha(c_black, 0.0);

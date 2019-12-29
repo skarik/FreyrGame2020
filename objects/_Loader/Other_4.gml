@@ -54,6 +54,7 @@ window_set_position(128,128);
 debugOut("working_directory: " + working_directory);
 debugOut("program_directory: " + program_directory);
 debugOut("temp_directory: " + temp_directory);
+debugOut("default depth buffer state: " + (surface_get_depth_disable() ? "off" : "on"));
 
 // Finish and go to next room:
 

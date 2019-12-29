@@ -68,11 +68,6 @@ else
 // draw everything in bag
 var inventory = o_PlayerTest.inventory;
 
-draw_set_color(c_white);
-draw_set_font(f_04b03);
-draw_set_halign(fa_right);
-draw_set_valign(fa_bottom);
-
 if (abs(m_sbag_blend - 0.5) > 0.45)
 {
 	if (m_sbag_seeds == false)
@@ -96,7 +91,25 @@ if (abs(m_sbag_blend - 0.5) > 0.45)
 			if (item.object != null)
 			{
 				draw_sprite(object_get_sprite(item.object), 0, dx + dix + 15, dy + diy + 15);
+				
+				draw_set_color(c_white);
+				draw_set_font(f_04b03);
+				draw_set_halign(fa_right);
+				draw_set_valign(fa_bottom);
 				draw_text(dx + dix + 25, dy + diy + 25, string(item.count));
+				
+				// Run UI script
+				if (item.onUi != itemNullUiScript)
+				{
+					var is_hovered = (i == m_bag_hover) || (i == m_bag_selection);
+					script_execute(item.onUi, // Following are arguments for onUi
+								   item.object,
+								   dx + dix + 15, dy + diy + 15,
+								   saturate( (is_hovered ? 1.0 : 0.0) ),
+								   is_hovered, 
+								   kItemUiCategoryBelt);
+					draw_set_alpha(1.0);
+				}
 			}
 	
 			// draw the hover selection
