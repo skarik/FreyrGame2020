@@ -48,6 +48,6 @@ gpu_set_alphatestenable(true);
 shader_set(sh_wavyGrass);
 //texture_set_stage(samplerGrassTexture, sprite_get_texture(s_assetTallGrass, 0));
 shader_set_uniform_f(u_animationValues, current_time / 1000.0, sin(current_time / 1000.0), wind_factor, id % 314);
-vertex_submit(m_vbuf, pr_trianglelist, sprite_get_texture(s_assetTallGrass, -1));
+vertex_submit(m_vbuf, pr_trianglelist, sprite_get_texture(s_assetTallGrass_Sheet, -1));
 shader_reset();
 

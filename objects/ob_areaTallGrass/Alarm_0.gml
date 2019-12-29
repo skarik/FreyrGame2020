@@ -10,6 +10,7 @@ m_grassBits = array_create(0);
 m_grassBitsCount = 0;
 
 var grass_sprite = s_assetTallGrass;
+var grass_sprite_sheet = s_assetTallGrass_Sheet;
 var grass_width = sprite_get_width(grass_sprite);
 var grass_height = sprite_get_height(grass_sprite);
 
@@ -67,12 +68,23 @@ m_vformat = vertex_format_end();
 
 m_vbuf = vertex_create_buffer();
 vertex_begin(m_vbuf, m_vformat);
+
+var l_grass_texel_width = texture_get_texel_width(sprite_get_texture(grass_sprite_sheet, 0));
+var l_grass_texel_height = texture_get_texel_height(sprite_get_texture(grass_sprite_sheet, 0));
+var i_grass_uv_sheet = sprite_get_uvs(grass_sprite_sheet, 0);
 for (var i = 0; i < m_grassBitsCount; ++i)
 {
 	var i_grass = m_grassBits[i];
-	var i_grass_uv = sprite_get_uvs(grass_sprite, i_grass[2]);
-	var i_grass_width = grass_width * i_grass_uv[6] * i_grass[3];
-	var i_grass_height = grass_height * i_grass_uv[7];
+	var i_grass_uv_sprite = sprite_get_uvs(grass_sprite, i_grass[2]);
+	var i_grass_width = grass_width * i_grass_uv_sprite[6] * i_grass[3];
+	var i_grass_height = grass_height * i_grass_uv_sprite[7];
+	
+	var i_grass_uv = array_create(4);
+	i_grass_uv[1] = i_grass_uv_sheet[1] + i_grass_uv_sprite[5] * l_grass_texel_height;
+	i_grass_uv[3] = i_grass_uv_sheet[3];
+	
+	i_grass_uv[0] = i_grass_uv_sheet[0] + l_grass_texel_width * sprite_get_width(grass_sprite);
+	i_grass_uv[2] = i_grass_uv[0] + grass_width * i_grass_uv_sprite[6] * l_grass_texel_width;
 	
 	// Triangle 1
 	vertex_position(m_vbuf, i_grass[0], i_grass[1] - i_grass_height); // 0
