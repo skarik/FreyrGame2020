@@ -1,6 +1,7 @@
 visible = false;
 
 alarm[0] = 1;
+m_vbuf = null;
 
 if (!exists(o_tallgrassRendererOverplayer))
 {
@@ -23,3 +24,5 @@ m_shadowRect[2] = cx2;
 m_shadowRect[3] = cy2;
 
 spawnTimer = 0.0;
+
+sprite_prefetch(s_assetTallGrass);
