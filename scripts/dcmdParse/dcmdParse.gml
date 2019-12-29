@@ -12,10 +12,12 @@ var l_commandSplitCount = array_length_1d(l_commandSplit);
 if (l_commandSplitCount >= 1)
 {
 	if (l_commandSplit[0] == "set")
-	{
 		return dcmdParseSet(l_parserMode, l_commandSplit);
-	}
-	
+	else if (l_commandSplit[0] == "hurt")
+		return dcmdParseHurt(l_parserMode, l_commandSplit);
+	else if (l_commandSplit[0] == "heal")
+		return dcmdParseHeal(l_parserMode, l_commandSplit);
+
 	debugOut("Invalid command \"" + l_commandSplit[0] + "\"");
 }
 

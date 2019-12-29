@@ -92,6 +92,8 @@ m_book_tab = Tabs.kMain;
 
 #region Arm Scripting
 
+m_arm_healthbar_percent = 0.0;
+
 m_arm_center_blend = 0.0;
 m_arm_flash = 0.0;
 m_arm_voidcap_draw_intro = 0.0;

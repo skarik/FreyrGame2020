@@ -26,11 +26,53 @@ else if (pl.pstats.m_pitem[kPitemVoidCapacitor] >= 1)
 draw_sprite(sui_roboArm, arm_backing_index, dx, dy);
 
 // draw the health bar
-var health_percent = clamp(pl.stats.m_health / pl.stats.m_healthMax, 0.0, 1.0);
+var health_percent = saturate(m_arm_healthbar_percent);//clamp(pl.stats.m_health / pl.stats.m_healthMax, 0.0, 1.0);
 draw_sprite_part(sui_roboArm, 2,
-	0, 0,
-	5, 30 * health_percent,
-	dx + 16, dy + 32 + 30 * (1.0 - health_percent));
+				 0, 0,
+				 5, 30 * health_percent,
+				 dx + 16, dy + 32 + 30 * (1.0 - health_percent));
+	
+// draw the health text & icon
+var l_healthTextY = dy + 32 + 30 * (1.0 - health_percent);
+var l_colorRedBright = make_color_rgb(239, 58, 12);
+var l_colorRedHighlight = make_color_rgb(239, 183, 117);
+draw_sprite_ext(sui_heart, 0,
+				dx + 16 + 14, l_healthTextY + 2,
+				1.0, 1.0, 0.0, c_white, 1.0);
+{
+	var l_textSurface = surface_create(32, 32);
+	surface_set_target(l_textSurface);
+	// Clear to transparent first
+	draw_clear_alpha(c_black, 0.0);
+	
+	draw_set_font(f_04b03);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	
+	// First, draw the highlight
+	draw_set_color(l_colorRedHighlight);
+	draw_text(0, 0, string(ceil(pl.stats.m_healthMax * health_percent)));
+			  
+	// Mask out the highlight
+	gpu_set_blendmode_ext_sepalpha(bm_zero, bm_zero, bm_zero, bm_zero);
+	draw_rectangle(0, 3, 32, 32, false);
+	
+	// Third, draw the other color
+	gpu_set_blendmode_ext(bm_inv_dest_alpha, bm_one);
+	draw_set_color(l_colorRedBright);
+	draw_text(0, 0, string(ceil(pl.stats.m_healthMax * health_percent)));
+			  
+	// Reset drawing mode
+	gpu_set_blendmode(bm_normal);
+	draw_set_color(c_white);
+	surface_reset_target();
+	
+	// draw the text surface
+	draw_surface(l_textSurface, dx + 16 + 14 + 5, l_healthTextY - 1);
+	
+	// no longer need the text surface
+	surface_free(l_textSurface);
+}
 	
 // draw the charge bar
 if (pl.pstats.m_pitem[kPitemVoidCapacitor] >= 1)

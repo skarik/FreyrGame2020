@@ -7,6 +7,8 @@ m_inCutsceneBlend = saturate(m_inCutsceneBlend);
 
 if (m_inCutsceneBlend < 1.0)
 {
+	playerUiUpdateArm();
+	
 	playerUiUpdateBook();
 	playerUiUpdateInventory();
 	playerUiUpdateBag();

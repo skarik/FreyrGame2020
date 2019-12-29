@@ -91,7 +91,16 @@ if (surface_exists(m_darkness))
 	}
 	
 	// normal light sources:
-	gpu_set_blendmode_ext(bm_src_alpha, bm_one);
+	gpu_set_blendmode(bm_normal);
+	
+	with (ob_ambientShadow)
+	{
+		this.xoffset = offset_x;
+		this.yoffset = offset_y;
+		event_user(0);
+	}
+	
+	lightingResetBlendMode();
 	
 	with (ob_light)
 	{
