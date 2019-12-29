@@ -7,9 +7,9 @@ if (belt.object != null)
 	if (l_canMove
 		&& (itemUseButton.pressed || (isBlocking && useButton.pressed)))
 	{
-		if (script_execute(belt.checkUse))
+		if (script_execute(belt.checkUse, belt.object))
 		{
-			script_execute(belt.onUse);
+			script_execute(belt.onUse, belt.object);
 		}
 	}
 }
