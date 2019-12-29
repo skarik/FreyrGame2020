@@ -1,3 +1,4 @@
+var _itemType = argument0;
 
 // Check for existing canal
 if (!exists(collision_rectangle(currentBuildableX + 1, currentBuildableY + 1, currentBuildableX + 14, currentBuildableY + 14, o_miniCanalWater, false, true)))

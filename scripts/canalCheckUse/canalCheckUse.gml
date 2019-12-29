@@ -1,3 +1,5 @@
+var _itemType = argument0;
+
 currentBuildable = false;
 
 if (!m_isTilling && canMove && !isBusyInteracting

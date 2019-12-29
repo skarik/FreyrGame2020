@@ -4,4 +4,3 @@ event_inherited();
 m_name           = "Melon";
 m_maxStack       = 10;
 m_onUseScript    = turnipOnUse;
-m_checkUseScript = nullScript;

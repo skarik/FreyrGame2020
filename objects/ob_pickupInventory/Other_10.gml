@@ -20,6 +20,7 @@ var inventory = m_pickupTarget.inventory;
 								m_checkUseScript,
 								m_onUseScript,
 								m_onDepleteScript,
+								m_onUiScript,
 								m_type,
 								m_tradeItem,
 								m_userInfo, m_userInfoString);
@@ -36,6 +37,7 @@ var inventory = m_pickupTarget.inventory;
 									m_checkUseScript,
 									m_onUseScript,
 									m_onDepleteScript,
+									m_onUiScript,
 									m_type,
 									m_tradeItem,
 									m_userInfo, m_userInfoString);

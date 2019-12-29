@@ -4,5 +4,3 @@ event_inherited();
 m_name           = "Crull Egg";
 m_description    = "An egg wrongfully stolen from a crull nest, you kidnapper. Fresh.";
 m_maxStack       = 10;
-m_onUseScript    = nullScript;
-m_checkUseScript = nullScript;

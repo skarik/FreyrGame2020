@@ -10,6 +10,7 @@ if (valid)
 	item.checkUse  = script_get_index(buffer_read(buffer, buffer_string));
 	item.onUse     = script_get_index(buffer_read(buffer, buffer_string));
 	item.onDeplete = script_get_index(buffer_read(buffer, buffer_string));
+	item.onUi      = script_get_index(buffer_read(buffer, buffer_string));
 	item.type      = buffer_read(buffer, buffer_s32);
 	item.tradeItem = [null, 0];
 	item.tradeItem[0] = object_get_index(buffer_read(buffer, buffer_string));

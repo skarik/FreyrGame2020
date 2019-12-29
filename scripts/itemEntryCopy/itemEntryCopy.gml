@@ -9,6 +9,7 @@ var item = argument0;
 	item.checkUse	= source.checkUse;
 	item.onUse		= source.onUse;
 	item.onDeplete	= source.onDeplete;
+	item.onUi		= source.onUi;
 	item.type		= source.type;
 	item.tradeItem	= source.tradeItem;
 	item.userInfo	= source.userInfo;

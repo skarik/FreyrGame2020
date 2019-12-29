@@ -1,3 +1,4 @@
+var _itemType = argument0;
 
 // Reset all the timers
 dashTimer = 0.0; // We use the dash timer for all the behavior here.

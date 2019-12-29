@@ -1,3 +1,5 @@
+var _itemType = argument0;
+
 if (exists(m_plant_dirt))
 {
 	m_plant_dirt.planted = true;

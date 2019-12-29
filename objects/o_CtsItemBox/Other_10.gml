@@ -22,6 +22,7 @@ if (input_addItem)
 										m_checkUseScript,
 										m_onUseScript,
 										m_onDepleteScript,
+										m_onUiScript,
 										m_type,
 										m_tradeItem,
 										m_userInfo, m_userInfoString);
@@ -38,6 +39,7 @@ if (input_addItem)
 											m_checkUseScript,
 											m_onUseScript,
 											m_onDepleteScript,
+											m_onUiScript,
 											m_type,
 											m_tradeItem,
 											m_userInfo, m_userInfoString);

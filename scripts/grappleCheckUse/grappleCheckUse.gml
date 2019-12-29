@@ -1,5 +1,7 @@
 // @description returns true when grapple can be used
 
+var _itemType = argument0;
+
 if (moScriptOverride != null)
 {
 	return false;
