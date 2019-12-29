@@ -28,10 +28,6 @@ draw_set_alpha(1.0);
 	// inventory selector
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
-	draw_set_color(c_white);
-	draw_set_font(f_04b03);
-	draw_set_halign(fa_right);
-	draw_set_valign(fa_bottom);
 	for (var i = 0; i < inventory.belt_size; ++i)
 	{
 		draw_sprite(sui_bagBox, 0, dx + dspace * i, dy );
@@ -39,7 +35,24 @@ draw_set_alpha(1.0);
 		if (inventory.belt[i].object != null)
 		{
 			draw_sprite(object_get_sprite(inventory.belt[i].object), 0, dx + dspace * i + 15, dy + 15);
+			
+			draw_set_color(c_white);
+			draw_set_font(f_04b03);
+			draw_set_halign(fa_right);
+			draw_set_valign(fa_bottom);
 			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt[i].count));
+			
+			if (inventory.belt[i].onUi != itemNullUiScript)
+			{
+				script_execute(inventory.belt[i].onUi, inventory.belt[i].object,
+													   dx + dspace * i + 15, dy + 15,
+													   saturate(1.0 - abs(i - m_inventory_selector)),
+													   //m_inventory_selectorNameBlend,
+													   i == inventory.belt_selection,
+													   kItemUiCategoryBelt);
+				
+				draw_set_alpha(1.0);
+			}
 		}
 		/*if (inventory.belt[i].type == kItemPickupSeed)
 		{
@@ -90,9 +103,8 @@ draw_set_alpha(1.0);
 	draw_set_valign(fa_top);
 	draw_set_color(c_white);
 	draw_set_alpha((1.0 - m_bag_totalBlend) * saturate(m_inventory_selectorNameBlend * 4.0));
-	draw_text_spaced(
-		dx + 8 - 100.0 * smoothstep(1.0 - m_inventory_selectorNameBlend), dy - 20,
-		m_inventory_selectorName, 3);
+	draw_text_spaced(dx + 4 - 100.0 * smoothstep(1.0 - m_inventory_selectorNameBlend), dy - 25,
+					 m_inventory_selectorName, 3);
 		
 	// reset target to proper one
 	surface_reset_target();

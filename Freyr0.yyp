@@ -4439,6 +4439,14 @@
             }
         },
         {
+            "Key": "699cb8c4-8f26-42ac-9744-477d99a3e328",
+            "Value": {
+                "id": "280eaf63-5ee9-42b0-b15d-464f22a2f8bb",
+                "resourcePath": "scripts\\generalConsumableOnUi\\generalConsumableOnUi.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "69d26bf8-88cd-45c2-8b22-1d9660638fa6",
             "Value": {
                 "id": "6a640ab8-f2fb-4daf-9973-be0eb264d710",
@@ -11387,6 +11395,7 @@
         "9c0de23d-a581-4a65-a754-aa5963109c05",
         "b6989f43-ad2c-4a44-8353-2a5156b6a8a0",
         "9b0e0b37-953f-4b4e-8854-8e1451395353",
+        "699cb8c4-8f26-42ac-9744-477d99a3e328",
         "e2a546ce-ad19-4fd2-8c93-0948bf84d891",
         "d3270700-d484-400f-abee-692a7825e513",
         "e02b8b61-3840-4665-8de5-7ec3350944cd",
