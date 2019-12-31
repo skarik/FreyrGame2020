@@ -42,6 +42,11 @@ if (!exists(o_dayNightCycle))
 
 m_prevInventoryActive = false;
 
+
+m_lanternProp = null;
+m_lanternLight = null;
+m_lanternEmissive = null;
+
 #region Constants
 
 kMoveSpeed = 120;

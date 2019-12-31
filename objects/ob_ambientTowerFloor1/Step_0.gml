@@ -15,9 +15,18 @@ if (exists(o_dayNightCycle))
 	//m_bloomDropOffset = -0.10;
 	//m_bloomMulOffset  = 1.80;
 	
-	m_bloomDropOffset = -0.36;
+	//m_bloomDropOffset = -0.36;
+	//m_bloomDropOffset = -0.17;
 	m_bloomMulOffset  = 1.00;
 	
+	// do bloom changes based on lantern equipped
+	var pl = getPlayer();
+	var hasLantern = exists(pl.m_lanternProp);
+	if (hasLantern)
+		m_bloomDropOffset = min(-0.17, m_bloomDropOffset + Time.deltaTime * 0.2);
+	else
+		m_bloomDropOffset = max(-0.26, m_bloomDropOffset - Time.deltaTime * 0.2);
+
 	// Use indoor character lighting rules
 	m_ambientIndoors = true;
 }

@@ -13,6 +13,7 @@ m_shirtless = false;
 #macro kPitemGrapple 0
 #macro kPitemVoidCapacitor 1
 #macro kPitemVoidAlternator 2
+#macro kPitemLantern 3
 #macro kPitem_MAX 16
 
 for (var i = 0; i < kPitem_MAX; ++i)

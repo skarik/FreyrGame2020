@@ -9,7 +9,7 @@ with (target)
 {
 	xoffset = object.xoffset;
 	yoffset = object.yoffset;
-	event_user(0);
+	event_user(5);
 }
 
 if (mask)

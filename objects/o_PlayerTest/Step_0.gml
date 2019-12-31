@@ -77,3 +77,45 @@ if (position_meeting(x, y, ob_areaTallGrass)
 {
 	isHidden = true;
 }
+
+// do lantern code
+var have_lantern_belt = false;
+for (var i = 0; i < inventory.belt_size; ++i)
+{
+	if (inventory.belt[i].object == o_pickupTool_Lantern)
+	{
+		have_lantern_belt = true;
+	}
+}
+if (have_lantern_belt)
+{
+	if (!exists(m_lanternProp))
+	{
+		m_lanternProp = new(_dummy);
+		m_lanternProp.sprite_index = s_itemToolLantern_Carried;
+		m_lanternProp.visible = true;
+		
+		m_lanternLight = new(o_lightCrystalMothLanternGlow);
+		m_lanternLight.image_alpha = 0.0;
+	}
+	
+	m_lanternProp.x = x + lengthdir_x(6, round(facingDirection / 90) * 90 + 180);
+	m_lanternProp.y = y + lengthdir_y(3, round(facingDirection / 90) * 90 + 180) - 10 - z_height;
+	m_lanternProp.z = z;
+	m_lanternProp.z_height = z_height + 10;
+	m_lanternProp.depth = depth - round(lengthdir_y(4, facingDirection + 180)) + 1;
+	
+	m_lanternLight.x = m_lanternProp.x;
+	m_lanternLight.y = m_lanternProp.y;// - m_lanternProp.z_height;
+	m_lanternLight.image_alpha = min(1.0, m_lanternLight.image_alpha + Time.deltaTime);
+}
+else
+{
+	if (exists(m_lanternProp))
+	{
+		delete(m_lanternProp);
+		m_lanternProp = null;
+		
+		delete(m_lanternLight);
+	}
+}

@@ -31,3 +31,12 @@ draw_primitive_begin_texture(pr_trianglestrip, sprite_get_texture(sprite_index, 
 	draw_vertex_texture(ex, ey, 1, 1);
 }
 draw_primitive_end();
+
+gpu_set_blendmode(bm_add);
+xoffset = 0;
+yoffset = 0; 
+var prev_glow = m_glowAlpha;
+m_glowAlpha = m_glowAlpha * 0.3;
+event_user(5);
+m_glowAlpha = prev_glow;
+gpu_set_blendmode(bm_normal);

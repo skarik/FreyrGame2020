@@ -91,6 +91,9 @@ surface_set_target(m_compositingBuffer);
 	
 	// Reset drawing status
 	shader_reset();
+	
+	//draw_surface(m_darkness, 0, 0);
+	
 	gpu_set_blendmode(bm_normal);
 }
 surface_reset_target();

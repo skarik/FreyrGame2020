@@ -59,3 +59,7 @@ uiPosY = 0;
 // Create the surfaces for the shine effect
 surface_shine_bg = null;
 surface_shine_item = null;
+
+// Create light pass stuff
+glower = new(o_lightEmissiveDepth_User5);
+glower.target = id;

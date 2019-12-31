@@ -205,11 +205,18 @@ if (current_display_count >= 1)
 var blend_itempos0 = smoothstep(saturate(itemlight_alpha));
 var blend_itempos1 = smoothstep(saturate(itemcenter_alpha));
 
-// Set item position & blend to center
-var item_dx = display_item_startx;
-var item_dy = display_item_starty - 40 * blend_itempos0;
+// Set item position & blend over time to center
+var uiposx_expected = GameCamera.x - display_width / 2;
+var uiposy_expected = GameCamera.y;
+var item_dx = display_item_startx + (uiPosX - uiposx_expected);
+var item_dy = display_item_starty - 40 * blend_itempos0 + (uiPosY - uiposy_expected);
 item_dx = lerp(item_dx, uiPosX + display_width / 2, blend_itempos1);
 item_dy = lerp(item_dy, uiPosY - 16, blend_itempos1);
+if (exists(input_actor))
+{	// Should probably be in Step, but this is where the position is calculated.
+	input_actor.x = item_dx; // Thus, here in Draw it is!
+	input_actor.y = item_dy;
+}
 
 var item_sprite = object_get_sprite(input_actor);
 // draw the light rectangles behind the item
