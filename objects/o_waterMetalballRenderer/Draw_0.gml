@@ -1,6 +1,6 @@
 /// @description Draw the water surface
 
-if (exists(o_waterMetaball) && surface_exists(m_surface))
+if (exists(o_waterMetaball) && surface_exists(m_surface) && surface_exists(m_surfacePeturb))
 {
 	// Get texture information
 	var texturePaletteLut = sprite_get_texture(s_paletteWater, 0);
@@ -31,12 +31,12 @@ if (exists(o_waterMetaball) && surface_exists(m_surface))
 	//gpu_set_blendmode(bm_add);
 	// Draw the reflections with alpha-testing for blending
 	gpu_set_alphatestenable(false);
-	draw_surface_ext(m_surfaceReflect,
+	/*draw_surface_ext(m_surfaceReflect,
 					GameCamera.view_x, GameCamera.view_y + GameCamera.height,
 					1.0, -1.0,
 					0.0,
 					c_white,
-					1.0);
+					1.0);*/
 	/*draw_surface_ext(m_surfaceDepthHack,
 					GameCamera.view_x, GameCamera.view_y + GameCamera.height,
 					1.0, -1.0,

@@ -1,0 +1,21 @@
+{
+    "id": "f44cf166-e675-4fc0-8cec-80942e36bc71",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "f44cf166-e675-4fc0-8cec-80942e36bc71",
+    "children": [
+        "e091b8de-caec-43f3-b1ea-4c956335e144",
+        "98ef4018-01c1-42eb-b32a-1c7e0ca7e0ff",
+        "686f3ecf-aefd-4303-9516-5c71e18d879e",
+        "873ebe0e-0837-4969-a8b3-fe31969861c7",
+        "a15ddcac-5ec9-4ecb-a2fd-26120efc8357",
+        "a07dcf9a-800d-437e-abea-7a3eeb76f1e7",
+        "4d464d83-dbe6-4ace-9d10-d97771dfbcd0",
+        "38708fa9-8be1-4f7d-a800-5ce5229e9b1c",
+        "2b141255-27bd-44ea-a14c-86e5fcd600bc"
+    ],
+    "filterType": "GMScript",
+    "folderName": "Lively",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}

@@ -23,12 +23,12 @@ if (exists(o_dayNightCycle) || exists(ob_ambientLighting))
 	else if (exists(o_dayNightCycle))
 		ambient_color = o_dayNightCycle.m_ambientLight;
 	
-	// Bloom multiply is mapped from 0 to 120 matching 0.0 to 1.44.
+	// Bloom multiply is mapped from 128 to 0 matching 0.0 to 1.6.
 	// This makes bloom not appear at all unless the ambient is below about 50% brightness.
-	bloom_mul = 1.8 * saturate(0.8 - color_get_value(ambient_color) / 150);
-	// Bloom drop value is mapped from 0 to 128 matching 0.5 to 1.0.
+	bloom_mul = 1.6 * saturate(0.8 - color_get_value(ambient_color) / 128 * 0.8);
+	// Bloom drop value is mapped from 128 to 0 matching 0.1 to 1.0.
 	// This makes bloom essentially not appear at all unless the ambient is below 50% brightness.
-	bloom_drop = saturate(0.5 + color_get_value(ambient_color) / 255);
+	bloom_drop = saturate(0.1 + color_get_value(ambient_color) / 128 * 0.9);
 	
 	if (exists(ob_ambientLighting))
 	{

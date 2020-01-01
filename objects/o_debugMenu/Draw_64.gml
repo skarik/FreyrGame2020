@@ -16,6 +16,10 @@ draw_text( 10, 24, "(F5) Screenshot");
 draw_text( 10, 32, "(F11) Capture GIF");
 draw_text( 10, 40, "(F2) Frame limiter");
 draw_text( 10, 48, "(F3) Reset (freezes game)");
+draw_text( 10, 56, "(Num8) Day--");
+draw_text( 10, 64, "(Num9) Day++");
+draw_text( 10, 72, "(Num5) Hour--");
+draw_text( 10, 80, "(Num6) Hour++");
 
 // Draw the debug info
 draw_set_color( c_black );
@@ -44,3 +48,4 @@ draw_set_alpha(1.0);
 
 // draw the quest flags
 questDebugDisplayFlags();
+weatherDebugDisplay();

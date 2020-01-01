@@ -8,6 +8,7 @@ m_dirt = collision_point(x, y, o_fieldSquare, true, true);
 m_startDay = 0;
 m_startHour = 0;
 m_itemDrop = null;
+m_itemDropCount = 1;
 //m_watered = array_create(30, 0);
 m_watered = ds_map_create();
 m_visible_timer = 0.0;

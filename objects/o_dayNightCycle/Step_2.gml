@@ -31,7 +31,7 @@ if (m_timeOfDay >= 24.00)
 // debug junk for moving time forward & back.
 if (Debug.visible)
 {
-	if (keyboard_check_pressed(ord("O")))
+	if (keyboard_check_pressed(vk_numpad5))
 	{
 		m_timeOfDay -= 1.0;
 		if (m_timeOfDay < 0)
@@ -40,7 +40,7 @@ if (Debug.visible)
 			m_day -= 1;
 		}
 	}
-	if (keyboard_check_pressed(ord("P")))
+	if (keyboard_check_pressed(vk_numpad6))
 	{
 		m_timeOfDay += 1.0;
 		if (m_timeOfDay >= 24.00)
@@ -48,6 +48,26 @@ if (Debug.visible)
 			m_timeOfDay -= 24.00;
 			m_day += 1;
 		}
+		m_hourPassed = true;
+	}
+	
+	if (keyboard_check_pressed(vk_numpad8))
+	{
+		m_day -= 1;
+	}
+	if (keyboard_check_pressed(vk_numpad9))
+	{
+		m_day += 1;
+		m_hourPassed = true;
+	}
+	
+	if (keyboard_check_pressed(vk_numpad4))
+	{
+		m_day -= 28;
+	}
+	if (keyboard_check_pressed(vk_numpad7))
+	{
+		m_day += 28;
 		m_hourPassed = true;
 	}
 }
@@ -68,7 +88,8 @@ var color0 = merge_color(make_color_rgb(128, 128, 128),						// Daylight (no cha
 						 make_color_rgb(255 * 0.6, 180 * 0.6, 60 * 0.6),	// Sunrise/sunset
 						 1.0 - blend0);
 color0 = merge_color(color0,
-					 make_color_rgb(25 * 1.2,25 * 1.2, 112),				// Nighttime
+					 make_color_rgb(56, 56, 200),							// Nighttime
+					 //make_color_rgb(25 * 1.2,25 * 1.2, 112),				// Nighttime
 					 blend1);
 					 
 // Ambient0 is the base lighting value. It is a mulx2 color.

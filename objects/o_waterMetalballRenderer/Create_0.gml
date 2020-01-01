@@ -6,7 +6,7 @@ if (instance_number(object_index) > 1)
 	exit;
 }
 
-depth = 10;
+depth = 45;
 persistent = true;
 
 // Surface used for metaballs

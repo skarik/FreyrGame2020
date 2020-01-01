@@ -2,7 +2,7 @@
 
 particleZMotionUpdate();
 
-if (z_height < 0)
+if (z_height < 0 || x > room_width + 4|| y > room_height + 4)
 {
 	// Begin fading on landing
 	if (!fade)

@@ -6,7 +6,7 @@ if (instance_number(object_index) > 1)
 	exit;
 }
 
-depth = 50;
+depth = 60;
 persistent = true;
 
 // Surface used for rendering the farmland
