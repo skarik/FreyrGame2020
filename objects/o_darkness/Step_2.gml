@@ -46,7 +46,7 @@ else
 if (surface_exists(m_darkness))
 {
 	var offset_x = -(GameCamera.x - GameCamera.width / 2);
-	var offset_y = -(GameCamera.y - GameCamera.height / 2)
+	var offset_y = -(GameCamera.y - GameCamera.height / 2);
 	
 	surface_set_target(m_darkness);
 	
@@ -91,7 +91,8 @@ if (surface_exists(m_darkness))
 	}
 	
 	// normal light sources:
-	gpu_set_blendmode(bm_normal);
+	//gpu_set_blendmode(bm_normal);
+	//gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_one);
 	
 	with (ob_ambientShadow)
 	{

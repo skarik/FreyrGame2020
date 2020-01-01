@@ -4,7 +4,7 @@ powerLogicGlobalUpdate();
 
 // GAME HACK:
 // On the 8th day of each season, create a weather system
-var dayOfSeason = timeofdayGetDay() % kWeatherSeasonLength;
+var dayOfSeason = (timeofdayGetDay() + timeofdayGetHour() / 24.0) % kWeatherSeasonLength;
 var season = weatherGetSeason();
 
 if (season == kWeatherSeasonSummer)
@@ -18,10 +18,10 @@ if (season == kWeatherSeasonSummer)
 else if (season == kWeatherSeasonFall)
 {
 	//if (!exists(o_weatherSystemRockstorm))
-	if (!exists(o_weatherSystemLightningStorm))
+	if (!exists(o_weatherSystemLightningstorm))
 	{
 		delete(ob_weatherSystem);
-		new(o_weatherSystemLightningStorm);
+		new(o_weatherSystemLightningstorm);
 	}
 }
 else if (season == kWeatherSeasonWinter)

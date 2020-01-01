@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "029b49f7-d402-4e8b-8d78-f30d517de5ea",
+            "Value": {
+                "id": "0b14a79a-e1e6-4ced-b4cd-7844288a2315",
+                "resourcePath": "sprites\\slt_shadow_cloud_beeg\\slt_shadow_cloud_beeg.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02d2565b-b47a-4247-bc0c-f98273d3edec",
             "Value": {
                 "id": "437183f3-2c96-40b1-bff6-4382943fb0f1",
@@ -2559,6 +2567,14 @@
             }
         },
         {
+            "Key": "3a9e5d9d-d5d0-43dd-9820-125bf5a0c1b0",
+            "Value": {
+                "id": "169ae108-7b5d-4509-b454-0382320da02a",
+                "resourcePath": "objects\\o_weatherSystemLightningstorm\\o_weatherSystemLightningstorm.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3ad592e2-e8b9-4752-9830-59f785c9ceb9",
             "Value": {
                 "id": "4a9ede60-4eb7-419f-8993-31d90c07dca7",
@@ -3243,6 +3259,14 @@
             "Value": {
                 "id": "88b93bc2-ce40-4bfe-a8ba-1d012ec6242f",
                 "resourcePath": "objects\\o_e32x32_eN16\\o_e32x32_eN16.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4adcc13d-6c43-4c58-8dbe-1366fcc244b9",
+            "Value": {
+                "id": "5def6e4c-19ab-4a92-8656-04fc4760d0a5",
+                "resourcePath": "objects\\o_weatherSystemRainstorm\\o_weatherSystemRainstorm.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -6055,6 +6079,14 @@
             }
         },
         {
+            "Key": "8b893122-2951-4046-affc-42100c73235e",
+            "Value": {
+                "id": "a84f37fe-6dee-410c-989d-d4c51f7d86cc",
+                "resourcePath": "sprites\\spt_circle7\\spt_circle7.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8bc2f9c9-1974-4b68-9cda-ab6ccf95f81f",
             "Value": {
                 "id": "7901b0fe-06fe-4869-86d1-46a089d57022",
@@ -6692,6 +6724,14 @@
                 "id": "b908a047-9ca3-4f6b-a880-4cb0d0ac00a7",
                 "resourcePath": "scripts\\livelySetupWaterRendering\\livelySetupWaterRendering.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "98f0c1e8-8f50-4e7b-a69c-e90598d3d8d6",
+            "Value": {
+                "id": "f4d81a4c-02f5-46a5-abc9-50889f680f35",
+                "resourcePath": "objects\\o_ashadowCloudMover_Renderer\\o_ashadowCloudMover_Renderer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8479,6 +8519,14 @@
             }
         },
         {
+            "Key": "bff29ccb-e21b-4e2b-94b2-e97a58c60a1b",
+            "Value": {
+                "id": "daa8d675-cd28-4dcd-a9e3-3ecb7fe199da",
+                "resourcePath": "objects\\o_ptcRainDrop\\o_ptcRainDrop.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c008660a-0ee9-4fb3-9b63-11b047033aaf",
             "Value": {
                 "id": "414131b3-3fba-4472-b29a-2cf76cb1f541",
@@ -9895,6 +9943,14 @@
             }
         },
         {
+            "Key": "de295f6e-dfe7-4769-a0f8-810f7d86da01",
+            "Value": {
+                "id": "6cbdfbe0-07b1-4a18-a53d-13085afa2e76",
+                "resourcePath": "sprites\\slt_shadow_cloud_smol\\slt_shadow_cloud_smol.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "de437fb7-65a8-4501-800a-435133069c83",
             "Value": {
                 "id": "b130223b-185e-4d6f-8831-f6c33bb41610",
@@ -10647,6 +10703,14 @@
             }
         },
         {
+            "Key": "eee03a7f-ce43-4286-b532-6e27b496fe18",
+            "Value": {
+                "id": "9c707599-2196-4540-8134-68c696539226",
+                "resourcePath": "objects\\o_weatherSystemSnowfall\\o_weatherSystemSnowfall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ef341803-bcf7-4124-b313-c0e0ff960bdd",
             "Value": {
                 "id": "29cb9927-19eb-469a-952e-21b23d2466a1",
@@ -10964,6 +11028,14 @@
                 "id": "62d9b5aa-1dc6-478b-90b8-7ee0b5aae42a",
                 "resourcePath": "views\\f61c1fd2-48df-4e54-a0d9-564f25e930b5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f691e4fc-69b2-4689-b54d-4dc4a4699aec",
+            "Value": {
+                "id": "ffc7c8a9-68e8-4b6a-b4fb-c535b96d4f13",
+                "resourcePath": "objects\\o_ashadowCloudMover\\o_ashadowCloudMover.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -11348,6 +11420,14 @@
                 "id": "81983f37-3272-4d8c-ae78-9c5f998d2ed2",
                 "resourcePath": "scripts\\dcmdRunString\\dcmdRunString.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fd9fa3e5-7ee2-4559-85d9-86c972ec21f3",
+            "Value": {
+                "id": "e582266c-4155-4315-8bb7-a5c91972a2e1",
+                "resourcePath": "objects\\o_ptcDarkdrop\\o_ptcDarkdrop.yy",
+                "resourceType": "GMObject"
             }
         },
         {
