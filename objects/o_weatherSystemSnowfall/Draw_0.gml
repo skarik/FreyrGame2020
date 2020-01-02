@@ -17,14 +17,17 @@ if (m_dustParticleCount > 0)
 }
 
 // draw the overlays
-var alphaStrength = power(max(0.0, m_strength), 0.5);
+if (m_strength > 1.0)
+{
+	var alphaStrength = max(0.0, m_strength - 1.0);
 
-draw_sprite_tiled_ext(sbg_dustlayer0, 0,
-					  m_overlay0_pos[0], m_overlay0_pos[1],
-					  1.0, 1.0,
-					  c_white, saturate(0.3 * alphaStrength));
+	draw_sprite_tiled_ext(sbg_snowdustlayer0, 0,
+						  m_overlay0_pos[0], m_overlay0_pos[1],
+						  1.0, 1.0,
+						  c_white, saturate(0.2 * alphaStrength));
 					  
-draw_sprite_tiled_ext(sbg_dustlayer1, 0,
-					  m_overlay1_pos[0], m_overlay1_pos[1],
-					  1.0, 1.0,
-					  c_white, saturate(0.4 * alphaStrength));
+	draw_sprite_tiled_ext(sbg_snowdustlayer1, 0,
+						  m_overlay1_pos[0], m_overlay1_pos[1],
+						  1.0, 1.0,
+						  c_white, saturate(0.2 * alphaStrength));
+}

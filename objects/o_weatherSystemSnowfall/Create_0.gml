@@ -8,6 +8,7 @@ m_overlay1_pos = [0, 0];
 
 m_spawnCounter_leaf = 0;
 m_spawnCounter_junk = 0;
+m_spawnCounter_snow = 0;
 
 m_dustParticleCount = 0;
 m_dustParticles = array_create(0);

@@ -14,6 +14,8 @@ if (season == kWeatherSeasonSummer)
 		delete(ob_weatherSystem);
 		new(o_weatherSystemSandstorm);
 	}
+	if (exists(o_snowRenderer))
+		delete(o_snowRenderer);
 }
 else if (season == kWeatherSeasonFall)
 {
@@ -23,6 +25,8 @@ else if (season == kWeatherSeasonFall)
 		delete(ob_weatherSystem);
 		new(o_weatherSystemLightningstorm);
 	}
+	if (exists(o_snowRenderer))
+		delete(o_snowRenderer);
 }
 else if (season == kWeatherSeasonWinter)
 {
@@ -31,6 +35,8 @@ else if (season == kWeatherSeasonWinter)
 		delete(ob_weatherSystem);
 		new(o_weatherSystemSnowfall);
 	}
+	if (!exists(o_snowRenderer))
+		new(o_snowRenderer);
 }
 else if (season == kWeatherSeasonSpring)
 {
@@ -39,6 +45,8 @@ else if (season == kWeatherSeasonSpring)
 		delete(ob_weatherSystem);
 		new(o_weatherSystemRainstorm);
 	}
+	if (exists(o_snowRenderer))
+		delete(o_snowRenderer);
 }
 
 if (exists(ob_weatherSystem))

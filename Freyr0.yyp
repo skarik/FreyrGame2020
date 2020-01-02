@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "07d7acdf-64cd-48e2-b83c-a6a7a0482c36",
+            "Value": {
+                "id": "837099f8-d654-4a61-a497-423e07e6f781",
+                "resourcePath": "objects\\o_snowRenderer\\o_snowRenderer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "07eeb702-1ce4-44a8-85fe-070bf909e0e9",
             "Value": {
                 "id": "69d3f560-deee-44c6-9d88-9bd9a92c0fd4",
@@ -1879,6 +1887,14 @@
             }
         },
         {
+            "Key": "2a14b03b-d1fb-4081-9741-d9a68e63a039",
+            "Value": {
+                "id": "b0739f5f-471c-40be-bc53-015ed4f4e0db",
+                "resourcePath": "sprites\\spt_snow\\spt_snow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2a18e71e-ad78-401b-a62c-3f31c0eefdac",
             "Value": {
                 "id": "d58e18ad-9836-4d94-80c1-4fced375eb55",
@@ -2460,6 +2476,14 @@
                 "id": "87eb78b5-a7e8-417e-b86e-26bbb12ec175",
                 "resourcePath": "objects\\o_e32x32_e48\\o_e32x32_e48.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "369c5362-00da-46d4-b7e1-c607a8309b69",
+            "Value": {
+                "id": "208bfb42-f551-4864-b467-787f4b928125",
+                "resourcePath": "shaders\\sh_bufferedSnow\\sh_bufferedSnow.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -4343,6 +4367,14 @@
             }
         },
         {
+            "Key": "6318492c-79ee-4bed-93e1-d9b9f9a5f082",
+            "Value": {
+                "id": "c8d07655-4cda-4bc4-a6dd-732c9084c2ff",
+                "resourcePath": "sprites\\sbg_snowdustlayer0\\sbg_snowdustlayer0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "635405fb-5601-49ef-bf6b-511b8679aafd",
             "Value": {
                 "id": "4d756a30-f216-44a4-aeaa-c3d8f0ed5bab",
@@ -4907,6 +4939,14 @@
             "Value": {
                 "id": "fd21b4d9-b55c-4555-929a-508d5159cfa9",
                 "resourcePath": "objects\\ob_doodad\\ob_doodad.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6f44a8eb-71c8-49c1-a584-98fd8d0094b3",
+            "Value": {
+                "id": "ebb96978-45a2-4dde-b1d1-931cd090e717",
+                "resourcePath": "objects\\o_ptcSnowflake\\o_ptcSnowflake.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -6927,6 +6967,14 @@
             }
         },
         {
+            "Key": "9d387656-428f-4fee-8b2a-bab955be67ab",
+            "Value": {
+                "id": "2d48a2ea-56fa-4cc6-976e-edcd4690ddfb",
+                "resourcePath": "sprites\\sbg_snowdustlayer1\\sbg_snowdustlayer1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9d74b698-6c3a-4706-a906-d045b1122a8e",
             "Value": {
                 "id": "0a0b3f72-5401-4455-a4a9-a860288378b7",
@@ -7644,6 +7692,14 @@
                 "id": "f7f504e0-3def-4922-811a-0c4a6c1678dd",
                 "resourcePath": "views\\ad2d36be-d81f-4fd0-94aa-08ba26708845.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ad304a1e-b866-475b-8187-29f547f272ef",
+            "Value": {
+                "id": "3f41c014-df06-4c68-aa3b-c214e9cbb524",
+                "resourcePath": "shaders\\sh_bufferedSnowInit_Swizzle\\sh_bufferedSnowInit_Swizzle.yy",
+                "resourceType": "GMShader"
             }
         },
         {

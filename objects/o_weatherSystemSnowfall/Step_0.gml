@@ -21,6 +21,35 @@ m_overlay0_pos[1] += (wind[1] + windOffset[1]) * Time.deltaTime;
 m_overlay1_pos[0] += wind[0] * 2.0 * Time.deltaTime;
 m_overlay1_pos[1] += wind[1] * 2.0 * Time.deltaTime;
 
+// Spawn snow
+var kRainMargin = 128;
+
+//m_spawnCounter_snow += Time.deltaTime * power(m_strength, 3) * 8;
+m_spawnCounter_snow += Time.deltaTime * m_strength * 40;
+while (m_spawnCounter_snow > 0)
+{
+	m_spawnCounter_snow -= 1;
+	
+	var raindrop = new(o_ptcSnowflake);
+		raindrop.x = GameCamera.view_x - kRainMargin + random(GameCamera.width + kRainMargin * 2);
+		raindrop.y = GameCamera.view_y - kRainMargin + random(GameCamera.height + kRainMargin * 2);
+		raindrop.z_height = 100 + random(100);
+}
+
+// Move snow
+if (m_strength > 1.0)
+{
+	//var caller = id;
+	var motion_strength_mul = (m_strength - 1.0) * Time.deltaTime * 0.25;
+	with (o_ptcSnowflake)
+	{
+		if (z_height > 0.0)
+		{
+			x += wind[0] * motion_strength_mul;
+			y += wind[1] * motion_strength_mul;
+		}
+	}
+}
 
 // Create leaf particles
 m_spawnCounter_leaf += Time.deltaTime * m_strength * sqrt(abs(windStrength)) / 10.0;
@@ -47,9 +76,9 @@ if (array_length_1d(m_dustParticles) < m_dustParticleCount)
 	{
 		m_dustParticles[i] = [random(GameCamera.width),
 							  random(GameCamera.height),
-							  wind[0] * 0.3,
-							  wind[1] * 0.3,
-							  make_color_rgb(146, 126, 106)];
+							  wind[0] * 0.2,
+							  wind[1] * 0.2,
+							  make_color_rgb(240, 250, 255)];
 	}
 }
 
@@ -59,8 +88,8 @@ for (var i = 0; i < m_dustParticleCount; ++i)
 	var particle = m_dustParticles[i];
 		
 	// Change motion to match wind
-	particle[2] = motion1d_to(particle[2], (wind[0] + windOffset[0]) * 0.3, 50 * Time.deltaTime);
-	particle[3] = motion1d_to(particle[3], (wind[1] + windOffset[1]) * 0.3, 50 * Time.deltaTime);
+	particle[2] = motion1d_to(particle[2], (wind[0] + windOffset[0]) * 0.2, 50 * Time.deltaTime);
+	particle[3] = motion1d_to(particle[3], (wind[1] + windOffset[1]) * 0.2, 50 * Time.deltaTime);
 		
 	// Provide motion
 	particle[0] += particle[2] * Time.deltaTime;
