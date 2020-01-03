@@ -1,5 +1,4 @@
-/// @description farmPlaceReturnItem (inventory, tradeItem)
-/// @param inventory
+/// @description farmPlaceReturnItem (tradeItem)
 /// @param tradeItem
 
 var tradeItem = argument0;
