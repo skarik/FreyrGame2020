@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "0239fe33-9b3d-425e-bd85-bee7da1548c5",
+            "Value": {
+                "id": "5b56230c-f030-4625-bdd6-90baba8fbbae",
+                "resourcePath": "sprites\\s_propRuinHead\\s_propRuinHead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02593ce6-a0ec-471b-a787-3d053751a476",
             "Value": {
                 "id": "fa4dd3f8-7b00-4626-9f59-5ad938673096",
@@ -511,6 +519,14 @@
             }
         },
         {
+            "Key": "0bd4041a-4c97-4b99-a9c0-20ed8371e025",
+            "Value": {
+                "id": "40906c80-171f-436f-8b89-88afd567e75a",
+                "resourcePath": "sprites\\s_propPuffFlowerPetal1\\s_propPuffFlowerPetal1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0befab3f-4a1a-4bb8-a6e1-678a67fd61eb",
             "Value": {
                 "id": "8f05e54c-8f40-488e-a777-5d79c25f4f38",
@@ -659,6 +675,14 @@
             "Value": {
                 "id": "bae0cbb6-8119-49ce-88b2-d5be8f71fd6a",
                 "resourcePath": "sprites\\s_propViggoTrainCar_Flowers\\s_propViggoTrainCar_Flowers.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1056f3d3-7d30-4872-ad5e-414c88008320",
+            "Value": {
+                "id": "7c4da97b-3416-4316-8a7b-c13ed91d8fa8",
+                "resourcePath": "sprites\\s_BaoTree\\s_BaoTree.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2135,6 +2159,14 @@
             }
         },
         {
+            "Key": "2e0d837c-b3d7-48c9-94e9-63616966e6a1",
+            "Value": {
+                "id": "0819f9a2-1595-4d44-9d6d-0bab71e73bbb",
+                "resourcePath": "sprites\\s_propRuinLowWall\\s_propRuinLowWall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2e37db4a-79d7-4916-a964-6037acea9cd0",
             "Value": {
                 "id": "c0b0dd88-62b7-44b5-a2fd-b267f8e98c18",
@@ -2303,6 +2335,14 @@
             }
         },
         {
+            "Key": "33025bfd-3707-4dad-b4d8-a17ab36ecd9a",
+            "Value": {
+                "id": "f308cda4-c83c-489c-ae8a-228f61a4984f",
+                "resourcePath": "sprites\\s_propPuffFlowerPetal\\s_propPuffFlowerPetal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "335e9b2e-2113-4a58-b9e0-3ccec2eb60b0",
             "Value": {
                 "id": "1eb570a6-baf4-494f-8224-e3de3198b2d1",
@@ -2428,6 +2468,14 @@
                 "id": "2e92d0c9-ba27-403d-887a-c737ce7149d3",
                 "resourcePath": "scripts\\ctsParseDialogue\\ctsParseDialogue.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "364240c9-01d0-4b25-b520-4724b75ec426",
+            "Value": {
+                "id": "cbe805bf-a615-428b-b0fe-dadcf047a86d",
+                "resourcePath": "sprites\\s_propPuffFlower\\s_propPuffFlower.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2691,6 +2739,14 @@
             "Value": {
                 "id": "175076a4-3d1c-4efd-9cfd-8319880b8499",
                 "resourcePath": "sprites\\s_assetCGlowies\\s_assetCGlowies.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3c624705-1ca8-4896-a794-876429965a03",
+            "Value": {
+                "id": "82b13575-00b9-4aae-ac50-b7d1b5ff9216",
+                "resourcePath": "sprites\\s_propRuinLowWall2\\s_propRuinLowWall2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3740,6 +3796,14 @@
                 "id": "a3e80888-cec5-4df6-8979-0d2ee8e24d27",
                 "resourcePath": "objects\\o_ptcPebble\\o_ptcPebble.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "555734fa-30de-4e79-965d-13dbbd093a80",
+            "Value": {
+                "id": "9186c103-1506-4115-8886-4310f6f63e64",
+                "resourcePath": "sprites\\s_propRuinWall\\s_propRuinWall.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6291,6 +6355,14 @@
             "Value": {
                 "id": "1dcf1253-89ea-4cbe-8f1a-e211cdec7980",
                 "resourcePath": "sprites\\s_propTent1\\s_propTent1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8eed50c0-31ba-4306-9797-3238f28e7a48",
+            "Value": {
+                "id": "e0b1f60a-36ce-429c-affc-38481f5c8f85",
+                "resourcePath": "sprites\\s_propSandstoneBoulder\\s_propSandstoneBoulder.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10260,6 +10332,14 @@
                 "id": "6f3e927d-5018-4b11-a9ea-b7128af0d708",
                 "resourcePath": "rooms\\rm_conventionIntro\\rm_conventionIntro.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "e327efef-bca1-4ee7-b509-c0e752e078f5",
+            "Value": {
+                "id": "88748309-07f3-4b07-b2d8-1735e870d1b1",
+                "resourcePath": "sprites\\s_BigPot\\s_BigPot.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
