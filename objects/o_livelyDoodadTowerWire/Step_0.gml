@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Update glow amount via power
 
 //if (m_powerOutput < 0.5)
 

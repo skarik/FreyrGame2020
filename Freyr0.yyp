@@ -11319,6 +11319,14 @@
             }
         },
         {
+            "Key": "fa9d067e-32ea-469e-9d3d-19738a81a8e6",
+            "Value": {
+                "id": "e4ace8c8-425f-488c-9cc3-00231d508f64",
+                "resourcePath": "objects\\o_livelyDoodadTowerWire_PhysWire\\o_livelyDoodadTowerWire_PhysWire.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "faacf7ed-ee79-430e-91cb-472fb1fa5658",
             "Value": {
                 "id": "925f2318-5379-421e-8191-4480bf9614e3",

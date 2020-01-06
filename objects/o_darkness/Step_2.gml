@@ -26,9 +26,9 @@ if (exists(o_dayNightCycle) || exists(ob_ambientLighting))
 	// Bloom multiply is mapped from 128 to 0 matching 0.0 to 1.6.
 	// This makes bloom not appear at all unless the ambient is below about 50% brightness.
 	bloom_mul = 1.6 * saturate(0.8 - color_get_value(ambient_color) / 128 * 0.8);
-	// Bloom drop value is mapped from 128 to 0 matching 0.1 to 1.0.
+	// Bloom drop value is mapped from 128 to 0 matching 0.2 to 1.0.
 	// This makes bloom essentially not appear at all unless the ambient is below 50% brightness.
-	bloom_drop = saturate(0.1 + color_get_value(ambient_color) / 128 * 0.9);
+	bloom_drop = saturate(0.2 + color_get_value(ambient_color) / 128 * 0.8);
 	
 	if (exists(ob_ambientLighting))
 	{
@@ -91,7 +91,7 @@ if (surface_exists(m_darkness))
 	}
 	
 	// normal light sources:
-	//gpu_set_blendmode(bm_normal);
+	gpu_set_blendmode(bm_normal);
 	//gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_one);
 	
 	with (ob_ambientShadow)
