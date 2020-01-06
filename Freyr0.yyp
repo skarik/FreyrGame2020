@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "0a2a0992-c54d-4ac1-b5bf-8f24e6e2b4b3",
+            "Value": {
+                "id": "5a4220c7-ffe4-423b-9d86-c0ff075ebd0f",
+                "resourcePath": "sprites\\s_propWildFlowers2\\s_propWildFlowers2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0a550bec-4366-4aae-99ff-63683d9aac36",
             "Value": {
                 "id": "0f757f98-827a-4f03-ad93-5d42144173cf",
@@ -523,6 +531,14 @@
             "Value": {
                 "id": "40906c80-171f-436f-8b89-88afd567e75a",
                 "resourcePath": "sprites\\s_propPuffFlowerPetal1\\s_propPuffFlowerPetal1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0bd6eee6-366b-4783-927e-3d35ca217eb9",
+            "Value": {
+                "id": "1622678d-de7e-4e54-a4f6-3ef4455884e8",
+                "resourcePath": "sprites\\s_propFungus\\s_propFungus.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1751,6 +1767,14 @@
             }
         },
         {
+            "Key": "275e9940-9263-4c42-a538-13ac127e3ad9",
+            "Value": {
+                "id": "ded013ff-da45-4037-9109-8ca24da9edc9",
+                "resourcePath": "sprites\\s_charDayMoth\\s_charDayMoth.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2792d87a-c6f4-4382-9337-00616843bddb",
             "Value": {
                 "id": "f5c16644-db9c-4cda-94d2-a2a714553f5d",
@@ -2100,6 +2124,14 @@
                 "id": "9c2eb873-4310-4867-8800-053430a66acf",
                 "resourcePath": "views\\2cb68f08-0b60-4d8b-a399-df9aa9ab8349.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2ccba4d4-3938-4ade-a085-083d4edcbf47",
+            "Value": {
+                "id": "77c1eb58-3589-42a0-809f-ddf7db3ee595",
+                "resourcePath": "sprites\\s_propWildFlowers\\s_propWildFlowers.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4764,6 +4796,14 @@
                 "id": "20ce5b96-19b8-4e2d-9643-2c4ef6b14caa",
                 "resourcePath": "sprites\\spt_wheatLeaf\\spt_wheatLeaf.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6b58fc67-9cb2-499b-8d5b-97e404eaf182",
+            "Value": {
+                "id": "d43bcabe-1abd-4599-8765-e79070f0e0dd",
+                "resourcePath": "objects\\o_chDayMoth\\o_chDayMoth.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7607,6 +7647,14 @@
             }
         },
         {
+            "Key": "a9b8ca3c-6529-4f82-98d3-546f3e3bfda9",
+            "Value": {
+                "id": "20c59a11-ad14-4172-9d63-c8993273b156",
+                "resourcePath": "sprites\\s_propFungus3\\s_propFungus3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a9c47237-0f24-4178-b97b-f81ac0c22d65",
             "Value": {
                 "id": "f74f7148-99be-4dfe-8ce4-ae567de4040e",
@@ -10291,6 +10339,14 @@
             "Value": {
                 "id": "d6a59831-1fb8-405b-94b1-3d1b043fee36",
                 "resourcePath": "sprites\\ssy_cameraFocus\\ssy_cameraFocus.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e1341471-2d67-474d-bd70-0e58a48aef1b",
+            "Value": {
+                "id": "655d8e20-23d4-43da-8cb3-c2f2eb2f6d2a",
+                "resourcePath": "sprites\\s_propFungus2\\s_propFungus2.yy",
                 "resourceType": "GMSprite"
             }
         },
