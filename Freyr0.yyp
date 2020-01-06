@@ -831,6 +831,14 @@
             }
         },
         {
+            "Key": "1326f2e6-7332-4527-8962-b64380c51e14",
+            "Value": {
+                "id": "eea3bbf4-e196-4f21-8139-57afd635ec3c",
+                "resourcePath": "sprites\\s_propDeerBoneStanding\\s_propDeerBoneStanding.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "13451517-122d-495a-b84b-e3f5f7f1c599",
             "Value": {
                 "id": "446d6162-7659-405c-bb3d-7797813b8eb0",
@@ -5591,6 +5599,14 @@
             }
         },
         {
+            "Key": "7e666a5c-b1eb-4d65-93da-e832940e2ff6",
+            "Value": {
+                "id": "7c7ddf09-6a44-4aea-a54b-42c022e8f1aa",
+                "resourcePath": "sprites\\s_propWildLemonTree\\s_propWildLemonTree.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7ebff026-17bc-4e80-80f4-37b2b089bcd4",
             "Value": {
                 "id": "cd9a971b-e516-432b-8cf9-1945499e66a9",
@@ -7380,6 +7396,14 @@
                 "id": "57e198ba-e2f8-4e35-a409-8cec8f882482",
                 "resourcePath": "objects\\o_cropTurnip\\o_cropTurnip.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a4b2c4c9-064a-49c5-9050-db44af71d70e",
+            "Value": {
+                "id": "7766031c-bb80-4f82-8ad5-5a149425f946",
+                "resourcePath": "sprites\\s_propDeerBoneVertical\\s_propDeerBoneVertical.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9327,6 +9351,14 @@
             }
         },
         {
+            "Key": "cee18cd6-78f8-4f83-8c70-5a0ad7e36888",
+            "Value": {
+                "id": "6d9031cf-74e6-422c-abaa-769819588b2a",
+                "resourcePath": "sprites\\s_propSquatTree\\s_propSquatTree.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ceed6efe-86c4-4b56-9e0c-f0febf8c0f0a",
             "Value": {
                 "id": "47516e73-b230-4aa0-8ae7-76c0a60082ee",
@@ -9956,6 +9988,14 @@
                 "id": "659bd293-f713-415b-ac33-640f233988c6",
                 "resourcePath": "objects\\ob_doodadSpecialShadow\\ob_doodadSpecialShadow.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dbcae0c8-ef7c-4ff9-b605-199919ca57cf",
+            "Value": {
+                "id": "427a9924-dc67-4303-80d6-bce51790064e",
+                "resourcePath": "sprites\\s_propFlatGrass\\s_propFlatGrass.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

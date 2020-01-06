@@ -7,8 +7,11 @@ if (doodad_type == ob_doodad)
 	{
 		// Shrubbery and trees:
 		case s_propDTree0: case s_propDBushes0: case s_propDGrass:
+		case s_propFlatGrass:
 		case s_propPuffFlower:
 		case s_BaoTree:
+		case s_propWildLemonTree:
+		case s_propSquatTree:
 		case s_oasisTree: case s_propDPalm0:
 		case s_propViggoTrainCar_Flowers:
 		case s_propViggoTrainCar_Tree:
