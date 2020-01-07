@@ -1103,6 +1103,22 @@
             }
         },
         {
+            "Key": "17596f84-41e3-4c36-8a84-795461bb2bad",
+            "Value": {
+                "id": "8741eb82-52dc-4340-a548-3f244e8fdd4f",
+                "resourcePath": "scripts\\mothMotionInit\\mothMotionInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "17620a07-1cee-4ce3-b04c-2ae95b4f429a",
+            "Value": {
+                "id": "33b5182e-70d3-4b56-b14f-4278a317c37d",
+                "resourcePath": "scripts\\mothMotionTowards\\mothMotionTowards.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "177eef1b-0e60-4e13-b97f-b39af1ccd78a",
             "Value": {
                 "id": "2bc141ac-6fa7-4cd6-b008-5a16d8359057",
@@ -8847,6 +8863,14 @@
             }
         },
         {
+            "Key": "c25c6925-fff9-4b57-9e62-165747774832",
+            "Value": {
+                "id": "89055b5a-e847-449c-88b1-384980a03abd",
+                "resourcePath": "views\\c25c6925-fff9-4b57-9e62-165747774832.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c2b8bb92-a935-432f-ae28-8b0c72fed9cd",
             "Value": {
                 "id": "6dbb404a-888f-41c8-83c7-a7e9c9a068ce",
@@ -12199,6 +12223,8 @@
         "1baf96de-1feb-4ba4-b39a-5ed3be46d4b5",
         "930ee58e-d0dd-4560-95a0-0908ec2ac30d",
         "6dda03f6-f598-4aa5-9a1d-12c38ae05114",
+        "17596f84-41e3-4c36-8a84-795461bb2bad",
+        "17620a07-1cee-4ce3-b04c-2ae95b4f429a",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",

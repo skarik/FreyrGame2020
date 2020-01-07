@@ -1,40 +1,51 @@
 /// @description flutter
 
-var xtarget = o_PlayerTest * 0.5;
-var ytarget =  o_PlayerTest * 1.5;
+var xtarget = room_width * 0.5;
+var ytarget = room_height * 1.5;
 
-// If far from a turnip, fly to one
-if (point_distance(x, y, xtarget, ytarget) > 20)
+// Placed moth?
+//if (xstart > 0 && ystart > 0 && xstart < room_width && ystart < room_height)
+//{
+	xtarget = xstart;
+	ytarget = ystart;
+	
+	mothMotionTowards(xtarget, ytarget, 40);
+//}
+// Procedural moth? TODO: Test later on farm.
+/*else
 {
-	var steer_direction = point_direction(x, y, xtarget, ytarget);
-	xspeed += lengthdir_x(400, steer_direction) * Time.deltaTime;
-	yspeed += lengthdir_y(400, steer_direction) * Time.deltaTime;
-}
-// Otherwise, randomly wander
-else
-{
-	var travelDirection = point_direction(0, 0, xspeed, yspeed);
-	random_steering += random_range(-720, +720) * Time.deltaTime;
-	//random_steering += random_range(-40, +40) * Time.deltaTime;
-	//random_steering += sin(current_time/110 + id) * 40.0 * Time.deltaTime;
-	//random_steering += cos(current_time/140 + id) * 40.0 * Time.deltaTime;
-	random_steering = clamp(random_steering, -90, +90);
-	random_steering += random_range(-40, +40);
-	xspeed += lengthdir_x(100, travelDirection + random_steering) * Time.deltaTime;
-	yspeed += lengthdir_y(100, travelDirection + random_steering) * Time.deltaTime;
-}
-
-// fix the speed
-var tspeed = sqrt(sqr(xspeed) + sqr(yspeed));
-xspeed *= 30 / tspeed;
-yspeed *= 30 / tspeed;
-
-// move
-x += xspeed * Time.deltaTime;
-y += yspeed * Time.deltaTime;
-
-// set angle
-image_angle = point_direction(0, 0, xspeed, yspeed);
+	if (timeofdayIsDaytime())
+	{
+		// If have no spot, select a spot to hover nearby the player.
+		if (!hoverHasPosition)
+		{
+			hoverHasPosition = true;
+			hoverResetTimer = 0.0;
+		
+			hoverAreaX = o_PlayerTest.x + random_range(-200, +200);
+			hoverAreaY = o_PlayerTest.y + random_range(-200, +200);
+		}
+		// Otherwise keep track of time we're going to that spot
+		else
+		{
+			hoverResetTimer += Time.deltaTime / 20.0; // Every 20 seconds, find a new spot
+			if (hoverResetTimer > 1.0)
+				hoverHasPosition = false;
+		}
+	
+		// Go to that hover area
+		xtarget = hoverAreaX;
+		ytarget = hoverAreaY;
+	}
+	else
+	{
+		// At night, reset the spot we selected - and go offscreen.
+		hoverHasPosition = false;
+		hoverResetTimer = 0.0;
+	}
+	
+	mothMotionTowards(xtarget, ytarget, 20);
+}*/
 
 // update lights
 m_lightEmissive.x = x;

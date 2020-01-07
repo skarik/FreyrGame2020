@@ -1,9 +1,12 @@
 /// @description set height and init speed
 event_inherited();
 
-xspeed = 1;
-yspeed = 1;
-random_steering = 0;
+mothMotionInit();
+
+hoverHasPosition = false;
+hoverAreaX = room_width * 0.5;
+hoverAreaY = room_height * 0.5;
+hoverResetTimer = 0;
 
 z_height = 14;
 

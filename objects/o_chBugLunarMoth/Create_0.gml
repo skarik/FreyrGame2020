@@ -1,9 +1,7 @@
 /// @description set height and init speed
 event_inherited();
 
-xspeed = 1;
-yspeed = 1;
-random_steering = 0;
+mothMotionInit();
 
 z_height = 14;
 
