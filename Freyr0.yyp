@@ -1135,6 +1135,14 @@
             }
         },
         {
+            "Key": "17c6a0ff-eb03-419c-b2ea-900120dd08b3",
+            "Value": {
+                "id": "38666ac2-42bf-4fd1-ae58-9ddbccdee685",
+                "resourcePath": "sprites\\s_propGoodBoiStatues\\s_propGoodBoiStatues.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "18420bb2-1fd1-4bb2-93d4-e713dd89e7d4",
             "Value": {
                 "id": "ff4d165d-e44e-462a-97c4-574572674cd1",
@@ -1196,6 +1204,14 @@
                 "id": "ba1a2216-5b73-459e-85cb-f0be1ca108e8",
                 "resourcePath": "objects\\o_fxBloodHitPunch\\o_fxBloodHitPunch.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "1a2fac3b-0f9c-4eca-8c7e-38e070117db5",
+            "Value": {
+                "id": "a2d083f2-6300-49a5-82bf-90b5910e6b22",
+                "resourcePath": "sprites\\s_propCreepyLampStatue\\s_propCreepyLampStatue.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1276,6 +1292,14 @@
                 "id": "23d08997-1a8d-4127-b185-ead85c76b0dc",
                 "resourcePath": "rooms\\rm_mithra\\rm_mithra.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "1c6e59e7-d145-4aaa-ab01-8888b4f28754",
+            "Value": {
+                "id": "f715b3ba-e2bf-4a1c-a978-dbed2492db76",
+                "resourcePath": "sprites\\s_propPlanterBox\\s_propPlanterBox.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4143,6 +4167,14 @@
             }
         },
         {
+            "Key": "59bf6a38-3e5c-456f-97db-327667ec4a10",
+            "Value": {
+                "id": "ffbebb1b-f47a-4991-b298-2f9bc9b3d5fc",
+                "resourcePath": "sprites\\s_propWaterShrub1\\s_propWaterShrub1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "59d1f763-2eb5-4606-8f1d-677e64651de7",
             "Value": {
                 "id": "aa0aba55-56d6-4dd9-b511-b2a59c7a15f2",
@@ -4260,6 +4292,14 @@
                 "id": "927d2786-512f-4dd1-ace8-b94bd030b97a",
                 "resourcePath": "views\\5c198672-6dd9-424d-92ef-391e6d336eb1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5c1e52a8-1e62-4448-9e00-23e4f94b44d6",
+            "Value": {
+                "id": "b3d0fb86-31e9-4cf1-b619-4faa7487bda3",
+                "resourcePath": "sprites\\s_propInWaterLamps\\s_propInWaterLamps.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5407,6 +5447,14 @@
             }
         },
         {
+            "Key": "74f75f24-7506-49a0-a6af-6a530dfbe78f",
+            "Value": {
+                "id": "7ad7517b-bb82-43d6-bb1b-b804aa9700d4",
+                "resourcePath": "sprites\\s_propMithraSign\\s_propMithraSign.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7523da81-30c2-41ab-880d-38935b14b2a5",
             "Value": {
                 "id": "94e95c27-748c-445f-b26f-20ffd63e4376",
@@ -5668,6 +5716,14 @@
                 "id": "f6c04963-9791-4ca1-9220-351e58ce4bce",
                 "resourcePath": "scripts\\_cutsceneParsePortrait\\_cutsceneParsePortrait.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7cb8a8f8-11f1-4b6b-9c9d-638c25f63736",
+            "Value": {
+                "id": "8855ed42-0b1f-4445-9fbd-cff6f7b05d9a",
+                "resourcePath": "sprites\\s_propSmallCardboard\\s_propSmallCardboard.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7119,6 +7175,14 @@
             }
         },
         {
+            "Key": "9b368b90-1a22-4384-a33d-35dc2acf2d68",
+            "Value": {
+                "id": "eaabc10c-2a82-42bc-8414-4bfcd935c0d3",
+                "resourcePath": "sprites\\s_propWaterShrub\\s_propWaterShrub.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9b5ebd36-5e2f-4833-94e3-375a22376bdc",
             "Value": {
                 "id": "7e6dddc9-fdd2-47a5-9a45-8d40081e8924",
@@ -7587,6 +7651,14 @@
             "Value": {
                 "id": "efd054d9-e065-4bdc-9070-216de45dc09e",
                 "resourcePath": "sprites\\s_propRuinsSkull0_Shadow\\s_propRuinsSkull0_Shadow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a537c241-4e19-4637-aca4-aeb1de9f198f",
+            "Value": {
+                "id": "1e8ea2b2-4d23-48c3-b5b9-47ec619a38d8",
+                "resourcePath": "sprites\\s_propSmallerCardboard\\s_propSmallerCardboard.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9223,6 +9295,14 @@
             }
         },
         {
+            "Key": "c66604a1-58c0-4e06-8281-861d1f6f6974",
+            "Value": {
+                "id": "c6d4ffac-a0c5-4e62-b875-ef6731841048",
+                "resourcePath": "sprites\\s_propCreepyStatues\\s_propCreepyStatues.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c676649c-6bae-4657-8846-f81f78f9c4ba",
             "Value": {
                 "id": "47848f90-545c-4f75-a14c-acbdf21634ca",
@@ -9607,6 +9687,14 @@
             }
         },
         {
+            "Key": "cf8d3b58-5830-4acd-a82a-7bc2c0aa21ce",
+            "Value": {
+                "id": "b4a5eb9e-bf81-4c41-a2b1-90f7fd4f9763",
+                "resourcePath": "sprites\\s_propBoat\\s_propBoat.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d0013833-85bc-4327-b83e-936197178858",
             "Value": {
                 "id": "8b4f6fa0-b553-4dee-b16d-a36c1f89845f",
@@ -9627,6 +9715,14 @@
             "Value": {
                 "id": "0b850c64-e7ce-4504-a9a4-0a726d49a72a",
                 "resourcePath": "sprites\\s_propCrate\\s_propCrate.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d09b2867-ee0d-444c-8b92-3af495edd98c",
+            "Value": {
+                "id": "c15a2d57-d603-494a-bcf4-6eb2de8b81e7",
+                "resourcePath": "sprites\\s_propSmallerCrate\\s_propSmallerCrate.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10540,6 +10636,14 @@
                 "id": "00d44029-46e9-4701-9f6d-3e9652344b63",
                 "resourcePath": "sounds\\snd_physStepSand3\\snd_physStepSand3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e16700af-37a0-43b1-aa6c-2a6b0f6359b1",
+            "Value": {
+                "id": "5fa0cc5f-1338-453a-9280-d3ab14541266",
+                "resourcePath": "sprites\\s_propMustySacks\\s_propMustySacks.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -11695,6 +11799,14 @@
             }
         },
         {
+            "Key": "faa4ec43-f157-4f03-adba-daa270abbad7",
+            "Value": {
+                "id": "a76fa2bf-ed75-411a-96cc-1e7749ef2d5a",
+                "resourcePath": "sprites\\s_propMustySack\\s_propMustySack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "faacf7ed-ee79-430e-91cb-472fb1fa5658",
             "Value": {
                 "id": "925f2318-5379-421e-8191-4480bf9614e3",
@@ -11884,6 +11996,14 @@
                 "id": "c3e562f9-fb9b-4d0a-a581-b6e5dca1a9ac",
                 "resourcePath": "objects\\o_lightOuterglowGrad\\o_lightOuterglowGrad.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fe470952-6e7a-4d43-ba37-c7ceafa588fe",
+            "Value": {
+                "id": "f490b836-0950-450d-8b8a-9e864fee402c",
+                "resourcePath": "sprites\\s_propHugeCrate\\s_propHugeCrate.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
