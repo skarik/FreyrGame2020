@@ -32,7 +32,9 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 			doodad.collider = null;
 			doodad.light = null;
 			doodad.emissive = null;
+			doodad.elevation = null;
 			doodad.source_layer = targetLayer;
+			doodad.index = i;
 		
 		doodadSetGlow(doodad);
 		doodadSetShadow(doodad);
@@ -53,6 +55,8 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 				collider.visible = false;
 				collider.source_layer = targetLayer;
 			doodad.collider = collider;
+			
+			doodadSetElevation(doodad);
 		}
 		
 		// Do user-post info

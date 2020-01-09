@@ -35,7 +35,12 @@ if (doodad_type == ob_doodad)
 			break;
 			
 		// Buildings, modular system:
-			//break;
+		case s_propMithraBuilding0: case s_propMithraBuilding1:
+		case s_propMithraBuildingExt0: case s_propMithraBuildingExt1:
+		case s_propMithraBuilding2: case s_propMithraBuilding2b:
+		case s_propMithraBuilding3:
+			doodad_type = ob_doodadModularBuilding;
+			break;
 			
 		// Buildings, large:
 			//break;

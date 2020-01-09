@@ -2367,6 +2367,14 @@
             }
         },
         {
+            "Key": "3178cd86-3fc5-4ac7-a0fe-9d882d5b10cf",
+            "Value": {
+                "id": "b0390f56-8a3f-434c-bd2c-9954b38adf5a",
+                "resourcePath": "objects\\ob_doodadModularBuilding\\ob_doodadModularBuilding.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3204d686-cc99-4983-b070-b13ecbfcf42e",
             "Value": {
                 "id": "3137421a-05ff-41f5-bca3-d420053e326c",
@@ -2983,6 +2991,14 @@
             }
         },
         {
+            "Key": "40dca3b3-4bc4-4df5-862a-842447adcf9e",
+            "Value": {
+                "id": "aa24c89d-ec6f-45a6-8f21-f621e2ef963d",
+                "resourcePath": "views\\40dca3b3-4bc4-4df5-862a-842447adcf9e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "40ef29d6-2b7a-4df6-acfe-3f8da4271861",
             "Value": {
                 "id": "3c7f27f2-a9a1-4160-bb3d-e68d307bdbf2",
@@ -3292,6 +3308,14 @@
                 "id": "dc83edf4-f00e-434d-be88-bd0d879d9d0d",
                 "resourcePath": "scripts\\tarotCupsAce\\tarotCupsAce.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "480068a4-20de-4a3b-a3a3-f7e7407d2e69",
+            "Value": {
+                "id": "88ff9f2d-8082-485a-853b-7f036233f83a",
+                "resourcePath": "sprites\\s_monRoboCrab\\s_monRoboCrab.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6647,6 +6671,14 @@
             }
         },
         {
+            "Key": "939e4f35-34dd-4bb5-97e7-cae516313515",
+            "Value": {
+                "id": "33d84a4e-04bc-49d0-91f5-5818f0b9da9a",
+                "resourcePath": "views\\939e4f35-34dd-4bb5-97e7-cae516313515.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "942055e2-d018-4c57-a3d5-570117e357e7",
             "Value": {
                 "id": "16c4495f-17e6-4ed1-bd77-2582f9bb20fe",
@@ -7596,6 +7628,14 @@
                 "id": "4559392d-251c-4965-b59b-172f1639af19",
                 "resourcePath": "scripts\\settingsControlLoad\\settingsControlLoad.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a7c952ea-3eb0-45b8-86ff-9ae6cd342baa",
+            "Value": {
+                "id": "56078540-2c1a-44b1-9abc-0c04c82d6778",
+                "resourcePath": "objects\\o_chRoboCrab\\o_chRoboCrab.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -9359,6 +9399,14 @@
             }
         },
         {
+            "Key": "cc17e002-c4b9-4e67-9318-af467621b8aa",
+            "Value": {
+                "id": "790669df-b238-4b99-93c9-33a9e5a649c0",
+                "resourcePath": "scripts\\doodadSetElevation\\doodadSetElevation.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc75cd93-16ba-4671-acde-f868a25f7011",
             "Value": {
                 "id": "5063f974-21fe-405b-a82b-0d6767db6594",
@@ -10943,6 +10991,14 @@
             }
         },
         {
+            "Key": "eda59b82-8aa9-4c6f-8bb2-367192b18db3",
+            "Value": {
+                "id": "8c62aa0e-7919-4a23-8f9a-bf859c159c11",
+                "resourcePath": "views\\eda59b82-8aa9-4c6f-8bb2-367192b18db3.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "edc96e42-7c65-4836-9e72-5094e7d73d9b",
             "Value": {
                 "id": "d94c737f-fe50-4acb-a5f6-4e184b6a0cbd",
@@ -12004,9 +12060,10 @@
         "a02c70d0-2855-431f-a152-4b434b381889",
         "f88ac528-e68c-4322-9c8b-dd4a76715d3d",
         "c8eac5d1-98d9-4654-b3dc-c9e5b591886f",
-        "446efed8-c7db-4e4b-91bd-76a3b9a6b0c6",
         "8af2478d-469c-4985-90d4-4d73836ded44",
+        "446efed8-c7db-4e4b-91bd-76a3b9a6b0c6",
         "f92f1b14-bd67-4154-a36e-72df92e0159e",
+        "cc17e002-c4b9-4e67-9318-af467621b8aa",
         "af29fa42-90c0-487e-a646-19a5084a1e08",
         "c0ab6c09-05bf-404c-a21f-bb2c234ee5e0",
         "69e4f011-95f1-4a9d-8c67-44dd75871b14",

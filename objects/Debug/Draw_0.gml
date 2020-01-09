@@ -61,15 +61,18 @@ with (ob_doodad)
 {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_right);
-	draw_text(x + 4, y + 2, "z:" + string(z));
-	draw_text(x + 4, y + 8, "z_height:" + string(z_height));
+	draw_text(x + 4, y + 2, "#" + string(index));
+	draw_text(x + 4, y + 8, "z:" + string(z) + "+" + string(z_height));
 }
+/*draw_set_alpha(alpha * 0.3);
+draw_set_color(c_white);
+draw_set_font(f_04b03);
 with (ob_colliderDepth)
 {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
-	draw_text(x, y, "z:" + string(z));
-}
+	draw_text(x, y - 8, "z:" + string(z));
+}*/
 
 draw_set_alpha(alpha * 1.0);
 paletteDebugDisplay();
