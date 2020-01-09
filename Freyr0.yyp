@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "02a51096-e4ea-4d47-89c7-9c9010419f40",
+            "Value": {
+                "id": "5f9e3096-c539-4afa-8fe9-80e9eb8896b9",
+                "resourcePath": "sprites\\s_propVerySmallCactus\\s_propVerySmallCactus.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02d2565b-b47a-4247-bc0c-f98273d3edec",
             "Value": {
                 "id": "437183f3-2c96-40b1-bff6-4382943fb0f1",
@@ -2423,6 +2431,14 @@
             }
         },
         {
+            "Key": "33c54b26-edd8-43f1-8f0c-259c130a5b69",
+            "Value": {
+                "id": "1961520a-7d32-4274-8636-ca2e88869aa2",
+                "resourcePath": "sprites\\s_propViggoStatue\\s_propViggoStatue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "33cd04f5-5ace-4f3f-842d-2d76389eacb3",
             "Value": {
                 "id": "8fb478a1-bcfb-4941-8632-a3854cba18d2",
@@ -2588,6 +2604,14 @@
                 "id": "208bfb42-f551-4864-b467-787f4b928125",
                 "resourcePath": "shaders\\sh_bufferedSnow\\sh_bufferedSnow.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "36b9c117-8a9f-4561-8071-600cd5986ee9",
+            "Value": {
+                "id": "e25d8cd9-4549-4cf0-ab56-750893d21d14",
+                "resourcePath": "sprites\\s_propSmallRuin\\s_propSmallRuin.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3031,6 +3055,14 @@
             }
         },
         {
+            "Key": "425043c1-8d68-4e77-ad22-eebd8bb3a695",
+            "Value": {
+                "id": "2c7f8594-c131-4527-9a27-0dc52f0e0bc3",
+                "resourcePath": "sprites\\s_propHorRuin\\s_propHorRuin.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4284635e-8029-477d-980f-c434a5bfa7c6",
             "Value": {
                 "id": "aeca5ab3-bc59-4244-b913-d7945b9eb1b1",
@@ -3164,6 +3196,14 @@
                 "id": "f1b87540-83af-4124-a9dc-1ca04e10552e",
                 "resourcePath": "objects\\o_ptcWaterDrop\\o_ptcWaterDrop.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4589593c-28a8-470d-8169-61afb5ddfe3b",
+            "Value": {
+                "id": "6bdd9a3a-c531-40af-ab27-8fc89f615399",
+                "resourcePath": "sprites\\s_propNathanMotStatue\\s_propNathanMotStatue.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3340,6 +3380,14 @@
                 "id": "188beff9-7e70-4c65-841f-2356cfb466aa",
                 "resourcePath": "views\\4910689a-fc10-4668-b3c0-e7b8161511f1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "491f082b-b55a-45f5-8d24-dcc4bb717fae",
+            "Value": {
+                "id": "17bf94d0-0f28-4f5b-bbae-1e252d241099",
+                "resourcePath": "sprites\\s_propStump\\s_propStump.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4044,6 +4092,14 @@
                 "id": "2136591c-7cac-406f-9983-ebe0a0be783e",
                 "resourcePath": "scripts\\inventorySwapIntoChest\\inventorySwapIntoChest.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "59786317-df24-4a1a-b3a9-976f3bd38eba",
+            "Value": {
+                "id": "87b6fc7a-5365-4978-9c8f-a4f8b2dc46c7",
+                "resourcePath": "sprites\\s_propBunnyCactus\\s_propBunnyCactus.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5108,6 +5164,14 @@
                 "id": "d73c9e37-e6e4-4804-b82b-813e6750c84d",
                 "resourcePath": "scripts\\areaConstants\\areaConstants.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6f9a32a4-811d-4f8e-a0b0-82589cb846db",
+            "Value": {
+                "id": "5ef02c89-2f9a-4216-bf29-af6cd09e7195",
+                "resourcePath": "sprites\\s_propRoadMarker\\s_propRoadMarker.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6783,6 +6847,14 @@
             }
         },
         {
+            "Key": "95f63663-9d32-451d-9000-131a49074fc2",
+            "Value": {
+                "id": "bdcca112-adb6-4439-a42d-d03c9e178fb0",
+                "resourcePath": "sprites\\s_propSandLump2\\s_propSandLump2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9659b0d5-8df8-4268-bf2c-0d8ed4119edb",
             "Value": {
                 "id": "ffd678f7-7572-4fe4-aec1-683d8cbfa27b",
@@ -6891,6 +6963,14 @@
             "Value": {
                 "id": "19f1d149-a46b-4c96-a296-b764f9604384",
                 "resourcePath": "sprites\\s_itemToolVoidAlternator\\s_itemToolVoidAlternator.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9896898d-67b6-4a34-a87b-3677443f5ae0",
+            "Value": {
+                "id": "54414aa9-a5d9-46e0-92a9-d0e0b1c7d688",
+                "resourcePath": "sprites\\s_propSmallCactus\\s_propSmallCactus.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7884,6 +7964,14 @@
                 "id": "5dc8a1ef-8dd1-4ebe-9a98-01b6cc85d077",
                 "resourcePath": "views\\ae0683df-be15-4962-b451-5eb43e0e6f4d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ae1b3f19-8524-4961-b221-982e55e91331",
+            "Value": {
+                "id": "88d05648-f375-410b-81ba-2a885488cbf3",
+                "resourcePath": "sprites\\s_propSandLump1\\s_propSandLump1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9407,6 +9495,14 @@
             }
         },
         {
+            "Key": "cd808fe5-e757-4844-998d-25e2564a96a8",
+            "Value": {
+                "id": "2d6616bd-ad87-4af8-8eb6-bf3025522249",
+                "resourcePath": "sprites\\s_propChildSkull\\s_propChildSkull.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ce109e40-5293-4606-9b3b-6c89d8d573d0",
             "Value": {
                 "id": "364365b5-9039-42b8-9d14-7fc0f878829b",
@@ -10191,6 +10287,14 @@
             }
         },
         {
+            "Key": "de3e4c32-7fe3-421f-a703-be550a0a48fe",
+            "Value": {
+                "id": "b4a7dfba-99fc-4a52-a728-8a5d836cd274",
+                "resourcePath": "sprites\\s_propHoomanSkull\\s_propHoomanSkull.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "de437fb7-65a8-4501-800a-435133069c83",
             "Value": {
                 "id": "b130223b-185e-4d6f-8831-f6c33bb41610",
@@ -10852,6 +10956,14 @@
                 "id": "8305b44f-0db2-4f29-8668-839dfb922900",
                 "resourcePath": "objects\\o_ptcWaterDropHit\\o_ptcWaterDropHit.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ebc420e8-821c-4af4-b84a-346d46903568",
+            "Value": {
+                "id": "9cdea23b-63b4-440d-934a-9a31e57bc021",
+                "resourcePath": "sprites\\s_propHornSkull\\s_propHornSkull.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
