@@ -55,6 +55,20 @@
             "value": "null",
             "varName": "m_powerSource",
             "varType": 5
+        },
+        {
+            "id": "5b5edfc2-40bd-48b7-9d00-4c962eb28473",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "m_initialSelection",
+            "varType": 0
         }
     ],
     "solid": false,

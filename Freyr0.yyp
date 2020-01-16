@@ -3943,6 +3943,14 @@
             }
         },
         {
+            "Key": "552ced7a-5e1f-4e8b-b83f-6ff661cc3385",
+            "Value": {
+                "id": "4d145803-f8d0-4649-b21d-5fb787bdcb4d",
+                "resourcePath": "scripts\\powerLogic_AdderSupply\\powerLogic_AdderSupply.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5538374a-22ea-4fdf-8a50-8f24f300f3e3",
             "Value": {
                 "id": "a3e80888-cec5-4df6-8979-0d2ee8e24d27",
@@ -8223,6 +8231,14 @@
             }
         },
         {
+            "Key": "b06eb26e-dc8f-41fb-851d-18a9a0c660c1",
+            "Value": {
+                "id": "410bb6d0-98dc-45be-8428-4c425cee8f3f",
+                "resourcePath": "scripts\\turn_towards_direction\\turn_towards_direction.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b0c3ec87-1503-4086-bf71-d238cb885fb4",
             "Value": {
                 "id": "002353ff-0e63-4905-874c-4e80f712f731",
@@ -9423,6 +9439,14 @@
             }
         },
         {
+            "Key": "c8a2e307-89b0-4828-97ab-b69c1ccbec76",
+            "Value": {
+                "id": "1ea1af21-4f59-47f3-a5e5-44cae28fee6c",
+                "resourcePath": "objects\\o_livelyPoweredAdder\\o_livelyPoweredAdder.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c8b3cb2b-f402-4617-9554-2ce08a6e12ce",
             "Value": {
                 "id": "6e08883a-96f1-4c29-bcb6-336258881b58",
@@ -9492,6 +9516,14 @@
                 "id": "8e9f8521-8c7f-4ef8-9228-cc012faa95a3",
                 "resourcePath": "sprites\\sce5_32x32\\sce5_32x32.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ca30bf3f-f945-4832-8f49-a337e19fb593",
+            "Value": {
+                "id": "bd3362bb-8518-4c7a-8857-be5c7a27d245",
+                "resourcePath": "objects\\o_cameraFocusDungeon\\o_cameraFocusDungeon.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12204,6 +12236,7 @@
         "e0ae9f70-6e47-40b7-930b-41d129fae225",
         "b8642774-0704-4ca8-8204-6b741fa0e34b",
         "39691aef-d2c3-497a-998b-9a205310cfb1",
+        "b06eb26e-dc8f-41fb-851d-18a9a0c660c1",
         "4d456c6e-57a8-4c75-b72d-a00951adcec3",
         "800f1941-4573-4ebe-a05a-8626fdc2945a",
         "6b91ca76-da4b-4e08-bde5-4e831d1f4265",
@@ -12550,6 +12583,7 @@
         "a07dcf9a-800d-437e-abea-7a3eeb76f1e7",
         "4d464d83-dbe6-4ace-9d10-d97771dfbcd0",
         "38708fa9-8be1-4f7d-a800-5ce5229e9b1c",
+        "552ced7a-5e1f-4e8b-b83f-6ff661cc3385",
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",

@@ -15,6 +15,7 @@ bbox = [sprite_get_bbox_left(sprite_index),
 		sprite_get_bbox_bottom(sprite_index)];
 radius = sqrt(sqr(bbox[0] - bbox[1]) + sqr(bbox[2] - bbox[3])) * 0.5;
 
+index = null;
 
 if (!exists(o_managerWaterBowlMovement))
 	new(o_managerWaterBowlMovement);

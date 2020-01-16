@@ -93,6 +93,20 @@
             "value": "0.9",
             "varName": "m_focusGlue",
             "varType": 0
+        },
+        {
+            "id": "075dc937-d15c-47c0-8477-e5ad83010e84",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1.0",
+            "varName": "m_focusGlueYRatio",
+            "varType": 0
         }
     ],
     "solid": false,

@@ -1,6 +1,7 @@
 if (exists(m_currentFocus))
 {
-	if (m_currentFocus.object_index != o_cameraFocus)
+	if (m_currentFocus.object_index != o_cameraFocus
+		&& m_currentFocus.object_index != o_cameraFocusDungeon)
 	{
 		// Don't do normal following if we're following something like an NPC.
 		return;

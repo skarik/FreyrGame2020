@@ -21,3 +21,7 @@ m_demuxer.m_powerSource = m_powerSource;
 
 // Set new power source for power system redirect
 m_powerSource = m_demuxer;
+
+// Set initial selection
+if (m_initialSelection != -1)
+	m_demuxer.m_powerMuxSelection = m_initialSelection;
