@@ -2863,6 +2863,14 @@
             }
         },
         {
+            "Key": "3c2421f5-ac8e-4d33-847f-9fee2faaa06b",
+            "Value": {
+                "id": "83a3e26e-8bcb-4d6d-88cb-f631647f453c",
+                "resourcePath": "objects\\o_livelyPoweredMultiplier\\o_livelyPoweredMultiplier.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3c4ad268-0d0c-4ef8-a0f1-72d8fbb6d218",
             "Value": {
                 "id": "175076a4-3d1c-4efd-9cfd-8319880b8499",
@@ -3419,6 +3427,14 @@
             "Value": {
                 "id": "eb027fa2-8365-4a4e-88ef-796e02711fb7",
                 "resourcePath": "scripts\\cutscenePlayerPlayAnimation\\cutscenePlayerPlayAnimation.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "486d6059-f9f1-4b78-b7b4-99295882451b",
+            "Value": {
+                "id": "0cc5753d-5ce0-4d5b-8fc1-f9a309010d48",
+                "resourcePath": "scripts\\powerLogic_InverterSupply\\powerLogic_InverterSupply.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6391,6 +6407,14 @@
             }
         },
         {
+            "Key": "8a8e0f54-f7a8-4788-bbd0-c478e66ca65d",
+            "Value": {
+                "id": "67e06a32-0a34-40de-9830-8d5a9874c86e",
+                "resourcePath": "sprites\\s_propTLamp0\\s_propTLamp0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8ac013f0-1a87-4caa-ae79-eb1180ab1d1a",
             "Value": {
                 "id": "5cadf4e3-e1ed-4545-8237-ce779b999f6f",
@@ -9303,6 +9327,14 @@
             }
         },
         {
+            "Key": "c5616bba-ecdc-4edc-b6a4-511c3de9458d",
+            "Value": {
+                "id": "e569336e-290f-4eb3-ba63-844b676b2d32",
+                "resourcePath": "scripts\\powerLogic_MultiplierSupply\\powerLogic_MultiplierSupply.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c57c346d-4512-4ea3-8d23-0f0ad8c7d6a7",
             "Value": {
                 "id": "03ed9d59-41b7-484d-95f2-0659a0ac9185",
@@ -11223,6 +11255,14 @@
             }
         },
         {
+            "Key": "ec5a7e3c-dc64-44f9-a549-94c638b45dfc",
+            "Value": {
+                "id": "d5d9e8d0-08f4-4d20-94d7-6ebc060eadfa",
+                "resourcePath": "objects\\o_livelyPoweredInverter\\o_livelyPoweredInverter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ec9a465f-fd87-43bd-887f-6b5a38271e74",
             "Value": {
                 "id": "248d6e99-531e-47cd-aea3-5bb0125cd0ba",
@@ -11395,6 +11435,14 @@
             "Value": {
                 "id": "44ab079e-235e-469f-a8ec-dcd96e5d8816",
                 "resourcePath": "objects\\o_ptcWheatLeaf\\o_ptcWheatLeaf.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f1013021-5cb5-47ac-aedc-81a44eb74305",
+            "Value": {
+                "id": "0e97b4bb-f37d-4831-bcf0-c2318fcce77c",
+                "resourcePath": "objects\\o_livelyDoodadTowerLamp\\o_livelyDoodadTowerLamp.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -12640,6 +12688,8 @@
         "4d464d83-dbe6-4ace-9d10-d97771dfbcd0",
         "38708fa9-8be1-4f7d-a800-5ce5229e9b1c",
         "552ced7a-5e1f-4e8b-b83f-6ff661cc3385",
+        "c5616bba-ecdc-4edc-b6a4-511c3de9458d",
+        "486d6059-f9f1-4b78-b7b4-99295882451b",
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
         "0b3a1a99-a216-4e81-bf99-e51ca9f176ab",
         "168499bc-f710-4056-834c-2c479db5d5ef",
