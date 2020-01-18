@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "0b3a1a99-a216-4e81-bf99-e51ca9f176ab",
+            "Value": {
+                "id": "38f416e2-b834-4f18-adf5-2b6d414d70d3",
+                "resourcePath": "scripts\\powerLogic_PotplugOutput\\powerLogic_PotplugOutput.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0bd4041a-4c97-4b99-a9c0-20ed8371e025",
             "Value": {
                 "id": "40906c80-171f-436f-8b89-88afd567e75a",
@@ -2676,6 +2684,14 @@
                 "id": "1a67b5d1-f03d-4a9f-b19d-1cba04113fd1",
                 "resourcePath": "scripts\\powerLogic_SapperSupply\\powerLogic_SapperSupply.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3931094e-63f9-42ca-a495-28b815d91c45",
+            "Value": {
+                "id": "d8b52577-cbf6-4498-b757-016b073c1d62",
+                "resourcePath": "sprites\\ssy_light128\\ssy_light128.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9975,6 +9991,14 @@
             }
         },
         {
+            "Key": "d476cd00-9768-498f-ad75-234b41e96f90",
+            "Value": {
+                "id": "ec8e5646-1029-4311-bd72-5e8dbbc18202",
+                "resourcePath": "objects\\o_livelyPoweredPotPlug\\o_livelyPoweredPotPlug.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d47df6c0-9235-4657-941c-b28ddafdf1df",
             "Value": {
                 "id": "4545a954-bfe8-491e-8f29-0e6ca97221a1",
@@ -11284,6 +11308,14 @@
                 "id": "fadd439a-b1bc-4c1b-bd83-f3189cfb2e54",
                 "resourcePath": "scripts\\aimotionMoveAt\\aimotionMoveAt.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "eedd18ec-d0e5-4eb0-9d21-83965e12f8ad",
+            "Value": {
+                "id": "0c08668d-1469-4be9-9699-cd8c8acf2ac5",
+                "resourcePath": "objects\\o_lightDayglowMedium\\o_lightDayglowMedium.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12609,6 +12641,7 @@
         "38708fa9-8be1-4f7d-a800-5ce5229e9b1c",
         "552ced7a-5e1f-4e8b-b83f-6ff661cc3385",
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
+        "0b3a1a99-a216-4e81-bf99-e51ca9f176ab",
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
         "1dcd64d2-4b18-4872-8659-8dccbb978594",

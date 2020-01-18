@@ -2,19 +2,46 @@
 
 event_inherited();
 
-/*var inWater = areaInWater(x, y, -128);
+var inPlug = false;
+var inPlugId = null;
 
-filled = filled || inWater;
-if (inWater)
+// Check if in plug...
+if (exists(m_user))
 {
-	charges = kMaxCharges;
+	var pot = id;
+	with (o_livelyPoweredPotPlug)
+	{
+		if (point_distance(x, y, pot.x, pot.y) < 16
+			|| point_distance(x, y,
+							  pot.m_user.x + lengthdir_x(10, pot.m_user.facingDirection),
+							  pot.m_user.y + lengthdir_y(10, pot.m_user.facingDirection)) < 16)
+		{
+			inPlug = true;
+			inPlugId = id;
+			m_pot = pot;
+			break;
+		}
+	}
 }
 
-image_index = filled ? 1 : 0;
-m_name = filled ? "Full Water Pot" : "Empty Water Pot";*/
 
-// Not placed in a power slot? Destroy self.
-m_canPickUp = false;
-energyFade = true;
-m_name = "Decaying Energy Pot";
-m_actionName = "";
+if (inPlug)
+{
+	// Placed in a power slot? Save!
+	x = inPlugId.x;
+	y = inPlugId.y;
+	energyPlugged = true;
+	
+	m_canPickUp = false;
+	energyFade = false;
+	m_name = "Plugged Energy Pot";
+	m_actionName = "";
+}
+else
+{
+	// Not placed in a power slot? Destroy self.
+	m_canPickUp = false;
+	energyFade = true;
+	m_name = "Decaying Energy Pot";
+	m_actionName = "";
+}

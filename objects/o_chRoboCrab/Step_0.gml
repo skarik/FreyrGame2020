@@ -26,8 +26,10 @@ if (!m_aiCombat_angry)
 		
 		//xspeed = lengthdir_x(kMoveSpeed, facingDirection) * Time.deltaTime;
 		//yspeed = lengthdir_y(kMoveSpeed, facingDirection) * Time.deltaTime;
-		xAxis.value = lengthdir_x(1.0, facingDirection);
-		yAxis.value = lengthdir_y(1.0, facingDirection);
+		var controlSpeed = (angle_difference(facingDirection, target_direction) < 10) ? 1.0 : 0.25;
+		
+		xAxis.value = lengthdir_x(controlSpeed, facingDirection);
+		yAxis.value = lengthdir_y(controlSpeed, facingDirection);
 		
 		aimingDirection = facingDirection;
 	}

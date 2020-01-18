@@ -11,6 +11,7 @@ charges = 0;
 kMaxCharges = 10;*/
 energyPower = 0.0;
 energyFade = false;
+energyPlugged = false;
 
 depthInit();
 

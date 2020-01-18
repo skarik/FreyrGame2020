@@ -24,7 +24,7 @@ if (exists(pl))
 // Spawn if we can and pot has not been consumed.
 if (active)
 {
-	if (!exists(m_pot))
+	if (!exists(m_pot) || m_pot.energyPlugged)
 	{
 		m_pot = instance_create_depth(x, y, depth, o_potEnergy);
 	}
