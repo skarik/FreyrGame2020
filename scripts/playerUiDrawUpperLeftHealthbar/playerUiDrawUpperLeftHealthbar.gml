@@ -119,3 +119,12 @@ if (m_arm_voidcap_draw_intro)
 				dx + 22 + GameCamera.width * 0.5 * expoInOut(1.0 - m_arm_voidcap_blend),
 				dy + 59 - 4);
 }
+
+// draw void sparks
+var l_draw_void_sparks = exists(pl.currentHeldUsable) && pl.currentHeldUsable.object_index = o_potEnergy;
+if (l_draw_void_sparks)
+{
+	draw_set_color(c_white);
+	draw_circle(dx + 18, dy + 25, 5, false);
+	draw_circle(dx + 18, dy + 25, 7, true);
+}

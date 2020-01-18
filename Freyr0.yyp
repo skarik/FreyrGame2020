@@ -4455,6 +4455,14 @@
             }
         },
         {
+            "Key": "5fb9eae4-1bf3-4e94-bd5f-8741ae3f5160",
+            "Value": {
+                "id": "3623a5fa-9c36-43b2-b654-c75d454726ec",
+                "resourcePath": "objects\\ob_aiHomepoint\\ob_aiHomepoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5fede730-95ae-4468-a506-466a6f28bcca",
             "Value": {
                 "id": "c978e70e-62be-4a00-9648-7ce826d23a5f",
@@ -4999,6 +5007,14 @@
             }
         },
         {
+            "Key": "6c52cf78-7240-4fb1-805a-21e0120d42a0",
+            "Value": {
+                "id": "fa6af007-bd28-42ba-b548-a2d54b1c5396",
+                "resourcePath": "objects\\o_livelyPotEnergySpawner\\o_livelyPotEnergySpawner.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6c6fe61b-5cfc-4291-b7c1-61c01674895c",
             "Value": {
                 "id": "edc79aca-d8da-45ea-9603-aaeec1242bda",
@@ -5124,6 +5140,14 @@
                 "id": "cc7297f3-b72e-4831-b679-9a95e5da0778",
                 "resourcePath": "scripts\\shadowOcclusionColor\\shadowOcclusionColor.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6e4ff965-dd91-4c53-af8f-6f17e5cdfa86",
+            "Value": {
+                "id": "48a46d9f-6332-4ad6-93b7-dc96d9c448a8",
+                "resourcePath": "objects\\o_potEnergy\\o_potEnergy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
