@@ -12,7 +12,8 @@
         "d5ff1085-c4f3-401b-ada5-e0ff94ce4e97",
         "8ad5dd29-d399-45ab-91c9-6969963a6fdd",
         "51ba26c1-b4bd-4aa3-8e36-55811f156e36",
-        "b740acc0-2815-4ac9-b05a-88062fa69b88"
+        "b740acc0-2815-4ac9-b05a-88062fa69b88",
+        "87f0cf58-522a-42f6-88a0-83b683122d1f"
     ],
     "filterType": "GMSprite",
     "folderName": "objects",

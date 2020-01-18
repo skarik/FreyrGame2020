@@ -4367,6 +4367,14 @@
             }
         },
         {
+            "Key": "5c678883-8e8f-4fc0-894f-1e428f86adc4",
+            "Value": {
+                "id": "d7717a5e-d0ab-4da6-b048-173e6b6016d7",
+                "resourcePath": "objects\\o_pickupKeyItem_YamaokaRose\\o_pickupKeyItem_YamaokaRose.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5c79468e-2b2b-44a2-a306-88c6cee20211",
             "Value": {
                 "id": "b6b2288f-c7dd-473a-8a70-a8e1212ebf66",
@@ -4731,6 +4739,14 @@
             "Value": {
                 "id": "aeca9b98-bd1d-4c62-a23c-b4dd5fd26339",
                 "resourcePath": "sprites\\sui_tarotTextureBase\\sui_tarotTextureBase.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "65c970e7-d445-4046-9566-8e53dfdde1f1",
+            "Value": {
+                "id": "50320fe8-63db-496e-a599-40be66238964",
+                "resourcePath": "sprites\\s_YamaokaRose2\\s_YamaokaRose2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6319,6 +6335,14 @@
             }
         },
         {
+            "Key": "87f0cf58-522a-42f6-88a0-83b683122d1f",
+            "Value": {
+                "id": "af133720-d9a7-44f5-aea7-d25347e2daf3",
+                "resourcePath": "views\\87f0cf58-522a-42f6-88a0-83b683122d1f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8804ead6-648a-42ac-a547-59c7fee0f7f2",
             "Value": {
                 "id": "eb00f870-2b36-44e4-9bb7-323c2a1ff648",
@@ -6620,6 +6644,14 @@
                 "id": "fa755ce5-3b02-41ea-ab71-56dab1daa359",
                 "resourcePath": "scripts\\areaGetName\\areaGetName.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8e987edc-62bd-4e87-a1fd-2dc7f7ba4117",
+            "Value": {
+                "id": "6d8e0b40-86ad-4b22-9f7c-c6ed8f0fb3a2",
+                "resourcePath": "sprites\\s_YamaokaRose1\\s_YamaokaRose1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7052,6 +7084,14 @@
                 "id": "652c7c78-d7ea-4b1a-a1b7-ee41579da021",
                 "resourcePath": "scripts\\playerUiDrawBag\\playerUiDrawBag.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "978086b7-657f-4752-bfae-cedec6d69e23",
+            "Value": {
+                "id": "c0e5286b-841c-497a-af3b-17e4814bcbe2",
+                "resourcePath": "sprites\\s_YamaokaRose3\\s_YamaokaRose3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8140,6 +8180,14 @@
                 "id": "f3643af5-6e96-4c25-a11e-49731d426c8d",
                 "resourcePath": "scripts\\_settingsControlSaveArray\\_settingsControlSaveArray.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "adac2b74-c9b8-425a-93f2-a20b10ef3dc1",
+            "Value": {
+                "id": "8407c8d9-7908-4a0b-9247-8a98d92bdb8f",
+                "resourcePath": "sprites\\s_YamaokaRoseGold\\s_YamaokaRoseGold.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -11499,6 +11547,14 @@
             "Value": {
                 "id": "fbab8e53-e44e-4c7e-bbe2-2497ab231fd2",
                 "resourcePath": "sprites\\s_propTBowl1\\s_propTBowl1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f1e4ce56-aa67-49a0-a848-6190cdf76b38",
+            "Value": {
+                "id": "53cd1af5-050f-49ad-88a7-08c5b354e24f",
+                "resourcePath": "sprites\\s_YamaokaRose\\s_YamaokaRose.yy",
                 "resourceType": "GMSprite"
             }
         },
