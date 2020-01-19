@@ -1199,6 +1199,14 @@
             }
         },
         {
+            "Key": "19c7983e-3e09-4742-a0fa-526ebd05bd4b",
+            "Value": {
+                "id": "9a4e5724-d6b5-4614-8185-3ea36f6b3b55",
+                "resourcePath": "scripts\\_camPlayerUpdate_FocusCalculate\\_camPlayerUpdate_FocusCalculate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "19cc310f-9e80-45d4-abd6-0925e0ff69f2",
             "Value": {
                 "id": "4223dbbb-540b-4c4c-9d99-6e4c82d67f15",
@@ -12600,6 +12608,7 @@
         "c8117af1-cffe-4a01-b0cf-4c538ac14889",
         "7e5be803-e523-49f7-a1bb-40b75a5ee468",
         "fb023a45-be22-4f8d-9669-4205559cc402",
+        "19c7983e-3e09-4742-a0fa-526ebd05bd4b",
         "c7a4ec62-6c7c-46f2-8a48-79dbdf876ea5",
         "b9fd8458-26b7-45d7-96a5-511eb391bc1f",
         "0187aa55-3265-4f4e-a3ab-94933a30f548",

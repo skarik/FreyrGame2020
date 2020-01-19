@@ -64,8 +64,20 @@ final_x = clamp(final_x, GameCamera.width / 2,  room_width  - GameCamera.width /
 final_y = clamp(final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
 
 // Override with focus
-var post_final_x = lerp(final_x, lerp(final_x, m_currentFocusX, m_currentFocusGlue), m_currentFocusBlend);
-var post_final_y = lerp(final_y, lerp(final_y, m_currentFocusY, m_currentFocusGlue), m_currentFocusBlend);
+if (exists(m_currentFocus0))
+{
+	var focus_coords = _camPlayerUpdate_FocusCalculate(final_x, final_y, m_currentFocus0);
+	m_currentFocus0_X = focus_coords[0];
+	m_currentFocus0_Y = focus_coords[1];
+}
+if (exists(m_currentFocus1))
+{
+	var focus_coords = _camPlayerUpdate_FocusCalculate(final_x, final_y, m_currentFocus1);
+	m_currentFocus1_X = focus_coords[0];
+	m_currentFocus1_Y = focus_coords[1];
+}
+var post_final_x = lerp(final_x, lerp(m_currentFocus0_X, m_currentFocus1_X, smoothstep(m_currentFocusSelector)), smoothstep(m_currentFocusStrength));
+var post_final_y = lerp(final_y, lerp(m_currentFocus0_Y, m_currentFocus1_Y, smoothstep(m_currentFocusSelector)), smoothstep(m_currentFocusStrength));
 
 // Clamp to the room size
 post_final_x = clamp(post_final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);

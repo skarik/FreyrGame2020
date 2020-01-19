@@ -27,21 +27,17 @@ m_cam_last_final_y = 0;
 // They're used for centered things upon a specific area, dramatically.
 
 // Current focus object is only used for switching between focuses
-m_currentFocus = null;
+m_currentFocus0 = null;
+m_currentFocus1 = null;
 
-// The actual focus blend state:
-m_currentFocusBlend = 0.0;
-m_currentFocusX = 0.0;
-m_currentFocusY = 0.0;
-// Glue is how much the player is followed rather than the focus.
-// The view doesn't focus at all on 0.0, but doesnt move with the player at all on 1.0.
-m_currentFocusGlue = 1.0;
+m_currentFocus0_X = 0.0; // Used when the focus no longer exists and we need to fall back to it.
+m_currentFocus0_Y = 0.0;
 
-// Previous states used for blending:
-m_previousFocus = null;
-m_previousFocusX = 0.0;
-m_previousFocusY = 0.0;
-m_previousFocusGlue = 1.0;
-m_previousToCurrentFocusBlend = 0.0;
+m_currentFocus1_X = 0.0;
+m_currentFocus1_Y = 0.0;
+
+// Actual focus blend states
+m_currentFocusStrength = 0.0;
+m_currentFocusSelector = 0.0;
 
 #endregion
