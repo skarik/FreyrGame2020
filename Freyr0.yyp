@@ -3519,6 +3519,14 @@
             }
         },
         {
+            "Key": "4a95fb74-2bcd-4dce-b4f7-0501971a793f",
+            "Value": {
+                "id": "e4fe31c8-d0c8-434a-b884-b4d984fafb0e",
+                "resourcePath": "rooms\\rm_fools_tower2\\rm_fools_tower2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "4a972d74-43f5-4601-8a9e-2f9238e9795d",
             "Value": {
                 "id": "438445ea-eae8-4282-8546-bcfe8f9b9a55",
@@ -6939,6 +6947,14 @@
             "Value": {
                 "id": "6e0bcf7a-a206-409d-a973-0d7007f843ca",
                 "resourcePath": "objects\\o_chNathan\\o_chNathan.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "937666c1-4c47-4970-9457-812bd5d7d4d1",
+            "Value": {
+                "id": "841b892a-fcff-4323-b240-55a0e4f58e5d",
+                "resourcePath": "objects\\ob_ambientTowerFloor2\\ob_ambientTowerFloor2.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -11492,6 +11508,14 @@
                 "id": "fadd439a-b1bc-4c1b-bd83-f3189cfb2e54",
                 "resourcePath": "scripts\\aimotionMoveAt\\aimotionMoveAt.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ee54798e-0eea-418f-897a-d51bbfb47297",
+            "Value": {
+                "id": "0088955e-3746-43bb-9684-5da680756bd1",
+                "resourcePath": "sprites\\s_assetTSignage0\\s_assetTSignage0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
