@@ -1,5 +1,8 @@
 var pal_index = global.pal_current;
 
+// Update blend
+global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time.deltaTime * 2.0);
+
 // Create surface
 if (!surface_exists(global.pal_surface3d))
 	global.pal_surface3d = surface_create(global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth);
@@ -10,7 +13,15 @@ surface_set_target(global.pal_surface3d);
 // Refresh with the base 3d palette
 gpu_set_blendenable(false);
 gpu_set_blendmode_ext(bm_one, bm_zero);
-draw_sprite(global.pal_sprite3d[pal_index], 0, 0, 0);
+if (global.pal_current_blend == pal_index)
+	draw_sprite(global.pal_sprite3d[pal_index], 0, 0, 0);
+else
+{
+	draw_sprite(global.pal_sprite3d[floor(global.pal_current_blend)], 0, 0, 0);
+	gpu_set_blendenable(true);
+	gpu_set_blendmode(bm_normal);
+	draw_sprite_ext(global.pal_sprite3d[ceil(global.pal_current_blend)], 0, 0, 0, 1.0, 1.0, 0.0, c_white, frac(global.pal_current_blend));
+}
 
 // now draw overlays that are registered
 gpu_set_blendenable(true);
@@ -33,7 +44,15 @@ surface_reset_target();
 	// Refresh with the base 3d palette
 	gpu_set_blendenable(false);
 	gpu_set_blendmode_ext(bm_one, bm_zero);
-	draw_sprite(global.pal_sprite3d2[pal_index], 0, 0, 0);
+	if (global.pal_current_blend == pal_index)
+		draw_sprite(global.pal_sprite3d2[pal_index], 0, 0, 0);
+	else
+	{
+		draw_sprite(global.pal_sprite3d2[floor(global.pal_current_blend)], 0, 0, 0);
+		gpu_set_blendenable(true);
+		gpu_set_blendmode(bm_normal);
+		draw_sprite_ext(global.pal_sprite3d2[ceil(global.pal_current_blend)], 0, 0, 0, 1.0, 1.0, 0.0, c_white, frac(global.pal_current_blend));
+	}
 
 	// now draw overlays that are registered
 	gpu_set_blendenable(true);

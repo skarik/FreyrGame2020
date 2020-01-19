@@ -29,4 +29,7 @@ if (exists(o_dayNightCycle))
 
 	// Use indoor character lighting rules
 	m_ambientIndoors = true;
+	
+	// and we want to use wide palette
+	paletteSetCurrent(kPaletteWide);
 }
