@@ -3439,6 +3439,14 @@
             }
         },
         {
+            "Key": "4879b210-56ad-47f3-9cbc-13863fd11283",
+            "Value": {
+                "id": "96e271ab-b314-4dd7-b17e-7aa791566f2c",
+                "resourcePath": "sprites\\s_propTTable\\s_propTTable.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "48e98b0e-b39a-4e78-9bc4-ba4e8c11d9d8",
             "Value": {
                 "id": "685337da-ec2b-4605-9d78-19ec758fcbaa",
@@ -4775,6 +4783,14 @@
             }
         },
         {
+            "Key": "667c49e0-6895-4593-acd7-04df21dd2467",
+            "Value": {
+                "id": "fef8c647-ac70-4493-bb9f-df1baa6cfe00",
+                "resourcePath": "sprites\\s_propTBed0\\s_propTBed0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "667f9897-77d4-4234-94a0-2a5655d3639c",
             "Value": {
                 "id": "242095bb-4ecc-4e87-ab30-557204fef992",
@@ -5123,6 +5139,14 @@
             "Value": {
                 "id": "ce8948d8-95bd-4b1e-8046-035f866d31fe",
                 "resourcePath": "sprites\\s_assetRailroadParts0H\\s_assetRailroadParts0H.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6d530ecb-b311-41e9-9561-b8f4b89a2987",
+            "Value": {
+                "id": "e16e1d9f-93d8-403d-a79a-aa12cf47ff24",
+                "resourcePath": "sprites\\s_propTBookcase1\\s_propTBookcase1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7687,6 +7711,14 @@
             }
         },
         {
+            "Key": "a411b7da-253d-47fa-b1d7-2e261d588161",
+            "Value": {
+                "id": "2beebbba-4bb8-4b7c-b80f-f909eadef650",
+                "resourcePath": "sprites\\s_propTDoor1\\s_propTDoor1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a42afb61-3b1b-4b06-9999-92079cfde02f",
             "Value": {
                 "id": "add0d5ef-0580-43db-be96-f9520285eef4",
@@ -8116,6 +8148,14 @@
                 "id": "08446988-6b53-4e3e-9272-15356c78350e",
                 "resourcePath": "views\\ac553529-7682-4c0d-b158-ac2e4783a499.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ac68333f-c852-41fb-9898-abb60d1b87b4",
+            "Value": {
+                "id": "86a1ca10-f0a7-4b23-bf5f-b7fddd29e66c",
+                "resourcePath": "sprites\\s_propTBanner0\\s_propTBanner0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9639,6 +9679,14 @@
             }
         },
         {
+            "Key": "ca11cdb4-3fe3-486e-a7fb-56d421c164a1",
+            "Value": {
+                "id": "e20ff495-cb45-4cea-a145-d13eafae340b",
+                "resourcePath": "sprites\\s_propTBookcase0\\s_propTBookcase0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ca30bf3f-f945-4832-8f49-a337e19fb593",
             "Value": {
                 "id": "bd3362bb-8518-4c7a-8857-be5c7a27d245",
@@ -11119,6 +11167,14 @@
             }
         },
         {
+            "Key": "e78b91f4-bda9-49fe-b3ae-93d9816bd8af",
+            "Value": {
+                "id": "aa804769-577e-4bcd-848a-91156977cdff",
+                "resourcePath": "objects\\o_usableDoorT1\\o_usableDoorT1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e78e571a-f675-4164-8163-776235d6ec09",
             "Value": {
                 "id": "ac6d5f19-dba8-4e27-944a-fc473084f50d",
@@ -11396,6 +11452,14 @@
                 "id": "fadd439a-b1bc-4c1b-bd83-f3189cfb2e54",
                 "resourcePath": "scripts\\aimotionMoveAt\\aimotionMoveAt.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "eecb4ff3-e174-4274-ad8a-eb90132bf9e4",
+            "Value": {
+                "id": "0b87d94d-a88b-4a04-abc7-2c1651a26358",
+                "resourcePath": "sprites\\s_propTStool2\\s_propTStool2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -11879,6 +11943,14 @@
             }
         },
         {
+            "Key": "f8cd59de-dfdd-40f2-af58-0cb1154ddc2e",
+            "Value": {
+                "id": "a9789915-482a-4aeb-a731-2cf325c82386",
+                "resourcePath": "sprites\\s_assetTFloorInsignia0\\s_assetTFloorInsignia0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f8e58c84-9cf8-4f9d-9172-029caa65e304",
             "Value": {
                 "id": "3c389486-d87c-4a1c-9dc5-dbea4e85cab8",
@@ -12148,6 +12220,14 @@
                 "id": "a4079871-1139-48cf-82c4-0ff905cff547",
                 "resourcePath": "views\\fd051e19-fff4-4204-bcd4-28015ff37be7.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fd56a42d-9a50-462a-94fb-c2828ef00922",
+            "Value": {
+                "id": "76401d62-8be3-4a18-abaf-7360ba87fe93",
+                "resourcePath": "objects\\o_usablePoweredSwitch\\o_usablePoweredSwitch.yy",
+                "resourceType": "GMObject"
             }
         },
         {

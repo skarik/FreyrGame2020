@@ -14,7 +14,9 @@
         "1df103d6-b1cd-43fd-914a-6842e2b6b808",
         "5427816c-0e2b-4322-95ec-12270a255b8f",
         "5a6102e3-969d-4e61-a4ac-693fe56e5878",
-        "7a5f1634-0760-4723-9e78-341f453a5c44"
+        "7a5f1634-0760-4723-9e78-341f453a5c44",
+        "fd56a42d-9a50-462a-94fb-c2828ef00922",
+        "e78b91f4-bda9-49fe-b3ae-93d9816bd8af"
     ],
     "filterType": "GMObject",
     "folderName": "Usables",

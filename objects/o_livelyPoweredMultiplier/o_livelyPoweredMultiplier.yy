@@ -14,7 +14,7 @@
             "mvc": "1.0",
             "objectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
             "propertyId": "98886493-7ab0-45d7-8bef-a55a309e2e8a",
-            "value": "powerLogic_MutiplierSupply"
+            "value": "powerLogic_MultiplierSupply"
         }
     ],
     "parentObjectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
