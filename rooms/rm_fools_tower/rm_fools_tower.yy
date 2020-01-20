@@ -225,6 +225,32 @@
     "layers": [
         {
             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "doodadsN14_collidable",
+            "id": "41a1dfa5-6fda-4225-9287-0af49ae4b67f",
+            "assets": [
+
+            ],
+            "depth": -14,
+            "grid_x": 16,
+            "grid_y": 16,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRAssetLayer",
+            "mvc": "1.0",
+            "userdefined_depth": true,
+            "visible": true
+        },
+        {
+            "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
             "name": "doodadsN13_collidable_shadowed_breakable",
             "id": "332b5f00-a42f-4d2a-978a-50a332300fe5",
             "assets": [
