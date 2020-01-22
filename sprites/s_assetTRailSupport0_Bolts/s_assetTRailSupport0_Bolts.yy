@@ -2,7 +2,7 @@
     "id": "963f49aa-0dcf-4458-a7db-94921ee9ad5b",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_assetRailSupport0_Bolts",
+    "name": "s_assetTRailSupport0_Bolts",
     "For3D": false,
     "HTile": false,
     "VTile": false,

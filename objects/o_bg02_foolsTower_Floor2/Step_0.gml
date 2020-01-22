@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Create particle effects
 
 //particle_counter += Time.dt * (room_width * room_height / 3000.0);
 particle_counter += Time.dt * (GameCamera.width * GameCamera.height / 3000.0);

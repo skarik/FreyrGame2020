@@ -15,4 +15,5 @@ else
 if (visible)
 {
 	depthUpdate();
+	depth -= m_depthOffset / 3.0;
 }

@@ -671,6 +671,14 @@
             }
         },
         {
+            "Key": "0f09ca84-007a-4c41-a939-dc481887dc1b",
+            "Value": {
+                "id": "fabe2316-e881-4c7c-9378-3c97de3575c8",
+                "resourcePath": "sprites\\s_propTDoor2\\s_propTDoor2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0f77d019-3221-4095-873c-0f0f58162566",
             "Value": {
                 "id": "037e4f50-1b05-4074-abf8-f5d371737094",
@@ -3074,7 +3082,7 @@
             "Key": "4061178e-ccc3-4885-8b71-c13f4ed3b6b4",
             "Value": {
                 "id": "c789d2b8-fd4a-4e72-a586-e8a5158d3a1e",
-                "resourcePath": "sprites\\s_propRailSupport0\\s_propRailSupport0.yy",
+                "resourcePath": "sprites\\s_propTRailSupport0\\s_propTRailSupport0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5794,7 +5802,7 @@
             "Key": "79527182-b608-4c49-bcf4-78db0d643b85",
             "Value": {
                 "id": "7ecb7b5c-fd3e-4637-b31f-8e993ff82c1e",
-                "resourcePath": "sprites\\s_propRailLine0\\s_propRailLine0.yy",
+                "resourcePath": "sprites\\s_propTRailLine0\\s_propTRailLine0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7170,7 +7178,7 @@
             "Key": "963f49aa-0dcf-4458-a7db-94921ee9ad5b",
             "Value": {
                 "id": "64239853-789f-4320-9441-b4bc077d8e53",
-                "resourcePath": "sprites\\s_assetRailSupport0_Bolts\\s_assetRailSupport0_Bolts.yy",
+                "resourcePath": "sprites\\s_assetTRailSupport0_Bolts\\s_assetTRailSupport0_Bolts.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7548,6 +7556,14 @@
                 "id": "84acce2f-b373-422a-b60a-c4f3faacf8d7",
                 "resourcePath": "objects\\o_CtsTalkerBox\\o_CtsTalkerBox.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9e16ee08-44d9-409a-b747-429b8b644556",
+            "Value": {
+                "id": "309d6110-0e6e-4674-b6c0-e7111021e3d2",
+                "resourcePath": "sprites\\s_propTPowerIndicator0\\s_propTPowerIndicator0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8351,6 +8367,14 @@
             }
         },
         {
+            "Key": "ae1fb4bc-898b-4489-80c4-fd9c7f60b77d",
+            "Value": {
+                "id": "077cd486-8648-4626-95b2-94ea92ba5e6a",
+                "resourcePath": "objects\\o_livelyPoweredTowerDIndicator\\o_livelyPoweredTowerDIndicator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ae205044-7061-40c3-a478-48e99e01a5e5",
             "Value": {
                 "id": "69bdffce-9e5a-4615-9b44-3e9ab249f6e5",
@@ -9116,6 +9140,14 @@
                 "id": "c4150f9c-5662-4c44-a945-72196cd6fa66",
                 "resourcePath": "sprites\\s_propSignage0\\s_propSignage0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bd05435c-028f-4715-8706-fbfe948240a2",
+            "Value": {
+                "id": "622da75b-c54d-4628-8625-2c578cf7e121",
+                "resourcePath": "objects\\o_livelyDoodadTowerWire_PhysWire3D\\o_livelyDoodadTowerWire_PhysWire3D.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -11791,6 +11823,14 @@
             }
         },
         {
+            "Key": "f25719c4-9f74-42cc-a0b3-ed1d8bd7877f",
+            "Value": {
+                "id": "fbdba15b-ff17-4780-b35d-d287107212ba",
+                "resourcePath": "objects\\o_potEnergyPlug\\o_potEnergyPlug.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f299c3ad-7ff7-44b6-8be1-800fdfc57bcf",
             "Value": {
                 "id": "ac39c0fe-40da-4e42-bfee-7f98f2a5ca52",
@@ -11836,6 +11876,14 @@
                 "id": "af212028-d371-42da-a2e7-884fe1dd6394",
                 "resourcePath": "sprites\\s_itemToolPickaxe\\s_itemToolPickaxe.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f3923bac-d630-4883-9bbf-5760c036c471",
+            "Value": {
+                "id": "fbf8058c-814b-4802-ac5e-dabab4ba6a58",
+                "resourcePath": "objects\\o_livelyPoweredFDoorVertical\\o_livelyPoweredFDoorVertical.yy",
+                "resourceType": "GMObject"
             }
         },
         {

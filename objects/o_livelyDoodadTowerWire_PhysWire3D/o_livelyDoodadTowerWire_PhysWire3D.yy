@@ -1,43 +1,43 @@
 {
-    "id": "6bfd7f37-71ef-4dd1-9b7f-29940c0b5bcc",
+    "id": "bd05435c-028f-4715-8706-fbfe948240a2",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "ob_doodadWire",
+    "name": "o_livelyDoodadTowerWire_PhysWire3D",
     "eventList": [
         {
-            "id": "6215de44-4b3e-46ff-8f8d-ac1c1651667e",
+            "id": "73fbbd14-787a-44d5-a120-6c8b27462a92",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "6bfd7f37-71ef-4dd1-9b7f-29940c0b5bcc"
+            "m_owner": "bd05435c-028f-4715-8706-fbfe948240a2"
         },
         {
-            "id": "6019ec79-d739-4022-94f4-12c760a852ec",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "6bfd7f37-71ef-4dd1-9b7f-29940c0b5bcc"
-        },
-        {
-            "id": "9db2eff0-4166-4a00-89ac-f74e4f42fe6b",
+            "id": "61decc88-d454-4987-b7d3-e5f070497be2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "6bfd7f37-71ef-4dd1-9b7f-29940c0b5bcc"
+            "m_owner": "bd05435c-028f-4715-8706-fbfe948240a2"
+        },
+        {
+            "id": "7bd6aa23-8076-4b33-a03e-5dbed9aca2c1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "bd05435c-028f-4715-8706-fbfe948240a2"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "bfa1c07d-f948-43db-9f9e-ac7bff4f00d1",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -53,7 +53,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "f14f7ab1-5f80-4468-a384-ef7ce004531a",
+            "id": "94f37a84-0996-4139-b24f-bc0b9486dfc6",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -62,12 +62,26 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 256,
-            "value": "noone",
-            "varName": "m_wireTarget",
+            "value": "null",
+            "varName": "m_attachPointStart",
             "varType": 5
         },
         {
-            "id": "8812b0ce-2db9-42c5-87d4-8ee924d270a3",
+            "id": "cf038298-640b-4aeb-993e-2eba28000a69",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 256,
+            "value": "null",
+            "varName": "m_attachPointEnd",
+            "varType": 5
+        },
+        {
+            "id": "66d248d9-bc73-47f9-849a-834e46b1bbca",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -77,25 +91,11 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "m_wireDropOffset",
-            "varType": 0
-        },
-        {
-            "id": "e4c88309-4401-46be-8596-6cc4ad63afe7",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "128",
-            "varName": "m_depthOffset",
+            "varName": "z",
             "varType": 0
         }
     ],
     "solid": false,
-    "spriteId": "c952166e-bf64-4c7e-bc61-da72659c83c7",
+    "spriteId": "fea9def3-2c6e-4670-b6c4-18a6045b35af",
     "visible": true
 }
