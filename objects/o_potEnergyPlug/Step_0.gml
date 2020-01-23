@@ -9,15 +9,15 @@ m_light.x = x;
 m_light.y = y;
 m_light.image_alpha = saturate(energyPower + (random(0.2) - 0.1));
 
-if (!energyFade)
+//if (!energyFade)
 {
 	energyPower = min(1.0, energyPower + Time.deltaTime);
 }
-else
+/*else
 {
 	energyPower -= Time.deltaTime * 0.5;
 	if (energyPower <= 0.0)
 	{
 		delete(this);
 	}
-}
+}*/

@@ -6,12 +6,22 @@ m_canPickUp = true;
 m_canThrow = false;
 m_airFriction = 100;
 
-/*filled = false;
-charges = 0;
-kMaxCharges = 10;*/
 energyPower = 0.0;
-energyFade = false;
 energyPlugged = false;
+
+// Check if already plugged in
+if (energyPlugId == null && place_meeting(x, y, o_livelyPoweredPotPlug))
+{
+	energyPlugId = collision_point(x, y, o_livelyPoweredPotPlug, false, true);
+}
+// If plugged in, run plug logic.
+if (energyPlugId != null)
+{
+	energyPlugged = true;
+	x = energyPlugId.x;
+	y = energyPlugId.y;
+	energyPlugId.m_pot = id;
+}
 
 depthInit();
 

@@ -6,6 +6,16 @@ currentUsable = null;
 var closestDistance = kMaxUseDistance;
 if (!exists(currentHeldUsable) || !m_isHolding)
 {
+	// Check if not holding anything
+	if (m_isHolding && exists(currentHeldUsable))
+	{
+		currentHeldUsable = null;
+		m_isHolding = false;
+		
+		// enable delay frame
+		inDelayFrame = true;
+	}
+	
 	// Get till distance
 	var useDistanceAt = max(2.0, min(20.0, point_distance(aimingStartX, aimingStartY, uPosition, vPosition)));
 	// Find the piece of land to till:

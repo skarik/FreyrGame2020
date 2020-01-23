@@ -48,7 +48,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "876645f1-63fb-4b7e-8c8f-b45d73c97111",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 256,
+            "value": "null",
+            "varName": "m_pot",
+            "varType": 5
+        }
+    ],
     "solid": false,
     "spriteId": "fea9def3-2c6e-4670-b6c4-18a6045b35af",
     "visible": true

@@ -31,11 +31,12 @@ if (inPlug)
 	x = inPlugId.x;
 	y = inPlugId.y;
 	energyPlugged = true;
+	energyPlugId = inPlugId;
 	
-	m_canPickUp = false;
-	energyFade = false;
-	m_name = "Plugged Energy Pot";
-	m_actionName = "";
+	//m_canPickUp = false;
+	//energyFade = false;
+	//m_name = "Plugged Energy Pot";
+	//m_actionName = "";
 }
 /*else
 {

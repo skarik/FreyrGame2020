@@ -17,7 +17,7 @@ if (overcharge > 0.0)
 										y + random_range(-4, 4) - z_height,
 										-floor(room_height / 2.0),
 										o_ptcMagidustHover);
-			ptc.xspeed += random_range(-30, +30);
+			ptc.xspeed += random_range(-30, +30) * (overcharge + 0.25);
 			ptc.yspeed += random_range(-30, +30);
 			ptc.image_alpha += 0.4;
 		overcharge_ptc_counter -= 1.0;
