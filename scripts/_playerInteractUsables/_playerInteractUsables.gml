@@ -7,7 +7,7 @@ var closestDistance = kMaxUseDistance;
 if (!exists(currentHeldUsable) || !m_isHolding)
 {
 	// Check if not holding anything
-	if (m_isHolding && exists(currentHeldUsable))
+	if (m_isHolding && !exists(currentHeldUsable))
 	{
 		currentHeldUsable = null;
 		m_isHolding = false;
