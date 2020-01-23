@@ -6,12 +6,13 @@ m_canPickUp = true;
 m_canThrow = false;
 m_airFriction = 100;
 
-/*filled = false;
-charges = 0;
-kMaxCharges = 10;*/
 energyPower = 0.0;
 energyFade = false;
 energyPlugged = false;
+
+// Used in tower for no-magic zone
+overcharge = 0.0;
+overcharge_ptc_counter = 0.0;
 
 depthInit();
 

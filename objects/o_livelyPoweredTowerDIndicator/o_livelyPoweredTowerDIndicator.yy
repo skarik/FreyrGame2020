@@ -71,7 +71,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "ef42ba96-2d6e-42b7-a9f9-bd2d9f202390",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_ambientOvercharge",
+            "varType": 3
+        }
+    ],
     "solid": false,
     "spriteId": "9e16ee08-44d9-409a-b747-429b8b644556",
     "visible": true
