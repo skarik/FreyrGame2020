@@ -895,6 +895,14 @@
             }
         },
         {
+            "Key": "1335d82d-1857-4132-beaa-712506e7010a",
+            "Value": {
+                "id": "5c2f9745-4877-47f6-a74f-1430ce389829",
+                "resourcePath": "sprites\\s_propPlanterBoxPlant1\\s_propPlanterBoxPlant1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "13451517-122d-495a-b84b-e3f5f7f1c599",
             "Value": {
                 "id": "446d6162-7659-405c-bb3d-7797813b8eb0",
@@ -2727,6 +2735,14 @@
             }
         },
         {
+            "Key": "395bc281-6c8f-4449-936e-a5b698d59346",
+            "Value": {
+                "id": "d92c21c7-889f-4408-8444-8edf6306ea17",
+                "resourcePath": "sprites\\s_propWallVine2\\s_propWallVine2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "39691aef-d2c3-497a-998b-9a205310cfb1",
             "Value": {
                 "id": "44529357-80b8-47bb-8e9f-85eb1f5578a9",
@@ -4035,6 +4051,14 @@
             "Value": {
                 "id": "6d6500ef-10a5-4115-859b-7af0d1e4d85c",
                 "resourcePath": "sprites\\s_cropParsnip\\s_cropParsnip.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "54a91543-f605-4cb9-98e3-3f480b63c610",
+            "Value": {
+                "id": "cdc8b490-9453-4071-a62c-1571aed67682",
+                "resourcePath": "sprites\\s_propPlantBoxTree\\s_propPlantBoxTree.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5951,6 +5975,14 @@
             }
         },
         {
+            "Key": "7d509dca-977e-46c2-87ee-13a650d397b7",
+            "Value": {
+                "id": "83f36edd-6d9e-4aed-8af9-bdd7fa0f019a",
+                "resourcePath": "sprites\\s_propWallVine\\s_propWallVine.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7d6c5bc4-8cdb-46aa-b136-4416fd72c974",
             "Value": {
                 "id": "c2aaceb0-bf57-4abd-a76b-2e6d3339e69a",
@@ -7295,6 +7327,14 @@
             }
         },
         {
+            "Key": "98614158-33c1-43a7-a60d-7f92529db1ac",
+            "Value": {
+                "id": "12a26a46-1464-4ba0-b0b6-7d631162ed0e",
+                "resourcePath": "sprites\\s_propPlantBoxLarge\\s_propPlantBoxLarge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9861be46-01f9-4e50-a26d-ef4170e3554b",
             "Value": {
                 "id": "19f1d149-a46b-4c96-a296-b764f9604384",
@@ -7484,6 +7524,14 @@
                 "id": "58b86901-3da0-48fe-98f3-0c6370eb468a",
                 "resourcePath": "scripts\\farmClearObjects\\farmClearObjects.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9c6e76be-c2fe-4a1c-a5f9-58df4f921d50",
+            "Value": {
+                "id": "57d126cc-2ff1-443e-a9bd-1d066ba6d6a8",
+                "resourcePath": "sprites\\s_propPlantBoxTree2\\s_propPlantBoxTree2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8155,6 +8203,14 @@
             "Value": {
                 "id": "a2bca7cd-47f8-4ec1-bae2-e8bba98df5e6",
                 "resourcePath": "sprites\\s_propTentChonker1\\s_propTentChonker1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aaa49411-973a-469a-a3ae-1331e19a9b1f",
+            "Value": {
+                "id": "46eba410-6be0-4ac6-ac9b-b7e4016220a7",
+                "resourcePath": "sprites\\s_propPlanterFlowers\\s_propPlanterFlowers.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9955,6 +10011,14 @@
             "Value": {
                 "id": "a0506331-cec6-4ad5-9b51-d3ebd4eb1ffe",
                 "resourcePath": "sprites\\sc_32x32_gold\\sc_32x32_gold.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cce74a1a-5922-4931-ae2b-caf4c3cd75b7",
+            "Value": {
+                "id": "ed49ea40-c754-4bd5-bd36-de9433153573",
+                "resourcePath": "sprites\\s_propPlantBoxSmol\\s_propPlantBoxSmol.yy",
                 "resourceType": "GMSprite"
             }
         },

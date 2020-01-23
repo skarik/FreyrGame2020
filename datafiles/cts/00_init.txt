@@ -3,6 +3,10 @@
 // this is the cutscene for the first time through the game or on a new file.
 // the name "init" is thusly fitting
 
+[startup]
+overridesave="1"
+override="rm_fools_tower"
+
 palette
 {
 	type wide
