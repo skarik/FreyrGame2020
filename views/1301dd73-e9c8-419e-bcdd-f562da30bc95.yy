@@ -9,7 +9,8 @@
         "8e919907-e4f7-4027-95ac-113807804f37",
         "97e3e485-ba07-45ca-b4d6-b3f39dca7215",
         "197f8437-e363-4895-9dde-8f6bc4511e8a",
-        "2b2e2dd8-2d40-420b-955d-7c61ccdc9aa0"
+        "2b2e2dd8-2d40-420b-955d-7c61ccdc9aa0",
+        "66f97669-2730-4748-8cf8-62ba8cdab053"
     ],
     "filterType": "GMScript",
     "folderName": "Areas",

@@ -2,6 +2,7 @@
 #macro kWorldEvent_Riftpulse 1
 #macro kWorldEvent_MakePlayerShirtless 2
 #macro kWorldEvent_MakePlayerShirtmore 3
+#macro kWorldEvent_DeathtarGlitch 4
 
 var event = argument0;
 
@@ -26,6 +27,15 @@ case kWorldEvent_MakePlayerShirtmore:
 		var pl = getPlayer();
 		if (exists(pl)) {
 			pl.pstats.m_shirtless = false;	
+		}
+	}
+	break;
+	
+case kWorldEvent_DeathtarGlitch:
+	{
+		var glitch = new(o_deathtarGlitch);
+		with (glitch) {
+			event_user(1); // Capture
 		}
 	}
 	break;

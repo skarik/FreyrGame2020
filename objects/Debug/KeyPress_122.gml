@@ -35,6 +35,9 @@ else
 		for (var i = 0; i < record_shot_count; ++i)
 		{
 			//gif_add_surface(gif, record_shot[i], 2);
+			gpu_set_blendenable(false);
+			gpu_set_blendmode_ext(bm_one, bm_zero);
+			
 			temp_surface[i] = surface_create(kGifWidth, kGifHeight);
 			surface_set_target(temp_surface[i]);
 			draw_surface_ext(record_shot[i],
@@ -46,6 +49,8 @@ else
 							 c_white,
 							 1.0);
 			surface_reset_target();
+			
+			gpu_set_blendmode(bm_normal);
 		}
 		
 		// Create GIF

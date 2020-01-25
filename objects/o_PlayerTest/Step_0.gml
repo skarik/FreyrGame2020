@@ -119,3 +119,20 @@ else
 		delete(m_lanternLight);
 	}
 }
+
+// do deathtar code!
+if (areaInDeathtar(x, y, z))
+{
+	playerMotionStop();
+	
+	var nearestSpawn = instance_nearest(x, y, ob_deathtarRespawnPoint);
+	if (exists(nearestSpawn))
+	{
+		worldEventCreate(kWorldEvent_DeathtarGlitch);
+		
+		x = nearestSpawn.x;
+		y = nearestSpawn.y;
+		
+		dungeonRoomReset();
+	}
+}

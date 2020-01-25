@@ -12,7 +12,8 @@ if (visual_power > 0.0)
 // Draw front bits
 gpu_set_blendmode(bm_normal);
 draw_sprite_ext(sprite_index, image_index + 1,
-				x, y, image_xscale, image_yscale, image_angle, c_black, image_alpha); // TODO: properly mask it
+				x + xoffset, y + yoffset,
+				image_xscale, image_yscale, image_angle, c_black, image_alpha * 0.25); // TODO: properly mask it
 				
 // Draw the lighting
 lightingResetBlendMode();
