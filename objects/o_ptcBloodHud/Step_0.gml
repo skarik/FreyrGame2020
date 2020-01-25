@@ -11,7 +11,7 @@ case kDamageTypeTar:
     image_alpha -= 0.04 * Time.deltaTime * 30;
     x = xstart - (160-xstart)*0.11*(1.6-image_alpha);
     y = ystart - (120-ystart)*0.11*(1.6-image_alpha);
-    image_blend = merge_color( image_blend, merge_color( c_white,c_black,image_alpha/1.6 ), 0.5 );
+    image_blend = merge_color( image_blend, merge_color( c_white,c_black,saturate(image_alpha/1.6) ), 0.5 );
     break;
 	
 case kDamageTypeBite:

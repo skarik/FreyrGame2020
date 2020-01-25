@@ -133,6 +133,17 @@ if (areaInDeathtar(x, y, z))
 		x = nearestSpawn.x;
 		y = nearestSpawn.y;
 		
+		// deal damage & stun player
+		var damage = clamp(stats.m_health - 5.0, 0.0, 2.0);
+		if (stats.m_health <= 7.0)
+		{
+			damage += 2.0;
+			stats.m_health += 2.0;
+			stats.m_healthPrev = stats.m_health;
+		}
+		damageTargetForced(id, damage, kDamageTypeTar, true, false);
+		m_stunTimer = max(m_stunTimer, 0.5);
+		
 		dungeonRoomReset();
 	}
 }

@@ -3,6 +3,7 @@ switch ( m_damageType )
 {
 case kDamageTypeTar:
     //sprite_index = sprHudHurtDeathtar;
+	image_blend = c_dkgray; // temp hack
     
     image_angle = random( 360 );
     image_speed = 0;
