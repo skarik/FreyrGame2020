@@ -132,6 +132,8 @@ _playerInteractUsables(l_canMove && onGround && !inDelayFrame);
 _playerInteractCrops(l_canMove && onGround && !inDelayFrame);
 //_playerInteractBuildables();
 _playerInteractItems(l_canMove && !inDelayFrame);
+_playerInteractItemsKeySlot(l_canMove && !inDelayFrame);
+_playerInteractItemsRuneSlot(l_canMove && !inDelayFrame);
 
 var belt = inventory.belt[inventory.belt_selection];
 if (belt.type == kItemPickupSeed) {

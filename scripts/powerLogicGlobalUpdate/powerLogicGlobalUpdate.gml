@@ -41,6 +41,24 @@ if (m_powerUpdateCounter > 1.0)
 			m_powerOutput = script_execute(m_powerCallback);
 		}
 		
+		// And we override with void power
+		var voidSpotCount = instance_number(o_livelyFloatingVoidPower);
+		for (var i = 0; i < voidSpotCount; ++i)
+		{
+			var voidSpot = instance_find(o_livelyFloatingVoidPower, i);
+				
+			var livelyList = ds_list_create();
+			var livelyListCount = collision_circle_list(voidSpot.x, voidSpot.y, voidSpot.m_range, ob_livelyPowered, false, true, livelyList, false);
+			for (var iLively = 0; iLively < livelyListCount; ++iLively)
+			{
+				var livelyTarget = livelyList[|iLively];
+				// Override the power with this punch now!
+				if (livelyTarget.visible) // TODO: replace with lively-powered flag in objects
+					livelyTarget.m_powerOutput = max(livelyTarget.m_powerOutput, 1.0);
+			}
+			ds_list_destroy(livelyList);
+		}
+		
 		m_powerUpdateStep = kPowerUpdateStep_CheckPower;
 	}
 }

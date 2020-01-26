@@ -120,6 +120,38 @@ else
 	}
 }
 
+// do ambient voidpounch charging
+if (pstats.m_pitem[kPitemVoidCapacitor] > 0)
+{
+	//m_voidPunch_fill += Time.deltaTime;
+	var player = id;
+	with (ob_livelyPowered)
+	{
+		if (m_powerOutput > 0.9)
+		{
+			if (point_distance(x, y, player.x, player.y) < 32)
+			{
+				if (player.m_voidPunch_fill < 1.0)
+				{
+					// Fill the punch a bit
+					player.m_voidPunch_fill += Time.deltaTime / 5.0;
+					
+					var dir = point_direction(x, y, player.x, player.y);
+					// make poofy zap
+					var ptc = instance_create_depth(x + random_range(-16, 16),
+													y + random_range(-16, 16),
+													-floor(room_height / 2.0),
+													o_ptcMagidustHover);
+						ptc.xspeed += lengthdir_x(20, dir) + random_range(-20, +20);
+						ptc.yspeed += lengthdir_y(20, dir) + random_range(-20, +20);
+				}
+			}
+		}
+	}
+	
+	m_voidPunch_fill = saturate(m_voidPunch_fill);
+}
+
 // do deathtar code!
 if (areaInDeathtar(x, y, z))
 {

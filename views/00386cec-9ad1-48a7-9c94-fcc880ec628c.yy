@@ -10,7 +10,8 @@
         "14cc191f-2a15-44a5-9562-3120beda5f09",
         "fb3f2951-5948-4dec-bcac-2f44ee3112a9",
         "f567dcd2-80ef-4646-9f04-613367ea7afb",
-        "f9a5a3d9-b484-4796-b1de-b2cf3d25295d"
+        "f9a5a3d9-b484-4796-b1de-b2cf3d25295d",
+        "15bbf6a8-1c75-4aa1-b601-4b7a51e6347c"
     ],
     "filterType": "GMScript",
     "folderName": "Movetypes",

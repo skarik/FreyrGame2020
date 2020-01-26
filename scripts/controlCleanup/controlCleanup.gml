@@ -8,6 +8,8 @@ delete(itemUseButton);
 delete(atkButton);
 delete(useButton);
 delete(dodgeButton);
+delete(keyItemUseButton);
+delete(runeButton);
 delete(journalButton);
 delete(yButton);
 delete(itemNextButton);

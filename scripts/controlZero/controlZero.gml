@@ -15,6 +15,8 @@ if (argument0 == false)
 	atkButton.value = 0.0;
 	useButton.value = 0.0;
 	dodgeButton.value = 0.0;
+	keyItemUseButton.value = 0.0;
+	runeButton.value = 0.0;
 	journalButton.value = 0.0;
 	yButton.value = 0.0;
 	itemPrevButton.value = 0.0;

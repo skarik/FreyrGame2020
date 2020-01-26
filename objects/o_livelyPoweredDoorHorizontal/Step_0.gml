@@ -5,7 +5,7 @@ event_inherited();
 depthUpdate();
 depth += lengthdir_y(-16, image_angle);
 
-if (m_powerInput > 0.5)
+if (m_powerInput > 0.5 || m_powerOutput > 0.5)
 {
 	m_openBlend = saturate(m_openBlend + 0.7 * Time.deltaTime);
 	m_glowPower = saturate(m_glowPower + 4.0 * Time.deltaTime);

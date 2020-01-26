@@ -33,10 +33,14 @@ if (!exists(currentHeldUsable) || !m_isHolding)
 			closestDistance = useDistance;
 		}
 	}
-
-	if (exists(currentUsable))
+	
+	if (l_canMove && useButton.pressed)
 	{
-		if (l_canMove && useButton.pressed)
+		if (!exists(currentUsable))
+		{
+			//audio_play_sound(snd_UIOnUse, 0, false);
+		}
+		else
 		{
 			currentUsable.m_user = id;
 			

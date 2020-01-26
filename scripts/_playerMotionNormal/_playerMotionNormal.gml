@@ -13,7 +13,7 @@ if (isBlocking)
 	l_moveSpeed *= kMoveSpeedBlockingPercent;
 if (m_isHolding)
 	l_moveSpeed *= kMoveSpeedCarryingPercent;
-if (useButton.value > 0.8)
+if (useButton.value > 0.8 || m_isVoidPunchCharging)
 	l_moveSpeed *= kMoveSpeedUsingPercent;
 
 // Generate the target motion

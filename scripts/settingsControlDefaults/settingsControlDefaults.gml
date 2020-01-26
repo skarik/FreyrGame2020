@@ -21,6 +21,8 @@ with (Settings)
 	ctAttack		= [kControlMouse, mb_left,	kControlGamepad, gp_face1, kControlGamepad, gp_shoulderr];
 	ctUse			= [kControlMouse, mb_left,	kControlGamepad, gp_face1];
 	ctUseItem		= [kControlKB, ord("F"),	kControlGamepad, gp_face2];
+	ctUseKeyItem	= [kControlKB, ord("E"),	kControlGamepad, gp_face3];
+	ctUseSpecial	= [kControlKB, ord("V"),	kControlGamepad, gp_face4];
 	ctDodge			= [kControlMouse, mb_right,	kControlGamepad, gp_shoulderl];
 	
 	ctInventory		= [kControlKB, ord("I"),	kControlGamepad, gp_select, kControlGamepad, gp_padu];

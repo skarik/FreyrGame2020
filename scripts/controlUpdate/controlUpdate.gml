@@ -37,6 +37,8 @@ if (argument0 == false && !(Debug.on && exists(o_debugCmdline) && o_debugCmdline
 	_controlStructUpdate(useButton, controlParseAndPoll(Settings.ctUse));
 	_controlStructUpdate(itemUseButton, controlParseAndPoll(Settings.ctUseItem));
 	_controlStructUpdate(dodgeButton, controlParseAndPoll(Settings.ctDodge));
+	_controlStructUpdate(keyItemUseButton, controlParseAndPoll(Settings.ctUseKeyItem));
+	_controlStructUpdate(runeButton, controlParseAndPoll(Settings.ctUseSpecial));
 	
 	_controlStructUpdate(journalButton, controlParseAndPoll(Settings.ctJournal));
 	_controlStructUpdate(itemsButton, controlParseAndPoll(Settings.ctInventory));

@@ -1,5 +1,7 @@
 /// @description Set up depth & elevation zone
 
+event_inherited();
+
 depthInit();
 
 m_elevation = instance_create_depth(x, y, depth, ob_elevationAreaLift);
