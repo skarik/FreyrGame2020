@@ -1,4 +1,4 @@
-/// @description *platform3_set_z(platform, new_z)
+/// @description platform3_set_z(platform, new_z)
 /// @param platform
 /// @param new_z
 
