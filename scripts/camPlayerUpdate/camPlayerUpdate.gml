@@ -79,6 +79,12 @@ if (exists(m_currentFocus1))
 var post_final_x = lerp(final_x, lerp(m_currentFocus0_X, m_currentFocus1_X, smoothstep(m_currentFocusSelector)), smoothstep(m_currentFocusStrength));
 var post_final_y = lerp(final_y, lerp(m_currentFocus0_Y, m_currentFocus1_Y, smoothstep(m_currentFocusSelector)), smoothstep(m_currentFocusStrength));
 
+// Override with the lock
+var l_lockStrength = saturate(max(m_lockStrength, m_lockStrengthFader));
+m_lockStrengthFader -= Time.deltaTime;
+post_final_x = lerp(post_final_x, m_lockX, smoothstep(l_lockStrength));
+post_final_y = lerp(post_final_y, m_lockY, smoothstep(l_lockStrength));
+
 // Clamp to the room size
 post_final_x = clamp(post_final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
 post_final_y = clamp(post_final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);

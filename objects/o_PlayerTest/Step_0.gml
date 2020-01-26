@@ -123,8 +123,6 @@ else
 // do deathtar code!
 if (areaInDeathtar(x, y, z))
 {
-	playerMotionStop();
-	
 	var nearestSpawn = instance_nearest(x, y, ob_deathtarRespawnPoint);
 	if (exists(nearestSpawn))
 	{
@@ -145,5 +143,15 @@ if (areaInDeathtar(x, y, z))
 		m_stunTimer = max(m_stunTimer, 0.5);
 		
 		dungeonRoomReset();
+		
+		// Make camera locked on current position
+		with (camera)
+		{
+			m_lockStrengthFader = 1.0; 
+			m_lockX = GameCamera.x;
+			m_lockY = GameCamera.y;
+		}
 	}
+	
+	playerMotionStop();
 }

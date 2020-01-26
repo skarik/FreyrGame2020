@@ -41,3 +41,8 @@ m_currentFocusStrength = 0.0;
 m_currentFocusSelector = 0.0;
 
 #endregion
+
+m_lockX = 0.0;
+m_lockY = 0.0;
+m_lockStrength = 0.0;
+m_lockStrengthFader = 0.0;

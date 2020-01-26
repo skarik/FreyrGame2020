@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "069a112c-e4b2-4c11-96a6-7dd8e2adce53",
+            "Value": {
+                "id": "7175412f-8df4-423d-9be0-83878e70c0ac",
+                "resourcePath": "shaders\\sh_washyBlurStep\\sh_washyBlurStep.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "07c0f9e6-78c2-4628-a738-1eaa82026ff2",
             "Value": {
                 "id": "2adcf7a3-9409-489a-8f56-69213f71018e",
@@ -4087,6 +4095,14 @@
             }
         },
         {
+            "Key": "549559de-3aee-485e-b1de-7186266fde38",
+            "Value": {
+                "id": "7803b55d-7509-4d5e-9230-aa8577e86fcb",
+                "resourcePath": "sprites\\s_assetTWindow0_Tar\\s_assetTWindow0_Tar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "54a91543-f605-4cb9-98e3-3f480b63c610",
             "Value": {
                 "id": "cdc8b490-9453-4071-a62c-1571aed67682",
@@ -7459,6 +7475,14 @@
             "Value": {
                 "id": "ae5dcb6f-5036-4134-86f8-0cc7752d4ac4",
                 "resourcePath": "scripts\\mt19937_seed\\mt19937_seed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "99c97f4b-31a2-4546-90f6-1a53824836f7",
+            "Value": {
+                "id": "215fb593-8977-4f59-897a-2f6b0ca5d80f",
+                "resourcePath": "scripts\\dungeonRoomCurrent\\dungeonRoomCurrent.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -13194,6 +13218,7 @@
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
         "0b3a1a99-a216-4e81-bf99-e51ca9f176ab",
         "80074871-92a3-4a18-8a8b-7325fac462da",
+        "99c97f4b-31a2-4546-90f6-1a53824836f7",
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
         "1dcd64d2-4b18-4872-8659-8dccbb978594",

@@ -10,10 +10,10 @@ view_set_visible(1, true);
 // update effects
 with (o_replatte) event_user(0);
 with (o_darkness) event_user(0);
+with (o_deathtarGlitch) event_user(0);
 with (o_PlayerHud) event_user(0);
 with (o_CtsPortraitRenderer) event_user(0);
 with (o_CtsTalkerBox) event_user(0);
-with (o_deathtarGlitch) event_user(0);
 
 // Upscale to the screen
 surface_set_target(m_outputSurface);
