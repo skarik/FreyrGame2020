@@ -10,7 +10,9 @@
         "a73a7876-78dc-45ef-a3b5-b07d776bbe25",
         "ac14aa61-bd24-48b7-a072-102fdf7c7928",
         "fe81ca41-6ad0-488c-b496-cd8974eea6ff",
-        "c0cac0cc-dd60-4c40-ac3b-ded40d7492b6"
+        "c0cac0cc-dd60-4c40-ac3b-ded40d7492b6",
+        "baf8eb38-dd5c-4964-bf22-b44c8270d7f0",
+        "57f9412e-2de6-48e5-9800-7f76011ab2c1"
     ],
     "filterType": "GMSprite",
     "folderName": "fauna",

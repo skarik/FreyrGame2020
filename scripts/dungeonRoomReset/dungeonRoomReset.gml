@@ -16,4 +16,15 @@ if (exists(currentDungeonRoom))
 		if (place_meeting(x, y, currentDungeonRoom))
 			delete(this);
 	}
+	
+	with (o_chFrogTar)
+	{
+		if (place_meeting(x, y, currentDungeonRoom))
+		{
+			visible = true;
+			x = xstart;
+			y = ystart;
+			event_perform(ev_create, 0);
+		}
+	}
 }

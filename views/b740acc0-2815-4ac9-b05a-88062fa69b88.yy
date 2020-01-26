@@ -43,7 +43,8 @@
         "0f09ca84-007a-4c41-a939-dc481887dc1b",
         "9e16ee08-44d9-409a-b747-429b8b644556",
         "ce42a5f9-04ad-4004-b937-0c54373a1266",
-        "549559de-3aee-485e-b1de-7186266fde38"
+        "549559de-3aee-485e-b1de-7186266fde38",
+        "3ed365d3-2946-4bc0-b642-351901f3aa01"
     ],
     "filterType": "GMSprite",
     "folderName": "crescent isle",

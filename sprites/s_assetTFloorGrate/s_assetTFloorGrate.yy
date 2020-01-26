@@ -2,7 +2,7 @@
     "id": "ce42a5f9-04ad-4004-b937-0c54373a1266",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_assetFloorGrate",
+    "name": "s_assetTFloorGrate",
     "For3D": false,
     "HTile": false,
     "VTile": false,
