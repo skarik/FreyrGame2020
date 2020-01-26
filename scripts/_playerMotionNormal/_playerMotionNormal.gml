@@ -7,6 +7,8 @@ var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m
 var l_moveSpeed = kMoveSpeed;
 if (inWater)
 	l_moveSpeed *= kMoveSpeedWaterPercent;
+if (inTar)
+	l_moveSpeed *= kMoveSpeedTarPercent;
 if (isBlocking)
 	l_moveSpeed *= kMoveSpeedBlockingPercent;
 if (m_isHolding)

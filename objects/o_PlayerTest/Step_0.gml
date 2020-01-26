@@ -123,35 +123,51 @@ else
 // do deathtar code!
 if (areaInDeathtar(x, y, z))
 {
-	var nearestSpawn = instance_nearest(x, y, ob_deathtarRespawnPoint);
-	if (exists(nearestSpawn))
-	{
-		worldEventCreate(kWorldEvent_DeathtarGlitch);
-		
-		x = nearestSpawn.x;
-		y = nearestSpawn.y;
-		
-		// deal damage & stun player
-		var damage = clamp(stats.m_health - 5.0, 0.0, 2.0);
-		if (stats.m_health <= 7.0)
-		{
-			damage += 2.0;
-			stats.m_health += 2.0;
-			stats.m_healthPrev = stats.m_health;
-		}
-		damageTargetForced(id, damage, kDamageTypeTar, true, false);
-		m_stunTimer = max(m_stunTimer, 0.5);
-		
-		dungeonRoomReset();
-		
-		// Make camera locked on current position
-		with (camera)
-		{
-			m_lockStrengthFader = 1.0; 
-			m_lockX = GameCamera.x;
-			m_lockY = GameCamera.y;
-		}
-	}
+	m_tarDeathTimer += Time.deltaTime;
 	
-	playerMotionStop();
+	// Apply tar screen effects
+	stats.m_healthPrev += 2;
+	m_lastDamage = kDamageTypeTar;
+	
+	// If in tar for a full second...
+	if (m_tarDeathTimer > 1.0)
+	{
+		m_tarDeathTimer = 0.0;
+		
+		var nearestSpawn = instance_nearest(x, y, ob_deathtarRespawnPoint);
+		if (exists(nearestSpawn))
+		{
+			worldEventCreate(kWorldEvent_DeathtarGlitch);
+		
+			x = nearestSpawn.x;
+			y = nearestSpawn.y;
+		
+			// deal damage & stun player
+			var damage = clamp(stats.m_health - 5.0, 0.0, 2.0);
+			if (stats.m_health <= 7.0)
+			{
+				damage += 2.0;
+				stats.m_health += 2.0;
+				stats.m_healthPrev = stats.m_health;
+			}
+			damageTargetForced(id, damage, kDamageTypeTar, true, false);
+			m_stunTimer = max(m_stunTimer, 0.5);
+		
+			dungeonRoomReset();
+		
+			// Make camera locked on current position
+			with (camera)
+			{
+				m_lockStrengthFader = 1.0; 
+				m_lockX = GameCamera.x;
+				m_lockY = GameCamera.y;
+			}
+		}
+	
+		playerMotionStop();
+	}
+}
+else
+{
+	m_tarDeathTimer = 0.0;
 }

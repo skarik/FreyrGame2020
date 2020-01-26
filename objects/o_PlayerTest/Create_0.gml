@@ -47,6 +47,8 @@ m_lanternProp = null;
 m_lanternLight = null;
 m_lanternEmissive = null;
 
+m_tarDeathTimer = 0.0;
+
 #region Constants
 
 kMoveSpeed = 120;

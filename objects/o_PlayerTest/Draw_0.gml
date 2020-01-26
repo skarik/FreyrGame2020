@@ -9,7 +9,7 @@ if (Debug.visible)
 	draw_circle(x, y, 3, false);
 }
 
-if (!inWater || z_height > 1)
+if ((!inWater && !inTar) || z_height > 1)
 {
 	depthDrawSelf();
 }
