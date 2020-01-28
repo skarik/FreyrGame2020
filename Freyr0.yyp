@@ -999,6 +999,14 @@
             }
         },
         {
+            "Key": "14881884-45a1-405b-8660-2f1ed7665e33",
+            "Value": {
+                "id": "852dc393-e893-41e6-9faa-bacada4c091d",
+                "resourcePath": "sprites\\s_assetTWhiteboardBlood0\\s_assetTWhiteboardBlood0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "148d5eac-18c8-4ac9-97ec-a122bedc844b",
             "Value": {
                 "id": "3df4520a-c8a6-485b-9fb1-860c0dad2d1b",
@@ -3626,7 +3634,7 @@
             "Key": "4879b210-56ad-47f3-9cbc-13863fd11283",
             "Value": {
                 "id": "96e271ab-b314-4dd7-b17e-7aa791566f2c",
-                "resourcePath": "sprites\\s_propTTable\\s_propTTable.yy",
+                "resourcePath": "sprites\\s_propTTable2\\s_propTTable2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7295,6 +7303,14 @@
             }
         },
         {
+            "Key": "950850c6-7efc-4822-aa49-b9c5937e93bd",
+            "Value": {
+                "id": "2f1938ad-ed57-4cc1-bb3d-1ac5e2e0e186",
+                "resourcePath": "sprites\\s_propTBookcase2\\s_propTBookcase2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "950d0745-4ca7-485d-b88d-14f0ee141ac1",
             "Value": {
                 "id": "b9efb2af-9d4b-4b17-a5a9-b1bed4981d28",
@@ -9431,6 +9447,14 @@
             }
         },
         {
+            "Key": "bcfccb1f-b805-4fbd-a0c5-816e6251f895",
+            "Value": {
+                "id": "ca1c618c-e940-48df-9e1b-9ece23599d51",
+                "resourcePath": "sprites\\s_propTTable3\\s_propTTable3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd05435c-028f-4715-8706-fbfe948240a2",
             "Value": {
                 "id": "622da75b-c54d-4628-8625-2c578cf7e121",
@@ -9556,6 +9580,14 @@
                 "id": "414131b3-3fba-4472-b29a-2cf76cb1f541",
                 "resourcePath": "objects\\o_waterCPond0\\o_waterCPond0.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c00fa90a-04e7-49b5-8306-516f1d7c8d1a",
+            "Value": {
+                "id": "d28e9f6e-e209-438a-a054-1140e98e9611",
+                "resourcePath": "sprites\\s_propTPowerGatherer0\\s_propTPowerGatherer0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
