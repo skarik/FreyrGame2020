@@ -16,7 +16,9 @@
         "c5616bba-ecdc-4edc-b6a4-511c3de9458d",
         "486d6059-f9f1-4b78-b7b4-99295882451b",
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
-        "0b3a1a99-a216-4e81-bf99-e51ca9f176ab"
+        "0b3a1a99-a216-4e81-bf99-e51ca9f176ab",
+        "adac0ba3-c745-4d9c-86a3-d877f7634050",
+        "d22ca906-6d43-4afd-8a4c-d4ead08749d1"
     ],
     "filterType": "GMScript",
     "folderName": "Lively",

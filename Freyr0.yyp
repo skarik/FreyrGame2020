@@ -2719,6 +2719,14 @@
             }
         },
         {
+            "Key": "35e45bba-3639-4cb7-9e2e-d53a344f6256",
+            "Value": {
+                "id": "39693e44-7983-41b8-9d48-d8cb773ab17b",
+                "resourcePath": "objects\\o_livelyPoweredLatch\\o_livelyPoweredLatch.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "35f30743-c456-4b74-87c5-4c92d60a7add",
             "Value": {
                 "id": "2e92d0c9-ba27-403d-887a-c737ce7149d3",
@@ -3900,6 +3908,14 @@
                 "id": "38c3fd66-299e-4d4e-a347-c500f3068e66",
                 "resourcePath": "scripts\\collision3_get_highest_meeting\\collision3_get_highest_meeting.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4dfa92c7-9801-43cf-8847-4590149f8f53",
+            "Value": {
+                "id": "ee9373eb-c0c9-4337-9e05-0d6ddec9a009",
+                "resourcePath": "objects\\o_livelyPoweredRisingEdgeTrigger\\o_livelyPoweredRisingEdgeTrigger.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6575,6 +6591,14 @@
             }
         },
         {
+            "Key": "8629cc9e-c5b9-4786-87e9-e52e79aeadd6",
+            "Value": {
+                "id": "11718cd5-2655-494c-b2c2-d0cc0de55391",
+                "resourcePath": "sprites\\s_propTGrubroomPlatform\\s_propTGrubroomPlatform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "862f7529-2105-4ace-8db1-c5709bf8f7c9",
             "Value": {
                 "id": "d4dd647d-4799-4e48-aa23-6a776abd3a4c",
@@ -8631,6 +8655,14 @@
             }
         },
         {
+            "Key": "adac0ba3-c745-4d9c-86a3-d877f7634050",
+            "Value": {
+                "id": "5e19c7cb-7b98-40ec-b159-aa98dcca4b80",
+                "resourcePath": "scripts\\powerLogic_LatchOutput\\powerLogic_LatchOutput.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "adac2b74-c9b8-425a-93f2-a20b10ef3dc1",
             "Value": {
                 "id": "8407c8d9-7908-4a0b-9247-8a98d92bdb8f",
@@ -10287,6 +10319,14 @@
             }
         },
         {
+            "Key": "ccaaeefe-5c18-49a9-8ca3-8cd81fb10608",
+            "Value": {
+                "id": "f77b8329-6b53-43ff-874a-7dbe9452ff4f",
+                "resourcePath": "objects\\o_livelyPoweredTowerPlatform2\\o_livelyPoweredTowerPlatform2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cce74a1a-5922-4931-ae2b-caf4c3cd75b7",
             "Value": {
                 "id": "ed49ea40-c754-4bd5-bd36-de9433153573",
@@ -10508,6 +10548,14 @@
                 "id": "6f760c21-e8b5-4bef-b63f-6c339801c4e1",
                 "resourcePath": "views\\d21e7103-595d-451b-bba4-955b28a57db2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d22ca906-6d43-4afd-8a4c-d4ead08749d1",
+            "Value": {
+                "id": "73e81b2f-1ef6-4724-b801-2ce3a767a56d",
+                "resourcePath": "scripts\\powerLogic_RisingEdgeOutput\\powerLogic_RisingEdgeOutput.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -13413,6 +13461,8 @@
         "486d6059-f9f1-4b78-b7b4-99295882451b",
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
         "0b3a1a99-a216-4e81-bf99-e51ca9f176ab",
+        "adac0ba3-c745-4d9c-86a3-d877f7634050",
+        "d22ca906-6d43-4afd-8a4c-d4ead08749d1",
         "80074871-92a3-4a18-8a8b-7325fac462da",
         "99c97f4b-31a2-4546-90f6-1a53824836f7",
         "168499bc-f710-4056-834c-2c479db5d5ef",
