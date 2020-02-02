@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "04f41f23-317d-4603-94ee-d5186e8e57b2",
+            "Value": {
+                "id": "9d94d667-d0c8-4014-aee7-f968650b8ebd",
+                "resourcePath": "sounds\\snd_physStepMetal2\\snd_physStepMetal2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0505e9d4-7d8a-459f-af93-c82b47b60d1b",
             "Value": {
                 "id": "c0ec3524-03f7-4195-8800-d31177ba8bb2",
@@ -1015,6 +1023,14 @@
             }
         },
         {
+            "Key": "1497b4bb-9f67-4b71-acc9-3f59bde077e1",
+            "Value": {
+                "id": "4c1fbfab-0390-42bb-aa88-64c768eb1f89",
+                "resourcePath": "views\\1497b4bb-9f67-4b71-acc9-3f59bde077e1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "14a2c244-b813-456d-90b0-7a32c953cd0a",
             "Value": {
                 "id": "ad971e04-352b-48f6-8e17-4c168c945298",
@@ -1324,6 +1340,14 @@
                 "id": "a47d547a-a936-4d50-8611-a8ac6992ee7f",
                 "resourcePath": "sounds\\snd_GrappleImpact\\snd_GrappleImpact.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "1b772136-819a-4ad4-aec8-0b4da51e241f",
+            "Value": {
+                "id": "f13d60a4-f1af-42bb-ae45-100c34b2715e",
+                "resourcePath": "sprites\\s_propTStorage0\\s_propTStorage0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1991,6 +2015,14 @@
             }
         },
         {
+            "Key": "2801970e-d85d-4dbe-bb1b-2c5ef6cbe8a9",
+            "Value": {
+                "id": "71b9e3e9-490c-4697-8939-60615a1e3068",
+                "resourcePath": "sounds\\snd_physStepStone3\\snd_physStepStone3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "282e4830-f74f-4f50-b19d-e11bf07e5e3e",
             "Value": {
                 "id": "b94c4f2a-9cc1-4c92-9ee8-29dfc9a42804",
@@ -2156,6 +2188,14 @@
                 "id": "7ed8a050-fd81-47aa-a1e4-6a554fa89b35",
                 "resourcePath": "objects\\o_mus00_AnimeCts\\o_mus00_AnimeCts.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2adf6508-ec80-4644-9c19-bfac72f8c1bc",
+            "Value": {
+                "id": "8d656fdb-b6eb-4514-b62f-d6298db9535c",
+                "resourcePath": "sounds\\snd_physStepStone2\\snd_physStepStone2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2484,6 +2524,14 @@
                 "id": "0936503f-3a6a-4106-a4da-31fe64c01fb7",
                 "resourcePath": "scripts\\getPlayer\\getPlayer.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2fc01219-717c-4371-8d6a-f7abaf56bea7",
+            "Value": {
+                "id": "bff9dc55-3957-480c-bbd1-0f735b042587",
+                "resourcePath": "sounds\\snd_physStepMetal1\\snd_physStepMetal1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3615,6 +3663,14 @@
             }
         },
         {
+            "Key": "47b74b45-9bdb-4b2d-8809-e859f664d956",
+            "Value": {
+                "id": "29501772-5836-4397-a2d3-9678444d51b6",
+                "resourcePath": "sprites\\s_propTHatStand\\s_propTHatStand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "47bbbf36-54a1-4f98-9f36-2417c633b589",
             "Value": {
                 "id": "dc83edf4-f00e-434d-be88-bd0d879d9d0d",
@@ -4468,6 +4524,14 @@
                 "id": "9e187639-2cf2-4c6b-ab40-e21f4e9a3bc6",
                 "resourcePath": "scripts\\col3_internal_tilemap_get_transition\\col3_internal_tilemap_get_transition.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "582f2884-e56f-4480-a4d0-13a65d976c68",
+            "Value": {
+                "id": "8f768fc6-f571-45a1-b121-8aed94cb5961",
+                "resourcePath": "objects\\o_livelyPoweredTowerProjector\\o_livelyPoweredTowerProjector.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5988,6 +6052,14 @@
                 "id": "72236d1f-0830-4a39-b2e2-96864769765c",
                 "resourcePath": "views\\77482e45-c3ff-4662-bc78-746926c0582f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "77be568a-a1af-4274-b020-85e94e4fc028",
+            "Value": {
+                "id": "fcd02fb9-d95b-4389-9de5-6658c576be09",
+                "resourcePath": "sprites\\s_propTShelf0\\s_propTShelf0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8935,6 +9007,14 @@
             }
         },
         {
+            "Key": "b1ae23e9-27c5-414a-9518-328987ddeff8",
+            "Value": {
+                "id": "6bb30292-5f64-4c43-abfb-26cf423f5542",
+                "resourcePath": "sounds\\snd_physStepStone1\\snd_physStepStone1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b1c16ba5-c9de-4e02-940d-be10d602af42",
             "Value": {
                 "id": "2b901a11-2caa-46cf-81a6-32807711349b",
@@ -10007,6 +10087,14 @@
             }
         },
         {
+            "Key": "c5df63de-49a4-447d-8697-7e7d698098fb",
+            "Value": {
+                "id": "93995253-5cd7-4400-a565-1bdc2baf4dd5",
+                "resourcePath": "sprites\\s_propTSpearRacks\\s_propTSpearRacks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c5f482dc-f4f5-424a-9a64-35bb84b6dc46",
             "Value": {
                 "id": "116f093e-c76c-4431-9303-885243d30dec",
@@ -10303,6 +10391,14 @@
             }
         },
         {
+            "Key": "cab11fa6-4f7a-431c-bd98-2a755908f78e",
+            "Value": {
+                "id": "be2e82a9-5ad6-400a-a720-efb868311785",
+                "resourcePath": "objects\\o_livelyPoweredTowerProjectorTargetBase\\o_livelyPoweredTowerProjectorTargetBase.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cade3276-399e-4d03-bb99-2d8be4e48db2",
             "Value": {
                 "id": "3d750b0d-9e05-4548-ac43-b3f1fb364f1b",
@@ -10380,6 +10476,14 @@
                 "id": "ed49ea40-c754-4bd5-bd36-de9433153573",
                 "resourcePath": "sprites\\s_propPlantBoxSmol\\s_propPlantBoxSmol.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cd1f56bc-19cf-42e7-9112-749163f9c442",
+            "Value": {
+                "id": "d6afe100-17c4-47f6-834a-8624b74b36a3",
+                "resourcePath": "views\\cd1f56bc-19cf-42e7-9112-749163f9c442.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -12356,6 +12460,14 @@
                 "id": "78ceb8d5-8873-4fb2-8a42-c2bf5a283b8e",
                 "resourcePath": "objects\\o_pickupSeed_Rice\\o_pickupSeed_Rice.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f3bb9bdc-496b-4710-80c9-8ddd51e8ea99",
+            "Value": {
+                "id": "cf04fc20-af41-48c8-bd2b-554c6aad0e47",
+                "resourcePath": "sounds\\snd_physStepMetal3\\snd_physStepMetal3.yy",
+                "resourceType": "GMSound"
             }
         },
         {

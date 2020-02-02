@@ -18,7 +18,13 @@
         "92f62474-1f3d-4cbf-b91d-0925f1619ee1",
         "62815cff-b0ce-4a22-a6ca-2eb223e68215",
         "674b46dc-75d1-4b6b-9acf-600f35350ecb",
-        "217d9573-ee8c-446b-bd0e-1a6e52372019"
+        "217d9573-ee8c-446b-bd0e-1a6e52372019",
+        "2fc01219-717c-4371-8d6a-f7abaf56bea7",
+        "04f41f23-317d-4603-94ee-d5186e8e57b2",
+        "f3bb9bdc-496b-4710-80c9-8ddd51e8ea99",
+        "b1ae23e9-27c5-414a-9518-328987ddeff8",
+        "2adf6508-ec80-4644-9c19-bfac72f8c1bc",
+        "2801970e-d85d-4dbe-bb1b-2c5ef6cbe8a9"
     ],
     "filterType": "GMSound",
     "folderName": "Phys",

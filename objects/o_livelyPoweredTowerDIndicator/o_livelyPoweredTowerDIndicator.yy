@@ -85,6 +85,20 @@
             "value": "0",
             "varName": "m_ambientOvercharge",
             "varType": 3
+        },
+        {
+            "id": "364c9acb-befe-4a9f-9e79-81243a516e44",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "m_lightDrawBigglow",
+            "varType": 3
         }
     ],
     "solid": false,

@@ -29,6 +29,7 @@
         "667c49e0-6895-4593-acd7-04df21dd2467",
         "ca11cdb4-3fe3-486e-a7fb-56d421c164a1",
         "6d530ecb-b311-41e9-9561-b8f4b89a2987",
+        "1b772136-819a-4ad4-aec8-0b4da51e241f",
         "a411b7da-253d-47fa-b1d7-2e261d588161",
         "f8cd59de-dfdd-40f2-af58-0cb1154ddc2e",
         "ee54798e-0eea-418f-897a-d51bbfb47297",
@@ -50,7 +51,10 @@
         "950850c6-7efc-4822-aa49-b9c5937e93bd",
         "bcfccb1f-b805-4fbd-a0c5-816e6251f895",
         "14881884-45a1-405b-8660-2f1ed7665e33",
-        "8629cc9e-c5b9-4786-87e9-e52e79aeadd6"
+        "8629cc9e-c5b9-4786-87e9-e52e79aeadd6",
+        "47b74b45-9bdb-4b2d-8809-e859f664d956",
+        "77be568a-a1af-4274-b020-85e94e4fc028",
+        "c5df63de-49a4-447d-8697-7e7d698098fb"
     ],
     "filterType": "GMSprite",
     "folderName": "crescent isle",

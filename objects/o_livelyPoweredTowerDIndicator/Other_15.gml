@@ -19,8 +19,11 @@ draw_sprite_ext(sprite_index, image_index + 1,
 lightingResetBlendMode();
 				
 draw_set_alpha(1.0);
-draw_set_color(merge_color(c_black, c_towercrystal, 0.2 * visual_power));
-draw_circle(x + xoffset, y + yoffset, 30 + 40 * visual_power, false);
+if (m_lightDrawBigglow)
+{
+	draw_set_color(merge_color(c_black, c_towercrystal, 0.2 * visual_power));
+	draw_circle(x + xoffset, y + yoffset, 30 + 40 * visual_power, false);
+}
 draw_circle_color(x + xoffset, y + yoffset,
 				  50 + 50 * visual_power,
 				  merge_color(c_black, c_towercrystal, 0.1 * visual_power),
