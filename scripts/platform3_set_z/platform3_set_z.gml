@@ -4,3 +4,7 @@
 
 var platform = argument0;
 platform.z_requested = argument1;
+
+platform.x_requested = platform.x;
+platform.y_requested = platform.y;
+platform.y_requestedOffset = 0;
