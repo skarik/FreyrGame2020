@@ -48,7 +48,9 @@ while (room_exists(t_currentRoom))
 // Update the window
 window_set_size(Screen.width, Screen.height);
 //surface_resize(application_surface, Screen.width, Screen.height);
-window_set_position(128,128);
+//window_set_position(128,128);
+window_set_position((display_get_width() - Screen.width) / 2.0,
+					(display_get_height() - Screen.height) / 2.0); // Center the window
 
 // Output some debug info
 debugOut("working_directory: " + working_directory);

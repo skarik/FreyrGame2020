@@ -87,6 +87,20 @@
             "value": "powerLogic_BasicSupply",
             "varName": "m_powerSupplyCallback",
             "varType": 5
+        },
+        {
+            "id": "da066839-6f97-4760-9b6f-df118219c7d3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_voidEnabled",
+            "varType": 3
         }
     ],
     "solid": false,

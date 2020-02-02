@@ -9,12 +9,12 @@
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "8222eb61-4cc7-40ec-8d54-06bb4bb9bfd4",
+            "id": "71bfa9f7-58ce-46ba-8009-ef60d6f24a4f",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
-            "propertyId": "98886493-7ab0-45d7-8bef-a55a309e2e8a",
-            "value": "powerLogic_InverterSupply"
+            "propertyId": "66b4d9da-dfce-42d8-9c9d-0d1c101a051d",
+            "value": "powerLogic_InverterOutput"
         }
     ],
     "parentObjectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",

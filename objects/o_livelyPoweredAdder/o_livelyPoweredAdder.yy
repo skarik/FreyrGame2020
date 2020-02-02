@@ -9,12 +9,12 @@
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "eb631de7-5817-4c76-a001-d0963002e865",
+            "id": "7ac69f8b-b7fb-44bb-b0c5-21501ca34697",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
-            "propertyId": "98886493-7ab0-45d7-8bef-a55a309e2e8a",
-            "value": "powerLogic_AdderSupply"
+            "propertyId": "66b4d9da-dfce-42d8-9c9d-0d1c101a051d",
+            "value": "powerLogic_AdderOutput"
         }
     ],
     "parentObjectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",

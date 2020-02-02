@@ -2031,6 +2031,14 @@
             }
         },
         {
+            "Key": "290bc6be-7c38-4767-bcb4-9f607984bf5a",
+            "Value": {
+                "id": "bc7adba6-f780-41ba-a499-578e229f23fc",
+                "resourcePath": "scripts\\powerLogic_SubtractOutput\\powerLogic_SubtractOutput.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "293afe3d-3d71-42ab-9d93-9664f0687a00",
             "Value": {
                 "id": "29d202a7-9e1d-4de8-9473-b7fdc8830cc7",
@@ -2823,6 +2831,14 @@
             }
         },
         {
+            "Key": "3707b6b3-6868-452c-9ef0-f1f6ca08eeb6",
+            "Value": {
+                "id": "a80ddec0-c8c8-4d4b-a595-a6c38fea4ec3",
+                "resourcePath": "objects\\o_livelyPoweredSubtracter\\o_livelyPoweredSubtracter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "37a6ff21-1643-4851-acf3-18b9d595ff20",
             "Value": {
                 "id": "3f3009f2-7ae5-4a75-9b2f-e853b4c46d20",
@@ -3295,6 +3311,14 @@
             }
         },
         {
+            "Key": "41f1b958-604c-459f-ac50-3ea9917bb00b",
+            "Value": {
+                "id": "9bf5c602-b41b-4f63-a2fd-119f46094815",
+                "resourcePath": "scripts\\powerLogic_MultiplierOutput\\powerLogic_MultiplierOutput.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "41fd3730-9dd6-4514-bb86-b21d2f15fd5c",
             "Value": {
                 "id": "3af04a46-01a5-4e02-a7b9-1d9c44cf428e",
@@ -3419,6 +3443,14 @@
             "Value": {
                 "id": "01e15c18-e3da-4e35-a83e-e59bf6795d5e",
                 "resourcePath": "scripts\\_choiceDraw\\_choiceDraw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "44b0dce9-96d6-4304-86ce-acddd06a6623",
+            "Value": {
+                "id": "cd94dba9-0fe1-4cf8-9adf-f18cb13b305b",
+                "resourcePath": "scripts\\powerLogic_AdderOutput\\powerLogic_AdderOutput.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3634,7 +3666,7 @@
             "Key": "486d6059-f9f1-4b78-b7b4-99295882451b",
             "Value": {
                 "id": "0cc5753d-5ce0-4d5b-8fc1-f9a309010d48",
-                "resourcePath": "scripts\\powerLogic_InverterSupply\\powerLogic_InverterSupply.yy",
+                "resourcePath": "scripts\\powerLogic_InverterSupply_deprec\\powerLogic_InverterSupply_deprec.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3692,6 +3724,14 @@
                 "id": "356a6b54-ad13-4fe4-ac31-07295e7c2a9b",
                 "resourcePath": "sprites\\s_propWoodThickPole0\\s_propWoodThickPole0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4a0f0f7b-68ff-4551-9325-fc9373fdcc2c",
+            "Value": {
+                "id": "77d72cb2-cefd-4ba0-8934-822a045d2edb",
+                "resourcePath": "scripts\\powerLogic_SubtractSupply_deprec\\powerLogic_SubtractSupply_deprec.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4242,7 +4282,7 @@
             "Key": "552ced7a-5e1f-4e8b-b83f-6ff661cc3385",
             "Value": {
                 "id": "4d145803-f8d0-4649-b21d-5fb787bdcb4d",
-                "resourcePath": "scripts\\powerLogic_AdderSupply\\powerLogic_AdderSupply.yy",
+                "resourcePath": "scripts\\powerLogic_AdderSupply_deprec\\powerLogic_AdderSupply_deprec.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -9946,7 +9986,7 @@
             "Key": "c5616bba-ecdc-4edc-b6a4-511c3de9458d",
             "Value": {
                 "id": "e569336e-290f-4eb3-ba63-844b676b2d32",
-                "resourcePath": "scripts\\powerLogic_MultiplierSupply\\powerLogic_MultiplierSupply.yy",
+                "resourcePath": "scripts\\powerLogic_MultiplierSupply_deprec\\powerLogic_MultiplierSupply_deprec.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -12903,6 +12943,14 @@
             }
         },
         {
+            "Key": "fe1081a9-cd2e-4c06-b556-1076737b2dd2",
+            "Value": {
+                "id": "17e72b31-d142-4fa4-bcdf-9844f1b3f901",
+                "resourcePath": "scripts\\powerLogic_InverterOutput\\powerLogic_InverterOutput.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fe470952-6e7a-4d43-ba37-c7ceafa588fe",
             "Value": {
                 "id": "f490b836-0950-450d-8b8a-9e864fee402c",
@@ -13465,11 +13513,16 @@
         "4d464d83-dbe6-4ace-9d10-d97771dfbcd0",
         "38708fa9-8be1-4f7d-a800-5ce5229e9b1c",
         "552ced7a-5e1f-4e8b-b83f-6ff661cc3385",
+        "4a0f0f7b-68ff-4551-9325-fc9373fdcc2c",
         "c5616bba-ecdc-4edc-b6a4-511c3de9458d",
         "486d6059-f9f1-4b78-b7b4-99295882451b",
         "2b141255-27bd-44ea-a14c-86e5fcd600bc",
         "0b3a1a99-a216-4e81-bf99-e51ca9f176ab",
         "adac0ba3-c745-4d9c-86a3-d877f7634050",
+        "44b0dce9-96d6-4304-86ce-acddd06a6623",
+        "290bc6be-7c38-4767-bcb4-9f607984bf5a",
+        "41f1b958-604c-459f-ac50-3ea9917bb00b",
+        "fe1081a9-cd2e-4c06-b556-1076737b2dd2",
         "d22ca906-6d43-4afd-8a4c-d4ead08749d1",
         "80074871-92a3-4a18-8a8b-7325fac462da",
         "99c97f4b-31a2-4546-90f6-1a53824836f7",

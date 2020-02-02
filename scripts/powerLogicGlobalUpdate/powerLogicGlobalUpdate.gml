@@ -53,7 +53,7 @@ if (m_powerUpdateCounter > 1.0)
 			{
 				var livelyTarget = livelyList[|iLively];
 				// Override the power with this punch now!
-				if (livelyTarget.visible) // TODO: replace with lively-powered flag in objects
+				if (livelyTarget.visible && livelyTarget.m_voidEnabled) // TODO: replace with lively-powered flag in objects
 					livelyTarget.m_powerOutput = max(livelyTarget.m_powerOutput, 1.0);
 			}
 			ds_list_destroy(livelyList);
