@@ -7047,6 +7047,14 @@
             }
         },
         {
+            "Key": "8ca05859-2050-457f-80bd-f71d598f7245",
+            "Value": {
+                "id": "9c937101-b5c5-4062-a8fd-83fb532ca109",
+                "resourcePath": "sprites\\s_propTProjector\\s_propTProjector.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8cbb1162-915f-4826-a97f-f4ca8dc63e90",
             "Value": {
                 "id": "e0afde10-aab0-45df-ba4b-78608c28c1e2",
@@ -7180,6 +7188,14 @@
                 "id": "829f8375-7aa1-4eac-8270-24c3d706817a",
                 "resourcePath": "views\\8eeed621-0e11-47ab-b736-9e887d1f5de3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8efd0417-93a1-4982-90c3-4c729ce9653e",
+            "Value": {
+                "id": "e998aab4-4cf7-44e5-a48c-f721074082e7",
+                "resourcePath": "sprites\\s_assetTProjection0\\s_assetTProjection0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12231,6 +12247,14 @@
             }
         },
         {
+            "Key": "eeda2481-e756-4255-ba3b-d54bb377e14a",
+            "Value": {
+                "id": "1b0bcd42-826a-4faa-b6b1-46e260e585cb",
+                "resourcePath": "objects\\o_livelyPoweredTowerGearDoor\\o_livelyPoweredTowerGearDoor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "eedd18ec-d0e5-4eb0-9d21-83965e12f8ad",
             "Value": {
                 "id": "0c08668d-1469-4be9-9699-cd8c8acf2ac5",
@@ -12932,6 +12956,14 @@
                 "id": "dd410083-f358-4e41-8646-b60b0548938a",
                 "resourcePath": "scripts\\fmusic_add_track\\fmusic_add_track.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fb9638d9-3878-48d3-9f69-2f7da9794ebe",
+            "Value": {
+                "id": "37f38ae5-9caa-4c10-82e0-4d8dae23ce86",
+                "resourcePath": "sprites\\s_propTDoor3\\s_propTDoor3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

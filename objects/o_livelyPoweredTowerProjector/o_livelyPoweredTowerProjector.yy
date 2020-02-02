@@ -141,6 +141,34 @@
             "value": "+28",
             "varName": "m_projectionRight",
             "varType": 0
+        },
+        {
+            "id": "7fb134ad-1a44-47fa-bb08-766d9e4c1963",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 2,
+            "value": "null",
+            "varName": "m_projectionSprite",
+            "varType": 5
+        },
+        {
+            "id": "57aa229d-5c87-408f-b693-b20ec3f631c8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_projectionSpriteIndex",
+            "varType": 1
         }
     ],
     "solid": false,

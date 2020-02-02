@@ -11,13 +11,23 @@ surface_set_target(m_bufferProjection);
 draw_clear_alpha(c_black, 1.0);
 
 // draw the screen:
-draw_set_color(c_white);
-draw_rectangle(0,
-			   0,
-			   abs(m_projectionRight - m_projectionLeft),
-			   abs(m_projectionTop - m_projectionBottom),
-			   false);
-			   
+if (m_projectionSprite == null)
+{
+	draw_set_color(c_white);
+	draw_rectangle(0,
+				   0,
+				   abs(m_projectionRight - m_projectionLeft),
+				   abs(m_projectionTop - m_projectionBottom),
+				   false);
+}
+else
+{
+	draw_sprite_ext(m_projectionSprite, m_projectionSpriteIndex,
+					0, 0,
+					abs(m_projectionRight - m_projectionLeft) / sprite_get_width(m_projectionSprite),
+					abs(m_projectionTop - m_projectionBottom) / sprite_get_height(m_projectionSprite),
+					0.0, c_white, 1.0);
+}
 // draw the player:
 gpu_set_tex_filter(true);
 var projector = id;
