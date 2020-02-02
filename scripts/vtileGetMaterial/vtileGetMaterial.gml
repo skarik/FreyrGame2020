@@ -12,14 +12,23 @@
 // Select correct tileset
 var tile_id = argument0;
 var tileset = tileset0;
-if (tile_id > kTileIdInfoOffset)
+if (tile_id > kTileIdInfoOffset * 2)
+{
+	tile_id -= kTileIdInfoOffset * 2;
+	tileset = tilesetMaterial;
+}
+else if (tile_id > kTileIdInfoOffset)
 {
 	tile_id -= kTileIdInfoOffset;
 	tileset = tileset1;
 }
 
 // Check tile id based on tileset
-if (tileset == tileset0)
+if (tileset == tilesetMaterial)
+{
+	return tile_id;
+}
+else if (tileset == tileset0)
 {
 	switch (tile_id) 
 	{

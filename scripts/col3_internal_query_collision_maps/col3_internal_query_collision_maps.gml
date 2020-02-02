@@ -11,7 +11,8 @@ if (!global.collidable_layers_ready)
 		if (!layer_tilemap_exists(all_layers[i], tilemap))
 			continue;
 		
-		if (tilemap_get_tileset(tilemap) == tilesetCollision)
+		var tileset = tilemap_get_tileset(tilemap);
+		if (tileset == tilesetCollision)
 		{
 			global.collidable_layers[array_length_1d(global.collidable_layers)] = tilemap;
 		

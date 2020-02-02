@@ -4863,6 +4863,14 @@
             }
         },
         {
+            "Key": "5e6feca7-f07a-4be7-947b-a1cc6b63d632",
+            "Value": {
+                "id": "568276cd-f1ed-4814-aa5c-4858c48b9b8e",
+                "resourcePath": "scripts\\vtile_internal_query_material_maps\\vtile_internal_query_material_maps.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5f0960a7-48d6-4614-aa6e-bf0169b3bc70",
             "Value": {
                 "id": "7e67d403-5662-4e7f-9c72-3ee1c7a97fde",
@@ -5292,6 +5300,14 @@
                 "id": "d27910c8-0a6c-4438-bac8-7343cfed9998",
                 "resourcePath": "sounds\\snd_physStepWater2\\snd_physStepWater2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "68e04e82-e66f-438f-92a9-293d9ec9a807",
+            "Value": {
+                "id": "74a59451-d9fb-4430-9b17-0bc73bf21841",
+                "resourcePath": "scripts\\vtile_internal_query_reset\\vtile_internal_query_reset.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6260,6 +6276,14 @@
                 "id": "22a4ca9e-f59b-4037-9eae-016051658f40",
                 "resourcePath": "scripts\\inventoryGetCount\\inventoryGetCount.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7d2bdbf1-3f44-4073-bd2d-4d1874a80b6a",
+            "Value": {
+                "id": "96b7bd54-0165-4c0b-85ec-b0a5455eeeef",
+                "resourcePath": "sprites\\s_tilesetMaterial0\\s_tilesetMaterial0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12591,6 +12615,14 @@
             }
         },
         {
+            "Key": "f63d065a-5b69-427f-ba58-eff803c0ece0",
+            "Value": {
+                "id": "03aeb78b-8e8f-4ca9-afb9-cf4dc7e7096c",
+                "resourcePath": "tilesets\\tilesetMaterial\\tilesetMaterial.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "f691e4fc-69b2-4689-b54d-4dc4a4699aec",
             "Value": {
                 "id": "ffc7c8a9-68e8-4b6a-b4fb-c535b96d4f13",
@@ -13411,6 +13443,8 @@
         "27d28c7d-9aa7-4454-9bd2-d89a10ab4fc5",
         "d9df770c-9ae1-4d32-8a43-ef9f73762458",
         "45b7713f-f55f-4b1c-909c-a38eecc5eab4",
+        "5e6feca7-f07a-4be7-947b-a1cc6b63d632",
+        "68e04e82-e66f-438f-92a9-293d9ec9a807",
         "121ab2ee-a617-46a9-bd08-ab26f8b3d775",
         "91a78ace-2967-4010-a11d-b2ea9ae4c8c6",
         "019583ad-b915-461e-a00f-27580c1f10c7",
