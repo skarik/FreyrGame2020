@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "02328a73-7f25-424c-8973-7e09c0c50ef4",
+            "Value": {
+                "id": "07a99e2b-2b0e-4b62-a463-76832a4ba0d8",
+                "resourcePath": "objects\\o_livelyPoweredTowerGearDoor2\\o_livelyPoweredTowerGearDoor2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0239fe33-9b3d-425e-bd85-bee7da1548c5",
             "Value": {
                 "id": "5b56230c-f030-4625-bdd6-90baba8fbbae",
@@ -1140,6 +1148,14 @@
                 "id": "62214945-096e-44b7-8a74-5e1c8b8adf6a",
                 "resourcePath": "scripts\\aicommonCombatInit\\aicommonCombatInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1676a9cd-bd49-47e8-860f-94537ce1a3ed",
+            "Value": {
+                "id": "683b8df9-8958-4037-82b0-bc01be2f0ec4",
+                "resourcePath": "objects\\o_usableLanternSlot\\o_usableLanternSlot.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5775,6 +5791,14 @@
             }
         },
         {
+            "Key": "7013ba5c-e4ae-42b8-b1fb-caa1103a95d6",
+            "Value": {
+                "id": "30c90901-44bf-4b04-8b41-cb91f73acc7e",
+                "resourcePath": "scripts\\getPlayerHasItem\\getPlayerHasItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7037ec63-ed0d-4412-a13d-8aacdad16050",
             "Value": {
                 "id": "d9a4818d-0663-4ce0-8eac-67381dbade8a",
@@ -9364,6 +9388,14 @@
                 "id": "0c038aa4-f2bc-4307-8a24-4a89d5fa4b98",
                 "resourcePath": "objects\\o_shoreCircleBallFader\\o_shoreCircleBallFader.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b6fd0b67-440d-4627-852f-7d12c19f4ace",
+            "Value": {
+                "id": "bde9c7fb-6875-4b86-8b48-9d5a7753a2d2",
+                "resourcePath": "sprites\\s_propTDoor4\\s_propTDoor4.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13087,6 +13119,14 @@
             }
         },
         {
+            "Key": "fd91d42f-98b5-471d-954f-aeac11ed0aec",
+            "Value": {
+                "id": "5493d710-959f-4ec2-b22d-4d5c0d87d389",
+                "resourcePath": "views\\fd91d42f-98b5-471d-954f-aeac11ed0aec.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "fd9fa3e5-7ee2-4559-85d9-86c972ec21f3",
             "Value": {
                 "id": "e582266c-4155-4315-8bb7-a5c91972a2e1",
@@ -13481,7 +13521,6 @@
         "91a78ace-2967-4010-a11d-b2ea9ae4c8c6",
         "019583ad-b915-461e-a00f-27580c1f10c7",
         "a410b08e-56e9-483b-b762-96941d81aabc",
-        "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
         "f7daba53-3a4b-4e03-aedc-a0168e74564f",
         "d842b212-f6e7-4072-a177-ecbd97bec994",
         "e65c108a-b00b-4b76-9afe-b1922ae15d59",
@@ -13511,6 +13550,8 @@
         "2222eb6a-8769-4ba1-a0b9-32996fe02725",
         "c3d040b0-205b-4a7e-87e9-ac6e70381ac8",
         "81173471-4fa3-495d-963a-a0585aba9bd9",
+        "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
+        "7013ba5c-e4ae-42b8-b1fb-caa1103a95d6",
         "7af7373b-ec41-4459-86d1-d9db63b98ac0",
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
         "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",
