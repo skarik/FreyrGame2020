@@ -11143,6 +11143,14 @@
             }
         },
         {
+            "Key": "d88f21b0-7401-40e0-b812-6bdbd3e54224",
+            "Value": {
+                "id": "db297799-5a07-42d0-93d0-7c1a0947a64b",
+                "resourcePath": "shaders\\sh_colorkeyAlphatest\\sh_colorkeyAlphatest.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "d89f263d-7a01-4222-854f-37fb5c934a71",
             "Value": {
                 "id": "d9809bf4-6fb1-4f9b-9d50-e10856b19927",
@@ -11708,6 +11716,14 @@
                 "id": "6f3e927d-5018-4b11-a9ea-b7128af0d708",
                 "resourcePath": "rooms\\rm_conventionIntro\\rm_conventionIntro.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "e2ea93d9-2bd9-4968-b51b-8faabff9495a",
+            "Value": {
+                "id": "8762db1a-5ae0-47f3-9cd0-627964302eda",
+                "resourcePath": "scripts\\doodadSetFinalize\\doodadSetFinalize.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -13462,6 +13478,7 @@
         "446efed8-c7db-4e4b-91bd-76a3b9a6b0c6",
         "f92f1b14-bd67-4154-a36e-72df92e0159e",
         "cc17e002-c4b9-4e67-9318-af467621b8aa",
+        "e2ea93d9-2bd9-4968-b51b-8faabff9495a",
         "af29fa42-90c0-487e-a646-19a5084a1e08",
         "c0ab6c09-05bf-404c-a21f-bb2c234ee5e0",
         "69e4f011-95f1-4a9d-8c67-44dd75871b14",

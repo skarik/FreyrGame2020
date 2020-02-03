@@ -8,3 +8,5 @@ if (m_initialized)
 	delete(hud);
 	delete(quests);
 }
+
+delete(m_locatorLight);

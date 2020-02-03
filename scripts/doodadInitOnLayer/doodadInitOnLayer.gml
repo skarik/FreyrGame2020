@@ -59,6 +59,9 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 			doodadSetElevation(doodad);
 		}
 		
+		// Finally detailing step
+		doodadSetFinalize(doodad);
+		
 		// Do user-post info
 		with (doodad)
 			event_user(1);

@@ -49,6 +49,12 @@ m_lanternEmissive = null;
 
 m_tarDeathTimer = 0.0;
 
+// the player alright has a character-light, but for no-ambient rooms, it gets disabled
+// thus, we need a specific light that shows the character location
+m_locatorLight = new(o_lightEmissiveDepth_User5);
+m_locatorLight.target = id;
+m_locatorSh_uColorKey = shader_get_uniform(sh_colorkeyAlphatest, "uColorKey");
+
 #region Constants
 
 kMoveSpeed = 120;
