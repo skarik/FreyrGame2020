@@ -631,6 +631,14 @@
             }
         },
         {
+            "Key": "0db4ac2a-72fd-4898-a7ad-b0316b03657d",
+            "Value": {
+                "id": "6865783d-a832-4bdb-b60e-bd74710c8d50",
+                "resourcePath": "sprites\\s_propClothBookcase\\s_propClothBookcase.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0e0ef512-2859-4d50-a130-8dd3a90d7b60",
             "Value": {
                 "id": "73805216-aaf0-4e08-873f-e51f733da8c3",
@@ -5687,6 +5695,14 @@
             }
         },
         {
+            "Key": "6efb3fd4-75de-47ac-9f87-0fa79361f997",
+            "Value": {
+                "id": "7a9409b9-5d58-437a-a64d-708c897e921c",
+                "resourcePath": "sprites\\s_propTallStatue\\s_propTallStatue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6efeb0bf-beb6-4fae-93f7-41ac371bfe8a",
             "Value": {
                 "id": "9fa0174b-dc94-4688-83fe-472cf460e163",
@@ -6316,6 +6332,14 @@
                 "id": "f6c04963-9791-4ca1-9220-351e58ce4bce",
                 "resourcePath": "scripts\\_cutsceneParsePortrait\\_cutsceneParsePortrait.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7c71fd9d-b1b7-4ae7-9c95-77ac638e52f0",
+            "Value": {
+                "id": "5088327a-01a8-486e-a101-080c741df57d",
+                "resourcePath": "sprites\\s_propShoeStorageFul\\s_propShoeStorageFul.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7375,6 +7399,14 @@
             }
         },
         {
+            "Key": "911013aa-8de2-4f9b-8148-e9d76e1fc494",
+            "Value": {
+                "id": "7a7a1c17-b5cf-42fc-be3b-52eee68bd54c",
+                "resourcePath": "sprites\\s_propTableTTTableCloth\\s_propTableTTTableCloth.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9135344b-5481-4a4f-9c69-5b2dbfd261d3",
             "Value": {
                 "id": "c63b177a-e979-46ed-b222-819c61d76aff",
@@ -7523,6 +7555,14 @@
             "Value": {
                 "id": "745631db-0f89-43dd-b011-90f75c70c56b",
                 "resourcePath": "sprites\\s_propRuinsPillar1\\s_propRuinsPillar1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "94bfaf04-b763-43d3-afe0-235975293e17",
+            "Value": {
+                "id": "245e80bd-94be-41c8-880c-5215418df82b",
+                "resourcePath": "sprites\\s_propGiantStatue\\s_propGiantStatue.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8451,6 +8491,14 @@
             "Value": {
                 "id": "1e8ea2b2-4d23-48c3-b5b9-47ec619a38d8",
                 "resourcePath": "sprites\\s_propSmallerCardboard\\s_propSmallerCardboard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a539d977-311f-4695-9ca3-6991f274d2dc",
+            "Value": {
+                "id": "6746082a-3f5f-49e3-9ec7-3db6f93b9d55",
+                "resourcePath": "sprites\\s_propShoeStorageB\\s_propShoeStorageB.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10327,6 +10375,14 @@
             }
         },
         {
+            "Key": "c7fa129d-8991-4bb2-8f1c-c7f35148eb64",
+            "Value": {
+                "id": "f32d75a5-e2dc-4640-ae5a-c413ce91ba12",
+                "resourcePath": "sprites\\s_propTTTableAlts\\s_propTTTableAlts.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c8117af1-cffe-4a01-b0cf-4c538ac14889",
             "Value": {
                 "id": "6fb822d0-326b-4dc2-bef1-9ac5b57b7939",
@@ -11236,6 +11292,14 @@
                 "id": "0d856e42-c856-4174-8cc0-c9457b70939a",
                 "resourcePath": "views\\d9d1fe18-a5c0-4bb6-8fd2-218397b0508b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d9d2e844-661f-4970-b1d5-5eebab77595a",
+            "Value": {
+                "id": "2bd38486-826f-4b19-982c-320139c7f82d",
+                "resourcePath": "sprites\\s_propShoeStorageA\\s_propShoeStorageA.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12948,6 +13012,14 @@
                 "id": "136500f4-b4d2-4085-9814-4879137d45ac",
                 "resourcePath": "scripts\\_settingsControlLoadArray\\_settingsControlLoadArray.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f99a937a-3ac2-447c-9772-ace7fe663865",
+            "Value": {
+                "id": "18832fe6-628e-47a7-bc8f-995b14ab74e9",
+                "resourcePath": "sprites\\s_propShoes\\s_propShoes.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
