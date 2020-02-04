@@ -43,3 +43,7 @@ else
 
 // Limit the tocker
 m_gearTockAmount = saturate(m_gearTockAmount);
+
+// Apply power manually to the door:
+if (exists(m_targetPoweredDoor))
+	m_targetPoweredDoor.m_powerInput = m_gearTockAmount;
