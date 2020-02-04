@@ -7,6 +7,8 @@ m_onUseScript    = grappleOnUse;
 m_checkUseScript = grappleCheckUse;
 m_type           = kItemPickupTool;
 
+m_showPickupUI   = true;
+
 m_light          = new(o_lightCrystalMothLanternGlow);
 m_emissive       = new(o_lightEmissiveDepth_User5);
 m_emissive.target = id;

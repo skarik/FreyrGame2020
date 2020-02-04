@@ -2,6 +2,7 @@
 /// @param x
 /// @param y
 /// @param audio
+/// @notes loop, priority, falloff_start, falloff_end, falloff_factor, gain, pitch, parent
 var at_x = argument0;
 var at_y = argument1;
 var sound_to_play = argument2;

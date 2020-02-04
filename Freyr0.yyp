@@ -1503,6 +1503,14 @@
             }
         },
         {
+            "Key": "1da584c7-796c-41d7-b7b4-15d55cfa2ec3",
+            "Value": {
+                "id": "486bdd7a-19d8-43c6-9801-ce65c5a5f1a5",
+                "resourcePath": "views\\1da584c7-796c-41d7-b7b4-15d55cfa2ec3.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1db0bf3f-398f-4e68-a745-986353802891",
             "Value": {
                 "id": "52e0ecb6-b353-43f1-a2ac-0d8852b36287",
@@ -2903,6 +2911,14 @@
             }
         },
         {
+            "Key": "37630967-746e-4ec7-8d4b-c848de416bd6",
+            "Value": {
+                "id": "6eb57abe-146a-40d2-a240-3b66e2df8477",
+                "resourcePath": "sounds\\snd_DoorTock0\\snd_DoorTock0.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "37a6ff21-1643-4851-acf3-18b9d595ff20",
             "Value": {
                 "id": "3f3009f2-7ae5-4a75-9b2f-e853b4c46d20",
@@ -3927,6 +3943,14 @@
             }
         },
         {
+            "Key": "4ca4dd1c-b75d-45cc-94f4-cf4dabf80892",
+            "Value": {
+                "id": "8e660ac0-e805-4833-9721-d4475791346e",
+                "resourcePath": "sounds\\snd_DoorOpen0\\snd_DoorOpen0.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "4cafe67e-0c3a-44ac-bcd2-689ebb1c9567",
             "Value": {
                 "id": "620a2787-4ee9-48d8-abe1-367fab2fcf29",
@@ -4892,6 +4916,14 @@
                 "id": "7e67d403-5662-4e7f-9c72-3ee1c7a97fde",
                 "resourcePath": "datafiles_yy\\audio\\intro_a1.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "5f09bb3a-8b83-4902-9fa7-72f9320d0521",
+            "Value": {
+                "id": "198c02e3-43a3-424b-96ca-fc93b916b9c1",
+                "resourcePath": "scripts\\playerRemovePitem\\playerRemovePitem.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5972,6 +6004,14 @@
                 "id": "31fd1313-b608-4ea8-8c6b-7a1aaadf5fd4",
                 "resourcePath": "sprites\\s_itemCropMelon\\s_itemCropMelon.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "74f1b5ef-0036-4ef8-b241-2d819c623253",
+            "Value": {
+                "id": "d3d9cd49-c88b-4150-9b50-26e3da71516a",
+                "resourcePath": "scripts\\sound_update_params\\sound_update_params.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8284,6 +8324,14 @@
                 "id": "ea9eeaf4-9fab-49b4-b769-dc28b4cc24d5",
                 "resourcePath": "sprites\\s_charHeroStand\\s_charHeroStand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a35ae03c-2af5-4f75-9760-0f8ccbfc57b3",
+            "Value": {
+                "id": "0ab6651d-cce1-4985-95b8-45a5ef3fa2c0",
+                "resourcePath": "sounds\\snd_ButtonLever0\\snd_ButtonLever0.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -11623,6 +11671,14 @@
             }
         },
         {
+            "Key": "e121189c-41f0-4a6c-a8d0-7d3e8b886a9b",
+            "Value": {
+                "id": "a42684a2-44a7-4c6b-bc7f-f6776bb95f64",
+                "resourcePath": "views\\e121189c-41f0-4a6c-a8d0-7d3e8b886a9b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e1341471-2d67-474d-bd70-0e58a48aef1b",
             "Value": {
                 "id": "655d8e20-23d4-43da-8cb3-c2f2eb2f6d2a",
@@ -13413,6 +13469,7 @@
         "3a505045-ca98-4243-93da-92d468454e4b",
         "82a26b66-c615-49e2-9bf5-5c50f21ea1d8",
         "fdbb3679-3764-4a36-89dc-9d26a9794773",
+        "74f1b5ef-0036-4ef8-b241-2d819c623253",
         "5c42d6c1-9e5f-42c2-ab9b-6fbf7d7f8c44",
         "8c8e4c2d-fdb6-481b-8d2d-76088ba9384a",
         "fb6f19c3-ec08-4c98-aa8c-b7878677d0d6",
@@ -13569,6 +13626,7 @@
         "81173471-4fa3-495d-963a-a0585aba9bd9",
         "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
         "7013ba5c-e4ae-42b8-b1fb-caa1103a95d6",
+        "5f09bb3a-8b83-4902-9fa7-72f9320d0521",
         "7af7373b-ec41-4459-86d1-d9db63b98ac0",
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
         "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",

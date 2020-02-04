@@ -11,3 +11,6 @@ m_actionName = "Place Lantern";
 #endregion
 
 m_lanternPlaced = false;
+m_lanternProp = null;
+m_gearTockSfx = null;
+m_gearTockAmount = 0.0;
