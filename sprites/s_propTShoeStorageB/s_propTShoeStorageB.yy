@@ -2,7 +2,7 @@
     "id": "a539d977-311f-4695-9ca3-6991f274d2dc",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_propShoeStorageB",
+    "name": "s_propTShoeStorageB",
     "For3D": false,
     "HTile": false,
     "VTile": false,

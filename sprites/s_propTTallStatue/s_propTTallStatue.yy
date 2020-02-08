@@ -2,7 +2,7 @@
     "id": "6efb3fd4-75de-47ac-9f87-0fa79361f997",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_propTallStatue",
+    "name": "s_propTTallStatue",
     "For3D": false,
     "HTile": false,
     "VTile": false,

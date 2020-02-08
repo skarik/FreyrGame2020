@@ -2,7 +2,7 @@
     "id": "f99a937a-3ac2-447c-9772-ace7fe663865",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_propShoes",
+    "name": "s_propTShoes",
     "For3D": false,
     "HTile": false,
     "VTile": false,

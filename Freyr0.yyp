@@ -5698,7 +5698,7 @@
             "Key": "6efb3fd4-75de-47ac-9f87-0fa79361f997",
             "Value": {
                 "id": "7a9409b9-5d58-437a-a64d-708c897e921c",
-                "resourcePath": "sprites\\s_propTallStatue\\s_propTallStatue.yy",
+                "resourcePath": "sprites\\s_propTTallStatue\\s_propTTallStatue.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6338,7 +6338,7 @@
             "Key": "7c71fd9d-b1b7-4ae7-9c95-77ac638e52f0",
             "Value": {
                 "id": "5088327a-01a8-486e-a101-080c741df57d",
-                "resourcePath": "sprites\\s_propShoeStorageFul\\s_propShoeStorageFul.yy",
+                "resourcePath": "sprites\\s_propTShoeStorageFul\\s_propTShoeStorageFul.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7562,7 +7562,7 @@
             "Key": "94bfaf04-b763-43d3-afe0-235975293e17",
             "Value": {
                 "id": "245e80bd-94be-41c8-880c-5215418df82b",
-                "resourcePath": "sprites\\s_propGiantStatue\\s_propGiantStatue.yy",
+                "resourcePath": "sprites\\s_propTGiantStatue\\s_propTGiantStatue.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8498,7 +8498,7 @@
             "Key": "a539d977-311f-4695-9ca3-6991f274d2dc",
             "Value": {
                 "id": "6746082a-3f5f-49e3-9ec7-3db6f93b9d55",
-                "resourcePath": "sprites\\s_propShoeStorageB\\s_propShoeStorageB.yy",
+                "resourcePath": "sprites\\s_propTShoeStorageB\\s_propTShoeStorageB.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11298,7 +11298,7 @@
             "Key": "d9d2e844-661f-4970-b1d5-5eebab77595a",
             "Value": {
                 "id": "2bd38486-826f-4b19-982c-320139c7f82d",
-                "resourcePath": "sprites\\s_propShoeStorageA\\s_propShoeStorageA.yy",
+                "resourcePath": "sprites\\s_propTShoeStorageA\\s_propTShoeStorageA.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12735,6 +12735,14 @@
             }
         },
         {
+            "Key": "f4952676-0863-471f-8f37-602295392df4",
+            "Value": {
+                "id": "ad37debc-0d9b-45d5-9e1f-a71ec01c206c",
+                "resourcePath": "objects\\o_fxTardropSpawners\\o_fxTardropSpawners.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f52dbb02-2d8b-40fe-8a33-f3962e0b92b6",
             "Value": {
                 "id": "03f05494-ce89-4d49-ad05-077bf89fde5d",
@@ -13018,7 +13026,7 @@
             "Key": "f99a937a-3ac2-447c-9772-ace7fe663865",
             "Value": {
                 "id": "18832fe6-628e-47a7-bc8f-995b14ab74e9",
-                "resourcePath": "sprites\\s_propShoes\\s_propShoes.yy",
+                "resourcePath": "sprites\\s_propTShoes\\s_propTShoes.yy",
                 "resourceType": "GMSprite"
             }
         },
