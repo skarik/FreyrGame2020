@@ -32,6 +32,13 @@ aiScriptableInit();
 aicommonCombatInit();
 aiSlugInit();
 
+#region AI Constants
+
+m_aiCombat_noticeAngle = 20;
+m_aiCombat_noticeDistance = 120;
+
+#endregion
+
 #region Constants
 
 kKickbackAmount = 1.0;
