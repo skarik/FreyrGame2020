@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-m_team = kTeamMonster;
+m_team = kTeamBandit;
 m_bloodType = kBloodWhite;
 
 stats.m_health = 24.0;

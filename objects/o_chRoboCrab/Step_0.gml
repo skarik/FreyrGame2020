@@ -71,6 +71,26 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 	// In angry mode:
 	else
 	{
+		// does target exist?
+		if (exists(m_aiCombat_target))
+		{
+			// update if target visible (wide range)
+			if (aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, max(m_aiCombat_target.z, z), facingDirection, 300.0, 360, true))
+			{
+				m_aiCombat_targetVisible = true;
+			}
+			
+			// update memory if visible
+			if (m_aiCombat_targetVisible)
+			{
+				m_aiCombat_targetPosition = [m_aiCombat_target.x, m_aiCombat_target.y];
+			}
+		}
+		// make immediately not visible if target does not exist.
+		else
+		{
+			m_aiCombat_targetVisible = false;
+		}
 	}
 }
 
@@ -140,12 +160,63 @@ else if (!m_aiCombat_angry && m_aiCombat_alerted)
 		
 		// Aggro over a second (or two)
 		m_aiCombat_aggroTimer += Time.deltaTime;
+		
+		// upgrade to angry if in view for 1 second
+		if (m_aiCombat_aggroTimer >= 1.0)
+		{
+			m_aiCombat_angry = true;
+		}
 	}
 }
 // Angry
 else if (m_aiCombat_angry)
 {
-	//
+	var l_at_rest = false;
+	
+	// if target exists...
+	if (exists(m_aiCombat_target))
+	{
+		// if target is visible
+		if (m_aiCombat_targetVisible)
+		{
+			// move to it, then attack
+		}
+		// if target is not visible
+		else
+		{
+			// if not at last target location
+				// move to last target location
+			// once there...
+				// spin in place, looking for target.
+		}
+	}
+	// if target does not exist...
+	else
+	{
+		// if not at last target location
+			// move to last target location
+		// once there...
+			// spin in place, looking for target.
+	}
+	
+	// if target is not visible & we are at last known position
+	if (!m_aiCombat_targetVisible && l_at_rest)
+	{
+		// deaggro over time
+		m_aiCombat_deaggroTimer += Time.deltaTime;
+		if (m_aiCombat_deaggroTimer > 3.0)
+		{
+			m_aiCombat_angry = false;
+			m_aiCombat_alerted = true;
+			
+			m_aiCombat_aggroTimer = 0.0;
+			m_aiCombat_deaggroTimer = 0.0;
+		}
+	}
+	// if anything is visible or we're moving, we're still gonna keep aggro up
+	else
+		m_aiCombat_deaggroTimer = 0.0;
+		
 }
 
 // Inherit the parent event (does motion)

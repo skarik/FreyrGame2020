@@ -68,6 +68,7 @@ with (ob_character)
         
 		// Save damage
 		m_lastDamage = type;
+		m_lastDamageSource = source;
 		
         // Generate intersecting BB for the effect spawning
         var c_x1 = max( x1, x-sprite_xoffset );

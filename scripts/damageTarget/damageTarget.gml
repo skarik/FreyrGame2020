@@ -64,6 +64,7 @@ with (target)
 	
 	// Save damage
 	m_lastDamage = type;
+	m_lastDamageSource = source;
 	
 	// Create damage ticker
 	var ticker = instance_create_depth(random_range(c_x1,c_x2), random_range(c_y1,c_y2), depth - 5, o_floaterDmgTicker);

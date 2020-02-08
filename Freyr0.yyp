@@ -7783,6 +7783,14 @@
             }
         },
         {
+            "Key": "98349e75-d623-4d6e-adce-4092d0ebaa18",
+            "Value": {
+                "id": "3c2b548a-fc37-4e35-9f6c-d66bd6bbdfc7",
+                "resourcePath": "scripts\\aicommonCanSee\\aicommonCanSee.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "983a0379-deeb-4c91-bf41-2a3709b1ebc2",
             "Value": {
                 "id": "bddee4f0-5006-471c-857e-f570b20ae93a",
@@ -13833,6 +13841,7 @@
         "b5b071d2-2b67-4b1b-8166-d02e5e3a7c98",
         "5d2092b0-22c7-43c8-a911-4a275a4061ad",
         "16731471-3d06-4b2a-a680-16008e4fcfe3",
+        "98349e75-d623-4d6e-adce-4092d0ebaa18",
         "a5bb53f5-1255-41b9-8d5f-95f693659a46",
         "86b29aad-e41d-4b3b-9924-e588c88a19dd",
         "ee3951e3-ca9f-4469-893d-f56829fde10d",
