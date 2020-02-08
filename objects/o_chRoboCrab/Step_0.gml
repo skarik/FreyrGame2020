@@ -24,12 +24,7 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 				var t_npc = instance_find(ob_character, i);
 				if (damageCanHit(this, t_npc))
 				{
-					// Check if the NPC in vision range
-					var target_direction	= point_direction(x, y, t_npc.x, t_npc.y);
-					var target_distance		= point_distance(x, y, t_npc.x, t_npc.y);
-					
-					if (target_distance < m_aiCombat_noticeDistance
-						&& abs(angle_difference(facingDirection, target_direction)) < m_aiCombat_noticeAngle)
+					if (aicommonCanSee(t_npc.x, t_npc.y, max(z, t_npc.z), facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle, true))
 					{
 						m_aiCombat_target = t_npc;
 						break;
@@ -48,11 +43,7 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 			{
 				var t_npc = m_aiCombat_target;
 				
-				var target_direction	= point_direction(x, y, t_npc.x, t_npc.y);
-				var target_distance		= point_distance(x, y, t_npc.x, t_npc.y);
-					
-				if (target_distance < m_aiCombat_noticeDistance
-					&& abs(angle_difference(facingDirection, target_direction)) < m_aiCombat_noticeAngle)
+				if (aicommonCanSee(t_npc.x, t_npc.y, max(z, t_npc.z), facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle, true))
 				{
 					// GOOD
 				}
@@ -71,6 +62,8 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 	// In angry mode:
 	else
 	{
+		debugOut("AI ANGRY STEP");
+		
 		// does target exist?
 		if (exists(m_aiCombat_target))
 		{
@@ -79,10 +72,15 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 			{
 				m_aiCombat_targetVisible = true;
 			}
+			else
+			{
+				m_aiCombat_targetVisible = false;
+			}
 			
 			// update memory if visible
 			if (m_aiCombat_targetVisible)
 			{
+				debugOut("AI ANGRY MEMORY UPDATE");
 				m_aiCombat_targetPosition = [m_aiCombat_target.x, m_aiCombat_target.y];
 			}
 		}
@@ -99,14 +97,10 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 
 // Chill
 if (!m_aiCombat_angry && !m_aiCombat_alerted)
-{
+{	
 	// have we gotten to the wander point?
-	if (m_aiWander[0] == 0 || point_distance(x, y, m_aiWander[0], m_aiWander[1]) < 6.0)
+	if (m_aiWander[0] == 0 || aiRobocrabMoveTo(m_aiWander[0], m_aiWander[1]))
 	{
-		// stop moving
-		xAxis.value = 0;
-		yAxis.value = 0;
-		
 		// choose a spot
 		m_aiWanderTimer -= Time.deltaTime;
 		if (m_aiWanderTimer <= 0.0)
@@ -117,28 +111,7 @@ if (!m_aiCombat_angry && !m_aiCombat_alerted)
 			m_aiWanderTimer = 2.0;
 		}
 	}
-	// move to the wander point
-	else
-	{
-		var target_direction	= point_direction(x, y, m_aiWander[0], m_aiWander[1]);
-		var target_distance		= point_distance(x, y, m_aiWander[0], m_aiWander[1]);
-		
-		// turn towards the direction of the target. No instant snap-to like organics
-		facingDirection = turn_towards_direction(facingDirection, target_direction, 180.0 * Time.deltaTime);
-		
-		// set steering strength based on facing towards target & distance to target.
-		var controlSpeed = lerp(1.0,
-								0.0,
-								saturate(abs(angle_difference(facingDirection, target_direction)) - target_distance / kMoveSpeed * 2.0)
-								* saturate(1.0 - target_distance / kMoveSpeed)
-								);
-		
-		xAxis.value = lengthdir_x(controlSpeed, facingDirection);
-		yAxis.value = lengthdir_y(controlSpeed, facingDirection);
-		
-		aimingDirection = facingDirection;
-	}
-	
+
 	// Freshen up the aggro timer
 	m_aiCombat_aggroTimer = 0.0;
 }
@@ -173,30 +146,44 @@ else if (m_aiCombat_angry)
 {
 	var l_at_rest = false;
 	
-	// if target exists...
-	if (exists(m_aiCombat_target))
+	// Force the aggro timer up:
+	m_aiCombat_aggroTimer += Time.deltaTime * 2.0;
+	
+	// if target exists and is visible
+	if (exists(m_aiCombat_target) && m_aiCombat_targetVisible)
 	{
-		// if target is visible
-		if (m_aiCombat_targetVisible)
-		{
-			// move to it, then attack
-		}
-		// if target is not visible
-		else
-		{
-			// if not at last target location
-				// move to last target location
-			// once there...
-				// spin in place, looking for target.
-		}
+		// move to it, then attack
+		aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
 	}
-	// if target does not exist...
+	// if target is not currently tangible
 	else
 	{
-		// if not at last target location
-			// move to last target location
+		// if not at last target location, move to last target location
+		if (!aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]))
+		{	// save a spot to look at
+			m_aiWander[0] = m_aiCombat_targetPosition[0];
+			m_aiWander[1] = m_aiCombat_targetPosition[1];
+		}
 		// once there...
+		else
+		{
+			l_at_rest = true;
+				
 			// spin in place, looking for target.
+			m_aiWanderTimer += Time.deltaTime;
+			if (m_aiWanderTimer > 1.5)
+			{
+				m_aiWander[0] = x + random_range(-1, 1);
+				m_aiWander[1] = y + random_range(-1, 1);
+				m_aiWanderTimer -= 1.5; 
+			}
+				
+			// turn towards the direction of the random target
+			var target_direction = point_direction(x, y, m_aiWander[0], m_aiWander[1]);
+			facingDirection = turn_towards_direction(facingDirection, target_direction, 180.0 * Time.deltaTime);
+			
+			aimingDirection = facingDirection;
+		}
 	}
 	
 	// if target is not visible & we are at last known position
@@ -204,7 +191,7 @@ else if (m_aiCombat_angry)
 	{
 		// deaggro over time
 		m_aiCombat_deaggroTimer += Time.deltaTime;
-		if (m_aiCombat_deaggroTimer > 3.0)
+		if (m_aiCombat_deaggroTimer > 5.0)
 		{
 			m_aiCombat_angry = false;
 			m_aiCombat_alerted = true;
@@ -222,3 +209,13 @@ else if (m_aiCombat_angry)
 // Inherit the parent event (does motion)
 event_inherited();
 
+// Limit the distance from home.
+/*var home_distance = point_distance(x, y, xstart, ystart);
+if (home_distance > m_aiHomeDistance)
+{
+	var rescaled_x = (xstart - x) / home_distance * m_aiHomeDistance;
+	var rescaled_y = (ystart - y) / home_distance * m_aiHomeDistance;
+	
+	x = xstart + rescaled_x;
+	y = ystart + rescaled_y;
+}*/

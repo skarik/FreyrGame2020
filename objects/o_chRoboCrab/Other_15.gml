@@ -5,6 +5,7 @@ var yd = 70;
 
 var eye_color = c_crystalblue;
 eye_color = merge_color(c_crystalblue, c_gold, m_aiCombat_alerted ? saturate(m_aiCombat_aggroTimer * 3.0) : 0.0);
+eye_color = merge_color(eye_color, c_red, m_aiCombat_angry ? saturate(3.0 - m_aiCombat_deaggroTimer) : 0.0);
 
 draw_set_color(merge_color(eye_color, c_black, 0.85));
 draw_pie(x + xoffset - xd, y + yoffset - yd, x + xoffset + xd, y + yoffset + yd,

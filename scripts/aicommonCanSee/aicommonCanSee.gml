@@ -1,12 +1,12 @@
 /// @function aicommonCanSee(x, y, z, facing, max_dist, half_angle, use_collision)
 /// @desc Checks if the given point can be seen from the current NPC position
-/// @param x {Real}
-/// @param y {Real}
-/// @param z {Real}
-/// @param facing {Real}
-/// @param max_dist {Real} Max distance of the vision. 0 or lower to skip check.
-/// @param half_angle {Real} Max angle of the vision. 180 or higher to skip check.
-/// @param use_collision {Boolean} If collisions should be considered when checking. May break w/ elevation.
+/// @param {Real} x
+/// @param {Real} y
+/// @param {Real} z
+/// @param {Real} facing
+/// @param {Real} max_dist Max distance of the vision. 0 or lower to skip check.
+/// @param {Real} half_angle Max angle of the vision. 180 or higher to skip check.
+/// @param {Boolean} use_collision  If collisions should be considered when checking. May break w/ elevation.
 
 var tx = argument0;
 var ty = argument1;
