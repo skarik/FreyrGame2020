@@ -19,6 +19,8 @@ m_aiState_hangFallblendValue = 0.0;
 //fxtimer_hangdropS = 0;
 //fxtimer_hangdrop = 0;
 
+m_aiState_attackTiming = 0.0;
+
 //m_light = instance_create_depth(x, y, depth, o_lightCrystalSlugGlow);
 //m_light2 = instance_create_depth(x, y, depth, o_lightCrystalSlugGlow);
 
@@ -31,6 +33,9 @@ playerInteractInit();
 aiScriptableInit();
 aicommonCombatInit();
 aiSlugInit();
+
+// Interact code because lazy
+characterGroundInteractInit();
 
 #region AI Constants
 
@@ -53,3 +58,5 @@ kMoveAccelerationAir = 200  / 2;
 kMoveAccelerationAirStop = 10;
 
 #endregion
+
+//meleeAtk0Script

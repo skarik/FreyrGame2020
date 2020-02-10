@@ -3639,6 +3639,14 @@
             }
         },
         {
+            "Key": "4677c394-249a-4142-b5d0-79e21aa49737",
+            "Value": {
+                "id": "e7fb4f47-6876-481f-a823-056ea18bd55f",
+                "resourcePath": "shaders\\sh_colormaskExternal\\sh_colormaskExternal.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "468f285d-b321-4679-894b-b76382e119d3",
             "Value": {
                 "id": "5002239b-3d51-4100-8a48-401827080a11",
@@ -4228,6 +4236,14 @@
                 "id": "04bee515-63ab-457d-a22b-8da2baeaddfa",
                 "resourcePath": "sprites\\s_itemResBolt\\s_itemResBolt.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "51a025d6-f427-484b-98fb-b52e34c30fc7",
+            "Value": {
+                "id": "70dddfcd-9f16-40bc-9aaa-0cd51e596a68",
+                "resourcePath": "scripts\\mtRobocrabAttack0\\mtRobocrabAttack0.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5380,6 +5396,14 @@
                 "id": "74a59451-d9fb-4430-9b17-0bc73bf21841",
                 "resourcePath": "scripts\\vtile_internal_query_reset\\vtile_internal_query_reset.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "68f69068-dc1c-458e-aebc-cc9a0e4b985f",
+            "Value": {
+                "id": "e0eeb3e0-4202-4440-9e15-72748d2bc867",
+                "resourcePath": "sprites\\s_wiresTBase\\s_wiresTBase.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13883,6 +13907,7 @@
         "17596f84-41e3-4c36-8a84-795461bb2bad",
         "17620a07-1cee-4ce3-b04c-2ae95b4f429a",
         "0cb388ed-b75e-445d-b08e-af304bfd9bc9",
+        "51a025d6-f427-484b-98fb-b52e34c30fc7",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",

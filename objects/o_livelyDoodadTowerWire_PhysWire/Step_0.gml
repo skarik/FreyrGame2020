@@ -20,8 +20,12 @@ m_segments[m_segmentCount - 1] = m_endPoint;
 var kDistanceLimitRelaxer = 0.9;
 for (var i = 1; i < m_segmentCount - 1; ++i)
 {
-	var delta = [0, 0];
-	
+	var delta = m_segmentDeltas[i];
+
+	// Apply damping
+	delta[0] *= 0.25;
+	delta[1] *= 0.25;
+
 	var pointCenter = m_segments[i];
 	var pointPrev = m_segments[i - 1];
 	var pointNext = m_segments[i + 1];

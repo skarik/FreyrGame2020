@@ -42,3 +42,9 @@ m_currentChest = null;
 #macro kInteractionDefault -1*/
 
 m_currentInteractionType = kInteractionAttack;
+
+
+// junk
+dashCooldown = 0.0;
+meleeAtkTimer = 0.0;
+meleeAtkCurrent = 0;
