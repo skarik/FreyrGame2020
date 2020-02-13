@@ -1,5 +1,7 @@
 /// @description AI!
 
+if (live_call()) return live_result;
+
 //
 // Perform alert checks:
 

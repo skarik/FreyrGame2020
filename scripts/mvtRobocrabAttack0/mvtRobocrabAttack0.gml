@@ -1,3 +1,5 @@
+if (live_call()) return live_result;
+
 // Update checks
 _playerMotionCommonChecks();
 

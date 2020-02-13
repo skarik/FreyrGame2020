@@ -1151,6 +1151,14 @@
             }
         },
         {
+            "Key": "1610c4d8-2276-4c7d-a897-417a1c9bf620",
+            "Value": {
+                "id": "7faee90d-31f5-4263-9d54-8ddb3356abfe",
+                "resourcePath": "views\\1610c4d8-2276-4c7d-a897-417a1c9bf620.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "162475ba-b891-49e0-9e33-2f2e8828a522",
             "Value": {
                 "id": "d7a0a5ad-06f5-4c8b-aa42-f3532fe0e2e0",
@@ -1172,6 +1180,14 @@
                 "id": "683b8df9-8958-4037-82b0-bc01be2f0ec4",
                 "resourcePath": "objects\\o_usableLanternSlot\\o_usableLanternSlot.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "167d06a6-0e3a-4d69-b32a-c7c160a7373b",
+            "Value": {
+                "id": "5bafcc07-4719-4abe-a76b-a913bb6f0909",
+                "resourcePath": "datafiles_yy\\GMLive\\gmlive-server.n.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -2679,6 +2695,14 @@
             }
         },
         {
+            "Key": "33634c94-b392-4387-9e8a-14a6330a1256",
+            "Value": {
+                "id": "c0db3e79-60a1-4ea3-ac86-c2cb99161c28",
+                "resourcePath": "objects\\obj_gmlive\\obj_gmlive.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3363a159-5c82-41b1-a76f-9b645046f746",
             "Value": {
                 "id": "20f03bc3-ef60-48a9-9908-3609769907f1",
@@ -2772,6 +2796,14 @@
                 "id": "3738e4bb-dfe8-4a21-8284-060be1eaf635",
                 "resourcePath": "views\\34e5a342-cab2-424a-a354-de7de005c907.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "34ebc914-3fea-42f7-a6b9-db18b75cd055",
+            "Value": {
+                "id": "eb7ac7d8-5a38-4f6d-b33d-fefac807e6a7",
+                "resourcePath": "extensions\\GMLive\\GMLive.yy",
+                "resourceType": "GMExtension"
             }
         },
         {
@@ -4951,6 +4983,14 @@
             }
         },
         {
+            "Key": "5ec074e3-6593-4e08-b6ce-48148ba57cea",
+            "Value": {
+                "id": "c19039d8-5a65-4567-8ae8-915e12773404",
+                "resourcePath": "datafiles_yy\\GMLive\\regexp.ndll.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "5f0960a7-48d6-4614-aa6e-bf0169b3bc70",
             "Value": {
                 "id": "7e67d403-5662-4e7f-9c72-3ee1c7a97fde",
@@ -6052,6 +6092,14 @@
                 "id": "4bbb1e9d-da9b-4a52-bad7-0b7def6482c4",
                 "resourcePath": "objects\\ob_audioPlayer2\\ob_audioPlayer2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "74b1dc2c-856c-4026-a47e-1f249ac7aec1",
+            "Value": {
+                "id": "f773906a-d40b-4cc9-953c-ad20797daa81",
+                "resourcePath": "datafiles_yy\\GMLive\\std.ndll.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7348,6 +7396,14 @@
                 "id": "f8599502-0867-4338-9db4-36f05f51ab69",
                 "resourcePath": "scripts\\duiStepAlphaGlobal\\duiStepAlphaGlobal.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8f5186ed-98a9-4139-b790-82f9afb69ffe",
+            "Value": {
+                "id": "9e5d21f1-1877-4397-83bd-a4b38b93dd73",
+                "resourcePath": "datafiles_yy\\GMLive\\gcmt-dll.dll.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -10327,6 +10383,14 @@
             }
         },
         {
+            "Key": "c5f7d403-f9ff-43e2-9cda-037fc0e42af6",
+            "Value": {
+                "id": "5753afe5-d144-419d-860b-d6e50d784400",
+                "resourcePath": "datafiles_yy\\GMLive\\gmlive-server.exe.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "c5fd6d11-263e-43d9-84ad-259782f2b03c",
             "Value": {
                 "id": "3240c6f3-6504-4bba-be40-d2a1f495a555",
@@ -11083,6 +11147,14 @@
             "Value": {
                 "id": "5a922ce4-d7b4-45ca-99e7-1587080d498d",
                 "resourcePath": "datafiles_yy\\cts\\talk00_viggo.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "d50fc3c0-9ed7-45b2-b1e6-5bb18f114262",
+            "Value": {
+                "id": "830c48ed-0545-412a-bc81-c00604110ea2",
+                "resourcePath": "datafiles_yy\\GMLive\\neko.dll.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -13260,6 +13332,14 @@
                 "id": "5f15ca85-de6f-444a-910e-e47228b2d2dc",
                 "resourcePath": "views\\fc0e4d22-0423-44fb-9aa6-9e138d436b84.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fc1aa5a6-8785-4b20-acd3-54361450e66e",
+            "Value": {
+                "id": "7edacf33-30f3-40fc-8a7b-42dcdffe0b8e",
+                "resourcePath": "datafiles_yy\\GMLive\\gmlive.html.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
