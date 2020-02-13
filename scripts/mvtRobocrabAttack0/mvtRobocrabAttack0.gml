@@ -14,7 +14,7 @@ if (m_isHolding)
 
 // Increment timer
 var l_meleeAtkTimerPrev = meleeAtkTimer;
-meleeAtkTimer += Time.deltaTime;
+meleeAtkTimer += Time.deltaTime; // 1.5 seconds long.
 
 // Get percent of time
 //var l_meleePercent = clamp(meleeAtkTimer / meleeAtk0Time, 0.0, 1.0);
@@ -33,6 +33,53 @@ _playerMotionCommonCollision();
 // Finally move
 x += xspeed * Time.deltaTime;
 y += yspeed * Time.deltaTime;
+
+// Time of 0.0 to 0.5 - Telegraph the attack.
+var kTelegraphKey = meleeAtk0Key - 0.1;
+if (l_meleeAtkTimerPrev < kTelegraphKey && meleeAtkTimer >= kTelegraphKey)
+{
+	var flasher = instance_create_depth(x, y - 5, depth - 10, o_ptcCircleHit);
+		flasher.slowAccel = flasher.growSpeed * 3.0;
+		flasher.fadePoint = 1000.0;
+		flasher.fadeSpeed = 2;
+}
+
+// 0.5 to 1.5 - Three attacks
+var kKey0 = meleeAtk0Key;
+var kKey1 = (meleeAtk0Time - meleeAtk0Key) / 3.0 * 1.0 + meleeAtk0Key;
+var kKey2 = (meleeAtk0Time - meleeAtk0Key) / 3.0 * 2.0 + meleeAtk0Key;
+// rectangle_in_triangle
+
+if (l_meleeAtkTimerPrev < kKey0 && meleeAtkTimer >= kKey0)
+{
+	var fxCx = x + lengthdir_x(lerp(beamAtkRanges[0], beamAtkRanges[1], 0.4), aimingDirection);
+	var fxCy = y + lengthdir_y(lerp(beamAtkRanges[0], beamAtkRanges[1], 0.4), aimingDirection);
+	
+	var flasher = instance_create_depth(fxCx, fxCy, depth - 10, o_ptcCircleHit);
+		flasher.slowAccel = flasher.growSpeed * 3.0;
+		flasher.fadePoint = 1000.0;
+		flasher.fadeSpeed = 2;
+}
+if (l_meleeAtkTimerPrev < kKey1 && meleeAtkTimer >= kKey1)
+{
+	var fxCx = x + lengthdir_x(lerp(beamAtkRanges[1], beamAtkRanges[2], 0.4), aimingDirection);
+	var fxCy = y + lengthdir_y(lerp(beamAtkRanges[1], beamAtkRanges[2], 0.4), aimingDirection);
+	
+	var flasher = instance_create_depth(fxCx, fxCy, depth - 10, o_ptcCircleHit);
+		flasher.slowAccel = flasher.growSpeed * 3.0;
+		flasher.fadePoint = 1000.0;
+		flasher.fadeSpeed = 2;
+}
+if (l_meleeAtkTimerPrev < kKey2 && meleeAtkTimer >= kKey2)
+{
+	var fxCx = x + lengthdir_x(lerp(beamAtkRanges[2], beamAtkRanges[3], 0.4), aimingDirection);
+	var fxCy = y + lengthdir_y(lerp(beamAtkRanges[2], beamAtkRanges[3], 0.4), aimingDirection);
+	
+	var flasher = instance_create_depth(fxCx, fxCy, depth - 10, o_ptcCircleHit);
+		flasher.slowAccel = flasher.growSpeed * 3.0;
+		flasher.fadePoint = 1000.0;
+		flasher.fadeSpeed = 2;
+}
 
 // if before the hit time or after the key time, we can dash out of it
 /*if (meleeAtkTimer < meleeAtk0Hit || meleeAtkTimer > meleeAtk0Key)
@@ -71,13 +118,14 @@ if (l_meleeAtkTimerPrev < meleeAtk0Hit && meleeAtkTimer >= meleeAtk0Hit)
 	}
 }*/
 // if past the length, end the attak
-//if (meleeAtkTimer > meleeAtk0Time)
-if (meleeAtkTimer > 1.0)
+if (meleeAtkTimer > meleeAtk0Time)
 {
 	meleeDashQueued = false;
 	meleeAtkQueued = false;
 	meleeAtkTimer = 0.0;
 	isAttacking = false;
+	
+	playerRevealHazard(kHazardRoboVoidShot);
 }
 
 // update animation

@@ -9,6 +9,7 @@
 #macro c_crystallime make_color_rgb(140, 192,  64)
 #macro c_diamondlime make_color_rgb(192, 255, 102)
 
+#macro c_uigold merge_color(c_gold, c_red, 0.3)
 
 #macro c_towercrystal c_crystalblue
 #macro c_towerdiamond c_electricity

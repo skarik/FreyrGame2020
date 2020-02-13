@@ -58,7 +58,13 @@ kMoveAccelerationAir = 200  / 2;
 kMoveAccelerationAirStop = 10;
 
 meleeAtk0Script = mvtRobocrabAttack0;
+meleeAtk0Key = 0.5;
+meleeAtk0Time = 1.5;
 
 #endregion
 
 //meleeAtk0Script
+
+beamAtkRanges = [5, 40, 80, 120];
+beamAtkWidth = 20;
+beamAtkAngleOff = 10;

@@ -23,3 +23,9 @@ for (var i = 0; i < kPitem_MAX; ++i)
 
 m_fortune = array_create(0);
 m_fortune_flipped = false;
+
+
+#macro kHazardRoboVoidShot 0
+#macro kHazard_MAX 256
+
+m_hazards = array_create(kHazard_MAX, 0);

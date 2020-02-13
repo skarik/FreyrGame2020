@@ -1,6 +1,10 @@
 /// @description AI!
 
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
+
+// force health for testing
+stats.m_health = 24.0;
+//m_aiCombat_angry = false;
 
 //
 // Perform alert checks:
@@ -152,16 +156,19 @@ else if (m_aiCombat_angry)
 	if (exists(m_aiCombat_target) && m_aiCombat_targetVisible)
 	{
 		// move to it, then attack
-		aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+		if (!isAttacking)
+			aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
 		
 		m_aiState_attackTiming += Time.deltaTime;
 		
 		var tracking_distance = point_distance(x, y, m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
-		if (tracking_distance < 100 && m_aiState_attackTiming > 2.0)
+		if ((true || tracking_distance < 100) && m_aiState_attackTiming > 2.0)
 		{
 			meleeAtkCurrent = 0; // Force 0.
-			meleeAtkTimer = max(1.01, meleeAtkTimer);
+			if (!isAttacking)
+				meleeAtkTimer = max(1.01, meleeAtkTimer);
 			_controlStructUpdate(atkButton, 1.0);
+			m_aiState_attackTiming = 0.0;
 		}
 		else
 		{
