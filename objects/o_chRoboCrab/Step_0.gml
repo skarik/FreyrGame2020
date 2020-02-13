@@ -157,6 +157,8 @@ else if (m_aiCombat_angry)
 		var tracking_distance = point_distance(x, y, m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
 		if (tracking_distance < 100 && m_aiState_attackTiming > 2.0)
 		{
+			meleeAtkCurrent = 0; // Force 0.
+			meleeAtkTimer = max(1.01, meleeAtkTimer);
 			_controlStructUpdate(atkButton, 1.0);
 		}
 		else

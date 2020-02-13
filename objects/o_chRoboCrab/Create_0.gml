@@ -57,6 +57,8 @@ kMoveAccelerationStop = 500  / 2;
 kMoveAccelerationAir = 200  / 2;
 kMoveAccelerationAirStop = 10;
 
+meleeAtk0Script = mvtRobocrabAttack0;
+
 #endregion
 
 //meleeAtk0Script

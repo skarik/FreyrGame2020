@@ -33,7 +33,7 @@ x += xspeed * Time.deltaTime;
 y += yspeed * Time.deltaTime;
 
 // if before the hit time or after the key time, we can dash out of it
-if (meleeAtkTimer < meleeAtk0Hit || meleeAtkTimer > meleeAtk0Key)
+/*if (meleeAtkTimer < meleeAtk0Hit || meleeAtkTimer > meleeAtk0Key)
 {
 	if (meleeDashQueued)
 	{
@@ -54,9 +54,9 @@ if (l_meleeAtkTimerPrev < meleeAtk0Hit && meleeAtkTimer >= meleeAtk0Hit)
 				 hitboxCenterX + 12, hitboxCenterY + 12,
 				 meleeAtk0Damage,
 				 kDamageTypeBlunt);
-}
+}*/
 // if past the key point, chain into next attack
-if (meleeAtkTimer > meleeAtk0Key)
+/*if (meleeAtkTimer > meleeAtk0Key)
 {
 	if (meleeAtkQueued)
 	{
@@ -67,9 +67,10 @@ if (meleeAtkTimer > meleeAtk0Key)
 		meleeAtkDirection = aimingDirection;
 		meleeAtkCurrent += 1;
 	}
-}
+}*/
 // if past the length, end the attak
-if (meleeAtkTimer > meleeAtk0Time)
+//if (meleeAtkTimer > meleeAtk0Time)
+if (meleeAtkTimer > 1.0)
 {
 	meleeDashQueued = false;
 	meleeAtkQueued = false;
@@ -78,5 +79,5 @@ if (meleeAtkTimer > meleeAtk0Time)
 }
 
 // update animation
-sprite_index = kAnimAttack1;
-animationIndex = floor((image_number / 4.0 - 0.01) * saturate(meleeAtkTimer / meleeAtk0Time));
+//sprite_index = kAnimAttack1;
+//animationIndex = floor((image_number / 4.0 - 0.01) * saturate(meleeAtkTimer / meleeAtk0Time));
