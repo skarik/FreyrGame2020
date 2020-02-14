@@ -14,10 +14,15 @@ if (!m_isPickingUp)
 	m_pickupCooldown -= Time.deltaTime;
 	m_pickupCooldown = saturate(m_pickupCooldown);
 	
+	//Really fall to the ground
+	var z_prev = z;
+	z = collision3_get_highest_meeting(x, y, z);
+	z_height += z_prev - z;
+	
 	// Fall to the ground
 	z_height = max(0, z_height - 25.0 * Time.deltaTime * (1.0 - m_pickupCooldown));
 	
-	y += slide_down_cliff(x, y, z_height) * Time.deltaTime;
+	y += slide_down_cliff(x, y, (z + z_height)) * Time.deltaTime;
 }
 else
 {
