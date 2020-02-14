@@ -639,6 +639,14 @@
             }
         },
         {
+            "Key": "0dad8523-e9f3-410e-8736-e30a8cda47f6",
+            "Value": {
+                "id": "6660fcfd-421b-48c2-8c5b-5ac00baa036a",
+                "resourcePath": "scripts\\playerRevealHazard\\playerRevealHazard.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0db4ac2a-72fd-4898-a7ad-b0316b03657d",
             "Value": {
                 "id": "6865783d-a832-4bdb-b60e-bd74710c8d50",
@@ -1151,6 +1159,14 @@
             }
         },
         {
+            "Key": "1610c4d8-2276-4c7d-a897-417a1c9bf620",
+            "Value": {
+                "id": "7faee90d-31f5-4263-9d54-8ddb3356abfe",
+                "resourcePath": "views\\1610c4d8-2276-4c7d-a897-417a1c9bf620.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "162475ba-b891-49e0-9e33-2f2e8828a522",
             "Value": {
                 "id": "d7a0a5ad-06f5-4c8b-aa42-f3532fe0e2e0",
@@ -1172,6 +1188,14 @@
                 "id": "683b8df9-8958-4037-82b0-bc01be2f0ec4",
                 "resourcePath": "objects\\o_usableLanternSlot\\o_usableLanternSlot.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "167d06a6-0e3a-4d69-b32a-c7c160a7373b",
+            "Value": {
+                "id": "5bafcc07-4719-4abe-a76b-a913bb6f0909",
+                "resourcePath": "datafiles_yy\\GMLive\\gmlive-server.n.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -2679,6 +2703,14 @@
             }
         },
         {
+            "Key": "33634c94-b392-4387-9e8a-14a6330a1256",
+            "Value": {
+                "id": "c0db3e79-60a1-4ea3-ac86-c2cb99161c28",
+                "resourcePath": "objects\\obj_gmlive\\obj_gmlive.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3363a159-5c82-41b1-a76f-9b645046f746",
             "Value": {
                 "id": "20f03bc3-ef60-48a9-9908-3609769907f1",
@@ -2772,6 +2804,14 @@
                 "id": "3738e4bb-dfe8-4a21-8284-060be1eaf635",
                 "resourcePath": "views\\34e5a342-cab2-424a-a354-de7de005c907.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "34ebc914-3fea-42f7-a6b9-db18b75cd055",
+            "Value": {
+                "id": "eb7ac7d8-5a38-4f6d-b33d-fefac807e6a7",
+                "resourcePath": "extensions\\GMLive\\GMLive.yy",
+                "resourceType": "GMExtension"
             }
         },
         {
@@ -3519,6 +3559,14 @@
             }
         },
         {
+            "Key": "44297038-11f0-4b5d-9a3c-c9ad19bf8a1a",
+            "Value": {
+                "id": "794a9978-cbe0-4ddb-8dbb-84eb5a1925b9",
+                "resourcePath": "scripts\\draw_quad\\draw_quad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "446efed8-c7db-4e4b-91bd-76a3b9a6b0c6",
             "Value": {
                 "id": "98edd029-fdae-4987-bcf0-45ed638bfb42",
@@ -3636,6 +3684,14 @@
                 "id": "0ee27df0-8e78-41f4-8bb2-d62711c67cdc",
                 "resourcePath": "datafiles_yy\\audio\\nathan_tent_intro.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "4677c394-249a-4142-b5d0-79e21aa49737",
+            "Value": {
+                "id": "e7fb4f47-6876-481f-a823-056ea18bd55f",
+                "resourcePath": "shaders\\sh_colormaskExternal\\sh_colormaskExternal.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -4228,6 +4284,14 @@
                 "id": "04bee515-63ab-457d-a22b-8da2baeaddfa",
                 "resourcePath": "sprites\\s_itemResBolt\\s_itemResBolt.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "51a025d6-f427-484b-98fb-b52e34c30fc7",
+            "Value": {
+                "id": "70dddfcd-9f16-40bc-9aaa-0cd51e596a68",
+                "resourcePath": "scripts\\mvtRobocrabAttack0\\mvtRobocrabAttack0.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4935,6 +4999,14 @@
             }
         },
         {
+            "Key": "5ec074e3-6593-4e08-b6ce-48148ba57cea",
+            "Value": {
+                "id": "c19039d8-5a65-4567-8ae8-915e12773404",
+                "resourcePath": "datafiles_yy\\GMLive\\regexp.ndll.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "5f0960a7-48d6-4614-aa6e-bf0169b3bc70",
             "Value": {
                 "id": "7e67d403-5662-4e7f-9c72-3ee1c7a97fde",
@@ -5380,6 +5452,14 @@
                 "id": "74a59451-d9fb-4430-9b17-0bc73bf21841",
                 "resourcePath": "scripts\\vtile_internal_query_reset\\vtile_internal_query_reset.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "68f69068-dc1c-458e-aebc-cc9a0e4b985f",
+            "Value": {
+                "id": "e0eeb3e0-4202-4440-9e15-72748d2bc867",
+                "resourcePath": "sprites\\s_wiresTBase\\s_wiresTBase.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6031,6 +6111,14 @@
             }
         },
         {
+            "Key": "74b1dc2c-856c-4026-a47e-1f249ac7aec1",
+            "Value": {
+                "id": "f773906a-d40b-4cc9-953c-ad20797daa81",
+                "resourcePath": "datafiles_yy\\GMLive\\std.ndll.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "74bb0f7f-8c3a-4515-bfda-370a057eaf62",
             "Value": {
                 "id": "31fd1313-b608-4ea8-8c6b-7a1aaadf5fd4",
@@ -6351,6 +6439,14 @@
             }
         },
         {
+            "Key": "7c629334-4d5f-46c7-8836-3a74aa975a70",
+            "Value": {
+                "id": "057b5d4a-8ca8-4d6e-ae76-94901849dd16",
+                "resourcePath": "shaders\\sh_magiSightPrims\\sh_magiSightPrims.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "7c71fd9d-b1b7-4ae7-9c95-77ac638e52f0",
             "Value": {
                 "id": "5088327a-01a8-486e-a101-080c741df57d",
@@ -6652,6 +6748,14 @@
                 "id": "7f7d1d37-57c2-4496-855c-8499e2be72a8",
                 "resourcePath": "views\\81e4406a-e4c7-424c-8c04-026f78ae53dc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "823ebf95-9d32-4b20-8739-cf6302929e16",
+            "Value": {
+                "id": "e12249a0-a8c9-450c-bffa-62b6a797af7f",
+                "resourcePath": "objects\\o_uiNewMagicHazard\\o_uiNewMagicHazard.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7327,6 +7431,14 @@
             }
         },
         {
+            "Key": "8f5186ed-98a9-4139-b790-82f9afb69ffe",
+            "Value": {
+                "id": "9e5d21f1-1877-4397-83bd-a4b38b93dd73",
+                "resourcePath": "datafiles_yy\\GMLive\\gcmt-dll.dll.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "8f7f8895-3ee1-4b3a-8219-b7989865eb7a",
             "Value": {
                 "id": "ac863261-4ac8-460c-856e-d040f2fd7004",
@@ -7803,6 +7915,14 @@
             "Value": {
                 "id": "3c2b548a-fc37-4e35-9f6c-d66bd6bbdfc7",
                 "resourcePath": "scripts\\aicommonCanSee\\aicommonCanSee.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9836eb08-39f6-478b-b84a-208f8cb1011d",
+            "Value": {
+                "id": "aaa40378-eabd-4040-9498-61fdd132248f",
+                "resourcePath": "scripts\\playerSeesHazard\\playerSeesHazard.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -10303,6 +10423,14 @@
             }
         },
         {
+            "Key": "c5f7d403-f9ff-43e2-9cda-037fc0e42af6",
+            "Value": {
+                "id": "5753afe5-d144-419d-860b-d6e50d784400",
+                "resourcePath": "datafiles_yy\\GMLive\\gmlive-server.exe.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "c5fd6d11-263e-43d9-84ad-259782f2b03c",
             "Value": {
                 "id": "3240c6f3-6504-4bba-be40-d2a1f495a555",
@@ -11067,6 +11195,14 @@
             "Value": {
                 "id": "5a922ce4-d7b4-45ca-99e7-1587080d498d",
                 "resourcePath": "datafiles_yy\\cts\\talk00_viggo.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "d50fc3c0-9ed7-45b2-b1e6-5bb18f114262",
+            "Value": {
+                "id": "830c48ed-0545-412a-bc81-c00604110ea2",
+                "resourcePath": "datafiles_yy\\GMLive\\neko.dll.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -13247,6 +13383,14 @@
             }
         },
         {
+            "Key": "fc1aa5a6-8785-4b20-acd3-54361450e66e",
+            "Value": {
+                "id": "7edacf33-30f3-40fc-8a7b-42dcdffe0b8e",
+                "resourcePath": "datafiles_yy\\GMLive\\gmlive.html.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
             "Value": {
                 "id": "3227e26d-1bf6-4d74-b95f-70346398b051",
@@ -13540,6 +13684,7 @@
         "63118223-c896-4070-8a1a-1948f4083c96",
         "293afe3d-3d71-42ab-9d93-9664f0687a00",
         "c676649c-6bae-4657-8846-f81f78f9c4ba",
+        "44297038-11f0-4b5d-9a3c-c9ad19bf8a1a",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "24ac4ceb-2490-41d2-9219-f66823e9271c",
         "46bdd690-bda6-41cb-905d-54e029ff18fb",
@@ -13747,6 +13892,8 @@
         "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
         "7013ba5c-e4ae-42b8-b1fb-caa1103a95d6",
         "5f09bb3a-8b83-4902-9fa7-72f9320d0521",
+        "0dad8523-e9f3-410e-8736-e30a8cda47f6",
+        "9836eb08-39f6-478b-b84a-208f8cb1011d",
         "7af7373b-ec41-4459-86d1-d9db63b98ac0",
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
         "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",
@@ -13891,6 +14038,7 @@
         "17596f84-41e3-4c36-8a84-795461bb2bad",
         "17620a07-1cee-4ce3-b04c-2ae95b4f429a",
         "0cb388ed-b75e-445d-b08e-af304bfd9bc9",
+        "51a025d6-f427-484b-98fb-b52e34c30fc7",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",

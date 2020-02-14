@@ -1,3 +1,3 @@
-/// @description Toggle capture mode
+/// @description reset room
 
-captureModeEnabled = !captureModeEnabled;
+room_restart();

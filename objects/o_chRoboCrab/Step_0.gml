@@ -1,5 +1,11 @@
 /// @description AI!
 
+//if (live_call()) return live_result;
+
+// force health for testing
+stats.m_health = 24.0;
+//m_aiCombat_angry = false;
+
 //
 // Perform alert checks:
 
@@ -62,8 +68,6 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 	// In angry mode:
 	else
 	{
-		debugOut("AI ANGRY STEP");
-		
 		// does target exist?
 		if (exists(m_aiCombat_target))
 		{
@@ -80,7 +84,6 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 			// update memory if visible
 			if (m_aiCombat_targetVisible)
 			{
-				debugOut("AI ANGRY MEMORY UPDATE");
 				m_aiCombat_targetPosition = [m_aiCombat_target.x, m_aiCombat_target.y];
 			}
 		}
@@ -153,7 +156,24 @@ else if (m_aiCombat_angry)
 	if (exists(m_aiCombat_target) && m_aiCombat_targetVisible)
 	{
 		// move to it, then attack
-		aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+		if (!isAttacking)
+			aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+		
+		m_aiState_attackTiming += Time.deltaTime;
+		
+		var tracking_distance = point_distance(x, y, m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+		if ((true || tracking_distance < 100) && m_aiState_attackTiming > 2.0)
+		{
+			meleeAtkCurrent = 0; // Force 0.
+			if (!isAttacking)
+				meleeAtkTimer = max(1.01, meleeAtkTimer);
+			_controlStructUpdate(atkButton, 1.0);
+			m_aiState_attackTiming = 0.0;
+		}
+		else
+		{
+			_controlStructUpdate(atkButton, 0.0); // Release the attack button...
+		}
 	}
 	// if target is not currently tangible
 	else
@@ -210,12 +230,19 @@ else if (m_aiCombat_angry)
 event_inherited();
 
 // Limit the distance from home.
-/*var home_distance = point_distance(x, y, xstart, ystart);
-if (home_distance > m_aiHomeDistance)
+var kMaxDistance = m_aiHomeDistance * 1.3;
+var home_distance = point_distance(x, y, xstart, ystart);
+if (home_distance > kMaxDistance)
 {
-	var rescaled_x = (xstart - x) / home_distance * m_aiHomeDistance;
-	var rescaled_y = (ystart - y) / home_distance * m_aiHomeDistance;
+	var rescaled_x = (x - xstart) / home_distance * (kMaxDistance - 0.2);
+	var rescaled_y = (y - ystart) / home_distance * (kMaxDistance - 0.2);
 	
 	x = xstart + rescaled_x;
 	y = ystart + rescaled_y;
-}*/
+	
+	// Bring any memorized position closer to the bot:
+	m_aiWander[0] += (x - m_aiWander[0]) * 0.5;
+	m_aiWander[1] += (y - m_aiWander[1]) * 0.5;
+	m_aiCombat_targetPosition[0] += (x - m_aiCombat_targetPosition[0]) * 0.5;
+	m_aiCombat_targetPosition[1] += (y - m_aiCombat_targetPosition[1]) * 0.5;
+}

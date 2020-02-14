@@ -1,0 +1,13 @@
+/// @description Update the fades
+
+// Update depth
+if (exists(o_PlayerHud))
+{
+	depth = o_PlayerHud.depth - 1; // Just over the HuD
+}
+
+m_timer += Time.deltaTime;
+if (m_timer > 4.0)
+{
+	delete(this);
+}

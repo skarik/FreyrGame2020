@@ -1,3 +1,5 @@
+exit;
+
 // test some day night cycles
 /*gpu_set_blendenable(true);
 gpu_set_blendmode_ext(bm_dest_color, bm_src_color);

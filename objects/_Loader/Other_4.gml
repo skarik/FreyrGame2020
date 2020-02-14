@@ -8,6 +8,9 @@ new(Debug);
 new(Settings);
 new(Game);
 
+if (Debug.enable_gmlive)
+	new(obj_gmlive);
+
 // Update persistance
 System.persistent = true;
 Screen.persistent = true;
