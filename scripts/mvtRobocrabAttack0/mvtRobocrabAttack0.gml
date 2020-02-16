@@ -52,6 +52,20 @@ var kKey2 = (meleeAtk0Time - meleeAtk0Key) / 3.0 * 2.0 + meleeAtk0Key;
 
 if (l_meleeAtkTimerPrev < kKey0 && meleeAtkTimer >= kKey0)
 {
+	// First zap effect
+	var blast = instance_create_depth(x + lengthdir_x(8, aimingDirection),
+									  y - 4 + lengthdir_y(8, aimingDirection),
+									  depth - 10, o_ptcLineBlast);
+		blast.image_angle = aimingDirection;
+		blast.lx_pos_size = 4.0;
+		blast.lx_pos_growSpeed = 400.0;
+		blast.lx_pos_growSlow = 1600.0;
+		blast.lx_neg_growSpeed = 30.0;
+		blast.ly_pos_growSpeed = 90.0;
+		blast.ly_neg_growSpeed = 90.0;
+		blast.fadePoint = 0.0;
+		blast.fadeSpeed = 4.0;
+	
 	var fxCx = x + lengthdir_x(lerp(beamAtkRanges[0], beamAtkRanges[1], 0.4), aimingDirection);
 	var fxCy = y + lengthdir_y(lerp(beamAtkRanges[0], beamAtkRanges[1], 0.4), aimingDirection);
 	

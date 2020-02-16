@@ -20,7 +20,7 @@ void main()
 	vec4 noise_tex = texture2D( samplerTexNoise, noise_coords );
 	
 	// as the alpha approaches 0, fade it all the way out
-	if ((noise_tex.r * 0.99 + 0.005) > uEffectiveAlpha)
+	if ((noise_tex.b * 0.99 + 0.005) > uEffectiveAlpha)
 		discard;
 	
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );

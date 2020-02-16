@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-        
+        "default"
     ],
     "option_ecma": false,
     "parentProject": {
@@ -7383,6 +7383,14 @@
             }
         },
         {
+            "Key": "8ee3b7fd-8b04-4ef6-a98f-8052b5e7e7ca",
+            "Value": {
+                "id": "278ea6a6-7420-452b-8f91-cbb1d59d6df0",
+                "resourcePath": "objects\\o_ptcLineBlast\\o_ptcLineBlast.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8eed50c0-31ba-4306-9797-3238f28e7a48",
             "Value": {
                 "id": "e0b1f60a-36ce-429c-affc-38481f5c8f85",
@@ -10460,6 +10468,14 @@
                 "id": "4a61c4f1-bba4-44f3-a427-d2662b92a04e",
                 "resourcePath": "objects\\o_debugUiBase\\o_debugUiBase.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c6509b56-8334-4a1a-bf72-853dbc4cd6ea",
+            "Value": {
+                "id": "7c320ffa-4afe-4c8e-b247-f0de5146cd77",
+                "resourcePath": "views\\c6509b56-8334-4a1a-bf72-853dbc4cd6ea.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
