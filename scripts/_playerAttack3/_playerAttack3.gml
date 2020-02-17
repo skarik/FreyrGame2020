@@ -74,6 +74,14 @@ if (meleeAtkTimer > meleeAtk3Time)
 	meleeAtkTimer = 0.0;
 	isAttacking = false;
 }
+// if stunned, end early
+if (m_isStunned)
+{
+	meleeDashQueued = false;
+	meleeAtkQueued = false;
+	meleeAtkTimer = 0.0;
+	isAttacking = false;
+}
 
 // update animation
 sprite_index = kAnimAttack1;

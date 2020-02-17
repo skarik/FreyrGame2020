@@ -3,7 +3,7 @@
 //if (live_call()) return live_result;
 
 // force health for testing
-stats.m_health = 24.0;
+//stats.m_health = 24.0;
 //m_aiCombat_angry = false;
 
 //
@@ -155,14 +155,10 @@ else if (m_aiCombat_angry)
 	// if target exists and is visible
 	if (exists(m_aiCombat_target) && m_aiCombat_targetVisible)
 	{
-		// move to it, then attack
-		if (!isAttacking)
-			aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
-		
 		m_aiState_attackTiming += Time.deltaTime;
 		
 		var tracking_distance = point_distance(x, y, m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
-		if ((true || tracking_distance < 100) && m_aiState_attackTiming > 2.0)
+		if (tracking_distance < 100 && m_aiState_attackTiming > 2.0)
 		{
 			meleeAtkCurrent = 0; // Force 0.
 			if (!isAttacking)
@@ -173,6 +169,19 @@ else if (m_aiCombat_angry)
 		else
 		{
 			_controlStructUpdate(atkButton, 0.0); // Release the attack button...
+			
+			if (tracking_distance > 50)
+			{
+				// move to it, then attack
+				if (!isAttacking || (isAttacking && meleeAtkTimer < meleeAtk0Key))
+					aiRobocrabMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+			}
+			else if (tracking_distance < 35)
+			{
+				// move away from it, while tracking, then attack
+				if (!isAttacking || (isAttacking && meleeAtkTimer < meleeAtk0Key))
+					aiRobocrabMoveFrom(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+			}
 		}
 	}
 	// if target is not currently tangible

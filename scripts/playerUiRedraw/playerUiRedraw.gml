@@ -55,6 +55,10 @@ draw_clear_alpha(c_white, 0.0);
 playerUiDrawFarmOverlay();
 
 //
+// enemy hearts
+playerUiDrawEnemyHearts();
+
+//
 // map
 playerUiDrawBottomRightMap();
 

@@ -9,6 +9,7 @@ m_bloodType = kBloodWhite;
 stats.m_health = 24.0;
 stats.m_healthMax = stats.m_health;
 stats.m_healthPrev = stats.m_health;
+stats.m_stunMax = -1.0;
 
 m_aiState_hangState = 0;
 m_aiState_hangStartFall = false;
@@ -59,7 +60,7 @@ kMoveAccelerationAirStop = 10;
 
 meleeAtk0Script = mvtRobocrabAttack0;
 meleeAtk0Key = 0.5;
-meleeAtk0Time = 1.5;
+meleeAtk0Time = 1.0;
 
 #endregion
 

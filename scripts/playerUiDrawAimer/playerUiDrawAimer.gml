@@ -1,5 +1,6 @@
 var dx, dy;
 
+// go to bottom layer surface
 surface_reset_target();
 surface_set_target(m_surfaceLightweightBack);
 

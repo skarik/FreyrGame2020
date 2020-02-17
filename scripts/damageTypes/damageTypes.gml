@@ -6,3 +6,5 @@
 #macro kDamageTypeRift		0x0020
 #macro kDamageTypeBite		0x0040
 #macro kDamageTypeBullet	0x0080
+#macro kDamageTypeMagic		0x0100
+#macro kDamageTypeMagicVoid	(0x0100 | 0x0200)

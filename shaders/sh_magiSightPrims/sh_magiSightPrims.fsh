@@ -16,8 +16,8 @@ void main()
 	int index = int(mod(float(pixelIndex.x), 2.0)) + int(mod(float(pixelIndex.y), 2.0)) * 2;
 	int l_ditherSample = l_ditherPattern[index];
 	
-	if (l_ditherSample == 0)
-		discard;
+	//if (l_ditherSample == 0)
+	//	discard;
 		
 	float pixelAlphaFutz = 0.0;
 	// Perform some random sine-perturbation

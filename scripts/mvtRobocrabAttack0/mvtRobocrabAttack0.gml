@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 // Update checks
 _playerMotionCommonChecks();
@@ -34,6 +34,12 @@ _playerMotionCommonCollision();
 x += xspeed * Time.deltaTime;
 y += yspeed * Time.deltaTime;
 
+// Time of 0.0 - Create the telegraph volume
+if (l_meleeAtkTimerPrev <= 0.0 && meleeAtkTimer > 0.0)
+{
+	m_meleeTelegraphVolume = atkwarnShapeCreate(this);
+}
+
 // Time of 0.0 to 0.5 - Telegraph the attack.
 var kTelegraphKey = meleeAtk0Key - 0.1;
 if (l_meleeAtkTimerPrev < kTelegraphKey && meleeAtkTimer >= kTelegraphKey)
@@ -42,6 +48,18 @@ if (l_meleeAtkTimerPrev < kTelegraphKey && meleeAtkTimer >= kTelegraphKey)
 		flasher.slowAccel = flasher.growSpeed * 3.0;
 		flasher.fadePoint = 1000.0;
 		flasher.fadeSpeed = 2;
+}
+
+// Update telegraph volume
+if (playerSeesHazard(kHazardRoboVoidShot))
+{
+	var l_total_alpha = saturate(meleeAtkTimer / 0.1);
+	l_total_alpha *= saturate(1.0 - (meleeAtkTimer - (meleeAtk0Key + 0.1)) / 0.1);
+	
+	atkwarnShapeSetAlpha(m_meleeTelegraphVolume, l_total_alpha);
+	
+	if (l_total_alpha > 0.0)
+		_mvtRobocrabAttack0_UpdateTelegraphVolume();
 }
 
 // 0.5 to 1.5 - Three attacks
@@ -57,22 +75,28 @@ if (l_meleeAtkTimerPrev < kKey0 && meleeAtkTimer >= kKey0)
 									  y - 4 + lengthdir_y(8, aimingDirection),
 									  depth - 10, o_ptcLineBlast);
 		blast.image_angle = aimingDirection;
+		blast.fadePoint = 0.0;
+		blast.fadeSpeed = 6.0;
 		blast.lx_pos_size = 4.0;
 		blast.lx_pos_growSpeed = 400.0;
-		blast.lx_pos_growSlow = 1600.0;
-		blast.lx_neg_growSpeed = 30.0;
-		blast.ly_pos_growSpeed = 90.0;
-		blast.ly_neg_growSpeed = 90.0;
-		blast.fadePoint = 0.0;
-		blast.fadeSpeed = 4.0;
+		blast.lx_neg_growSpeed = 40.0;
+		blast.ly_pos_growSpeed = 120.0;
+		blast.ly_neg_growSpeed = 120.0;
+		blast.lx_pos_growSlow = blast.lx_pos_growSpeed * blast.fadeSpeed;
+		blast.lx_neg_growSlow = blast.lx_neg_growSpeed * blast.fadeSpeed;
+		blast.ly_pos_growSlow = blast.ly_pos_growSpeed * blast.fadeSpeed;
+		blast.ly_neg_growSlow = blast.ly_neg_growSpeed * blast.fadeSpeed;
+		
 	
 	var fxCx = x + lengthdir_x(lerp(beamAtkRanges[0], beamAtkRanges[1], 0.4), aimingDirection);
 	var fxCy = y + lengthdir_y(lerp(beamAtkRanges[0], beamAtkRanges[1], 0.4), aimingDirection);
 	
 	var flasher = instance_create_depth(fxCx, fxCy, depth - 10, o_ptcCircleHit);
-		flasher.slowAccel = flasher.growSpeed * 3.0;
+		flasher.slowAccel = flasher.growSpeed * 5.0;
 		flasher.fadePoint = 1000.0;
-		flasher.fadeSpeed = 2;
+		flasher.fadeSpeed = 3;
+		
+	_mvtRobocrabAttack0_DealDamage(0);
 }
 if (l_meleeAtkTimerPrev < kKey1 && meleeAtkTimer >= kKey1)
 {
@@ -80,9 +104,11 @@ if (l_meleeAtkTimerPrev < kKey1 && meleeAtkTimer >= kKey1)
 	var fxCy = y + lengthdir_y(lerp(beamAtkRanges[1], beamAtkRanges[2], 0.4), aimingDirection);
 	
 	var flasher = instance_create_depth(fxCx, fxCy, depth - 10, o_ptcCircleHit);
-		flasher.slowAccel = flasher.growSpeed * 3.0;
+		flasher.slowAccel = flasher.growSpeed * 4.0;
 		flasher.fadePoint = 1000.0;
-		flasher.fadeSpeed = 2;
+		flasher.fadeSpeed = 3;
+		
+	_mvtRobocrabAttack0_DealDamage(1);
 }
 if (l_meleeAtkTimerPrev < kKey2 && meleeAtkTimer >= kKey2)
 {
@@ -92,45 +118,11 @@ if (l_meleeAtkTimerPrev < kKey2 && meleeAtkTimer >= kKey2)
 	var flasher = instance_create_depth(fxCx, fxCy, depth - 10, o_ptcCircleHit);
 		flasher.slowAccel = flasher.growSpeed * 3.0;
 		flasher.fadePoint = 1000.0;
-		flasher.fadeSpeed = 2;
+		flasher.fadeSpeed = 3;
+		
+	_mvtRobocrabAttack0_DealDamage(2);
 }
 
-// if before the hit time or after the key time, we can dash out of it
-/*if (meleeAtkTimer < meleeAtk0Hit || meleeAtkTimer > meleeAtk0Key)
-{
-	if (meleeDashQueued)
-	{
-		isAttacking = false;
-		meleeDashQueued = false;
-		meleeAtkQueued = false;
-		_playerInteractDoDash();
-	}
-}
-// if passing the hit point, do the damage
-if (l_meleeAtkTimerPrev < meleeAtk0Hit && meleeAtkTimer >= meleeAtk0Hit)
-{
-	// Damage!
-	var hitboxCenterX = x + lengthdir_x(20, meleeAtkDirection);
-	var hitboxCenterY = y + lengthdir_y(20, meleeAtkDirection);
-	damageHitbox(id,
-				 hitboxCenterX - 12, hitboxCenterY - 12,
-				 hitboxCenterX + 12, hitboxCenterY + 12,
-				 meleeAtk0Damage,
-				 kDamageTypeBlunt);
-}*/
-// if past the key point, chain into next attack
-/*if (meleeAtkTimer > meleeAtk0Key)
-{
-	if (meleeAtkQueued)
-	{
-		meleeAtkQueued = true;
-		meleeAtkTimer = 0.0;
-		meleeDashQueued = false;
-		meleeAtkQueued = false;
-		meleeAtkDirection = aimingDirection;
-		meleeAtkCurrent += 1;
-	}
-}*/
 // if past the length, end the attak
 if (meleeAtkTimer > meleeAtk0Time)
 {
@@ -140,6 +132,19 @@ if (meleeAtkTimer > meleeAtk0Time)
 	isAttacking = false;
 	
 	playerRevealHazard(kHazardRoboVoidShot);
+	
+	delete(m_meleeTelegraphVolume);
+}
+
+// if stunned, end early
+if (m_isStunned || m_isDead)
+{
+	meleeDashQueued = false;
+	meleeAtkQueued = false;
+	meleeAtkTimer = 0.0;
+	isAttacking = false;
+	
+	delete(m_meleeTelegraphVolume);
 }
 
 // update animation

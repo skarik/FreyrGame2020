@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "0222e260-3089-4f46-97e6-1d2b6ce5d6fa",
+            "Value": {
+                "id": "3730b562-5776-45bf-811d-8c9390ec576a",
+                "resourcePath": "scripts\\playerUiDrawEnemyHearts\\playerUiDrawEnemyHearts.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0229d8bd-c37d-4cc4-817c-4a4bd5cbe21d",
             "Value": {
                 "id": "727d017c-9ac6-4b64-aa05-978a16192252",
@@ -1532,6 +1540,14 @@
                 "id": "6b702d7f-f4c8-4830-89e9-50639f93fe57",
                 "resourcePath": "scripts\\col3_internal_tilemap_get_ecollision\\col3_internal_tilemap_get_ecollision.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1d831292-f520-4328-9c68-6b767c360cf8",
+            "Value": {
+                "id": "977caf61-4dcc-4a82-ad16-8b622d9b150e",
+                "resourcePath": "sprites\\spt_sparkle\\spt_sparkle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3439,6 +3455,14 @@
             }
         },
         {
+            "Key": "41abc523-b098-46b0-9b93-936ca2dc753c",
+            "Value": {
+                "id": "b2db3df6-887d-4673-9ddb-09c6853d7140",
+                "resourcePath": "scripts\\atkwarnShapeGetVertices\\atkwarnShapeGetVertices.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "41be788a-cd19-4528-8ace-d93846bbddc6",
             "Value": {
                 "id": "d88bb4fa-8838-4524-b9d3-3c274a51b036",
@@ -4403,6 +4427,14 @@
             "Value": {
                 "id": "8815737a-9508-417c-963f-c98ffd7312e8",
                 "resourcePath": "objects\\ob_pathNode\\ob_pathNode.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "54008888-b9d2-4c7c-87c8-40a5b44d2058",
+            "Value": {
+                "id": "baf367af-5e9e-4c7c-90e9-4c609f1e7085",
+                "resourcePath": "objects\\ob_attackWarnShape\\ob_attackWarnShape.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -6079,6 +6111,14 @@
             }
         },
         {
+            "Key": "7389b71c-1a14-4ad2-939f-2b7348835912",
+            "Value": {
+                "id": "986f5690-bea3-406e-986d-88d426af6b37",
+                "resourcePath": "scripts\\atkwarnShapeSetAttackWarnType\\atkwarnShapeSetAttackWarnType.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "73fcd9dc-9b26-4343-9cb9-567f9342d220",
             "Value": {
                 "id": "0bd7ff93-f1bc-43db-9ded-72dbe5ce6809",
@@ -6295,6 +6335,14 @@
             }
         },
         {
+            "Key": "787fb058-a42c-4785-89dc-6c2eb1c79c65",
+            "Value": {
+                "id": "5f1da5c3-43e0-49c0-bd2b-e8acc3c8f103",
+                "resourcePath": "sprites\\sui_heartMeterLarge\\sui_heartMeterLarge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "78f660e5-48d1-4529-9be7-57352f74bb66",
             "Value": {
                 "id": "742803c4-be89-4253-bd79-e6f51a84fb2b",
@@ -6339,6 +6387,14 @@
             "Value": {
                 "id": "57ea0d91-50a5-40f8-bdc8-dbbc2fc72b55",
                 "resourcePath": "sprites\\s_heroSinkingH1\\s_heroSinkingH1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "79eecb87-4e53-450d-a6b7-684769e7c4a1",
+            "Value": {
+                "id": "a2f5acb4-1be3-4d24-8c17-e7f5a28b40d0",
+                "resourcePath": "sprites\\sui_heartMeter\\sui_heartMeter.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6812,6 +6868,14 @@
                 "id": "0cd87bdf-75d6-4d17-af4b-c254991c21cf",
                 "resourcePath": "objects\\o_fxScreenShield\\o_fxScreenShield.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "83504d51-7606-4b80-950b-4d3cb9820d64",
+            "Value": {
+                "id": "d1ef8e83-9b00-438b-bd9f-ccd738b311a9",
+                "resourcePath": "scripts\\atkwarnShapeSetAlpha\\atkwarnShapeSetAlpha.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8423,6 +8487,14 @@
             }
         },
         {
+            "Key": "a0f2fc8c-8b76-4410-8ee8-830c1df4b2d6",
+            "Value": {
+                "id": "8316ed27-c09f-4e53-87ed-cb25979f3c8b",
+                "resourcePath": "scripts\\atkwarnShapeCreate\\atkwarnShapeCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a15ddcac-5ec9-4ecb-a2fd-26120efc8357",
             "Value": {
                 "id": "80a0ef18-4362-404d-9421-3d49533d12ce",
@@ -9743,6 +9815,14 @@
             }
         },
         {
+            "Key": "b816ebb4-3aa1-4f29-a7c5-395bb9a5ee4c",
+            "Value": {
+                "id": "737412b8-7ffe-42ae-8912-9e8cc94fd46d",
+                "resourcePath": "scripts\\atkwarnShapeSetTextVisible\\atkwarnShapeSetTextVisible.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b82ea919-07bc-403c-9333-467528e9783e",
             "Value": {
                 "id": "804a3416-71fd-4522-8935-1b98039b1af4",
@@ -10140,6 +10220,14 @@
                 "id": "7054ba46-87e5-4062-a761-157e8cf6603e",
                 "resourcePath": "sprites\\s_propWoodPlanks\\s_propWoodPlanks.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c15e8f86-8b64-46fc-a2d9-a6a0b027190b",
+            "Value": {
+                "id": "8bbabfc0-8c15-4ef3-93ae-c8b76b1538ce",
+                "resourcePath": "scripts\\atkwarnShapeSetAttackWarnMagic\\atkwarnShapeSetAttackWarnMagic.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -11039,6 +11127,14 @@
             }
         },
         {
+            "Key": "d18ddb1e-0cf9-4158-bf02-a270a3bda628",
+            "Value": {
+                "id": "f0cb0ad7-8e90-4017-b2b8-a307c185e3ca",
+                "resourcePath": "scripts\\_mvtRobocrabAttack0_DealDamage\\_mvtRobocrabAttack0_DealDamage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d1972855-3c82-4b2a-a3e6-2e216eb8d6b1",
             "Value": {
                 "id": "a90cc3f0-3ccb-4350-9a05-9ff8959b5ecf",
@@ -11727,6 +11823,14 @@
             }
         },
         {
+            "Key": "de245fd7-f4a9-490a-8933-16aea1031d9b",
+            "Value": {
+                "id": "3e4f00a3-3232-4ee3-a96c-a7b44912bc3b",
+                "resourcePath": "scripts\\atkwarnShapeGetIndices\\atkwarnShapeGetIndices.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "de28d6f1-4fa8-4e0c-9708-450805f35b4c",
             "Value": {
                 "id": "4b192181-b380-4957-a1f5-c5f94c42f936",
@@ -12143,6 +12247,14 @@
             }
         },
         {
+            "Key": "e4b75eb3-8e4f-4448-83fd-482ff74f3ffd",
+            "Value": {
+                "id": "80e9ebdd-c813-43e7-9d01-150a135544aa",
+                "resourcePath": "scripts\\_mvtRobocrabAttack0_UpdateTelegraphVolume\\_mvtRobocrabAttack0_UpdateTelegraphVolume.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e50e7cad-ce0d-4738-b34a-c62b63765b8c",
             "Value": {
                 "id": "98535e21-8284-4344-b63b-8b4e9c230471",
@@ -12275,6 +12387,14 @@
             "Value": {
                 "id": "f4b4d87b-b71f-4ffa-ab38-21e711ee0ff8",
                 "resourcePath": "scripts\\gameSave\\gameSave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e7456db6-6eba-4794-9b3c-73274e47f8e2",
+            "Value": {
+                "id": "0131d429-4bb9-4c35-967a-5f4707b2c16a",
+                "resourcePath": "scripts\\aiRobocrabMoveFrom\\aiRobocrabMoveFrom.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -13922,6 +14042,7 @@
         "d58ce0e2-1819-4f50-a8f8-ab85fbb182ab",
         "48e98b0e-b39a-4e78-9bc4-ba4e8c11d9d8",
         "a004bbc5-63d0-4ee3-8e7e-e4cb7a6bb2b2",
+        "0222e260-3089-4f46-97e6-1d2b6ce5d6fa",
         "15fdbce0-347b-4877-90a5-3a3d2aaa7b25",
         "b185a23a-9c09-41c8-adde-3ec8591e9819",
         "4910565e-7c2e-4e96-a2ea-1ecebf6209c5",
@@ -14054,7 +14175,17 @@
         "17596f84-41e3-4c36-8a84-795461bb2bad",
         "17620a07-1cee-4ce3-b04c-2ae95b4f429a",
         "0cb388ed-b75e-445d-b08e-af304bfd9bc9",
+        "e7456db6-6eba-4794-9b3c-73274e47f8e2",
         "51a025d6-f427-484b-98fb-b52e34c30fc7",
+        "e4b75eb3-8e4f-4448-83fd-482ff74f3ffd",
+        "d18ddb1e-0cf9-4158-bf02-a270a3bda628",
+        "a0f2fc8c-8b76-4410-8ee8-830c1df4b2d6",
+        "83504d51-7606-4b80-950b-4d3cb9820d64",
+        "b816ebb4-3aa1-4f29-a7c5-395bb9a5ee4c",
+        "7389b71c-1a14-4ad2-939f-2b7348835912",
+        "c15e8f86-8b64-46fc-a2d9-a6a0b027190b",
+        "41abc523-b098-46b0-9b93-936ca2dc753c",
+        "de245fd7-f4a9-490a-8933-16aea1031d9b",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",
