@@ -91,8 +91,10 @@ with (ob_character)
 			fx_hit.m_damage = actualDamage;
         
         // Mark as stunned
-        m_isStunned = true;
-        m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025) * 2.0;
+        //m_isStunned = true;
+        //m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025) * 2.0;
+		if (!m_isStunned)
+			stats.m_stun += 1.0;
         // Add knockback
         var kickback = damage * 16 * kKickbackAmount;
         /*if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )

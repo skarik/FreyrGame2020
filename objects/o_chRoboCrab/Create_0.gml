@@ -9,7 +9,7 @@ m_bloodType = kBloodWhite;
 stats.m_health = 24.0;
 stats.m_healthMax = stats.m_health;
 stats.m_healthPrev = stats.m_health;
-stats.m_stunMax = -1.0;
+stats.m_stunMax = 2.0;
 
 m_aiState_hangState = 0;
 m_aiState_hangStartFall = false;

@@ -26,6 +26,7 @@ var l_activeEnemyListSize = array_length_1d(l_activeEnemyList);
 for (var i = 0; i < l_activeEnemyListSize; ++i)
 {
 	var t_enemy = l_activeEnemyList[i];
+	
 	// get max health to calculate number of hearts needed
 	var t_numHearts = ceil(t_enemy.stats.m_healthMax / 8.0);
 	var t_healthDiv = t_enemy.stats.m_healthMax / t_numHearts;
@@ -35,7 +36,7 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 	
 	// find imaginary starting point from the center to the left
 	var t_xoffset = (t_wcount - 1) / 2.0 * (kHeartSize + 1);
-	var t_yoffset = (kHeartSize + 1) * ceil(t_numHearts / t_wcount);
+	var t_yoffset = (kHeartSize + 1) * ceil(t_numHearts / t_wcount) + ((t_enemy.stats.m_stunMax > 0) ? 7 : 3);
 	
 	var t_heartPenX = 0.0;
 	var t_heartPenY = 0.0;
@@ -56,6 +57,28 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 			t_heartPenY += (kHeartSize + 1);
 			t_heartPenX = 0.0;
 		}
+	}
+	
+	// draw the stun bar below the health
+	if (t_enemy.stats.m_stunMax > 0)
+	{
+		var t_stunPercent = saturate(t_enemy.stats.m_stun / t_enemy.stats.m_stunMax);
+		
+		draw_set_alpha(0.25);
+		draw_set_color(c_black);
+		draw_rectangle(t_enemy.x + d_offset_x - t_xoffset,
+					   t_enemy.y + d_offset_y - t_yoffset + 4,
+					   t_enemy.x + d_offset_x + t_xoffset,
+					   t_enemy.y + d_offset_y - t_yoffset + 6,
+					   false);
+					   
+		draw_set_alpha(1.0);
+		draw_set_color(c_gold);
+		draw_rectangle(t_enemy.x + d_offset_x - t_xoffset,
+					   t_enemy.y + d_offset_y - t_yoffset + 4,
+					   t_enemy.x + d_offset_x - t_xoffset + (t_xoffset * 2) * t_stunPercent,
+					   t_enemy.y + d_offset_y - t_yoffset + 6,
+					   false);
 	}
 }
 
