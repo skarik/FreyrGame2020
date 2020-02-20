@@ -783,6 +783,14 @@
             }
         },
         {
+            "Key": "0fc7c415-99ef-4567-a09f-37a03dc421ee",
+            "Value": {
+                "id": "a0542fdd-f3f0-4441-9286-3e330d470170",
+                "resourcePath": "objects\\o_testOrganicDialogue\\o_testOrganicDialogue.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0fcdfde7-8cb9-4662-a84e-5ee4824839fb",
             "Value": {
                 "id": "ee7cf714-9920-4977-823d-041d9bb9f4c2",
@@ -1868,6 +1876,14 @@
                 "id": "40e71974-f8e8-4ad7-85d1-f2bd8a0d5932",
                 "resourcePath": "objects\\ob_elevationArea\\ob_elevationArea.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "23e1819a-480a-4622-845a-2c82fe29fd93",
+            "Value": {
+                "id": "6f1a2f82-d471-41ca-be70-20d55094a1c4",
+                "resourcePath": "sprites\\s_propHayPile\\s_propHayPile.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4191,6 +4207,14 @@
             }
         },
         {
+            "Key": "4f3e2790-aee7-4027-b636-557a4d9e32e4",
+            "Value": {
+                "id": "dbda6cef-3776-41e1-be70-9d52b15dc3ad",
+                "resourcePath": "sprites\\s_propBlockout32\\s_propBlockout32.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4f656b16-8921-4fd8-84aa-203e8ddb9fa3",
             "Value": {
                 "id": "7f843344-b947-45ff-8066-9c589a9fb74e",
@@ -5516,6 +5540,14 @@
                 "id": "2c721f57-c4b8-4a3b-a060-2375f763c2e6",
                 "resourcePath": "objects\\ob_characterGround\\ob_characterGround.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "695b5dc6-2238-487b-bc91-f06f86f77bc5",
+            "Value": {
+                "id": "11461a89-d39c-45ee-9296-cf8bc07d6ae2",
+                "resourcePath": "sprites\\s_propBlockout16\\s_propBlockout16.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -10335,6 +10367,14 @@
             }
         },
         {
+            "Key": "c31769ba-7c4c-44dc-9fa3-9c2650343687",
+            "Value": {
+                "id": "e1ed5819-bb48-455d-92f1-a6613bd44228",
+                "resourcePath": "views\\c31769ba-7c4c-44dc-9fa3-9c2650343687.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c337fe48-eaea-43ac-9894-6d17d910c27a",
             "Value": {
                 "id": "4b85ffb3-4b39-4499-9b80-9cbf689f7b0b",
@@ -13116,6 +13156,14 @@
                 "id": "187cff70-f681-4157-a76c-fd7c9460dd19",
                 "resourcePath": "scripts\\playerUiControlSelectFromArray\\playerUiControlSelectFromArray.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f5f3cd21-3237-488f-b119-45a69cfc6f42",
+            "Value": {
+                "id": "6d63ece5-b72d-4b26-ab71-edab5a026ffe",
+                "resourcePath": "objects\\o_chMithraGaurdNpc\\o_chMithraGaurdNpc.yy",
+                "resourceType": "GMObject"
             }
         },
         {
