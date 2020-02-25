@@ -1,7 +1,4 @@
-with ( ob_CtsTalker )
-{
-    input_fadeout = true;
-}
+/// @description Gabberbox : For In-world
 
 #macro kUiDepthGabber -9005
 depth = kUiDepthGabber;
@@ -15,6 +12,7 @@ input_priority = true;
 input_disable = false;
 input_audio = null;
 input_autoclose = false;
+input_minimal = false;
 
 display_text = "";
 display_flags[0] = 0;
@@ -42,3 +40,6 @@ controlInit();
 // Set up UI for first frame
 uiPosX = 0;
 uiPosY = 0;
+
+// Post-setup check
+alarm[0] = 1;

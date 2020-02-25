@@ -4,10 +4,11 @@
 event_inherited();
 
 var standing = [
-	s_charOasis0Stand,
-	s_charOasis1Stand,
-	s_charOasis2Stand,
-	s_charOasis3Stand
+	s_charMithra0_Stand,
+	s_charMithra0_Stand,
+	s_charMithra1_Stand,
+	s_charMithra1_Stand,
+	s_charMithra2_Stand
 ];
 
 var selector = id % array_length_1d(standing);

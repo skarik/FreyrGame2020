@@ -81,18 +81,40 @@ for (var i = 0; i < floor(current_display_count); ++i)
 	}
 	
     // draw the text
-    draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
-    draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);    
-	if (penc == c_gold)
-	{	// gold (and other colors) get a special outline
-		draw_set_color( c_black );
+	if (!input_minimal)
+	{
+		if (penc == c_gold)
+		{	// gold (and other colors) get a special outline
+			draw_set_color( c_black );
+			draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
+			draw_text(dx + penx + xoffset, dy + peny - 1 + yoffset, char);
+			draw_text(dx + penx + 1 + xoffset, dy + peny + yoffset, char);
+			draw_text(dx + penx - 1 + xoffset, dy + peny + yoffset, char);
+		}
+		else
+		{	// otherwise, do simple dropshadow outline
+			draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
+			draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
+		}
+	}
+	// no box, need white outline
+	else
+	{
+		//draw_set_color(make_color_rgb(239, 216, 161));
+		//draw_set_color(c_white);
+		draw_set_color(merge_color(c_white, make_color_rgb(239, 216, 161), 0.5));
 		draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
 		draw_text(dx + penx + xoffset, dy + peny - 1 + yoffset, char);
 		draw_text(dx + penx + 1 + xoffset, dy + peny + yoffset, char);
 		draw_text(dx + penx - 1 + xoffset, dy + peny + yoffset, char);
+		
+		draw_text(dx + penx + 1 + xoffset, dy + peny - 1 + yoffset, char);
+		draw_text(dx + penx - 1 + xoffset, dy + peny - 1 + yoffset, char);
+		draw_text(dx + penx + 1 + xoffset, dy + peny + 1 + yoffset, char);
+		draw_text(dx + penx - 1 + xoffset, dy + peny + 1 + yoffset, char);
 	}
-    draw_set_color( penc );
-    draw_text(dx + penx + xoffset, dy + peny + yoffset, char);
+	draw_set_color( penc );
+	draw_text(dx + penx + xoffset, dy + peny + yoffset, char);
     
     // do a lookahead for dropping a line if currently on a space
     var override_drop = false;

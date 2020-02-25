@@ -100,7 +100,7 @@ else
 // Fade automatically over time if the option is given
 if ( input_disable || !input_priority )
 {
-    if ( current_display_time > max(1.0, string_length(display_text) / 15) )
+    if ( current_display_time > max(1.0, 0.2 + string_length(display_text) / 8) )
     {
         input_fadeout = true;
     }

@@ -88,6 +88,7 @@ case SEQTYPE_LINES:
 	            gabber.input_priority = !l_organic;
 	            gabber.input_disable = l_organic;
 	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+				gabber.input_minimal = l_organic;
 		}
 		else if (style == kLinesStyle_Portrait)
 		{
