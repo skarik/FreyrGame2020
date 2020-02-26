@@ -5,6 +5,10 @@
 #macro kMouseWheelUp 0x101
 #macro kMouseWheelDown 0x102
 
+#macro kGamepadTypeXInput		0
+#macro kGamepadTypeDualshock	1
+#macro kGamepadTypeGeneric		2
+
 with (Settings)
 {
 	ctMoveLeft		= [kControlKB, ord("A"),	kControlGamepad, -gp_axislh];

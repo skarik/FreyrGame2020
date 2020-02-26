@@ -1,9 +1,11 @@
-/// @description controlGetName(control_type, control)
-/// @param control_type
-/// @param control
+/// @description controlGetName(control_type, pad_type, control)
+/// @param control_type {kControl} Is ``lastControlType`` in a controlled object.
+/// @param pad_type (kGamepadType} Is ``lastGamepadType`` in a controlled object.
+/// @param control {Real} Input value to draw.
 
 var ctype = argument0;
-var c = argument1;
+var pad_type = argument1;
+var c = argument2;
 
 if (ctype == kControlKB)
 {
@@ -35,8 +37,8 @@ if (ctype == kControlKB)
 }
 else if (ctype == kControlGamepad)
 {
-	var generic = (ctrl_type == kGamepadTypeGeneric);
-	var ds = (ctrl_type == kGamepadTypeDualshock);
+	var generic = (pad_type == kGamepadTypeGeneric);
+	var ds = (pad_type == kGamepadTypeDualshock);
 	
 	switch (c)
 	{

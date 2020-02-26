@@ -4994,7 +4994,7 @@
             "Key": "5c678883-8e8f-4fc0-894f-1e428f86adc4",
             "Value": {
                 "id": "d7717a5e-d0ab-4da6-b048-173e6b6016d7",
-                "resourcePath": "objects\\o_pickupKeyItem_YamaokaRose\\o_pickupKeyItem_YamaokaRose.yy",
+                "resourcePath": "objects\\o_pickupJunk_YamaokaRose\\o_pickupJunk_YamaokaRose.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -7799,6 +7799,14 @@
             }
         },
         {
+            "Key": "92d43a3e-f3fb-428c-9b0a-37b6d2049c32",
+            "Value": {
+                "id": "eff15233-e96f-44a5-81a8-e3d40c7db447",
+                "resourcePath": "views\\92d43a3e-f3fb-428c-9b0a-37b6d2049c32.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "92f62474-1f3d-4cbf-b91d-0925f1619ee1",
             "Value": {
                 "id": "38872bbb-8c3a-4941-a194-3659d301669f",
@@ -9907,6 +9915,14 @@
             "Value": {
                 "id": "b042eb68-7870-4da0-975c-64e4d80efc8f",
                 "resourcePath": "sprites\\s_itemSeedSummer\\s_itemSeedSummer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b735bdaf-f625-41ed-b3cc-e8c8cedf0ed1",
+            "Value": {
+                "id": "df4d0dab-d0ee-4350-acf6-8ac5ccf9f79c",
+                "resourcePath": "sprites\\sui_control16_xbox\\sui_control16_xbox.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -1,3 +1,7 @@
+/// @function worldEventCreate(event)
+/// @description Creates given event
+/// @param event {kWorldEvent} event to create
+
 #macro kWorldEvent_NoEvent 0
 #macro kWorldEvent_Riftpulse 1
 #macro kWorldEvent_MakePlayerShirtless 2

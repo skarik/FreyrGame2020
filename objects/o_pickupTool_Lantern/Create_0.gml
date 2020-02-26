@@ -3,8 +3,6 @@ event_inherited();
 
 m_name           = "Lantern";
 m_maxStack       = 1;
-//m_onUseScript    = grappleOnUse;
-//m_checkUseScript = grappleCheckUse;
 m_type           = kItemPickupTool;
 
 m_showPickupUI   = true;
