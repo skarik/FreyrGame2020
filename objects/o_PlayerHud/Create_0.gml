@@ -14,6 +14,7 @@ m_inventory_selectorBlendCruft = 0.0;
 m_inventory_selectorNameTimerCd = 0.0;
 m_inventory_selectorNameBlend = 0.0;
 m_inventory_selectorName = "";
+m_inventory_selectorDisengageBlend = 0.0;
 
 //m_book_enabled = false;
 m_book_totalBlend = 0;

@@ -27,6 +27,8 @@ if (l_canMove)
 {
 	if (itemPrevButton.pressed)
 	{
+		if (inventory.belt_selection == null)
+			inventory.belt_selection = inventory.belt_size;
 		inventory.belt_selection -= 1;
 		if (inventory.belt_selection < 0) {
 			inventory.belt_selection += inventory.belt_size;
@@ -34,23 +36,48 @@ if (l_canMove)
 	}
 	if (itemNextButton.pressed)
 	{
+		if (inventory.belt_selection == null)
+			inventory.belt_selection = -1;
 		inventory.belt_selection += 1;
 		if (inventory.belt_selection >= inventory.belt_size) {
 			inventory.belt_selection -= inventory.belt_size;
 		}
 	}
+	if (itemUnequipButton.pressed)
+	{
+		inventory.belt_selection = null;
+	}
+	
 	if (belt1Button.pressed)
-		inventory.belt_selection = 0;
+		if (inventory.belt_selection == 0)
+			inventory.belt_selection = null;
+		else
+			inventory.belt_selection = 0;
 	if (belt2Button.pressed)
-		inventory.belt_selection = 1;
+		if (inventory.belt_selection == 1)
+			inventory.belt_selection = null;
+		else
+			inventory.belt_selection = 1;
 	if (belt3Button.pressed)
-		inventory.belt_selection = 2;
+		if (inventory.belt_selection == 2)
+			inventory.belt_selection = null;
+		else
+			inventory.belt_selection = 2;
 	if (belt4Button.pressed)
-		inventory.belt_selection = 3;
+		if (inventory.belt_selection == 3)
+			inventory.belt_selection = null;
+		else
+			inventory.belt_selection = 3;
 	if (belt5Button.pressed)
-		inventory.belt_selection = 4;
+		if (inventory.belt_selection == 4)
+			inventory.belt_selection = null;
+		else
+			inventory.belt_selection = 4;
 	if (belt6Button.pressed)
-		inventory.belt_selection = 5;
+		if (inventory.belt_selection == 5)
+			inventory.belt_selection = null;
+		else
+			inventory.belt_selection = 5;
 }
 
 // update aiming
@@ -135,8 +162,12 @@ _playerInteractItems(l_canMove && !inDelayFrame);
 _playerInteractItemsKeySlot(l_canMove && !inDelayFrame);
 _playerInteractItemsRuneSlot(l_canMove && !inDelayFrame);
 
-var belt = inventory.belt[inventory.belt_selection];
-if (belt.type == kItemPickupSeed) {
+var belt;
+if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(inventory.belt))
+	belt = inventory.belt[inventory.belt_selection];
+else
+	belt = null;
+if (belt != null && belt.type == kItemPickupSeed) {
 	_playerInteractPlantables(l_canMove && onGround && !inDelayFrame);
 }
 

@@ -21,6 +21,7 @@ if (argument0 == false)
 	yButton.value = 0.0;
 	itemPrevButton.value = 0.0;
 	itemNextButton.value = 0.0;
+	itemUnequipButton.value = 0.0;
 	itemsButton.value = 0.0;
 	selectButton.value = 0.0;
 	cancelButton.value = 0.0;

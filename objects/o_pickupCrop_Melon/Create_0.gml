@@ -4,6 +4,6 @@ event_inherited();
 m_name           = "Melon";
 m_maxStack       = 10;
 
-m_onUseScript    = turnipOnUse;
+m_onUseScript    = generalYeetableOnUse;
 m_checkUseScript = nullScript;
 m_tradeItem		 = [o_pickupItem_CrullEgg, 1];

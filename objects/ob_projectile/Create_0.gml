@@ -2,6 +2,9 @@
 
 xspeed = 0;
 yspeed = 0;
+zspeed = 0;
+depthInit();
+z_height = 16;
 
 m_owner = null;
 m_team = kTeamNone;

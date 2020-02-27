@@ -7,7 +7,7 @@ convention_mode = false; // turn on for convention demos
 // Enable debug mode for now
 on = false;
 show_squad_info = false;
-enable_gmlive = true;
+enable_gmlive = false;
 
 // Debug lines:
 debug_line[0] = "";

@@ -45,6 +45,7 @@ if (argument0 == false && !(Debug.on && exists(o_debugCmdline) && o_debugCmdline
 	
 	_controlStructUpdate(itemPrevButton, controlParseAndPoll(Settings.ctItemPrevious));
 	_controlStructUpdate(itemNextButton, controlParseAndPoll(Settings.ctItemNext));
+	_controlStructUpdate(itemUnequipButton, controlParseAndPoll(Settings.ctItemUnequip));
 	
 	_controlStructUpdate(selectButton, controlParseAndPoll(Settings.ctUiSelect));
 	_controlStructUpdate(cancelButton, controlParseAndPoll(Settings.ctUiCancel));

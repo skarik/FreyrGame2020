@@ -128,3 +128,35 @@ if (l_draw_void_sparks)
 	draw_circle(dx + 18, dy + 25, 5, false);
 	draw_circle(dx + 18, dy + 25, 7, true);
 }
+
+// draw the will power
+dx += 48;
+draw_set_color(c_gold);
+draw_set_halign(fa_right);
+draw_set_valign(fa_top);
+draw_set_font(f_04b03);
+draw_text(dx - 1, dy +  0, "W");
+draw_text(dx - 1, dy +  6, "I");
+draw_text(dx - 1, dy + 12, "L");
+draw_text(dx - 1, dy + 18, "L");
+
+draw_set_color(c_white);
+draw_rectangle(dx - 1, dy - 1, dx + 6, dy + 49, false);
+draw_set_color(c_black);
+draw_rectangle(dx, dy, dx + 5, dy + 48, false);
+draw_set_color(c_gold);
+if (pl.m_will > 0)
+{	// draw total will
+	draw_rectangle(dx, dy, dx + 5, dy + 48 * saturate(pl.m_will / pl.m_willMax), false);
+}
+else
+{	// draw willpush blocks
+	for (var i = 0; i < pl.m_willpush; ++i)
+	{
+		draw_rectangle(dx + 1,
+					   dy + (i) * 8 + (0  ) + 1,
+					   dx + 5 - 1,
+					   dy + (i) * 8 + (8-2) + 1,
+					   false);
+	}
+}

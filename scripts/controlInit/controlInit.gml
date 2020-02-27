@@ -21,6 +21,7 @@ journalButton = _controlStructCreate();
 yButton = _controlStructCreate();
 itemPrevButton = _controlStructCreate();
 itemNextButton = _controlStructCreate();
+itemUnequipButton = _controlStructCreate();
 itemsButton = _controlStructCreate();
 selectButton = _controlStructCreate();
 cancelButton = _controlStructCreate();

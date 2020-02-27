@@ -3,4 +3,4 @@ event_inherited();
 
 m_name           = "Potato";
 m_maxStack       = 10;
-m_onUseScript    = turnipOnUse;
+m_onUseScript    = generalYeetableOnUse;

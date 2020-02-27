@@ -23,7 +23,10 @@ if (exists(collision_character))
 }
 
 // Check against the collider:
-if (exists(collision_rectangle(x - 4, y - 4, x + 4, y + 4, ob_collider, false, true)))
+//if (exists(collision_rectangle(x - 4, y - 4, x + 4, y + 4, ob_collider, false, true)))
+if (z_height <= 0.0
+	|| collision3_point_meeting(x, y, z, true)
+	|| collision3_point_meeting(x, y - z_height, z + z_height, true))
 {
 	event_user(2);
 	exit;

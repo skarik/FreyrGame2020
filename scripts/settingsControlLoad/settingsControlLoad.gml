@@ -30,6 +30,7 @@ with (Settings)
 	ctItem6			= _settingsControlLoadArray("item6", ctItem6);
 	ctItemPrevious	= _settingsControlLoadArray("itemprevious", ctItemPrevious);
 	ctItemNext		= _settingsControlLoadArray("itemnext", ctItemNext);
+	ctItemUnequip	= _settingsControlLoadArray("itemunequip", ctItemUnequip);
 	
 	ctUiPrevious	= _settingsControlLoadArray("uiprevious", ctUiPrevious);
 	ctUiNext		= _settingsControlLoadArray("uinext", ctUiNext);

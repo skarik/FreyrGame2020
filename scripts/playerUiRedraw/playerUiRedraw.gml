@@ -41,6 +41,7 @@ surface_set_target(m_surface);
 draw_clear_alpha(c_white, 0.0);
 
 playerUiDrawUpperLeft();
+playerUiDrawUpperRightAstrolabe();
 
 surface_reset_target();
 

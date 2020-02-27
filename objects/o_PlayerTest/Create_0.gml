@@ -42,12 +42,26 @@ if (!exists(o_dayNightCycle))
 
 m_prevInventoryActive = false;
 
-
 m_lanternProp = null;
 m_lanternLight = null;
 m_lanternEmissive = null;
 
 m_tarDeathTimer = 0.0;
+
+m_will = 16 * 60;
+m_willMax = m_will;
+m_willPrevious = m_will;
+m_willpush = 6;
+m_willpushMax = m_willpush;
+m_willpushPrevious = m_willpush;
+m_willpushRegenTimer = 0.0;
+m_willStyleStun = false;
+
+m_mana = 0;
+m_manaMax = 20;
+
+m_itemBalancePivot = [x, y];
+m_itemBalanceSpeed = [0, 0];
 
 // the player alright has a character-light, but for no-ambient rooms, it gets disabled
 // thus, we need a specific light that shows the character location

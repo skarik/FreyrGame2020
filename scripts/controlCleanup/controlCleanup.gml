@@ -14,6 +14,7 @@ delete(journalButton);
 delete(yButton);
 delete(itemNextButton);
 delete(itemPrevButton);
+delete(itemUnequipButton);
 delete(itemsButton);
 delete(selectButton);
 delete(cancelButton);

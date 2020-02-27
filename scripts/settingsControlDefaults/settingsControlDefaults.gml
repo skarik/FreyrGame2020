@@ -41,6 +41,7 @@ with (Settings)
 	ctItem6			= [kControlKB, ord("6")];
 	ctItemPrevious	= [kControlMouse, kMouseWheelDown,	kControlGamepad, gp_padl];
 	ctItemNext		= [kControlMouse, kMouseWheelUp,	kControlGamepad, gp_padr];
+	ctItemUnequip	= [kControlKB, ord("7"),	kControlGamepad, gp_padd];
 	
 	ctUiPrevious	= [kControlKB, vk_pageup,	kControlGamepad, gp_shoulderl,	kControlMouse, kMouseWheelDown];
 	ctUiNext		= [kControlKB, vk_pagedown,	kControlGamepad, gp_shoulderr,	kControlMouse, kMouseWheelUp,	kControlMouse, mb_middle];

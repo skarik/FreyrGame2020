@@ -41,6 +41,11 @@ if (meleeAtkTimer < meleeAtk2Hit || meleeAtkTimer > meleeAtk2Key)
 		_playerInteractDoDash();
 	}
 }
+// do single signal damage
+if (l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)
+{
+	playerOnDealingDamage();
+}
 // if passing the hit point, do the damage
 if ((l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)
  || (l_meleeAtkTimerPrev < (meleeAtk2Hit+meleeAtk2Key)/2 && meleeAtkTimer >= (meleeAtk2Hit+meleeAtk2Key)/2)

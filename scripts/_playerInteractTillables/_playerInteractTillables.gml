@@ -48,6 +48,10 @@ if (!m_isTilling)
 				m_till_target = currentTillable;
 				m_isTilling = true;
 				m_till_timer = 0.0;
+				
+				// Perform stamina usage
+				if (m_isPlayer)
+					m_willpush -= 1.0;
 			}
 		}
 		// Diable the make dirt power when we're on tillable
@@ -84,6 +88,10 @@ if (!m_isTilling)
 					m_till_target = null;
 					m_isTilling = true;
 					m_till_timer = 0.0;
+					
+					// Perform stamina usage
+					if (m_isPlayer)
+						m_willpush -= 1.0;
 				}
 			}
 		}

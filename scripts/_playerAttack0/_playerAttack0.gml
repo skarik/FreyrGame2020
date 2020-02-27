@@ -52,6 +52,7 @@ if (l_meleeAtkTimerPrev < meleeAtk0Hit && meleeAtkTimer >= meleeAtk0Hit)
 				 hitboxCenterX + 12, hitboxCenterY + 12,
 				 meleeAtk0Damage,
 				 kDamageTypeBlunt);
+	playerOnDealingDamage();
 }
 // if past the key point, chain into next attack
 if (meleeAtkTimer > meleeAtk0Key)

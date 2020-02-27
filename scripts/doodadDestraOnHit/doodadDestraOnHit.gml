@@ -26,11 +26,18 @@ if (particle_type != null)
 
 if (m_health <= 0.0)
 {
-	// Create the drop
-	var drop = doodadDestraGenerateDrop();
-	if (drop != null && object_exists(drop))
+	// Create the drops on death
+	var drops = doodadDestraGenerateDrops();
+	if (drops != null)
 	{
-		instance_create_depth(x, y, depth, drop);
+		for (var i = 0; i < array_length_1d(drops); ++i)
+		{
+			var drop = drops[i];
+			if (drop != null && object_exists(drop))
+			{
+				instance_create_depth(x, y, depth, drop);
+			}
+		}
 	}
 	
 	// Create death effect

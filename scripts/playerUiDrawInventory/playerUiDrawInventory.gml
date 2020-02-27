@@ -93,10 +93,12 @@ draw_set_alpha(1.0);
 			gpu_set_blendmode(bm_normal);
 		}
 	}
+	
 	// inventory selector fg
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
-	draw_sprite(sui_arcaneSelect, 0, dx + dspace * selector + 15, dy + 15);
+	draw_sprite(sui_arcaneSelect, 1, dx + dspace * selector + 15, dy + 15 - 3 * m_inventory_selectorDisengageBlend);
+	draw_sprite(sui_arcaneSelect, 2, dx + dspace * selector + 15, dy + 15 + 5 * m_inventory_selectorDisengageBlend);
 	// inventory item name
 	surface_reset_target();
 	surface_set_target(m_surface);

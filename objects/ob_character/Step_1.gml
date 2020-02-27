@@ -6,11 +6,19 @@ var do_hurt_callback = false;
 var do_stun_callback = false;
 
 // Check for stun timer
+m_stunTimer -= Time.deltaTime;
+if (m_isStunned) // If stunned, then the moment the counter hits zero, reset stun value.
+{	
+	if (m_stunTimer <= 0.0)
+	{
+		stats.m_stun = 0.0; // Refresh stun timer when stun ends.
+	}
+}
+// Force disable stun when stun timer is below zero
 if (m_stunTimer <= 0.0)
 {
 	m_isStunned = false;
 }
-m_stunTimer -= Time.deltaTime;
 
 // Check for if hurt
 if (stats.m_health < stats.m_healthPrev)

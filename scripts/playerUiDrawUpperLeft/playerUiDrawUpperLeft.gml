@@ -1,4 +1,4 @@
-var pl = getPlayer();
+var pl = m_player;
 var dx, dy;
 
 draw_set_alpha(0.2);
@@ -45,204 +45,157 @@ if (instance_exists(o_PlayerTest.currentUsable) && !exists(ob_CtsTalker) && o_Pl
 	draw_text_spaced(dx + useXoffset + 3 * xSign + string_xsize * xSign * 0.5, dy + 2 + useYoffset, usable.m_name, 2);
 }
 
-// button contexts
+//
+// Button contexts:
+
 draw_set_font(f_04b03);
 draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
 draw_set_color(c_white);
 draw_set_alpha(1.0);
 
-dx = 40;
-dy = 80 - smoothstep(m_inCutsceneBlend) * 200;
-draw_sprite(sui_buttonContext, 0, dx, dy);
-draw_text(dx + 20, dy + 15, "F");
+var dy_btn_base = 260 - 18;
+
+dx = 20 - smoothstep(m_inCutsceneBlend) * 200;
+dy = dy_btn_base;
+//dy = 80 - smoothstep(m_inCutsceneBlend) * 200;
+//draw_sprite(sui_buttonContext, 0, dx, dy);
+//draw_text(dx + 20, dy + 15, "F");
 {
-	var inventory = o_PlayerTest.inventory;
-	var belt = inventory.belt[inventory.belt_selection];
+	var inventory = m_player.inventory;
+	var belt = null;
+	if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(inventory.belt))
+		belt = inventory.belt[inventory.belt_selection];
 	// draw the item sprite
-	if (belt.object != null)
+	if (belt != null && belt.object != null)
 	{
+		drawControl(dx, dy, null, kControlDrawStyle_Skeuo, Settings.ctUseItem, m_player.lastControlType, m_player.lastGamepadType);
+		
+		var l_useText = "";
+		// TODO: Move these into the item structure
+		if (belt.onUse == generalYeetableOnUse)
+			l_useText = "Yeet";
+		else if (belt.onUse == generalConsumableOnUse)
+			l_useText = "Eat";
+		else if (belt.onUse == grappleOnUse)
+			l_useText = "Grapple";
+		else if (belt.onUse == generalSeedOnUse)
+			l_useText = "Plant";
+		
+		dx += 18;
 		shader_set(sh_colormask);
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 + 1, dy + 4);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 - 1, dy + 4);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 + 1);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 - 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 1, dy);
+		draw_sprite(object_get_sprite(belt.object), 0, dx - 1, dy);
+		draw_sprite(object_get_sprite(belt.object), 0, dx, dy + 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx, dy - 1);
 		shader_reset();
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx, dy);
+		
+		dx += 10;
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_middle);
+		draw_set_font(global.font_arvo9);
+		draw_set_color(c_white);
+		draw_text_spaced(dx, dy, l_useText, 2);
 	}
 }
 
 
-dx = 20;
-dy = 100 - smoothstep(m_inCutsceneBlend) * 200;
+//dx = 20;
+//dy = 100 - smoothstep(m_inCutsceneBlend) * 200;
+dx = 20 - smoothstep(m_inCutsceneBlend) * 200;
+dy = dy_btn_base + 21;
 if (!o_PlayerTest.isBlocking)
 {
-	draw_sprite(sui_buttonContext, (pl.m_currentInteractionType == kInteractionAttack) ? 1 : 0, dx, dy);
+	//draw_sprite(sui_buttonContext, (pl.m_currentInteractionType == kInteractionAttack) ? 1 : 0, dx, dy);
+	if (pl.m_currentInteractionType == kInteractionAttack)
+	{
+		drawControl(dx, dy, null, kControlDrawStyle_Skeuo, Settings.ctAttack, m_player.lastControlType, m_player.lastGamepadType);
+	}
+	else
+	{
+		drawControl(dx, dy, null, kControlDrawStyle_Skeuo, Settings.ctUse, m_player.lastControlType, m_player.lastGamepadType);
+	}
+	
+	dx += 18;
 	if (pl.m_currentInteractionType == kInteractionTill)
 	{
-		draw_sprite(s_itemToolPickaxe, 0, dx + 8, dy + 8);
+		draw_sprite(s_itemToolPickaxe, 0, dx, dy);
 	}
 	else if (pl.m_currentInteractionType == kInteractionTill2)
 	{
-		draw_sprite(s_itemToolPickaxe, 0, dx + 8, dy + 8);
+		draw_sprite(s_itemToolHoe, 0, dx, dy);
 	}
 	else if (pl.m_currentInteractionType == kInteractionUse)
 	{
-		draw_sprite(s_itemResGear, 0, dx + 8, dy + 8);
+		draw_sprite(s_itemResGear, 0, dx, dy);
 	}
+	else if (pl.m_currentInteractionType == kInteractionAttack)
+	{
+		draw_sprite(s_itemToolShield, 0, dx, dy);
+	}
+	
+	dx += 10;
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_middle);
+	draw_set_font(global.font_arvo9);
+	draw_set_color(c_white);
+	if (pl.m_currentInteractionType == kInteractionTill)
+		draw_text_spaced(dx, dy, m_farmoverlay_targetString, 2);
+	else if (pl.m_currentInteractionType == kInteractionTill2)
+		draw_text_spaced(dx, dy, m_farmoverlay_targetString, 2);
+	else if (pl.m_currentInteractionType == kInteractionUse)
+		draw_text_spaced(dx, dy, "Interact", 2);
+	else if (pl.m_currentInteractionType == kInteractionAttack)
+		draw_text_spaced(dx, dy, "Kick", 2);
 }
 else
 {
-	draw_sprite(sui_buttonContext, 0, dx, dy);
+	//draw_sprite(sui_buttonContext, 0, dx, dy);
+	drawControl(dx, dy, null, kControlDrawStyle_Skeuo, Settings.ctUse, m_player.lastControlType, m_player.lastGamepadType);
 	
 	var inventory = o_PlayerTest.inventory;
-	var belt = inventory.belt[inventory.belt_selection];
+	var belt = null;
+	if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(inventory.belt))
+		belt = inventory.belt[inventory.belt_selection];
 	// draw the item sprite
-	if (belt.object != null)
+	if (belt != null && belt.object != null)
 	{
 		shader_set(sh_colormask);
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 + 1, dy + 4);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8 - 1, dy + 4);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 + 1);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4 - 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx + 1, dy);
+		draw_sprite(object_get_sprite(belt.object), 0, dx - 1, dy);
+		draw_sprite(object_get_sprite(belt.object), 0, dx, dy + 1);
+		draw_sprite(object_get_sprite(belt.object), 0, dx, dy - 1);
 		shader_reset();
 		draw_set_color(c_white);
-		draw_sprite(object_get_sprite(belt.object), 0, dx + 8, dy + 4);
+		draw_sprite(object_get_sprite(belt.object), 0, dx, dy);
 	}
 }
-draw_text(dx + 20, dy + 15, "LMB");
+//draw_text(dx + 20, dy + 15, "LMB");
 
-dx = 15;
-dy = 115 - smoothstep(m_inCutsceneBlend) * 200
-draw_sprite(sui_buttonContext, 0, dx, dy);
-draw_sprite(sui_useIcons, o_PlayerTest.isBlocking ? 0 : 1, dx + 8, dy + 7);
-draw_text(dx + 20, dy + 15, "RMB");
+//dx = 15;
+//dy = 115 - smoothstep(m_inCutsceneBlend) * 200
+dx = 20 - smoothstep(m_inCutsceneBlend) * 200;
+dy = dy_btn_base + 21 + 21;
+//draw_sprite(sui_buttonContext, 0, dx, dy);
+//draw_sprite(sui_useIcons, o_PlayerTest.isBlocking ? 0 : 1, dx + 8, dy + 7);
+//draw_text(dx + 20, dy + 15, "RMB");
+{
+	drawControl(dx, dy, null, kControlDrawStyle_Skeuo, Settings.ctDodge, m_player.lastControlType, m_player.lastGamepadType);
+	
+	dx += 18;
+	draw_sprite(sui_useIcons, o_PlayerTest.isBlocking ? 0 : 1, dx, dy);
+	
+	dx += 10;
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_middle);
+	draw_set_font(global.font_arvo9);
+	draw_set_color(c_white);
+	draw_text_spaced(dx, dy, o_PlayerTest.isBlocking ? "Defend" : "Dodge", 2);
+}
 
 // DRAW HEALTH BAR
 playerUiDrawUpperLeftHealthbar();
-
-// time of day (the astrolabe)
-dx = 60//GameCamera.width - 47;
-dy = 10 - smoothstep(saturate(m_inCutsceneBlend - m_astrolabeForceBlend)) * 200;
-/*
-draw_set_font(f_josefinSlab9);
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_set_color(c_white);
-draw_set_alpha(1.0);
-//draw_text(dx, dy + 40, string_format(o_dayNightCycle.m_timeOfDay, 4, 2));
-//draw_text(dx, dy + 15, string_format((o_dayNightCycle.m_timeOfDay + 11) % 12 + 1, 4, 2) + " " + ((o_dayNightCycle.m_timeOfDay < 12) ? "AM" : "PM"));
-draw_set_halign(fa_right);
-draw_text(dx - 2, dy, string(floor((o_dayNightCycle.m_timeOfDay + 11) % 12 + 1)));
-draw_set_halign(fa_center);
-draw_text(dx, dy, ":");
-draw_set_halign(fa_right);
-draw_text(dx + 9, dy, string(floor(frac(o_dayNightCycle.m_timeOfDay) * 6)));
-draw_text(dx + 16, dy, string(floor(frac(o_dayNightCycle.m_timeOfDay) * 60) % 10));
-draw_set_halign(fa_left);
-draw_text(dx + 20, dy, (o_dayNightCycle.m_timeOfDay < 12) ? "AM" : "PM");
-
-draw_text(dx - 5, dy + 12, "Day " + string(o_dayNightCycle.m_day));
-*/
-draw_set_alpha(1.0);
-draw_set_color(c_white);
-
-dx += 45;
-dy += 2;
-draw_set_font(f_04b03);
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_set_color(c_white);
-
-draw_set_halign(fa_right);
-draw_text(dx - 2, dy, string(floor((o_dayNightCycle.m_timeOfDay + 11) % 12 + 1)));
-draw_set_halign(fa_center);
-draw_text(dx, dy, ":");
-draw_set_halign(fa_right);
-draw_text(dx + 7, dy, string(floor(frac(o_dayNightCycle.m_timeOfDay) * 6)));
-draw_text(dx + 12, dy, string(floor(frac(o_dayNightCycle.m_timeOfDay) * 60) % 10));
-draw_set_halign(fa_left);
-draw_text(dx + 14, dy, (o_dayNightCycle.m_timeOfDay < 12) ? "AM" : "PM");
-dx -= 45;
-dy -= 2;
-
-dx += 15;
-dy += 25;
-draw_sprite_ext(sui_astrolabeTimeOfDay, 0,
-				dx, dy,
-				1.0, 1.0,
-				o_dayNightCycle.m_timeOfDay / 24.0 * 360.0,
-				c_white, 1.0);
-draw_sprite_ext(sui_astrolabeSeason, 0,
-				dx, dy,
-				1.0, 1.0,
-				o_dayNightCycle.m_day / 28.0 * 90.0,
-				c_white, 1.0);
-draw_sprite(sui_astrolabeTopper, 0, dx, dy);
-
-
-var day_string = "Spring";
-if (o_dayNightCycle.m_day < 28)
-	day_string = "Spring";
-else if (o_dayNightCycle.m_day < 56)
-	day_string = "Summer";
-else if (o_dayNightCycle.m_day < 56+28)
-	day_string = "Fall";
-else if (o_dayNightCycle.m_day < 56+56)
-	day_string = "Winter";
-day_string = day_string + " " + string(o_dayNightCycle.m_day);
-//draw_set_font(f_04b03);
-//draw_set_halign(fa_center);
-//draw_set_valign(fa_top);
-//draw_text(dx, dy + 7, day_string);
-draw_set_color(c_black);
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_set_font(f_openSans7);
-var pen_angle = 190;
-for (var i = 0; i <= string_length(day_string); ++i)
-{
-	var str = string_char_at(day_string, i + 1);
-	//var angle = 200 + 18 * i;
-	pen_angle += string_width(str) / string_width("m") * 35.0;
-	/*draw_text(dx + lengthdir_x(14, angle),
-			  dy + lengthdir_y(14, angle),
-			  str);*/
-	draw_text_ext_transformed(
-			dx + lengthdir_x(8, pen_angle),
-			dy + lengthdir_y(8, pen_angle),
-			str,
-			0, 100,
-			1.0, 1.0,
-			pen_angle - 270);
-}
-
-// draw the tarot up there
-dx += 36;
-dy -= 9;
-var fortune = pl.pstats.m_fortune;
-var fortune_flipped = pl.pstats.m_fortune_flipped;
-if (array_length_1d(fortune) > 0)
-{
-	var scale = 18/220;
-	
-	draw_sprite_part_ext(fortune[2],
-						 0,
-						 0, 0,
-						 220, 340,
-						 dx + (fortune_flipped ? (220 * scale) : 0.0), dy + (fortune_flipped ? (340 * scale) : 0.0),
-						 scale * (fortune_flipped ? -1.0 : 1.0), scale * (fortune_flipped ? -1.0 : 1.0),
-						 c_white,
-						 1.0);
-	draw_sprite_part_ext(sui_tarotTextureStrip,
-						 0,
-						 0, 0,
-						 220, 340,
-						 dx + (fortune_flipped ? (220 * scale) : 0.0), dy + (fortune_flipped ? (340 * scale) : 0.0),
-						 scale * (fortune_flipped ? -1.0 : 1.0), scale * (fortune_flipped ? -1.0 : 1.0),
-						 c_white,
-						 1.0);
-}

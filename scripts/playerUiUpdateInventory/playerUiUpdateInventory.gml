@@ -3,17 +3,26 @@ var inventory = o_PlayerTest.inventory;
 // inventory lerps:
 {
 	// update the selector
-	if (m_inventory_selectorTarget != inventory.belt_selection)
+	if (inventory.belt_selection == null)
 	{
-		//if (m_inventory_selectorBlend <= 0.00 || m_inventory_selectorBlend >= 1.00)
-		//{
-		m_inventory_selectorStart = m_inventory_selector;
-		m_inventory_selectorBlend = 0.00;
-		//}
-		m_inventory_selectorTarget = inventory.belt_selection;
-		m_inventory_selectorTimerCd = 1.0;
+		m_inventory_selectorDisengageBlend = saturate(m_inventory_selectorDisengageBlend + Time.deltaTime * 4.0);
+	}
+	else
+	{
+		m_inventory_selectorDisengageBlend = saturate(m_inventory_selectorDisengageBlend - Time.deltaTime * 4.0);
+
+		if (m_inventory_selectorTarget != inventory.belt_selection)
+		{
+			//if (m_inventory_selectorBlend <= 0.00 || m_inventory_selectorBlend >= 1.00)
+			//{
+			m_inventory_selectorStart = m_inventory_selector;
+			m_inventory_selectorBlend = 0.00;
+			//}
+			m_inventory_selectorTarget = inventory.belt_selection;
+			m_inventory_selectorTimerCd = 1.0;
 		
-		m_inventory_selectorNameTimerCd = 3.0;
+			m_inventory_selectorNameTimerCd = 3.0;
+		}
 	}
 	
 	// Move the selector around
@@ -33,21 +42,33 @@ var inventory = o_PlayerTest.inventory;
 		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft - Time.deltaTime * 2.0);
 		
 	// if name doesn't match, we need to swap names
-	if (m_inventory_selectorName != inventory.belt[inventory.belt_selection].name)
+	if (inventory.belt_selection != null)
 	{
-		m_inventory_selectorNameTimerCd = -1.0;
-		if (m_inventory_selectorNameBlend <= 0.0)
+		if (m_inventory_selectorName != inventory.belt[inventory.belt_selection].name)
 		{
-			m_inventory_selectorName = inventory.belt[inventory.belt_selection].name;
-			m_inventory_selectorNameTimerCd = 3.0;
+			m_inventory_selectorNameTimerCd = -1.0;
+			if (m_inventory_selectorNameBlend <= 0.0)
+			{
+				m_inventory_selectorName = inventory.belt[inventory.belt_selection].name;
+				m_inventory_selectorNameTimerCd = 3.0;
+			}
+		}
+		else
+		{
+			// if we're planting get rid of cooldown
+			if (inventory.belt[inventory.belt_selection].type == kItemPickupSeed && o_PlayerTest.m_plantable)
+			{
+				m_inventory_selectorNameTimerCd = max(m_inventory_selectorNameTimerCd, 2.0);
+			}
 		}
 	}
 	else
 	{
-		// if we're planting get rid of cooldown
-		if (inventory.belt[inventory.belt_selection].type == kItemPickupSeed && o_PlayerTest.m_plantable)
+		m_inventory_selectorNameTimerCd = -1.0;
+		if (m_inventory_selectorNameBlend <= 0.0)
 		{
-			m_inventory_selectorNameTimerCd = max(m_inventory_selectorNameTimerCd, 2.0);
+			m_inventory_selectorName = "";
+			m_inventory_selectorNameTimerCd = 3.0;
 		}
 	}
 	
