@@ -1,6 +1,6 @@
 /// @description inventorySwapIntoChest(inventory, spot, item)
 /// @param inventory : Inventory to check the count of the item array
-/// @param spot : Place to swap into
+/// @param spot : Place to swap into. -1 to add it to the end of an infinite inventory.
 /// @param item : Item being swapped into
 
 var inventory = argument0;
@@ -9,7 +9,7 @@ var new_item = argument2;
 if (exists(inventory))
 {
 	// Need to add a new item
-	if (spot >= inventoryGetCount(inventory))
+	if (spot >= inventoryGetCount(inventory) || spot == -1)
 	{
 		if (inventoryGetSize(inventory) == kCountInfinite)
 		{

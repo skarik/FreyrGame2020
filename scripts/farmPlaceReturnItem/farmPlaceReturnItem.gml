@@ -3,6 +3,11 @@
 
 var tradeItem = argument0;
 
+if (tradeItem == null || tradeItem.tradeItem[0] == noone)
+{
+	return null;	
+}
+
 //Create an instance of the item
 var returnItem = itemEntryNew();
 var item = new (tradeItem.tradeItem[0]); //This line is magic, apparently.
