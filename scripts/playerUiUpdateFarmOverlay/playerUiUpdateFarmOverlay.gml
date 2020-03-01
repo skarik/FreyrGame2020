@@ -20,7 +20,8 @@ if (m_player.isAttacking || m_player.isBlocking)
 // Cool down when not on farm
 if (!m_player.m_plantable
 	&& !m_player.m_till_filldirt
-	&& (!exists(o_PlayerTest.currentTillable) || (o_PlayerTest.currentTillable.tilled))
+	&& (!exists(m_player.currentTillable) || (m_player.currentTillable.tilled))
+	&& (!exists(m_player.currentCrop) || !cropIsMature(m_player.currentCrop))
 	)
 {
 	m_farmoverlay_cooldown_time = max(m_farmoverlay_cooldown_time, 0.02);
@@ -46,28 +47,42 @@ else
 if (m_farmoverlay_blend > 0.0 && m_farmoverlay_cooldown_time <= 0.0)
 {
 	// Tillable:
-	if (instance_exists(o_PlayerTest.currentTillable))
+	if (instance_exists(m_player.currentTillable))
 	{
 		m_farmoverlay_targetPosition[0] = m_player.currentTillable.x;
 		m_farmoverlay_targetPosition[1] = m_player.currentTillable.y;
 		m_farmoverlay_targetString = "Till";
 		m_farmoverlay_targetColor = c_crystalblue;
+		m_farmoverlay_targetControl = Settings.ctUse;
 	}
 	// Plowable:
-	if (o_PlayerTest.m_till_filldirt)
+	if (m_player.m_till_filldirt)
 	{
 		m_farmoverlay_targetPosition[0] = m_player.m_till_x - 8;
 		m_farmoverlay_targetPosition[1] = m_player.m_till_y - 8;
 		m_farmoverlay_targetString = "Plow";
 		m_farmoverlay_targetColor = c_gold;
+		m_farmoverlay_targetControl = Settings.ctUse;
 	}
 	// Plantable:
-	if (o_PlayerTest.m_plantable)
+	if (m_player.m_plantable)
 	{
 		m_farmoverlay_targetPosition[0] = m_player.m_plant_x - 8;
 		m_farmoverlay_targetPosition[1] = m_player.m_plant_y - 8;
 		m_farmoverlay_targetString = "Plant";
 		m_farmoverlay_targetColor = c_lime;
-		
+		m_farmoverlay_targetControl = Settings.ctUseItem;
+	}
+	// Crops:
+	if (exists(m_player.currentCrop))
+	{
+		if (cropIsMature(m_player.currentCrop))
+		{
+			m_farmoverlay_targetPosition[0] = m_player.currentCrop.x - 8;
+			m_farmoverlay_targetPosition[1] = m_player.currentCrop.y - 8;
+			m_farmoverlay_targetString = "Harvest";
+			m_farmoverlay_targetColor = c_crystallime;
+			m_farmoverlay_targetControl = Settings.ctUse;
+		}
 	}
 }

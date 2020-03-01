@@ -1,6 +1,6 @@
 /// @description CoNsUmE DiRt
 
-if (m_growValue >= m_growAmountMature)
+if (cropIsMature(this))
 {
 	repeat (m_itemDropCount)
 	{

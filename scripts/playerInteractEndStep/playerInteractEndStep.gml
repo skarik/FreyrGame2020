@@ -13,7 +13,7 @@ else if (!isDashing)
 	dashCooldown -= Time.deltaTime;
 }
 // Do blocking
-if (dodgeButton.down && l_canMove && onGround && !m_isHolding && !m_isTilling && !m_isPlanting && !exists(currentHeldUsable))
+if (dodgeButton.down && l_canMove && onGround && !m_isHolding && !m_isTilling && !m_isPlanting && !m_isHarvesting && !exists(currentHeldUsable))
 {
 	isBlocking = true;
 }
@@ -189,6 +189,10 @@ if (exists(currentCrop))
 	inCombatMode = false;
 }
 if (exists(currentTillable) || m_isTilling)
+{
+	inCombatMode = false;
+}
+if (m_isHarvesting)
 {
 	inCombatMode = false;
 }

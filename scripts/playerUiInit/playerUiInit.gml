@@ -16,6 +16,7 @@ m_farmoverlay_cooldown_movetime = 0.0;
 m_farmoverlay_targetString = "";
 m_farmoverlay_targetColor = c_crystalblue;
 m_farmoverlay_targetPosition = [0, 0];
+m_farmoverlay_targetControl = Settings.ctUse;
 
 #endregion
 

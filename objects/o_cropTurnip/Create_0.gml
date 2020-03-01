@@ -4,3 +4,4 @@
 event_inherited();
 
 m_itemDrop = o_pickupCrop_Turnip;
+m_cropName = "Turnip";

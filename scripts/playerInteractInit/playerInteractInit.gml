@@ -26,6 +26,10 @@ m_plant_y = 0;
 m_plant_timer = 0.0;
 m_plant_time = 0.3;
 
+m_isHarvesting = false;
+m_harvest_timer = 0.0;
+m_harvest_time = 5.0 / 60.0;
+
 m_isVoidPunchCharging = false; //TODO: reuse for other key items
 m_voidPunch_fill = 1.0;
 m_voidPunch_charged = 0.0;

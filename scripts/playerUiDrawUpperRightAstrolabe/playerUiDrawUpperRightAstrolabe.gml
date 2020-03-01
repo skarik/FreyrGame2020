@@ -45,44 +45,46 @@ dy -= 25;
 
 //dx += 45;
 //dy += 2;
-dx += 8;
+dx += 6;
 dy += -10;
 //draw_set_font(f_04b03);
-draw_set_font(f_openSans7);
+draw_set_font(global.font_arvo7);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
 
 draw_set_halign(fa_right);
-draw_text(dx - 2, dy, string(floor((o_dayNightCycle.m_timeOfDay + 11) % 12 + 1)));
+//draw_text(dx - 2, dy, string(floor((o_dayNightCycle.m_timeOfDay + 11) % 12 + 1)));
+draw_text_spaced(dx - 2, dy, string(floor((o_dayNightCycle.m_timeOfDay + 11) % 12 + 1)), 2);
 draw_set_halign(fa_center);
 draw_text(dx, dy, ":");
 draw_set_halign(fa_right);
-draw_text(dx + 7, dy, string(floor(frac(o_dayNightCycle.m_timeOfDay) * 6)));
+draw_text(dx + 6, dy, string(floor(frac(o_dayNightCycle.m_timeOfDay) * 6)));
 draw_text(dx + 12, dy, string(floor(frac(o_dayNightCycle.m_timeOfDay) * 60) % 10));
 draw_set_halign(fa_left);
-draw_text(dx + 14, dy, (o_dayNightCycle.m_timeOfDay < 12) ? "AM" : "PM");
+draw_text_spaced(dx + 14, dy, (o_dayNightCycle.m_timeOfDay < 12) ? "AM" : "PM", 2);
 //dx -= 45;
 //dy -= 2;
-dx -= 8;
+dx -= 6;
 dy -= -10;
 
 dx += 17;
 dy += 36;
+var season = weatherGetSeason();
 var day_string = "Spring";
-if (o_dayNightCycle.m_day < 28)
+if (season == kWeatherSeasonSpring)
 	day_string = "Spring";
-else if (o_dayNightCycle.m_day < 56)
+else if (season == kWeatherSeasonSummer)
 	day_string = "Summer";
-else if (o_dayNightCycle.m_day < 56+28)
+else if (season == kWeatherSeasonFall)
 	day_string = "Fall";
-else if (o_dayNightCycle.m_day < 56+56)
+else if (season == kWeatherSeasonWinter)
 	day_string = "Winter";
-day_string = day_string + " " + string(o_dayNightCycle.m_day);
+day_string = day_string + " " + string((o_dayNightCycle.m_day % kWeatherSeasonLength) + 1);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(f_openSans7);
+draw_set_font(global.font_arvo7);
 /*var pen_angle = 190;
 for (var i = 0; i <= string_length(day_string); ++i)
 {
@@ -101,11 +103,12 @@ for (var i = 0; i <= string_length(day_string); ++i)
 			pen_angle - 270);
 }*/
 draw_set_color(c_black);
-draw_text(dx, dy + 1, day_string);
-//draw_text(dx - 1, dy, day_string);
-//draw_text(dx + 1, dy, day_string);
+draw_text_spaced(dx, dy - 1, day_string, 3);
+draw_text_spaced(dx, dy + 1, day_string, 3);
+draw_text_spaced(dx - 1, dy, day_string, 3);
+draw_text_spaced(dx + 1, dy, day_string, 3);
 draw_set_color(c_white);
-draw_text(dx, dy, day_string);
+draw_text_spaced(dx, dy, day_string, 3);
 dx -= 17;
 dy -= 36;
 

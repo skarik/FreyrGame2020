@@ -21,7 +21,7 @@ if (!exists(m_dirt))
 
 if (m_dirt.watered)
 {
-	cropSetWateredToday();
+	_cropSetWateredToday();
 }
 
 /*if (timeofdayDidHourPass())
@@ -37,7 +37,7 @@ if (m_dirt.watered)
 		m_growValue += isDay ? m_growAmountDryDay : m_growAmountDryNight;
 	}
 }*/
-m_growValue = cropGetGrowValue();
+m_growValue = _cropGetGrowValue();
 
 
 var grow_percent = m_growValue / m_growAmountMature;

@@ -4,6 +4,7 @@
 event_inherited();
 
 m_itemDrop = o_pickupCrop_Parsnip;
+m_cropName = "Parsnip";
 
 // Customizable values
 m_growAmountMature = 12 * 3.7;

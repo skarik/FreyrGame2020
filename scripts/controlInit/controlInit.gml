@@ -2,7 +2,7 @@
 #macro kControlUvStyle_FakeMouse 1 
 #macro kControlUvStyle_Unused 2
 
-#macro kControlChoice_Margin 0.33
+#macro kControlChoice_Margin 0.70
 
 xAxis = _controlStructCreate();
 yAxis = _controlStructCreate();

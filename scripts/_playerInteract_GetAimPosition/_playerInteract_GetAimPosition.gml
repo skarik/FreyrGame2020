@@ -21,7 +21,7 @@ if (lastControlType == kControlKB || lastControlType == kControlMouse)
 	var aimX = aim_x + lengthdir_x(aimDistance, aim_dir);
 	var aimY = aim_y + lengthdir_y(aimDistance, aim_dir);
 	
-	return [aimX, aimY];
+	return [aimX, aimY, aimDistance];
 }
 else if (lastControlType == kControlGamepad)
 {
@@ -31,7 +31,7 @@ else if (lastControlType == kControlGamepad)
 	var aimX = aim_x + lengthdir_x(aimDistance, aim_dir);
 	var aimY = aim_y + lengthdir_y(aimDistance, aim_dir);
 	
-	return [aimX, aimY];
+	return [aimX, aimY, aimDistance];
 }
 
-return [x, y];
+return [x, y, 0];

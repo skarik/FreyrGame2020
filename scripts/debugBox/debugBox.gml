@@ -4,7 +4,7 @@
 /// @param {Real} x2
 /// @param {Real} y2
 /// @param {RGBA32} color
-var dbb = new(o_debugBox);
+var dbb = new(o_debugDBox);
     dbb.x1 = argument0; dbb.y1 = argument1;
     dbb.x2 = argument2; dbb.y2 = argument3;
     dbb.image_blend = argument4;

@@ -29,7 +29,7 @@ if (!m_isTilling)
 	}
 	
 	// Clear out tillable if blocked
-	if (exists(collision_circle(tillX, tillY, 4, ob_doodadBreakable, false, true)))
+	if (exists(collision_circle(tillX, tillY, 7, ob_doodadBreakable, false, true)))
 	{
 		currentTillable = null;
 		tillX = 0;
@@ -155,7 +155,7 @@ else
 					if (!exists(collision_point(m_till_x, m_till_y, o_fieldSquare, false, true)))
 					{
 						// delete any canal
-						delete(collision_point(m_till_x + 8, m_till_y + 8, o_miniCanalWater, false, true));
+						delete(collision_point(m_till_x, m_till_y, o_miniCanalWater, false, true));
 						// create depth
 						instance_create_depth(
 							m_till_x - gridSize / 2, m_till_y - gridSize / 2,

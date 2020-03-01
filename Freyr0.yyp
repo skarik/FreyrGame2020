@@ -746,7 +746,7 @@
             "Key": "0ec11171-9b23-4486-9242-13fd1469fb68",
             "Value": {
                 "id": "8218f43c-2367-4367-ab2f-7e866ad7836a",
-                "resourcePath": "scripts\\cropGetGrowValue\\cropGetGrowValue.yy",
+                "resourcePath": "scripts\\_cropGetGrowValue\\_cropGetGrowValue.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -868,6 +868,14 @@
                 "id": "9a987e55-355c-4c8c-8817-be4a1c768e5a",
                 "resourcePath": "sprites\\sui_youDied\\sui_youDied.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "10dd9307-de97-48ff-bb59-82ee0e2a8b1c",
+            "Value": {
+                "id": "d071621d-240f-4c67-89fb-24f34f38e2c4",
+                "resourcePath": "scripts\\debugLine\\debugLine.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2106,7 +2114,7 @@
             "Key": "2792d87a-c6f4-4382-9337-00616843bddb",
             "Value": {
                 "id": "f5c16644-db9c-4cda-94d2-a2a714553f5d",
-                "resourcePath": "scripts\\cropWasWet\\cropWasWet.yy",
+                "resourcePath": "scripts\\_cropWasWet\\_cropWasWet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2547,6 +2555,14 @@
             "Value": {
                 "id": "9bc0b7e1-6e94-4a42-aaab-38fa8dce9244",
                 "resourcePath": "scripts\\cutsceneBackendLoad\\cutsceneBackendLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2d8798ec-6358-4aa8-80a0-d084466b6450",
+            "Value": {
+                "id": "fa70f1cb-17db-442a-b05c-1950786800e9",
+                "resourcePath": "scripts\\debugPoint\\debugPoint.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3292,6 +3308,14 @@
                 "id": "83a3e26e-8bcb-4d6d-88cb-f631647f453c",
                 "resourcePath": "objects\\o_livelyPoweredMultiplier\\o_livelyPoweredMultiplier.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3c2c92f0-e247-4bb5-936d-9accbd54d5fd",
+            "Value": {
+                "id": "cf412f77-6632-4264-81d5-47bb663472df",
+                "resourcePath": "sprites\\sui_f_arvo7\\sui_f_arvo7.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9538,7 +9562,7 @@
             "Key": "afaa5218-be90-4f98-9dea-631e67417cec",
             "Value": {
                 "id": "1d13186b-c131-4866-b47f-266dc9a0b1eb",
-                "resourcePath": "scripts\\cropSetWateredToday\\cropSetWateredToday.yy",
+                "resourcePath": "scripts\\_cropSetWateredToday\\_cropSetWateredToday.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -9767,6 +9791,14 @@
             }
         },
         {
+            "Key": "b3f0d9fb-c83b-46f0-a0f6-e5cab8ab8738",
+            "Value": {
+                "id": "6375efef-4f8d-47c3-a2cd-f2cb996891b6",
+                "resourcePath": "scripts\\cropIsMature\\cropIsMature.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b43a1c23-ae6b-4c75-9a10-b15d5a21d345",
             "Value": {
                 "id": "d6e5c6f0-20f4-43f4-ba32-3116245a522c",
@@ -9794,7 +9826,7 @@
             "Key": "b473aa92-2bd0-4f04-af98-53d376dedc60",
             "Value": {
                 "id": "dd7e326f-aa13-418c-a433-10fa172db2ed",
-                "resourcePath": "objects\\o_debugBox\\o_debugBox.yy",
+                "resourcePath": "objects\\o_debugDBox\\o_debugDBox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -12767,6 +12799,14 @@
             }
         },
         {
+            "Key": "e862f8ac-7e0c-41a3-b9dc-401fdf5c79f7",
+            "Value": {
+                "id": "cf7863c3-13f5-48ab-b653-7c4b9976ec99",
+                "resourcePath": "objects\\o_debugDLine\\o_debugDLine.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e87479d8-71ad-4a43-8ad3-a48a0132a237",
             "Value": {
                 "id": "56b7d4e2-5049-4719-b992-ddbbcd17f352",
@@ -14254,6 +14294,8 @@
         "d6824d33-df14-4367-af99-f935bbbd2d42",
         "690537e3-1477-460b-8d46-7a4a7d425143",
         "d0013833-85bc-4327-b83e-936197178858",
+        "10dd9307-de97-48ff-bb59-82ee0e2a8b1c",
+        "2d8798ec-6358-4aa8-80a0-d084466b6450",
         "1fbcfcc3-39c9-4fcc-a260-94c56424299c",
         "12300d86-985b-4fdd-b5b3-a41b0158c14e",
         "8f9bb50b-0d6e-44e3-b16c-422d9614f46a",
@@ -14452,6 +14494,7 @@
         "0ec11171-9b23-4486-9242-13fd1469fb68",
         "2792d87a-c6f4-4382-9337-00616843bddb",
         "afaa5218-be90-4f98-9dea-631e67417cec",
+        "b3f0d9fb-c83b-46f0-a0f6-e5cab8ab8738",
         "b9d6ab6a-64f9-40fc-b49c-2a81164ea5fd",
         "4284635e-8029-477d-980f-c434a5bfa7c6",
         "7fbeed61-ddbb-4052-99ac-06cf3dbd61d8",

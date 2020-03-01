@@ -39,11 +39,31 @@ if (m_farmoverlay_blend > 0.0)
 	draw_text_spaced(dx + 8, dply - 40, "  " + m_farmoverlay_targetString, 2);
 	drawControl(dx - string_length(m_farmoverlay_targetString) * 5 * 0.5,
 				dply - 40,
-				null,null,
-				Settings.ctUse, m_player.lastControlType, m_player.lastGamepadType);
+				null, null,
+				m_farmoverlay_targetControl, m_player.lastControlType, m_player.lastGamepadType);
 	
 	draw_set_alpha(1.0);
 
+	// reset target to original one
+	surface_reset_target();
+	surface_set_target(m_surfaceLightweight);
+}
+
+// draw text for crop type
+if (exists(m_player.currentCrop))
+{
+	// set target to display text & control properly (w/ outline)
+	surface_reset_target();
+	surface_set_target(m_surface);
+	
+	draw_set_alpha(1.0);
+	draw_set_font(global.font_arvo7);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+	draw_set_color(c_white);
+	draw_text_spaced(m_player.currentCrop.x - (GameCamera.x - GameCamera.width / 2),
+					 m_player.currentCrop.y - (GameCamera.y - GameCamera.height / 2) + 8, m_player.currentCrop.m_cropName, 2);
+	
 	// reset target to original one
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
