@@ -3,10 +3,6 @@
 // this is the cutscene for the first time through the game or on a new file.
 // the name "init" is thusly fitting
 
-[startup]
-overridesave="1"
-override="rm_fools_tower"
-
 palette
 {
 	type wide
@@ -40,18 +36,18 @@ wait
 
 audio
 {
-    play audio/intro_rift.ogg
+    play audio/intro_title_full.ogg
 }
 wait
 {
     type time
-    time 9.7
+    time 10.1
 }
 
-audio
-{
-    play audio/intro_title.ogg
-}
+//audio
+//{
+//    play audio/intro_title.ogg
+//}
 wait
 {
     type input
@@ -68,13 +64,16 @@ wait
 
 music // start with the librarian track
 {
-    1 audio/intro_a0.ogg
-    2 audio/intro_a1.ogg
-    3 audio/intro_a2.ogg
-    4 audio/intro_a3.ogg
-    5 audio/intro_a4.ogg
+    1 audio/intro_f1_piano1.ogg
+    2 audio/intro_f2_piano2.ogg
+    3 audio/intro_f3_piano3.ogg
+    4 audio/intro_f4_perc.ogg
+    5 audio/intro_f5_violin.ogg
+	6 audio/intro_f6_cello.ogg
+	7 audio/intro_f7_xylo.ogg
+	8 audio/intro_f8_strings.ogg
     volume 0.0
-    3volume 1.0
+    1volume 1.0
     pitch 1.0
 }
 
@@ -118,6 +117,14 @@ lines // continue with talking & the nonsense
     1 I've been doing upkeep on my library and it appears some of my records on you have been $2lost$0.$p $wHow curious$$.
 }
 
+// go to the first track on pre-choice
+music
+{
+    volume 0.0
+    1volume 1.0
+	3volume 1.0
+}
+
 // make librarian shake her head at this
 ai
 {
@@ -140,13 +147,6 @@ ai
 	sprite default
 }
 
-// go to the first track on pre-choice
-music
-{
-    volume 0.0
-    1volume 1.0
-}
-
 lines
 {
     target  imp
@@ -167,6 +167,15 @@ ai
 	command sprite
 	sprite look_up
 	loop true
+}
+
+// go to the first track on pre-choice
+music
+{
+    volume 0.0
+    1volume 1.0
+	3volume 1.0
+	6volume 1.0
 }
 
 choice
@@ -195,6 +204,8 @@ music
 {
     volume 0.0
     2volume 1.0
+	3volume 1.0
+	6volume 1.0
 }
 
 lines
@@ -216,7 +227,10 @@ choice
 music
 {
     volume 0.0
-    4volume 1.0
+    2volume 1.0
+	3volume 1.0
+	6volume 1.0
+	7volume 1.0
 }
 
 lines
@@ -273,7 +287,11 @@ ai
 music
 {
     volume 0.0
-    5volume 1.0
+	2volume 1.0
+	3volume 1.0
+	6volume 1.0
+	7volume 1.0
+	8volume 1.0
 }
 
 signal // show the librarian

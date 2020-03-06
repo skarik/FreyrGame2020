@@ -871,6 +871,14 @@
             }
         },
         {
+            "Key": "10dc0ebb-9579-48ae-898e-032ddd2109b0",
+            "Value": {
+                "id": "cb9ae167-1972-4844-82f7-c0bf87d0af90",
+                "resourcePath": "datafiles_yy\\audio\\intro_f5_violin.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "10dd9307-de97-48ff-bb59-82ee0e2a8b1c",
             "Value": {
                 "id": "d071621d-240f-4c67-89fb-24f34f38e2c4",
@@ -1655,6 +1663,14 @@
             }
         },
         {
+            "Key": "1dcec205-ff70-4adc-9a4e-7e7d9fa16a3f",
+            "Value": {
+                "id": "95240680-c007-42cf-b8cb-fc47e0100d35",
+                "resourcePath": "datafiles_yy\\audio\\intro_f2_piano2.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "1dd33fe3-5cc1-40ab-8889-6c8bc05646e1",
             "Value": {
                 "id": "ba2274ce-25e0-45d9-ae01-56f5df736379",
@@ -2183,6 +2199,14 @@
             }
         },
         {
+            "Key": "28034fc5-1768-44b7-acb9-fd345598e81e",
+            "Value": {
+                "id": "1f09dee2-4fa3-495b-ae0e-6153639a473a",
+                "resourcePath": "datafiles_yy\\audio\\intro_f7_xylo.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "282e4830-f74f-4f50-b19d-e11bf07e5e3e",
             "Value": {
                 "id": "b94c4f2a-9cc1-4c92-9ee8-29dfc9a42804",
@@ -2228,6 +2252,14 @@
                 "id": "bc7adba6-f780-41ba-a499-578e229f23fc",
                 "resourcePath": "scripts\\powerLogic_SubtractOutput\\powerLogic_SubtractOutput.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "291ade67-d02c-4953-a3ab-154b5bde3971",
+            "Value": {
+                "id": "4429ff24-bb70-41ac-9f8e-b1dad6cc5c4b",
+                "resourcePath": "datafiles_yy\\audio\\intro_title_full.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3103,6 +3135,14 @@
             }
         },
         {
+            "Key": "381097f8-548b-465e-bf48-82154d11e21b",
+            "Value": {
+                "id": "aff7ac8b-cb4e-41e4-afe6-dc34bbe2afc8",
+                "resourcePath": "datafiles_yy\\audio\\intro_f4_perc.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "386a5664-280f-4731-ba74-26e6e493275b",
             "Value": {
                 "id": "23ce13a8-000a-4cf2-a384-5f48a8f04be2",
@@ -3276,14 +3316,6 @@
                 "id": "96ebd0bb-f72d-4990-adaf-d6233e57f741",
                 "resourcePath": "scripts\\exists\\exists.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "3b9b1822-b585-4d8f-82b1-f3d337fd9b94",
-            "Value": {
-                "id": "19636e88-e015-4d87-9c10-f873c1d9e5be",
-                "resourcePath": "datafiles_yy\\audio\\intro_a2.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3628,6 +3660,14 @@
                 "id": "fc7a3f6d-b1bd-4e6a-8e12-2850f357d5ba",
                 "resourcePath": "views\\42ad3535-25d4-4a4d-8a66-633ba181c3a0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "43020f4c-c3a8-475a-9895-7e6269264df9",
+            "Value": {
+                "id": "f8dec8a8-1290-463a-b24b-64fe3eefdb6f",
+                "resourcePath": "datafiles_yy\\audio\\intro_f8_strings.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -4863,14 +4903,6 @@
             }
         },
         {
-            "Key": "5953b50a-a114-4f7b-b4b4-5a24b2479722",
-            "Value": {
-                "id": "453652a2-cfea-49c6-a893-0020c0eb4b73",
-                "resourcePath": "datafiles_yy\\audio\\intro_a3.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "595d7641-71d1-4347-bfcb-487e043bf839",
             "Value": {
                 "id": "2136591c-7cac-406f-9983-ebe0a0be783e",
@@ -5175,14 +5207,6 @@
             }
         },
         {
-            "Key": "5e4bef73-57dc-4402-b910-3381428b1abe",
-            "Value": {
-                "id": "0f842b09-1e8c-4fcd-af32-aa816a3d17c8",
-                "resourcePath": "datafiles_yy\\audio\\intro_rift.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "5e6feca7-f07a-4be7-947b-a1cc6b63d632",
             "Value": {
                 "id": "568276cd-f1ed-4814-aa5c-4858c48b9b8e",
@@ -5195,14 +5219,6 @@
             "Value": {
                 "id": "c19039d8-5a65-4567-8ae8-915e12773404",
                 "resourcePath": "datafiles_yy\\GMLive\\regexp.ndll.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "5f0960a7-48d6-4614-aa6e-bf0169b3bc70",
-            "Value": {
-                "id": "7e67d403-5662-4e7f-9c72-3ee1c7a97fde",
-                "resourcePath": "datafiles_yy\\audio\\intro_a1.ogg.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -5919,6 +5935,14 @@
             }
         },
         {
+            "Key": "6d6fd971-16c9-49c9-8083-72e02c59b3a0",
+            "Value": {
+                "id": "ac3933de-1c51-460c-9aa7-2d00c68c4940",
+                "resourcePath": "datafiles_yy\\audio\\intro_f3_piano3.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "6d924380-1527-4115-ae5c-a72e70a184bc",
             "Value": {
                 "id": "7718dffb-6ef2-444f-9e51-7628f8ffbfb5",
@@ -6212,6 +6236,14 @@
                 "id": "a61d1a19-07e6-44e1-b699-07d23fcd28c4",
                 "resourcePath": "views\\709cab4e-9a99-4422-8e74-5d5bbd4c0272.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "711b1ddf-1d67-44aa-9b7c-097705b7e588",
+            "Value": {
+                "id": "81c041cd-f2ad-4936-9ea9-b516eb06495f",
+                "resourcePath": "datafiles_yy\\audio\\intro_f1_piano1.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -8087,14 +8119,6 @@
             }
         },
         {
-            "Key": "95d83bc1-a2df-4c0a-864c-4da393822e07",
-            "Value": {
-                "id": "f874bf49-a496-4fe1-89d9-bc758ab6f1ad",
-                "resourcePath": "datafiles_yy\\audio\\intro_a4.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "95dd9f43-3e42-44f1-b3ef-6994a858309c",
             "Value": {
                 "id": "2a877855-be0b-467c-85dd-f68ffb8a77ed",
@@ -9020,14 +9044,6 @@
                 "id": "0959a5ec-47d8-4b0f-9b1d-3a03aaeb7a29",
                 "resourcePath": "scripts\\aimotionFaceAt\\aimotionFaceAt.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "a5ecfe2f-d588-4cf7-8d74-228a4f3e18bb",
-            "Value": {
-                "id": "104772c3-38f0-413e-93be-519c5e979c2c",
-                "resourcePath": "datafiles_yy\\audio\\intro_a0.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -12951,6 +12967,14 @@
             }
         },
         {
+            "Key": "ebda635a-bcae-4d39-8804-0218eb6ce22a",
+            "Value": {
+                "id": "b5242e86-8be9-4796-8266-6ea4c313926a",
+                "resourcePath": "datafiles_yy\\audio\\intro_f6_cello.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "ebed6cfc-bcee-4f8a-a27d-478e6a8f98c1",
             "Value": {
                 "id": "169e180c-6b33-4b32-8aec-2894cf54c204",
@@ -13364,14 +13388,6 @@
                 "id": "cf04fc20-af41-48c8-bd2b-554c6aad0e47",
                 "resourcePath": "sounds\\snd_physStepMetal3\\snd_physStepMetal3.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "f3c20a74-660a-4626-96a7-ecda658aba80",
-            "Value": {
-                "id": "042cf71c-0007-4ffd-bdc2-91c2fa9318d9",
-                "resourcePath": "datafiles_yy\\audio\\intro_title.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
