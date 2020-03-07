@@ -27,6 +27,9 @@ Settings.layer = System.layer;
 // Load fonts
 fontsLoad();
 
+// Load soundscales
+soundscapesLoad();
+
 // Loop through each room and set the views
 var t_currentRoom = room_first;
 while (room_exists(t_currentRoom))

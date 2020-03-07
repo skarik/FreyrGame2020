@@ -1,0 +1,72 @@
+// This serves as a documentation as well as actual desert
+// Basically ripped off Valve's format again, because know it by heart and it's easy to parse
+// (i made so many shitty half life and hl2 maps, y'all)
+// all of these soundscapes are loaded and available in the engine. validity is checked on load, so check debug console for errors
+
+desert.example
+{
+	// This is the time it takes for this soundscape to crossfade in
+	fadetime 1.0
+	
+	playlooping
+	{
+		volume		0.98
+		pitch		1.0
+		
+		// preset fade for the sound
+		attenuation	default 
+		// the channel the sound plays in. Valid values are: world, speech, music, key
+		channel		world			
+		
+		// select the 0th point in the position array set in the editor
+		position	0
+		
+		wave		"audio/bg/wind_gentle0.ogg"
+	}
+	
+	playrandom
+	{
+		// time between plays. min & max, value selected between the two
+		time		1.0, 4.0
+		// volume & pitch sound plays at
+		volume		0.4, 1.0
+		pitch		0.9, 1.05
+		
+		attenuation	default
+		channel		world		
+	
+		// select a random position around the player, but limit it to fairly near
+		position random near
+		
+		rndwave
+		{
+			wave	"audio/bg/bird_caw0.wav"
+			wave	"audio/bg/bird_caw1.wav"
+			wave	"audio/bg/bird_caw2.wav"
+			wave	snd_ambientBirdCaw0			// Can also specify name of in-game resources
+		}
+	}
+	
+	// Overrides the local DSP, which is otherwise guessed via floor material & environment properties
+	// This won't be supported until an actual audio library is used
+	dsp
+	{
+		// name of the DSP effect to kick in
+		id		muffled_expanse
+		
+		volume	1.0
+		width	100
+	}
+}
+
+desert.sandy
+{
+}
+
+desert.oasis_town
+{
+}
+
+desert.oasis_farm
+{
+}

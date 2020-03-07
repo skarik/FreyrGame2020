@@ -37,6 +37,7 @@ wait
 audio
 {
     play audio/intro_title_full.ogg
+	channel music
 }
 wait
 {

@@ -172,7 +172,7 @@ portrait
 	align left
 	face right
 	character player
-	expression questioning
+	expression neutral
 }
 
 lines
@@ -203,6 +203,17 @@ lines
 
 // TODO: Cg right here, or have nathan walk up
 
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.0
+	align left
+	face right
+	character player
+	expression questioning
+}
+
 lines
 {
 	// this means the player
@@ -228,6 +239,17 @@ lines
 	
 	1 My name is $3Nathan$0.
 	2 At least, that's what everyone calls me.
+}
+
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.0
+	align left
+	face right
+	character player
+	expression neutral
 }
 
 choice

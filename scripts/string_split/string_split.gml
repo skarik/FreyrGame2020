@@ -23,7 +23,32 @@
     tlen = string_length(token);
     while (string_length(str) != 0)
 	{
-        temp = string_pos(token, str);
+		temp = 0;
+		
+		// Find position of any of the tokens
+		for (var i = 0; i < tlen; ++i)
+		{
+			var l_token = string_char_at(token, i + 1);
+			var l_temp = string_pos(l_token, str);
+			if (temp == 0 || (l_temp != 0 && l_temp < temp))
+				temp = l_temp;
+		}
+		
+		// If any tokens, split on it
+		if (temp)
+		{
+	        if (temp != 1 || !ignore)
+				list[array_length_1d(list)] = string_copy(str, 1, temp-1);
+	        str = string_copy(str, temp + 1, string_length(str));
+	    }
+		else
+		{
+			list[array_length_1d(list)] = str;
+	        str = "";
+	    }
+		
+		/*
+		temp = string_pos(token, str);
         if (temp)
 		{
             if (temp != 1 || !ignore)
@@ -37,6 +62,7 @@
 			list[array_length_1d(list)] = str;
             str = "";
         }
+		*/
     }
     return list;
 }
