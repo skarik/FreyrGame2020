@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "049b3882-6b3d-4cf2-bb27-8fc9f99d3ed6",
+            "Value": {
+                "id": "76d9af03-3172-4412-8849-894d9abf11f1",
+                "resourcePath": "objects\\o_clockScheduler\\o_clockScheduler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "04ad5e61-cfb9-4c1b-8a88-dcfca90eadce",
             "Value": {
                 "id": "bfaf8b6a-83f2-446b-9125-b32f6587cb36",

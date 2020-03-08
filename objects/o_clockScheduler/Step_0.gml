@@ -9,10 +9,14 @@ if (floor(timeofdayGetHour()) == 0 && m_hourFlags[23] == 1) {
 	}
 }
 
-//In the most terrible fashion possible.
-
+//Do timey things in the most terrible fashion possible.
 if (m_hourFlags[timeofdayGetHour()] == 0) {
+	show_debug_message("Doing things for hour: " + string(floor(timeofdayGetHour())));
 	//Go do eventy things with other objects in the game.
-	show_debug_message("Doing things for hour: " + string(timeofdayGetHour()));
+	for (var i = 0; i < instance_number(ob_characterGroundInteractable); i += 1) {
+		with(instance_find(ob_characterGroundInteractable, i)) {
+			event_user(3);
+		}
+	}
 	m_hourFlags[timeofdayGetHour()] = 1;
 }
