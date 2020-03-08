@@ -6,7 +6,7 @@ draw_set_alpha(1.0);
 // draw the belt
 {
 	var dspace = 25;
-	dx = 5 + smoothstep(m_bag_totalBlend) * (GameCamera.width * 0.5 - 5 - dspace * 6 * 0.5);
+	dx = 5 + smoothstep(1.0 - m_bag_totalBlend) * (GameCamera.width * 0.5 - 5 - dspace * 6 * 0.5);
 	dy = GameCamera.height - 30 + smoothstep(m_inCutsceneBlend) * 80;
 	
 	// save the position
@@ -107,7 +107,8 @@ draw_set_alpha(1.0);
 	draw_set_valign(fa_top);
 	draw_set_color(c_white);
 	draw_set_alpha((1.0 - m_bag_totalBlend) * saturate(m_inventory_selectorNameBlend * 4.0));
-	draw_text_spaced(dx + 4 - 100.0 * smoothstep(1.0 - m_inventory_selectorNameBlend), dy - 25,
+	//draw_text_spaced(dx + 4 - 100.0 * smoothstep(1.0 - m_inventory_selectorNameBlend), dy - 25,
+	draw_text_spaced(dx + 4, dy - 25 - 4 * smoothstep(1.0 - m_inventory_selectorNameBlend),
 					 m_inventory_selectorName, 3);
 		
 	// reset target to proper one

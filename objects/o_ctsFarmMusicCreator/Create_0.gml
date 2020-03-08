@@ -15,7 +15,7 @@ if (questGetValue(kQidIntroSequence) > 30
 	}*/
 	if (!exists(o_mus00_Oasis))
 	{
-		new(o_mus00_Oasis);
+		//new(o_mus00_Oasis);
 		//questSetValue(kQidIntroSequence, 40); // HACK
 	}
 }
@@ -23,7 +23,7 @@ else if (questGetValue(kQidIntroSequence) > 10)
 {
 	if (!exists(o_mus00_Oasis))
 	{
-		new(o_mus00_Oasis);
+		//new(o_mus00_Oasis);
 	}
 }
 

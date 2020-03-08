@@ -22,6 +22,10 @@ m_cam_last_target_y = 0;
 m_cam_last_final_x = 0;
 m_cam_last_final_y = 0;
 
+// Focus offset, for changing the "center"
+m_cam_focus_offset_x = 0;
+m_cam_focus_offset_y = 0;
+
 #region Focus State
 // Focuses are specifc points the camera will gravitate to when the player is nearby.
 // They're used for centered things upon a specific area, dramatically.

@@ -17,6 +17,9 @@ else
 	m_sbag_blend = max(0.0, m_sbag_blend - Time.deltaTime * 5.0);
 }
 
+// update offsets
+camPlayerSetCenterOffset((m_bag_alignright ? +1 : -1) * smoothstep(m_bag_totalBlend) * 160, 0.0);
+
 if (o_PlayerTest.m_usingInventory)
 {
 	var cursor_x = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));

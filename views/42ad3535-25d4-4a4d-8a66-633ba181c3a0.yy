@@ -9,7 +9,8 @@
         "c8117af1-cffe-4a01-b0cf-4c538ac14889",
         "7e5be803-e523-49f7-a1bb-40b75a5ee468",
         "fb023a45-be22-4f8d-9669-4205559cc402",
-        "19c7983e-3e09-4742-a0fa-526ebd05bd4b"
+        "19c7983e-3e09-4742-a0fa-526ebd05bd4b",
+        "9f00ea0d-e53d-44c8-9e1b-ee14d8933694"
     ],
     "filterType": "GMScript",
     "folderName": "Player Camera",

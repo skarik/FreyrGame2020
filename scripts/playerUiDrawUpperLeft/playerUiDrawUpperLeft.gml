@@ -54,9 +54,10 @@ draw_set_valign(fa_bottom);
 draw_set_color(c_white);
 draw_set_alpha(1.0);
 
-var dy_btn_base = 260 - 18;
+var dx_btn_base = 20 - smoothstep(m_inCutsceneBlend) * 200 - smoothstep(m_bag_totalBlend) * 200;
+var dy_btn_base = 260 - 18 + 50;
 
-dx = 20 - smoothstep(m_inCutsceneBlend) * 200;
+dx = dx_btn_base;
 dy = dy_btn_base;
 //dy = 80 - smoothstep(m_inCutsceneBlend) * 200;
 //draw_sprite(sui_buttonContext, 0, dx, dy);
@@ -105,7 +106,7 @@ dy = dy_btn_base;
 
 //dx = 20;
 //dy = 100 - smoothstep(m_inCutsceneBlend) * 200;
-dx = 20 - smoothstep(m_inCutsceneBlend) * 200;
+dx = dx_btn_base;
 dy = dy_btn_base + 21;
 if (!o_PlayerTest.isBlocking)
 {
@@ -178,7 +179,7 @@ else
 
 //dx = 15;
 //dy = 115 - smoothstep(m_inCutsceneBlend) * 200
-dx = 20 - smoothstep(m_inCutsceneBlend) * 200;
+dx = dx_btn_base;
 dy = dy_btn_base + 21 + 21;
 //draw_sprite(sui_buttonContext, 0, dx, dy);
 //draw_sprite(sui_useIcons, o_PlayerTest.isBlocking ? 0 : 1, dx + 8, dy + 7);

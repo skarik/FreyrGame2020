@@ -85,6 +85,10 @@ m_lockStrengthFader -= Time.deltaTime;
 post_final_x = lerp(post_final_x, m_lockX, smoothstep(l_lockStrength));
 post_final_y = lerp(post_final_y, m_lockY, smoothstep(l_lockStrength));
 
+// Apply the center offset now
+post_final_x += m_cam_focus_offset_x;
+post_final_y += m_cam_focus_offset_y;
+
 // Clamp to the room size
 post_final_x = clamp(post_final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
 post_final_y = clamp(post_final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);

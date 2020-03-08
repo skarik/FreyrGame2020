@@ -35,6 +35,8 @@ m_seed_offsets = [
 	[23, 59], [47, 59], [71, 59], [95, 59], [119, 59], [143, 59]//, [172, 59]
 ];
 
+m_bag_alignright = 0;
+
 m_bag_abs_offsets = array_create(0);
 m_bag_base_x = 0;
 m_bag_base_y = 0;
