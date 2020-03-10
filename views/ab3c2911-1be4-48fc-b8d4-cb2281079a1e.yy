@@ -6,7 +6,8 @@
     "children": [
         "80f32a44-1552-4c9c-a006-dd2639180d84",
         "0a550bec-4366-4aae-99ff-63683d9aac36",
-        "4924b33e-da1d-4ff3-967e-8b3e81597b68"
+        "4924b33e-da1d-4ff3-967e-8b3e81597b68",
+        "0db81af4-1c8a-47dd-9140-598bb67b8513"
     ],
     "filterType": "GMSound",
     "folderName": "Ambient",

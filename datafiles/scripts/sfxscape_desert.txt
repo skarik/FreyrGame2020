@@ -69,4 +69,23 @@ desert.oasis_town
 
 desert.oasis_farm
 {
+	fadetime 2.0
+
+	// looping audio for the water
+	playlooping
+	{
+		volume		0.80
+		pitch		1.0
+		position	0
+		wave		snd_ambientWaterLapping
+	}
+	
+	// looping audio for the stream
+	playlooping
+	{
+		volume		0.10
+		pitch		0.6
+		position	1
+		wave		snd_ambientWaterStream0
+	}
 }

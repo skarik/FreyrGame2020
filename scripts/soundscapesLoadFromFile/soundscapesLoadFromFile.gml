@@ -101,6 +101,12 @@ while (!file_text_eof(fp))
         var key = string_copy(line, 1, sep - 1);
         var value = string_copy(line, sep+1, string_length(line) - sep);
         value = string_rtrim(string_ltrim(value)); // Get rid of extra whitespace
+		// Fix if empty value
+		if (string_length(key) == 0)
+		{
+			key = value;
+			value = "";
+		}
 		
 		// Now that we have the key-value, we perform parsing
 		if (key == "fadetime")
@@ -175,8 +181,8 @@ while (!file_text_eof(fp))
 			var volume_list = string_split(volume, ", ", true);
 			if (array_length_1d(volume_list) == 1)
 				 volume_list[1] = volume_list[0];
-			read_soundinfo_instance.volume_min = volume_list[0];
-			read_soundinfo_instance.volume_max = volume_list[1];
+			read_soundinfo_instance.volume_min = real(volume_list[0]);
+			read_soundinfo_instance.volume_max = real(volume_list[1]);
 			
 			var pitch = ds_map_find_value(read_soundscape_soundinfo_map, "pitch");
 			if (is_undefined(pitch))
@@ -184,8 +190,8 @@ while (!file_text_eof(fp))
 			var pitch_list = string_split(pitch, ", ", true);
 			if (array_length_1d(pitch_list) == 1)
 				 pitch_list[1] = pitch_list[0];
-			read_soundinfo_instance.pitch_min = pitch_list[0];
-			read_soundinfo_instance.pitch_max = pitch_list[1];
+			read_soundinfo_instance.pitch_min = real(pitch_list[0]);
+			read_soundinfo_instance.pitch_max = real(pitch_list[1]);
 			
 			var time = ds_map_find_value(read_soundscape_soundinfo_map, "time");
 			if (is_undefined(time))
@@ -193,8 +199,8 @@ while (!file_text_eof(fp))
 			var time_list = string_split(time, ", ", true);
 			if (array_length_1d(time_list) == 1)
 				 time_list[1] = time_list[0];
-			read_soundinfo_instance.time_min = time_list[0];
-			read_soundinfo_instance.time_max = time_list[1];
+			read_soundinfo_instance.time_min = real(time_list[0]);
+			read_soundinfo_instance.time_max = real(time_list[1]);
 			
 			var attenuation = ds_map_find_value(read_soundscape_soundinfo_map, "attenuation")
 			if (is_undefined(attenuation))
@@ -229,6 +235,14 @@ while (!file_text_eof(fp))
 				read_soundinfo_instance.position = kSoundscapeSoundPositionRandomNear;
 			else
 				read_soundinfo_instance.position = real(position);
+				
+			var wave = ds_map_find_value(read_soundscape_soundinfo_map, "wave");
+			if (!is_undefined(wave))
+			{
+				wave = string_replace_all(wave, "\"", "");
+				wave = string_replace_all(wave, "'", "");
+				read_soundinfo_instance.wavelist[0] = wave;
+			}
 				
 			// Done with map
 			ds_map_destroy(read_soundscape_soundinfo_map);
