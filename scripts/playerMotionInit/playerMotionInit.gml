@@ -13,9 +13,9 @@ kMoveAccelerationStop = 500;
 kMoveAccelerationAir = 200;
 kMoveAccelerationAirStop = 10;
 
-kDashDistance = 48;
-kDashTime = 0.3;
-kDashCooldown = 0.5;
+kDashDistance = 52;
+kDashTime = 0.5;
+kDashCooldown = 0.15;
 kDashInAir = true;
 
 #endregion
