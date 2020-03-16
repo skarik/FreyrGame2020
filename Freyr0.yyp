@@ -5471,6 +5471,14 @@
             }
         },
         {
+            "Key": "62c59dc0-aa49-4cc2-bf8c-bdac652ca6df",
+            "Value": {
+                "id": "e535af86-90f1-410a-8873-29f74842bee9",
+                "resourcePath": "scripts\\gaudio_sound_get_length\\gaudio_sound_get_length.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "62efac6d-29fe-489f-8724-3f81a7d57ca7",
             "Value": {
                 "id": "c396989c-a464-46f7-b77b-564ce085ed1b",
@@ -14500,6 +14508,7 @@
         "c7ad07ef-99ec-4baf-b3e9-7ac7e6a33a04",
         "f56ee91a-c443-4ea5-a4fd-a4dc5b395514",
         "5b9fcea2-dc5f-49f5-bba1-8c52eadf7df4",
+        "62c59dc0-aa49-4cc2-bf8c-bdac652ca6df",
         "eb222c9a-807c-4ecf-90f8-dc3f5e070335",
         "9135344b-5481-4a4f-9c69-5b2dbfd261d3",
         "73fcd9dc-9b26-4343-9cb9-567f9342d220",

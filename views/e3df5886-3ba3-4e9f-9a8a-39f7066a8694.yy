@@ -11,7 +11,8 @@
         "20811fc6-9fd0-4fb4-8ebc-ab2d9d17a209",
         "fbf7de64-6ed3-424e-9e7a-c8ef9bae3dd2",
         "a2c923fd-c522-4ba7-826a-414a078531f4",
-        "39d244fb-3f9a-4eac-b0c8-cb25a1cbf3e9"
+        "39d244fb-3f9a-4eac-b0c8-cb25a1cbf3e9",
+        "62c59dc0-aa49-4cc2-bf8c-bdac652ca6df"
     ],
     "filterType": "GMScript",
     "folderName": "Audio",

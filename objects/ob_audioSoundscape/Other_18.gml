@@ -33,5 +33,8 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 	{
 		m_audioCooldown[i] = 1.0 + random_range(soundinfo.time_min, soundinfo.time_max);
 		m_audioSound[i] = null;
+		m_audioIndexDeck[i] = ds_list_create(); // Initial deck setup
+		for (var k = 0; k < array_length_1d(soundinfo.wavelist); ++k)
+			ds_list_add(m_audioIndexDeck[i], k);
 	}
 }
