@@ -7,7 +7,8 @@ var at_x = argument0;
 var at_y = argument1;
 var sound_to_play = argument2;
 
-if (sound_to_play != null && audio_exists(sound_to_play))
+//if (sound_to_play != null && audio_exists(sound_to_play))
+if (sound_to_play != null)
 {
 	var player = new(ob_audioPlayer);
 		player.x = at_x;

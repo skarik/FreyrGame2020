@@ -45,7 +45,7 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 			if (soundinfo.position == kSoundscapeSoundPositionRandom)
 			{
 				var random_dir = random(360);
-				var random_dist = random_range(200, 400);
+				var random_dist = random_range(200, 500);
 				soundpos = [GameCamera.x + lengthdir_x(random_dist, random_dir), GameCamera.y + lengthdir_y(random_dist, random_dir)];
 			}
 			else if (soundinfo.position == kSoundscapeSoundPositionRandomNear)
@@ -57,7 +57,7 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 			else if (soundinfo.position == kSoundscapeSoundPositionRandomFar)
 			{
 				var random_dir = random(360);
-				var random_dist = random_range(350, 700);
+				var random_dist = random_range(450, 800);
 				soundpos = [GameCamera.x + lengthdir_x(random_dist, random_dir), GameCamera.y + lengthdir_y(random_dist, random_dir)];
 			}
 			else if (soundinfo.position == 0 && exists(m_position0))

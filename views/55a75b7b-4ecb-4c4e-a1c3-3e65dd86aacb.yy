@@ -4,6 +4,7 @@
     "mvc": "1.1",
     "name": "55a75b7b-4ecb-4c4e-a1c3-3e65dd86aacb",
     "children": [
+        "07510a06-bbc4-42ad-a13c-acb4bfd32f3a",
         "8069aa28-c713-42f2-a91d-2d0892f36252",
         "bf63e722-a85c-40ee-8b56-4654b6905a0b",
         "dd67a3da-90ad-48fe-8d76-1ebf79aa067a",
@@ -32,7 +33,8 @@
         "16e1c640-37b6-433d-a9e7-50fadaf98a5f",
         "1734abf2-bcab-48aa-816a-031f697fa87e",
         "929a85ac-34d4-4dec-91c0-d7c7958e4ecc",
-        "e35aada9-9c0a-48d6-a9b4-13a25ca5eee3"
+        "e35aada9-9c0a-48d6-a9b4-13a25ca5eee3",
+        "953f6d41-a4dc-45f2-966f-41a275c1b2a2"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "audio",

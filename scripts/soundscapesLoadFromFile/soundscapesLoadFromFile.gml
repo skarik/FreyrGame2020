@@ -264,9 +264,12 @@ while (!file_text_eof(fp))
         var key = string_copy(line, 1, sep - 1);
         var value = string_copy(line, sep+1, string_length(line) - sep);
         value = string_rtrim(string_ltrim(value)); // Get rid of extra whitespace
-        
-		// Skip empty keys
-		if (string_length(key) <= 0) continue;
+		// Fix if empty value
+		if (string_length(key) == 0)
+		{
+			key = value;
+			value = "";
+		}
 		
 		// Do specific key types
 		if (key == "rndwave")
@@ -274,6 +277,9 @@ while (!file_text_eof(fp))
 			read_state = STATE_READ_BEGIN_WAVLIST;
 			continue;
 		}
+		
+		// Skip saving empty keys
+		if (string_length(key) <= 0) continue;
 		
         // Add the values to the ds_map
         if (!ds_map_add(read_soundscape_soundinfo_map, key, value))
@@ -317,7 +323,13 @@ while (!file_text_eof(fp))
 		// Do specific key types
 		if (key == "wave")
 		{	// Save the wave
-			read_soundinfo_instance.wavelist[array_length_1d(read_soundinfo_instance.wavelist)] = value;
+			var wave = value;
+			if (!is_undefined(wave))
+			{
+				wave = string_replace_all(wave, "\"", "");
+				wave = string_replace_all(wave, "'", "");
+				read_soundinfo_instance.wavelist[array_length_1d(read_soundinfo_instance.wavelist)] = wave;
+			}
 		}
 		else
 		{	// Unrecognized key
