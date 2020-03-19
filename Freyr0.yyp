@@ -895,6 +895,14 @@
             }
         },
         {
+            "Key": "10b1c458-bb7c-4e1e-b448-7365a371db86",
+            "Value": {
+                "id": "75ab2a8c-2e4b-48fe-8a55-1e3391008416",
+                "resourcePath": "objects\\o_debugDText\\o_debugDText.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "10c710b5-7a83-43ac-aba8-85dbafe949e6",
             "Value": {
                 "id": "9a987e55-355c-4c8c-8817-be4a1c768e5a",
@@ -3839,6 +3847,14 @@
             }
         },
         {
+            "Key": "442f277b-92f4-4b46-9c5e-3e57f599bcf1",
+            "Value": {
+                "id": "84be805d-3bb1-4bca-a527-dc4de7511dd5",
+                "resourcePath": "scripts\\debugText\\debugText.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4469e920-8b59-42e2-80dd-58f0b2294f8c",
             "Value": {
                 "id": "b51d54c3-f31f-49fa-8eaa-570d3d74a10e",
@@ -6475,6 +6491,14 @@
             "Value": {
                 "id": "e91f12c0-73fe-4715-8f13-4014f5027fb8",
                 "resourcePath": "scripts\\controlAnyKey\\controlAnyKey.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "72369321-49e8-41cd-bce0-be0b9aefdaa9",
+            "Value": {
+                "id": "810003dc-a076-44a7-bd2e-4bad0d05c3ae",
+                "resourcePath": "scripts\\ainodesLoad\\ainodesLoad.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -14790,6 +14814,7 @@
         "d0013833-85bc-4327-b83e-936197178858",
         "10dd9307-de97-48ff-bb59-82ee0e2a8b1c",
         "2d8798ec-6358-4aa8-80a0-d084466b6450",
+        "442f277b-92f4-4b46-9c5e-3e57f599bcf1",
         "1fbcfcc3-39c9-4fcc-a260-94c56424299c",
         "12300d86-985b-4fdd-b5b3-a41b0158c14e",
         "8f9bb50b-0d6e-44e3-b16c-422d9614f46a",
@@ -15029,6 +15054,7 @@
         "56defef2-7f45-4c04-8c8f-285880ba8c61",
         "f5387921-3bc8-43dd-b652-e48fc7f04f9c",
         "ec9a465f-fd87-43bd-887f-6b5a38271e74",
+        "72369321-49e8-41cd-bce0-be0b9aefdaa9",
         "2f2e3955-3a42-4b7d-a6da-b9c583058781",
         "b5b071d2-2b67-4b1b-8166-d02e5e3a7c98",
         "5d2092b0-22c7-43c8-a911-4a275a4061ad",

@@ -1,8 +1,12 @@
 /// @description Create links
 
-ainodesLink(id);
-
-with (ob_character)
+//ainodesLink(id);
+if (!m_loaded || !m_valid)
 {
-	m_aipath_newpath = true; // FORCE A REPATH NOW
+	ainodesLoad(id);
+
+	with (ob_character)
+	{
+		m_aipath_newpath = true; // FORCE A REPATH NOW
+	}
 }
