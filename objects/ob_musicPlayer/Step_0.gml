@@ -1,4 +1,4 @@
-/// @description update track volumes & sync
+/// @description update track volumes
 
 // if fading out, set all targets to 0.0
 if (m_fadeOut)
@@ -31,12 +31,9 @@ for (var i = 0; i < m_trackCount; ++i)
 	if (abs(delta) > 0)
 	{
 		m_trackCurrentVolume[i] += delta;
-		audio_sound_gain(m_track[i], m_trackCurrentVolume[i] * Settings.audio_music_volume, 0);
+		audio_sound_gain(m_track[i], m_trackCurrentVolume[i], 0.0);
 	}
 }
 
-// todo: sync up all track positions
-if (m_trackMasterId != null)
-{
-	// TODO
-}
+// Sync up all track positions.
+event_user(0);

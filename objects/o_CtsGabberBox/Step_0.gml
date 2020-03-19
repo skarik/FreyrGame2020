@@ -88,7 +88,7 @@ if ( done_alpha > 0.5 && l_can_end )
         if (!input_fadeout)
         {
             input_fadeout = true;
-            gaudio_play_sound(snd_UiMsgBlip, 50, false);
+            faudio_play_sound(snd_UiMsgBlip, 50, false);
         }
     }   
 }

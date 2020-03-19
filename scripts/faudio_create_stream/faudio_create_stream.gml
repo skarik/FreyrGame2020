@@ -1,4 +1,4 @@
-/// @description gaudio_create_stream(filename)
+/// @description faudio_create_stream(filename)
 /// @param filename
 
 var filename = argument0;
@@ -70,4 +70,5 @@ debugOut("Loaded audio '" + filename + "'");
 
 return result_sound;
 
-// TODO: handle sound reuse and manage memory properly
+// TODO: handle sound reuse and manage memory properly.
+// This is somewhat done on Silent Sky's side, so sync there.

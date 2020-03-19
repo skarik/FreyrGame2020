@@ -19,11 +19,23 @@ if (!exists(m_music))
 {
 	var music = fmusic_create();
 	var max_i = array_length_1d(m_tracks); //ds_map_find_value(entry, SEQI_MUSIC_TRACKCOUNT);
+	
 	// Create the tracks
 	for (var i = 0; i < max_i; ++i)
 	{
+		// Add new track
 		fmusic_add_track(music, m_tracks[i]);
+		// Create the intro link (if any)
+		if (i < array_length_1d(m_tracks_isIntro))
+		{
+			var intro_link = m_tracks_isIntro[i];
+			if (intro_link != null && intro_link != 0)
+			{
+				fmusic_mark_as_intro(music, i, intro_link);
+			}
+		}
 	}
+	
 	fmusic_start(music);
 		
 	// Set the volume

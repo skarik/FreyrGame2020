@@ -4,6 +4,8 @@
 
 
 var pl = getPlayer();
+
+m_fadeSpeed = 2.0;
 	
 /*if (room == rm_oasis_town)
 {
@@ -122,13 +124,28 @@ else if (room == rm_oasis_overlook)
 	var pl = getPlayer();
 	if (exists(pl))
 	{
-		if (pl.y < 950)
+		if (pl.y < 360)
+		{
+			m_trackVolume[2] = 1.0;
+			m_trackVolume[10] = 1.0;
+			
+			m_fadeSpeed = 0.5;
+		}
+		else if (pl.y < 660)
+		{
+			m_trackVolume[2] = 1.0;
+			m_trackVolume[4] = 0.4;
+			m_trackVolume[10] = 0.3;
+			
+			m_fadeSpeed = 0.5;
+		} 
+		else if (pl.y < 950)
 		{
 			m_trackVolume[2] = 1.0;
 			m_trackVolume[3] = 1.0;
-			m_trackVolume[5] = 1.0;
-			m_trackVolume[10] = (pl.y < 360) ? 1.0 : 0.0;
-		}
+			
+			m_fadeSpeed = 0.5;
+		} 
 		else
 		{
 			m_trackVolume[0] = 1.0;
@@ -136,6 +153,8 @@ else if (room == rm_oasis_overlook)
 			m_trackVolume[4] = 1.0;
 			m_trackVolume[7] = 1.0;
 			m_trackVolume[9] = 1.0;
+			
+			m_fadeSpeed = 0.5;
 		}
 	}
 }

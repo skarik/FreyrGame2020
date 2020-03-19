@@ -4,7 +4,7 @@ if ((persistent && room != m_home) || m_homeless)
 {
 	m_homeless = true; // Mark as a hobo soundscape that must perish
 	
-	m_strength -= Time.deltaTime * m_definition.fadeTime;
+	m_strength -= Time.deltaTime * m_definition.fadetime;
 	if (m_strength < 0.0)
 	{
 		event_user(9);

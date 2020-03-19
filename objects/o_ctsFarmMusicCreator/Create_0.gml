@@ -27,4 +27,6 @@ else if (questGetValue(kQidIntroSequence) > 10)
 	}
 }
 
+fmusic_fade_all();
+
 delete(this);

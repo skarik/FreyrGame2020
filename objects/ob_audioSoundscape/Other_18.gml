@@ -9,7 +9,7 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 		var audioHandle = audio_get_index(soundinfo.wavelist[0]);
 		if (audioHandle == null)
 		{
-			audioHandle = gaudio_create_stream(soundinfo.wavelist[0]);
+			audioHandle = faudio_create_stream(soundinfo.wavelist[0]);
 		}
 		
 		// Query playing position

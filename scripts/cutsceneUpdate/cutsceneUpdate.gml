@@ -299,7 +299,7 @@ case SEQTYPE_AUDIO:
 	
 	if (file != "none")
 	{
-		faudio_play_file(file, streamed, looped);
+		faudio_play2_file(file, streamed, looped);
 	}
 	if (stop != "none")
 	{

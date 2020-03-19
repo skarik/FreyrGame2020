@@ -1,8 +1,8 @@
 {
-    "id": "62c59dc0-aa49-4cc2-bf8c-bdac652ca6df",
+    "id": "fbf7de64-6ed3-424e-9e7a-c8ef9bae3dd2",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "gaudio_sound_get_length",
+    "name": "faudio_create_stream",
     "IsCompatibility": false,
     "IsDnD": false
 }

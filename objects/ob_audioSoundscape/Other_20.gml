@@ -34,11 +34,11 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 			var audioHandle = audio_get_index(soundinfo.wavelist[audioIndex]);
 			if (audioHandle == null)
 			{
-				audioHandle = gaudio_create_stream(soundinfo.wavelist[audioIndex]);
+				audioHandle = faudio_create_stream(soundinfo.wavelist[audioIndex]);
 			}
 			
 			// Set new cooldown
-			m_audioCooldown[i] = gaudio_sound_get_length(audioHandle) + random_range(soundinfo.time_min, soundinfo.time_max);
+			m_audioCooldown[i] = faudio_sound_get_length(audioHandle) + random_range(soundinfo.time_min, soundinfo.time_max);
 			
 			// Select a position
 			var soundpos = [0, 0];

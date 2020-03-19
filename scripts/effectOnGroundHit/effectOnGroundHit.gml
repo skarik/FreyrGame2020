@@ -75,7 +75,7 @@ else if (ground_material == kTileMaterial_Stone)
 		choose(snd_physStepDirt1, snd_physStepDirt2)
 		);
 	sound_hit.pitch = random_range(0.7, 0.8);
-	sound_hit.gain = 1.1;
+	sound_hit.gain = 1.0;
 	sound_hit.falloff_start = 20;
 	sound_hit.falloff_end = 800;
 	sound_hit.falloff_factor = 1;

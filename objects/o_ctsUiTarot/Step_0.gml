@@ -119,11 +119,11 @@ if (m_state == kTarotGameState_FortuneChoose)
 			if (m_state_selection < 2)
 			{
 				m_state_selection += 1;
-				gaudio_play_sound(snd_UiMsgBlip, 10, false);
+				faudio_play_sound(snd_UiMsgBlip, 10, false);
 			}
 			else
 			{
-				gaudio_play_sound(snd_TypeHit, 10, false);
+				faudio_play_sound(snd_TypeHit, 10, false);
 			}
 		}
 		else
@@ -131,11 +131,11 @@ if (m_state == kTarotGameState_FortuneChoose)
 			if (m_state_selection > 0)
 			{
 				m_state_selection -= 1;
-				gaudio_play_sound(snd_UiMsgBlip, 10, false);
+				faudio_play_sound(snd_UiMsgBlip, 10, false);
 			}
 			else
 			{
-				gaudio_play_sound(snd_TypeHit, 10, false);
+				faudio_play_sound(snd_TypeHit, 10, false);
 			}
 		}
 	}
