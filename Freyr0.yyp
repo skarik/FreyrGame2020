@@ -1159,6 +1159,14 @@
             }
         },
         {
+            "Key": "1474d5e6-01ef-43d3-bba2-79c683ae2b47",
+            "Value": {
+                "id": "9f421841-1fa1-454c-9724-f42e9b8d816a",
+                "resourcePath": "sprites\\sui_bookTabs\\sui_bookTabs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "14881884-45a1-405b-8660-2f1ed7665e33",
             "Value": {
                 "id": "852dc393-e893-41e6-9faa-bacada4c091d",
@@ -3172,6 +3180,14 @@
                 "id": "208bfb42-f551-4864-b467-787f4b928125",
                 "resourcePath": "shaders\\sh_bufferedSnow\\sh_bufferedSnow.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "36aa6dea-0a70-4921-927d-d182fb0cb72f",
+            "Value": {
+                "id": "98aaa52f-7fdf-45cb-be00-0b5c275bbede",
+                "resourcePath": "sprites\\sui_rune2\\sui_rune2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5331,6 +5347,14 @@
             "Value": {
                 "id": "71bbf725-4931-4174-9df9-c8c928782f3d",
                 "resourcePath": "sprites\\s_charOasis1Stand\\s_charOasis1Stand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5ca980bc-d165-4eaf-a323-872321126d7c",
+            "Value": {
+                "id": "5a018b29-7824-4323-ac8d-b399f3d25208",
+                "resourcePath": "sprites\\sui_book2Closed\\sui_book2Closed.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7643,6 +7667,14 @@
             "Value": {
                 "id": "62d234c6-a15c-43da-8cf3-5dc79d13114c",
                 "resourcePath": "sprites\\sc_32x32r\\sc_32x32r.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "88beb649-8c67-4684-9b45-d26344e2a34c",
+            "Value": {
+                "id": "f72617b3-eb97-4427-bf2b-c543d7f14fa8",
+                "resourcePath": "sprites\\sui_bookTabIcons\\sui_bookTabIcons.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10263,6 +10295,14 @@
             }
         },
         {
+            "Key": "b4cb5dc0-a4e1-4c61-8fc6-ecf3c0e4d330",
+            "Value": {
+                "id": "e5d4ecb4-885e-4308-afc4-0faad9c55905",
+                "resourcePath": "sprites\\sui_book2Pages\\sui_book2Pages.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b4e354b6-b8df-4952-8bad-5ef7a4deb21b",
             "Value": {
                 "id": "3e38aa43-33c2-4db8-bc70-b05658f62fae",
@@ -12687,6 +12727,14 @@
             }
         },
         {
+            "Key": "df22c430-74f4-4f7f-836d-46af9d547b51",
+            "Value": {
+                "id": "ab8f1e4b-0117-4f2e-9545-a3977d37b0e1",
+                "resourcePath": "sprites\\sui_bookRuneSlot\\sui_bookRuneSlot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "df6d72ad-d537-4938-9e7b-46486afc7608",
             "Value": {
                 "id": "1675ece8-1b7d-48a1-aad7-96a812d5026e",
@@ -14180,6 +14228,14 @@
                 "id": "a4a4de1a-9c3c-47a4-98d6-2e9259fd5ab1",
                 "resourcePath": "scripts\\doodadSetShadow\\doodadSetShadow.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f93906eb-09c1-40c7-9adc-d63131add968",
+            "Value": {
+                "id": "6736a05b-4687-44a1-a0cc-c254cbb73edf",
+                "resourcePath": "sprites\\sui_f_will14\\sui_f_will14.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

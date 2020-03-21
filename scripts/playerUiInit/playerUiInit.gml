@@ -70,7 +70,7 @@ m_chest_hover = null;
 
 m_book_offsets_main = [
 	[47, 54], [101, 57],
-	[37, 133], [79, 146], [112, 125],
+	[37, 133], [79, 146], [120, 125],
 	
 	[223, 50], // yes
 	[222, 132], // no
@@ -83,10 +83,10 @@ m_book_main_selection = null;
 m_book_main_hover = null;
 
 enum Tabs {
-	kMain,
-	kOptions,
-	kMap,
-	kRelationship
+	kMain = 0,
+	kOptions = 3,
+	kMap = 1,
+	kRelationship = 2
 };
 
 m_book_tab = Tabs.kMain;

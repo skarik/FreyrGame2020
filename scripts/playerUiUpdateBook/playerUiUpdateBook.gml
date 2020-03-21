@@ -9,6 +9,21 @@ else
 	m_book_totalBlend = max(0.0, m_book_totalBlend - Time.deltaTime * 3.0);
 }
 
+// perform page swapping
+if (o_PlayerTest.m_usingBook)
+{
+	// todo: check click
+	if (o_PlayerTest.prevUiButton.pressed)
+	{
+		if (m_book_tab <= 0) m_book_tab = 4;
+		m_book_tab -= 1;
+	}
+	else if (o_PlayerTest.nextUiButton.pressed)
+	{
+		m_book_tab = (m_book_tab + 1) % 4;
+	}
+}
+
 // loop through each menu item to get the current hover
 if (o_PlayerTest.m_usingBook)
 {
