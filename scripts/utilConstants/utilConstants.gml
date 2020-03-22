@@ -13,3 +13,12 @@
 
 #macro c_towercrystal c_crystalblue
 #macro c_towerdiamond c_electricity
+
+#macro kEvent_Lighting0 0
+#macro kEvent_Lighting5 5
+#macro kEvent_UnifiedDraw6 6
+
+#macro kEvent_ChOnDeath0 0
+#macro kEvent_ChOnHurt1 1
+#macro kEvent_ChOnStun2 2
+#macro kEvent_ChOnSchedule3 3

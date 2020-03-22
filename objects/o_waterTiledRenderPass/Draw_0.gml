@@ -17,7 +17,7 @@ var textureAtlasCoords = sprite_get_uvs(s_paletteWater, 0);
 	//shader_set_uniform_f(uni_waterTexelSize,
 	//	1.0 / surface_get_width(m_surface), 1.0 / surface_get_height(m_surface));
 	shader_set_uniform_f(uni_currentTime,
-		current_time / 1000.0);
+		Time.time);
 
 draw_tilemap(target_tilemap, 0, 0);
 

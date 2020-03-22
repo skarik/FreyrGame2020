@@ -42,7 +42,7 @@ shader_reset();
 	// draw the back leaves
 	shader_set(sh_normalTreeWiggle);
 	shader_set_uniform_f(u_spriteTexelCount, sprite_get_width(sprite_index), sprite_get_height(sprite_index));
-	shader_set_uniform_f(u_animationValues, current_time / 1000.0, sin(current_time / 1000.0), wind_factor, id % 314);
+	shader_set_uniform_f(u_animationValues, Time.time, sin(Time.time), wind_factor, id % 314);
 	coords = sprite_get_uvs(sprite_index, 2);
 	shader_set_uniform_f(u_spriteCoords, coords[0], coords[1], coords[2], coords[3]);
 	draw_sprite_ext(sprite_index, 2,
@@ -60,18 +60,18 @@ shader_reset();
 	// draw top leaves	
 	shader_set(sh_normalTreeWiggle);
 	shader_set_uniform_f(u_spriteTexelCount, sprite_get_width(sprite_index), sprite_get_height(sprite_index));
-	shader_set_uniform_f(u_animationValues, current_time / 1000.0, sin(current_time / 1000.0), wind_factor, (id * 1.4) % 413);
+	shader_set_uniform_f(u_animationValues, Time.time, sin(Time.time), wind_factor, (id * 1.4) % 413);
 	coords = sprite_get_uvs(sprite_index, 3);
 	shader_set_uniform_f(u_spriteCoords, coords[0], coords[1], coords[2], coords[3]);
 	draw_sprite_ext(sprite_index, 3,
-					x + 1.4 * sin(current_time / 1100.0 + (id * 3.79) % 167), y,
+					x + 1.4 * sin(Time.time / 1.1 + (id * 3.79) % 167), y,
 					image_xscale, image_yscale, image_angle,
 					image_blend, image_alpha);
 	coords = sprite_get_uvs(sprite_index, 4);
 	shader_set_uniform_f(u_spriteCoords, coords[0], coords[1], coords[2], coords[3]);
-	shader_set_uniform_f(u_animationValues, current_time / 1000.0, sin(current_time / 1000.0), wind_factor, (id * 1.3) % 279);
+	shader_set_uniform_f(u_animationValues, Time.time, sin(Time.time), wind_factor, (id * 1.3) % 279);
 	draw_sprite_ext(sprite_index, 4,
-					x + 1.4 * sin(current_time / 900.0 + (id * 4.13) % 179), y,
+					x + 1.4 * sin(Time.time / 0.9 + (id * 4.13) % 179), y,
 					image_xscale, image_yscale, image_angle,
 					image_blend, image_alpha);
 	shader_reset();

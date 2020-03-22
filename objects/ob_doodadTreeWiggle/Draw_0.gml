@@ -42,7 +42,7 @@ if (shadow_enabled)
 	shader_set(sh_normalTreeWiggle);
 	shader_set_uniform_f(u_spriteCoords, coords[0], coords[1], coords[2], coords[3]);
 	shader_set_uniform_f(u_spriteTexelCount, sprite_get_width(sprite_index), sprite_get_height(sprite_index));
-	shader_set_uniform_f(u_animationValues, current_time / 1000.0, sin(current_time / 1000.0), wind_factor, id % 314);
+	shader_set_uniform_f(u_animationValues, Time.time, sin(Time.time), wind_factor, id % 314);
 	
 	//draw_self();
 	draw_sprite_ext(sprite_index, image_index,

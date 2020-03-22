@@ -114,7 +114,7 @@ else if (aiState == kBoidStateFly)
 	y += yspeed * Time.deltaTime * 0.8;
 	
 	// Fly up (or down)
-	var target_z_height = 160 + sin(current_time / 2000.0 + id) * 20.0;
+	var target_z_height = 160 + sin(Time.time * 0.5 + id) * 20.0;
 	if (return_home)
 	{
 		// Update the perch height

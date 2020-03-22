@@ -15,7 +15,7 @@ if (m_hourFlags[timeofdayGetHour()] == 0) {
 	//Go do eventy things with other objects in the game.
 	for (var i = 0; i < instance_number(ob_characterGroundInteractable); i += 1) {
 		with(instance_find(ob_characterGroundInteractable, i)) {
-			event_user(3);
+			event_user(kEvent_ChOnSchedule3);
 		}
 	}
 	m_hourFlags[timeofdayGetHour()] = 1;

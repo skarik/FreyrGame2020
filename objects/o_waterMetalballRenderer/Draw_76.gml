@@ -236,7 +236,7 @@ if (surface_exists(m_surfaceReflect))
 	shader_set(sh_waterReflectRender);
 	texture_set_stage(uni_samplerWaterMask, surface_get_texture(m_surface));
 	texture_set_stage(uni_samplerDepthHack, surface_get_texture(m_surfaceDepthHack));
-	shader_set_uniform_f(uni_currentTimeReflection, current_time / 1000.0);
+	shader_set_uniform_f(uni_currentTimeReflection, Time.time);
 	shader_set_uniform_f(uni_viewOffset, -GameCamera.view_x, -GameCamera.view_y, 0, 0);
 	draw_surface(m_surfaceReflect_Temp, 0, 0);
 	shader_reset();

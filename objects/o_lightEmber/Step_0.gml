@@ -2,7 +2,7 @@
 
 image_alpha -= Time.deltaTime * 4.0;
 
-x += xspeed_base * sin(current_time / 80 + id) * Time.deltaTime;
+x += xspeed_base * sin(Time.time / 0.08 + id) * Time.deltaTime;
 y -= yspeed_base * Time.deltaTime;
 
 depthUpdate();

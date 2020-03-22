@@ -2,6 +2,14 @@
 
 powerLogicGlobalUpdate();
 
+// Update timescale
+Time.scale = timescale_game * timescale_menu;
+if (Time.scale < 1.0 || timescale_previous < 1.0)
+{
+	// TODO: force update of all audio
+}
+timescale_previous = Time.scale;
+
 // GAME HACK:
 // On the 8th day of each season, create a weather system
 var dayOfSeason = (timeofdayGetDay() + timeofdayGetHour() / 24.0) % kWeatherSeasonLength;

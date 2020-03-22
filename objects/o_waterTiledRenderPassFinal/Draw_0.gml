@@ -37,7 +37,7 @@ shader_set(sh_tiledWater3);
 	shader_set_uniform_f(uBufferTexelSize,
 		1.0 / surface_get_width(game_surface),
 		1.0 / surface_get_height(game_surface));
-	shader_set_uniform_f(uCurrentTime, current_time / 1000.0);
+	shader_set_uniform_f(uCurrentTime, Time.time);
 
 	texture_set_stage(samplerPaletteLUT, texturePaletteLut);
 	shader_set_uniform_f(uPaletteLUTAtlas,

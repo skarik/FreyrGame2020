@@ -9,7 +9,7 @@ with (target)
 {
 	xoffset = object.xoffset;
 	yoffset = object.yoffset;
-	event_user(5);
+	event_user(kEvent_Lighting5);
 }
 
 if (mask)

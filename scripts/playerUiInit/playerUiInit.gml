@@ -68,7 +68,8 @@ m_chest_hover = null;
 
 #region Book Menus
 
-m_book_offsets_main = [
+// This has been moved to a separate object
+/*m_book_offsets_main = [
 	[47, 54], [101, 57],
 	[37, 133], [79, 146], [120, 125],
 	
@@ -89,7 +90,7 @@ enum Tabs {
 	kRelationship = 2
 };
 
-m_book_tab = Tabs.kMain;
+m_book_tab = Tabs.kMain;*/
 
 #endregion
 

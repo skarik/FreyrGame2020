@@ -1,12 +1,21 @@
 //m_book_enabled
 
-if (o_PlayerTest.m_usingBook)
+if (exists(o_menuPlayerBook))
 {
-	m_book_totalBlend = min(1.0, m_book_totalBlend + Time.deltaTime * 3.0);
+	m_book_totalBlend = o_menuPlayerBook.m_totalBlend;
 }
 else
 {
-	m_book_totalBlend = max(0.0, m_book_totalBlend - Time.deltaTime * 3.0);
+	m_book_totalBlend = max(0.0, m_book_totalBlend - Time.unscaledDeltaTime * 3.0);
+}
+
+/*if (o_PlayerTest.m_usingBook)
+{
+	m_book_totalBlend = min(1.0, m_book_totalBlend + Time.unscaledDeltaTime * 3.0);
+}
+else
+{
+	m_book_totalBlend = max(0.0, m_book_totalBlend - Time.unscaledDeltaTime * 3.0);
 }
 
 // perform page swapping
@@ -22,10 +31,10 @@ if (o_PlayerTest.m_usingBook)
 	{
 		m_book_tab = (m_book_tab + 1) % 4;
 	}
-}
+}*/
 
 // loop through each menu item to get the current hover
-if (o_PlayerTest.m_usingBook)
+/*if (o_PlayerTest.m_usingBook)
 {
 	var cursor_x = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));
 	var cursor_y = round(o_PlayerTest.vPosition - (GameCamera.y - GameCamera.height / 2));
@@ -177,4 +186,4 @@ if (o_PlayerTest.m_usingBook && m_book_tab == Tabs.kMain)
 			}
 		}
 	}
-}
+}*/

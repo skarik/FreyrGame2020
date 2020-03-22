@@ -9,7 +9,7 @@ shader_set_uniform_f(uni_paletteAtlasCoords,
 	textureAtlasCoords[2] - textureAtlasCoords[0],
 	textureAtlasCoords[3] - textureAtlasCoords[1]);
 shader_set_uniform_f(uni_currentTime,
-	current_time / 1000.0);
+	Time.time);
 
 draw_self();
 shader_reset();*/
@@ -23,8 +23,8 @@ if (exists(pl))
 {
 	radius *= 0.5 + saturate(1.0 - abs((y - z_height) - (pl.y - pl.z_height)) / 64.0);
 }
-radius += (radius / 32.0) * sin(current_time * 0.0072) * 1.4;
-radius += sin(current_time * 0.00087) * 2.4;
+radius += (radius / 32.0) * sin(Time.time * 7.2) * 1.4;
+radius += sin(Time.time * 0.87) * 2.4;
 radius = round(radius);
 
 var dx, dy;

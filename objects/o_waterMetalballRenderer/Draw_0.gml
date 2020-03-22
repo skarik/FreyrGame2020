@@ -19,7 +19,7 @@ if (exists(o_waterMetaball) && surface_exists(m_surface) && surface_exists(m_sur
 	shader_set_uniform_f(uni_waterTexelSize,
 		1.0 / surface_get_width(m_surface), 1.0 / surface_get_height(m_surface));
 	shader_set_uniform_f(uni_currentTime,
-		current_time / 1000.0);
+		Time.time);
 
 	// Draw the water
 	draw_set_color(c_white);

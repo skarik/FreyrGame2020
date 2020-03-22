@@ -14,7 +14,8 @@
         "b4cb5dc0-a4e1-4c61-8fc6-ecf3c0e4d330",
         "5ca980bc-d165-4eaf-a323-872321126d7c",
         "df22c430-74f4-4f7f-836d-46af9d547b51",
-        "36aa6dea-0a70-4921-927d-d182fb0cb72f"
+        "36aa6dea-0a70-4921-927d-d182fb0cb72f",
+        "cbd06074-8946-4fde-bd6e-63b1df0c72ef"
     ],
     "filterType": "GMSprite",
     "folderName": "book",

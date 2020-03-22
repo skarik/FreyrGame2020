@@ -34,7 +34,7 @@ if ( m_isPlayer && stats.m_health < stats.m_healthPrev )
 		with (blud) event_user(0); // Init the blood
 	}
 	// On Hurt for hud-blood
-	with (o_ptcBloodHud) event_user(1);
+	with (o_ptcBloodHud) event_user(kEvent_ChOnHurt1);
 	
 	// Damage will
 	if (m_will > 0)
