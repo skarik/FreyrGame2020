@@ -20,11 +20,12 @@ if (m_fadeOut)
 
 
 // update all track volumes
-var delta_step = kTrackFadeSpeed * Time.deltaTime;
+var volume_scalar = Settings.audio_music_volume * Settings.audio_total_volume;
+var delta_step = kTrackFadeSpeed * Time.deltaTime * volume_scalar;
 for (var i = 0; i < m_trackCount; ++i)
 {
 	// create delta to target track
-	var delta = m_trackVolume[i] - m_trackCurrentVolume[i];
+	var delta = m_trackVolume[i] * volume_scalar - m_trackCurrentVolume[i];
 	delta = sign(delta) * min(abs(delta), delta_step);
 	
 	// Update volume if there's a change

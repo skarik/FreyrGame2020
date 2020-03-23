@@ -228,7 +228,6 @@ else if (m_tab == BookTabs.Options)
 	var dy_rest1 = 150;*/
 	var dy_start = 50;
 	var dy_div = 16 + 8;
-	var m_options_top_choices = ["Gameplay", "Controls", "Audio", "HUD Layout"];
 	
 	for (var i = 0; i < array_length_1d(m_options_top_choices); ++i)
 	{
@@ -248,6 +247,60 @@ else if (m_tab == BookTabs.Options)
 		draw_text_spaced(dx + left + 6, dy + dy_start + dy_div * i + 1, m_options_top_choices[i], 2);
 		draw_sprite_ext(sui_book2TapeCorner, 2, dx + left, dy + dy_start + dy_div * i, 1, 1, 0, c_white, 1.0);
 		draw_sprite_ext(sui_book2TapeCorner, 1, dx + right + 1, dy + dy_start + dy_div * i, 1, 1, 270, c_white, 1.0);
+	}
+	
+	
+	var op_dy_start = 20;
+	var op_dy_div = 16 + 4;
+	var op_left = kXOffsetCenterRight - 85;
+	var op_right = kXOffsetCenterRight + 85;
+	
+	var m_option_current = kOptionTypeControls;
+	var l_drawingOptions = false;
+	var l_ddy = op_dy_start;
+	for (var i = 0; i < array_length_1d(m_options); ++i)
+	{
+		var l_current_option = m_options[i];
+		// dont start until on right option type, and stop when done with it
+		if (!l_drawingOptions && l_current_option[0] == m_option_current)
+			l_drawingOptions = true;
+		else if (!l_drawingOptions && l_current_option[0] != m_option_current)
+			continue;
+		else if (l_drawingOptions && l_current_option[0] != m_option_current)
+			break;
+			
+		// Draw the options
+		
+		if (l_current_option[1] == kOptionEntryHeading)
+		{
+			/*draw_set_color(c_bookHeadingShadow);
+			draw_rectangle(dx + op_left, dy + dy_start + dy_div * i, dx + op_right, dy + dy_start + dy_div * i + 16, false);*/
+			draw_set_color(c_black);
+			draw_set_font(global.font_arvo9);
+			draw_set_halign(fa_left);
+			draw_set_valign(fa_top);
+			draw_text_spaced(dx + op_left + 6, dy + l_ddy + 1, l_current_option[2], 2);
+			
+			l_ddy += op_dy_div + 4;
+		}
+		else if (l_current_option[1] == kOptionEntryOption)
+		{
+			draw_set_color(c_bookHeadingShadow);
+			draw_rectangle(dx + op_left, dy + l_ddy, dx + op_right, dy + l_ddy + 16, false);
+			draw_set_color(c_black);
+			draw_set_font(global.font_arvo7);
+			draw_set_halign(fa_left);
+			draw_set_valign(fa_top);
+			draw_text_spaced(dx + op_left + 6, dy + l_ddy + 1, l_current_option[2], 2);
+			
+			var setting = controlSettingGet(l_current_option[3]);
+			if (is_array(setting))
+			{
+				drawControl(dx + kXOffsetCenterRight, dy + l_ddy, null, kControlDrawStyle_Flat, setting, kControlKB, kGamepadTypeXInput);
+			}
+			
+			l_ddy += op_dy_div;
+		}
 	}
 }
 else if (m_tab == BookTabs.Relationship)

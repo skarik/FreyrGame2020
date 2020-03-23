@@ -21,7 +21,7 @@ if (streamed)
 	audio_player.m_streamed = streamed;
 	audio_player.m_stream = audio_create_stream(filename);
 	audio_player.m_audio = 	audio_play_sound(audio_player.m_stream, 100, looped);
-	audio_sound_gain(audio_player.m_audio, Settings.audio_sfx_volume, 0.0);
+	audio_sound_gain(audio_player.m_audio, Settings.audio_sfx_volume * Settings.audio_total_volume, 0.0);
 }
 
 return audio_player;

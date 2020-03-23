@@ -16,6 +16,8 @@ with (Settings)
 	ctAttack		= _settingsControlSaveArray("attack", ctAttack);
 	ctUse			= _settingsControlSaveArray("use", ctUse);
 	ctUseItem		= _settingsControlSaveArray("useitem", ctUseItem);
+	ctUseKeyItem	= _settingsControlSaveArray("usekeyitem", ctUseKeyItem);
+	ctUseSpecial	= _settingsControlSaveArray("usespecial", ctUseSpecial);
 	ctDodge			= _settingsControlSaveArray("dodge", ctDodge);
 	
 	ctInventory		= _settingsControlSaveArray("inventory", ctInventory);

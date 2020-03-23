@@ -4,7 +4,7 @@
 /// @param y {Real}
 /// @param size {unused}
 /// @param style {kControlDrawStyle}
-/// @param control {Array} Control to draw, given by Settings.
+/// @param control {Array} Control to draw given by Settings.
 /// @param controlType {kControl} Is ``lastControlType`` in a controlled object.
 /// @param padType (kGamepadType} Is ``lastGamepadType`` in a controlled object.
 

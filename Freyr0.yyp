@@ -3807,6 +3807,14 @@
             }
         },
         {
+            "Key": "42afecc9-8a37-4d19-af05-dd666a8955f3",
+            "Value": {
+                "id": "47ddfab1-089a-4af7-a72b-b6f72317b20e",
+                "resourcePath": "scripts\\controlSettingGet\\controlSettingGet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "43020f4c-c3a8-475a-9895-7e6269264df9",
             "Value": {
                 "id": "f8dec8a8-1290-463a-b24b-64fe3eefdb6f",
@@ -4452,14 +4460,6 @@
                 "id": "bd400bd1-c7eb-45be-abea-8bc59d662a8b",
                 "resourcePath": "views\\4cfa69a5-f500-4f74-8598-863b4ccd7be5.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "4d041f7c-51a2-4687-9ef0-747d2f47765f",
-            "Value": {
-                "id": "5aafb868-c69f-473f-b132-83db12e7850b",
-                "resourcePath": "scripts\\controlDraw\\controlDraw.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -6540,6 +6540,14 @@
                 "id": "a7b61556-5362-4f27-bba5-a48a35f51a55",
                 "resourcePath": "sprites\\s_monSlimeRed\\s_monSlimeRed.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "720b1eb5-237e-41ef-a3a5-847e75fe92e1",
+            "Value": {
+                "id": "fc725690-66c8-470e-8c8e-55fd74ddabc7",
+                "resourcePath": "scripts\\controlSettingSet\\controlSettingSet.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -14888,7 +14896,8 @@
         "706cf677-ed33-45a7-b17d-61e41165c63b",
         "9fe542f5-9287-40b9-80c3-db8851dcf6e5",
         "dae7e484-2889-4745-aad1-504a00474cf5",
-        "4d041f7c-51a2-4687-9ef0-747d2f47765f",
+        "720b1eb5-237e-41ef-a3a5-847e75fe92e1",
+        "42afecc9-8a37-4d19-af05-dd666a8955f3",
         "89e6f090-2e48-4530-8e2b-4fe17896008e",
         "ea01f43b-f383-4a27-bcea-a0e103dba76b",
         "5b83a500-320a-4c22-87b8-1c4f0e26ddbc",
