@@ -6,13 +6,13 @@ with (Settings)
 	ctMoveRight		= _settingsControlSaveArray("moveright", ctMoveRight);
 	ctMoveUp		= _settingsControlSaveArray("moveup", ctMoveUp);
 	ctMoveDown		= _settingsControlSaveArray("movedown", ctMoveDown);
-	ctJump			= _settingsControlSaveArray("jump", ctJump);
 	
 	ctAimLeft		= _settingsControlSaveArray("aimleft", ctAimLeft);
 	ctAimRight		= _settingsControlSaveArray("aimright", ctAimRight);
 	ctAimUp			= _settingsControlSaveArray("aimup", ctAimUp);
 	ctAimDown		= _settingsControlSaveArray("aimdown", ctAimDown);
 	
+	ctJump			= _settingsControlSaveArray("jump", ctJump);
 	ctAttack		= _settingsControlSaveArray("attack", ctAttack);
 	ctUse			= _settingsControlSaveArray("use", ctUse);
 	ctUseItem		= _settingsControlSaveArray("useitem", ctUseItem);

@@ -4215,6 +4215,14 @@
             }
         },
         {
+            "Key": "48ca73b7-4899-4016-97cc-035cf05599d5",
+            "Value": {
+                "id": "af5fec00-850e-45fb-8587-53f8183a9622",
+                "resourcePath": "scripts\\settingsGameplayLoad\\settingsGameplayLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "48e98b0e-b39a-4e78-9bc4-ba4e8c11d9d8",
             "Value": {
                 "id": "685337da-ec2b-4605-9d78-19ec758fcbaa",
@@ -11639,6 +11647,14 @@
             }
         },
         {
+            "Key": "c9e2e3e0-4e68-4b4b-8a63-b05d72307211",
+            "Value": {
+                "id": "ccc09cb8-7f1e-42f2-9a41-41debf7015ba",
+                "resourcePath": "scripts\\settingsGameplaySave\\settingsGameplaySave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c9fbd701-14a5-4304-8b79-784575659840",
             "Value": {
                 "id": "5bbdf78b-b3b4-4c83-9815-608c4090ac88",
@@ -13903,6 +13919,14 @@
             }
         },
         {
+            "Key": "f1e94a74-8165-46d3-958a-2885093947e3",
+            "Value": {
+                "id": "7e56ef74-d32f-42cb-945e-9d37795eba53",
+                "resourcePath": "scripts\\settingsGameplayDefaults\\settingsGameplayDefaults.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f20de884-5989-4164-a71b-f1af26db57d0",
             "Value": {
                 "id": "df8b838e-41cb-4f07-aee5-fa31f1318035",
@@ -14895,6 +14919,9 @@
         "0229d8bd-c37d-4cc4-817c-4a4bd5cbe21d",
         "706cf677-ed33-45a7-b17d-61e41165c63b",
         "9fe542f5-9287-40b9-80c3-db8851dcf6e5",
+        "f1e94a74-8165-46d3-958a-2885093947e3",
+        "48ca73b7-4899-4016-97cc-035cf05599d5",
+        "c9e2e3e0-4e68-4b4b-8a63-b05d72307211",
         "dae7e484-2889-4745-aad1-504a00474cf5",
         "720b1eb5-237e-41ef-a3a5-847e75fe92e1",
         "42afecc9-8a37-4d19-af05-dd666a8955f3",

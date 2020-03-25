@@ -5,3 +5,5 @@ settingsStartupDefaults();
 settingsStartupLoad();
 settingsAudioDefaults();
 settingsAudioLoad();
+settingsGameplayDefaults();
+settingsGameplayLoad();

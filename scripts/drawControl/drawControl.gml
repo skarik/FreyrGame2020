@@ -87,7 +87,7 @@ else if (controlType == kControlKB)
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
 		draw_set_color(c_black);
-		draw_text(dx, dy - 1, controlGetName(controlType, padType, l_controlValue));
+		draw_text(dx - 1, dy - 1, controlGetName(controlType, padType, l_controlValue));
 	}
 }
 else if (controlType == kControlMouse)
