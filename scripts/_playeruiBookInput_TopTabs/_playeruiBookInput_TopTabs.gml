@@ -1,4 +1,5 @@
-if (m_book_state == BookState.TopLevel && m_top_hover == null)
+//if (m_book_state == BookState.TopLevel && m_top_hover == null)
+if (m_top_hover == null)
 {
 	var kTabStartX = 50;
 	var kTabDivX = 25;

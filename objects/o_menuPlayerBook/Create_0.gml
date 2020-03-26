@@ -89,7 +89,7 @@ m_options = [
 	[kOptionTypeGameplay,	kOptionEntryOption, "Autoaim Weapons", "autoaim_weapon"],
 	[kOptionTypeGameplay,	kOptionEntryOption, "Aim Cursor Style", "ui_cursor"],
 	[kOptionTypeGameplay,	kOptionEntryOption, "UI Font Size", "ui_font_size"],
-	[kOptionTypeGameplay,	kOptionEntryOption, "In-World Talk Font Size", "ui_font_size_talk"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Rumor Font Size", "ui_font_size_talk"],
 	[kOptionTypeGameplay,	kOptionEntryOption, "Font Style", "ui_font_style"],
 	
 	[kOptionTypeControls,	kOptionEntryHeading, "Interacting"],
@@ -130,6 +130,6 @@ m_options = [
 	
 	[kOptionTypeAudio,		kOptionEntryOption, "Total Volume", "total_volume"],
 	[kOptionTypeAudio,		kOptionEntryOption, "Music Volume", "music_volume"],
-	[kOptionTypeAudio,		kOptionEntryOption, "World Volume", "world_volume"],
+	[kOptionTypeAudio,		kOptionEntryOption, "World Volume", "sfx_volume"],
 	[kOptionTypeAudio,		kOptionEntryOption, "Speech Volume", "speech_volume"],
 ];

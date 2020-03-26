@@ -1,80 +1,81 @@
 /// @function controlSettingSet(controlname, value)
 /// @param controlname {String}
 /// @param value {Control Array}
+/// @returns True on proper set, false otherwise.
 
 var controlname = argument0;
-var value =  argument1;
+var value = argument1;
 
 switch (controlname)
 {
 	case "moveleft": Settings.ctMoveLeft = value;
-		break;
+		return true;
 	case "moveright": Settings.ctMoveRight = value;
-		break;
+		return true;
 	case "moveup": Settings.ctMoveUp = value;
-		break;
+		return true;
 	case "movedown": Settings.ctMoveDown = value;
-		break;
+		return true;
 	
 	case "aimleft": Settings.ctAimLeft = value;
-		break;
+		return true;
 	case "aimright": Settings.ctAimRight = value;
-		break;
+		return true;
 	case "aimup": Settings.ctAimUp = value;
-		break;
+		return true;
 	case "aimdown": Settings.ctAimDown = value;
-		break;
+		return true;
 	
 	case "jump": Settings.ctJump = value;
-		break;
+		return true;
 	case "attack": Settings.ctAttack = value;
-		break;
+		return true;
 	case "use": Settings.ctUse = value;
-		break;
+		return true;
 	case "useitem": Settings.ctUseItem = value;
-		break;
+		return true;
 	case "usekeyitem": Settings.ctUseKeyItem = value;
-		break;
+		return true;
 	case "usespecial": Settings.ctUseSpecial = value;
-		break;
+		return true;
 	case "dodge": Settings.ctDodge = value;
-		break;
+		return true;
 		
 	case "inventory": Settings.ctInventory = value;
-		break;
+		return true;
 	case "journal": Settings.ctJournal = value;
-		break;
+		return true;
 	case "map": Settings.ctMap = value;
-		break;
+		return true;
 	
 	case "item1": Settings.ctItem1 = value;
-		break;
+		return true;
 	case "item2": Settings.ctItem2 = value;
-		break;
+		return true;
 	case "item3": Settings.ctItem3 = value;
-		break;
+		return true;
 	case "item4": Settings.ctItem4 = value;
-		break;
+		return true;
 	case "item5": Settings.ctItem5 = value;
-		break;
+		return true;
 	case "item6": Settings.ctItem6 = value;
-		break;
+		return true;
 	case "itemprevious": Settings.ctItemPrevious = value;
-		break;
+		return true;
 	case "itemnext": Settings.ctItemNext = value;
-		break;
+		return true;
 	case "itemunequip": Settings.ctItemUnequip = value;
-		break;
+		return true;
 		
 	case "uiprevious": Settings.ctUiPrevious = value;
-		break;
+		return true;
 	case "uinext": Settings.ctUiNext = value;
-		break;
+		return true;
 	case "uiselect": Settings.ctUiSelect = value;
-		break;
+		return true;
 	case "uicancel": Settings.ctUiCancel = value;
-		break;
+		return true;
 		
 	default:
-		// Nothing
+		return false;
 };
