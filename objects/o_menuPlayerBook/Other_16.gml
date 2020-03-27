@@ -329,7 +329,18 @@ else if (m_tab == BookTabs.Options)
 				case kSettingTypeControl:
 				{
 					var setting = controlSettingGet(l_current_option[3]);
-					drawControl((op_left + op_right) / 2 + 8, l_ddy + 8, null, kControlDrawStyle_Flat, setting, kControlKB, kGamepadTypeXInput);
+					//drawControl((op_left + op_right) / 2 + 8, l_ddy + 8, null, kControlDrawStyle_Flat, setting, kControlKB, kGamepadTypeXInput);
+					for (var isetting = 0; isetting < array_length_1d(setting); isetting += 2)
+					{
+						var setting_group = [setting[isetting], setting[isetting + 1]];
+						drawControl(round(lerp(op_left, op_right, 0.57)) + 8 + isetting * 10,
+									l_ddy + 8,
+									null,
+									//kControlDrawStyle_Flat,
+									kControlDrawStyle_Skeuo,
+									setting_group, setting_group[0],
+									kGamepadTypeXInput);
+					}
 				} break;
 				
 				case kSettingTypeFloat:
