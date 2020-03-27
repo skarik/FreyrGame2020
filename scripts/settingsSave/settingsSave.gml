@@ -1,3 +1,4 @@
 
 settingsControlSave();
 settingsAudioSave();
+settingsGameplaySave();

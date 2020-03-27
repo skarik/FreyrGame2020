@@ -10,8 +10,8 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(smoothstep((image_alpha-0.5)*2.0));
 
-draw_set_font(display_font);
-var text_dx = display_font_height;
+draw_set_font(input_minimal ? global.font_arvo7 : display_font);
+var text_dx = input_minimal ? 7 : display_font_height;
 var text_refw = string_width("m");
 
 var text_w = display_width;

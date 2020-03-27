@@ -17,9 +17,11 @@
         "0229d8bd-c37d-4cc4-817c-4a4bd5cbe21d",
         "706cf677-ed33-45a7-b17d-61e41165c63b",
         "9fe542f5-9287-40b9-80c3-db8851dcf6e5",
-        "dae7e484-2889-4745-aad1-504a00474cf5",
-        "720b1eb5-237e-41ef-a3a5-847e75fe92e1",
-        "42afecc9-8a37-4d19-af05-dd666a8955f3"
+        "f1e94a74-8165-46d3-958a-2885093947e3",
+        "48ca73b7-4899-4016-97cc-035cf05599d5",
+        "c9e2e3e0-4e68-4b4b-8a63-b05d72307211",
+        "ed06724a-c173-4561-bf9b-b3a2596c6b04",
+        "3cdbacee-0185-4ac8-8f33-c3194e9dc2b4"
     ],
     "filterType": "GMScript",
     "folderName": "Settings",

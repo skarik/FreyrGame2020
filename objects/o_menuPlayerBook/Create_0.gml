@@ -49,6 +49,11 @@ enum BookSelects {
 	Rune3	= 23,
 	Rune4	= 24,
 	Rune5	= 25,
+	
+	OptionBase		= 100,
+	Option_ViewUp		= 200,
+	Option_ViewDown		= 201,
+	Option_OptionBase	= 202,
 };
 
 m_tab = BookTabs.Main;
@@ -59,8 +64,11 @@ m_top_selection = BookSelects.Invalid;
 m_top_hover = BookSelects.Invalid;
 m_sub_selection = BookSelects.Invalid;
 m_sub_hover = BookSelects.Invalid;
+m_sub_scroll = 0.0;
 
 m_anim_tab_flavor = 0.0;
+
+m_hover_rects = array_create(300, null);
 
 #macro kOptionTypeGameplay 0
 #macro kOptionTypeControls 1
@@ -72,15 +80,17 @@ m_anim_tab_flavor = 0.0;
 #macro kOptionEntryOption 0
 #macro kOptionEntryHeading 1
 
+m_option_current_choice = null;
+
 m_options_top_choices = ["Gameplay", "Controls", "Audio", "HUD Layout", "Search for Option"];
 m_options = [
-	[kOptionTypeGameplay,	kOptionEntryOption, "Blood"],
-	[kOptionTypeGameplay,	kOptionEntryOption, "Autoaim Items"],
-	[kOptionTypeGameplay,	kOptionEntryOption, "Autoaim Weapons"],
-	[kOptionTypeGameplay,	kOptionEntryOption, "Aim Cursor Style"],
-	[kOptionTypeGameplay,	kOptionEntryOption, "UI Font Size"],
-	[kOptionTypeGameplay,	kOptionEntryOption, "In-World Talk Font Size"],
-	[kOptionTypeGameplay,	kOptionEntryOption, "Font Style"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Blood", "blood"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Autoaim Items", "autoaim_item"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Autoaim Weapons", "autoaim_weapon"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Aim Cursor Style", "ui_cursor"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "UI Font Size", "ui_font_size"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Rumor Font Size", "ui_font_size_talk"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Font Style", "ui_font_style"],
 	
 	[kOptionTypeControls,	kOptionEntryHeading, "Interacting"],
 	[kOptionTypeControls,	kOptionEntryOption,		"Use Object",		"use"],
@@ -118,8 +128,8 @@ m_options = [
 	[kOptionTypeControls,	kOptionEntryOption,		"Previous Tab",		"uiprevious"],
 	[kOptionTypeControls,	kOptionEntryOption,		"Next Tab",			"uinext"],
 	
-	[kOptionTypeAudio,		kOptionEntryOption, "Total Volume"],
-	[kOptionTypeAudio,		kOptionEntryOption, "Music Volume"],
-	[kOptionTypeAudio,		kOptionEntryOption, "World Volume"],
-	[kOptionTypeAudio,		kOptionEntryOption, "Speech Volume"],
+	[kOptionTypeAudio,		kOptionEntryOption, "Total Volume", "total_volume"],
+	[kOptionTypeAudio,		kOptionEntryOption, "Music Volume", "music_volume"],
+	[kOptionTypeAudio,		kOptionEntryOption, "World Volume", "sfx_volume"],
+	[kOptionTypeAudio,		kOptionEntryOption, "Speech Volume", "speech_volume"],
 ];

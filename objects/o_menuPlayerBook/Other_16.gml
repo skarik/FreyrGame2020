@@ -228,16 +228,17 @@ else if (m_tab == BookTabs.Options)
 	var dy_rest1 = 150;*/
 	var dy_start = 50;
 	var dy_div = 16 + 8;
-	
+
+	// Draw all the option categories:
 	for (var i = 0; i < array_length_1d(m_options_top_choices); ++i)
 	{
-		/*if (m_top_hover == BookSelects.RestFull || m_top_selection == BookSelects.RestFull)
+		if (m_top_hover == i + BookSelects.OptionBase || m_top_selection == i + BookSelects.OptionBase)
 		{
-			draw_set_color((m_top_selection == BookSelects.RestFull) ? c_gold : c_white);
-			draw_set_alpha((m_top_selection == BookSelects.RestFull) ? 1.0 : _playeruiBookAlphaPulse());
-			draw_rectangle(dx + left - 1, dy + dy_rest1 - 1, dx + right + 1, dy + dy_rest1 + 16 + 1, false);
+			draw_set_color((m_top_selection == i + BookSelects.OptionBase) ? c_gold : c_white);
+			draw_set_alpha((m_top_selection == i + BookSelects.OptionBase) ? 1.0 : _playeruiBookAlphaPulse());
+			draw_rectangle(dx + left - 1, dy + dy_start + dy_div * i - 1, dx + right + 1, dy + dy_start + dy_div * i + 16 + 1, false);
 			draw_set_alpha(1.0);
-		}*/
+		}
 		draw_set_color(c_bookHeadingShadow);
 		draw_rectangle(dx + left, dy + dy_start + dy_div * i, dx + right, dy + dy_start + dy_div * i + 16, false);
 		draw_set_color(c_black);
@@ -247,20 +248,39 @@ else if (m_tab == BookTabs.Options)
 		draw_text_spaced(dx + left + 6, dy + dy_start + dy_div * i + 1, m_options_top_choices[i], 2);
 		draw_sprite_ext(sui_book2TapeCorner, 2, dx + left, dy + dy_start + dy_div * i, 1, 1, 0, c_white, 1.0);
 		draw_sprite_ext(sui_book2TapeCorner, 1, dx + right + 1, dy + dy_start + dy_div * i, 1, 1, 270, c_white, 1.0);
+		
+		m_hover_rects[i + BookSelects.OptionBase] = [dx + left, dy + dy_start + dy_div * i, dx + right, dy + dy_start + dy_div * i + 16];
 	}
-	
 	
 	var op_dy_start = 20;
 	var op_dy_div = 16 + 4;
-	var op_left = kXOffsetCenterRight - 85;
-	var op_right = kXOffsetCenterRight + 85;
+	var op_left  = kXOffsetCenterRight - 85 - (kBookWidth/2);
+	var op_right = kXOffsetCenterRight + 85 - (kBookWidth/2);
+	var op_top_margin = 3;
+	var op_surface_x = dx + kBookWidth / 2;
+	var op_surface_y = dy + op_dy_start - op_top_margin;
 	
-	var m_option_current = kOptionTypeControls;
+	// Draw the options to a surface
+	var buffer_drawOptions = surface_create(floor(kBookWidth / 2), floor(kBookHeight - op_dy_start * 2.0 - 24));
+	surface_set_target(buffer_drawOptions);
+	draw_clear_alpha(c_black, 0.0);
+	
+	var m_option_current = m_option_current_choice;
 	var l_drawingOptions = false;
-	var l_ddy = op_dy_start;
+	var l_ddy = op_top_margin - m_sub_scroll;
 	for (var i = 0; i < array_length_1d(m_options); ++i)
 	{
 		var l_current_option = m_options[i];
+		
+		// Reset selection box
+		m_hover_rects[i + BookSelects.Option_OptionBase] = null;
+		
+		// option data:
+		//	[0] - category
+		//	[1] - type
+		//	[2] - display name
+		//	[3] - key name
+		
 		// dont start until on right option type, and stop when done with it
 		if (!l_drawingOptions && l_current_option[0] == m_option_current)
 			l_drawingOptions = true;
@@ -269,39 +289,112 @@ else if (m_tab == BookTabs.Options)
 		else if (l_drawingOptions && l_current_option[0] != m_option_current)
 			break;
 			
-		// Draw the options
-		
+		// Check the option type:
 		if (l_current_option[1] == kOptionEntryHeading)
 		{
-			/*draw_set_color(c_bookHeadingShadow);
-			draw_rectangle(dx + op_left, dy + dy_start + dy_div * i, dx + op_right, dy + dy_start + dy_div * i + 16, false);*/
+			// Draw heading
 			draw_set_color(c_black);
 			draw_set_font(global.font_arvo9);
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
-			draw_text_spaced(dx + op_left + 6, dy + l_ddy + 1, l_current_option[2], 2);
+			draw_text_spaced(op_left + 6, l_ddy + 1, l_current_option[2], 2); 
 			
 			l_ddy += op_dy_div + 4;
 		}
 		else if (l_current_option[1] == kOptionEntryOption)
 		{
+			// TODO: Skip drawing if not in view
+			
+			// Draw the hover rect
+			if (m_sub_hover == i + BookSelects.Option_OptionBase || m_sub_selection == i + BookSelects.Option_OptionBase)
+			{
+				draw_set_color((m_sub_selection == i + BookSelects.Option_OptionBase) ? c_gold : c_white);
+				draw_set_alpha((m_sub_selection == i + BookSelects.Option_OptionBase) ? 1.0 : _playeruiBookAlphaPulse());
+				draw_rectangle(op_left - 1, l_ddy - 1, op_right + 1, l_ddy + 16 + 1, false);
+				draw_set_alpha(1.0);
+			}
+			// draw the bg rect
 			draw_set_color(c_bookHeadingShadow);
-			draw_rectangle(dx + op_left, dy + l_ddy, dx + op_right, dy + l_ddy + 16, false);
+			draw_rectangle(op_left, l_ddy, op_right, l_ddy + 16, false);
 			draw_set_color(c_black);
+			// draw the option name
 			draw_set_font(global.font_arvo7);
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
-			draw_text_spaced(dx + op_left + 6, dy + l_ddy + 1, l_current_option[2], 2);
+			draw_text_spaced(op_left + 6, l_ddy + 2, l_current_option[2], 2);
 			
-			var setting = controlSettingGet(l_current_option[3]);
-			if (is_array(setting))
+			// draw the current value
+			switch (ssettingGetType(l_current_option[3]))
 			{
-				drawControl(dx + kXOffsetCenterRight, dy + l_ddy, null, kControlDrawStyle_Flat, setting, kControlKB, kGamepadTypeXInput);
+				case kSettingTypeControl:
+				{
+					var setting = controlSettingGet(l_current_option[3]);
+					drawControl((op_left + op_right) / 2 + 8, l_ddy + 8, null, kControlDrawStyle_Flat, setting, kControlKB, kGamepadTypeXInput);
+				} break;
+				
+				case kSettingTypeFloat:
+				{
+					draw_set_font(global.font_arvo9Bold);
+					var float_center = round(lerp(op_left, op_right, 0.75));
+					var float_value = ssettingGetValue(l_current_option[3]);
+					draw_set_halign(fa_center);
+					draw_text_spaced(float_center, 
+									 l_ddy + 1,
+									 string_format(float_value, 2, 1),
+									 2);
+									 
+					draw_set_color(float_value < ssettingGetMax(l_current_option[3]) ? c_black : c_bookHeading);
+					draw_arrow(float_center + 16, l_ddy + 7.5, float_center + 23, l_ddy + 7.5, 9);
+					draw_set_color(float_value > ssettingGetMin(l_current_option[3]) ? c_black : c_bookHeading);
+					draw_arrow(float_center - 16, l_ddy + 7.5, float_center - 23, l_ddy + 7.5, 9);
+				} break;
+				
+				case kSettingTypeEnum:
+				{
+					draw_set_font(global.font_arvo9);
+					var enum_center = round(lerp(op_left, op_right, 0.67));
+					var enum_value = ssettingGetValue(l_current_option[3]);
+					draw_text_spaced(enum_center, 
+									 l_ddy + 1,
+									 ssettingGetEnumName(l_current_option[3], enum_value),
+									 2);
+					
+					draw_set_color(enum_value < ssettingGetMax(l_current_option[3]) ? c_black : c_bookHeading);
+					draw_arrow(enum_center + 0 + 46, l_ddy + 7.5, enum_center + 0 + 53, l_ddy + 7.5, 9);
+					draw_set_color(enum_value > ssettingGetMin(l_current_option[3]) ? c_black : c_bookHeading);
+					draw_arrow(enum_center + 3 - 6, l_ddy + 7.5, enum_center + 3 - 13, l_ddy + 7.5, 9);
+				} break;
+				
+				case kSettingTypeBoolean:
+				{
+					var box_center = round(lerp(op_left, op_right, 0.75));
+					draw_rectangle(box_center - 6, l_ddy + 2, box_center + 6, l_ddy + 2 + 12, true);
+					if (ssettingGetValue(l_current_option[3]))
+					{
+						draw_line(box_center + 8, l_ddy, box_center - 2, l_ddy + 2 + 10);
+						draw_line(box_center - 5, l_ddy + 7, box_center - 2, l_ddy + 2 + 10);
+					}
+				} break;
 			}
+			
+			m_hover_rects[i + BookSelects.Option_OptionBase] = [op_surface_x + op_left, op_surface_y + l_ddy, op_surface_x + op_right, op_surface_y + l_ddy + 16];
 			
 			l_ddy += op_dy_div;
 		}
 	}
+	
+	// draw arrows on the right
+	draw_set_color(c_black);
+	draw_arrow(op_right + 8.5, op_top_margin + 10,
+				op_right + 8.5, op_top_margin, 9);
+	m_hover_rects[BookSelects.Option_ViewUp]   = [op_surface_x + op_right, op_surface_y + op_top_margin, op_surface_x + op_right + 16, op_surface_y + op_top_margin + 10];
+	draw_arrow(op_right + 8.5, surface_get_height(buffer_drawOptions) - op_top_margin - 10,
+				op_right + 8.5, surface_get_height(buffer_drawOptions) - op_top_margin, 9);
+	m_hover_rects[BookSelects.Option_ViewDown] = [op_surface_x + op_right, op_surface_y + surface_get_height(buffer_drawOptions) - op_top_margin - 10, op_surface_x + op_right + 16, op_surface_y + surface_get_height(buffer_drawOptions) - op_top_margin];
+	
+	surface_reset_target();
+	draw_surface(buffer_drawOptions, op_surface_x, op_surface_y);
+	surface_free(buffer_drawOptions);
 }
 else if (m_tab == BookTabs.Relationship)
 {
