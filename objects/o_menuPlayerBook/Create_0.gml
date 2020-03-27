@@ -27,6 +27,7 @@ enum BookTabs {
 enum BookState {
 	TopLevel = 0,
 	SelectionOptions = 1,
+	SubsetLevel = 2,
 };
 
 enum BookSelects {
@@ -54,6 +55,7 @@ enum BookSelects {
 	Option_ViewUp		= 200,
 	Option_ViewDown		= 201,
 	Option_OptionBase	= 202,
+	Option_TriOptionBase= 290,
 };
 
 m_tab = BookTabs.Main;
@@ -65,6 +67,9 @@ m_top_hover = BookSelects.Invalid;
 m_sub_selection = BookSelects.Invalid;
 m_sub_hover = BookSelects.Invalid;
 m_sub_scroll = 0.0;
+m_tri_selection = null;
+m_tri_hover = null;
+m_tri_ready = false;
 
 m_anim_tab_flavor = 0.0;
 

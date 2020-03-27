@@ -70,12 +70,18 @@ var dy = m_base_y;
 			{
 				m_option_current_choice = m_top_selection - BookSelects.OptionBase;
 				m_sub_scroll = 0;
+				m_sub_selection = null;
+				m_tri_selection = null;
 			}
 		}
 	}
-	if (o_PlayerTest.cancelButton.pressed)
-	{	// We want to put away the book
-		o_PlayerTest.m_usingBook = false;
+	
+	if (m_book_state == BookState.TopLevel)
+	{
+		if (o_PlayerTest.cancelButton.pressed)
+		{	// We want to put away the book
+			o_PlayerTest.m_usingBook = false;
+		}
 	}
 }
 
@@ -86,6 +92,7 @@ if (m_book_state == BookState.SelectionOptions)
 		|| o_PlayerTest.vPosition != o_PlayerTest.vPositionPrevious)
 	{
 		m_sub_hover = null;
+		m_tri_hover = null;
 	}
 	// if mouse moved, then we check for hover
 	if (m_sub_hover == null)
@@ -131,6 +138,24 @@ if (m_book_state == BookState.SelectionOptions)
 			// do rune checks
 		}
 	}
+	// if mouse moved, then we check for x/y checks
+	if (m_tri_hover == null)
+	{
+		if (m_tri_hover == null)
+		{
+			for (var i = BookSelects.Option_TriOptionBase; i < BookSelects.Option_TriOptionBase + 4; ++i)
+			{
+				var t_rect = m_hover_rects[i];
+				if (is_array(t_rect)
+					&& point_in_rectangle(cursor_x, cursor_y,
+										  t_rect[0], t_rect[1], t_rect[2], t_rect[3]))
+				{
+					m_tri_hover = i - BookSelects.Option_TriOptionBase;
+					break;
+				}
+			}
+		}
+	}
 	
 	if (m_sub_hover != null)
 	{
@@ -154,6 +179,14 @@ if (m_book_state == BookState.SelectionOptions)
 				m_sub_scroll += 16;
 			}
 		}
+		
+		if (o_PlayerTest.cancelButton.pressed)
+		{	// We want to go back up to the top level
+			m_book_state = BookState.TopLevel;
+			m_top_selection = null;
+			m_sub_selection = null;
+			m_tri_selection = null;
+		}
 			
 		var option_index = m_sub_hover - BookSelects.Option_OptionBase;
 			
@@ -165,6 +198,19 @@ if (m_book_state == BookState.SelectionOptions)
 			{
 				case kSettingTypeControl:
 				{
+					if (m_tri_hover != null)
+					{
+						if (o_PlayerTest.selectButton.pressed)
+						{
+							// Confirm the selection
+							m_sub_selection = m_sub_hover;
+							m_tri_selection = m_tri_hover;
+							m_tri_ready = false;
+							
+							// Move to control setting mode
+							m_book_state = BookState.SubsetLevel;
+						}
+					}
 				} break;
 				
 				case kSettingTypeFloat:
@@ -250,6 +296,105 @@ if (m_book_state == BookState.SelectionOptions)
 				} break;
 			}
 		}
+	}
+}
+else if (m_book_state == BookState.SubsetLevel)
+{
+	if (o_PlayerTest.cancelButton.pressed)
+	{	// We want to go back up to the top level
+		m_book_state = BookState.SelectionOptions;
+		m_sub_selection = null;
+		m_tri_selection = null;
+	}
+	
+	// Grab the current option
+	var option_index = m_sub_selection - BookSelects.Option_OptionBase;
+			
+	if (option_index >= 0 && option_index < array_length_1d(m_options))
+	{
+		var l_current_option = m_options[option_index];
+		
+		if (ssettingGetType(l_current_option[3]) == kSettingTypeControl)
+		{
+			var new_input = [null, null];
+	
+			// Check for any input:
+			
+			// Keyboard:
+			for (var i = 1; i < 254; ++i)
+			{
+				if (i == vk_anykey || i == vk_nokey)
+					continue;
+				if (keyboard_check_direct(i))
+				{
+					new_input[0] = kControlKB;
+					new_input[1] = i;
+				}
+			}
+			// Mouse:
+			if (mouse_check_button_pressed(mb_left))
+				new_input = [kControlMouse, mb_left];
+			if (mouse_check_button_pressed(mb_right))
+				new_input = [kControlMouse, mb_right];
+			if (mouse_check_button_pressed(mb_middle))
+				new_input = [kControlMouse, mb_middle];
+			if (mouse_wheel_up())
+				new_input = [kControlMouse, kMouseWheelUp];
+			if (mouse_wheel_down())
+				new_input = [kControlMouse, kMouseWheelDown];
+			// Controller:
+			var gp_buttons = [gp_face1, gp_face2, gp_face3, gp_face4, gp_padd, gp_padu, gp_padl, gp_padr,
+							  gp_select, gp_start, gp_stickl, gp_stickr,
+							  gp_shoulderl, gp_shoulderlb, gp_shoulderr, gp_shoulderrb];
+			for (var i = 0; i < array_length_1d(gp_buttons); ++i)
+				if (gamepad_button_check_pressed(0, gp_buttons[i]))
+					new_input = [kControlGamepad, gp_buttons[i]];
+			var gp_axis;
+			gp_axis = gamepad_axis_value(0, gp_axislh);
+			if (abs(gp_axis) > 0.707)
+				new_input = [kControlGamepad, gp_axislh * sign(gp_axis)];
+			gp_axis = gamepad_axis_value(0, gp_axislv);
+			if (abs(gp_axis) > 0.707)
+				new_input = [kControlGamepad, gp_axislv * sign(gp_axis)];
+			gp_axis = gamepad_axis_value(0, gp_axisrh);
+			if (abs(gp_axis) > 0.707)
+				new_input = [kControlGamepad, gp_axisrh * sign(gp_axis)];
+			gp_axis = gamepad_axis_value(0, gp_axisrv);
+			if (abs(gp_axis) > 0.707)
+				new_input = [kControlGamepad, gp_axisrv * sign(gp_axis)];
+
+			// Wait for ready state
+			if (!m_tri_ready)
+			{
+				if (new_input[0] == null)
+				{
+					m_tri_ready = true;
+				}
+			}
+
+			// Rebind for the array
+			if (m_tri_ready && new_input[0] != null)
+			{
+				var control_value = ssettingGetValue(l_current_option[3]);
+		
+				// Fill in the array
+				for (var i = array_length_1d(control_value); i < 8; ++i)
+				{
+					control_value[i] = null;
+				}
+				
+				// Set the new control value
+				control_value[m_tri_selection * 2 + 0] = new_input[0];
+				control_value[m_tri_selection * 2 + 1] = new_input[1];
+				
+				ssettingSetValue(l_current_option[3], control_value);
+				
+				// Leave the state
+				m_book_state = BookState.SelectionOptions;
+				m_sub_selection = null;
+				m_tri_selection = null;
+			}
+		} // End control type check
 	}
 }
 
