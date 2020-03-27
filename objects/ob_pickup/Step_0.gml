@@ -19,10 +19,31 @@ if (!m_isPickingUp)
 	z = collision3_get_highest_meeting(x, y, z);
 	z_height += z_prev - z;
 	
-	// Fall to the ground
-	z_height = max(0, z_height - 25.0 * Time.deltaTime * (1.0 - m_pickupCooldown));
+	//Item is falling off of something
+	if (z_height > 0.0) {	
+		// Fall to the ground
+		z_height = max(0, z_height - 25.0 * Time.deltaTime * (1.0 - m_pickupCooldown));
+		m_isSliding = true;
+	}
 	
-	y += slide_down_cliff(x, y, (z + z_height)) * Time.deltaTime;
+	//Do sliding logic
+	if(m_isSliding == true) {
+		//Do the slide
+		y += m_slideSpeedY * Time.deltaTime;
+	
+		//Only calculate the slide velocity 4 timse a second
+		if (m_slideTimer < 0.25) {
+			m_slideTimer += Time.deltaTime;
+		} else {
+			m_slideTimer = 0.0;
+			m_slideSpeedY = slide_down_cliff(x, y, (z + z_height));
+			
+			//Item is done sliding, so stop sliding.
+			if (m_slideSpeedY == 0.0) {
+				m_isSliding = false;
+			}
+		}
+	}
 }
 else
 {
