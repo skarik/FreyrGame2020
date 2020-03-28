@@ -18,6 +18,9 @@ if (questGetValue(kQidIntroSequence) > 30
 		//new(o_mus00_Oasis);
 		//questSetValue(kQidIntroSequence, 40); // HACK
 	}
+	
+	if (!exists(o_mus00_FarmLight))
+		new(o_mus00_FarmLight);
 }
 else if (questGetValue(kQidIntroSequence) > 10)
 {

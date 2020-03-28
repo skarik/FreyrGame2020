@@ -1,0 +1,3 @@
+/// @description Special music player...
+
+music_play_countdown_timer = 2.0;
