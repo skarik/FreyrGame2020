@@ -655,6 +655,14 @@
             }
         },
         {
+            "Key": "0b5577b7-ff8f-4f7f-bd8a-3dadbe559e3b",
+            "Value": {
+                "id": "4179af07-332b-4d89-80b5-2deb8de69e2d",
+                "resourcePath": "sounds\\snd_windStrong\\snd_windStrong.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0bd4041a-4c97-4b99-a9c0-20ed8371e025",
             "Value": {
                 "id": "40906c80-171f-436f-8b89-88afd567e75a",
@@ -1250,7 +1258,7 @@
             "Key": "15e5a6f2-d391-445d-9975-2014fba80445",
             "Value": {
                 "id": "49768dea-b261-4170-9e7c-83d72b04966a",
-                "resourcePath": "scripts\\worldPositionIndoors\\worldPositionIndoors.yy",
+                "resourcePath": "scripts\\worldPositionLocationType\\worldPositionLocationType.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2532,6 +2540,14 @@
                 "id": "a9e78a69-bf99-4df5-960a-846091c15258",
                 "resourcePath": "objects\\o_genMapTool\\o_genMapTool.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2b58bfe5-1dea-454e-bd07-7d66711c59b4",
+            "Value": {
+                "id": "922e5085-b72e-4b02-9fb4-0fbf60720373",
+                "resourcePath": "sounds\\snd_windCave\\snd_windCave.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -4031,6 +4047,14 @@
             }
         },
         {
+            "Key": "4610edf5-4286-4ea6-9bf6-1544ecd6e121",
+            "Value": {
+                "id": "561dbc57-77e1-46cc-bf59-107d725d0dcc",
+                "resourcePath": "sounds\\snd_windMedium\\snd_windMedium.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "465daf60-9a59-4ef6-a5d7-58ba097b73ad",
             "Value": {
                 "id": "0ee27df0-8e78-41f4-8bb2-d62711c67cdc",
@@ -4991,6 +5015,14 @@
             }
         },
         {
+            "Key": "56a23f95-1a4f-4d40-8d77-46c4af38bcd1",
+            "Value": {
+                "id": "8676e376-37f5-430b-b971-f9deb1ec4fc1",
+                "resourcePath": "sounds\\snd_windWeakHighlands\\snd_windWeakHighlands.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "56a84241-7e72-4cfe-8345-7b8986e62560",
             "Value": {
                 "id": "bd6a1354-c6e6-4582-92d9-329c44507c4b",
@@ -5788,6 +5820,14 @@
                 "id": "242095bb-4ecc-4e87-ab30-557204fef992",
                 "resourcePath": "views\\667f9897-77d4-4234-94a0-2a5655d3639c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "669d55fa-f245-4b7c-90d0-cba6437d3364",
+            "Value": {
+                "id": "d1b5e9b1-85fe-4052-8c93-a79e7ffa6cbc",
+                "resourcePath": "scripts\\windAudioGlobalUpdate\\windAudioGlobalUpdate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6884,6 +6924,14 @@
                 "id": "7ecb7b5c-fd3e-4637-b31f-8e993ff82c1e",
                 "resourcePath": "sprites\\s_propTRailLine0\\s_propTRailLine0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7975ef4f-8797-48e9-804a-5221a98e12a6",
+            "Value": {
+                "id": "a575bb9d-2484-4a53-938b-dca96acbf68c",
+                "resourcePath": "sounds\\snd_windWeakLowlands\\snd_windWeakLowlands.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -8508,6 +8556,14 @@
                 "id": "64239853-789f-4320-9441-b4bc077d8e53",
                 "resourcePath": "sprites\\s_assetTRailSupport0_Bolts\\s_assetTRailSupport0_Bolts.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9652a78e-f6b9-4282-b03b-ab0d11c56f7e",
+            "Value": {
+                "id": "a9974139-03ae-45b8-b961-b71e0abc1bd2",
+                "resourcePath": "scripts\\faudio_sound_set_gain\\faudio_sound_set_gain.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -10836,6 +10892,14 @@
                 "id": "622da75b-c54d-4628-8625-2c578cf7e121",
                 "resourcePath": "objects\\o_livelyDoodadTowerWire_PhysWire3D\\o_livelyDoodadTowerWire_PhysWire3D.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bdc73301-ca23-4bf4-be12-324839c1c56d",
+            "Value": {
+                "id": "55c6ccb2-3d57-4bf9-a3a3-4ef71dbff5db",
+                "resourcePath": "scripts\\windAudioGlobalGetSoundscapeDucking\\windAudioGlobalGetSoundscapeDucking.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -13290,7 +13354,7 @@
             "Key": "e5a0ffd0-9e93-45c7-a231-5ff4ad7a3d8d",
             "Value": {
                 "id": "a7041199-5303-45fa-a270-f50aaf7a9657",
-                "resourcePath": "scripts\\worldGameIndoors\\worldGameIndoors.yy",
+                "resourcePath": "scripts\\worldGameLocationType\\worldGameLocationType.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -13743,6 +13807,14 @@
             }
         },
         {
+            "Key": "eda4f3e8-7cf0-408d-81f4-590d1bd21623",
+            "Value": {
+                "id": "50b0ceef-c4c5-481d-9ddd-66c3f71fb7e7",
+                "resourcePath": "scripts\\faudio_sound_stop\\faudio_sound_stop.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eda59b82-8aa9-4c6f-8bb2-367192b18db3",
             "Value": {
                 "id": "8c62aa0e-7919-4a23-8f9a-bf859c159c11",
@@ -13772,6 +13844,14 @@
                 "id": "0088955e-3746-43bb-9684-5da680756bd1",
                 "resourcePath": "sprites\\s_assetTSignage0\\s_assetTSignage0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ee84ddca-f858-4929-88b7-e5ae521ebea2",
+            "Value": {
+                "id": "5ad4f5bd-d2d5-4393-ba0f-72877542f10e",
+                "resourcePath": "scripts\\windAudioGlobalInit\\windAudioGlobalInit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -14985,6 +15065,8 @@
         "fbf7de64-6ed3-424e-9e7a-c8ef9bae3dd2",
         "a2c923fd-c522-4ba7-826a-414a078531f4",
         "62c59dc0-aa49-4cc2-bf8c-bdac652ca6df",
+        "9652a78e-f6b9-4282-b03b-ab0d11c56f7e",
+        "eda4f3e8-7cf0-408d-81f4-590d1bd21623",
         "8c8e4c2d-fdb6-481b-8d2d-76088ba9384a",
         "fb6f19c3-ec08-4c98-aa8c-b7878677d0d6",
         "b307a018-7986-440d-b425-ff521c110999",
@@ -15373,6 +15455,9 @@
         "d22ca906-6d43-4afd-8a4c-d4ead08749d1",
         "80074871-92a3-4a18-8a8b-7325fac462da",
         "99c97f4b-31a2-4546-90f6-1a53824836f7",
+        "ee84ddca-f858-4929-88b7-e5ae521ebea2",
+        "669d55fa-f245-4b7c-90d0-cba6437d3364",
+        "bdc73301-ca23-4bf4-be12-324839c1c56d",
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
         "1dcd64d2-4b18-4872-8659-8dccbb978594",

@@ -200,7 +200,7 @@ else if (ground_material == kTileMaterial_Wood)
 		choose(snd_physStepWood1, snd_physStepWood2)
 		);
 	sound_hit.pitch = random_range(0.9, 1.0);
-	sound_hit.gain = random_range(0.7, 0.9) * 0.5;
+	sound_hit.gain = random_range(0.7, 0.9) * 1.4;
 	sound_hit.falloff_start = 20;
 	sound_hit.falloff_end = 800;
 	sound_hit.falloff_factor = 1;

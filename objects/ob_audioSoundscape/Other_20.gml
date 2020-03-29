@@ -1,6 +1,7 @@
 /// @description Update audio state
 
-/// @description Spin up the audio state
+var l_ambientDuckMultiplier = saturate(1.0 - windAudioGlobalGetSoundscapeDucking()) * 0.9 + 0.1;
+var l_ambientDuckMultiplierRandom = lerp(l_ambientDuckMultiplier, 1.0, 0.5);
 
 // Loop through all the audio, setting up states
 for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
@@ -8,7 +9,7 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 	var soundinfo = m_definition.sounds[i];
 	if (soundinfo.type == kSoundscapeSoundTypeLooping)
 	{
-		m_audioSound[i].gain = soundinfo.volume_min * m_strength;
+		m_audioSound[i].gain = soundinfo.volume_min * m_strength * l_ambientDuckMultiplier;
 		sound_update_params(m_audioSound[i]);
 	}
 	else if (soundinfo.type == kSoundscapeSoundTypeRandom)
@@ -72,7 +73,7 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 			// Play the sound
 			m_audioSound[i] = sound_play_at(soundpos[0], soundpos[1], audioHandle);
 			m_audioSound[i].pitch = random_range(soundinfo.pitch_min, soundinfo.pitch_max);
-			m_audioSound[i].gain = random_range(soundinfo.volume_min, soundinfo.volume_max);
+			m_audioSound[i].gain = random_range(soundinfo.volume_min, soundinfo.volume_max) * l_ambientDuckMultiplierRandom;
 			m_audioSound[i].loop = false;
 		}
 	}
