@@ -1,2 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Clear out audio state
+
+delete(music_current);
+music_current = null;

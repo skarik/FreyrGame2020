@@ -16,7 +16,24 @@ if (object_index == o_chCaveSlug
 var ground_material = 0;
 if (!areaInWater(x, y, z + z_height))
 {
-	ground_material = vtileGetMaterialAtPosition(x, y);	
+	if (!exists(ob_areaFarmable))
+	{
+		if (position_meeting(x, y, ob_areaTallGrass))
+			ground_material = kTileMaterial_Grass;
+		else
+			ground_material = vtileGetMaterialAtPosition(x, y);	
+	}
+	else
+	{
+		//var nearest_water = instance_nearest(x, y, ob_areaWater);
+		var field_square = collision_point(x, y, o_fieldSquare, false, true);
+		if (exists(field_square))
+			ground_material = field_square.planted ? kTileMaterial_Grass : kTileMaterial_Dirt;
+		//else if (exists(nearest_water) && point_distance(x, y, nearest_water.x, nearest_water.y) < 64 * nearest_water.image_xscale * 1.5)
+		//	ground_material = kTileMaterial_Dirt;
+		else
+			ground_material = vtileGetMaterialAtPosition(x, y);	
+	}
 }
 else
 {

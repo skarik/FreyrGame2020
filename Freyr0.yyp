@@ -9543,6 +9543,14 @@
             }
         },
         {
+            "Key": "a86ad599-d8ab-4f77-8c96-4e9486c8352e",
+            "Value": {
+                "id": "7ee05a94-6ed7-44bc-aae3-fe966083162c",
+                "resourcePath": "sounds\\snd_physStepWood1\\snd_physStepWood1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "a8b9a565-97d0-43ad-86f1-4dcb91923cc6",
             "Value": {
                 "id": "06d2fc2e-e376-4fd6-8001-b427804e02b4",
@@ -13252,6 +13260,14 @@
                 "id": "63c45bba-34b5-435d-8312-1dc23ab51b59",
                 "resourcePath": "scripts\\weatherGetWind\\weatherGetWind.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e5524dfa-dcdc-47d0-84ad-a50a98598d51",
+            "Value": {
+                "id": "310a9897-eea4-4e3b-8276-3382b8003253",
+                "resourcePath": "sounds\\snd_physStepWood2\\snd_physStepWood2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
