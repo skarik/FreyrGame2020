@@ -15,7 +15,24 @@ if (object_index == o_chCaveSlug
 var ground_material = 0;
 if (!areaInWater(x, y, z  + z_height))
 {
-	ground_material = vtileGetMaterialAtPosition(x, y);	
+	if (!exists(ob_areaFarmable))
+	{
+		if (position_meeting(x, y, ob_areaTallGrass))
+			ground_material = kTileMaterial_Grass;
+		else
+			ground_material = vtileGetMaterialAtPosition(x, y);	
+	}
+	else
+	{
+		//var nearest_water = instance_nearest(x, y, ob_areaWater);
+		var field_square = collision_point(x, y, o_fieldSquare, false, true);
+		if (exists(field_square))
+			ground_material = field_square.planted ? kTileMaterial_Grass : kTileMaterial_Dirt;
+		//else if (exists(nearest_water) && point_distance(x, y, nearest_water.x, nearest_water.y) < 64 * nearest_water.image_xscale * 1.5)
+		//	ground_material = kTileMaterial_Dirt;
+		else
+			ground_material = vtileGetMaterialAtPosition(x, y);	
+	}
 }
 else
 {
@@ -52,7 +69,7 @@ if (ground_material == kTileMaterial_Sand)
 		choose(snd_physStepSand1, snd_physStepSand2, snd_physStepSand3)
 		);
 	sound_hit.pitch = random_range(0.9, 1.1);
-	sound_hit.gain = 0.8;
+	sound_hit.gain = 0.84;
 	sound_hit.falloff_start = 20;
 	sound_hit.falloff_end = 800;
 	sound_hit.falloff_factor = 1;
@@ -85,7 +102,7 @@ else if (ground_material == kTileMaterial_Dirt)
 		choose(snd_physStepDirt1, snd_physStepDirt2)
 		);
 	sound_hit.pitch = random_range(0.7, 0.8);
-	sound_hit.gain = 0.6;
+	sound_hit.gain = random_range(0.8, 0.9) * 0.4;
 	sound_hit.falloff_start = 20;
 	sound_hit.falloff_end = 800;
 	sound_hit.falloff_factor = 1;
@@ -153,7 +170,7 @@ else if (ground_material == kTileMaterial_Grass)
 		choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
 		);
 	sound_hit.pitch = random_range(0.95, 1.2);
-	sound_hit.gain = random_range(0.7, 0.9) * 0.6;
+	sound_hit.gain = random_range(0.7, 0.9) * 0.4;
 	sound_hit.falloff_start = 20;
 	sound_hit.falloff_end = 800;
 	sound_hit.falloff_factor = 1;
@@ -169,6 +186,21 @@ else if (ground_material == kTileMaterial_Metal)
 		);
 	sound_hit.pitch = random_range(0.95, 1.2);
 	sound_hit.gain = random_range(0.7, 0.9) * 0.6;
+	sound_hit.falloff_start = 20;
+	sound_hit.falloff_end = 800;
+	sound_hit.falloff_factor = 1;
+	sound_hit.parent = id;
+}
+else if (ground_material == kTileMaterial_Wood)
+{
+	// make sound
+	sound_hit = sound_play_at(
+		random_range(x - 4, x + 4),
+		random_range(y - 4, y + 4),
+		choose(snd_physStepWood1, snd_physStepWood2)
+		);
+	sound_hit.pitch = random_range(0.9, 1.0);
+	sound_hit.gain = random_range(0.7, 0.9) * 0.5;
 	sound_hit.falloff_start = 20;
 	sound_hit.falloff_end = 800;
 	sound_hit.falloff_factor = 1;

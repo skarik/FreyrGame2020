@@ -66,6 +66,8 @@ if (m_top_hover == BookSelects.TabMain
 			m_book_state = BookState.TopLevel;
 			m_tab = next_tab;
 			m_top_selection = null;
+			m_sub_selection = null;
+			m_tri_selection = null;
 			
 			m_anim_tab_flavor = 1.0; // Proc the animation hit
 			return true;

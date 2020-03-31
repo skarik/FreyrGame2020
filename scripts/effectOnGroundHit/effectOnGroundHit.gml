@@ -8,7 +8,23 @@ var poof, footstep, fader, sound_hit;
 var ground_material = 0;
 if (!areaInWater(x, y, z + z_height))
 {
-	ground_material = vtileGetMaterialAtPosition(x, y);	
+	if (!exists(ob_areaFarmable))
+	{
+		if (position_meeting(x, y, ob_areaTallGrass))
+			ground_material = kTileMaterial_Grass;
+		else
+			ground_material = vtileGetMaterialAtPosition(x, y);	
+	}
+	else
+	{
+		//var nearest_water = instance_nearest(x, y, ob_areaWater);
+		if (position_meeting(x, y, o_fieldSquare))
+			ground_material = kTileMaterial_Dirt;
+		//else if (exists(nearest_water) && point_distance(x, y, nearest_water.x, nearest_water.y) < 64 * nearest_water.image_xscale * 1.5)
+		//	ground_material = kTileMaterial_Dirt;
+		else
+			ground_material = vtileGetMaterialAtPosition(x, y);	
+	}
 }
 else
 {
@@ -115,6 +131,21 @@ else if (ground_material == kTileMaterial_Grass)
 		);
 	sound_hit.pitch = random_range(0.95, 1.0);
 	sound_hit.gain = 1.1;
+	sound_hit.falloff_start = 20;
+	sound_hit.falloff_end = 800;
+	sound_hit.falloff_factor = 1;
+	sound_hit.parent = id;
+}
+else if (ground_material == kTileMaterial_Wood)
+{
+	// make sound
+	sound_hit = sound_play_at(
+		random_range(x - 4, x + 4),
+		random_range(y - 4, y + 4),
+		choose(snd_physStepWood1, snd_physStepWood2)
+		);
+	sound_hit.pitch = random_range(0.9, 1.0);
+	sound_hit.gain = 0.9;
 	sound_hit.falloff_start = 20;
 	sound_hit.falloff_end = 800;
 	sound_hit.falloff_factor = 1;

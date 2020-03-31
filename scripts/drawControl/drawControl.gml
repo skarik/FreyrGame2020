@@ -20,6 +20,7 @@ var controlType	= argument5;
 var padType		= argument6;
 
 var l_controlValue = null;
+var l_controlSign = null;
 var l_currentAlpha = draw_get_alpha();
 var l_currentColor = draw_get_color();
 
@@ -34,7 +35,8 @@ for (var i = 0; i < control_length; i += 2)
 	var l_input = control[i + 1];
 	if (l_context == controlType)
 	{
-		l_controlValue = abs(l_input); // Abs because sign is only the direction of the input
+		l_controlValue = (l_input == null) ? null : abs(l_input); // Abs because sign is only the direction of the input
+		l_controlSign = sign(l_input);
 		break;
 	}
 }
@@ -61,7 +63,8 @@ if (l_controlValue == null)
 	draw_set_font(f_04b03);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(dx, dy, "<unbound>");
+	draw_set_color(c_black);
+	draw_text(dx, dy, "...");
 }
 else if (controlType == kControlKB)
 {
@@ -71,6 +74,14 @@ else if (controlType == kControlKB)
 	switch (l_controlValue)
 	{
 		case vk_space:			l_suiIndex = 1; break;
+		case vk_left:			l_suiIndex = 2; break;
+		case vk_right:			l_suiIndex = 3; break;
+		case vk_up:				l_suiIndex = 4; break;
+		case vk_down:			l_suiIndex = 5; break;
+		case vk_pageup:			l_suiIndex = 6; break;
+		case vk_pagedown:		l_suiIndex = 7; break;
+		case vk_return:			l_suiIndex = 8; break;
+		case vk_escape:			l_suiIndex = 9; break;
 	}
 
 	// Draw spacebar
@@ -134,6 +145,11 @@ else if (controlType == kControlGamepad)
 		case gp_padr:		l_suiIndex = 13; break;
 		case gp_stickl:		l_suiIndex = 14; break;
 		case gp_stickr:		l_suiIndex = 15; break;
+		
+		case gp_axislh:		l_suiIndex = (l_controlSign > 0) ? 17 : 16; break;
+		case gp_axislv:		l_suiIndex = (l_controlSign > 0) ? 19 : 18; break;
+		case gp_axisrh:		l_suiIndex = (l_controlSign > 0) ? 21 : 20; break;
+		case gp_axisrv:		l_suiIndex = (l_controlSign > 0) ? 23 : 22; break;
 	}
 	
 	// Draw the pad button

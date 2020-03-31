@@ -297,7 +297,7 @@ else if (m_tab == BookTabs.Options)
 			draw_set_font(global.font_arvo9);
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
-			draw_text_spaced(op_left + 6, l_ddy + 1, l_current_option[2], 2); 
+			draw_text_spaced(op_left + 2, l_ddy + 1, l_current_option[2], 2); 
 			
 			l_ddy += op_dy_div + 4;
 		}
@@ -321,7 +321,7 @@ else if (m_tab == BookTabs.Options)
 			draw_set_font(global.font_arvo7);
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
-			draw_text_spaced(op_left + 6, l_ddy + 2, l_current_option[2], 2);
+			draw_text_spaced(op_left + 2, l_ddy + 2, l_current_option[2], 2);
 			
 			// draw the current value
 			switch (ssettingGetType(l_current_option[3]))
@@ -329,7 +329,51 @@ else if (m_tab == BookTabs.Options)
 				case kSettingTypeControl:
 				{
 					var setting = controlSettingGet(l_current_option[3]);
-					drawControl((op_left + op_right) / 2 + 8, l_ddy + 8, null, kControlDrawStyle_Flat, setting, kControlKB, kGamepadTypeXInput);
+					var control_x_base = round(lerp(op_left, op_right, 0.52)) + 3;
+					//drawControl((op_left + op_right) / 2 + 8, l_ddy + 8, null, kControlDrawStyle_Flat, setting, kControlKB, kGamepadTypeXInput);
+					for (var isetting = 0; isetting < 8; isetting += 2)
+					{
+						// draw the select box for the sub-sub-option
+						if (m_sub_hover == i + BookSelects.Option_OptionBase || m_sub_selection == i + BookSelects.Option_OptionBase)
+						{
+							if (m_tri_hover == floor(isetting / 2))
+							{
+								draw_set_color((m_tri_selection == floor(isetting / 2)) ? c_gold : c_white);
+								draw_set_alpha((m_tri_selection == floor(isetting / 2)) ? 1.0 : _playeruiBookAlphaPulse());
+								draw_rectangle( control_x_base + isetting * 11.5 - 11, l_ddy + 0,
+												control_x_base + isetting * 11.5 + 10, l_ddy + 16, false);
+								draw_set_alpha(1.0);
+							}
+						}
+						
+						var setting_group;
+						if (isetting < array_length_1d(setting))
+							setting_group = [setting[isetting], setting[isetting + 1]];
+						else
+							setting_group = [null, null];
+							
+						drawControl(control_x_base + isetting * 11.5,
+									l_ddy + 8,
+									null,
+									kControlDrawStyle_Skeuo,
+									setting_group, setting_group[0],
+									kGamepadTypeXInput);
+									
+						if (isetting < 6)
+						{
+							draw_set_color(c_bookHeading);
+							draw_line(control_x_base + isetting * 11.5 + 11, l_ddy + 0,
+									  control_x_base + isetting * 11.5 + 11, l_ddy + 15);
+						}
+						
+						// set up the UI boxes
+						if (m_sub_hover == i + BookSelects.Option_OptionBase || m_sub_selection == i + BookSelects.Option_OptionBase)
+						{
+							m_hover_rects[floor(isetting / 2) + BookSelects.Option_TriOptionBase] =
+								[op_surface_x + control_x_base + isetting * 11.5 - 11,  op_surface_y + l_ddy + 0,
+								 op_surface_x + control_x_base + isetting * 11.5 + 10,  op_surface_y + l_ddy + 16];
+						}
+					}
 				} break;
 				
 				case kSettingTypeFloat:

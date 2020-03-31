@@ -24,7 +24,9 @@
         "f3bb9bdc-496b-4710-80c9-8ddd51e8ea99",
         "b1ae23e9-27c5-414a-9518-328987ddeff8",
         "2adf6508-ec80-4644-9c19-bfac72f8c1bc",
-        "2801970e-d85d-4dbe-bb1b-2c5ef6cbe8a9"
+        "2801970e-d85d-4dbe-bb1b-2c5ef6cbe8a9",
+        "a86ad599-d8ab-4f77-8c96-4e9486c8352e",
+        "e5524dfa-dcdc-47d0-84ad-a50a98598d51"
     ],
     "filterType": "GMSound",
     "folderName": "Phys",

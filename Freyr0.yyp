@@ -5375,6 +5375,14 @@
             }
         },
         {
+            "Key": "5d03b0b9-7a02-4506-8efb-0cce3da296e7",
+            "Value": {
+                "id": "ee637935-b070-4ea4-a3ba-98040af3c534",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_4.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "5d2092b0-22c7-43c8-a911-4a275a4061ad",
             "Value": {
                 "id": "64b9e6fd-54d5-425e-a0f0-88607c40a749",
@@ -5620,6 +5628,14 @@
                 "id": "c396989c-a464-46f7-b77b-564ce085ed1b",
                 "resourcePath": "fonts\\f_droidSerif7\\f_droidSerif7.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "62f38934-fea8-4760-b415-e12711393f31",
+            "Value": {
+                "id": "e16363f9-0d71-4ee1-a24a-6e1d3dc372ce",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_1.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -6772,6 +6788,14 @@
                 "id": "a8ece10a-d14c-415b-bf9f-3bf568891291",
                 "resourcePath": "views\\76f20ad6-4d96-4fef-890a-b75b37fdce7e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "76f909c8-6242-4b77-b07b-a4b7ae3b5061",
+            "Value": {
+                "id": "c59e052c-0d6b-4754-88b9-db373cb1052c",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_6.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -8415,14 +8439,6 @@
             }
         },
         {
-            "Key": "953f6d41-a4dc-45f2-966f-41a275c1b2a2",
-            "Value": {
-                "id": "869417c0-3d9f-4096-a1cd-6867a9d5e46c",
-                "resourcePath": "views\\953f6d41-a4dc-45f2-966f-41a275c1b2a2.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "9547b16f-8c7a-4df5-90ef-69f1e58f268a",
             "Value": {
                 "id": "a90ced5d-8fb1-4036-bc70-2fa84590dfc4",
@@ -9263,6 +9279,14 @@
             }
         },
         {
+            "Key": "a3fe22e9-300b-43b5-9120-4e0e6abd0aa3",
+            "Value": {
+                "id": "189f3b26-664a-4f02-b176-661ba8b9cd0b",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_day_med_1.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "a410b08e-56e9-483b-b762-96941d81aabc",
             "Value": {
                 "id": "96f242ad-690d-495f-ace2-d62bf041805a",
@@ -9516,6 +9540,14 @@
                 "id": "153ca357-f063-493b-8f41-4fe382bd40c9",
                 "resourcePath": "scripts\\_playeruiBookInput_TopTabs\\_playeruiBookInput_TopTabs.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a86ad599-d8ab-4f77-8c96-4e9486c8352e",
+            "Value": {
+                "id": "7ee05a94-6ed7-44bc-aae3-fe966083162c",
+                "resourcePath": "sounds\\snd_physStepWood1\\snd_physStepWood1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -10655,6 +10687,14 @@
             }
         },
         {
+            "Key": "b98d5ab8-fd1e-4fd9-9245-bb7ab1463191",
+            "Value": {
+                "id": "4c97990c-94f2-4ab8-85b2-a96dc9bea99a",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_7.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "b9a3c0c7-5e0f-4655-b75a-8e6478d64aaa",
             "Value": {
                 "id": "4ee0ef45-5322-445a-9598-5d43887fc88c",
@@ -10839,6 +10879,14 @@
             }
         },
         {
+            "Key": "be76cdca-cc14-4102-b731-d014f6a1860c",
+            "Value": {
+                "id": "31b7b631-0030-4338-bb0e-2ecf1b6ae7fa",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_5.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "bec3e5f0-d50b-44db-be78-6806ed0a95b3",
             "Value": {
                 "id": "93db48d4-4184-42b5-8d37-fb7e0fc64701",
@@ -10975,6 +11023,14 @@
             }
         },
         {
+            "Key": "c111060f-8801-4bc9-b9ad-ccee19fd46ff",
+            "Value": {
+                "id": "8fac8c40-da42-4043-96b2-25d20add5719",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_3.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "c1189dd4-b75f-4f9a-9b7b-8b32371368c4",
             "Value": {
                 "id": "4e0a7395-39db-4118-b7d1-b26f9ecdece4",
@@ -11084,6 +11140,14 @@
                 "id": "2bf6894c-47a2-43b7-b45e-f69a67451296",
                 "resourcePath": "rooms\\rm_fools_march\\rm_fools_march.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "c2d779fb-6dab-4073-93ff-9a219df310e8",
+            "Value": {
+                "id": "3c0fa1b2-83f4-4626-af2f-25e611024692",
+                "resourcePath": "objects\\o_mus00_FarmLight\\o_mus00_FarmLight.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -11396,6 +11460,14 @@
                 "id": "bd68c622-cd6f-4f03-99b3-29be96d62693",
                 "resourcePath": "sprites\\s_charHeroPunchDig\\s_charHeroPunchDig.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c7051617-16e1-4d5a-8bf0-1bb448493f56",
+            "Value": {
+                "id": "a4228909-8cee-45f8-a610-5218befdc0b7",
+                "resourcePath": "views\\c7051617-16e1-4d5a-8bf0-1bb448493f56.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -11956,6 +12028,14 @@
                 "id": "a251444c-e13e-476e-a5c7-d76c3f443f45",
                 "resourcePath": "sprites\\s_charNathanWalk\\s_charNathanWalk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d1577ddc-492a-4da8-a148-7251878f8bf0",
+            "Value": {
+                "id": "509c0a58-0b0c-48b0-9416-e18358e0c216",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_8.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -13183,6 +13263,14 @@
             }
         },
         {
+            "Key": "e5524dfa-dcdc-47d0-84ad-a50a98598d51",
+            "Value": {
+                "id": "310a9897-eea4-4e3b-8276-3382b8003253",
+                "resourcePath": "sounds\\snd_physStepWood2\\snd_physStepWood2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e573e4a2-7819-416c-85fa-45560dd82d1a",
             "Value": {
                 "id": "47aac1d5-5b0b-4c51-866f-2597a57e3ab2",
@@ -13220,6 +13308,14 @@
                 "id": "a50db5bc-6628-4745-9570-46fd8b19a9e9",
                 "resourcePath": "sprites\\s_tileset0_Water\\s_tileset0_Water.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e5d88ffd-fbcf-4477-9964-981aaccdbe55",
+            "Value": {
+                "id": "3ccb3670-6947-4225-a10d-e2c9d81095cc",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_night_med_1.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -14660,6 +14756,14 @@
                 "id": "82bdf9e8-27c5-4378-87fd-3e00718ee2c1",
                 "resourcePath": "views\\fe8cc8f4-0ef3-4f01-b3fb-0618a6a28444.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fe8ee117-03cd-4efc-8d6d-f507e135ecb8",
+            "Value": {
+                "id": "e4914b12-2783-4f68-8c64-5ac148efb042",
+                "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_2.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
