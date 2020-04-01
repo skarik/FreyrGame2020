@@ -36,6 +36,15 @@ if ( m_isPlayer && stats.m_health < stats.m_healthPrev )
 	// On Hurt for hud-blood
 	with (o_ptcBloodHud) event_user(kEvent_ChOnHurt1);
 	
+	// Make hurt sound
+	audio = sound_play_at(x, y, snd_npcHurt);
+	audio.pitch = random_range(0.7, 0.8);
+	audio.gain = random_range(0.3, 0.4);
+	audio.falloff_start = 30;
+	audio.falloff_end = 300;
+	audio.falloff_factor = 2;
+	audio.parent = id;
+	
 	// Damage will
 	if (m_will > 0)
 	{

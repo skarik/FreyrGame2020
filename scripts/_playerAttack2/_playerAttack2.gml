@@ -45,6 +45,14 @@ if (meleeAtkTimer < meleeAtk2Hit || meleeAtkTimer > meleeAtk2Key)
 if (l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)
 {
 	playerOnDealingDamage();
+	
+	// Sound for the attack
+	var audio = sound_play_at(x, y, snd_npcWindstep);
+	audio.pitch = random_range(0.8, 0.9);
+	audio.gain = 0.7 / max(1.0, audio.pitch);
+	audio.falloff_start = 20;
+	audio.falloff_end = 500;
+	audio.falloff_factor = 2;
 }
 // if passing the hit point, do the damage
 if ((l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)

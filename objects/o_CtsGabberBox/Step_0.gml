@@ -58,6 +58,16 @@ if ( current_display_delay <= 0.0 )
 		{
 			effectScreenShake(1.0, 0.05, false);
 		}
+		
+		// Play sound on a new character
+		//if (floor(previous_display_count) < index)
+		if ((floor(i) % 6) == 0 || current_display_delay > 0.0)
+		{
+			// Do audio playing
+			var audio = faudio_play_sound(snd_MsgBepType, 51, false);
+			faudio_sound_set_gain(audio, random_range(0.3, 0.4) * 0.5);
+			faudio_sound_set_pitch(audio, choose(0.2, 0.2, 0.25, 0.25, 0.3) * 4.0);
+		}
     }
 }
 else

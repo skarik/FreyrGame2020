@@ -33,6 +33,24 @@ if (charges > 0)
 		{
 			till_square.watered = true;
 			charges -= 1;
+			
+			var audio;
+			// Make water sound
+			audio = sound_play_at(x, y, snd_npcWaterBlock);
+			audio.pitch = random_range(1.00, 1.30);
+			audio.gain = random_range(0.2, 0.3);
+			audio.falloff_start = 20;
+			audio.falloff_end = 500;
+			audio.falloff_factor = 1;
+			audio.parent = id;
+			// Make water sound
+			audio = sound_play_at(x, y, snd_physStepWater1);
+			audio.pitch = random_range(1.20, 1.40);
+			audio.gain = random_range(0.6, 0.7);
+			audio.falloff_start = 20;
+			audio.falloff_end = 500;
+			audio.falloff_factor = 1;
+			audio.parent = id;
 		}
 	}
 }
@@ -42,5 +60,17 @@ var inWater = areaInWater(x, y, -128);
 filled = filled || inWater;
 if (inWater)
 {
-	charges = kMaxCharges;
+	if (charges < kMaxCharges)
+	{
+		charges = kMaxCharges;
+		
+		// Make water sound
+		audio = sound_play_at(x, y, snd_FillWaterJug);
+		audio.pitch = random_range(0.9, 1.10);
+		audio.gain = random_range(0.6, 0.7);
+		audio.falloff_start = 30;
+		audio.falloff_end = 600;
+		audio.falloff_factor = 1;
+		audio.parent = id;
+	}
 }

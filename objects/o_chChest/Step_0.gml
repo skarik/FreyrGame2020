@@ -12,6 +12,28 @@ if (m_isDead)
 animationIndex = min(image_number - 1.0, animationIndex);
 image_index = animationIndex;
 
+// Make sound
+if (animationIndexPrev < 1.0 && animationIndex >= 1.0)
+{
+	var audio = sound_play_at(x, y, snd_ChestOpen0);
+	audio.pitch = random_range(0.95, 1.2);
+	audio.gain = random_range(0.7, 0.9) * 0.4;
+	audio.falloff_start = 20;
+	audio.falloff_end = 800;
+	audio.falloff_factor = 1;
+	audio.parent = id;
+}
+// Make more sound
+if (animationIndexPrev < 1.0 && animationIndex >= 1.0)
+{
+	var audio = sound_play_at(x, y, snd_ChestOpen1);
+	audio.pitch = 1.0;
+	audio.gain = 0.8;
+	audio.falloff_start = 20;
+	audio.falloff_end = 800;
+	audio.falloff_factor = 1;
+	audio.parent = id;
+}
 // Run the object dispensing
 var animationKeyPoint = image_number * 0.75;
 if (animationIndexPrev < animationKeyPoint && animationIndex >= animationKeyPoint)
@@ -41,6 +63,15 @@ if (animationIndexPrev < animationKeyPoint && animationIndex >= animationKeyPoin
 			item.m_pickupSpeedX = lengthdir_x(sped, angle);
 			item.m_pickupSpeedY = lengthdir_y(sped, angle);
 	}
+	
+	// Make even more sound
+	var audio = sound_play_at(x, y, snd_ChestOpen2);
+	audio.pitch = random_range(0.90, 1.00);
+	audio.gain = random_range(0.7, 0.9) * 0.9;
+	audio.falloff_start = 20;
+	audio.falloff_end = 800;
+	audio.falloff_factor = 1;
+	audio.parent = id;
 }
 
 // Override motion to keep it still
