@@ -2,6 +2,7 @@
 event_inherited();
 
 m_name           = "Parsnip Seed";
+m_description   = "Seeds are meant to be planted. Still a liar even in this form."
 m_maxStack       = 99;
 m_onUseScript    = generalSeedOnUse;
 m_checkUseScript = plantableDirtCheckUse;

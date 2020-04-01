@@ -2,5 +2,6 @@
 event_inherited();
 
 m_name           = "Cool Feather";
+m_description   = "It's soft and beautiful."
 m_maxStack       = 1;
 m_type           = kItemPickupNormal;

@@ -2,6 +2,7 @@
 event_inherited();
 
 m_name           = "Rice Seed";
+m_description   = "Seeds are meant to be planted."
 m_maxStack       = 99;
 m_onUseScript    = generalSeedOnUse;
 m_checkUseScript = plantableWaterCheckUse;
