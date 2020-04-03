@@ -24,8 +24,18 @@ for (var i = 0; i < kPitem_MAX; ++i)
 m_fortune = array_create(0);
 m_fortune_flipped = false;
 
-
 #macro kHazardRoboVoidShot 0
 #macro kHazard_MAX 256
 
 m_hazards = array_create(kHazard_MAX, 0);
+
+m_harvestedCrops = ds_map_create();
+#macro kCropId_AllCrops 0
+m_harvestedCrops[?kCropId_AllCrops] = 0;
+m_harvestedCrops[?o_cropTurnip] = 0;
+m_harvestedCrops[?o_cropCabbage] = 0;
+m_harvestedCrops[?o_cropMelon] = 0;
+m_harvestedCrops[?o_cropParsnip] = 0;
+m_harvestedCrops[?o_cropPotato] = 0;
+m_harvestedCrops[?o_cropEggplant] = 0;
+m_harvestedCrops[?o_cropRice] = 0;

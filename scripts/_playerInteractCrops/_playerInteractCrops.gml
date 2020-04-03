@@ -50,20 +50,38 @@ if (!m_isHarvesting)
 	{
 		if (l_canMove && !isAttacking && !isDashing && !isBlocking
 			&& !m_isTilling && !m_isPlanting
-			&& !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding
+			//&& !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding
+			&& !exists(currentUsable) && !exists(currentHeldUsable) && !m_isHolding
 			&& useButton.pressed)
 		{
-			currentCrop.m_user = id;
-			with (currentCrop)
-			{
-				event_user(0);
-			}
-		
+			m_harvest_target = currentCrop;
+			m_harvest_timer = 0;
 			m_isHarvesting = true;
 		}
 	}
 }
 else
 {
-	m_isHarvesting = false;
+	if (exists(m_harvest_target))
+	{
+		m_harvest_timer += Time.deltaTime;
+		if (m_harvest_timer >= m_harvest_time)
+		{
+			// TODO: Play POP sound
+			
+			// Harvest the crop
+			currentCrop.m_user = id;
+			with (currentCrop)
+			{
+				event_user(0);
+			}
+			
+			// Done harvesting
+			m_isHarvesting = false;
+		}
+	}
+	else
+	{
+		m_isHarvesting = false;
+	}
 }

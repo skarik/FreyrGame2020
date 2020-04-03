@@ -24,6 +24,9 @@ switch (settingname)
 		if (enumvalue == 0)
 			return "Default";
 		break;
+		
+	case "mlgmode":
+		return enumvalue ? "On" : "Off";
 }
 
 return null;

@@ -8,6 +8,12 @@ if (cropIsMature(this))
 	}
 
 	// TODO: do particles when harvesting!
+	effectOnPlantHarvest(x, y);
+
+	// update player stats
+	var player = getPlayer();
+	player.pstats.m_harvestedCrops[?kCropId_AllCrops] += 1;
+	player.pstats.m_harvestedCrops[?object_index] += 1;
 
 	if (exists(m_dirt))
 	{

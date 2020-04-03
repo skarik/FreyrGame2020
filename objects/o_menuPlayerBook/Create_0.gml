@@ -96,6 +96,7 @@ m_options = [
 	[kOptionTypeGameplay,	kOptionEntryOption, "UI Font Size", "ui_font_size"],
 	[kOptionTypeGameplay,	kOptionEntryOption, "Rumor Font Size", "ui_font_size_talk"],
 	[kOptionTypeGameplay,	kOptionEntryOption, "Font Style", "ui_font_style"],
+	[kOptionTypeGameplay,	kOptionEntryOption, "Special Farm Mode", "mlgmode"],
 	
 	[kOptionTypeControls,	kOptionEntryHeading, "Interacting"],
 	[kOptionTypeControls,	kOptionEntryOption,		"Use Object",		"use"],

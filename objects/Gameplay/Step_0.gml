@@ -75,3 +75,6 @@ if (exists(ob_weatherSystem))
 
 // Update wind audio
 windAudioGlobalUpdate();
+
+// Update MLG mode
+mlgmodeGlobalUpdate();

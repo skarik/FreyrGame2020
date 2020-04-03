@@ -9,6 +9,7 @@ with (Settings)
 	gameplay_ui_font_size		= ini_read_real("gameplay", "ui_font_size", gameplay_ui_font_size);
 	gameplay_ui_font_size_talk	= ini_read_real("gameplay", "ui_font_size_talk", gameplay_ui_font_size_talk);
 	gameplay_ui_font_style		= ini_read_real("gameplay", "ui_font_style", gameplay_ui_font_style);
+	gameplay_mlg_farm_mode		= ini_read_real("gameplay", "mlgmode", gameplay_mlg_farm_mode);
 
     ini_close();
 }

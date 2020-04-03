@@ -8,4 +8,5 @@ with (Settings)
 	gameplay_ui_font_size = 9;
 	gameplay_ui_font_size_talk = 7;
 	gameplay_ui_font_style = 0;
+	gameplay_mlg_farm_mode = false;
 }

@@ -32,6 +32,7 @@ switch (settingname)
 		break;
 	case "ui_font_style": Settings.gameplay_ui_font_style = value;
 		break;
+	case "mlgmode": Settings.gameplay_mlg_farm_mode = value;
 		
 	default:
 		return false;
