@@ -28,7 +28,8 @@ m_plant_time = 0.3;
 
 m_isHarvesting = false;
 m_harvest_timer = 0.0;
-m_harvest_time = 5.0 / 60.0;
+//m_harvest_time = 5.0 / 60.0;
+m_harvest_time = 20.0 / 60.0;
 m_harvest_target = null;
 
 m_isVoidPunchCharging = false; //TODO: reuse for other key items

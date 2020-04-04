@@ -62,20 +62,33 @@ if (!m_isHarvesting)
 }
 else
 {
-	if (exists(m_harvest_target))
+	if (exists(m_harvest_target) || m_harvest_timer > 0.5)
 	{
-		m_harvest_timer += Time.deltaTime;
-		if (m_harvest_timer >= m_harvest_time)
+		// move player to the crop (TODO: Make this temporary, or only affect the visual)
+		if (exists(m_harvest_target))
+		{
+			//x += (m_harvest_target.x - x) * 0.1;
+			//y += (m_harvest_target.y - y) * 0.1;
+			x = lerp(x, m_harvest_target.x, saturate(m_harvest_timer * 3.0));
+			y = lerp(y, m_harvest_target.y, saturate(m_harvest_timer * 3.0));
+		}
+		
+		var prev_harvest_time = m_harvest_timer;
+		m_harvest_timer += Time.deltaTime / m_harvest_time;
+		if (prev_harvest_time < 0.5 && m_harvest_timer >= 0.5)
 		{
 			// TODO: Play POP sound
 			
 			// Harvest the crop
-			currentCrop.m_user = id;
-			with (currentCrop)
+			m_harvest_target.m_user = id;
+			with (m_harvest_target)
 			{
 				event_user(0);
 			}
 			
+		}
+		if (m_harvest_timer >= 1.0)
+		{
 			// Done harvesting
 			m_isHarvesting = false;
 		}

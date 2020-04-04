@@ -92,6 +92,12 @@ if (!moAnimationPlayback)
 		animationSpeed = 0.0;
 		animationIndex = floor((image_number / 4.0 - 0.01) * saturate(m_plant_timer));
 	}
+	else if (m_isPlayer && m_isHarvesting)
+	{
+		sprite_index = kAnimHarvest1;
+		animationSpeed = 0.0;
+		animationIndex = floor((image_number / 4.0 - 0.01) * saturate(m_harvest_timer));
+	}
 	else
 	{
 		var move_speed = sqrt(sqr(xspeed) + sqr(yspeed));

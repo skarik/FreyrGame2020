@@ -5519,6 +5519,14 @@
             }
         },
         {
+            "Key": "5e06d497-dc3f-4df2-8cec-200a7a3ad8e4",
+            "Value": {
+                "id": "d6e285e0-a412-4204-8708-fd9e7cbca747",
+                "resourcePath": "sprites\\s_charHeroHarvestPlant0\\s_charHeroHarvestPlant0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5e11206d-e5e5-45e3-9c28-78210b320c4b",
             "Value": {
                 "id": "98ae21e1-e501-4be3-ab90-bdf5f83e916b",

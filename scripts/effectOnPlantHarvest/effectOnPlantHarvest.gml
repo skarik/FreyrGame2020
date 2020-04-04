@@ -26,6 +26,8 @@ repeat (3)
 	poof.image_blend = c_ltgray;
 }
 
+// todo: dirt particles that go UP
+
 // create circle bit
 /*var circle = instance_create_depth(tx, ty, depth + 1, o_ptcCircleHit);
 	circle.image_blend = merge_color(c_white, c_crystalblue, 0.5);
