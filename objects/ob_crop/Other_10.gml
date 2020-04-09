@@ -7,7 +7,7 @@ if (cropIsMature(this))
 		instance_create_depth(x,y, depth, m_itemDrop);
 	}
 
-	// TODO: do particles when harvesting!
+	// do harvest effect & audio
 	effectOnPlantHarvest(x, y);
 
 	// update player stats

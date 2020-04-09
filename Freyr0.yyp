@@ -1775,6 +1775,14 @@
             }
         },
         {
+            "Key": "1e1482a3-c3e6-4983-a343-deae9b708daf",
+            "Value": {
+                "id": "e6d7146f-0ee6-4f26-8c58-860c96339e27",
+                "resourcePath": "sounds\\snd_physDig3\\snd_physDig3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "1e3806bc-5e67-4616-b1b9-a4ea3e04da4b",
             "Value": {
                 "id": "c566ce0e-2d58-45b3-9581-2655831727fc",
@@ -3316,6 +3324,14 @@
                 "id": "1a67b5d1-f03d-4a9f-b19d-1cba04113fd1",
                 "resourcePath": "scripts\\powerLogic_SapperSupply\\powerLogic_SapperSupply.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "389500f4-0b6d-4b83-8221-3ab1bb318101",
+            "Value": {
+                "id": "1c784219-1d4d-4174-b376-f4c865ac823c",
+                "resourcePath": "sounds\\snd_npcDigpop\\snd_npcDigpop.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5580,6 +5596,14 @@
                 "id": "c978e70e-62be-4a00-9648-7ce826d23a5f",
                 "resourcePath": "sprites\\spt_dustPoofer\\spt_dustPoofer.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "60016895-4343-404d-a306-6850f000b15a",
+            "Value": {
+                "id": "2eaaeeb3-5772-4862-aa53-c0388d85a827",
+                "resourcePath": "sounds\\snd_physDig1\\snd_physDig1.yy",
+                "resourceType": "GMSound"
             }
         },
         {

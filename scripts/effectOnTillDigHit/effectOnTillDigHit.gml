@@ -41,9 +41,11 @@ repeat (4)
 sound_hit = sound_play_at(
 	random_range(x - 4, x + 4),
 	random_range(y - 4, y + 4),
-	choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
+	//choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
+	snd_physDig1
 	);
-sound_hit.pitch = random_range(0.75, 0.90) * 0.9;
+//sound_hit.pitch = random_range(0.75, 0.90) * 0.9;
+sound_hit.pitch = random_range(0.95, 1.1);
 sound_hit.gain = random_range(0.7, 0.9) * 0.6;
 sound_hit.falloff_start = 20;
 sound_hit.falloff_end = 800;

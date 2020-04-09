@@ -65,16 +65,20 @@ else
 	if (exists(m_harvest_target) || m_harvest_timer > 0.5)
 	{
 		// move player to the crop (TODO: Make this temporary, or only affect the visual)
-		if (exists(m_harvest_target))
+		/*if (exists(m_harvest_target))
 		{
 			//x += (m_harvest_target.x - x) * 0.1;
 			//y += (m_harvest_target.y - y) * 0.1;
 			x = lerp(x, m_harvest_target.x, saturate(m_harvest_timer * 3.0));
 			y = lerp(y, m_harvest_target.y, saturate(m_harvest_timer * 3.0));
-		}
+		}*/
 		
 		var prev_harvest_time = m_harvest_timer;
 		m_harvest_timer += Time.deltaTime / m_harvest_time;
+		
+		// move the player to the crop - delaying the animation until they're at the point
+		
+		// harvest at the halfway point
 		if (prev_harvest_time < 0.5 && m_harvest_timer >= 0.5)
 		{
 			// TODO: Play POP sound
