@@ -58,8 +58,6 @@ else
 	}
 }
 
-debugOut("wind volume: " + string(m_windTargetVolume));
-
 //
 // Swap sound states if we got a new one we want to fade in
 

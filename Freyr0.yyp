@@ -5975,6 +5975,14 @@
             }
         },
         {
+            "Key": "679ddc83-2312-4512-b3f7-6e5ed3a47a61",
+            "Value": {
+                "id": "add85f72-c2e4-4fdc-a32f-98f14b8c8c46",
+                "resourcePath": "sprites\\sui_stunMeter\\sui_stunMeter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "679ea4d2-e152-4559-9159-22f96bd1661c",
             "Value": {
                 "id": "c0082c54-dde8-422b-a8d7-f5c4212c9f6a",
@@ -12372,6 +12380,14 @@
                 "id": "cb8c648d-07a0-45e0-945d-81c1a06c8e9e",
                 "resourcePath": "sprites\\s_itemCoolFeather\\s_itemCoolFeather.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d26e030a-e598-4e0f-8766-5872bd2b18a3",
+            "Value": {
+                "id": "71aaaa4e-6c18-4d57-9510-ebf724edb090",
+                "resourcePath": "rooms\\rm_test_combat\\rm_test_combat.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

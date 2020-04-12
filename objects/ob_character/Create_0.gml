@@ -2,6 +2,9 @@
 
 m_team = kTeamNone;
 m_bloodType = kBloodRed;
+m_uiwantsHealthShown = false;
+m_uiwantsStaminaShown = false;
+m_standingHeight = 32;
 
 m_lastDamage = 0;
 m_lastDamageSource = null;

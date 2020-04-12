@@ -104,3 +104,9 @@ m_arm_voidcap_draw_intro = 0.0;
 m_arm_voidcap_blend = 0.0;
 
 #endregion
+
+#region Health & stamina overlay
+
+m_enemyActiveMap = ds_map_create(); // [?enemy] = [healthtimer, stimmtimer, health, stimm]
+
+#endregion

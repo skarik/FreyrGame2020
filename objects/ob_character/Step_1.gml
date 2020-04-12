@@ -39,7 +39,7 @@ stats.m_healthPrev = stats.m_health;
 if (stats.m_stun > stats.m_stunPrev)
 {
 	// Check for stun
-	if (stats.m_stun > stats.m_stunMax)
+	if (stats.m_stun >= stats.m_stunMax)
 	{
 		do_stun_callback = true;
 	}

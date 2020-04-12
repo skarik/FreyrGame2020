@@ -14,7 +14,8 @@
         "b7f54975-0516-42e2-89fc-02a6e2c7acb8",
         "2c847279-5c0c-4c13-a02e-8a3ea39bd8ed",
         "79eecb87-4e53-450d-a6b7-684769e7c4a1",
-        "787fb058-a42c-4785-89dc-6c2eb1c79c65"
+        "787fb058-a42c-4785-89dc-6c2eb1c79c65",
+        "679ddc83-2312-4512-b3f7-6e5ed3a47a61"
     ],
     "filterType": "GMSprite",
     "folderName": "frontend and inventory",
