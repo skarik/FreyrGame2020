@@ -98,6 +98,7 @@ kAnimRolling = s_charHeroRoll;
 kAnimSinkFalling = s_charHeroSinkFall;
 kAnimAttack1 = s_charHeroAtk1;
 kAnimDig1 = s_charHeroPunchDig;
+kAnimHarvest1 = s_charHeroHarvestPlant0;
 kAnimStun = s_charHeroStunned;
 
 #endregion

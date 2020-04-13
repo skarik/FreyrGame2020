@@ -2,6 +2,8 @@
 /// Created by the System/Game object on room begin.
 
 powerLogicGlobalInit();
+windAudioGlobalInit();
+mlgmodeGlobalInit();
 
 timescale_game = 1.0;
 timescale_menu = 1.0;

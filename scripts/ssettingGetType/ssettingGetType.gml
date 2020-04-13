@@ -34,6 +34,9 @@ switch (settingname)
 		return kSettingTypeEnum;
 	case "ui_font_style":
 		return kSettingTypeEnum;
+		
+	case "mlgmode":
+		return kSettingTypeEnum;
 }
 
 return kSettingTypeUnknown;

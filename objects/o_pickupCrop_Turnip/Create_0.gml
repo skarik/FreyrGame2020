@@ -2,6 +2,7 @@
 event_inherited();
 
 m_name           = "Turnip";
+m_description   = "Good for throwing. Among other things."
 m_maxStack       = 10;
 m_onUseScript    = generalYeetableOnUse;
 m_tradeItem      = [o_pickupRes_Gear, 5];

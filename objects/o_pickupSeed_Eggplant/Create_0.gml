@@ -2,6 +2,7 @@
 event_inherited();
 
 m_name           = "Eggplant Seed";
+m_description   = "Seeds are meant to be planted. Will not grow an egg."
 m_maxStack       = 99;
 m_onUseScript    = generalSeedOnUse;
 m_checkUseScript = plantableDirtCheckUse;

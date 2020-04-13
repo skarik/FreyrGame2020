@@ -14,7 +14,8 @@
         "c6da8a62-8422-46e0-b1a9-60af9c0ef0a8",
         "f848fd1b-a4fa-40e1-b74e-2b1ba450ab1b",
         "3f248f63-9c12-47b8-b536-df5e65ea64a4",
-        "d47df6c0-9235-4657-941c-b28ddafdf1df"
+        "d47df6c0-9235-4657-941c-b28ddafdf1df",
+        "5e06d497-dc3f-4df2-8cec-200a7a3ad8e4"
     ],
     "filterType": "GMSprite",
     "folderName": "hero",

@@ -9,6 +9,7 @@ with (Settings)
 	ini_write_real("gameplay", "ui_font_size", gameplay_ui_font_size);
 	ini_write_real("gameplay", "ui_font_size_talk", gameplay_ui_font_size_talk);
 	ini_write_real("gameplay", "ui_font_style", gameplay_ui_font_style);
+	ini_write_real("gameplay", "mlgmode", gameplay_mlg_farm_mode);
 
     ini_close();
 }

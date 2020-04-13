@@ -15,7 +15,7 @@ timescale_previous = Time.scale;
 var dayOfSeason = (timeofdayGetDay() + timeofdayGetHour() / 24.0) % kWeatherSeasonLength;
 var season = weatherGetSeason();
 
-if (!worldGameIndoors())
+if (worldGameLocationType() & kWorldLocationType_Outdoors)
 {
 	if (season == kWeatherSeasonSummer)
 	{
@@ -72,3 +72,9 @@ if (exists(ob_weatherSystem))
 	ob_weatherSystem.m_strength = lerp(ob_weatherSystem.m_strength, kWeatherStrengthTorrential, saturate(dayOfSeason - 20.0));
 	ob_weatherSystem.m_strength = lerp(ob_weatherSystem.m_strength, kWeatherStrengthZero, saturate((dayOfSeason - 25.0) / 2.0));
 }
+
+// Update wind audio
+windAudioGlobalUpdate();
+
+// Update MLG mode
+mlgmodeGlobalUpdate();

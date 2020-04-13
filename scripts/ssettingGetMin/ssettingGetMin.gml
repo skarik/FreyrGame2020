@@ -21,6 +21,9 @@ switch (settingname)
 		
 	case "ui_font_style":
 		return 0;
+		
+	case "mlgmode":
+		return 0;
 }
 
 return null;
