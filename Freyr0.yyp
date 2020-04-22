@@ -5959,6 +5959,14 @@
             }
         },
         {
+            "Key": "66cd00ca-2f2d-421d-b120-12f0aed98177",
+            "Value": {
+                "id": "58d68d36-bd0f-484e-a73c-086022578bec",
+                "resourcePath": "views\\66cd00ca-2f2d-421d-b120-12f0aed98177.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "66dbb33e-be2d-44c6-acd9-1a8c4dd347cc",
             "Value": {
                 "id": "ad9ff1d0-4a77-48e0-8267-918c22e8617a",
@@ -12179,6 +12187,14 @@
             "Value": {
                 "id": "ed49ea40-c754-4bd5-bd36-de9433153573",
                 "resourcePath": "sprites\\s_propPlantBoxSmol\\s_propPlantBoxSmol.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cd14e5e1-72b8-4cdf-b76f-2a0859b368f1",
+            "Value": {
+                "id": "01e4e548-f877-4f5a-ad6e-3de2ad63e5be",
+                "resourcePath": "sprites\\s_propHeartsOfTheAether\\s_propHeartsOfTheAether.yy",
                 "resourceType": "GMSprite"
             }
         },
