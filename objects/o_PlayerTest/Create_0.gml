@@ -63,11 +63,20 @@ m_manaMax = 20;
 m_itemBalancePivot = [x, y];
 m_itemBalanceSpeed = [0, 0];
 
-// the player alright has a character-light, but for no-ambient rooms, it gets disabled
-// thus, we need a specific light that shows the character location
-m_locatorLight = new(o_lightEmissiveDepth_User5);
-m_locatorLight.target = id;
-m_locatorSh_uColorKey = shader_get_uniform(sh_colorkeyAlphatest, "uColorKey");
+#region Effects
+	// the player alright has a character-light, but for no-ambient rooms, it gets disabled
+	// thus, we need a specific light that shows the character location
+	m_locatorLight = new(o_lightEmissiveDepth_User5);
+	m_locatorLight.target = id;
+	m_locatorSh_uColorKey = shader_get_uniform(sh_colorkeyAlphatest, "uColorKey");
+#endregion
+
+#region Stats
+	stats.m_health = 20.0;
+	stats.m_healthMax = stats.m_health;
+	stats.m_healthPrev = stats.m_health;
+	stats.m_stunMax = 5.0;
+#endregion
 
 #region Constants
 

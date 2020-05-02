@@ -19,10 +19,21 @@ if (m_stunTimer <= 0.0)
 {
 	m_isStunned = false;
 }
+// Force reset stun meter when taking a break for a while
+if (m_stunTimer <= -10.0)
+{
+	stats.m_stun = max(0, stats.m_stun - Time.deltaTime * 0.1);
+}
 
 // Check for if hurt
 if (stats.m_health < stats.m_healthPrev)
 {
+	// Reset stun countdown
+	m_stunTimer = max(0.0, m_stunTimer);
+	
+	// Update on-hurt marker
+	stats.m_healthLastHit = stats.m_healthPrev;
+	
 	// Check for death
 	if (stats.m_health <= 0 && !m_isDead)
 	{
@@ -38,6 +49,9 @@ stats.m_healthPrev = stats.m_health;
 // Check for if stunned
 if (stats.m_stun > stats.m_stunPrev)
 {
+	// Reset stun countdown
+	m_stunTimer = max(0.0, m_stunTimer);
+	
 	// Check for stun
 	if (stats.m_stun >= stats.m_stunMax)
 	{

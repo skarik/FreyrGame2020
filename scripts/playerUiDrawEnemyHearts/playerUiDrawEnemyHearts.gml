@@ -12,11 +12,25 @@ for (var i = 0; i < l_enemyMapCount; ++i)
 	// Update the timers
 	timers[0] -= Time.deltaTime;
 	timers[1] -= Time.deltaTime;
-	// Update the heart startus
 	if (exists(l_currentEnemy))
 	{
+		// Update the last heart hit status
+		if (l_currentEnemy.stats.m_health < timers[2])
+		{
+			timers[4] = l_currentEnemy.stats.m_healthLastHit;
+			timers[5] = 0.0;
+		}
+		else
+		{
+			timers[5] += Time.deltaTime;
+			if (timers[5] > 0.5)
+			{
+				timers[4] -= Time.deltaTime * 16.0;
+			}
+		}
+		// Update the heart status
 		timers[2] = motion1d_to(timers[2], l_currentEnemy.stats.m_health, Time.deltaTime * 48.0);
-		timers[3] = motion1d_to(timers[3], l_currentEnemy.stats.m_stun, Time.deltaTime * 8.0);
+		timers[3] = motion1d_to(timers[3], l_currentEnemy.m_isStunned ? l_currentEnemy.stats.m_stunMax : l_currentEnemy.stats.m_stun, Time.deltaTime * 8.0);
 	}
 	// Save back the status
 	m_enemyActiveMap[?l_currentEnemy] = timers;
@@ -37,8 +51,8 @@ for (var i = 0; i < l_enemyMapCount; ++i)
 var pl = getPlayer();
 with (ob_character)
 {
-	if ( (this.m_uiwantsHealthShown || this.m_uiwantsStaminaShown)
-		&& ((pl.m_team & this.m_team) == 0) )
+	if ( (this.m_uiwantsHealthShown || this.m_uiwantsStaminaShown) )
+	//	&& ((pl.m_team & this.m_team) == 0) )
 	{
 		if (point_on_camera(x, y))
 		{
@@ -53,7 +67,7 @@ with (ob_character)
 			}
 			else
 			{
-				timers = [this.m_uiwantsHealthShown ? 1.0 : 0.0, this.m_uiwantsStaminaShown ? 1.0 : 0.0, 0, this.stats.m_stunMax];
+				timers = [this.m_uiwantsHealthShown ? 1.0 : 0.0, this.m_uiwantsStaminaShown ? 1.0 : 0.0, 0, this.stats.m_stunMax, 0.0, 0.0];
 			}
 			other.m_enemyActiveMap[?this] = timers;
 		}
@@ -66,7 +80,7 @@ var d_offset_x = -(GameCamera.x - GameCamera.width / 2);
 var d_offset_y = -(GameCamera.y - GameCamera.height / 2);
 
 var kHeartSize = 9.0;
-var kStimmSize = 7.0;
+var kStimmSize = 5.0;
 
 var l_activeEnemyListSize = ds_map_size(m_enemyActiveMap);//array_length_1d(l_activeEnemyList);
 var t_enemy = ds_map_find_first(m_enemyActiveMap);
@@ -100,11 +114,19 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 			//var l_baseHealth = (ceil(t_enemy.stats.m_health * 4) / 4) - t_healthDiv * iheart;
 			var l_baseHealth = (ceil(timers[2] * 4) / 4) - t_healthDiv * iheart;
 			var l_imageIndex = floor(4.99 * (1.0 - saturate(l_baseHealth / t_healthDiv)));
+			
+			var l_baseHealthPrev = (ceil(timers[4] * 4) / 4) - t_healthDiv * iheart;
+			var l_imageIndexPrev = floor(4.99 * (1.0 - saturate(l_baseHealthPrev / t_healthDiv)));
+			
+			// Draw previous white-heart
+			draw_sprite(sui_heartMeter_White, l_imageIndexPrev,
+						t_enemy.x + d_offset_x - t_xoffset + t_heartPenX,
+						t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y + t_heartPenY);
 		
 			// Draw heart
-			draw_sprite(sui_heartMeter, l_imageIndex,
+			draw_sprite(sui_heartMeter_Transparent, l_imageIndex,
 						t_enemy.x + d_offset_x - t_xoffset + t_heartPenX,
-						t_enemy.y - t_enemy.m_standingHeight - t_yoffset + d_offset_y + t_heartPenY);
+						t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y + t_heartPenY);
 		
 			// Advance pen
 			t_heartPenX += (kHeartSize + 1);
@@ -132,12 +154,33 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 		
 		// find imaginary starting point to the left
 		var t_xoffset = (t_wcount - 1) / 2.0 * (kStimmSize + 1);
-		var t_yoffset = (kHeartSize + 1) + 3;
+		var t_yoffset = (kHeartSize + 1) - 2;
+		if (t_enemy.m_isPlayer)
+		{
+			t_yoffset -= t_enemy.m_standingHeight + kHeartSize * 2;
+		}
+		
+		// Dont draw bips if stunned
+		if (t_enemy.m_isStunned)
+		{
+			// Draw "stunned" text instead
+			draw_set_font(f_04b03);
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_middle);
+			draw_text_outline(t_enemy.x + d_offset_x,
+							  t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y,
+							  "STUNNED",
+							  c_gold,
+							  c_black, 1);
+			
+			// Skip drawing bips.
+			continue;
+		}
 		
 		var t_stimmPenX = 0.0;
 		var t_stimmPenY = 0.0;
 		//var t_effectiveDisplayStimm = t_enemy.m_isStunned ? t_enemy.stats.m_stunMax : t_enemy.stats.m_stun;
-		var t_effectiveDisplayStimm = t_enemy.m_isStunned ? t_enemy.stats.m_stunMax : timers[3];
+		var t_effectiveDisplayStimm = timers[3];
 		t_effectiveDisplayStimm = ceil((t_enemy.stats.m_stunMax - t_effectiveDisplayStimm) * 4) / 4;
 		for (var istimm = 0; istimm < t_numStuns; ++istimm)
 		{
@@ -147,7 +190,7 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 			// Draw bip
 			draw_sprite(sui_stunMeter, l_imageIndex,
 						t_enemy.x + d_offset_x - t_xoffset + t_stimmPenX,
-						t_enemy.y - t_enemy.m_standingHeight - t_yoffset + d_offset_y + t_stimmPenY);
+						t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y + t_stimmPenY);
 		
 			// Advance pen
 			t_stimmPenX += (kStimmSize + 1);

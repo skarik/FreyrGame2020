@@ -9671,6 +9671,14 @@
             }
         },
         {
+            "Key": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
+            "Value": {
+                "id": "2da2ef69-4301-4b92-9c77-992e6368a503",
+                "resourcePath": "sprites\\sui_heartMeter_White\\sui_heartMeter_White.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a6a62a66-511d-4046-8019-d1317c9e44f3",
             "Value": {
                 "id": "b48f6c56-41e4-4da2-a3ad-ede997db1294",
@@ -9748,6 +9756,14 @@
                 "id": "19374dc3-5ba9-45b5-aace-a25c5501aef4",
                 "resourcePath": "datafiles_yy\\scripts\\sfxscape_desert.txt.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "a7f730d7-63ff-41c7-a18b-cef537e7bab8",
+            "Value": {
+                "id": "304b53f6-95fd-4203-99be-ff492b5c25f4",
+                "resourcePath": "sprites\\sui_heartMeter_Transparent\\sui_heartMeter_Transparent.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

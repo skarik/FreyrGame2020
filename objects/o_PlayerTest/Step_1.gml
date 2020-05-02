@@ -118,6 +118,33 @@ if (!isAttacking && !isDashing && !isBlocking && !m_isTilling && !m_isPlanting)
 }
 
 //
+// Stun logic:
+
+// Force reset stun meter when taking a break for a while
+if (m_stunTimer <= -3.0)
+{
+	stats.m_stun = max(0, stats.m_stun - Time.deltaTime);
+}
+
+// Stamina display logic:
+m_uiwantsStaminaShown = false;
+if (m_isStunned || m_stunTimer > 0.0 || stats.m_stun > 0.0)
+{
+	m_uiwantsStaminaShown = true;
+}
+else
+{
+	// Check if enemies have stun displayed
+	with (ob_character)
+	{
+		if ( this.m_uiwantsStaminaShown && (other.m_team & this.m_team) == 0 )
+		{
+			other.m_uiwantsStaminaShown = true;
+		}
+	}
+}
+
+//
 // Health and stun logic:
 event_inherited();
 
