@@ -163,6 +163,21 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 		// Dont draw bips if stunned
 		if (t_enemy.m_isStunned)
 		{
+			// Draw stagger timer bar
+			var t_staggerPercent = saturate(t_enemy.m_stunTimer / t_enemy.stats.m_staggerTime);
+			draw_set_color(c_black);
+			draw_rectangle(t_enemy.x + d_offset_x - t_xoffset - 1,
+						   t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y - 5,
+						   t_enemy.x + d_offset_x + t_xoffset + 1,
+						   t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y + 5,
+						   false);
+			draw_set_color(c_gold);
+			draw_rectangle(t_enemy.x + d_offset_x - t_xoffset * t_staggerPercent,
+						   t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y - 4,
+						   t_enemy.x + d_offset_x + t_xoffset * t_staggerPercent,
+						   t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y + 4,
+						   false);
+			
 			// Draw "stunned" text instead
 			draw_set_font(f_04b03);
 			draw_set_halign(fa_center);

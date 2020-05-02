@@ -15,12 +15,11 @@
         "9d2d2eb4-e35b-42c0-832a-3a24f22002a9",
         "4d16f30e-58e7-49c4-9879-552ae8bb6fb9",
         "c6adc523-5307-4df3-bedb-7c5f6d242c38",
-        "2f2e3955-3a42-4b7d-a6da-b9c583058781",
-        "b5b071d2-2b67-4b1b-8166-d02e5e3a7c98",
-        "5d2092b0-22c7-43c8-a911-4a275a4061ad",
         "16731471-3d06-4b2a-a680-16008e4fcfe3",
         "98349e75-d623-4d6e-adce-4092d0ebaa18",
         "eb2048f3-27b7-4a66-b53d-bfaefdf21ae9",
+        "b0549bb9-0afa-4300-b5e5-bd563bba1ec5",
+        "5faa9f59-15d6-478f-b6f5-2ab8d6fc1d2b",
         "3c8a4afe-858d-4983-aba4-3d2f1d996a77",
         "0558c0c6-1e91-4903-81e0-e683aa40c06f",
         "db09363d-54cd-470d-906b-650e725c0773",
@@ -35,7 +34,7 @@
         "de245fd7-f4a9-490a-8933-16aea1031d9b"
     ],
     "filterType": "GMScript",
-    "folderName": "AI",
+    "folderName": "AI & NPCs",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

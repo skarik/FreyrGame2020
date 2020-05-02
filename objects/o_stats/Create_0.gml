@@ -6,3 +6,5 @@ m_healthLastHit = m_health;
 m_stun = 0.0;
 m_stunMax = 2.0;
 m_stunPrev = m_stun;
+
+m_staggerTime = 3.0; // default stagger time for all enemies
