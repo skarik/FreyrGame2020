@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "05030e9f-c00b-4b4d-bb26-774344925b92",
+            "Value": {
+                "id": "df55d23c-4cc7-4f0e-928a-150a9792e556",
+                "resourcePath": "objects\\o_pickupCrop_Bamboo\\o_pickupCrop_Bamboo.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0505e9d4-7d8a-459f-af93-c82b47b60d1b",
             "Value": {
                 "id": "c0ec3524-03f7-4195-8800-d31177ba8bb2",
@@ -1463,6 +1471,14 @@
             }
         },
         {
+            "Key": "18e75712-2395-447f-bbe2-937d4c47d67a",
+            "Value": {
+                "id": "5c089a76-f686-43c2-a2b1-9777fa9e1606",
+                "resourcePath": "objects\\o_cropTea\\o_cropTea.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "193a7025-138c-4176-8997-94acee4fd422",
             "Value": {
                 "id": "c47cdd8f-ba52-4104-a2b6-8f932f941ca1",
@@ -2127,6 +2143,14 @@
             }
         },
         {
+            "Key": "25a3efdd-80f6-4a17-ae87-d3f085ba6fa6",
+            "Value": {
+                "id": "b5ce05ef-5084-4a3f-a467-e81d8ca62a17",
+                "resourcePath": "objects\\o_pickupSeed_BambooShoot\\o_pickupSeed_BambooShoot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "25d22874-0bc0-4ea1-9c98-31892d9089aa",
             "Value": {
                 "id": "5c48833a-a570-4596-a495-473bf94cbc33",
@@ -2708,6 +2732,14 @@
                 "id": "fc916a8a-81c0-40c5-b6d5-5bff6d9d0525",
                 "resourcePath": "rooms\\rm_oasis_overlook\\rm_oasis_overlook.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "2d11651e-0e74-4b00-b345-4024989161fa",
+            "Value": {
+                "id": "95910438-de1d-4859-bbab-7d9a71c86cd6",
+                "resourcePath": "sprites\\s_itemSeedSugarCane\\s_itemSeedSugarCane.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4487,6 +4519,14 @@
             }
         },
         {
+            "Key": "4c63aac5-692e-4f28-90c0-f99536f9b262",
+            "Value": {
+                "id": "4508b108-ba45-4802-98f1-20a93da2da58",
+                "resourcePath": "objects\\o_pickupCrop_Eggplant1\\o_pickupCrop_Eggplant1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4c997372-ad61-4354-8be4-33abcf16e8e5",
             "Value": {
                 "id": "e3ef69e8-7f57-4b71-9242-bd729c915aeb",
@@ -5839,6 +5879,14 @@
             }
         },
         {
+            "Key": "65371363-f31d-4677-90a9-f351e9837cc1",
+            "Value": {
+                "id": "5c49ed55-a587-47c5-b786-e6d600432488",
+                "resourcePath": "objects\\o_pickupCons_TeaCigar\\o_pickupCons_TeaCigar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "65635c15-806f-4a38-bd69-f644ddd44ea5",
             "Value": {
                 "id": "34b6d0c7-d527-42d3-a4c9-fbc5504e0a61",
@@ -5932,6 +5980,14 @@
                 "id": "4f6d86fc-68ee-4412-9c4e-17d6a7ffe41e",
                 "resourcePath": "sprites\\s_drogEggNest\\s_drogEggNest.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "66cd00ca-2f2d-421d-b120-12f0aed98177",
+            "Value": {
+                "id": "58d68d36-bd0f-484e-a73c-086022578bec",
+                "resourcePath": "views\\66cd00ca-2f2d-421d-b120-12f0aed98177.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6644,6 +6700,14 @@
                 "id": "a61d1a19-07e6-44e1-b699-07d23fcd28c4",
                 "resourcePath": "views\\709cab4e-9a99-4422-8e74-5d5bbd4c0272.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "70bf55e7-5515-46e0-af65-654986f44cf5",
+            "Value": {
+                "id": "88b327fe-7e0a-433b-8887-67cfce139c02",
+                "resourcePath": "objects\\o_pickupCrop_SugarCane\\o_pickupCrop_SugarCane.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8127,6 +8191,14 @@
             }
         },
         {
+            "Key": "8d6a4e63-e35d-40d8-a875-20f5dff9dc45",
+            "Value": {
+                "id": "4e3fdc48-a771-4b46-abb5-46e2b7271603",
+                "resourcePath": "sprites\\s_cropBamboo\\s_cropBamboo.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8d9cd0ba-04d8-4d00-9b37-e5b14fa18501",
             "Value": {
                 "id": "fa34cd3e-b531-4561-9008-c124b5c7cc6a",
@@ -9103,6 +9175,14 @@
             }
         },
         {
+            "Key": "9cb8c59e-9f7e-4538-90b4-00381764b7fb",
+            "Value": {
+                "id": "15dc4837-dcb9-44c6-a2a1-ce8d4450157e",
+                "resourcePath": "sprites\\s_cropTea\\s_cropTea.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9cbf8a9b-e822-401f-9302-82e25521b45c",
             "Value": {
                 "id": "9a0b904e-c53a-49b6-8566-aa84b749daab",
@@ -9412,6 +9492,14 @@
                 "id": "c0b3fe67-4066-438c-a30e-61ab9fcd6677",
                 "resourcePath": "objects\\o_ptcBloodSplatter\\o_ptcBloodSplatter.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a24a63c2-84d8-43be-94c2-46da9b4bc5d8",
+            "Value": {
+                "id": "69fe5d5b-0294-43e3-9b37-98c65e16bb23",
+                "resourcePath": "sprites\\s_itemCropTea\\s_itemCropTea.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9884,6 +9972,14 @@
                 "id": "a2bca7cd-47f8-4ec1-bae2-e8bba98df5e6",
                 "resourcePath": "sprites\\s_propTentChonker1\\s_propTentChonker1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aa84d0bc-5ef0-432a-8f67-50240acb3952",
+            "Value": {
+                "id": "b104d843-b280-4388-8139-563c5d7a2852",
+                "resourcePath": "objects\\o_pickupSeed_SugarCane\\o_pickupSeed_SugarCane.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -11799,10 +11895,26 @@
             }
         },
         {
+            "Key": "c7b8a664-4e2e-487c-b8b2-258817f48ae2",
+            "Value": {
+                "id": "87fd9615-f383-4c95-8b5b-5bf6fa0113fe",
+                "resourcePath": "objects\\o_pickupSeed_Tea\\o_pickupSeed_Tea.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c7fa129d-8991-4bb2-8f1c-c7f35148eb64",
             "Value": {
                 "id": "f32d75a5-e2dc-4640-ae5a-c413ce91ba12",
                 "resourcePath": "sprites\\s_propTTTableAlts\\s_propTTTableAlts.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c8095eac-ef20-4c27-ba40-fde86240b68a",
+            "Value": {
+                "id": "937042dd-c079-48f9-b52c-3e7655ef6e49",
+                "resourcePath": "sprites\\s_itemCropBamboo\\s_itemCropBamboo.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12007,6 +12119,14 @@
             }
         },
         {
+            "Key": "ca6862a7-9c5f-44dc-a666-abd6eea3be6e",
+            "Value": {
+                "id": "6cb1678c-4424-465d-88af-52638caf012e",
+                "resourcePath": "objects\\o_pickupCrop_Tea\\o_pickupCrop_Tea.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cab08547-a1e3-48cf-98ab-19f6bd515240",
             "Value": {
                 "id": "6ffe7c2b-95d8-4199-b60e-bcc8fc5595aa",
@@ -12115,6 +12235,14 @@
             "Value": {
                 "id": "ed49ea40-c754-4bd5-bd36-de9433153573",
                 "resourcePath": "sprites\\s_propPlantBoxSmol\\s_propPlantBoxSmol.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cd14e5e1-72b8-4cdf-b76f-2a0859b368f1",
+            "Value": {
+                "id": "01e4e548-f877-4f5a-ad6e-3de2ad63e5be",
+                "resourcePath": "sprites\\s_propHeartsOfTheAether\\s_propHeartsOfTheAether.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12348,6 +12476,14 @@
                 "id": "a90cc3f0-3ccb-4350-9a05-9ff8959b5ecf",
                 "resourcePath": "scripts\\aiFollowerInit\\aiFollowerInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d1b50935-87e4-43cd-ac9a-98e70cfc8f1e",
+            "Value": {
+                "id": "4bf1b660-23f2-419b-888f-60b53cc937ca",
+                "resourcePath": "sprites\\s_itemCropSugarCane\\s_itemCropSugarCane.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12855,6 +12991,14 @@
             }
         },
         {
+            "Key": "da4805db-f679-403d-89c9-4069710451e8",
+            "Value": {
+                "id": "64076338-5c04-4086-a587-84e7442e756c",
+                "resourcePath": "sprites\\s_itemSeedTea\\s_itemSeedTea.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "da60daa2-3459-453b-bbd3-d48cfd65c17f",
             "Value": {
                 "id": "20f193a6-d5b5-4c95-af4b-910c2045b88c",
@@ -12908,6 +13052,14 @@
                 "id": "ec08d308-403c-4918-99a9-7c1b0b56d60d",
                 "resourcePath": "scripts\\itemEntryLoad\\itemEntryLoad.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "db2c5345-db57-4e62-8317-75d586e070ed",
+            "Value": {
+                "id": "3dfd92af-ec15-4d9c-9dfc-50e3a06fcc44",
+                "resourcePath": "sprites\\s_itemTeaCigars\\s_itemTeaCigars.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13399,6 +13551,14 @@
             }
         },
         {
+            "Key": "e2775610-156a-4762-9d56-1e982264071c",
+            "Value": {
+                "id": "0cc51dcd-e5d2-4330-8b0f-1f7a2082ba37",
+                "resourcePath": "objects\\o_cropSugarCane\\o_cropSugarCane.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e2a546ce-ad19-4fd2-8c93-0948bf84d891",
             "Value": {
                 "id": "df5f7fcb-19d0-4423-b50a-27ca4b9568dd",
@@ -13883,6 +14043,14 @@
             "Value": {
                 "id": "1345cf11-0299-4ed3-942e-caba3858dd52",
                 "resourcePath": "sprites\\s_propDPalm0\\s_propDPalm0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e9bb093d-cd42-481a-a2bc-6ce9d9c6af49",
+            "Value": {
+                "id": "57940463-e0a3-4f85-84f5-200a3ef11bfc",
+                "resourcePath": "sprites\\s_cropSugarCane\\s_cropSugarCane.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -14727,6 +14895,14 @@
             }
         },
         {
+            "Key": "f8fdbef9-90bd-4271-a7a5-eaa2df5b88e0",
+            "Value": {
+                "id": "0bbc6f2c-591d-427b-ab3c-e1674ed483bc",
+                "resourcePath": "sprites\\s_itemSeedBambooShoot\\s_itemSeedBambooShoot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f9260b8e-fe14-4111-bfb8-fa8364d6c47c",
             "Value": {
                 "id": "ec2e4fb8-91da-4031-a62d-0e379c5a397e",
@@ -15036,6 +15212,14 @@
                 "id": "81983f37-3272-4d8c-ae78-9c5f998d2ed2",
                 "resourcePath": "scripts\\dcmdRunString\\dcmdRunString.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fd748788-b5c3-417f-9cbc-f2b049895060",
+            "Value": {
+                "id": "d1934087-57ea-4b52-96d3-dc155e2f2b27",
+                "resourcePath": "objects\\o_cropBamboo\\o_cropBamboo.yy",
+                "resourceType": "GMObject"
             }
         },
         {

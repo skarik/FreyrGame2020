@@ -38,4 +38,7 @@ m_harvestedCrops[?o_cropMelon] = 0;
 m_harvestedCrops[?o_cropParsnip] = 0;
 m_harvestedCrops[?o_cropPotato] = 0;
 m_harvestedCrops[?o_cropEggplant] = 0;
+m_harvestedCrops[?o_cropSugarCane] = 0;
+m_harvestedCrops[?o_cropBamboo] = 0;
+m_harvestedCrops[?o_cropTea] = 0;
 m_harvestedCrops[?o_cropRice] = 0;
