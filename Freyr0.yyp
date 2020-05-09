@@ -7823,6 +7823,14 @@
             }
         },
         {
+            "Key": "85e71138-86d3-47bd-8f5d-b5d13b694b22",
+            "Value": {
+                "id": "ba17b265-7073-423b-989c-0bd9d10a0387",
+                "resourcePath": "views\\85e71138-86d3-47bd-8f5d-b5d13b694b22.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "85edbf07-48e6-458a-9597-c1ec01ff3f80",
             "Value": {
                 "id": "77ff10db-f9ef-4377-8cf9-041996b4fc7d",
@@ -12572,6 +12580,14 @@
                 "id": "73e81b2f-1ef6-4724-b801-2ce3a767a56d",
                 "resourcePath": "scripts\\powerLogic_RisingEdgeOutput\\powerLogic_RisingEdgeOutput.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d231a191-dcae-4bc2-b54d-f9610b490308",
+            "Value": {
+                "id": "bdb89d26-894a-4d83-9726-4990e67e1de1",
+                "resourcePath": "sprites\\s_propViggosWagon\\s_propViggosWagon.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
