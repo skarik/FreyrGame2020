@@ -1,5 +1,9 @@
 /// @description Default teams & values
 
+var enemyInfoLoadAction = enemyInfoOnCreate();
+if (enemyInfoLoadAction == kEnemyInfoLoadAction_Exit)
+	exit;
+
 m_team = kTeamNone;
 m_bloodType = kBloodRed;
 m_uiwantsHealthShown = false;

@@ -5,10 +5,22 @@ if (!exists(kQuestManager))
 	show_error("invalid quest state", true);
 }
 
-var header = buffer_read(buffer, buffer_string);
-if (header != "EMI")
+var off_preheader = buffer_tell(buffer);
+var header = array_create(4);
+for (var i = 0; i < 4; ++i)
+	header[i] = buffer_read(buffer, buffer_u8);
+if (header[0] == ord("E")
+	&& header[1] == ord("M")
+	&& header[2] == ord("I")
+	&& header[3] == 0)
 {
-	show_error("corrupted save file?", true);
+	debugOut("Savefile: Found EMI chunk");
+}
+else
+{
+	debugOut("Savefile: No EMI chunk");
+	buffer_seek(buffer, buffer_seek_start, off_preheader);
+	return;
 }
 
 with (kQuestManager)

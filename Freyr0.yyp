@@ -2631,6 +2631,14 @@
             }
         },
         {
+            "Key": "2b622a18-b89f-489f-8e3d-96b52fcedda2",
+            "Value": {
+                "id": "2f9f2bd8-4904-41fc-888e-afd98f81cd45",
+                "resourcePath": "scripts\\enemyInfoOnDeath\\enemyInfoOnDeath.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2b6b179e-cb49-43dc-b26a-8288a5f1c308",
             "Value": {
                 "id": "6c3a1a1f-c313-40fa-bfb1-30c73c728344",
@@ -2916,6 +2924,14 @@
                 "id": "5be656c5-4de8-4818-ad8c-3802264097d5",
                 "resourcePath": "sprites\\s_propWoodThickPole1\\s_propWoodThickPole1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2f541bd4-cda9-4553-88fd-049e933f9c41",
+            "Value": {
+                "id": "034c4e96-da6d-444c-8718-224827abe467",
+                "resourcePath": "scripts\\enemyInfoOnCreate\\enemyInfoOnCreate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -15919,6 +15935,8 @@
         "519c97e3-ccfb-4cf9-94d1-523e15ef65fd",
         "1b94ce35-6c49-4b3a-ae22-a65c7722bb9c",
         "19c94e04-7ef5-4ce8-b1fc-8a51d8fab8b0",
+        "2f541bd4-cda9-4553-88fd-049e933f9c41",
+        "2b622a18-b89f-489f-8e3d-96b52fcedda2",
         "ac0f4513-8b11-457f-a575-cf2076740ef2",
         "1ec9fbde-2668-424f-bc1e-f1e6a7d3a26e",
         "15d6cfaa-0638-4510-9bf1-d3ebba89eaf3",

@@ -5,7 +5,10 @@ if (!exists(kQuestManager))
 	show_error("invalid quest state", true);
 }
 
-buffer_write(buffer, buffer_string, "EMI");
+buffer_write(buffer, buffer_u8, ord("E"));
+buffer_write(buffer, buffer_u8, ord("M"));
+buffer_write(buffer, buffer_u8, ord("I"));
+buffer_write(buffer, buffer_u8, 0);
 
 with (kQuestManager)
 {
