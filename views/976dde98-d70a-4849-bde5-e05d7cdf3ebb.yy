@@ -21,7 +21,10 @@
         "cbbe2b06-cebf-4475-988b-22d57c91cbb7",
         "7ab7077c-9f04-49fe-a3c8-8b880eef6ddc",
         "44210755-a07e-403a-9785-7479ac4f1481",
-        "364b9448-cadd-4f72-ad68-f426ad35c78f"
+        "364b9448-cadd-4f72-ad68-f426ad35c78f",
+        "519c97e3-ccfb-4cf9-94d1-523e15ef65fd",
+        "1b94ce35-6c49-4b3a-ae22-a65c7722bb9c",
+        "19c94e04-7ef5-4ce8-b1fc-8a51d8fab8b0"
     ],
     "filterType": "GMScript",
     "folderName": "Save State",

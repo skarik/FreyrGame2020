@@ -30,6 +30,9 @@ buffer_write(buf, buffer_f64, o_dayNightCycle.m_day);
 // Write out Game's flags
 questSave(buf);
 
+// Write out enemy flags
+enemyInfoSave(buf);
+
 // Save buffer to file
 buffer_save(buf, kSaveFile);
 

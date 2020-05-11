@@ -16,4 +16,12 @@ if (m_usable && exists(m_user) && m_user.id == pl.id)
 	// heal player
 	pl.stats.m_health = pl.stats.m_healthMax;
 	
+	// short rest
+	// TODO: make player sit
+	
+	// respawn all enemies
+	gameCampCheckpointShortRest();
+	
+	// save game
+	gameSaveSpecific(kSaveFromCheckpointMinor);
 }

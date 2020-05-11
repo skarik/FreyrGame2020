@@ -1407,6 +1407,14 @@
             }
         },
         {
+            "Key": "174a3e3d-99b8-4cf2-adfc-6d27821eff37",
+            "Value": {
+                "id": "743b413b-1bc1-4615-8c6d-8bf83772ae9c",
+                "resourcePath": "scripts\\gameRespawnEnemies\\gameRespawnEnemies.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "17596f84-41e3-4c36-8a84-795461bb2bad",
             "Value": {
                 "id": "8741eb82-52dc-4340-a548-3f244e8fdd4f",
@@ -1511,6 +1519,14 @@
             }
         },
         {
+            "Key": "19c94e04-7ef5-4ce8-b1fc-8a51d8fab8b0",
+            "Value": {
+                "id": "60c1fc09-ef06-4530-99fc-2995fc824479",
+                "resourcePath": "scripts\\enemyInfoInitialize\\enemyInfoInitialize.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "19cc310f-9e80-45d4-abd6-0925e0ff69f2",
             "Value": {
                 "id": "4223dbbb-540b-4c4c-9d99-6e4c82d67f15",
@@ -1564,6 +1580,14 @@
                 "id": "f13d60a4-f1af-42bb-ae45-100c34b2715e",
                 "resourcePath": "sprites\\s_propTStorage0\\s_propTStorage0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1b94ce35-6c49-4b3a-ae22-a65c7722bb9c",
+            "Value": {
+                "id": "1a945ffe-19df-4c54-9e52-86e3e9d23263",
+                "resourcePath": "scripts\\enemyInfoLoad\\enemyInfoLoad.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4836,6 +4860,14 @@
                 "id": "04bee515-63ab-457d-a22b-8da2baeaddfa",
                 "resourcePath": "sprites\\s_itemResBolt\\s_itemResBolt.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "519c97e3-ccfb-4cf9-94d1-523e15ef65fd",
+            "Value": {
+                "id": "d02fa8cb-33f1-44ba-9ef7-b7ceda2a021d",
+                "resourcePath": "scripts\\enemyInfoSave\\enemyInfoSave.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -10743,6 +10775,14 @@
             }
         },
         {
+            "Key": "b4d04a4b-a95c-4bb0-8044-98baf0078a84",
+            "Value": {
+                "id": "9c9eed84-4f97-4583-b510-d8a17a65550e",
+                "resourcePath": "scripts\\gameCampCheckpointShortRest\\gameCampCheckpointShortRest.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b4e354b6-b8df-4952-8bad-5ef7a4deb21b",
             "Value": {
                 "id": "3e38aa43-33c2-4db8-bc70-b05658f62fae",
@@ -15122,7 +15162,7 @@
             "Key": "fb5f3748-c354-4d36-9b20-6aae4f7a34f6",
             "Value": {
                 "id": "a73860ce-091d-4d12-ad92-80edb751560f",
-                "resourcePath": "scripts\\gameBookSave\\gameBookSave.yy",
+                "resourcePath": "scripts\\gameSaveSpecific\\gameSaveSpecific.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -15876,6 +15916,9 @@
         "7ab7077c-9f04-49fe-a3c8-8b880eef6ddc",
         "44210755-a07e-403a-9785-7479ac4f1481",
         "364b9448-cadd-4f72-ad68-f426ad35c78f",
+        "519c97e3-ccfb-4cf9-94d1-523e15ef65fd",
+        "1b94ce35-6c49-4b3a-ae22-a65c7722bb9c",
+        "19c94e04-7ef5-4ce8-b1fc-8a51d8fab8b0",
         "ac0f4513-8b11-457f-a575-cf2076740ef2",
         "1ec9fbde-2668-424f-bc1e-f1e6a7d3a26e",
         "15d6cfaa-0638-4510-9bf1-d3ebba89eaf3",
@@ -15942,10 +15985,12 @@
         "184d0fda-96eb-4a73-bb4f-29d507e9db46",
         "997db4f4-7f16-4c94-ba47-6ece34d2adb7",
         "ef341803-bcf7-4124-b313-c0e0ff960bdd",
+        "b4d04a4b-a95c-4bb0-8044-98baf0078a84",
         "fb5f3748-c354-4d36-9b20-6aae4f7a34f6",
         "0e25310a-8fdd-45d6-b458-1b99d1c321ab",
         "b1666fee-590c-4810-8228-d269ed4149c6",
         "92bafc3c-3a6a-4183-abdb-6b80b25700a5",
+        "174a3e3d-99b8-4cf2-adfc-6d27821eff37",
         "359f0714-7d3b-473d-afe8-de8486b2ac05",
         "59ff4b5e-3d47-431f-85d8-541eb30cf16f",
         "3d092466-ac33-448a-ba01-0652c66fec82",

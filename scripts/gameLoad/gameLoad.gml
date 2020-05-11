@@ -43,6 +43,9 @@ o_dayNightCycle.m_day		= buffer_read(buf, buffer_f64);
 // Read in Game's flags
 questLoad(buf);
 
+// Load in enemy flags
+enemyInfoLoad(buf);
+
 // Free resources
 buffer_delete(buf);
 

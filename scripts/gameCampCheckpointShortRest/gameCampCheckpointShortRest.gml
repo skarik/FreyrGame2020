@@ -1,0 +1,3 @@
+
+
+gameRespawnEnemies(kRespawnEnemeiesMinor);
