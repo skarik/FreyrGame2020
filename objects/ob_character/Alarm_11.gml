@@ -1,0 +1,2 @@
+/// @description Spawner check
+enemyInfoOnCharacterPostCreate();

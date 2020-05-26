@@ -12,12 +12,24 @@ if (!savestateCheckBufferHeader(buffer, kSavestateHeader_EnemyInfo))
 
 with (kQuestManager)
 {
-	var key_count = buffer_read(buffer, buffer_u32);
+	var live_count = buffer_read(buffer, buffer_u32);
+	for (var i = 0; i < live_count; ++i)
+	{
+		// read map id
+		var key_id = buffer_read(buffer, buffer_u64);
+		
+		// read the data
+		var live = buffer_read(buffer, buffer_u16);
+		
+		// save the data & continue
+		enemy_live_map[?key_id] = live;
+	}
 	
+	var key_count = buffer_read(buffer, buffer_u32);
 	for (var i = 0; i < key_count; ++i)
 	{
 		// read map id
-		key_id = buffer_read(buffer, buffer_u64);
+		var key_id = buffer_read(buffer, buffer_u64);
 		
 		// read the data
 		var info = array_create(3);

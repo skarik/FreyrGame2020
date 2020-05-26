@@ -1,3 +1,9 @@
+/// @function enemyInfoInitialize()
+/// @desc Sets up the quest manager for the enemy map
+
+#macro kEnemyInfoLiveState_Alive	0
+#macro kEnemyInfoLiveState_Dead		1
+
 // check is valid quest manager
 var other_id = id;
 with (kQuestManager)

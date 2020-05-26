@@ -13,8 +13,8 @@
         "519c97e3-ccfb-4cf9-94d1-523e15ef65fd",
         "1b94ce35-6c49-4b3a-ae22-a65c7722bb9c",
         "19c94e04-7ef5-4ce8-b1fc-8a51d8fab8b0",
-        "2f541bd4-cda9-4553-88fd-049e933f9c41",
-        "2b622a18-b89f-489f-8e3d-96b52fcedda2"
+        "1d8d4927-972c-45db-a9c9-5f47ffd074d6",
+        "15e8193e-d61e-4d1d-914f-1d21648090ee"
     ],
     "filterType": "GMScript",
     "folderName": "Player\/Game",

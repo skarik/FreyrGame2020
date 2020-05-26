@@ -2,7 +2,7 @@
 
 if (!m_isDead)
 {
-	enemyInfoOnDeath();
+	enemyInfoOnCharacterDeath();
 }
 
 m_isDead = true;

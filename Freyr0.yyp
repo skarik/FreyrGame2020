@@ -1279,6 +1279,14 @@
             }
         },
         {
+            "Key": "15e8193e-d61e-4d1d-914f-1d21648090ee",
+            "Value": {
+                "id": "bb086145-981e-4984-9381-0232a9cd8e69",
+                "resourcePath": "scripts\\enemySpawnerCheckAndRespawn\\enemySpawnerCheckAndRespawn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "15ec259b-7feb-4938-9ad1-3dd5ca32254f",
             "Value": {
                 "id": "ceed318e-d284-4212-87c0-46543170590d",
@@ -1559,6 +1567,14 @@
             }
         },
         {
+            "Key": "1a433fed-d660-4a0e-bc1d-138e209517e7",
+            "Value": {
+                "id": "27e28f19-8b9a-4443-acaf-56345bc2385d",
+                "resourcePath": "views\\1a433fed-d660-4a0e-bc1d-138e209517e7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1a8babd1-e650-425e-8b89-51e376113ab8",
             "Value": {
                 "id": "7537d60b-d19c-4272-a99d-c774d9e88a6d",
@@ -1743,6 +1759,14 @@
             }
         },
         {
+            "Key": "1d8d4927-972c-45db-a9c9-5f47ffd074d6",
+            "Value": {
+                "id": "6df1da63-4375-450d-8c7e-d426a3659c10",
+                "resourcePath": "views\\1d8d4927-972c-45db-a9c9-5f47ffd074d6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1d9aa2ed-d975-4cfe-89d9-25cdd34f080e",
             "Value": {
                 "id": "6a0d95fe-93d4-44c7-a74f-6f93a06eb83b",
@@ -1756,6 +1780,14 @@
                 "id": "486bdd7a-19d8-43c6-9801-ce65c5a5f1a5",
                 "resourcePath": "views\\1da584c7-796c-41d7-b7b4-15d55cfa2ec3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1da87ff2-39e2-4e2b-956b-46b610b3ee9f",
+            "Value": {
+                "id": "a1635a0c-65ad-44cc-bfec-a2a20847f12d",
+                "resourcePath": "objects\\o_spawnerGobboTest\\o_spawnerGobboTest.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2642,7 +2674,7 @@
             "Key": "2b622a18-b89f-489f-8e3d-96b52fcedda2",
             "Value": {
                 "id": "2f9f2bd8-4904-41fc-888e-afd98f81cd45",
-                "resourcePath": "scripts\\enemyInfoOnDeath\\enemyInfoOnDeath.yy",
+                "resourcePath": "scripts\\enemyInfoOnCharacterDeath\\enemyInfoOnCharacterDeath.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2938,7 +2970,7 @@
             "Key": "2f541bd4-cda9-4553-88fd-049e933f9c41",
             "Value": {
                 "id": "034c4e96-da6d-444c-8718-224827abe467",
-                "resourcePath": "scripts\\enemyInfoOnCreate\\enemyInfoOnCreate.yy",
+                "resourcePath": "scripts\\enemyInfoOnPreSpawn\\enemyInfoOnPreSpawn.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3292,6 +3324,14 @@
                 "id": "b33089ab-4ad2-4178-ab08-d468f504e488",
                 "resourcePath": "views\\36647849-117c-4a35-b176-fa07f83a1d50.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "366cbf9a-71f3-46b4-b0ba-a00314fd1cd2",
+            "Value": {
+                "id": "eddb6819-ad03-4e8b-83c9-9fca7161a4c7",
+                "resourcePath": "scripts\\enemyInfoClearLiveList\\enemyInfoClearLiveList.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -10143,6 +10183,14 @@
             }
         },
         {
+            "Key": "aade36bb-b2bf-4336-a788-09b5dea3f1d6",
+            "Value": {
+                "id": "78d9e53c-e5a1-4315-90fd-cbb110818547",
+                "resourcePath": "scripts\\enemyInfoOnCharacterPostCreate\\enemyInfoOnCharacterPostCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ab05b3ae-5a12-4d5d-8181-ea7051c21064",
             "Value": {
                 "id": "50df8e53-07ea-47b2-93cd-3f87464d0d1e",
@@ -15183,6 +15231,14 @@
             }
         },
         {
+            "Key": "fa05136d-3b7e-479d-b9e7-f47c7b1cbb42",
+            "Value": {
+                "id": "1ad19130-b1b8-453d-aa5d-e3430cf9f777",
+                "resourcePath": "scripts\\enemyInfoOnCharacterCreate\\enemyInfoOnCharacterCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fa3c915d-8ceb-4668-af84-7857e0aff267",
             "Value": {
                 "id": "a4d7a3df-de82-4443-b90c-4192334e3799",
@@ -15235,6 +15291,14 @@
             "Value": {
                 "id": "d29c9a4b-ca4d-4320-960b-cf2b02beadbb",
                 "resourcePath": "objects\\o_tallgrassMetasquare32\\o_tallgrassMetasquare32.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "faf99f12-2dce-47f4-b507-ddbe423b66d9",
+            "Value": {
+                "id": "64c80e91-1c34-4bbf-8d6f-2582acc29562",
+                "resourcePath": "objects\\o_spawnerBase\\o_spawnerBase.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -16018,6 +16082,10 @@
         "19c94e04-7ef5-4ce8-b1fc-8a51d8fab8b0",
         "2f541bd4-cda9-4553-88fd-049e933f9c41",
         "2b622a18-b89f-489f-8e3d-96b52fcedda2",
+        "fa05136d-3b7e-479d-b9e7-f47c7b1cbb42",
+        "aade36bb-b2bf-4336-a788-09b5dea3f1d6",
+        "366cbf9a-71f3-46b4-b0ba-a00314fd1cd2",
+        "15e8193e-d61e-4d1d-914f-1d21648090ee",
         "e917a803-9303-41fa-b9d8-00e4872a7139",
         "490a5a58-1b5b-4d04-b293-c6efec45e2ef",
         "3576eeb4-9024-468c-b668-55eadedf5b50",
