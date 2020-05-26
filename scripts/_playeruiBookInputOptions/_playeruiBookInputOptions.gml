@@ -377,7 +377,7 @@ else if (m_book_state == BookState.SubsetLevel)
 			{
 				var control_value = ssettingGetValue(l_current_option[3]);
 		
-				// Fill in the array
+				// Fill in the empty spots in the array
 				for (var i = array_length_1d(control_value); i < 8; ++i)
 				{
 					control_value[i] = null;
