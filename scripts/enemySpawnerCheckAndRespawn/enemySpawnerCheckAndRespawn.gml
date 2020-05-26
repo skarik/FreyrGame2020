@@ -12,6 +12,7 @@ with (argument0)
 		{
 			var character = instance_create_depth(x, y, depth, m_characterToSpawn);
 			character.m_enemyinfo_id = id;
+			character.m_saveTracked = m_saveTracked; // Override save tracked state
 		
 			m_spawned_enemy = character;
 		}
