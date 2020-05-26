@@ -1,5 +1,17 @@
 /// @function enemyInfoOnDeath
 
+// Track the death
+{
+	var enemy_id = id;
+	
+	// Mark enemy as dead.
+	with (kQuestManager)
+	{
+		enemy_live_map[?enemy_id] = false;
+	}
+}
+
+// Track the death counts
 if (m_saveTracked)
 {
 	var enemy_id = id;

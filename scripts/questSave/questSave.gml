@@ -5,6 +5,8 @@ if (!exists(kQuestManager))
 	show_error("invalid quest state", true);
 }
 
+savestateWriteBufferHeader(buffer, kSavestateHeader_Quests, kSavestateVersion);
+
 with (kQuestManager)
 {
 	// init quests

@@ -9,7 +9,8 @@ with (kQuestManager)
 }
 
 // init info map
-enemy_info_map = ds_map_create();
+enemy_live_map = ds_map_create(); // are the enemies alive this run?
+enemy_info_map = ds_map_create(); // enemy KO & death count for respawning
 
 // set persistence
 persistent = true;
