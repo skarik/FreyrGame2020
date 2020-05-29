@@ -1,6 +1,6 @@
 //m_book_enabled
 
-if (exists(o_menuPlayerBook))
+if (iexists(o_menuPlayerBook))
 {
 	m_book_totalBlend = o_menuPlayerBook.m_totalBlend;
 }

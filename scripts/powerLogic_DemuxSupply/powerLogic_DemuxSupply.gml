@@ -6,7 +6,7 @@ if (array_length_1d(supply_source.m_muxOutputs) == 0)
 {
 	with (ob_livelyPowered)
 	{
-		if (exists(m_powerSource) && m_powerSource.id == supply_source.id)
+		if (iexists(m_powerSource) && m_powerSource.id == supply_source.id)
 		{
 			supply_source.m_muxOutputs[array_length_1d(supply_source.m_muxOutputs)] = id;
 		}

@@ -3,7 +3,7 @@ hovered = false;
 
 if (enabled)
 {
-	if (exists(o_debugMenu))
+	if (iexists(o_debugMenu))
 	{
 		if (point_in_rectangle(o_debugMenu.uiMouseX, o_debugMenu.uiMouseY, rect[0], rect[1], rect[0] + rect[2], rect[1] + rect[3]))
 		{

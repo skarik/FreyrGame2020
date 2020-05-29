@@ -22,7 +22,7 @@ if (visible)
 			var grass = m_grassBits[leaf_i];
 		
 			// choose a grass to spawn
-			var leaf = new(o_ptcWheatLeaf);
+			var leaf = inew(o_ptcWheatLeaf);
 				leaf.x = grass[0];
 				leaf.y = grass[1];
 				leaf.xspeed = (wind[0] + random_range(-9.0, +9.0)) * 0.5;

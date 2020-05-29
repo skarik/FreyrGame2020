@@ -22,23 +22,23 @@ playerInteractInit();
 // create scriptable vars for cutscenes
 aiScriptableInit();
 
-camera = new(o_PlayerCamera);
-hud = new(o_PlayerHud);
-inventory = new(o_inventory);
-if (!exists(o_PlayerQuest))
-	quests = new(o_PlayerQuest);
+camera = inew(o_PlayerCamera);
+hud = inew(o_PlayerHud);
+inventory = inew(o_inventory);
+if (!iexists(o_PlayerQuest))
+	quests = inew(o_PlayerQuest);
 else
 	quests = instance_find(o_PlayerQuest, 0);
-if (!exists(o_PlayerStats))
-	pstats = new(o_PlayerStats);
+if (!iexists(o_PlayerStats))
+	pstats = inew(o_PlayerStats);
 else
 	pstats = instance_find(o_PlayerStats, 0);
 // update name
 m_name = pstats.m_name;
 
 // make sure there's day/night
-if (!exists(o_dayNightCycle))
-	new(o_dayNightCycle);
+if (!iexists(o_dayNightCycle))
+	inew(o_dayNightCycle);
 
 m_prevInventoryActive = false;
 
@@ -66,7 +66,7 @@ m_itemBalanceSpeed = [0, 0];
 #region Effects
 	// the player alright has a character-light, but for no-ambient rooms, it gets disabled
 	// thus, we need a specific light that shows the character location
-	m_locatorLight = new(o_lightEmissiveDepth_User5);
+	m_locatorLight = inew(o_lightEmissiveDepth_User5);
 	m_locatorLight.target = id;
 	m_locatorSh_uColorKey = shader_get_uniform(sh_colorkeyAlphatest, "uColorKey");
 #endregion

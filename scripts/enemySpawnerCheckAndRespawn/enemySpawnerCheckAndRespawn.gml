@@ -3,9 +3,9 @@
 
 with (argument0)
 {
-	if (!exists(m_spawned_enemy) || m_spawned_enemy.m_isDead)
+	if (!iexists(m_spawned_enemy) || m_spawned_enemy.m_isDead)
 	{
-		delete(m_spawned_enemy);
+		idelete(m_spawned_enemy);
 		
 		var enemyInfoLoadAction = enemyInfoOnPreSpawn();
 		if (enemyInfoLoadAction == kEnemyInfoLoadAction_Spawn)

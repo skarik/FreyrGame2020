@@ -121,7 +121,7 @@ if (m_arm_voidcap_draw_intro)
 }
 
 // draw void sparks
-var l_draw_void_sparks = exists(pl.currentHeldUsable) && pl.currentHeldUsable.object_index = o_potEnergy;
+var l_draw_void_sparks = iexists(pl.currentHeldUsable) && pl.currentHeldUsable.object_index = o_potEnergy;
 if (l_draw_void_sparks)
 {
 	draw_set_color(c_white);

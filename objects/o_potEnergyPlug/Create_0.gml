@@ -27,5 +27,5 @@ depthInit();
 
 //event_user(0);
 
-m_light = new(o_lightCrystalSmallGentle);
+m_light = inew(o_lightCrystalSmallGentle);
 m_light.image_alpha = 0.0;

@@ -10,7 +10,7 @@ if (tradeItem == null || tradeItem.tradeItem[0] == noone)
 
 //Create an instance of the item
 var returnItem = itemEntryNew();
-var item = new (tradeItem.tradeItem[0]); //This line is magic, apparently.
+var item = inew (tradeItem.tradeItem[0]); //This line is magic, apparently.
 
 returnItem.object = tradeItem.tradeItem[0];
 returnItem.count = tradeItem.tradeItem[1] * tradeItem.count;

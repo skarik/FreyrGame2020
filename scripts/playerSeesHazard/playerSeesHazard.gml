@@ -4,7 +4,7 @@
 var hazard = argument0;
 
 var pl = getPlayer();
-if (exists(pl))
+if (iexists(pl))
 {
 	return pl.pstats.m_hazards[hazard] ? true : false;
 }

@@ -1,6 +1,6 @@
 var buffer = argument0;
 
-//delete(ob_pickupInventory);
+//idelete(ob_pickupInventory);
 
 // Load up number of field bits
 var field_count = buffer_read(buffer, buffer_s32);
@@ -8,7 +8,7 @@ var field_count = buffer_read(buffer, buffer_s32);
 // Load up all the field bits!
 for (var i = 0; i < field_count; ++i)
 {
-	var field = new(o_fieldSquare);
+	var field = inew(o_fieldSquare);
 	with (field)
 	{
 		fieldLoadState(buffer);
@@ -21,7 +21,7 @@ var jar_count = buffer_read(buffer, buffer_s32);
 for (var i = 0; i < jar_count; ++i)
 {
 	var jar_type = object_get_index(buffer_read(buffer, buffer_string));
-	var jar = new(jar_type);
+	var jar = inew(jar_type);
 	with (jar)
 	{
 		jarLoadState(buffer);
@@ -34,7 +34,7 @@ var crop_count = buffer_read(buffer, buffer_s32);
 for (var i = 0; i < crop_count; ++i)
 {
 	var crop_type = object_get_index(buffer_read(buffer, buffer_string));
-	var crop = new(crop_type);
+	var crop = inew(crop_type);
 	with (crop)
 	{
 		cropLoadState(buffer);

@@ -17,5 +17,5 @@ radius = sqrt(sqr(bbox[0] - bbox[1]) + sqr(bbox[2] - bbox[3])) * 0.5;
 
 index = null;
 
-if (!exists(o_managerWaterBowlMovement))
-	new(o_managerWaterBowlMovement);
+if (!iexists(o_managerWaterBowlMovement))
+	inew(o_managerWaterBowlMovement);

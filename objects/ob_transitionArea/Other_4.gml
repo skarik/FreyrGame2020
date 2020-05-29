@@ -61,13 +61,13 @@ if (global._transition_source != null)
 				inventory.persistent = false;
 				stats.persistent = false;
 				
-				if (exists(pl))
+				if (iexists(pl))
 				{
 					x = pl.x;
 					y = pl.y;
 					z = pl.z;
 					
-					var hardness = new(o_scrSolidifyFollower);
+					var hardness = inew(o_scrSolidifyFollower);
 						hardness.target = id;
 						hardness.original_state = isPassthru;
 					isPassthru = true;

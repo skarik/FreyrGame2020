@@ -8,5 +8,5 @@ image_yscale = choose(1, -1);
 xspeed = 0;
 yspeed = 0;
 
-if (!exists(o_ashadowCloudMover_Renderer))
-	new(o_ashadowCloudMover_Renderer);
+if (!iexists(o_ashadowCloudMover_Renderer))
+	inew(o_ashadowCloudMover_Renderer);

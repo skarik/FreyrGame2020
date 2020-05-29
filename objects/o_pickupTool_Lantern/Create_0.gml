@@ -7,6 +7,6 @@ m_type           = kItemPickupTool;
 
 m_showPickupUI   = true;
 
-m_light          = new(o_lightCrystalMothLanternGlow);
-m_emissive       = new(o_lightEmissiveDepth_User5);
+m_light          = inew(o_lightCrystalMothLanternGlow);
+m_emissive       = inew(o_lightEmissiveDepth_User5);
 m_emissive.target = id;

@@ -2,7 +2,7 @@
 /// @desc Returns the current dungeon room the player is in.
 
 var pl = getPlayer();
-if (exists(pl))
+if (iexists(pl))
 {
 	with (o_cameraFocus)
 	{

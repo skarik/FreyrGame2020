@@ -22,4 +22,4 @@ switch (weatherGetSeason())
 	case kWeatherSeasonSpring: l_season = "Spring"; break;
 }
 draw_text(dx + 4, dy + 4, l_season);
-draw_text(dx + 4, dy + 4 + 8, "weather.strength: " + (exists(ob_weatherSystem) ? string(ob_weatherSystem.m_strength) : "N/A"));
+draw_text(dx + 4, dy + 4 + 8, "weather.strength: " + (iexists(ob_weatherSystem) ? string(ob_weatherSystem.m_strength) : "N/A"));

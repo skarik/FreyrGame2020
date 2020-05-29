@@ -1,5 +1,5 @@
 /// @description Remove light
 
 event_inherited();
-delete(m_light);
-delete(m_emissive);
+idelete(m_light);
+idelete(m_emissive);

@@ -7,7 +7,7 @@ if (m_showPickupUI)
 {
 	// item ui pop
 	var talker;
-		talker = new(o_CtsItemBox);
+		talker = inew(o_CtsItemBox);
 		talker.input_actor = object_index;
 		talker.input_name = m_name;
 		talker.input_text = "The grubs inside emit a gentle light that seems to pierce the darkness.";
@@ -24,5 +24,5 @@ if (m_showPickupUI)
 else
 {
 	event_inherited();
-	delete(this);
+	idelete(this);
 }

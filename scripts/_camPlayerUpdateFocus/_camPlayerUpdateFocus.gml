@@ -1,4 +1,4 @@
-/*if (exists(m_currentFocus))
+/*if (iexists(m_currentFocus))
 {
 	if (m_currentFocus.object_index != o_cameraFocus
 		&& m_currentFocus.object_index != o_cameraFocusDungeon)
@@ -58,16 +58,16 @@ if (targetFocus != null && m_currentFocus0 != targetFocus && m_currentFocus1 != 
 }
 
 // Now, we want to select the stronger focus
-if ( (exists(m_currentFocus0) && exists(m_currentFocus1) && m_currentFocus1.m_selectionPriority > m_currentFocus0.m_selectionPriority)
-	|| (!exists(m_currentFocus0) && exists(m_currentFocus1)) )
+if ( (iexists(m_currentFocus0) && iexists(m_currentFocus1) && m_currentFocus1.m_selectionPriority > m_currentFocus0.m_selectionPriority)
+	|| (!iexists(m_currentFocus0) && iexists(m_currentFocus1)) )
 {
 	if (m_currentFocusStrength == 0.0)
 		m_currentFocusSelector = 1.0; // Instantly select correct selector if not in any focus mode right now
 	else
 		m_currentFocusSelector += Time.deltaTime;
 }
-else if ( (exists(m_currentFocus0) && exists(m_currentFocus1) && m_currentFocus0.m_selectionPriority > m_currentFocus1.m_selectionPriority)
-	|| (exists(m_currentFocus0) && !exists(m_currentFocus1)) )
+else if ( (iexists(m_currentFocus0) && iexists(m_currentFocus1) && m_currentFocus0.m_selectionPriority > m_currentFocus1.m_selectionPriority)
+	|| (iexists(m_currentFocus0) && !iexists(m_currentFocus1)) )
 {
 	if (m_currentFocusStrength == 0.0)
 		m_currentFocusSelector = 0.0; // Instantly select correct selector if not in any focus mode right now
@@ -77,8 +77,8 @@ else if ( (exists(m_currentFocus0) && exists(m_currentFocus1) && m_currentFocus0
 m_currentFocusSelector = saturate(m_currentFocusSelector);
 
 // Finally, we need to blend the focus in
-if ( (exists(m_currentFocus0) && m_currentFocus0.m_selectionPriority > 0.0)
-	|| (exists(m_currentFocus1) && m_currentFocus1.m_selectionPriority > 0.0) )
+if ( (iexists(m_currentFocus0) && m_currentFocus0.m_selectionPriority > 0.0)
+	|| (iexists(m_currentFocus1) && m_currentFocus1.m_selectionPriority > 0.0) )
 {	// If there's any focus that has activated priority at all, then we blend in.
 	m_currentFocusStrength += Time.deltaTime;
 }
@@ -98,7 +98,7 @@ if (m_currentFocus != null)
 	m_currentFocusX = lerp(m_previousFocusX, m_currentFocus.x, transferBlend);
 	m_currentFocusY = lerp(m_previousFocusY, m_currentFocus.y, transferBlend);
 	m_currentFocusGlue = lerp(m_previousFocusGlue, m_currentFocus.m_focusGlue, transferBlend);
-	//m_currentFocus1lend = exists(m_previousFocus) ? smoothstep(saturate(m_currentFocus.m_blend * 2.0)) : smoothstep(m_currentFocus.m_blend);
+	//m_currentFocus1lend = iexists(m_previousFocus) ? smoothstep(saturate(m_currentFocus.m_blend * 2.0)) : smoothstep(m_currentFocus.m_blend);
 	//m_currentFocus1lend = smoothstep(saturate(m_currentFocus.m_blend * 2.0));
 	m_currentFocus1lend = smoothstep(saturate(m_currentFocus.m_blend));
 }

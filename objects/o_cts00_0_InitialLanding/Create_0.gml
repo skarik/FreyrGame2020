@@ -3,7 +3,7 @@ m_initialized = false;
 
 if (questGetValue(kQidIntroSequence) > 0)
 {
-	delete(this);
+	idelete(this);
 	exit;
 }
 

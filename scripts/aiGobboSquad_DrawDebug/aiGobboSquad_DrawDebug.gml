@@ -1,4 +1,4 @@
-if (m_aiGobbo_squadLeader == id || !exists(m_aiGobbo_squadLeader))
+if (m_aiGobbo_squadLeader == id || !iexists(m_aiGobbo_squadLeader))
 {
 	// Draw all the debug info for the squad
 	var c_debug = c_lime;
@@ -10,7 +10,7 @@ if (m_aiGobbo_squadLeader == id || !exists(m_aiGobbo_squadLeader))
 	for (var i = 0; i < array_length_1d(m_aiGobbo_squad); ++i)
 	{
 		var gobbo = m_aiGobbo_squad[i];
-		if (exists(gobbo))
+		if (iexists(gobbo))
 		{
 			with (gobbo)
 			{
@@ -34,7 +34,7 @@ if (m_aiGobbo_squadLeader == id || !exists(m_aiGobbo_squadLeader))
 					draw_text(x - 20, y + 28, "ANGRY");
 					
 				// Attacking state
-				if (exists(m_aiGobbo_squadLeader))
+				if (iexists(m_aiGobbo_squadLeader))
 				{
 					if (i == m_aiGobbo_squadLeader.m_aiGobbo_squadManage_Attacker)
 					{
@@ -63,7 +63,7 @@ if (m_aiGobbo_squadLeader == id || !exists(m_aiGobbo_squadLeader))
 	}
 	
 	// Denote the squad leader
-	if (exists(m_aiGobbo_squadLeader))
+	if (iexists(m_aiGobbo_squadLeader))
 	{
 		with (m_aiGobbo_squadLeader)
 		{

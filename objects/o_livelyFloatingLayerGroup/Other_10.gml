@@ -11,7 +11,7 @@ for (var i = 0; i < elevationCount; ++i)
 {
 	var area = elevationSources[i];
 	
-	elevationLifts[i] = new(ob_elevationAreaLift);
+	elevationLifts[i] = inew(ob_elevationAreaLift);
 	elevationLifts[i].x = area.x;
 	elevationLifts[i].y = area.y;
 	elevationLifts[i].sprite_index = area.sprite_index;

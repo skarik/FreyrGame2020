@@ -14,7 +14,7 @@ m_airFriction = 100;
 
 #endregion
 
-m_collider = new(ob_collider);
+m_collider = inew(ob_collider);
 m_collider.visible = false;
 m_collider.sprite_index = sprite_index;
 m_collider.mask_index = sprite_index;

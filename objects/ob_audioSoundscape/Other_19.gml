@@ -5,9 +5,9 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 {
 	var soundinfo = m_definition.sounds[i];
 	
-	if (exists(m_audioSound[i]))
+	if (iexists(m_audioSound[i]))
 	{
-		delete(m_audioSound[i]); // this SHOULD handle freeing streams as well
+		idelete(m_audioSound[i]); // this SHOULD handle freeing streams as well
 		m_audioSound[i] = null;
 	}
 	

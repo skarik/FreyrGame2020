@@ -9,10 +9,10 @@ else
     image_alpha -= Time.dt * 3.0;
     if ( image_alpha <= 0.0 )
 	{
-		var cts = new2(o_CtsTimeExpand);
+		var cts = inew(o_CtsTimeExpand);
 			cts.input_priority = this.input_priority; 
 			
-        delete(this);
+        idelete(this);
         exit;
     }
 }

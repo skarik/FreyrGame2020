@@ -45,7 +45,7 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 			m_aiCombat_alerted = true;
 			
 			// Check if target still in range:
-			if (exists(m_aiCombat_target))
+			if (iexists(m_aiCombat_target))
 			{
 				var t_npc = m_aiCombat_target;
 				
@@ -69,7 +69,7 @@ if (m_aiCombat_updateInterval > 0.1) // Update the timer every 0.1 seconds
 	else
 	{
 		// does target exist?
-		if (exists(m_aiCombat_target))
+		if (iexists(m_aiCombat_target))
 		{
 			// update if target visible (wide range)
 			if (aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, max(m_aiCombat_target.z, z), facingDirection, 300.0, 360, true))
@@ -121,7 +121,7 @@ if (!m_aiCombat_angry && !m_aiCombat_alerted)
 // Alert
 else if (!m_aiCombat_angry && m_aiCombat_alerted)
 {
-	if (exists(m_aiCombat_target))
+	if (iexists(m_aiCombat_target))
 	{
 		var target_direction	= point_direction(x, y, m_aiCombat_target.x, m_aiCombat_target.y);
 		
@@ -153,7 +153,7 @@ else if (m_aiCombat_angry)
 	m_aiCombat_aggroTimer += Time.deltaTime * 2.0;
 	
 	// if target exists and is visible
-	if (exists(m_aiCombat_target) && m_aiCombat_targetVisible)
+	if (iexists(m_aiCombat_target) && m_aiCombat_targetVisible)
 	{
 		m_aiState_attackTiming += Time.deltaTime;
 		

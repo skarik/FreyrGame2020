@@ -26,8 +26,8 @@ if (m_running)
 				
 			m_executeState = 1;
 		}
-		else if (  (!exists(o_CtsTalkerBox) /*|| o_CtsTalkerBox.input_fadeout*/)
-				&& (!exists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout))  )
+		else if (  (!iexists(o_CtsTalkerBox) /*|| o_CtsTalkerBox.input_fadeout*/)
+				&& (!iexists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout))  )
 	    {
 	        m_lineIndex++;
 	        m_executeState = 0;   

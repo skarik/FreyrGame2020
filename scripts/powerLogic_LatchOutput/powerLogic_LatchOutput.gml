@@ -1,5 +1,5 @@
 // Latch new value on input high
-if (exists(m_powerLatchInput) && m_powerLatchInput.m_powerOutput > 0.5)
+if (iexists(m_powerLatchInput) && m_powerLatchInput.m_powerOutput > 0.5)
 {
 	m_powerLatchValue = m_powerInput;
 }

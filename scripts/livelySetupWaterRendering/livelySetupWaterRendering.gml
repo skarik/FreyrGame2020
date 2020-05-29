@@ -19,7 +19,7 @@ for (var i = 0; i < array_length_1d(all_layers); ++i)
 		
 		layer_set_visible(all_layers[i], false);
 		
-		var renderer = new(o_waterTiledRenderPass);
+		var renderer = inew(o_waterTiledRenderPass);
 			renderer.target_layer = all_layers[i];
 			renderer.target_tilemap = tilemap;
 	}

@@ -9,9 +9,9 @@ if (m_state == CtsCamp.S1BeginSleep)
 }
 else if (m_state == CtsCamp.S2FadeOut)
 {
-	/*if (!exists(o_fxFadeOutSolid))
+	/*if (!iexists(o_fxFadeOutSolid))
 	{
-		var fadeout = new(o_fxFadeOutSolid);
+		var fadeout = inew(o_fxFadeOutSolid);
 			fadeout.image_blend = c_black;
 			depth = fadeout.depth - 1;
 	}
@@ -39,11 +39,11 @@ else if (m_state == CtsCamp.S4SleepTravel)
 	// Nothing yet!
 	/*m_state = CtsCamp.S5FadeIn;
 	
-	delete(o_fxFadeOutSolid);
+	idelete(o_fxFadeOutSolid);
 	
-	if (!exists(o_fxFadeInBanded))
+	if (!iexists(o_fxFadeInBanded))
 	{
-		var fadein = new(o_fxFadeInBanded);	
+		var fadein = inew(o_fxFadeInBanded);	
 			fadein.image_blend = c_black;
 			depth = fadein.depth - 1;
 	}*/
@@ -62,12 +62,12 @@ else if (m_state == CtsCamp.S4SleepTravel)
 }
 else if (m_state == CtsCamp.S5FadeIn)
 {
-	/*if (!exists(o_fxFadeInBanded) || o_fxFadeInBanded.image_alpha <= 0.0)
+	/*if (!iexists(o_fxFadeInBanded) || o_fxFadeInBanded.image_alpha <= 0.0)
 	{*/
 		with (o_PlayerTest) canMove = true;
 		
-		//delete(o_fxFadeInBanded);
-		delete(this);
+		//idelete(o_fxFadeInBanded);
+		idelete(this);
 		
 		m_state = CtsCamp.S6Cleanup;
 	//}

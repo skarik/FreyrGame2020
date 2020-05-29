@@ -1,6 +1,6 @@
 var buffer = argument0;
 
-if (!exists(kQuestManager))
+if (!iexists(kQuestManager))
 {
 	show_error("invalid quest state", true);
 }

@@ -1,7 +1,7 @@
 /// @description Render 
 
-if (!exists(o_ashadowCloudMover))
+if (!iexists(o_ashadowCloudMover))
 {
-	delete(this);
+	idelete(this);
 	exit;
 }

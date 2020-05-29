@@ -1,3 +1,3 @@
 /// @description Remove emissive
 
-delete(m_emissive);
+idelete(m_emissive);

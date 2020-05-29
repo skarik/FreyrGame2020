@@ -5,7 +5,7 @@ m_definition = soundscapeGetByName(m_soundscape);
 if (m_definition == null)
 {
 	debugOut("Could not find soundscape definition \"" + m_definition + "\" in any definition");
-	delete(this);
+	idelete(this);
 	exit;
 }
 

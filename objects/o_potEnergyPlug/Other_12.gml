@@ -6,7 +6,7 @@ var inPlug = false;
 var inPlugId = null;
 
 // Check if in plug...
-if (exists(m_user))
+if (iexists(m_user))
 {
 	var pot = id;
 	with (o_livelyPoweredPotPlug)

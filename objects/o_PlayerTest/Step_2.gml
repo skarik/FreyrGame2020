@@ -10,16 +10,16 @@ playerInteractEndStep();
 var next_area = areaFromRoom(room);
 if (canMove
 	&& next_area != kAreaNoArea && next_area != m_currentArea
-	&& !exists(ob_CtsTalker)
-	&& !exists(o_uiNewArea)
-	&& !exists(o_cts00_2_InitialWalkPast))
+	&& !iexists(ob_CtsTalker)
+	&& !iexists(o_uiNewArea)
+	&& !iexists(o_cts00_2_InitialWalkPast))
 {
 	m_currentAreaTimer += min(0.1, Time.deltaTime);
 	if (m_currentAreaTimer > 1.0)
 	{
 		m_currentArea = next_area;
 		
-		var notifier = new(o_uiNewArea);
+		var notifier = inew(o_uiNewArea);
 			notifier.m_area = m_currentArea;
 			
 		debugOut("New area: " + areaGetName(next_area));

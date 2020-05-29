@@ -1,7 +1,7 @@
 /// @description Trigger check
 
 var pl = getPlayer();
-if (exists(pl))
+if (iexists(pl))
 {
 	var delta = [(pl.x - x) / image_xscale, (pl.y - y) / image_yscale];
 	if (sqr(delta[0]) + sqr(delta[1]) < sqr(48))
@@ -10,6 +10,6 @@ if (exists(pl))
 			event_user(0);
 		
 		if (m_triggerOnce)
-			delete(this);
+			idelete(this);
 	}
 }

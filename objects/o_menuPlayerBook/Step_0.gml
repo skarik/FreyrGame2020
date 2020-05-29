@@ -1,6 +1,6 @@
 /// @description Menu update
 
-if (!exists(m_player))
+if (!iexists(m_player))
 	m_player = getPlayer();
 
 // Menu check:
@@ -13,7 +13,7 @@ else
 	m_totalBlend = max(0.0, m_totalBlend - Time.unscaledDeltaTime * 3.0);
 	if (m_totalBlend <= 0.0)
 	{
-		delete(this);
+		idelete(this);
 		exit; // Skip the rest of the step if deleteed
 	}
 }

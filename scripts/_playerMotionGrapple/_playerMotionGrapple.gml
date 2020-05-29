@@ -1,9 +1,9 @@
 var end_grapple_state = false;
 
 // Create grapple hook visual
-if (!exists(o_fakeProjectileGrappleHook))
+if (!iexists(o_fakeProjectileGrappleHook))
 {
-	new(o_fakeProjectileGrappleHook);
+	inew(o_fakeProjectileGrappleHook);
 }
 
 // If shooting grapple out, need to move grapple to the last set aiming direction
@@ -85,5 +85,5 @@ else
 if (end_grapple_state)
 {
 	moScriptOverride = null;
-	delete(o_fakeProjectileGrappleHook);
+	idelete(o_fakeProjectileGrappleHook);
 }

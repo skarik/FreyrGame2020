@@ -1,14 +1,14 @@
 /// @description update grow values
 
 // make sure dirt exists
-if (!exists(m_dirt))
+if (!iexists(m_dirt))
 {
 	m_dirt = collision_point(x, y, o_fieldSquare, true, true);
 	
-	if (!exists(m_dirt))
+	if (!iexists(m_dirt))
 	{
 		event_user(0); // on destroy
-		delete(this);
+		idelete(this);
 		exit;
 	}
 	else
@@ -28,7 +28,7 @@ if (m_dirt.watered)
 {
 	var hour = timeofdayGetHour();
 	var isDay = (hour > 6.5 && hour < 18.5);
-	if (exists(m_dirt) && m_dirt.watered)
+	if (iexists(m_dirt) && m_dirt.watered)
 	{
 		m_growValue += isDay ? m_growAmountWetDay : m_growAmountWetNight;
 	}

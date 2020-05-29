@@ -4,7 +4,7 @@
 event_inherited();
 
 // Disable plugs
-if (exists(energyPlugId))
+if (iexists(energyPlugId))
 {
 	energyPlugId.m_pot = null;
 	energyPlugged = false;

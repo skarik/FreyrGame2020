@@ -1,6 +1,6 @@
 /// @description Clean junk
 
-delete(m_elevation);
+idelete(m_elevation);
 
 instance_activate_object(m_collider);
-delete(m_collider);
+idelete(m_collider);

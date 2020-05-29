@@ -1,2 +1,2 @@
-if (exists(o_fxFadeInBanded))
-	delete(this);
+if (iexists(o_fxFadeInBanded))
+	idelete(this);

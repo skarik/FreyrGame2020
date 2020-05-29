@@ -3402,7 +3402,7 @@
             "Key": "36e542ee-3e15-4516-afa2-d30b86bafc13",
             "Value": {
                 "id": "67f60082-95aa-4640-8659-dd6201452932",
-                "resourcePath": "scripts\\delete\\delete.yy",
+                "resourcePath": "scripts\\idelete\\idelete.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3642,7 +3642,7 @@
             "Key": "3b8b8f4f-c01d-4304-96f0-469aa575851f",
             "Value": {
                 "id": "96ebd0bb-f72d-4990-adaf-d6233e57f741",
-                "resourcePath": "scripts\\exists\\exists.yy",
+                "resourcePath": "scripts\\iexists\\iexists.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8218,7 +8218,7 @@
             "Key": "8ae87ec2-c497-411e-8b0e-f9e3e3481cfb",
             "Value": {
                 "id": "65e48631-d707-42e9-9407-c54b6d570591",
-                "resourcePath": "scripts\\new\\new.yy",
+                "resourcePath": "scripts\\inew\\inew.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -9204,14 +9204,6 @@
                 "id": "cdbabd03-7925-423d-a2e6-6783a74f5ab4",
                 "resourcePath": "sprites\\s_propTStool\\s_propTStool.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "99e27a97-efd5-47d0-bc65-4acdb243252a",
-            "Value": {
-                "id": "325e7134-244e-4a81-abd9-61a0a1e6aa61",
-                "resourcePath": "scripts\\new2\\new2.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -15676,7 +15668,6 @@
         "75fa063c-d20d-46ba-a7d8-56068054442b",
         "786b4d6b-f4c2-4417-b0f3-46536bfeb311",
         "8ae87ec2-c497-411e-8b0e-f9e3e3481cfb",
-        "99e27a97-efd5-47d0-bc65-4acdb243252a",
         "36e542ee-3e15-4516-afa2-d30b86bafc13",
         "3b8b8f4f-c01d-4304-96f0-469aa575851f",
         "c49079db-0232-4388-a859-281831a2d506",

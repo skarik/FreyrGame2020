@@ -1,6 +1,6 @@
 /// @description set original state
 
-if (exists(target))
+if (iexists(target))
 {
 	target.isPassthru = original_state;
 }

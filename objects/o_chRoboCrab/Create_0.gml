@@ -26,7 +26,7 @@ m_aiState_attackTiming = 0.0;
 //m_light2 = instance_create_depth(x, y, depth, o_lightCrystalSlugGlow);
 
 //aiSlugInit();
-m_glow = new(o_lightEmissiveDepth_User5);
+m_glow = inew(o_lightEmissiveDepth_User5);
 m_glow.target = id;
 
 // Set up the common code

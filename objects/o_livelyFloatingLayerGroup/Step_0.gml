@@ -1,7 +1,7 @@
 /// @description Update depth and positions
 
 var minimum_depth = layersMaxDepth;
-if (exists(o_waterMetalballRenderer))
+if (iexists(o_waterMetalballRenderer))
 {
 	minimum_depth = o_waterMetalballRenderer.depth - 1;
 }

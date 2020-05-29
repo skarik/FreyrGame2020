@@ -21,7 +21,7 @@ if ( m_isPlayer && stats.m_health < stats.m_healthPrev )
 		
 	repeat (max(2.0, (stats.m_healthPrev - stats.m_health) * 0.2))
 	{
-		var blud = new(o_ptcBloodHud);
+		var blud = inew(o_ptcBloodHud);
 			blud.m_damageType = m_lastDamage;
 			// Set up colors
 			blud.image_blend = tc_bloodred;

@@ -18,7 +18,7 @@ m_isStunned = false;
 m_stunTimer = 0.0;
 
 // Each character has a set of stats
-stats = new(o_stats);
+stats = inew(o_stats);
 
 characterMotionInit();
 

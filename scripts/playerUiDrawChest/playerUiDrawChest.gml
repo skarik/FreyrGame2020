@@ -86,7 +86,7 @@ if (o_PlayerTest.m_currentChest != null)
 		//draw_text(dx_text, dy_text + 5, "<Filled Chest>");
 		for (var i = 0; i < chest_size; ++i)
 		{
-			if (exists(chest.item[i]) && chest.item[i].object != null)
+			if (iexists(chest.item[i]) && chest.item[i].object != null)
 			{
 				draw_sprite(object_get_sprite(chest.item[i].object), 0, dx_text + 15, dy_text + dspace * 0.5 + i * dspace);
 				

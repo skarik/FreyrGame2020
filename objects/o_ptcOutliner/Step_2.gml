@@ -1,6 +1,6 @@
 /// @description delet
-if (!exists(m_target)) {
-	delete(this);
+if (!iexists(m_target)) {
+	idelete(this);
 	exit;
 }
 	

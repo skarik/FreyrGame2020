@@ -22,8 +22,8 @@ m_bag_totalBlend = 0;
 
 playerUiInit();
 
-if (!exists(o_PlayerMap)) 
-	map = new(o_PlayerMap);
+if (!iexists(o_PlayerMap)) 
+	map = inew(o_PlayerMap);
 else 
 	map = instance_find(o_PlayerMap, 0);
 map.persistent = true;

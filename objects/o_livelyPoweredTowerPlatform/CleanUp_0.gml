@@ -1,4 +1,4 @@
 /// @description Clean junk
 
-delete(m_elevation);
-delete(m_emissive);
+idelete(m_elevation);
+idelete(m_emissive);

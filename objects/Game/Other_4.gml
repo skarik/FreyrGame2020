@@ -3,5 +3,5 @@
 roomPrepassPrepare();
 
 // Create gameplay
-if (!exists(Gameplay))
-	new(Gameplay);
+if (!iexists(Gameplay))
+	inew(Gameplay);

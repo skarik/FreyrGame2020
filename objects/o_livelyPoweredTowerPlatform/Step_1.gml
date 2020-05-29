@@ -10,13 +10,13 @@ else
 if (m_currentPathNode == null)
 {
 	m_currentPathNode = m_firstPathNode;
-	if (exists(m_currentPathNode))
+	if (iexists(m_currentPathNode))
 	{
 		x = m_currentPathNode.x;
 		y = m_currentPathNode.y + z_height;
 	}
 }
-if (m_powerOutput > 0.5 && exists(m_currentPathNode))
+if (m_powerOutput > 0.5 && iexists(m_currentPathNode))
 {
 	if (m_waitingForNode)
 	{

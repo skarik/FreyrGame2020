@@ -4,8 +4,8 @@
 
 if (timeofdayIsDaytime())
 {
-	delete(this);
-	new(o_mus00_DayDesert);
+	idelete(this);
+	inew(o_mus00_DayDesert);
 	exit;
 }
 

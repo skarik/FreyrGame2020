@@ -6,4 +6,4 @@ event_inherited();
 // No items dropped from cave slugs.
 
 // Delete the slime
-delete(this);
+idelete(this);

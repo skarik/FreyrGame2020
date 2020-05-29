@@ -1,7 +1,7 @@
 /// @description Update the fades
 
 // Update depth
-if (exists(o_PlayerHud))
+if (iexists(o_PlayerHud))
 {
 	depth = o_PlayerHud.depth - 1; // Just over the HuD
 }
@@ -32,6 +32,6 @@ else if (m_fadeState == 2)
 	m_timer += Time.deltaTime / kFadeOutTime;
 	if (m_timer >= 1.0)
 	{
-		delete(this);
+		idelete(this);
 	}
 }

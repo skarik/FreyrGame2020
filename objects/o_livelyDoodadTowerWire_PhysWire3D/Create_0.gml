@@ -8,9 +8,9 @@ z = z_original;
 m_startPoint = [x, y, z];
 m_endPoint = [x, y, z];
 
-if (exists(m_attachPointStart))
+if (iexists(m_attachPointStart))
 	m_startPoint = [m_attachPointStart.x, m_attachPointStart.y, m_attachPointStart.z];
-if (exists(m_attachPointEnd))
+if (iexists(m_attachPointEnd))
 	m_endPoint = [m_attachPointEnd.x, m_attachPointEnd.y, collision3_get_highest_position(m_attachPointEnd.x, m_attachPointEnd.y, z)];
 
 // Set up wire constants

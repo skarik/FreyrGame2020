@@ -14,5 +14,5 @@ overcharge_ptc_counter = 0.0;
 broken = false; // triggered by the overcharge
 
 /// @description Create glow and set up depth
-emissive = new(o_lightEmissiveDepth_User5);
+emissive = inew(o_lightEmissiveDepth_User5);
 emissive.target = id;

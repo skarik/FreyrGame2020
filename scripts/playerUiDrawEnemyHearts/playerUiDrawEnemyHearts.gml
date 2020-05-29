@@ -12,7 +12,7 @@ for (var i = 0; i < l_enemyMapCount; ++i)
 	// Update the timers
 	timers[0] -= Time.deltaTime;
 	timers[1] -= Time.deltaTime;
-	if (exists(l_currentEnemy))
+	if (iexists(l_currentEnemy))
 	{
 		// Update the last heart hit status
 		if (l_currentEnemy.stats.m_health < timers[2])
@@ -40,7 +40,7 @@ for (var i = 0; i < l_enemyMapCount; ++i)
 	l_currentEnemy = ds_map_find_next(m_enemyActiveMap, l_currentEnemy);
 	
 	// Remove previous key if it falls past the check
-	if (!exists(l_previousEnemy) || (timers[0] < 0 && timers[1] < 0))
+	if (!iexists(l_previousEnemy) || (timers[0] < 0 && timers[1] < 0))
 	{
 		ds_map_delete(m_enemyActiveMap, l_previousEnemy);
 	}
@@ -88,7 +88,7 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 {
 	//var t_enemy = l_activeEnemyList[i];
 	var timers = m_enemyActiveMap[?t_enemy];
-	if (!exists(t_enemy))
+	if (!iexists(t_enemy))
 	{
 		t_enemy = ds_map_find_next(m_enemyActiveMap, t_enemy);
 		continue;

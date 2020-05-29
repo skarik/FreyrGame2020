@@ -24,7 +24,7 @@ savestateWriteBufferHeader(buf, kSavestateHeader_TopLevel, kSavestateVersion);
 // Write out the current player information (type, room, position)
 savestateWriteBufferHeader(buf, kSavestateHeader_PlayerInfo, kSavestateVersion);
 {
-	if (!exists(pl))
+	if (!iexists(pl))
 	{
 	    buffer_write(buf, buffer_u32, 0);
 	    exit;

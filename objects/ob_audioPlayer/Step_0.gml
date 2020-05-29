@@ -1,6 +1,6 @@
 /// @description move audio to parent position
 
-if (exists(parent))
+if (iexists(parent))
 {
 	x = parent.x;
 	y = parent.y;

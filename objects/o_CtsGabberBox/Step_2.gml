@@ -5,17 +5,17 @@ var view_hview0 = GameCamera.height;
 
 draw_set_font(display_font);
 
-if (exists(input_actor))
+if (iexists(input_actor))
 {
     uiPosX = input_actor.x - display_width / 2;
     uiPosY = input_actor.y - input_actor.sprite_yoffset - _gabberBoxHeight() - (input_minimal ? 0 : 18);
 }
-else if (exists(o_CtsKeyPoint))
+else if (iexists(o_CtsKeyPoint))
 {
     uiPosX = o_CtsKeyPoint.x - display_width / 2;
     uiPosY = o_CtsKeyPoint.y - _gabberBoxHeight() - (input_minimal ? 10 : 28);
 }
-else if (exists(o_PlayerTest))
+else if (iexists(o_PlayerTest))
 {
     uiPosX = view_xview0 + view_wview0 / 2 - display_width / 2;
     uiPosY = o_PlayerTest.y - o_PlayerTest.sprite_yoffset - _gabberBoxHeight() - (input_minimal ? 0 : 18);

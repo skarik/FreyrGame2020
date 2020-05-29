@@ -20,7 +20,7 @@ farm_id = current_time;
 
 
 // Debug effects
-var record_overlay = new(o_debugRecordOverlay);
+var record_overlay = inew(o_debugRecordOverlay);
 	record_overlay.persistent = true;
 	
 

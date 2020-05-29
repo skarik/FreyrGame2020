@@ -33,7 +33,7 @@ while (buffer_tell(buf) < buffer_get_size(buf))
 		savestateCheckBufferHeader(buf, kSavestateHeader_PlayerInfo);
 		
 		// Create the player
-		if (!exists(o_PlayerTest)) new(o_PlayerTest);
+		if (!iexists(o_PlayerTest)) inew(o_PlayerTest);
 		
 		// Read in the current player state:
 		var pl_object_name = buffer_read(buf, buffer_string);
@@ -41,12 +41,12 @@ while (buffer_tell(buf) < buffer_get_size(buf))
 		if (pl == 0)
 		{
 			show_error(kSavestateErrorMsg_Start + kSavestateErrorMsg_BadPlayer, true);
-			delete(o_PlayerTest);
+			idelete(o_PlayerTest);
 			return false;
 		}
 		else
 		{   // Set the new player as the player
-			if (!exists(pl)) new(pl); // I guess???
+			if (!iexists(pl)) inew(pl); // I guess???
 			pl.m_isPlayer = true; 
 		}
 		
@@ -66,9 +66,9 @@ while (buffer_tell(buf) < buffer_get_size(buf))
 	{
 		savestateCheckBufferHeader(buf, kSavestateHeader_World);
 		
-		if (!exists(o_dayNightCycle))
+		if (!iexists(o_dayNightCycle))
 		{
-			new(o_dayNightCycle);
+			inew(o_dayNightCycle);
 		}
 		o_dayNightCycle.m_timeOfDay	= buffer_read(buf, buffer_f64);
 		o_dayNightCycle.m_day		= buffer_read(buf, buffer_f64);

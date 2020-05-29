@@ -1,3 +1,3 @@
 /// @description Remove glows
 
-delete(emissive);
+idelete(emissive);

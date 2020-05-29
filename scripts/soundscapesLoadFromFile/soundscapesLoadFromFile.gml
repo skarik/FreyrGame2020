@@ -66,7 +66,7 @@ while (!file_text_eof(fp))
 	    if (string_pos("{", line) != 0)
 	    {
 	        // Create soundscape object (struct to-be)
-			read_soundscape_instance = new(_dummy);
+			read_soundscape_instance = inew(_dummy);
 			read_soundscape_instance.persistent = true;
 			// Set default values;
 			read_soundscape_instance.name = read_soundscape_name;
@@ -116,7 +116,7 @@ while (!file_text_eof(fp))
 		else if (key == "playlooping" || key == "playrandom")
 		{
 			// Create soundinfo object (struct to-be)
-			read_soundinfo_instance = new(_dummy);
+			read_soundinfo_instance = inew(_dummy);
 			read_soundinfo_instance.persistent = true;
 			// Set defaults
 			read_soundinfo_instance.type = (key == "playlooping") ? kSoundscapeSoundTypeLooping : kSoundscapeSoundTypeRandom;
@@ -138,7 +138,7 @@ while (!file_text_eof(fp))
 		else if (key == "dsp")
 		{
 			// Create dsp object (struct to-be)
-			read_dspinfo_instance = new(_dummy);
+			read_dspinfo_instance = inew(_dummy);
 			read_dspinfo_instance.persistent = true;
 			
 			// Set defaults:

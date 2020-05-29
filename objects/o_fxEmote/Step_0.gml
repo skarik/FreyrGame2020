@@ -1,10 +1,10 @@
 /// @description set pos & update scale
 
-if (exists(o_PlayerHud))
+if (iexists(o_PlayerHud))
 {
 	depth = o_PlayerHud.depth + 2;
 }
-if (exists(m_target))
+if (iexists(m_target))
 {
 	x = m_target.x;
 	y = m_target.y - m_target.sprite_height;
@@ -37,6 +37,6 @@ else if (m_fadestate == 2)
 	m_fade -= Time.deltaTime * 4.0;
 	if (m_fade <= 0.0)
 	{
-		delete(this);
+		idelete(this);
 	}
 }

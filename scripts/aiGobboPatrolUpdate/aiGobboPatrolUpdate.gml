@@ -116,7 +116,7 @@ if (!pl.isHidden)
 					if (m_aiCombat_aggroTimer <= 0.0)
 					{
 						// Create the ? emote
-						var emote_fx = new(o_fxEmote);
+						var emote_fx = inew(o_fxEmote);
 							emote_fx.m_target = id;
 							emote_fx.image_index = 1;
 					}
@@ -126,7 +126,7 @@ if (!pl.isHidden)
 					if (m_aiCombat_aggroTimer > 1.0)
 					{
 						// Create the ! emote
-						var emote_fx = new(o_fxEmote);
+						var emote_fx = inew(o_fxEmote);
 							emote_fx.m_target = id;
 							emote_fx.image_index = 2;
 			
@@ -153,7 +153,7 @@ if (m_aiCombat_angry)
 		if (m_aiCombat_deaggroTimer > 1.0)
 		{
 			// Create the ? emote
-			var emote_fx = new(o_fxEmote);
+			var emote_fx = inew(o_fxEmote);
 				emote_fx.m_target = id;
 				emote_fx.image_index = 1;
 			

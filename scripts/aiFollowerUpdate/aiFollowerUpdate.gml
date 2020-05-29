@@ -44,7 +44,7 @@ if (m_aiFollowing)
 			m_aiFollow_timer += Time.deltaTime / 3.0;
 			
 			// If a talker exists, disable any wandering
-			if (exists(ob_CtsTalker))
+			if (iexists(ob_CtsTalker))
 			{
 				m_aiFollow_timer = 0.0;
 			}
@@ -135,7 +135,7 @@ if (m_aiFollowing)
 				var backoff_dir_y = lengthdir_y(1.0, followDirection + 180 + 45);
 			
 				// If our follow target is a moving object, we want to push off based on it's xspeed and yspeed instead
-				if (exists(followTarget))
+				if (iexists(followTarget))
 				{
 					if (abs(followTarget.xspeed) + abs(followTarget.yspeed) > 0.01)
 					{

@@ -1,4 +1,4 @@
-if (m_powerSource2 != null && exists(m_powerSource2))
+if (m_powerSource2 != null && iexists(m_powerSource2))
 {
 	if (!m_powerMathSaturate)
 		return m_powerInput * m_powerSource2.m_powerOutput;

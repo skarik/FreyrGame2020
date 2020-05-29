@@ -1,6 +1,6 @@
 /// @description Update params and sprite
 
-if (m_owner != null && exists(m_owner))
+if (m_owner != null && iexists(m_owner))
 {
 	m_name = m_owner.m_name;
 	sprite_index = m_owner.mask_index;
@@ -8,9 +8,9 @@ if (m_owner != null && exists(m_owner))
 	y = m_owner.y;
 }
 
-if (m_owner != null && !exists(m_owner))
+if (m_owner != null && !iexists(m_owner))
 {
-	delete(this);
+	idelete(this);
 	exit;
 }
 
@@ -56,7 +56,7 @@ if (m_interacting)
 			if (object_get_parent(m_owner.object_index) == ob_characterFollower
 				&& cts_type == SEQTYPE_CHOICES)
 			{
-				if (exists(o_CtsChoiceBox))
+				if (iexists(o_CtsChoiceBox))
 				{
 					draw_set_font(global.font_arvo9); // Set font for the width prediction
 		
@@ -87,19 +87,19 @@ if (m_interacting)
 				var wait_id = cutsceneGetWaitId();
 				if (wait_id == "crafting")
 				{
-					if (!exists(o_CtsChoiceBox))
+					if (!iexists(o_CtsChoiceBox))
 					{
 						cutsceneWaitEnd();
 					}
 				}
 				else if (wait_id == "fortune")
 				{
-					if (!exists(o_CtsChoiceBox))
+					if (!iexists(o_CtsChoiceBox))
 					{
-						if (!exists(o_ctsUiTarot))
+						if (!iexists(o_ctsUiTarot))
 						{
 							cutscenePlayerLock();
-							new(o_ctsUiTarot);
+							inew(o_ctsUiTarot);
 						}
 						else if (o_ctsUiTarot.m_ending)
 						{

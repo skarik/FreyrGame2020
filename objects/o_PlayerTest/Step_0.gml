@@ -89,13 +89,13 @@ for (var i = 0; i < inventory.belt_size; ++i)
 }
 if (have_lantern_belt)
 {
-	if (!exists(m_lanternProp))
+	if (!iexists(m_lanternProp))
 	{
-		m_lanternProp = new(_dummy);
+		m_lanternProp = inew(_dummy);
 		m_lanternProp.sprite_index = s_itemToolLantern_Carried;
 		m_lanternProp.visible = true;
 		
-		m_lanternLight = new(o_lightCrystalMothLanternGlow);
+		m_lanternLight = inew(o_lightCrystalMothLanternGlow);
 		m_lanternLight.image_alpha = 0.0;
 	}
 	
@@ -111,12 +111,12 @@ if (have_lantern_belt)
 }
 else
 {
-	if (exists(m_lanternProp))
+	if (iexists(m_lanternProp))
 	{
-		delete(m_lanternProp);
+		idelete(m_lanternProp);
 		m_lanternProp = null;
 		
-		delete(m_lanternLight);
+		idelete(m_lanternLight);
 	}
 }
 
@@ -167,7 +167,7 @@ if (areaInDeathtar(x, y, z))
 		m_tarDeathTimer = 0.0;
 		
 		var nearestSpawn = instance_nearest(x, y, ob_deathtarRespawnPoint);
-		if (exists(nearestSpawn))
+		if (iexists(nearestSpawn))
 		{
 			worldEventCreate(kWorldEvent_DeathtarGlitch);
 		

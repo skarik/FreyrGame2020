@@ -19,7 +19,7 @@ var pl = getPlayer();
 
 var radius = 0.0;
 radius = 32.0;
-if (exists(pl))
+if (iexists(pl))
 {
 	radius *= 0.5 + saturate(1.0 - abs((y - z_height) - (pl.y - pl.z_height)) / 64.0);
 }

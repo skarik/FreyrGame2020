@@ -10,5 +10,5 @@ mspeed = max(0, mspeed - mfriction * Time.deltaTime);
 life -= Time.deltaTime;
 if (life < 0.0)
 {
-	delete(this);
+	idelete(this);
 }

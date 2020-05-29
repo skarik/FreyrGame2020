@@ -1,4 +1,4 @@
-if (exists(o_debugMenu))
+if (iexists(o_debugMenu))
 {
 	return o_debugMenu.image_alpha;
 }

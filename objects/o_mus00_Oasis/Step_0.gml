@@ -9,7 +9,7 @@ m_fadeSpeed = 2.0;
 	
 /*if (room == rm_oasis_town)
 {
-	if (exists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
+	if (iexists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
 	{
 		m_trackVolume[0] = 0.0;
 		m_trackVolume[1] = 1.0;
@@ -57,7 +57,7 @@ for (var i = 0; i < 11; ++i) {
 
 if (room == rm_oasis_farm)
 {
-	if (questGetValue(kQidIntroSequence) >= 30 && exists(o_cts00_3_InitialWalkDown))
+	if (questGetValue(kQidIntroSequence) >= 30 && iexists(o_cts00_3_InitialWalkDown))
 	{
 		m_trackVolume[0] = 1.0;
 		m_trackVolume[1] = (o_cts00_3_InitialWalkDown.m_music_state > 1) ? 1.0 : 0.0;
@@ -91,7 +91,7 @@ if (room == rm_oasis_farm)
 }
 else if (room == rm_oasis_town)
 {
-	if (exists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
+	if (iexists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
 	{
 		// a hack that needs to move to a cutscene
 		pl.m_currentAreaTimer = 0.0;
@@ -122,7 +122,7 @@ else if (room == rm_oasis_north)
 else if (room == rm_oasis_overlook)
 {
 	var pl = getPlayer();
-	if (exists(pl))
+	if (iexists(pl))
 	{
 		if (pl.y < 360)
 		{

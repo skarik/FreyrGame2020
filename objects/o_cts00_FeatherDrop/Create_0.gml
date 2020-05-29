@@ -3,7 +3,7 @@ m_initialized = false;
 
 if (questGetValue(kQidHarpyShadow) >= 10)
 {
-	delete(this);
+	idelete(this);
 	exit;
 }
 

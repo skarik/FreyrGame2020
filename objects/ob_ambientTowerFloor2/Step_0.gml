@@ -1,4 +1,4 @@
-if (exists(o_dayNightCycle))
+if (iexists(o_dayNightCycle))
 {
 	//m_ambientColor = o_dayNightCycle.m_ambientLight;
 	m_overlayColor = merge_color(o_dayNightCycle.m_overlayColor, make_color_rgb(128, 128, 128), 0.75);
@@ -21,7 +21,7 @@ if (exists(o_dayNightCycle))
 	
 	// do bloom changes based on lantern equipped
 	var pl = getPlayer();
-	var hasLantern = exists(pl.m_lanternProp);
+	var hasLantern = iexists(pl.m_lanternProp);
 	if (hasLantern)
 		m_bloomDropOffset = min(-0.17 + 0.17, m_bloomDropOffset + Time.deltaTime * 0.2);
 	else

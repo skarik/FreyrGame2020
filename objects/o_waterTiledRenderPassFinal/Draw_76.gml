@@ -1,7 +1,7 @@
 /// @description Update needed surfaces
 
 // Disable any metaballs
-if (exists(o_waterMetalballRenderer))
+if (iexists(o_waterMetalballRenderer))
 	o_waterMetalballRenderer.visible = false;
 
 // Grab the main surface we need to work with

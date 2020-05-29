@@ -4,7 +4,7 @@
 event_inherited();
 
 // Dying animation
-if (!exists(o_ctsDeathCutscene))
+if (!iexists(o_ctsDeathCutscene))
 {
-	new(o_ctsDeathCutscene);
+	inew(o_ctsDeathCutscene);
 }

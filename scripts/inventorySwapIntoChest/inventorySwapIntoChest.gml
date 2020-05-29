@@ -6,7 +6,7 @@
 var inventory = argument0;
 var spot = argument1;
 var new_item = argument2;
-if (exists(inventory))
+if (iexists(inventory))
 {
 	// Need to add a new item
 	if (spot >= inventoryGetCount(inventory) || spot == -1)

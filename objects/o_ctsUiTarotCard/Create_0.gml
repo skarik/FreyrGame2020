@@ -21,7 +21,7 @@ zrot = 0;
 
 //
 // Set up initial render options
-if (exists(o_ctsUiTarot))
+if (iexists(o_ctsUiTarot))
 	depth = o_ctsUiTarot.depth - 10; // Make tarot cards draw last, as they seem to mess up any rendering after.
 
 //

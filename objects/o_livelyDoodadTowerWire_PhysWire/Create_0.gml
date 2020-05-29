@@ -4,8 +4,8 @@
 event_inherited();
 
 // Replace the glower with a custom one
-delete(emissive);
-emissive = new(o_lightEmissiveDepth_User5);
+idelete(emissive);
+emissive = inew(o_lightEmissiveDepth_User5);
 emissive.target = id;
 emissive.mask = false;
 emissive.image_blend = c_towerdiamond;
@@ -22,9 +22,9 @@ m_uMultipliedColor = shader_get_uniform(sh_colormaskExternal, "uMultipliedColor"
 m_startPoint = [x, y];
 m_endPoint = [x, y];
 
-if (exists(m_attachPointStart))
+if (iexists(m_attachPointStart))
 	m_startPoint = [m_attachPointStart.x, m_attachPointStart.y];
-if (exists(m_attachPointEnd))
+if (iexists(m_attachPointEnd))
 	m_endPoint = [m_attachPointEnd.x, m_attachPointEnd.y];
 
 // Set up wire constants

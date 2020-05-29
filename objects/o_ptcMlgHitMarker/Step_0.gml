@@ -2,4 +2,4 @@
 
 time += Time.unscaledDeltaTime;
 if (time > 0.5)
-	delete(this);
+	idelete(this);

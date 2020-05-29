@@ -5,5 +5,5 @@ y -= yspeed_base * Time.deltaTime;
 
 if (y < -10)
 {
-	delete(this);
+	idelete(this);
 }

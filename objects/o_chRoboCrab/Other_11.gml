@@ -6,7 +6,7 @@ if (!m_aiCombat_angry)
 	m_aiCombat_angry = true;
 	
 	// Update the combat target immediately as well.
-	if (exists(m_lastDamageSource))
+	if (iexists(m_lastDamageSource))
 	{
 		m_aiCombat_target = m_lastDamageSource;
 		m_aiCombat_targetPosition = [m_lastDamageSource.x, m_lastDamageSource.y];

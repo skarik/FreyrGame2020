@@ -18,4 +18,4 @@ for (var i = 0; i < array_length_1d(items); ++i)
 }
 
 // Delete the slime
-delete(this);
+idelete(this);

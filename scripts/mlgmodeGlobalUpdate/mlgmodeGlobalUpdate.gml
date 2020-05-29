@@ -18,7 +18,7 @@ if (Settings.gameplay_mlg_farm_mode)
 			if (crop == kCropId_AllCrops)
 			{
 				faudio_play_sound(snd_mlgHitMarker, 100, false);
-				var hitmarker = new(o_ptcMlgHitMarker);
+				var hitmarker = inew(o_ptcMlgHitMarker);
 				hitmarker.x = player.x + random_range(-8, +8);
 				hitmarker.y = player.y + random_range(-8, +8);
 				effectScreenShake(3.0, 0.2, false);

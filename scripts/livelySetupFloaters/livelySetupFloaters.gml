@@ -36,7 +36,7 @@ for (var i = 0; i < layer_count; ++i)
 		var keyname_replacement = "float" + "X" + keyname_id;
 		
 		// Create the lively object that will manage all these layers
-		var floater_manager = new(o_livelyFloatingLayerGroup);
+		var floater_manager = inew(o_livelyFloatingLayerGroup);
 		
 		// Finally, look for all matches to that number:
 		var keyname_full = "float" + keyname_id;

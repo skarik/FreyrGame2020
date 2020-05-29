@@ -3,7 +3,7 @@ var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting;// &&
 // Do dashing
 if (dashCooldown <= 0.0)
 {
-	if (dodgeButton.pressed && !isDashing && l_canMove && onGround && !isAttacking && !exists(currentHeldUsable))
+	if (dodgeButton.pressed && !isDashing && l_canMove && onGround && !isAttacking && !iexists(currentHeldUsable))
 	{
 		_playerInteractDoDash();
 	}
@@ -13,7 +13,7 @@ else if (!isDashing)
 	dashCooldown -= Time.deltaTime;
 }
 // Do blocking
-if (dodgeButton.down && l_canMove && onGround && !m_isHolding /*&& !m_isTilling && !m_isPlanting*/ && !exists(currentHeldUsable))
+if (dodgeButton.down && l_canMove && onGround && !m_isHolding /*&& !m_isTilling && !m_isPlanting*/ && !iexists(currentHeldUsable))
 {
 	isBlocking = true;
 }
@@ -101,15 +101,15 @@ if (belt.type == kItemPickupSeed) {
 inCombatMode = !inDelayFrame;
 //if (collision_circle(x, y, )
 // todo: loop thru near enemies, if they're hostile, then we in combat mode
-if (exists(currentUsable) || exists(currentHeldUsable))
+if (iexists(currentUsable) || iexists(currentHeldUsable))
 {
 	inCombatMode = false;
 }
-/*if (exists(currentCrop))
+/*if (iexists(currentCrop))
 {
 	inCombatMode = false;
 }
-if (exists(currentTillable) || m_isTilling)
+if (iexists(currentTillable) || m_isTilling)
 {
 	inCombatMode = false;
 }*/

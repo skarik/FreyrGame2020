@@ -1,6 +1,6 @@
 /// @description Update surfaces
 
-if (!exists(o_waterMetaball))
+if (!iexists(o_waterMetaball))
 {
 	exit;
 }

@@ -23,8 +23,8 @@ m_gameSurface = null;
 // Set up output camera
 m_outputCamera = camera_create_view(0, 0, Screen.width, Screen.height);
 
-new(o_replatte);
-new(o_darkness);
+inew(o_replatte);
+inew(o_darkness);
 
 // Variables for keeping track of auto-screenshots
 screenshot_auto_enabled = false;

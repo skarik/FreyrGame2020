@@ -40,6 +40,6 @@ else
 	energyPower -= Time.deltaTime * 0.5;
 	if (energyPower <= 0.0)
 	{
-		delete(this);
+		idelete(this);
 	}
 }

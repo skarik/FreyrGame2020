@@ -1,3 +1,3 @@
 /// @description delete on anim end
 
-delete(this);
+idelete(this);

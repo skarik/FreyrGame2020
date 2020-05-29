@@ -14,13 +14,13 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 		
 		// Query playing position
 		var soundpos = [0, 0];
-		if (soundinfo.position == 0 && exists(m_position0))
+		if (soundinfo.position == 0 && iexists(m_position0))
 			soundpos = [m_position0.x, m_position0.y];
-		else if (soundinfo.position == 1 && exists(m_position1))
+		else if (soundinfo.position == 1 && iexists(m_position1))
 			soundpos = [m_position1.x, m_position1.y];
-		else if (soundinfo.position == 2 && exists(m_position2))
+		else if (soundinfo.position == 2 && iexists(m_position2))
 			soundpos = [m_position2.x, m_position2.y];
-		else if (soundinfo.position == 3 && exists(m_position3))
+		else if (soundinfo.position == 3 && iexists(m_position3))
 			soundpos = [m_position3.x, m_position3.y];
 			
 		// Begin playing sound

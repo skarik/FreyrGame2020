@@ -6,7 +6,7 @@ var hud = pl.hud;
 // Wait for the item box to go away
 if (m_state == 0)
 {
-	if (exists(o_CtsItemBox))
+	if (iexists(o_CtsItemBox))
 	{
 		exit;
 	}
@@ -57,6 +57,6 @@ else if (m_state == 4)
 	if (hud.m_arm_center_blend < 0.0)
 	{
 		hud.m_arm_center_blend = 0.0;
-		delete(this);
+		idelete(this);
 	}
 }

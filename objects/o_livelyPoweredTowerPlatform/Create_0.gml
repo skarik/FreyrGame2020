@@ -15,7 +15,7 @@ m_elevation.ignore_below = true;
 z = m_zBase;
 z_height = m_zHeight;
 
-m_emissive = new(o_lightEmissiveDepth_User5);
+m_emissive = inew(o_lightEmissiveDepth_User5);
 m_emissive.target = id;
 m_emissive.mask = false;
 

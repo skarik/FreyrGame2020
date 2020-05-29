@@ -2,7 +2,7 @@
 //m_arm_healthbar_percent
 
 var pl = getPlayer();
-if (exists(pl))
+if (iexists(pl))
 {
 	var l_target = saturate(pl.stats.m_health / pl.stats.m_healthMax);
 	var l_delta = l_target - m_arm_healthbar_percent;

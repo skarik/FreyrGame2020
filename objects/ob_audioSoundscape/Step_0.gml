@@ -8,7 +8,7 @@ if ((persistent && room != m_home) || m_homeless)
 	if (m_strength < 0.0)
 	{
 		event_user(9);
-		delete(this); // Free all the data
+		idelete(this); // Free all the data
 		exit;
 	}
 }

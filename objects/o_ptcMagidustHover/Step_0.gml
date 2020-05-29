@@ -32,7 +32,7 @@ else
     image_alpha -= Time.dt * fade_speed;
     if ( image_alpha <= 0 )
     {
-        delete(this);
+        idelete(this);
     }
 }
 

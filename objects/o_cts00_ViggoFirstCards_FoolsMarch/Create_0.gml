@@ -3,7 +3,7 @@ m_initialized = false;
 
 if (questGetValue(kQidViggoFirstCards) >= 1)
 {
-	delete(this);
+	idelete(this);
 	exit;
 }
 
@@ -16,7 +16,7 @@ cutsceneLoad("00_foolsmarch_viggocards.txt");
 
 // find viggo and make him sit
 var viggo = o_chViggo;
-if (exists(viggo))
+if (iexists(viggo))
 {
 	viggo.kAnimStanding = s_charViggoSit;
 	viggo.m_name = "???";

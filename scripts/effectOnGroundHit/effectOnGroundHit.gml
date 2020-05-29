@@ -8,7 +8,7 @@ var poof, footstep, fader, sound_hit;
 var ground_material = 0;
 if (!areaInWater(x, y, z + z_height))
 {
-	if (!exists(ob_areaFarmable))
+	if (!iexists(ob_areaFarmable))
 	{
 		if (position_meeting(x, y, ob_areaTallGrass))
 			ground_material = kTileMaterial_Grass;
@@ -20,7 +20,7 @@ if (!areaInWater(x, y, z + z_height))
 		//var nearest_water = instance_nearest(x, y, ob_areaWater);
 		if (position_meeting(x, y, o_fieldSquare))
 			ground_material = kTileMaterial_Dirt;
-		//else if (exists(nearest_water) && point_distance(x, y, nearest_water.x, nearest_water.y) < 64 * nearest_water.image_xscale * 1.5)
+		//else if (iexists(nearest_water) && point_distance(x, y, nearest_water.x, nearest_water.y) < 64 * nearest_water.image_xscale * 1.5)
 		//	ground_material = kTileMaterial_Dirt;
 		else
 			ground_material = vtileGetMaterialAtPosition(x, y);	

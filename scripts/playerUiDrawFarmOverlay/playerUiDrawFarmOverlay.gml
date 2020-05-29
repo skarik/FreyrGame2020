@@ -50,7 +50,7 @@ if (m_farmoverlay_blend > 0.0)
 }
 
 // draw text for crop type
-if (exists(m_player.currentCrop))
+if (iexists(m_player.currentCrop))
 {
 	// set target to display text & control properly (w/ outline)
 	surface_reset_target();
@@ -72,7 +72,7 @@ if (exists(m_player.currentCrop))
 /*if (0)
 {
 	// tillable
-	if (instance_exists(o_PlayerTest.currentTillable) && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking && o_PlayerTest.moEnabled)
+	if (instance_exists(o_PlayerTest.currentTillable) && !iexists(ob_CtsTalker) && !o_PlayerTest.isBlocking && o_PlayerTest.moEnabled)
 	{
 		var tillable = o_PlayerTest.currentTillable;
 		dx = tillable.x - (GameCamera.x - GameCamera.width / 2);
@@ -104,7 +104,7 @@ if (exists(m_player.currentCrop))
 		surface_reset_target();
 		surface_set_target(m_surfaceLightweight);
 	}
-	if (o_PlayerTest.m_till_filldirt && !exists(ob_CtsTalker) && !o_PlayerTest.isBlocking && o_PlayerTest.moEnabled)
+	if (o_PlayerTest.m_till_filldirt && !iexists(ob_CtsTalker) && !o_PlayerTest.isBlocking && o_PlayerTest.moEnabled)
 	{
 		dx = o_PlayerTest.m_till_x - 8 - (GameCamera.x - GameCamera.width / 2);
 		dy = o_PlayerTest.m_till_y - 8 - (GameCamera.y - GameCamera.height / 2);
@@ -132,7 +132,7 @@ if (exists(m_player.currentCrop))
 		surface_set_target(m_surfaceLightweight);
 	}
 	// buildable
-	if (o_PlayerTest.currentBuildable && !exists(ob_CtsTalker))
+	if (o_PlayerTest.currentBuildable && !iexists(ob_CtsTalker))
 	{
 		dx = o_PlayerTest.currentBuildableX - (GameCamera.x - GameCamera.width / 2);
 		dy = o_PlayerTest.currentBuildableY - (GameCamera.y - GameCamera.height / 2);

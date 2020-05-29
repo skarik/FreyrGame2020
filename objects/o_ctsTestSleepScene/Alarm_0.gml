@@ -8,9 +8,9 @@ aiscriptRequestAnimation(pl, kAiStyle_Default, "sleepSnore", true, 4);
 pl.x = x;
 pl.y = y;
 
-if (!exists(o_chNathan))
+if (!iexists(o_chNathan))
 {
-	new(o_chNathan);
+	inew(o_chNathan);
 }
 
 var nathan = instance_find(o_chNathan, 0);

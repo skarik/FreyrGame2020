@@ -20,7 +20,7 @@ case kWorldEvent_Riftpulse:
 case kWorldEvent_MakePlayerShirtless:
 	{
 		var pl = getPlayer();
-		if (exists(pl)) {
+		if (iexists(pl)) {
 			pl.pstats.m_shirtless = true;	
 		}
 	}
@@ -29,7 +29,7 @@ case kWorldEvent_MakePlayerShirtless:
 case kWorldEvent_MakePlayerShirtmore:
 	{
 		var pl = getPlayer();
-		if (exists(pl)) {
+		if (iexists(pl)) {
 			pl.pstats.m_shirtless = false;	
 		}
 	}
@@ -37,7 +37,7 @@ case kWorldEvent_MakePlayerShirtmore:
 	
 case kWorldEvent_DeathtarGlitch:
 	{
-		var glitch = new(o_deathtarGlitch);
+		var glitch = inew(o_deathtarGlitch);
 		with (glitch) {
 			event_user(1); // Capture
 		}

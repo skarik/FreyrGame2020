@@ -37,7 +37,7 @@ if (m_aipath_listing == null || m_aipath_current >= array_length_1d(m_aipath_lis
 else
 {
 	// If the path point exists, we want to get onto it.
-	if (exists(m_aipath_listing[m_aipath_current]))
+	if (iexists(m_aipath_listing[m_aipath_current]))
 	{
 		var next_dir = point_direction(x, y, m_aipath_listing[m_aipath_current].x, m_aipath_listing[m_aipath_current].y);
 		next_x = m_aipath_listing[m_aipath_current].x + lengthdir_x(4, next_dir);
@@ -78,7 +78,7 @@ if (m_aipath_newpath)
 	var closestNodeEnd = ainodesGetClosest(target_x, target_y, 1024, true);
 	
 	// Check if the target or the start is closer
-	if (exists(closestNodeStart))
+	if (iexists(closestNodeStart))
 	{
 		if (ainodesCanPath(x, y, z, target_x, target_y))
 		{

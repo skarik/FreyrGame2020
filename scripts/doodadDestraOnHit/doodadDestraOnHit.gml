@@ -44,5 +44,5 @@ if (m_health <= 0.0)
 	
 	// Destoy self
 	doodadDestraOnDestroy();
-	delete(this);
+	idelete(this);
 }

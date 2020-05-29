@@ -2,14 +2,14 @@
 
 if (!timeofdayIsDaytime())
 {
-	delete(this);
-	new(o_mus00_NightDesert);
+	idelete(this);
+	inew(o_mus00_NightDesert);
 	exit;
 }
 
 /*if (questGetValue(kQidIntroSequence) < 10)
 {
-	delete(this);
+	idelete(this);
 	exit;
 }*/
 

@@ -61,5 +61,5 @@ surface_shine_bg = null;
 surface_shine_item = null;
 
 // Create light pass stuff
-glower = new(o_lightEmissiveDepth_User5);
+glower = inew(o_lightEmissiveDepth_User5);
 glower.target = id;

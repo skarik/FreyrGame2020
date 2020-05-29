@@ -11,17 +11,17 @@ if (!m_isTilling)
 	tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 
 	currentTillable = collision_point(tillX, tillY, o_fieldSquare, false, true);
-	if (!exists(currentTillable))
+	if (!iexists(currentTillable))
 	{
 		currentTillable = collision_circle(tillX, tillY, 4, o_fieldSquare, false, true);
-		if (!exists(currentTillable))
+		if (!iexists(currentTillable))
 		{
 			currentTillable = null;
 		}
 	}
 
 	// Clear out tillable if busy
-	if (exists(currentUsable) || exists(currentHeldUsable) || exists(currentCrop))
+	if (iexists(currentUsable) || iexists(currentHeldUsable) || iexists(currentCrop))
 	{
 		currentTillable = null;
 		tillX = 0;
@@ -29,7 +29,7 @@ if (!m_isTilling)
 	}
 	
 	// Clear out tillable if blocked
-	if (exists(collision_circle(tillX, tillY, 7, ob_doodadBreakable, false, true)))
+	if (iexists(collision_circle(tillX, tillY, 7, ob_doodadBreakable, false, true)))
 	{
 		currentTillable = null;
 		tillX = 0;
@@ -37,12 +37,12 @@ if (!m_isTilling)
 	}
 
 	// Check if button is pressed to till the land
-	if (exists(currentTillable))
+	if (iexists(currentTillable))
 	{
 		if (!currentTillable.tilled)
 		{
 			if (l_canMove && !isAttacking && !isDashing && !isBlocking
-				&& !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && !m_isHarvesting
+				&& !iexists(currentUsable) && !iexists(currentHeldUsable) && !iexists(currentCrop) && !m_isHolding && !m_isHarvesting
 				&& useButton.value > 0.8)
 			{
 				m_till_target = currentTillable;
@@ -63,13 +63,13 @@ if (!m_isTilling)
 		m_till_x = tillX;
 		m_till_y = tillY;
 		
-		if (exists(collision_point(tillX, tillY, ob_areaFarmable, false, true)))
+		if (iexists(collision_point(tillX, tillY, ob_areaFarmable, false, true)))
 		{
 			// Check the four corners of the buildable area for water
-			if (!exists(collision_point(tillX + 1 - 8, tillY + 1 - 8, ob_areaWater, true, true))
-				&& !exists(collision_point(tillX + 14 - 8, tillY + 1 - 8, ob_areaWater, true, true))
-				&& !exists(collision_point(tillX + 1 - 8, tillY + 14 - 8, ob_areaWater, true, true))
-				&& !exists(collision_point(tillX + 14 - 8, tillY + 14 - 8, ob_areaWater, true, true)))
+			if (!iexists(collision_point(tillX + 1 - 8, tillY + 1 - 8, ob_areaWater, true, true))
+				&& !iexists(collision_point(tillX + 14 - 8, tillY + 1 - 8, ob_areaWater, true, true))
+				&& !iexists(collision_point(tillX + 1 - 8, tillY + 14 - 8, ob_areaWater, true, true))
+				&& !iexists(collision_point(tillX + 14 - 8, tillY + 14 - 8, ob_areaWater, true, true)))
 			{
 				m_till_filldirt = true;
 			}
@@ -82,7 +82,7 @@ if (!m_isTilling)
 			{
 				// Do we want to make dirt?
 				if (l_canMove && !isAttacking && !isDashing && !isBlocking 
-					&& !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding && !m_isHarvesting
+					&& !iexists(currentUsable) && !iexists(currentHeldUsable) && !iexists(currentCrop) && !m_isHolding && !m_isHarvesting
 					&& useButton.value > 0.8)
 				{
 					m_till_target = null;
@@ -116,7 +116,7 @@ else
 {
 	currentTillable = m_till_target;
 	
-	if (exists(m_till_target) || m_till_filldirt)
+	if (iexists(m_till_target) || m_till_filldirt)
 	{
 		if (m_till_timer < 1.0)
 		{
@@ -145,17 +145,17 @@ else
 			if (m_till_timer > 0.5)
 			{
 				// Till land if tilling
-				if (exists(m_till_target))
+				if (iexists(m_till_target))
 				{
 					currentTillable.tilled = true;
 				}
 				// Create tillabl land if not tilling
 				if (m_till_filldirt)
 				{
-					if (!exists(collision_point(m_till_x, m_till_y, o_fieldSquare, false, true)))
+					if (!iexists(collision_point(m_till_x, m_till_y, o_fieldSquare, false, true)))
 					{
 						// delete any canal
-						delete(collision_point(m_till_x, m_till_y, o_miniCanalWater, false, true));
+						idelete(collision_point(m_till_x, m_till_y, o_miniCanalWater, false, true));
 						// create depth
 						instance_create_depth(
 							m_till_x - gridSize / 2, m_till_y - gridSize / 2,
@@ -169,7 +169,7 @@ else
 		{
 			m_isTilling = false;
 			// Force the land to be tilled.
-			if (exists(m_till_target))
+			if (iexists(m_till_target))
 			{
 				currentTillable.tilled = true;
 			}
