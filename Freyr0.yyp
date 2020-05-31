@@ -1615,6 +1615,14 @@
             }
         },
         {
+            "Key": "1bc21baf-763e-44fa-819f-6a33bbdbcb66",
+            "Value": {
+                "id": "d7a0763a-952e-4907-afb9-7dbde2e2a54a",
+                "resourcePath": "scripts\\playerCheckpointInit\\playerCheckpointInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1bc5b016-d8d7-4c95-8d92-c662fcd8548e",
             "Value": {
                 "id": "cb2b14da-7588-4f14-a810-f80f141c8ae5",
@@ -2532,6 +2540,14 @@
                 "id": "2694dfd5-d445-441f-84f6-72fb6eac50d1",
                 "resourcePath": "scripts\\settingsStartupLoad\\settingsStartupLoad.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "29f794b9-b8b2-4946-8a3f-39ce56a09da6",
+            "Value": {
+                "id": "37a06849-53ed-4198-ad17-f8fa26ac0c77",
+                "resourcePath": "objects\\o_debugUiButton_KillPlayer\\o_debugUiButton_KillPlayer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6303,6 +6319,14 @@
             }
         },
         {
+            "Key": "692debfe-79c3-4de7-99f3-8ec3bec1411a",
+            "Value": {
+                "id": "77b0b539-27ad-4580-851d-e743fdc96019",
+                "resourcePath": "objects\\o_debugUiButtonBase\\o_debugUiButtonBase.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "695b5dc6-2238-487b-bc91-f06f86f77bc5",
             "Value": {
                 "id": "11461a89-d39c-45ee-9296-cf8bc07d6ae2",
@@ -7884,6 +7908,14 @@
                 "id": "3ff33875-b4be-4d70-bd09-54b8bc1b1b87",
                 "resourcePath": "objects\\o_chOasisNpc\\o_chOasisNpc.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "84fb3aa4-e052-441c-9c26-27c5c9788911",
+            "Value": {
+                "id": "c008ee55-c9fd-44dc-a935-0810fd26e22e",
+                "resourcePath": "scripts\\gameDeathSoftestReset\\gameDeathSoftestReset.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -9899,6 +9931,14 @@
             "Value": {
                 "id": "0959a5ec-47d8-4b0f-9b1d-3a03aaeb7a29",
                 "resourcePath": "scripts\\aimotionFaceAt\\aimotionFaceAt.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a5e3e373-a2f7-4d90-a56d-6bd8b0791dc1",
+            "Value": {
+                "id": "069552ad-ba65-44ed-bd36-ffc62727cd11",
+                "resourcePath": "scripts\\playerCheckpointLoad\\playerCheckpointLoad.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -13015,6 +13055,14 @@
             }
         },
         {
+            "Key": "d78c29c8-7589-42c0-a602-1dd96f43e13d",
+            "Value": {
+                "id": "e0510695-84a8-4ca3-b755-75e76ecde66b",
+                "resourcePath": "scripts\\playerCheckpointSave\\playerCheckpointSave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d7b4074b-d444-499f-9e33-5407c340c984",
             "Value": {
                 "id": "4bd1bd67-59df-4e9e-9be0-cde2f453b57c",
@@ -13363,6 +13411,14 @@
             "Value": {
                 "id": "74d2ab9b-a6af-4008-9d12-3ae5f9b11dc6",
                 "resourcePath": "scripts\\_playerMotionCommonZUpdate\\_playerMotionCommonZUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dcabab34-90f1-4460-9ca7-c14b6636ec40",
+            "Value": {
+                "id": "f8756141-94fe-47e0-ad4d-b1ad1a4a8cc6",
+                "resourcePath": "scripts\\worldShouldTick\\worldShouldTick.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -15985,6 +16041,9 @@
         "b2bc055a-b887-4a9c-818a-c20666336037",
         "a82eeabf-52ea-41d8-a167-3bfa5ec90e18",
         "2502290a-420d-46fc-902d-dfd4dcd0c107",
+        "1bc21baf-763e-44fa-819f-6a33bbdbcb66",
+        "d78c29c8-7589-42c0-a602-1dd96f43e13d",
+        "a5e3e373-a2f7-4d90-a56d-6bd8b0791dc1",
         "8e8adddf-b9ac-4148-9bfe-1e7750bc2fbf",
         "e5ee5f81-7c4d-49f8-a350-c80c5fc13b8b",
         "c9fbd701-14a5-4304-8b79-784575659840",
@@ -16145,6 +16204,7 @@
         "2b2e2dd8-2d40-420b-955d-7c61ccdc9aa0",
         "66f97669-2730-4748-8cf8-62ba8cdab053",
         "184d0fda-96eb-4a73-bb4f-29d507e9db46",
+        "84fb3aa4-e052-441c-9c26-27c5c9788911",
         "997db4f4-7f16-4c94-ba47-6ece34d2adb7",
         "ef341803-bcf7-4124-b313-c0e0ff960bdd",
         "b4d04a4b-a95c-4bb0-8044-98baf0078a84",
@@ -16197,6 +16257,7 @@
         "bdc73301-ca23-4bf4-be12-324839c1c56d",
         "c457e9de-b6e0-4535-940e-d8f695c61fc8",
         "1d4a92ab-4f35-4c0e-968e-8e9e6e399019",
+        "dcabab34-90f1-4460-9ca7-c14b6636ec40",
         "168499bc-f710-4056-834c-2c479db5d5ef",
         "fc2358df-a1a0-409c-8e70-a33e1cdfb97c",
         "1dcd64d2-4b18-4872-8659-8dccbb978594",

@@ -8,7 +8,7 @@ if ( m_isPlayer && stats.m_health < stats.m_healthPrev )
 	{
 	    effectScreenShake(
 	        1 + floor(damage_gradient * 0.25),
-	        0.3 + floor(damage_gradient) * 0.05,
+	        0.3 + min(1.5, floor(damage_gradient) * 0.03),
 	        true);
 	}
     effectControllerShake(
@@ -70,10 +70,13 @@ m_mana = clamp(m_mana, 0, m_manaMax);
 // Will logic:
 
 // decrease at 1 per second
-if (Debug.convention_mode)
-	m_will -= Time.deltaTime * 3.0;
-else
+if (worldShouldTick())
+{
+	if (Debug.convention_mode)
+		m_will -= Time.deltaTime * 3.0;
+	else
 	m_will -= Time.deltaTime;
+}
 // Limit will
 m_will = min(m_willMax, m_will);
 

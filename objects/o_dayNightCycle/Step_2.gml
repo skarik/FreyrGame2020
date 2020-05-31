@@ -5,7 +5,7 @@
 //
 
 var timeOfDayPrev = m_timeOfDay;
-if (m_timeRunning)
+if (m_timeRunning && worldShouldTick())
 {
 	if (Debug.convention_mode)
 		m_timeOfDay += Time.deltaTime / 60.0 * 3.0;

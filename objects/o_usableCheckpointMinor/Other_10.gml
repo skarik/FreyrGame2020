@@ -22,6 +22,9 @@ if (m_usable && iexists(m_user) && m_user.id == pl.id)
 	// respawn all enemies
 	gameCampCheckpointShortRest();
 	
+	// save the checkpoint info
+	playerCheckpointSave(x, y + 16, room);
+	
 	// save game
 	gameSaveSpecific(kSaveFromCheckpointMinor);
 }

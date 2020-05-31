@@ -11,3 +11,5 @@ with (o_PlayerTest)
 	
 	stats.m_health = ceil(stats.m_healthMax * 0.4);
 }
+
+gameRespawnEnemies(kRespawnEnemeiesAll);
