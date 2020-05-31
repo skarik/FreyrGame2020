@@ -2,7 +2,7 @@
 
 event_inherited();
 
-if (!exists(o_waterMetalballRenderer))
+if (!iexists(o_waterMetalballRenderer))
 {
-	new2(o_waterMetalballRenderer);
+	inew(o_waterMetalballRenderer);
 }

@@ -4,8 +4,8 @@
 
 /*if (!timeofdayIsDaytime())
 {
-	delete(this);
-	new(o_mus00_NightDesert);
+	idelete(this);
+	inew(o_mus00_NightDesert);
 	exit;
 }*/
 
@@ -18,8 +18,8 @@ with (o_chGobboTest)
 }
 if (!enemies_aggro)
 {
-	delete(this);
-	new(o_mus00_DayDesert);
+	idelete(this);
+	inew(o_mus00_DayDesert);
 	exit;
 }
 

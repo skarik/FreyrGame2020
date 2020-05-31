@@ -19,7 +19,7 @@ uni_samplerDepthHack = shader_get_sampler_index( sh_waterReflectRender, "sampler
 uni_currentTimeReflection = shader_get_uniform( sh_waterReflectRender, "uCurrentTime");
 uni_viewOffset = shader_get_uniform( sh_waterReflectRender, "uViewOffset" );*/
 
-if (!exists(o_waterTiledRenderPassFinal))
+if (!iexists(o_waterTiledRenderPassFinal))
 {
-	new(o_waterTiledRenderPassFinal);
+	inew(o_waterTiledRenderPassFinal);
 }

@@ -22,9 +22,9 @@ with (Settings)
 	ctAimUp			= [kControlKB, vk_up,		kControlGamepad, -gp_axisrv];
 	ctAimDown		= [kControlKB, vk_down,		kControlGamepad, gp_axisrv];
 	
-	ctAttack		= [kControlMouse, mb_left,	kControlGamepad, gp_face1, kControlGamepad, gp_shoulderr];
+	ctAttack		= [kControlMouse, mb_left,	kControlGamepad, gp_shoulderr,  kControlGamepad, gp_face1];
 	ctUse			= [kControlMouse, mb_left,	kControlGamepad, gp_face1];
-	ctUseItem		= [kControlKB, ord("F"),	kControlGamepad, gp_face2];
+	ctUseItem		= [kControlKB, ord("F"),	kControlGamepad, gp_shoulderrb, kControlGamepad, gp_face2];
 	ctUseKeyItem	= [kControlKB, ord("E"),	kControlGamepad, gp_face3];
 	ctUseSpecial	= [kControlKB, ord("V"),	kControlGamepad, gp_face4];
 	ctDodge			= [kControlMouse, mb_right,	kControlGamepad, gp_shoulderl];

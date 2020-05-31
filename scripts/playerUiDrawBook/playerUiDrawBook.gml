@@ -1,4 +1,4 @@
-if (!exists(o_menuPlayerBook)) exit;
+if (!iexists(o_menuPlayerBook)) exit;
 
 surface_reset_target();
 surface_set_target(m_surface);

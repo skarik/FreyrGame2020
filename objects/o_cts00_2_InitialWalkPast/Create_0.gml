@@ -8,7 +8,7 @@ if (questGetValue(kQidIntroSequence) > 20)
 		aiscriptRequestPushPosition(o_chNathan, 490, 1050);
 	}
 	
-	delete(this);
+	idelete(this);
 	exit;
 }
 

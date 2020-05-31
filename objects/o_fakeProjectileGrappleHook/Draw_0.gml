@@ -1,7 +1,7 @@
 /// @description Ensure player exists
 
 var pl = getPlayer();
-if (!exists(pl) || pl.moScriptOverride != _playerMotionGrapple)
+if (!iexists(pl) || pl.moScriptOverride != _playerMotionGrapple)
 {
 	exit;
 }

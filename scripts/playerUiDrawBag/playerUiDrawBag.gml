@@ -224,13 +224,13 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 				draw_text_spaced(dx + dix + 36, dy + diy + 4, item.name, 2);
 				
 				//
-				var temp_item = new(item.object);
+				var temp_item = inew(item.object);
 				draw_set_font(global.font_arvo7);
 				draw_set_color(c_gold);
 				draw_text_spaced_wrap(dx + dix + 36 + 1, dy + diy + 19 + 1, temp_item.m_description, 2, dw * 2 - 11 * 3);
 				draw_set_color(c_black);
 				draw_text_spaced_wrap(dx + dix + 36, dy + diy + 19, temp_item.m_description, 2, dw * 2 - 11 * 3);
-				delete(temp_item);
+				idelete(temp_item);
 			}
 		}
 	}

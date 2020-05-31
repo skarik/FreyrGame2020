@@ -1,6 +1,6 @@
 /// @description Update surface
 
-if (exists(ob_areaFarmable))
+if (iexists(ob_areaFarmable))
 {
 	if (!surface_exists(m_surface))
 	{

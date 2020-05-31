@@ -1,4 +1,4 @@
-if (exists(collision_rectangle(x, y, x + 16, y + 16, ob_areaWater, true, false)))
+if (iexists(collision_rectangle(x, y, x + 16, y + 16, ob_areaWater, true, false)))
 {
 	m_isSource = true;
 	m_waterLevel = 6;
@@ -28,7 +28,7 @@ if (!m_isSource)
 	var waterSource = 0;
 	for (var i = 0; i < 4; ++i)
 	{
-		if (exists(checkresult[i]))
+		if (iexists(checkresult[i]))
 		{
 			waterSource = max(waterSource, checkresult[i].m_waterLevel);
 		}

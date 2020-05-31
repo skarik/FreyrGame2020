@@ -3,7 +3,7 @@
 //if (questGetValue(kQidIntroSequence) > 0)
 if (false)
 {
-	delete(this);
+	idelete(this);
 	exit;
 }
 
@@ -23,4 +23,4 @@ m_logo = null;
 m_fadeLogo = false;
 
 // create black box set
-new(o_CtsBlackBoxes);
+inew(o_CtsBlackBoxes);

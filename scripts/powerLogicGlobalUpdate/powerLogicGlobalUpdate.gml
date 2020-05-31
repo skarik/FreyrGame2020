@@ -15,7 +15,7 @@ if (m_powerUpdateCounter > 1.0)
 		with (powerObjectType)
 		{
 			// Do we have a source?
-			if (exists(m_powerSource))
+			if (iexists(m_powerSource))
 			{
 				if (object_get_base_parent(m_powerSource.object_index) != powerObjectType)
 				{

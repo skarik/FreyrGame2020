@@ -28,7 +28,7 @@ while (m_spawnCounter_leaf > 0)
 {
 	m_spawnCounter_leaf -= 1.0;
 	
-	var leaf = new(o_ptcWheatLeaf);
+	var leaf = inew(o_ptcWheatLeaf);
 		leaf.x = (wind[0] > 0) ? (GameCamera.view_x - 4) : (GameCamera.view_x + GameCamera.width + 4);
 		leaf.y = GameCamera.view_y + random(GameCamera.height);
 		leaf.xspeed = wind[0];

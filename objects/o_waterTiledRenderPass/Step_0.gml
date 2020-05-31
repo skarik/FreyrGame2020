@@ -2,5 +2,5 @@
 
 depth = layer_get_depth(target_layer);
 
-if (exists(o_waterTiledRenderPassFinal))
+if (iexists(o_waterTiledRenderPassFinal))
 	o_waterTiledRenderPassFinal.depth = min(depth - 1, o_waterTiledRenderPassFinal.depth);

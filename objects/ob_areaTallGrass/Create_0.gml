@@ -3,9 +3,9 @@ visible = false;
 alarm[0] = 1;
 m_vbuf = null;
 
-if (!exists(o_tallgrassRendererOverplayer))
+if (!iexists(o_tallgrassRendererOverplayer))
 {
-	new(o_tallgrassRendererOverplayer);
+	inew(o_tallgrassRendererOverplayer);
 }
 
 

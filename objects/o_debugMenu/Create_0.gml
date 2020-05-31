@@ -7,6 +7,6 @@ image_alpha = 0.0;
 
 // Debug UI:
 uiListing = ds_list_create();
-ds_list_add(uiListing, new(o_debugCmdline));
-ds_list_add(uiListing, new(o_debugAiVisualizer));
-ds_list_add(uiListing, new(o_debugPowerVisualizer));
+ds_list_add(uiListing, inew(o_debugCmdline));
+ds_list_add(uiListing, inew(o_debugAiVisualizer));
+ds_list_add(uiListing, inew(o_debugPowerVisualizer));

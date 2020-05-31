@@ -11,8 +11,8 @@ var x_pos_percent = argument2;
 var alignment = argument3;
 var facing = argument4;
 
-if (!exists(o_CtsPortraitRenderer))
-	new(o_CtsPortraitRenderer);
+if (!iexists(o_CtsPortraitRenderer))
+	inew(o_CtsPortraitRenderer);
 	
 if (index < 0 || index >= kPortraitIndex_Max)
 {

@@ -15,4 +15,4 @@ if (fadeLife > fadePoint)
 	image_alpha -= fadeSpeed * Time.deltaTime;
 	
 if (image_alpha < 0.0)
-	delete(this);
+	idelete(this);

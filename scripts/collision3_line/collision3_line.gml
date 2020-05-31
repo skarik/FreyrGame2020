@@ -76,7 +76,7 @@ if (t_collidableLayerCount > 0)
 #region Object-Based collision checking
 
 // Check for all colliders at the given area
-if (exists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_colliderNoDepth, false, true)))
+if (iexists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_colliderNoDepth, false, true)))
 {
 	return true;
 }
@@ -98,7 +98,7 @@ for (var i = 0; i < results_colliders_num; ++i)
 ds_list_destroy(results_colliders);
 
 // Check if ignoring elevation
-if (exists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_elevationBlendArea, false, true)))
+if (iexists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_elevationBlendArea, false, true)))
 {
 	return false;
 }

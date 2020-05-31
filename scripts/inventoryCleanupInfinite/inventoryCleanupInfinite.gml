@@ -4,7 +4,7 @@
 
 var inventory = argument0;
 var compact = argument1;
-if (exists(inventory))
+if (iexists(inventory))
 {
 	if (inventoryGetSize(inventory) != kCountInfinite)
 	{

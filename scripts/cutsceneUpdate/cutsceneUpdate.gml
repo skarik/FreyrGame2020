@@ -65,7 +65,7 @@ case SEQTYPE_LINES:
 		// FREYR SPECIFIC:
 		// Replace the line with the player gender-specific line if possible:
 		var pl = getPlayer();
-		if (exists(pl))
+		if (iexists(pl))
 		{
 			var new_line = undefined;
 			var gender = pl.pstats.m_gender;
@@ -102,13 +102,13 @@ case SEQTYPE_LINES:
         // Update talker's sprites
         /*if (target == o_PlayerImp)
         {
-            if (!exists(ctsLibrarianPopup)) new (ctsLibrarianPopup);
+            if (!iexists(ctsLibrarianPopup)) inew (ctsLibrarianPopup);
             ctsLibrarianPopup.image_index = ds_map_find_value(entry, SEQI_TYPE);
             o_CtsGabberBox.input_actor = null;
         }*/
         
         // Make the target face the input direction
-        if (exists(target_inst))
+        if (iexists(target_inst))
         {
             //if (facing == -1 || facing == 1)
 			if (facing == SEQI_FACING_UP)
@@ -122,7 +122,7 @@ case SEQTYPE_LINES:
             //{
             //    target_inst.facingDir = facing;
             //}
-            else if (exists(facing))
+            else if (iexists(facing))
             {
                 //target_inst.facingDir = sign(facing.x - target_inst.x);
 				target_inst.facingDirection = point_direction(target_inst.x, target_inst.y, facing.x, facing.y);
@@ -136,9 +136,9 @@ case SEQTYPE_LINES:
 		debugOut("Doing lines...");
     }
     // No longer exists? We go to the enxt entry.
-    //else if (!exists(o_CtsTalkerBox) && !exists(o_CtsGabberBox))
-	else if (  (!exists(o_CtsTalkerBox) /*|| o_CtsTalkerBox.input_fadeout*/)
-			&& (!exists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout))  )
+    //else if (!iexists(o_CtsTalkerBox) && !iexists(o_CtsGabberBox))
+	else if (  (!iexists(o_CtsTalkerBox) /*|| o_CtsTalkerBox.input_fadeout*/)
+			&& (!iexists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout))  )
     {
         cts_entry_current++;
         cts_execute_state = 0;   
@@ -154,13 +154,13 @@ case SEQTYPE_CHOICES:
 		
 		var target_inst = instance_find(target, 0);
         
-        var gabber = new(o_CtsChoiceBox);
+        var gabber = inew(o_CtsChoiceBox);
             gabber.input_choice_count = count;
             for (var i = 0; i < count; ++i)
             {
                 gabber.input_choice[i] = ds_map_find_value(entry, i+1);
             }
-			gabber.input_actor = exists(target_inst) ? target_inst : null;
+			gabber.input_actor = iexists(target_inst) ? target_inst : null;
 			
         // On the next step
         cts_execute_state = 1;
@@ -171,7 +171,7 @@ case SEQTYPE_CHOICES:
         return false;
     }
     // No longer exists? We go to the enxt entry.
-    else if (!exists(o_CtsChoiceBox))
+    else if (!iexists(o_CtsChoiceBox))
     {
         cts_entry_current++;
         cts_execute_state = 0;   
@@ -210,21 +210,21 @@ case SEQTYPE_SCREEN:
 		
 		if (type == SEQSCREEN_FADEIN)
 		{
-			var fadein = new(o_fxFadeInBanded);
+			var fadein = inew(o_fxFadeInBanded);
 				fadein.image_blend = make_color_rgb(r, g, b);
 				
 			cts_execute_state = 1;
 		}
 		else if (type == SEQSCREEN_FADEOUT)
 		{
-			var fadein = new(o_fxFadeOutBanded);
+			var fadein = inew(o_fxFadeOutBanded);
 				fadein.image_blend = make_color_rgb(r, g, b);
 				
 			cts_execute_state = 1;
 		}
 		else if (type == SEQSCREEN_HOLD)
 		{
-			var hold = new(o_fxFadeHold);
+			var hold = inew(o_fxFadeHold);
 				hold.image_blend = make_color_rgb(r, g, b);
 				
 			cts_execute_state = 1;
@@ -264,7 +264,7 @@ case SEQTYPE_SCREEN:
 		
 		if (type == SEQSCREEN_FADEIN)
 		{
-			if (!exists(o_fxFadeInBanded))
+			if (!iexists(o_fxFadeInBanded))
 		    {
 		        cts_entry_current++;
 		        cts_execute_state = 0;   
@@ -439,7 +439,7 @@ case SEQTYPE_AI:
 			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
 			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
 			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
-			if (exists(origin))
+			if (iexists(origin))
 			{
 				tx += origin.x;
 				ty += origin.y;
@@ -452,7 +452,7 @@ case SEQTYPE_AI:
 			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
 			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
 			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
-			if (exists(origin))
+			if (iexists(origin))
 			{
 				tx += origin.x;
 				ty += origin.y;
@@ -464,7 +464,7 @@ case SEQTYPE_AI:
 			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
 			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
 			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
-			if (exists(origin))
+			if (iexists(origin))
 			{
 				tx += origin.x;
 				ty += origin.y;
@@ -492,7 +492,7 @@ case SEQTYPE_EMOTE:
     var target_inst = instance_find(target, count);
 	
 	// Create the emote
-	var emote_fx = new(o_fxEmote);
+	var emote_fx = inew(o_fxEmote);
 		emote_fx.m_target = target_inst;
 		emote_fx.image_index = emote;
 	

@@ -52,7 +52,7 @@ if (!all_update_begin_death && all_update_cooldown_cdtimer <= 0.0)
 	{
 		// If playing a medium or longer song, kill any short audio requests
 		// so we don't have odd things stacked & playing up at the end.
-		if (music_current != null && exists(music_current) && audio_is_playing(music_current.m_audio))
+		if (music_current != null && iexists(music_current) && audio_is_playing(music_current.m_audio))
 		{
 			if (audio_sound_length(music_current.m_stream) > 45.0)
 			{
@@ -64,7 +64,7 @@ if (!all_update_begin_death && all_update_cooldown_cdtimer <= 0.0)
 	// 
 	// Begin playing music on triggers
 
-	if (music_current == null || !exists(music_current) || !audio_is_playing(music_current.m_audio))
+	if (music_current == null || !iexists(music_current) || !audio_is_playing(music_current.m_audio))
 	{
 		music_play_cdtimer -= Time.deltaTime;
 		if (music_play_cdtimer < 0)
@@ -89,7 +89,7 @@ if (!all_update_begin_death && all_update_cooldown_cdtimer <= 0.0)
 }
 
 // Update volumes:
-if (music_current != null && exists(music_current))
+if (music_current != null && iexists(music_current))
 {
 	if (!all_update_begin_death)
 	{
@@ -116,6 +116,6 @@ if (all_update_begin_death)
 	all_update_death_blend += Time.unscaledDeltaTime;
 	if (all_update_death_blend > 1.0)
 	{
-		delete(this);
+		idelete(this);
 	}
 }

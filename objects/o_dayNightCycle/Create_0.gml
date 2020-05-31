@@ -16,4 +16,4 @@ m_hourPassed = false;
 
 m_timeRunning = true;
 
-if (!exists(o_darkness)) new(o_darkness);
+if (!iexists(o_darkness)) inew(o_darkness);

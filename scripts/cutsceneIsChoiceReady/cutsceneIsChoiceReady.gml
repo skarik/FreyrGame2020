@@ -1,5 +1,5 @@
 
-if (exists(o_CtsChoiceBox))
+if (iexists(o_CtsChoiceBox))
 {
     return o_CtsChoiceBox.input_fadeout;
 }

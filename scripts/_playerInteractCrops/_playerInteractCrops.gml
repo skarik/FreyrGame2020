@@ -25,10 +25,10 @@ useX = round((useX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 useY = round((useY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
 
 currentCrop = collision_point(useX, useY, ob_crop, false, true);
-if (!exists(currentCrop))
+if (!iexists(currentCrop))
 {
 	currentCrop = collision_circle(useX, useY, 4, ob_crop, false, true);
-	if (!exists(currentCrop))
+	if (!iexists(currentCrop))
 	{
 		currentCrop = null;
 	}
@@ -46,12 +46,12 @@ if (!exists(currentCrop))
 
 if (!m_isHarvesting)
 {
-	if (exists(currentCrop))
+	if (iexists(currentCrop))
 	{
 		if (l_canMove && !isAttacking && !isDashing && !isBlocking
 			&& !m_isTilling && !m_isPlanting
-			//&& !exists(currentUsable) && !exists(currentHeldUsable) && !exists(currentCrop) && !m_isHolding
-			&& !exists(currentUsable) && !exists(currentHeldUsable) && !m_isHolding
+			//&& !iexists(currentUsable) && !iexists(currentHeldUsable) && !iexists(currentCrop) && !m_isHolding
+			&& !iexists(currentUsable) && !iexists(currentHeldUsable) && !m_isHolding
 			&& useButton.pressed)
 		{
 			m_harvest_target = currentCrop;
@@ -62,19 +62,23 @@ if (!m_isHarvesting)
 }
 else
 {
-	if (exists(m_harvest_target) || m_harvest_timer > 0.5)
+	if (iexists(m_harvest_target) || m_harvest_timer > 0.5)
 	{
 		// move player to the crop (TODO: Make this temporary, or only affect the visual)
-		if (exists(m_harvest_target))
+		/*if (iexists(m_harvest_target))
 		{
 			//x += (m_harvest_target.x - x) * 0.1;
 			//y += (m_harvest_target.y - y) * 0.1;
 			x = lerp(x, m_harvest_target.x, saturate(m_harvest_timer * 3.0));
 			y = lerp(y, m_harvest_target.y, saturate(m_harvest_timer * 3.0));
-		}
+		}*/
 		
 		var prev_harvest_time = m_harvest_timer;
 		m_harvest_timer += Time.deltaTime / m_harvest_time;
+		
+		// move the player to the crop - delaying the animation until they're at the point
+		
+		// harvest at the halfway point
 		if (prev_harvest_time < 0.5 && m_harvest_timer >= 0.5)
 		{
 			// TODO: Play POP sound

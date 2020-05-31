@@ -1,9 +1,11 @@
 var buffer = argument0;
 
-if (!exists(kQuestManager))
+if (!iexists(kQuestManager))
 {
 	show_error("invalid quest state", true);
 }
+
+savestateWriteBufferHeader(buffer, kSavestateHeader_Quests, kSavestateVersion);
 
 with (kQuestManager)
 {

@@ -1,4 +1,4 @@
-var item = new(_dummy);
+var item = inew(_dummy);
 	item.persistent = true;
 	item.object		= null;
 	item.count		= 0;

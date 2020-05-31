@@ -2,7 +2,7 @@
 
 // item ui pop
 var talker;
-	talker = new(o_CtsItemBox);
+	talker = inew(o_CtsItemBox);
 	talker.input_actor = object_index;
 	talker.input_name = m_name;
 	talker.input_text = "Same make as the capacitor...maybe it can plug into something.";
@@ -15,7 +15,7 @@ var talker;
 this.visible = false;
 m_isPickingUp = false;
 m_canPickUp = false;
-//delete(this);
+//idelete(this);
 
 var pl = getPlayer();
 pl.pstats.m_pitem[kPitemVoidAlternator] = 1;

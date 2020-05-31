@@ -15,7 +15,7 @@ if (collision3_meeting(x + xspeed * Time.deltaTime, y, z + z_height, !onGround))
 if (!isDashing)
 {
 	var char = instance_place(x + xspeed * Time.deltaTime, y, ob_character);
-	if (exists(char) && !char.isEthereal && !char.isPassthru)
+	if (iexists(char) && !char.isEthereal && !char.isPassthru)
 	{
 		// Move contact
 		move_contact_with(sign(xspeed), 0, char);
@@ -39,7 +39,7 @@ if (collision3_meeting(x, y + yspeed * Time.deltaTime, z + z_height, !onGround))
 if (!isDashing)
 {
 	var char = instance_place(x, y + yspeed * Time.deltaTime, ob_character);
-	if (exists(char) && !char.isEthereal && !char.isPassthru)
+	if (iexists(char) && !char.isEthereal && !char.isPassthru)
 	{
 		// Move contact
 		move_contact_with(0, sign(yspeed), char);

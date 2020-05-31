@@ -1,6 +1,6 @@
 /// @description drawwww
 
-if (!exists(m_target))
+if (!iexists(m_target))
 	exit;
 	
 var outliner = id;

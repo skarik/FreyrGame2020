@@ -3,5 +3,5 @@
 m_glitchFader += Time.deltaTime;
 if (m_glitchFader > 1.0)
 {
-	delete(this);	
+	idelete(this);	
 }

@@ -10,5 +10,5 @@ else
 {
 	m_range -= Time.deltaTime * 8.0;
 	if (m_range < 0.0)
-		delete(this);
+		idelete(this);
 }

@@ -7,8 +7,8 @@ if ( keyboard_check_pressed(192) )
 		// Enable & create debug menu
 		on = true;
 		visible = true;
-		if (!exists(o_debugMenu)) {
-			new(o_debugMenu);	
+		if (!iexists(o_debugMenu)) {
+			inew(o_debugMenu);	
 		}
 	}
 	else

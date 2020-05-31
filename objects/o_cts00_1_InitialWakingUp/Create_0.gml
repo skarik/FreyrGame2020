@@ -5,8 +5,8 @@ m_initialized = false;
 
 if (questGetValue(kQidIntroSequence) != 10)
 {
-	new(o_mus00_Oasis);
-	delete(this);
+	inew(o_mus00_Oasis);
+	idelete(this);
 	exit;
 }
 

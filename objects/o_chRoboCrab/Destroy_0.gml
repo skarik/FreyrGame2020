@@ -3,4 +3,4 @@
 // Inherit the parent event
 event_inherited();
 
-delete(m_glow);
+idelete(m_glow);

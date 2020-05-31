@@ -11,9 +11,9 @@ if (enemiesNearby)
 else
 {
 	//o_dayNightCycle.m_timeOfDay += in_waitTime;
-	if (!exists(o_ctsGameMakeCamp))
+	if (!iexists(o_ctsGameMakeCamp))
 	{
-		var campCts = new(o_ctsGameMakeCamp);
+		var campCts = inew(o_ctsGameMakeCamp);
 			campCts.m_waitTime = in_waitTime;
 	}
 }

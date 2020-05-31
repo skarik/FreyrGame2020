@@ -4,10 +4,10 @@ var l_canMove = argument0;
 var kMaxUseDistance = 20.0;
 currentUsable = null;
 var closestDistance = kMaxUseDistance;
-if (!exists(currentHeldUsable) || !m_isHolding)
+if (!iexists(currentHeldUsable) || !m_isHolding)
 {
 	// Check if not holding anything
-	if (m_isHolding && !exists(currentHeldUsable))
+	if (m_isHolding && !iexists(currentHeldUsable))
 	{
 		currentHeldUsable = null;
 		m_isHolding = false;
@@ -36,7 +36,7 @@ if (!exists(currentHeldUsable) || !m_isHolding)
 	
 	if (l_canMove && useButton.pressed)
 	{
-		if (!exists(currentUsable))
+		if (!iexists(currentUsable))
 		{
 			//audio_play_sound(snd_UIOnUse, 0, false);
 		}
@@ -69,7 +69,7 @@ if (!exists(currentHeldUsable) || !m_isHolding)
 else
 {
 	// update usable position
-	if (exists(currentHeldUsable))
+	if (iexists(currentHeldUsable))
 	{
 		// Move to player position
 		currentHeldUsable.x = x;

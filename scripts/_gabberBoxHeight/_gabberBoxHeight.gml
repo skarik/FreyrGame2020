@@ -1,4 +1,4 @@
-var kMarginTop = exists(input_actor) ? 10 : 0;
+var kMarginTop = iexists(input_actor) ? 10 : 0;
 var kMarginLine = 5;
 var kLineLeeway = 1.6;
 

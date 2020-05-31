@@ -1,7 +1,7 @@
 /// @description Delete or set alarm
-if (exists(o_PlayerTest))
+if (iexists(o_PlayerTest))
 {
-	delete(this);
+	idelete(this);
 }
 else
 {

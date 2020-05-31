@@ -26,4 +26,4 @@ y += m_yspeed * Time.deltaTime;
 // apply life
 m_life -= Time.deltaTime;
 if (m_life <= 0.0)
-	delete(this);
+	idelete(this);

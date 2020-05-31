@@ -1,7 +1,7 @@
 /// @description Update the blending
 
 var pl = getPlayer();
-if (exists(pl))
+if (iexists(pl))
 {
 	// If the player is in range, we want to blend into this position.
 	if (abs(pl.x - x) < m_focusHalfWidth && abs(pl.y - y) < m_focusHalfHeight)
@@ -10,9 +10,9 @@ if (exists(pl))
 		m_selectionPriority += Time.deltaTime * 60.0;
 		
 		// If there's another area with a blend, then set our blend to be full ASAP
-		/*if (exists(o_PlayerCamera))
+		/*if (iexists(o_PlayerCamera))
 		{
-			if (exists(o_PlayerCamera.m_currentFocus) && o_PlayerCamera.m_currentFocus != id)
+			if (iexists(o_PlayerCamera.m_currentFocus) && o_PlayerCamera.m_currentFocus != id)
 			{
 				//m_blend = 1.0;
 				m_selectionPriority = 1.0;
@@ -38,9 +38,9 @@ else
 m_selectionPriority = saturate(m_selectionPriority);
 
 // Now update the player camera with this information
-/*if (exists(o_PlayerCamera))
+/*if (iexists(o_PlayerCamera))
 {
-	if (o_PlayerCamera.m_currentFocus == id || !exists(o_PlayerCamera.m_currentFocus) || o_PlayerCamera.m_currentFocus.m_blend < m_blend)
+	if (o_PlayerCamera.m_currentFocus == id || !iexists(o_PlayerCamera.m_currentFocus) || o_PlayerCamera.m_currentFocus.m_blend < m_blend)
 	{
 		// Update the current focus
 		o_PlayerCamera.m_currentFocus = id;

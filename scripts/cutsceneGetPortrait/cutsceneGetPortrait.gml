@@ -5,7 +5,7 @@
 var character = argument0;
 var expression = argument1;
 
-if (character == o_PlayerTest && exists(o_PlayerStats))
+if (character == o_PlayerTest && iexists(o_PlayerStats))
 {
 	var stats = instance_find(o_PlayerStats, 0);
 	if (expression == kPortraitExpressionQuestioning)

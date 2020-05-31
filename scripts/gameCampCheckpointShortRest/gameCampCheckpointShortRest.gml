@@ -1,0 +1,2 @@
+enemyInfoClearLiveList();
+gameRespawnEnemies(kRespawnEnemeiesMinor);

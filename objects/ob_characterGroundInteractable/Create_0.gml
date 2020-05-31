@@ -9,7 +9,7 @@ image_speed = 0;
 characterAnimInit();
 
 // Create the interaction object
-m_interactionObject = new(o_talkToCharacter);
+m_interactionObject = inew(o_talkToCharacter);
 m_interactionObject.m_owner = id;
 
 // update team

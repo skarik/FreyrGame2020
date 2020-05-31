@@ -15,7 +15,7 @@ m_airFriction = 100;
 #endregion
 
 // Create demuxer
-m_demuxer = new(o_livelyPoweredDemux);
+m_demuxer = inew(o_livelyPoweredDemux);
 // Set power source of demuxer to our source
 m_demuxer.m_powerSource = m_powerSource;
 

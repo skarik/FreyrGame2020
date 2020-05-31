@@ -8,5 +8,5 @@ image_alpha = clamp(image_alpha + Time.unscaledDeltaTime * (Debug.on ? 8.0 : -8.
 // Destroy if not needed
 if (!Debug.on && image_alpha <= 0.0)
 {
-	delete(this);
+	idelete(this);
 }

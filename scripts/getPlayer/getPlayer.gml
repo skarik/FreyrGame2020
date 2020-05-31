@@ -1,4 +1,4 @@
-if (exists(o_PlayerTest))
+if (iexists(o_PlayerTest))
 {
 	return o_PlayerTest.id;
 }

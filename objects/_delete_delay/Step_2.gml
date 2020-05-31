@@ -2,6 +2,6 @@ time += Time.deltaTime;
 
 if (time > delay)
 {
-	delete(target);
-	delete(this);
+	idelete(target);
+	idelete(this);
 }

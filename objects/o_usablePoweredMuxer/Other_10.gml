@@ -1,6 +1,6 @@
 /// @description Display the note
 
-if (exists(m_user) && m_user.id == o_PlayerTest.id)
+if (iexists(m_user) && m_user.id == o_PlayerTest.id)
 {
 	with (m_demuxer)
 	{

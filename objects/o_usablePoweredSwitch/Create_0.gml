@@ -15,7 +15,7 @@ m_airFriction = 100;
 #endregion
 
 // Create demuxer
-m_relay = new(o_livelyPoweredRelay);
+m_relay = inew(o_livelyPoweredRelay);
 // Set power source of demuxer to our source
 m_relay.m_powerSource = m_powerSource;
 // Set up inital power input

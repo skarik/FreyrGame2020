@@ -19,15 +19,15 @@ repeat (3)
 	audio.falloff_factor = 2;
 }
 
-if (exists(collider))
+if (iexists(collider))
 {
-	delete(collider);
+	idelete(collider);
 }
-if (exists(light))
+if (iexists(light))
 {
-	delete(light);
+	idelete(light);
 }
-if (exists(emissive))
+if (iexists(emissive))
 {
-	delete(emissive);
+	idelete(emissive);
 }

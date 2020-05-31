@@ -19,53 +19,53 @@ if (worldGameLocationType() & kWorldLocationType_Outdoors)
 {
 	if (season == kWeatherSeasonSummer)
 	{
-		if (!exists(o_weatherSystemSandstorm))
+		if (!iexists(o_weatherSystemSandstorm))
 		{
-			delete(ob_weatherSystem);
-			new(o_weatherSystemSandstorm);
+			idelete(ob_weatherSystem);
+			inew(o_weatherSystemSandstorm);
 		}
-		if (exists(o_snowRenderer))
-			delete(o_snowRenderer);
+		if (iexists(o_snowRenderer))
+			idelete(o_snowRenderer);
 	}
 	else if (season == kWeatherSeasonFall)
 	{
-		//if (!exists(o_weatherSystemRockstorm))
-		if (!exists(o_weatherSystemLightningstorm))
+		//if (!iexists(o_weatherSystemRockstorm))
+		if (!iexists(o_weatherSystemLightningstorm))
 		{
-			delete(ob_weatherSystem);
-			new(o_weatherSystemLightningstorm);
+			idelete(ob_weatherSystem);
+			inew(o_weatherSystemLightningstorm);
 		}
-		if (exists(o_snowRenderer))
-			delete(o_snowRenderer);
+		if (iexists(o_snowRenderer))
+			idelete(o_snowRenderer);
 	}
 	else if (season == kWeatherSeasonWinter)
 	{
-		if (!exists(o_weatherSystemSnowfall))
+		if (!iexists(o_weatherSystemSnowfall))
 		{
-			delete(ob_weatherSystem);
-			new(o_weatherSystemSnowfall);
+			idelete(ob_weatherSystem);
+			inew(o_weatherSystemSnowfall);
 		}
-		if (!exists(o_snowRenderer))
-			new(o_snowRenderer);
+		if (!iexists(o_snowRenderer))
+			inew(o_snowRenderer);
 	}
 	else if (season == kWeatherSeasonSpring)
 	{
-		if (!exists(o_weatherSystemRainstorm))
+		if (!iexists(o_weatherSystemRainstorm))
 		{
-			delete(ob_weatherSystem);
-			new(o_weatherSystemRainstorm);
+			idelete(ob_weatherSystem);
+			inew(o_weatherSystemRainstorm);
 		}
-		if (exists(o_snowRenderer))
-			delete(o_snowRenderer);
+		if (iexists(o_snowRenderer))
+			idelete(o_snowRenderer);
 	}
 }
 else
 {
-	delete(ob_weatherSystem);
-	delete(o_snowRenderer);
+	idelete(ob_weatherSystem);
+	idelete(o_snowRenderer);
 }
 
-if (exists(ob_weatherSystem))
+if (iexists(ob_weatherSystem))
 {
 	ob_weatherSystem.m_strength = lerp(kWeatherStrengthZero, kWeatherStrengthLight, saturate(dayOfSeason - 6.0));
 	ob_weatherSystem.m_strength = lerp(ob_weatherSystem.m_strength, kWeatherStrengthFull, saturate(dayOfSeason - 13.0));

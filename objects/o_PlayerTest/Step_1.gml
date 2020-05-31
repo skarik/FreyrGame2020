@@ -21,7 +21,7 @@ if ( m_isPlayer && stats.m_health < stats.m_healthPrev )
 		
 	repeat (max(2.0, (stats.m_healthPrev - stats.m_health) * 0.2))
 	{
-		var blud = new(o_ptcBloodHud);
+		var blud = inew(o_ptcBloodHud);
 			blud.m_damageType = m_lastDamage;
 			// Set up colors
 			blud.image_blend = tc_bloodred;
@@ -115,6 +115,33 @@ if (!isAttacking && !isDashing && !isBlocking && !m_isTilling && !m_isPlanting)
 {
 	m_willpush = clamp(m_willpush, 0, m_willpushMax);
 	m_willpushPrevious = m_willpush;
+}
+
+//
+// Stun logic:
+
+// Force reset stun meter when taking a break for a while
+if (m_stunTimer <= -3.0)
+{
+	stats.m_stun = max(0, stats.m_stun - Time.deltaTime);
+}
+
+// Stamina display logic:
+m_uiwantsStaminaShown = false;
+if (m_isStunned || m_stunTimer > 0.0 || stats.m_stun > 0.0)
+{
+	m_uiwantsStaminaShown = true;
+}
+else
+{
+	// Check if enemies have stun displayed
+	with (ob_character)
+	{
+		if ( this.m_uiwantsStaminaShown && (other.m_team & this.m_team) == 0 )
+		{
+			other.m_uiwantsStaminaShown = true;
+		}
+	}
 }
 
 //

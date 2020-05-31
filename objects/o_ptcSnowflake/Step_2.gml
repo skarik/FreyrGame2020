@@ -6,12 +6,12 @@ if (z_height <= 0.0)
 		splat.image_alpha = 0.99;
 		splat.image_angle = choose(0, 1, 2, 3) * 90;
 		splat.image_blend = image_blend;
-	delete(this);
+	idelete(this);
 	exit;*/
 	image_alpha -= Time.deltaTime / 4.0;
 	if (image_alpha <= 0.0)
 	{
-		delete(this);
+		idelete(this);
 		exit;
 	}
 }

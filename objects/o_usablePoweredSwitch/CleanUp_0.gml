@@ -1,3 +1,3 @@
 /// @description Clean up the relay
 
-delete(m_relay);
+idelete(m_relay);

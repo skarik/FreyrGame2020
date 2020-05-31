@@ -1,3 +1,3 @@
 /// @description kill sound
 
-delete(m_audioSound);
+idelete(m_audioSound);

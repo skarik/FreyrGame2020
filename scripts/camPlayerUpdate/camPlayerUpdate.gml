@@ -64,13 +64,13 @@ final_x = clamp(final_x, GameCamera.width / 2,  room_width  - GameCamera.width /
 final_y = clamp(final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
 
 // Override with focus
-if (exists(m_currentFocus0))
+if (iexists(m_currentFocus0))
 {
 	var focus_coords = _camPlayerUpdate_FocusCalculate(final_x, final_y, m_currentFocus0);
 	m_currentFocus0_X = focus_coords[0];
 	m_currentFocus0_Y = focus_coords[1];
 }
-if (exists(m_currentFocus1))
+if (iexists(m_currentFocus1))
 {
 	var focus_coords = _camPlayerUpdate_FocusCalculate(final_x, final_y, m_currentFocus1);
 	m_currentFocus1_X = focus_coords[0];

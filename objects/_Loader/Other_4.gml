@@ -1,15 +1,15 @@
 commonStart();
 
-new(System);
-new(Screen);
-new(GameCamera);
-new(Time);
-new(Debug);
-new(Settings);
-new(Game);
+inew(System);
+inew(Screen);
+inew(GameCamera);
+inew(Time);
+inew(Debug);
+inew(Settings);
+inew(Game);
 
 if (Debug.enable_gmlive)
-	new(obj_gmlive);
+	inew(obj_gmlive);
 
 // Update persistance
 System.persistent = true;

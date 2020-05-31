@@ -1,6 +1,6 @@
 /// @description Draw the water surface
 
-if (exists(o_waterMetaball) && surface_exists(m_surface) && surface_exists(m_surfacePeturb))
+if (iexists(o_waterMetaball) && surface_exists(m_surface) && surface_exists(m_surfacePeturb))
 {
 	// Get texture information
 	var texturePaletteLut = sprite_get_texture(s_paletteWater, 0);

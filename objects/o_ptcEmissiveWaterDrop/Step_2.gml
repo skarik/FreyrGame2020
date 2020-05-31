@@ -9,7 +9,7 @@ if (z_height <= 0.0)
 		splat.emissive_blend = emissive_blend;
 	var glow = instance_create_depth(x, y, 55, o_lightTinyFader);
 		glow.image_blend = merge_color(emissive_blend, c_black, 0.5);
-	delete(this);
+	idelete(this);
 	exit;
 }
 

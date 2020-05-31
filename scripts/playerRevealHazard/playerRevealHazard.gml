@@ -8,13 +8,13 @@ var ty = y;
 if (point_on_camera(tx, ty))
 {
 	var pl = getPlayer();
-	if (exists(pl))
+	if (iexists(pl))
 	{
 		if (!pl.pstats.m_hazards[hazard])
 		{
 			pl.pstats.m_hazards[hazard] = 1;
 			// Create the UI graphic
-			new(o_uiNewMagicHazard);
+			inew(o_uiNewMagicHazard);
 		}
 	}
 }

@@ -10,7 +10,7 @@ with (ob_livelyPowered)
 {
 	draw_text(x, y, "in:   " + string(m_powerInput));
 	draw_text(x, y + 8, "out: " + string(m_powerOutput));
-	if (exists(m_powerSource))
+	if (iexists(m_powerSource))
 	{
 		draw_line(x, y, m_powerSource.x, m_powerSource.y);
 	}

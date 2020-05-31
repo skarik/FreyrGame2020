@@ -1,4 +1,4 @@
-var suiChoiceBox = exists(o_CtsBlackBoxes) ? sui_choiceBox3Black : sui_choiceBox4;
+var suiChoiceBox = iexists(o_CtsBlackBoxes) ? sui_choiceBox3Black : sui_choiceBox4;
 var dx, dy;
 
 draw_set_font(display_font);
@@ -38,14 +38,14 @@ draw_sprite_part_ext( suiChoiceBox, 2, 125-25,0,10,20, x-boxw*0.5,y+offYa-7, box
 draw_sprite_part_ext( suiChoiceBox, 2, 0,0,15,20, x-boxw*0.5-9,y+offYa-7, 1.0,1.0,c_white, offA ); // bottom left corner
 draw_sprite_part_ext( suiChoiceBox, 2, 250-15,0,15,20, x+boxw*0.5+10-15,y+offYa-7, 1.0,1.0,c_white, offA ); // bottom right corner
 
-if (exists(input_actor))
+if (iexists(input_actor))
 {
 	//draw_sprite_part_ext( suiChoiceBox, 3, 125-25,0,10,20, x-boxw*0.5,y+offYa-7, boxw/10,1.0, c_white, offA ); // bottom border
 	draw_sprite_ext( suiChoiceBox, 3, x + clamp(input_actor.x - x - 19, -boxw * 0.5, boxw * 0.5), y + offYa - 7 + (18-5), 1.0, 1.0, 0.0, c_white, offA );
 }
 
 // draw the name
-if (exists(input_actor))
+if (iexists(input_actor))
 {
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
@@ -54,7 +54,7 @@ if (exists(input_actor))
 	draw_set_font(display_font);
 	draw_set_alpha( offA );
 	var penx = 0;
-	var display_name = exists(input_actor) ? input_actor.m_name : input_name;
+	var display_name = iexists(input_actor) ? input_actor.m_name : input_name;
 	for (var i = 1; i <= string_length(display_name); ++i)
 	{
 		var next_character = string_char_at(display_name, i);
@@ -68,7 +68,7 @@ if (!input_disable)
     // Draw the continue button
     var scale = bouncestep(done_alpha * image_alpha);
     //draw_sprite_ext(sui_buttonPress, 0, x,y+12, scale,scale,0, c_white, min(1, done_alpha*4.0));
-	if (exists(o_CtsBlackBoxes))
+	if (iexists(o_CtsBlackBoxes))
 		draw_sprite_ext(sui_buttonPress2, 0, x + boxw * 0.5 - 4, y - 4, scale, scale, 0, c_white, min(1, done_alpha*4.0));
 	else
 		draw_sprite_ext(sui_buttonPress3, 0, x + boxw * 0.5 - 2, y - 4, scale, scale, 0, c_white, min(1, done_alpha*4.0));

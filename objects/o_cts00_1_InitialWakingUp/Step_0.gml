@@ -25,9 +25,9 @@ if (cutsceneHasSignal())
 		
 		with (pl.camera) camPlayerCenter(); // Center the camera.
 		
-		if (!exists(o_chNathan))
+		if (!iexists(o_chNathan))
 		{
-			var ch = new(o_chNathan);
+			var ch = inew(o_chNathan);
 				ch.x = pl.x;
 				ch.y = pl.y;
 				//ch.facingDirection = 180;
@@ -43,7 +43,7 @@ if (cutsceneHasSignal())
 		pl.moEnabled = true;
 		pl.moAnimationPlayback = false;
 		// Create music manager
-		//new(o_mus00_Oasis);
+		//inew(o_mus00_Oasis);
 		// Set the final flag
 		questSetValue(kQidIntroSequence, 20);
 		// Consume!

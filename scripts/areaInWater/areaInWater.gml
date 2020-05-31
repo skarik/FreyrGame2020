@@ -23,16 +23,16 @@ if (water_height != kElevationInvalid) // Actually have water elevation?
 
 return 
 	(area3_internal_tilemap_get_water(check_x, check_y + yoffset)
-			|| exists(collision_point(check_x, check_y + yoffset, ob_areaWater, true, true)))
+			|| iexists(collision_point(check_x, check_y + yoffset, ob_areaWater, true, true)))
 	&&
 	(area3_internal_tilemap_get_water(check_x - 5, check_y + yoffset)
-			|| exists(collision_point(check_x - 5, check_y + yoffset, ob_areaWater, true, true)))
+			|| iexists(collision_point(check_x - 5, check_y + yoffset, ob_areaWater, true, true)))
 	&&
 	(area3_internal_tilemap_get_water(check_x + 5, check_y + yoffset)
-			|| exists(collision_point(check_x + 5, check_y + yoffset, ob_areaWater, true, true)))
+			|| iexists(collision_point(check_x + 5, check_y + yoffset, ob_areaWater, true, true)))
 	&&
 	(area3_internal_tilemap_get_water(check_x, check_y + yoffset - 4)
-			|| exists(collision_point(check_x, check_y + yoffset - 4, ob_areaWater, true, true)))
+			|| iexists(collision_point(check_x, check_y + yoffset - 4, ob_areaWater, true, true)))
 	&&
 	(area3_internal_tilemap_get_water(check_x, check_y + yoffset + 4)
-			|| exists(collision_point(check_x, check_y + yoffset + 4, ob_areaWater, true, true)));
+			|| iexists(collision_point(check_x, check_y + yoffset + 4, ob_areaWater, true, true)));

@@ -10,4 +10,4 @@ audio.falloff_end = 200;
 audio.falloff_factor = 1;
 
 // Delete self now that we're done.
-delete(this);
+idelete(this);

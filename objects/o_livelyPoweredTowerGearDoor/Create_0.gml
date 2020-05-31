@@ -4,7 +4,7 @@ event_inherited();
 
 m_openBlend = 0.0;
 
-m_collider = new(ob_colliderNoDepth);
+m_collider = inew(ob_colliderNoDepth);
 m_collider.visible = false;
 m_collider.sprite_index = sc_16x16c;
 m_collider.mask_index = sc_16x16c;

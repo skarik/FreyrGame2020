@@ -22,23 +22,23 @@ playerInteractInit();
 // create scriptable vars for cutscenes
 aiScriptableInit();
 
-camera = new(o_PlayerCamera);
-hud = new(o_PlayerHud);
-inventory = new(o_inventory);
-if (!exists(o_PlayerQuest))
-	quests = new(o_PlayerQuest);
+camera = inew(o_PlayerCamera);
+hud = inew(o_PlayerHud);
+inventory = inew(o_inventory);
+if (!iexists(o_PlayerQuest))
+	quests = inew(o_PlayerQuest);
 else
 	quests = instance_find(o_PlayerQuest, 0);
-if (!exists(o_PlayerStats))
-	pstats = new(o_PlayerStats);
+if (!iexists(o_PlayerStats))
+	pstats = inew(o_PlayerStats);
 else
 	pstats = instance_find(o_PlayerStats, 0);
 // update name
 m_name = pstats.m_name;
 
 // make sure there's day/night
-if (!exists(o_dayNightCycle))
-	new(o_dayNightCycle);
+if (!iexists(o_dayNightCycle))
+	inew(o_dayNightCycle);
 
 m_prevInventoryActive = false;
 
@@ -63,11 +63,20 @@ m_manaMax = 20;
 m_itemBalancePivot = [x, y];
 m_itemBalanceSpeed = [0, 0];
 
-// the player alright has a character-light, but for no-ambient rooms, it gets disabled
-// thus, we need a specific light that shows the character location
-m_locatorLight = new(o_lightEmissiveDepth_User5);
-m_locatorLight.target = id;
-m_locatorSh_uColorKey = shader_get_uniform(sh_colorkeyAlphatest, "uColorKey");
+#region Effects
+	// the player alright has a character-light, but for no-ambient rooms, it gets disabled
+	// thus, we need a specific light that shows the character location
+	m_locatorLight = inew(o_lightEmissiveDepth_User5);
+	m_locatorLight.target = id;
+	m_locatorSh_uColorKey = shader_get_uniform(sh_colorkeyAlphatest, "uColorKey");
+#endregion
+
+#region Stats
+	stats.m_health = 20.0;
+	stats.m_healthMax = stats.m_health;
+	stats.m_healthPrev = stats.m_health;
+	stats.m_stunMax = 5.0;
+#endregion
 
 #region Constants
 
@@ -135,24 +144,24 @@ meleeAtk0Time = 0.5;
 meleeAtk0Hit = 1 / 8.0 * meleeAtk0Time;// 0.05;
 meleeAtk0Key = 4 / 8.0 * meleeAtk0Time;//0.10;
 meleeAtk0Script = _playerAttack0;
-meleeAtk0Damage = 2;
+meleeAtk0Damage = 1;
 
 meleeAtk1Time = 0.5;
 meleeAtk1Hit = 1 / 8.0 * meleeAtk1Time;//0.05;
 meleeAtk1Key = 4 / 8.0 * meleeAtk1Time;//0.10;
 meleeAtk1Script = _playerAttack1;
-meleeAtk1Damage = 2;
+meleeAtk1Damage = 1;
 
 meleeAtk2Time = 0.9;
 meleeAtk2Hit = 0.1;
 meleeAtk2Key = 0.3;
 meleeAtk2Script = _playerAttack2;
-meleeAtk2Damage = 2;
+meleeAtk2Damage = 1;
 
 meleeAtk3Time = 0.7;
 meleeAtk3Hit = 0.2;
 meleeAtk3Key = 0.21;
 meleeAtk3Script = _playerAttack3;
-meleeAtk3Damage = 5;
+meleeAtk3Damage = 2;
 
 #endregion

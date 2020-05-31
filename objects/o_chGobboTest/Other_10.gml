@@ -6,4 +6,4 @@ event_inherited();
 // No items dropped from small slimes.
 
 // Delete the slime
-delete(this);
+idelete(this);

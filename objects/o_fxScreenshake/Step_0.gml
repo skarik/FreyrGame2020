@@ -24,6 +24,6 @@ if ( life < 0 )
     Screen.offset_y = 0;
     
     // Delete self
-    delete(this);
+    idelete(this);
 }
 

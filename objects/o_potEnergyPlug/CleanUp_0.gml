@@ -1,3 +1,3 @@
 /// @description Clean up lights
 
-delete(m_light);
+idelete(m_light);

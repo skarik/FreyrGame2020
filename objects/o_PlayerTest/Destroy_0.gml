@@ -4,9 +4,9 @@ event_inherited();
 
 if (m_initialized)
 {
-	delete(camera);
-	delete(hud);
-	delete(quests);
+	idelete(camera);
+	idelete(hud);
+	idelete(quests);
 	
-	delete(m_locatorLight);
+	idelete(m_locatorLight);
 }

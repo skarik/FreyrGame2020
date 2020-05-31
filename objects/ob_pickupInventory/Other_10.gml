@@ -1,7 +1,7 @@
 /// @description Add to the inventory if possible
 
 // Drop if picked up by invalid object
-if (!exists(m_pickupTarget))
+if (!iexists(m_pickupTarget))
 {
 	m_isPickingUp = false;
 	exit;

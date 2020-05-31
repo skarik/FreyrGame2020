@@ -70,7 +70,7 @@ ds_list_destroy(results_colliders);
 
 // Check if ignoring elevation
 //if (position_meeting(check_x, check_y, ob_elevationBlendArea))
-//if (exists(collision_rectangle(check_x - 4, check_y - 4, check_x + 4, check_y + 4, ob_elevationBlendArea, false, true)))
+//if (iexists(collision_rectangle(check_x - 4, check_y - 4, check_x + 4, check_y + 4, ob_elevationBlendArea, false, true)))
 //if (place_meeting(check_x, check_y, ob_elevationBlendArea))
 /*if (position_meeting(x1, y1, ob_elevationBlendArea) 
 	&& position_meeting(x2, y1, ob_elevationBlendArea)

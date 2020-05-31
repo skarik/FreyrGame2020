@@ -1,3 +1,3 @@
 /// @description Remove ambient drunk
 
-delete(m_ambientDrop);
+idelete(m_ambientDrop);

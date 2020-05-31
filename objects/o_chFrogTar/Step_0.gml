@@ -10,7 +10,7 @@ if (aiState == kFrogStateIdle)
 	
 	// Hop when player is near
 	var pl = getPlayer();
-	if (exists(pl) && (sqr(x - pl.x) + sqr(y - pl.y)) < sqr(kScareDistance))
+	if (iexists(pl) && (sqr(x - pl.x) + sqr(y - pl.y)) < sqr(kScareDistance))
 	{
 		aiState = kFrogStateHop;
 		animationIndex = 0.0;

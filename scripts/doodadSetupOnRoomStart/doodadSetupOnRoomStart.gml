@@ -27,9 +27,9 @@ with (ob_doodadModularBuilding)
 			
 			// Update all associated Z's.
 			z += z_delta;
-			if (exists(collider))
+			if (iexists(collider))
 				collider.z += z_delta;
-			if (exists(elevation))
+			if (iexists(elevation))
 				elevation.z += z_delta;
 		}
 	}

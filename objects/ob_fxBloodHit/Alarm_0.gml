@@ -1,3 +1,3 @@
 /// @description Spawn effects
 
-delete(this);
+idelete(this);

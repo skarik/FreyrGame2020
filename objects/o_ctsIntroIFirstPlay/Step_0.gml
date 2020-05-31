@@ -20,7 +20,7 @@ if (!cutsceneUpdate())
 			m_playerDoodadHead.visible = true;
 			
 			// create stats
-			var stats = new(o_PlayerStats);
+			var stats = inew(o_PlayerStats);
 				stats.persistent = true;
 			
 			effectScreenShake(1, 3.0, true);
@@ -32,7 +32,7 @@ if (!cutsceneUpdate())
 	if (cutsceneGetWaitId() == "menu")
     {
 		// bring up the choice menu
-		if (!exists(m_logo))
+		if (!iexists(m_logo))
 		{
 			m_logo = instance_create_depth(x, y, 0, o_dummyDrawOutlineTemp);
 			m_logo.sprite_index = sui_logo1;
@@ -106,9 +106,9 @@ if (!cutsceneUpdate())
 	
 	if (cutsceneGetWaitId() == "ending")
 	{
-		if (!exists(o_fxFadeOutSolid))
+		if (!iexists(o_fxFadeOutSolid))
 		{
-			var fadeout = new(o_fxFadeOutSolid);
+			var fadeout = inew(o_fxFadeOutSolid);
 				fadeout.image_blend = c_white;
 		}
 		else
@@ -126,7 +126,7 @@ if (!cutsceneUpdate())
 with (o_CtsGabberBox)
 {
 	// clear out input actor to fix odd behavior
-	if (exists(input_actor) && input_actor.object_index == o_PlayerImp)
+	if (iexists(input_actor) && input_actor.object_index == o_PlayerImp)
 	{
 		input_actor = null;
 	}
@@ -155,7 +155,7 @@ if (cutsceneHasSignal())
 }
 
 // Fade in player on demand
-if (exists(m_playerDoodad))
+if (iexists(m_playerDoodad))
 {
 	if (m_playerFadeIn)
 	{
@@ -172,7 +172,7 @@ if (exists(m_playerDoodad))
 }
 
 // Fade in imp on demand
-if (exists(o_PlayerImp))
+if (iexists(o_PlayerImp))
 {
 	if (m_ImpFadeIn)
 	{
@@ -199,7 +199,7 @@ while (m_bubbleTimer > 1.0)
 }
 
 // Fade logo away
-if (m_fadeLogo && exists(m_logo))
+if (m_fadeLogo && iexists(m_logo))
 {
 	m_logo.image_alpha -= Time.deltaTime * 2.0;
 	m_logo.image_alpha = saturate(m_logo.image_alpha);

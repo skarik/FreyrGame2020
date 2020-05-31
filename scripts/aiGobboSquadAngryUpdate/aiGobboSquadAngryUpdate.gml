@@ -9,14 +9,14 @@ m_aiGobbo_squad = array_create(0);
 #region Update Squad
 
 // Look for a squad leader if we don't have one
-if (!exists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isDead)
+if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isDead)
 {
 	// If we have a squad, select a new leader
 	if (array_length_1d(m_aiGobbo_squad) != 0)
 	{
 		for (var i = 0; i < array_length_1d(m_aiGobbo_squad); ++i)
 		{
-			if (exists(m_aiGobbo_squad[i]))
+			if (iexists(m_aiGobbo_squad[i]))
 			{
 				m_aiGobbo_squadLeader = m_aiGobbo_squad[i];
 				break;
@@ -33,7 +33,7 @@ if (!exists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isDead)
 		// Zero out the squad age
 		for (var i = 0; i < array_length_1d(m_aiGobbo_squad); ++i)
 		{
-			if (exists(m_aiGobbo_squad[i]))
+			if (iexists(m_aiGobbo_squad[i]))
 			{
 				m_aiGobbo_squad[i].m_aiGobbo_squadAge = 0.0;
 			}
@@ -48,7 +48,7 @@ else
 		// Zero out the squad age every N amount of time so only self can update
 		for (var i = 0; i < array_length_1d(m_aiGobbo_squad); ++i)
 		{
-			if (exists(m_aiGobbo_squad[i]))
+			if (iexists(m_aiGobbo_squad[i]))
 			{
 				m_aiGobbo_squad[i].m_aiGobbo_squadAge = 0.0;
 			}
@@ -68,7 +68,7 @@ var m_angerTarget = null;
 m_angerTarget = getPlayer();
 
 var m_angerTargetPos = [x, y];
-if (exists(m_angerTarget))
+if (iexists(m_angerTarget))
 {
 	var m_angerTargetPos = [m_angerTarget.x, m_angerTarget.y];
 }
@@ -79,7 +79,7 @@ if (exists(m_angerTarget))
 
 if (m_aiGobbo_squadLeader == id)
 {
-	if (exists(m_angerTarget))
+	if (iexists(m_angerTarget))
 	{
 		// Update the position sparingly
 		m_aiGobbo_squadManage_PositionTimer -= Time.deltaTime;
@@ -98,7 +98,7 @@ if (m_aiGobbo_squadLeader == id)
 		for (var i = 0; i < squad_size; ++i)
 		{
 			var gobbo = m_aiGobbo_squad[i];
-			if (exists(gobbo))
+			if (iexists(gobbo))
 			{
 				if (gobbo.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_Hesitate)
 				{
@@ -157,7 +157,7 @@ if (m_aiGobbo_squadLeader == id)
 		if (timerPrev < 0.5 && m_aiGobbo_squadManage_MasterTimer >= 0.5)
 		{
 			var gobbo_attacker = m_aiGobbo_squad[m_aiGobbo_squadManage_Attacker];
-			if (exists(gobbo_attacker))
+			if (iexists(gobbo_attacker))
 			{
 				// Make the gobbo attack after signal up for 0.5 s
 				gobbo_attacker.m_aiGobbo_squadStateCase = kAiGobboSquadStateCase_AttackToHesitate;
@@ -176,7 +176,7 @@ if (m_aiGobbo_squadLeader == id)
 		{
 			// Has the target gobbo attacked?
 			var gobbo_attacker = m_aiGobbo_squad[m_aiGobbo_squadManage_Attacker];
-			if (exists(gobbo_attacker))
+			if (iexists(gobbo_attacker))
 			{
 				if (gobbo_attacker.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_AttackToHesitate
 					&& gobbo_attacker.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_AttackToHover)

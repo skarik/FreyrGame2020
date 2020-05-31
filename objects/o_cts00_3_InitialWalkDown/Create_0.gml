@@ -8,15 +8,15 @@ if (questGetValue(kQidIntroSequence) != 30)
 	/*if (questGetValue(kQidIntroSequence) > 30)
 	{
 		// Create music manager
-		new(o_mus00_DayDesert);
+		inew(o_mus00_DayDesert);
 	}*/
 	
-	delete(this);
+	idelete(this);
 	exit;
 }
 
 // Create a nathan if we need one
-if (!exists(o_chNathan))
+if (!iexists(o_chNathan))
 {
 	var pl = getPlayer();
 	instance_create_depth(pl.x, pl.y + 32, pl.depth, o_chNathan);

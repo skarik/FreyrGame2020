@@ -55,7 +55,7 @@ else
 	for (var i = 0; i < node_count; ++i)
 	{
 		var node_id = buffer_read(buffer_nodegraph, buffer_u64);
-		if (!exists(node_id))
+		if (!iexists(node_id))
 		{
 			with (ob_aiNode)
 				m_valid = false; // Mark all nodes as invalid
@@ -70,7 +70,7 @@ else
 				var c_link = buffer_read(buffer_nodegraph, buffer_u64);
 				var c_type = buffer_read(buffer_nodegraph, buffer_u32);
 				
-				if (!exists(c_link))
+				if (!iexists(c_link))
 				{
 					with (ob_aiNode)
 						m_valid = false; // Mark all nodes as invalid

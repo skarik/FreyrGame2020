@@ -58,4 +58,4 @@ if (input_addItem)
 }
 
 // Then we delete it
-delete(input_actor);
+idelete(input_actor);

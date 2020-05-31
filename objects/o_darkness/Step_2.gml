@@ -10,17 +10,17 @@ if (!surface_exists(m_bloom2))
 	m_bloom2 = surface_create(GameCamera.width / 2, GameCamera.height / 2);
 
 var outdoor_lighting = true;
-if (exists(ob_ambientLighting))
+if (iexists(ob_ambientLighting))
 	outdoor_lighting = !ob_ambientLighting.m_ambientIndoors;
 
 // update bloom params
-if (exists(o_dayNightCycle) || exists(ob_ambientLighting))
+if (iexists(o_dayNightCycle) || iexists(ob_ambientLighting))
 {
 	var ambient_color = c_black;
 	
-	if (exists(ob_ambientLighting))
+	if (iexists(ob_ambientLighting))
 		ambient_color = ob_ambientLighting.m_ambientColor;
-	else if (exists(o_dayNightCycle))
+	else if (iexists(o_dayNightCycle))
 		ambient_color = o_dayNightCycle.m_ambientLight;
 	
 	// Bloom multiply is mapped from 128 to 0 matching 0.0 to 1.6.
@@ -30,7 +30,7 @@ if (exists(o_dayNightCycle) || exists(ob_ambientLighting))
 	// This makes bloom essentially not appear at all unless the ambient is below 50% brightness.
 	bloom_drop = saturate(0.2 + color_get_value(ambient_color) / 128 * 0.8);
 	
-	if (exists(ob_ambientLighting))
+	if (iexists(ob_ambientLighting))
 	{
 		bloom_mul += ob_ambientLighting.m_bloomMulOffset;
 		bloom_drop += ob_ambientLighting.m_bloomDropOffset;
@@ -51,9 +51,9 @@ if (surface_exists(m_darkness))
 	surface_set_target(m_darkness);
 	
 	// clear to the ambient color
-	if (exists(ob_ambientLighting))
+	if (iexists(ob_ambientLighting))
 		draw_clear_alpha(ob_ambientLighting.m_ambientColor, 1.0);
-	else if (exists(o_dayNightCycle))
+	else if (iexists(o_dayNightCycle))
 		draw_clear_alpha(o_dayNightCycle.m_ambientLight, 1.0);
 	else
 		draw_clear_alpha(c_white, 1.0);

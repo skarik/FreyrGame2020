@@ -1,8 +1,8 @@
-if (!exists(ob_CtsTalker))
+if (!iexists(ob_CtsTalker))
 {
 	with (o_PlayerTest)
 	{
 		canMove = true;
 	}
-	delete(this);
+	idelete(this);
 }

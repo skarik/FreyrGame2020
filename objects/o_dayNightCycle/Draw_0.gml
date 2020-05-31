@@ -1,6 +1,6 @@
 /// @description Draws color overlay
 
-if (!exists(o_PlayerTest)) exit;
+if (!iexists(o_PlayerTest)) exit;
 
 gpu_set_blendenable(true);
 gpu_set_blendmode_ext(bm_dest_color, bm_src_color);

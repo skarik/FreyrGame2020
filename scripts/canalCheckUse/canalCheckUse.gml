@@ -16,13 +16,13 @@ if (!m_isTilling && canMove && !isBusyInteracting
 	var freeSpot = false;
 	
 	// Check the four corners of the buildable area for water
-	if (!exists(collision_point(buildX + 1, buildY + 1, ob_areaWater, true, true))
-		|| !exists(collision_point(buildX + 14, buildY + 1, ob_areaWater, true, true))
-		|| !exists(collision_point(buildX + 1, buildY + 14, ob_areaWater, true, true))
-		|| !exists(collision_point(buildX + 14, buildY + 14, ob_areaWater, true, true)))
+	if (!iexists(collision_point(buildX + 1, buildY + 1, ob_areaWater, true, true))
+		|| !iexists(collision_point(buildX + 14, buildY + 1, ob_areaWater, true, true))
+		|| !iexists(collision_point(buildX + 1, buildY + 14, ob_areaWater, true, true))
+		|| !iexists(collision_point(buildX + 14, buildY + 14, ob_areaWater, true, true)))
 	{
 		// Check the entire area for colliders
-		if (!exists(collision_rectangle(buildX + 1, buildY + 1, buildX + 14, buildY + 14, ob_collider, false, true)))
+		if (!iexists(collision_rectangle(buildX + 1, buildY + 1, buildX + 14, buildY + 14, ob_collider, false, true)))
 		{
 			freeSpot = true;
 		}

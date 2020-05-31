@@ -29,4 +29,4 @@ if (step_prev < 1 && step >= 1)
 
 // Done
 if (step_prev < 3 && step >= 3)
-	delete(this);
+	idelete(this);

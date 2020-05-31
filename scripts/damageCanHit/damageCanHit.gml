@@ -4,7 +4,7 @@
 var source = argument0;
 var target = argument1;
 
-if ( !exists(source) ) {
+if ( !iexists(source) ) {
 	return true;
 }
 

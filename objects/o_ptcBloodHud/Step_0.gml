@@ -24,6 +24,6 @@ default:
 };
 
 if ( image_alpha <= 0 ) {
-    delete( this );
+    idelete( this );
 }
 

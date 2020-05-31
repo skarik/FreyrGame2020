@@ -2,8 +2,8 @@ var dx, dy;
 dx = round(x);
 dy = round(y);
 var shadow_pct = max(0.5, sprite_height / 32.0);
-shadow_pct /= (1.0 + z_height / 32.0);
-shadow_pct *= min(1.0, z_height / 4.0);
+shadow_pct /= (1.0 + max(0.0, z_height) / 32.0);
+shadow_pct *= min(1.0, max(0.0, z_height) / 4.0);
 var shadow_w = shadow_pct * 6.0;
 var shadow_h = shadow_pct * 2.0;
 

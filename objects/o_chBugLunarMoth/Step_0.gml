@@ -2,7 +2,7 @@
 
 var xtarget = room_width * 0.5;
 var ytarget = room_height * 1.5;
-if (exists(o_cropTurnip) && !timeofdayIsDaytime())
+if (iexists(o_cropTurnip) && !timeofdayIsDaytime())
 {
 	var turnip = instance_nearest(x, y, o_cropTurnip);
 	xtarget = turnip.x;

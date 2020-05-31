@@ -9,7 +9,7 @@ if (m_aiGobbo_squadManage_LastSize != new_squad_size)
 	for (var i = 0; i < new_squad_size; ++i)
 	{
 		var gobbo = m_aiGobbo_squad[i];
-		if (exists(gobbo))
+		if (iexists(gobbo))
 			gobbo.moAnimationExternal = false;
 	}
 

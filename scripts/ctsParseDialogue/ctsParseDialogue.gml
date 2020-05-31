@@ -4,7 +4,7 @@
 // outputs: display_text, display_flags
 
 // Replace big system strings in input_text
-if (exists(o_PlayerStats))
+if (iexists(o_PlayerStats))
 {
 	input_text = string_replace(input_text, "[PLAYER]", o_PlayerStats.m_name);
 	input_text = string_replace(input_text, "[PLAYER_NICKNAME]", string_copy(o_PlayerStats.m_name, 1, 2));

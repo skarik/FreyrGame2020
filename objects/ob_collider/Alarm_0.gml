@@ -29,7 +29,7 @@ if (string_pos("colli", layer_name) != 0)
 			collider.image_angle = image_angle;
 		
 		// Remove the original
-		delete(this);
+		idelete(this);
 		
 		using_infinite_height = false;
 	}
@@ -49,5 +49,5 @@ if (using_infinite_height)
 		collider.image_angle = image_angle;
 	
 	// Remove the original
-	delete(this);
+	idelete(this);
 }

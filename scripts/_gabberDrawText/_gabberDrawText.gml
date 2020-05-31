@@ -1,6 +1,6 @@
 var dx, dy;
 dx = uiPosX; 
-dy = uiPosY + (exists(input_actor) ? 10 : 0);
+dy = uiPosY + (iexists(input_actor) ? 10 : 0);
 
 var seed = mt19937_get_state();//random_get_seed();
 //random_set_seed(floor(current_time / 1000.0 * 30.0));
@@ -17,7 +17,7 @@ var text_refw = string_width("m");
 var text_w = display_width;
 var penx = 0;
 var peny = 0;
-var penc = exists(o_CtsBlackBoxes) ? c_white : c_black;
+var penc = iexists(o_CtsBlackBoxes) ? c_white : c_black;
 var penw = 2;
 var penwiggle = false;
 var penshake = false;
@@ -27,7 +27,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
     if ( display_flags[i] != 0 )
     {
         if ( display_flags[i] == ord("0") )
-            penc = exists(o_CtsBlackBoxes) ? c_white : make_color_rgb(31, 36, 10);
+            penc = iexists(o_CtsBlackBoxes) ? c_white : make_color_rgb(31, 36, 10);
         if ( display_flags[i] == ord("1") )
             penc = c_red;
         if ( display_flags[i] == ord("2") )
@@ -93,7 +93,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		}
 		else
 		{	// otherwise, do simple dropshadow outline
-			draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
+			draw_set_color( iexists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
 			draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
 		}
 	}

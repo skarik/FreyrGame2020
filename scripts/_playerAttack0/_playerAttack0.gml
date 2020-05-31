@@ -51,7 +51,7 @@ if (l_meleeAtkTimerPrev < meleeAtk0Hit && meleeAtkTimer >= meleeAtk0Hit)
 				 hitboxCenterX - 12, hitboxCenterY - 12,
 				 hitboxCenterX + 12, hitboxCenterY + 12,
 				 meleeAtk0Damage,
-				 kDamageTypeBlunt);
+				 kDamageTypeUnarmed);
 				 
 	// Damage callback
 	playerOnDealingDamage();

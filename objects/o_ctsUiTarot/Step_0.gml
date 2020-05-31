@@ -218,7 +218,7 @@ if (m_state == kTarotGameState_FortuneChosen)
 		{
 			// Save player stats
 			var pl = getPlayer();
-			if (exists(pl))
+			if (iexists(pl))
 			{
 				pl.pstats.m_fortune = m_deck[m_card_selection[m_state_selection]];
 				pl.pstats.m_fortune_flipped = m_card_flipped[m_state_selection];
@@ -249,10 +249,10 @@ if (m_state == kTarotGameState_FortuneGiven)
 	// Once totoally faded, delete self
 	if (m_state_blend_panout > 1.0)
 	{
-		if (!exists(ob_CtsTalker))
+		if (!iexists(ob_CtsTalker))
 		{
 			cutscenePlayerUnlock();
 		}
-		delete(this);
+		idelete(this);
 	}
 }

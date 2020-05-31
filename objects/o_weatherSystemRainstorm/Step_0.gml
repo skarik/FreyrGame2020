@@ -15,7 +15,7 @@ while (m_spawnCounter_rain > 0)
 {
 	m_spawnCounter_rain -= 1;
 	
-	var raindrop = new(o_ptcRainDrop);
+	var raindrop = inew(o_ptcRainDrop);
 		raindrop.x = GameCamera.view_x - kRainMargin + random(GameCamera.width + kRainMargin * 2);
 		raindrop.y = GameCamera.view_y - kRainMargin + random(GameCamera.height + kRainMargin * 2);
 }
@@ -28,9 +28,9 @@ if (instance_number(o_ashadowCloudMover) < cloudTarget)
 }
 
 // Set up ambient drop
-if (!exists(m_ambientDrop))
+if (!iexists(m_ambientDrop))
 {
-	m_ambientDrop = new(o_ashadowSquareGradient);
+	m_ambientDrop = inew(o_ashadowSquareGradient);
 	m_ambientDrop.image_xscale = Screen.width / m_ambientDrop.sprite_width;
 	m_ambientDrop.image_yscale = Screen.height / m_ambientDrop.sprite_height;
 	m_ambientDrop.image_alpha = 0.0;

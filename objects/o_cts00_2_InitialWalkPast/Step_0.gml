@@ -16,7 +16,7 @@ if (!m_running)
 	o_chNathan.m_interactionFile = "";
 	o_chNathan.m_interactionObject.m_actionName = "Talk";
 	
-	if (exists(o_CtsChoiceBox))
+	if (iexists(o_CtsChoiceBox))
 	{
 		if (cutsceneIsChoiceReady())
 		{
@@ -84,11 +84,11 @@ if (m_running)
 			// Set the final flag
 			questSetValue(kQidIntroSequence, 30);
 			// Create music manager
-			new(o_mus00_Oasis);
+			inew(o_mus00_Oasis);
 			// Consume!
 			cutsceneSignalConsume();
 			// Delete self
-			delete(this);
+			idelete(this);
 		}
 	}
 
@@ -130,7 +130,7 @@ if (m_running)
 			}
 			if (wait_id == "give_player_seeds")
 			{
-				if (!exists(o_pickupSeed_Turnip))
+				if (!iexists(o_pickupSeed_Turnip))
 				{
 					cutsceneWaitEnd();
 				}

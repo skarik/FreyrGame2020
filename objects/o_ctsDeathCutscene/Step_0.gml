@@ -12,9 +12,9 @@ if (m_state == CtsDeath.S1DeadOverlay)
 }
 else if (m_state == CtsDeath.S2FadeOut)
 {
-	if (!exists(o_fxFadeOutBanded))
+	if (!iexists(o_fxFadeOutBanded))
 	{
-		var fadeout = new(o_fxFadeOutBanded);
+		var fadeout = inew(o_fxFadeOutBanded);
 			fadeout.image_blend = c_black;
 			depth = fadeout.depth - 1;
 	}
@@ -35,22 +35,22 @@ else if (m_state == CtsDeath.S4ViggoTravel)
 	// Nothing yet!
 	m_state = CtsDeath.S5FadeIn;
 	
-	delete(o_fxFadeOutBanded);
+	idelete(o_fxFadeOutBanded);
 	
-	if (!exists(o_fxFadeInBanded))
+	if (!iexists(o_fxFadeInBanded))
 	{
-		var fadein = new(o_fxFadeInBanded);	
+		var fadein = inew(o_fxFadeInBanded);	
 			fadein.image_blend = c_black;
 			depth = fadein.depth - 1;
 	}
 }
 else if (m_state == CtsDeath.S5FadeIn)
 {
-	if (!exists(o_fxFadeInBanded) || o_fxFadeInBanded.image_alpha <= 0.0)
+	if (!iexists(o_fxFadeInBanded) || o_fxFadeInBanded.image_alpha <= 0.0)
 	{
 		o_PlayerTest.canMove = true;
-		delete(o_fxFadeInBanded);
-		delete(this);
+		idelete(o_fxFadeInBanded);
+		idelete(this);
 		
 		m_state = CtsDeath.S6Cleanup;
 	}

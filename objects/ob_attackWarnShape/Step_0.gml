@@ -1,9 +1,9 @@
 /// @description Check source
 
-if (exists(m_source))
+if (iexists(m_source))
 {
 	if (m_source.m_isDead)
 	{
-		delete(this);
+		idelete(this);
 	}
 }

@@ -25,9 +25,9 @@ if (cutsceneHasSignal())
 		
 		with (pl.camera) camPlayerCenter(); // Center the camera.
 		
-		if (!exists(o_chNathan))
+		if (!iexists(o_chNathan))
 		{
-			var ch = new(o_chNathan);
+			var ch = inew(o_chNathan);
 				ch.x = pl.x - 55;
 				ch.y = pl.y - 4;
 				ch.facingDirection = 180;

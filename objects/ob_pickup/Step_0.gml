@@ -58,7 +58,7 @@ else
 		image_yscale *= 2.0 - image_xscale;
 	
 		// If no pickup target exists, stop.
-		if (!exists(m_pickupTarget))
+		if (!iexists(m_pickupTarget))
 		{
 			m_pickupTimer = 0.0;
 			m_isPickingUp = false;

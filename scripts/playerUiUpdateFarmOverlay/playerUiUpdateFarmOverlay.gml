@@ -20,14 +20,14 @@ if (m_player.isAttacking || m_player.isBlocking)
 // Cool down when not on farm
 if (!m_player.m_plantable
 	&& !m_player.m_till_filldirt
-	&& (!exists(m_player.currentTillable) || (m_player.currentTillable.tilled))
-	&& (!exists(m_player.currentCrop) || !cropIsMature(m_player.currentCrop))
+	&& (!iexists(m_player.currentTillable) || (m_player.currentTillable.tilled))
+	&& (!iexists(m_player.currentCrop) || !cropIsMature(m_player.currentCrop))
 	)
 {
 	m_farmoverlay_cooldown_time = max(m_farmoverlay_cooldown_time, 0.02);
 }
 // Cool down when not able to farm
-if (exists(ob_CtsTalker) || !o_PlayerTest.moEnabled)
+if (iexists(ob_CtsTalker) || !o_PlayerTest.moEnabled)
 {
 	m_farmoverlay_cooldown_time = max(m_farmoverlay_cooldown_time, 0.5);
 }
@@ -74,7 +74,7 @@ if (m_farmoverlay_blend > 0.0 && m_farmoverlay_cooldown_time <= 0.0)
 		m_farmoverlay_targetControl = Settings.ctUseItem;
 	}
 	// Crops:
-	if (exists(m_player.currentCrop))
+	if (iexists(m_player.currentCrop))
 	{
 		if (cropIsMature(m_player.currentCrop))
 		{

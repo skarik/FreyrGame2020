@@ -3,18 +3,18 @@
 
 var currentDungeonRoom = dungeonRoomCurrent();
 
-if (exists(currentDungeonRoom))
+if (iexists(currentDungeonRoom))
 {
 	with (o_ptcFootstep)
 	{
 		if (place_meeting(x, y, currentDungeonRoom))
-			delete(this);
+			idelete(this);
 	}
 	
 	with (o_ptcBloodSplatter)
 	{
 		if (place_meeting(x, y, currentDungeonRoom))
-			delete(this);
+			idelete(this);
 	}
 	
 	with (o_chFrogTar)

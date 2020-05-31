@@ -55,7 +55,7 @@ if (l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)
 	audio.falloff_factor = 2;
 }
 // if passing the hit point, do the damage
-if ((l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)
+/*if ((l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)
  || (l_meleeAtkTimerPrev < (meleeAtk2Hit+meleeAtk2Key)/2 && meleeAtkTimer >= (meleeAtk2Hit+meleeAtk2Key)/2)
  || (l_meleeAtkTimerPrev < meleeAtk2Key && meleeAtkTimer >= meleeAtk2Key))
 {
@@ -66,7 +66,19 @@ if ((l_meleeAtkTimerPrev < meleeAtk2Hit && meleeAtkTimer >= meleeAtk2Hit)
 				 hitboxCenterX - 24, hitboxCenterY - 24,
 				 hitboxCenterX + 24, hitboxCenterY + 24,
 				 meleeAtk2Damage,
-				 kDamageTypeBlunt);
+				 kDamageTypeUnarmed);
+}*/
+// if passing the hit point, do the damage
+if (l_meleeAtkTimerPrev < meleeAtk1Hit && meleeAtkTimer >= meleeAtk1Hit)
+{
+	// Damage!
+	var hitboxCenterX = x + lengthdir_x(4, meleeAtkDirection);
+	var hitboxCenterY = y + lengthdir_y(4, meleeAtkDirection);
+	damageHitbox(id,
+				 hitboxCenterX - 12, hitboxCenterY - 12,
+				 hitboxCenterX + 12, hitboxCenterY + 12,
+				 meleeAtk2Damage,
+				 kDamageTypeUnarmed);
 }
 // if past the key point, chain into next attack
 if (meleeAtkTimer > meleeAtk2Key)

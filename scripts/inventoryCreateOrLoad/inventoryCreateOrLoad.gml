@@ -29,7 +29,7 @@ if (l_inventory == null)
 // Create a new inventory if it doesn't exist
 if (l_inventory == null)
 {
-	l_inventory = new(ob_inventoryChest);
+	l_inventory = inew(ob_inventoryChest);
 	l_inventory.persistent = true;
 	l_inventory.name = (l_name == null) ? inventory.name : l_name;
 	

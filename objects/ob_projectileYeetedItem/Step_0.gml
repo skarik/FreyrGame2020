@@ -15,5 +15,5 @@ else
 		item.z = z;
 		item.z_height = z_height;
 		
-	delete(this);
+	idelete(this);
 }

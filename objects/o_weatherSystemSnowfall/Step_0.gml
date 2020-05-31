@@ -30,7 +30,7 @@ while (m_spawnCounter_snow > 0)
 {
 	m_spawnCounter_snow -= 1;
 	
-	var raindrop = new(o_ptcSnowflake);
+	var raindrop = inew(o_ptcSnowflake);
 		raindrop.x = GameCamera.view_x - kRainMargin + random(GameCamera.width + kRainMargin * 2);
 		raindrop.y = GameCamera.view_y - kRainMargin + random(GameCamera.height + kRainMargin * 2);
 		raindrop.z_height = 100 + random(100);
@@ -57,7 +57,7 @@ while (m_spawnCounter_leaf > 0)
 {
 	m_spawnCounter_leaf -= 1.0;
 	
-	var leaf = new(o_ptcWheatLeaf);
+	var leaf = inew(o_ptcWheatLeaf);
 		leaf.x = (wind[0] > 0) ? (GameCamera.view_x - 4) : (GameCamera.view_x + GameCamera.width + 4);
 		leaf.y = GameCamera.view_y + random(GameCamera.height);
 		leaf.xspeed = wind[0];

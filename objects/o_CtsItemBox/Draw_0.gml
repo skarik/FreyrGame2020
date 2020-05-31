@@ -158,7 +158,7 @@ if (current_display_count >= 1)
 		var penc = c_gold;
 		
 		// draw the text
-	    draw_set_color( exists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
+	    draw_set_color( iexists(o_CtsBlackBoxes) ? c_dkgray : make_color_rgb(239, 216, 161) );
 	    draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);    
 		if (penc == c_gold)
 		{	// gold (and other colors) get a special outline
@@ -212,7 +212,7 @@ var item_dx = display_item_startx + (uiPosX - uiposx_expected);
 var item_dy = display_item_starty - 40 * blend_itempos0 + (uiPosY - uiposy_expected);
 item_dx = lerp(item_dx, uiPosX + display_width / 2, blend_itempos1);
 item_dy = lerp(item_dy, uiPosY - 16, blend_itempos1);
-if (exists(input_actor))
+if (iexists(input_actor))
 {	// Should probably be in Step, but this is where the position is calculated.
 	input_actor.x = item_dx; // Thus, here in Draw it is!
 	input_actor.y = item_dy;

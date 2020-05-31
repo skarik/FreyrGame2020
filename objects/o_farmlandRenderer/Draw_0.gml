@@ -1,6 +1,6 @@
 /// @description Draw the farmland surface
 
-if (exists(ob_areaFarmable) && surface_exists(m_surface))
+if (iexists(ob_areaFarmable) && surface_exists(m_surface))
 {
 	// Get texture information
 	var texturePaletteLut = sprite_get_texture(s_paletteFarmland, 0);

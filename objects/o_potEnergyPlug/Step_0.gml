@@ -18,6 +18,6 @@ m_light.image_alpha = saturate(energyPower + (random(0.2) - 0.1));
 	energyPower -= Time.deltaTime * 0.5;
 	if (energyPower <= 0.0)
 	{
-		delete(this);
+		idelete(this);
 	}
 }*/

@@ -10,5 +10,5 @@ image_yscale += 0.2 * Time.deltaTime * 0.75;
 image_alpha -= Time.deltaTime * 1.5;
 if (image_alpha <= 0.0)
 {
-	delete(this);
+	idelete(this);
 }

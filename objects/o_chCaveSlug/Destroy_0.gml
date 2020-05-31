@@ -3,5 +3,5 @@
 // Inherit the parent event
 event_inherited();
 
-delete(m_light);
-delete(m_light2);
+idelete(m_light);
+idelete(m_light2);

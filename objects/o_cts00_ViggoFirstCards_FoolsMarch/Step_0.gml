@@ -57,6 +57,6 @@ if (!cutsceneUpdate())
 		// mark dialogue as seen
 		questSetValue(kQidViggoFirstCards, 1);
 		// no longer need this
-		delete(this);
+		idelete(this);
 	}
 }

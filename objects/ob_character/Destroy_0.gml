@@ -2,5 +2,5 @@
 
 if (m_initialized)
 {
-	delete(stats);
+	idelete(stats);
 }

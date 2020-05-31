@@ -1,7 +1,7 @@
 var startingNode = argument0;
 var endingNode = argument1;
 
-if (!exists(startingNode) || !exists(endingNode) || startingNode == endingNode)
+if (!iexists(startingNode) || !iexists(endingNode) || startingNode == endingNode)
 {
 	m_aipath_current = null;
 	return false;

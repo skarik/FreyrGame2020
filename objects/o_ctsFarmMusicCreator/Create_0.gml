@@ -1,35 +1,35 @@
 /// @description Create music after initial cts
 
 if (questGetValue(kQidIntroSequence) > 30
-	|| (!exists(o_cts00_0_InitialLanding) && !exists(o_cts00_3_InitialWalkDown))
+	|| (!iexists(o_cts00_0_InitialLanding) && !iexists(o_cts00_3_InitialWalkDown))
 	)
 {
 	// Create music manager
 	/*if (timeofdayIsDaytime())
 	{
-		new(o_mus00_DayDesert);
+		inew(o_mus00_DayDesert);
 	}
 	else
 	{
-		new(o_mus00_NightDesert);
+		inew(o_mus00_NightDesert);
 	}*/
-	if (!exists(o_mus00_Oasis))
+	if (!iexists(o_mus00_Oasis))
 	{
-		//new(o_mus00_Oasis);
+		//inew(o_mus00_Oasis);
 		//questSetValue(kQidIntroSequence, 40); // HACK
 	}
 	
-	if (!exists(o_mus00_FarmLight))
-		new(o_mus00_FarmLight);
+	if (!iexists(o_mus00_FarmLight))
+		inew(o_mus00_FarmLight);
 }
 else if (questGetValue(kQidIntroSequence) > 10)
 {
-	if (!exists(o_mus00_Oasis))
+	if (!iexists(o_mus00_Oasis))
 	{
-		//new(o_mus00_Oasis);
+		//inew(o_mus00_Oasis);
 	}
 }
 
 fmusic_fade_all();
 
-delete(this);
+idelete(this);

@@ -2,7 +2,7 @@
 
 event_inherited();
 
-if (!exists(o_farmlandRenderer))
+if (!iexists(o_farmlandRenderer))
 {
-	new2(o_farmlandRenderer);
+	inew(o_farmlandRenderer);
 }

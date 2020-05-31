@@ -27,7 +27,7 @@ if (charges > 0)
 	var dy = floor(y / 16) * 16 + 8;
 	
 	var till_square = collision_point(dx, dy, o_fieldSquare, false, true);
-	if (exists(till_square))
+	if (iexists(till_square))
 	{
 		if (!till_square.watered)
 		{

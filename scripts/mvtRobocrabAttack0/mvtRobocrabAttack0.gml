@@ -133,7 +133,7 @@ if (meleeAtkTimer > meleeAtk0Time)
 	
 	playerRevealHazard(kHazardRoboVoidShot);
 	
-	delete(m_meleeTelegraphVolume);
+	idelete(m_meleeTelegraphVolume);
 }
 
 // if stunned, end early
@@ -144,7 +144,7 @@ if (m_isStunned || m_isDead)
 	meleeAtkTimer = 0.0;
 	isAttacking = false;
 	
-	delete(m_meleeTelegraphVolume);
+	idelete(m_meleeTelegraphVolume);
 }
 
 // update animation

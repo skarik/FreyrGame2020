@@ -4,7 +4,7 @@ var attacker = argument2;
 switch (bloodtype)
 {
 case kBloodRed:
-	if (exists(attacker) && attacker.object_index == o_PlayerTest)
+	if (iexists(attacker) && attacker.object_index == o_PlayerTest)
 		return o_fxBloodHitPunch;
 	return o_fxBloodHitRed;
 case kBloodRedWill:

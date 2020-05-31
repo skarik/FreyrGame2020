@@ -63,9 +63,9 @@ if (!global.water_layers_ready)
 		// Onto next layer.
 	}
 	
-	/*if (array_length_1d(global.water_layers) >= 1 && !exists(o_waterTileRenderer))
+	/*if (array_length_1d(global.water_layers) >= 1 && !iexists(o_waterTileRenderer))
 	{
-		new(o_waterTileRenderer);
+		inew(o_waterTileRenderer);
 	}*/
 	
 	// Water layers are now ready.

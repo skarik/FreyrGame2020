@@ -9,7 +9,7 @@
 //{
 	//if (m_fadeOut) continue;
 			
-	/*if (exists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
+	/*if (iexists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
 	{
 		m_trackVolume[0] = 1.0;
 		m_trackVolume[1] = 1.0;

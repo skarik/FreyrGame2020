@@ -7,7 +7,7 @@ m_chest_hover = null;
 
 var chest = o_PlayerTest.m_currentChest;
 
-if (chest != null && exists(chest))
+if (chest != null && iexists(chest))
 {
 	var cursor_x = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));
 	var cursor_y = round(o_PlayerTest.vPosition - (GameCamera.y - GameCamera.height / 2));

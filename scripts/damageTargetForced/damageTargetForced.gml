@@ -47,7 +47,7 @@ var c_y2 = target.y-target.sprite_yoffset+target.sprite_height;
 
 // Select the team
 var damageTeam = kTeamNone;
-if (exists(source)) {
+if (iexists(source)) {
 	damageTeam = source.m_team;
 }
 
