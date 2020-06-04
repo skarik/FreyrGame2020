@@ -6,7 +6,7 @@ if (m_initialized)
 {
 	idelete(camera);
 	idelete(hud);
-	idelete(quests);
+	//idelete(quests);
 	
 	idelete(m_locatorLight);
 }

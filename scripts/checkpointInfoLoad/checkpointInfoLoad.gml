@@ -23,7 +23,7 @@ with (kQuestManager)
 	for (var i = 0; i < checkpoint_count; ++i)
 	{
 		// write checkpoint room name
-		var room_name = buffer_read(buffer, buffer_string);
+		var checkpoint_room_name = buffer_read(buffer, buffer_string);
 		
 		// write checkpoint id
 		var checkpoint_name = buffer_read(buffer, buffer_string);
@@ -32,6 +32,6 @@ with (kQuestManager)
 		var checkpoint_desc = buffer_read(buffer, buffer_string);
 		
 		// add checkpoint to list
-		checkpoint_list[i] = [room_get_index(room_name), checkpoint_name, checkpoint_desc];
+		checkpoint_list[i] = [room_get_index(checkpoint_room_name), checkpoint_name, checkpoint_desc];
 	}
 }

@@ -22,3 +22,6 @@ m_collider.x = x;
 m_collider.y = y;
 
 drawbuf_set_reflection(false);
+
+m_statePlayerNearby = false;
+m_stateInteracting = false;
