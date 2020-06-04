@@ -5,7 +5,8 @@
 #macro kSavestateHeader_World		"WRLD"
 #macro kSavestateHeader_Quests		"QSTS"
 #macro kSavestateHeader_EnemyInfo	"EMI"
-#macro kSavestateVersion			0x00000002
+#macro kSavestateHeader_Checkpoints	"CHKS"
+#macro kSavestateVersion			0x00000003
 
 // Save any farms before the player
 with (o_farmAreaManager)
@@ -59,6 +60,9 @@ questSave(buf);
 
 // Write out enemy flags
 enemyInfoSave(buf);
+
+// Write out checkpoint state
+checkpointInfoSave(buf);
 
 // Save buffer to file
 buffer_save(buf, kSaveFile);

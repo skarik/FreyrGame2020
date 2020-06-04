@@ -23,6 +23,26 @@
             "enumb": 10,
             "eventtype": 7,
             "m_owner": "47440c88-fed3-4de1-9062-34a9a7deab93"
+        },
+        {
+            "id": "d52d78a5-bd0a-4c75-99be-6b62618d8080",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "47440c88-fed3-4de1-9062-34a9a7deab93"
+        },
+        {
+            "id": "5321c489-31aa-4fdb-9b26-e787823e9542",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 12,
+            "m_owner": "47440c88-fed3-4de1-9062-34a9a7deab93"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -41,7 +61,50 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "3eb89f13-a50d-455d-9566-3392f0f131ab",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_majorCheckpoint",
+            "varType": 3
+        },
+        {
+            "id": "d6838694-ae2c-4134-96db-a5def8e38193",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "default",
+            "varName": "m_checkpointName",
+            "varType": 2
+        },
+        {
+            "id": "29194f13-473a-4928-bf85-872526bf905c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "Nowhere",
+            "varName": "m_checkpointDesc",
+            "varType": 2
+        }
+    ],
     "solid": false,
     "spriteId": "63ee0b46-03b5-4fa6-8c1f-df3bd381e877",
     "visible": true

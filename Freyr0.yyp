@@ -1679,6 +1679,14 @@
             }
         },
         {
+            "Key": "1c70c718-d5c5-454d-a4c2-df083fa2f164",
+            "Value": {
+                "id": "a6c5e9fd-c8a9-4431-a171-f0507a21b24a",
+                "resourcePath": "objects\\o_usableCheckpointMajor\\o_usableCheckpointMajor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1c7e221a-2f76-4733-b7c2-2d302ec33914",
             "Value": {
                 "id": "0b8733cf-9db9-4acd-9340-c52fa020c4e8",
@@ -2084,6 +2092,14 @@
                 "id": "e6f1f618-fcdf-4b88-bac8-e2ef52e4707c",
                 "resourcePath": "objects\\o_doodadWireCharm1\\o_doodadWireCharm1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "22c05cd3-c822-48ca-904f-e2a624317b53",
+            "Value": {
+                "id": "2f9351b8-6682-47b4-8d9f-f7d1f9350f34",
+                "resourcePath": "scripts\\checkpointInfoSave\\checkpointInfoSave.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5519,6 +5535,14 @@
             }
         },
         {
+            "Key": "5b32c2c3-47b7-4427-ba4a-1e5122bdb050",
+            "Value": {
+                "id": "117d68e0-0665-42f1-89ed-46705aec7f3d",
+                "resourcePath": "views\\5b32c2c3-47b7-4427-ba4a-1e5122bdb050.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5b4cc569-fa47-45c8-b349-079e3171c573",
             "Value": {
                 "id": "fad86eef-6dbc-442b-868f-2abfad34dfe8",
@@ -8199,6 +8223,14 @@
             }
         },
         {
+            "Key": "8a05b40d-bd8d-499a-aab7-b7b4bd1c3a49",
+            "Value": {
+                "id": "7143ae2d-bca7-4080-a6e6-0d666d2299ae",
+                "resourcePath": "scripts\\checkpointInfoInitialize\\checkpointInfoInitialize.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8a2187f6-4054-4cc1-9cbf-c18a1e78abf5",
             "Value": {
                 "id": "4e52c9e7-37c0-45f2-bb0b-eb31f5da58bc",
@@ -8820,6 +8852,14 @@
                 "id": "33d84a4e-04bc-49d0-91f5-5818f0b9da9a",
                 "resourcePath": "views\\939e4f35-34dd-4bb5-97e7-cae516313515.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "93ad6df2-c7a4-4854-890a-f9ac66634ba5",
+            "Value": {
+                "id": "3affcdf3-bf0e-40f0-b48e-d057be1e1575",
+                "resourcePath": "scripts\\checkpointInfoLoad\\checkpointInfoLoad.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -12020,6 +12060,14 @@
                 "id": "e7ccd2ab-f656-4005-a2ca-db7e48072bf1",
                 "resourcePath": "sounds\\snd_itemPickup\\snd_itemPickup.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "c636e759-2893-4be2-8465-7b4a5a73493c",
+            "Value": {
+                "id": "87b6e396-bbb8-470f-85b6-c04c1307df09",
+                "resourcePath": "sprites\\s_propCheckpointMajor\\s_propCheckpointMajor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -15623,6 +15671,14 @@
             }
         },
         {
+            "Key": "fe9c13e8-7013-46b2-ad67-955192fbffa2",
+            "Value": {
+                "id": "0fa2b162-a7d7-45f6-9882-4e24af21915a",
+                "resourcePath": "scripts\\checkpointInfoGiveAll\\checkpointInfoGiveAll.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fea9def3-2c6e-4670-b6c4-18a6045b35af",
             "Value": {
                 "id": "16128cd7-924d-4292-bda2-b20887b6cf1b",
@@ -16136,6 +16192,10 @@
         "aade36bb-b2bf-4336-a788-09b5dea3f1d6",
         "366cbf9a-71f3-46b4-b0ba-a00314fd1cd2",
         "15e8193e-d61e-4d1d-914f-1d21648090ee",
+        "8a05b40d-bd8d-499a-aab7-b7b4bd1c3a49",
+        "22c05cd3-c822-48ca-904f-e2a624317b53",
+        "93ad6df2-c7a4-4854-890a-f9ac66634ba5",
+        "fe9c13e8-7013-46b2-ad67-955192fbffa2",
         "e917a803-9303-41fa-b9d8-00e4872a7139",
         "490a5a58-1b5b-4d04-b293-c6efec45e2ef",
         "3576eeb4-9024-468c-b668-55eadedf5b50",

@@ -5,7 +5,7 @@ event_inherited();
 
 #region Options
 
-m_name = "Anchor";
+m_name = "Ley Anchor";
 m_actionName = "Touch";
 m_canPickUp = false;
 m_isSuperHeavy = false;
@@ -20,3 +20,5 @@ m_collider.sprite_index = sprite_index;
 m_collider.mask_index = sprite_index;
 m_collider.x = x;
 m_collider.y = y;
+
+drawbuf_set_reflection(false);

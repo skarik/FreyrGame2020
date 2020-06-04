@@ -86,6 +86,10 @@ while (buffer_tell(buf) < buffer_get_size(buf))
 	{
 		enemyInfoLoad(buf);
 	}
+	else if (next_header == kSavestateHeader_Checkpoints)
+	{
+		checkpointInfoLoad(buf);
+	}
 }
 
 // Free resources
