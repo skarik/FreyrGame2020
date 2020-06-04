@@ -9,4 +9,5 @@ with (kQuestManager)
 	// [2] : desc (string)
 	
 	checkpoint_list[0] = [rm_oasis_farm, "default", "Oasis Farm"];
+	checkpoint_list[1] = [rm_test_combat, "default", "Debug: Combat Test"];
 }

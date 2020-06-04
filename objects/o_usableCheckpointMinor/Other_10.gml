@@ -10,6 +10,12 @@ if (m_usable && iexists(m_user) && m_user.id == pl.id)
 		inew(o_CtsReenablePlayerOnCtsEnd);
 	}*/
 	
+	// unlock if major
+	if (m_majorCheckpoint)
+	{
+		checkpointInfoUnlock(id);
+	}
+	
 	// play audio
 	var audio = sound_play_at(x, y, snd_CheckpointClassic);
 	

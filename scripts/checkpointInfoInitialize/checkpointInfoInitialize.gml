@@ -22,3 +22,9 @@ persistent = true;
 
 // initialized quest system
 debugOut("initialized checkpoint list");
+
+// Unlock all for testing
+if (debug_mode)
+{
+	checkpointInfoGiveAll();
+}

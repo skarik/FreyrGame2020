@@ -5,7 +5,7 @@ event_inherited();
 
 #region Options
 
-m_name = "Ley Anchor";
+m_name = "Iconolith";
 m_actionName = "Touch";
 m_canPickUp = false;
 m_isSuperHeavy = false;

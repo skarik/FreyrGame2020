@@ -11511,6 +11511,14 @@
             }
         },
         {
+            "Key": "be7615a4-dd3f-49d0-9383-622cdfe9ed1f",
+            "Value": {
+                "id": "b8524421-74e8-4fb4-9400-1d43a06b0b3c",
+                "resourcePath": "scripts\\checkpointInfoUnlock\\checkpointInfoUnlock.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "be76cdca-cc14-4102-b731-d014f6a1860c",
             "Value": {
                 "id": "31b7b631-0030-4338-bb0e-2ecf1b6ae7fa",
@@ -16196,6 +16204,7 @@
         "22c05cd3-c822-48ca-904f-e2a624317b53",
         "93ad6df2-c7a4-4854-890a-f9ac66634ba5",
         "fe9c13e8-7013-46b2-ad67-955192fbffa2",
+        "be7615a4-dd3f-49d0-9383-622cdfe9ed1f",
         "e917a803-9303-41fa-b9d8-00e4872a7139",
         "490a5a58-1b5b-4d04-b293-c6efec45e2ef",
         "3576eeb4-9024-468c-b668-55eadedf5b50",
