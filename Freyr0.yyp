@@ -12895,6 +12895,14 @@
             }
         },
         {
+            "Key": "d31cdf1e-d831-473f-b3f9-9c08a5764d5f",
+            "Value": {
+                "id": "f3fb5633-4632-4f8e-9ff7-cc73e8d77d69",
+                "resourcePath": "sounds\\snd_CheckpointTouch\\snd_CheckpointTouch.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "d3270700-d484-400f-abee-692a7825e513",
             "Value": {
                 "id": "8c5e4248-88dd-4b4f-a3c1-aaeacbefdba7",

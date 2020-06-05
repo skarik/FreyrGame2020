@@ -10,7 +10,7 @@ with (kQuestManager)
 	// [1] : id (string)
 	// [2] : desc (string)
 	
-	var last_sibling_checkpoint_index = 0;
+	var last_sibling_checkpoint_index = -1;
 	
 	// Search if the checkpoint is in the existing list
 	var checkpoint_count = array_length_1d(checkpoint_list);
@@ -32,7 +32,7 @@ with (kQuestManager)
 	
 	// If not in the list, we add it (next to the same place with the room)
 	// First we have to copy things
-	for (var i = checkpoint_count; i > last_sibling_checkpoint_index; --i)
+	for (var i = checkpoint_count; i > last_sibling_checkpoint_index + 1; --i)
 	{
 		checkpoint_list[i] = checkpoint_list[i - 1];
 	}

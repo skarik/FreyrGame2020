@@ -1,4 +1,4 @@
-var suiChoiceBox = iexists(o_CtsBlackBoxes) ? sui_choiceBox3Black : sui_choiceBox4;
+var suiChoiceBox = ((iexists(o_CtsBlackBoxes) || display_blackbox_override) && !display_whitebox_override) ? sui_choiceBox3Black : sui_choiceBox4;
 var dx, dy;
 
 draw_set_font(display_font);

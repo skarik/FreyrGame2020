@@ -40,7 +40,7 @@ else if (m_state == CtsDeath.S3Blackness)
 		// Ask for if we want to restart at last checkpoint or at the farm
 		var gabber = inew(o_CtsChoiceBox);
 			gabber.input_choice_count = 2;
-			gabber.input_choice[0] = "Revive at save pillar";
+			gabber.input_choice[0] = "Return to previous Iconolith";
 			gabber.input_choice[1] = "Return to the oasis farm";
 			gabber.input_actor = id;
 			gabber.depth = depth - 1;

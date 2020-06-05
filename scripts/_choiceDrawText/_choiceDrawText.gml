@@ -1,3 +1,4 @@
+var blackbox = ((iexists(o_CtsBlackBoxes) || display_blackbox_override) && !display_whitebox_override);
 
 var dx, dy;
 dx = uiPosX; 
@@ -28,10 +29,10 @@ for (var option = 0; option < input_choice_count; ++option)
         if (option == display_choice)
             penc = c_gold;
         else
-            penc = iexists(o_CtsBlackBoxes) ? c_white : c_black;
+			penc = blackbox ? c_white : c_black;
             
         // draw the text
-        draw_set_color( (option == display_choice) ? c_gray : (iexists(o_CtsBlackBoxes) ? c_dkgray : c_white) );
+        draw_set_color( (option == display_choice) ? c_gray : (blackbox ? c_dkgray : c_white) );
         draw_text(dx + penx, dy + peny + 1, string_hash_to_newline(char));    
         draw_set_color( penc );
         draw_text(dx + penx, dy + peny, string_hash_to_newline(char));
