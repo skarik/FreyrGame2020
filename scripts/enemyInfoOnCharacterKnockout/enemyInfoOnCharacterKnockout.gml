@@ -1,4 +1,4 @@
-/// @function enemyInfoOnDeath
+/// @function enemyInfoOnCharacterKnockout
 
 // Track the death
 {
@@ -25,8 +25,8 @@ if (m_saveTracked)
 	{
 		enemy_info = array_create(3);
 	}
-	//enemy_info[0] += 1; // KO's
-	enemy_info[1] += 1; // Murdered/deaths
+	enemy_info[0] += 1; // KO's
+	//enemy_info[1] += 1; // Murdered/deaths
 	
 	// Save the new data
 	with (kQuestManager)

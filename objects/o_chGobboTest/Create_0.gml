@@ -63,6 +63,7 @@ kAnimWalking = sprite_index;
 kAnimRolling = sprite_index;
 kAnimAttack1 = s_charGobbo0Atk1;
 kAnimStun = sprite_index;
+kAnimKOed = s_charGobbo0KOed;
 
 // Special anim used by gobbo AI
 kAnimSignal = s_charGobbo0Point;

@@ -5,7 +5,7 @@ event_inherited();
 
 // Run animation when opening:
 var animationIndexPrev = animationIndex;
-if (m_isDead)
+if (m_isKOed)
 {
 	animationIndex += Time.deltaTime * 15.0;
 }

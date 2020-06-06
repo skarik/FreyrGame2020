@@ -15,6 +15,7 @@ kAnimSinkFalling = sprite_index;
 kAnimAttack1 = sprite_index;
 kAnimDig1 = sprite_index;
 kAnimHarvest1 = sprite_index;
+kAnimKOed = sprite_index;
 
 image_speed = 0.0;
 

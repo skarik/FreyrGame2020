@@ -1,9 +1,10 @@
 /// @description Status and Callbacks
 
 // Set up callback states
-var do_death_callback = false;
+var do_knockout_callback = false;
 var do_hurt_callback = false;
 var do_stun_callback = false;
+var do_death_callback = false;
 
 // Check for stun timer
 m_stunTimer -= Time.deltaTime;
@@ -34,17 +35,33 @@ if (stats.m_health < stats.m_healthPrev)
 	// Update on-hurt marker
 	stats.m_healthLastHit = stats.m_healthPrev;
 	
-	// Check for death
-	if (stats.m_health <= 0 && !m_isDead)
+	// Check for knockout
+	if (stats.m_health <= 0 && !m_isKOed)
 	{
-		do_death_callback = true;
+		do_knockout_callback = true;
+		if (m_dieInsteadOfKO)
+		{
+			do_death_callback = true;
+		}
 	}
 	else
 	{
 		do_hurt_callback = true;
 	}
+	
+	// Do death checks
+	if (m_isKOed)
+	{
+		stats.m_kohits -= 1;
+		
+		if (stats.m_kohits <= 0 && !m_isDead)
+		{
+			do_death_callback = true;
+		}
+	}
 }
 stats.m_healthPrev = stats.m_health;
+stats.m_kohitsPrev = stats.m_kohits;
 
 // Check for if stunned
 if (stats.m_stun > stats.m_stunPrev)
@@ -61,15 +78,19 @@ if (stats.m_stun > stats.m_stunPrev)
 stats.m_stunPrev = stats.m_stun;
 
 // Perform callbacks
-if (do_death_callback)
-{
-	event_user(0);
-}
 if (do_hurt_callback)
 {
-	event_user(1);
+	event_user(kEvent_ChOnHurt1);
 }
-if (!do_death_callback && do_stun_callback)
+if (!do_knockout_callback && !do_death_callback && do_stun_callback)
 {
-	event_user(2);
+	event_user(kEvent_ChOnStun2);
+}
+if (do_knockout_callback)
+{
+	event_user(kEvent_ChOnKO0);
+}
+if (do_death_callback)
+{
+	event_user(kEvent_ChOnDeath4);
 }

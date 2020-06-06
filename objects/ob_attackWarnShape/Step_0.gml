@@ -2,7 +2,7 @@
 
 if (iexists(m_source))
 {
-	if (m_source.m_isDead)
+	if (m_source.m_isKOed)
 	{
 		idelete(this);
 	}

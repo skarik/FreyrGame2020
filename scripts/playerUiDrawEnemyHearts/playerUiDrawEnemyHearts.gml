@@ -94,10 +94,12 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 		continue;
 	}
 	
+	var draw_stamina = (t_enemy.stats.m_stunMax > 0) && (!t_enemy.m_isKOed);
+	
 	if (timers[0] > 0.0)
 	{
 		// get max health to calculate number of hearts needed
-		var t_numHearts = ceil(t_enemy.stats.m_healthMax / 8.0);
+		var t_numHearts = t_enemy.m_isKOed ? t_enemy.stats.m_kohitsMax : ceil(t_enemy.stats.m_healthMax / 8.0);
 		var t_healthDiv = t_enemy.stats.m_healthMax / t_numHearts;
 	
 		// calculate the width of the hearts volume
@@ -105,13 +107,13 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 	
 		// find imaginary starting point from the center to the left
 		var t_xoffset = (t_wcount - 1) / 2.0 * (kHeartSize + 1);
-		var t_yoffset = (kHeartSize + 1) * ceil(t_numHearts / t_wcount) + ((t_enemy.stats.m_stunMax > 0) ? 7 : 3);
+		var t_yoffset = (kHeartSize + 1) * ceil(t_numHearts / t_wcount) + (draw_stamina ? 7 : 3);
 	
 		var t_heartPenX = 0.0;
 		var t_heartPenY = 0.0;
-		for (var iheart = 0; iheart < t_numHearts; ++iheart)
+		var t_heartDrawCount = t_enemy.m_isKOed ? t_enemy.stats.m_kohits : t_numHearts; // switch to kohit hearts when ko'd
+		for (var iheart = 0; iheart < t_heartDrawCount; ++iheart)
 		{
-			//var l_baseHealth = (ceil(t_enemy.stats.m_health * 4) / 4) - t_healthDiv * iheart;
 			var l_baseHealth = (ceil(timers[2] * 4) / 4) - t_healthDiv * iheart;
 			var l_imageIndex = floor(4.99 * (1.0 - saturate(l_baseHealth / t_healthDiv)));
 			
@@ -139,8 +141,7 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 	}
 	
 	// draw the stun bar below the health
-	//if (t_enemy.m_uiwantsStaminaShown && t_enemy.stats.m_stunMax > 0)
-	if (timers[1] > 0.0 && t_enemy.stats.m_stunMax > 0)
+	if (timers[1] > 0.0 && draw_stamina)
 	{
 		// get max stun to calculate number of bips needed
 		var t_numStuns = min(8, ceil(t_enemy.stats.m_stunMax));

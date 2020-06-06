@@ -3,7 +3,7 @@
 
 with (argument0)
 {
-	if (!iexists(m_spawned_enemy) || m_spawned_enemy.m_isDead)
+	if (!iexists(m_spawned_enemy) || m_spawned_enemy.m_isKOed || m_spawned_enemy.m_isDead)
 	{
 		idelete(m_spawned_enemy);
 		

@@ -1,5 +1,7 @@
 /// @description Check approach state
 
+depthUpdate();
+
 var pl = getPlayer();
 var pl_dist_sqr = sqr(x - pl.x) + sqr(y - pl.y);
 var glow_dist_sqr = sqr(80);

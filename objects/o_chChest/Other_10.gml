@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-m_isDead = true;
+m_isKOed = true;
 
 for (var dangle = 0; dangle < 360; dangle += 60)
 {

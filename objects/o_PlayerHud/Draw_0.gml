@@ -14,7 +14,7 @@ draw_set_color(merge_color(make_color_rgb(128, 128, 128), color0, 0.2));
 draw_rectangle(GameCamera.x - GameCamera.width, GameCamera.y - GameCamera.height, GameCamera.x + GameCamera.width, GameCamera.y + GameCamera.height, false);
 paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, 0.8));
 */
-if (surface_exists(m_surface) && !o_PlayerTest.m_isDead && m_inCutsceneBlend < 1.0)
+if (surface_exists(m_surface) && !o_PlayerTest.m_isKOed && m_inCutsceneBlend < 1.0)
 {
 	var dx = GameCamera.x - GameCamera.width / 2;
 	var dy = GameCamera.y - GameCamera.height / 2;

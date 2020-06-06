@@ -1,7 +1,7 @@
 // Perform area checks
 inWater = areaInWater(x, y, z + z_height);
 
-var l_canMove = canMove && !m_isDead && !m_isStunned;// && !isBusyInteracting && !m_usingInventory;
+var l_canMove = canMove && !m_isKOed && !m_isStunned;// && !isBusyInteracting && !m_usingInventory;
 
 // Set up the move speed
 var l_moveSpeed = kMoveSpeed;

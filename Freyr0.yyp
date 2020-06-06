@@ -5319,6 +5319,14 @@
             }
         },
         {
+            "Key": "56cfa5d9-1bcb-4981-a72f-af26125ed925",
+            "Value": {
+                "id": "547f4fcd-c0fa-4ad1-81f5-1fb94dc43251",
+                "resourcePath": "scripts\\enemyInfoOnCharacterKnockout\\enemyInfoOnCharacterKnockout.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "56defef2-7f45-4c04-8c8f-285880ba8c61",
             "Value": {
                 "id": "60118cc5-ae0b-4a6f-8489-ea62e253d17d",
@@ -9819,6 +9827,14 @@
             "Value": {
                 "id": "ea9eeaf4-9fab-49b4-b769-dc28b4cc24d5",
                 "resourcePath": "sprites\\s_charHeroStand\\s_charHeroStand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a35154a8-9480-4966-8e09-827d7201c006",
+            "Value": {
+                "id": "a3f8900a-0e50-4f6c-9b4d-3ec1d0d5f539",
+                "resourcePath": "sprites\\s_charGobbo0KOed\\s_charGobbo0KOed.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -16243,6 +16259,7 @@
         "1b94ce35-6c49-4b3a-ae22-a65c7722bb9c",
         "19c94e04-7ef5-4ce8-b1fc-8a51d8fab8b0",
         "2f541bd4-cda9-4553-88fd-049e933f9c41",
+        "56cfa5d9-1bcb-4981-a72f-af26125ed925",
         "2b622a18-b89f-489f-8e3d-96b52fcedda2",
         "fa05136d-3b7e-479d-b9e7-f47c7b1cbb42",
         "aade36bb-b2bf-4336-a788-09b5dea3f1d6",

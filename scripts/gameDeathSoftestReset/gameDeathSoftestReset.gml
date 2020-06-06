@@ -1,6 +1,6 @@
 with (o_PlayerTest)
 {
-	m_isDead = false;
+	m_isKOed = false;
 	/*x = xstart;
 	y = ystart;
 	
