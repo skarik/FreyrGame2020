@@ -3279,6 +3279,14 @@
             }
         },
         {
+            "Key": "353624b7-f473-4968-832c-1b90b3bb417a",
+            "Value": {
+                "id": "40b38395-66f1-4284-9c34-66f56b0cc271",
+                "resourcePath": "objects\\o_spawnerCaveSlug\\o_spawnerCaveSlug.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "356c07c3-31fc-4724-9e27-e20418a20a9d",
             "Value": {
                 "id": "1d0b0c4d-e3b5-4847-ae8e-e687b9b402d2",
@@ -9212,6 +9220,14 @@
                 "id": "54414aa9-a5d9-46e0-92a9-d0e0b1c7d688",
                 "resourcePath": "sprites\\s_propSmallCactus\\s_propSmallCactus.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "98e37e2e-c3a0-4db2-9686-5a3c1a4ebf8a",
+            "Value": {
+                "id": "e1c9567a-d23a-4c7e-81ce-3894d8cb0394",
+                "resourcePath": "objects\\o_spawnerRoboCrab\\o_spawnerRoboCrab.yy",
+                "resourceType": "GMObject"
             }
         },
         {
