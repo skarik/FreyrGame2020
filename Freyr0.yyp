@@ -3023,6 +3023,14 @@
             }
         },
         {
+            "Key": "2fa50d19-8a8a-4cdf-9f7a-7e95be0ae925",
+            "Value": {
+                "id": "debf40ee-9267-42f7-b473-c4b15658eb99",
+                "resourcePath": "scripts\\checkpointOpenTeleportMenu\\checkpointOpenTeleportMenu.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2fc01219-717c-4371-8d6a-f7abaf56bea7",
             "Value": {
                 "id": "bff9dc55-3957-480c-bbd1-0f735b042587",
@@ -7335,6 +7343,14 @@
             }
         },
         {
+            "Key": "79bc606e-9969-4931-a1cc-e9690e0a4936",
+            "Value": {
+                "id": "8ea3004a-e425-492a-a60a-44f78a98a2bc",
+                "resourcePath": "objects\\o_usableCheckpoint_Teleporter\\o_usableCheckpoint_Teleporter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "79e592e8-1429-4678-96dc-9bc172f71a57",
             "Value": {
                 "id": "57ea0d91-50a5-40f8-bdc8-dbbc2fc72b55",
@@ -9300,6 +9316,14 @@
                 "id": "1288ee6c-e6cf-4782-89f3-ec045d9cb214",
                 "resourcePath": "scripts\\aiNPCLookBusyUpdate\\aiNPCLookBusyUpdate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9afb86c2-aeef-4e4f-88f2-74838ab220d2",
+            "Value": {
+                "id": "c60067e6-e883-402e-9c89-a5a9a5bc9f94",
+                "resourcePath": "views\\9afb86c2-aeef-4e4f-88f2-74838ab220d2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -11527,6 +11551,14 @@
             }
         },
         {
+            "Key": "bec3ceae-7c4f-4e88-9106-d1e1aca198c5",
+            "Value": {
+                "id": "13736627-62e7-494c-8d82-012465c07aee",
+                "resourcePath": "scripts\\checkpointTeleportTo\\checkpointTeleportTo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bec3e5f0-d50b-44db-be78-6806ed0a95b3",
             "Value": {
                 "id": "93db48d4-4184-42b5-8d37-fb7e0fc64701",
@@ -13123,6 +13155,14 @@
             "Value": {
                 "id": "e0510695-84a8-4ca3-b755-75e76ecde66b",
                 "resourcePath": "scripts\\playerCheckpointSave\\playerCheckpointSave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d7978724-5687-4362-91bc-d38f490dcc50",
+            "Value": {
+                "id": "726018fd-2748-44c5-9fa0-48253acaf850",
+                "resourcePath": "scripts\\checkpointStepTeleportMenu\\checkpointStepTeleportMenu.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -16351,6 +16391,9 @@
         "59d1f763-2eb5-4606-8f1d-677e64651de7",
         "c308f0cd-0ab1-4c9d-a41a-2cf6347a233c",
         "1289cc7c-29a9-48e1-9226-92171a1aebda",
+        "2fa50d19-8a8a-4cdf-9f7a-7e95be0ae925",
+        "d7978724-5687-4362-91bc-d38f490dcc50",
+        "bec3ceae-7c4f-4e88-9106-d1e1aca198c5",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""

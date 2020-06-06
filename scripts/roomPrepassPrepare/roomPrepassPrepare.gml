@@ -1,5 +1,7 @@
 // Called by Game.onRoomStart().
 
+debugOut("Room starting. Prepping.");
+
 // Creates all doodads, converting 
 doodadSetupOnRoomStart();
 

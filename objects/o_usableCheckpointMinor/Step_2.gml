@@ -24,8 +24,9 @@ if (m_stateInteracting)
 	if (!iexists(o_CtsChoiceBox))
 	{
 		m_stateInteracting = false;
+		m_stateInteractingWarping = false;
 	}
-	else
+	else if (!m_stateInteractingWarping)
 	{
 		if (cutsceneIsChoiceReady())
 		{
@@ -58,9 +59,25 @@ if (m_stateInteracting)
 				gameSaveSpecific(kSaveFromCheckpointMinor);
 			}
 			else if (choice == 2)
-			{	// Warp
-				m_stateInteracting = false;
+			{	// Warp				
+				// remove old menu
+				idelete(o_CtsChoiceBox);
+				
+				// open the teleport menu
+				checkpointOpenTeleportMenu();
+				
+				// switch to interacting state
+				m_stateInteracting = true;
+				m_stateInteractingWarping = true;
 			}
+		}
+	}
+	else
+	{
+		if (!checkpointStepTeleportMenu())
+		{
+			m_stateInteracting = false;
+			m_stateInteractingWarping = false;
 		}
 	}
 }

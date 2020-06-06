@@ -34,7 +34,8 @@ if (m_usable && iexists(m_user) && m_user.id == pl.id)
 			
 		with (m_user) controlZero(true);
 		with (m_user) canMove = false;
-		inew(o_CtsReenablePlayerOnCtsEnd);
+		var reenabler = inew(o_CtsReenablePlayerOnCtsEnd);
+			reenabler.persistent = true;
 	}
 	
 	m_stateInteracting = true;

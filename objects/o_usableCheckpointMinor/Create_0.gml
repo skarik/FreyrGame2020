@@ -25,3 +25,4 @@ drawbuf_set_reflection(false);
 
 m_statePlayerNearby = false;
 m_stateInteracting = false;
+m_stateInteractingWarping = false;
