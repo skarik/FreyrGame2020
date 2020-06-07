@@ -13,7 +13,9 @@ else if (!isDashing)
 	dashCooldown -= Time.deltaTime;
 }
 // Do blocking
-if (dodgeButton.down && l_canMove && onGround && !m_isHolding /*&& !m_isTilling && !m_isPlanting*/ && !iexists(currentHeldUsable))
+if (dodgeButton.down && l_canMove && onGround 
+	&& !isAttacking && !isDashing
+	&& !m_isHolding && !iexists(currentHeldUsable))
 {
 	isBlocking = true;
 }
