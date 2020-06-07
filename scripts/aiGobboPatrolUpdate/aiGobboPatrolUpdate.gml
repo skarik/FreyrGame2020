@@ -138,7 +138,8 @@ else
 								emote_fx.m_target = id;
 								emote_fx.image_index = 2;
 			
-							m_aiCombat_angry = true;
+							//m_aiCombat_angry = true;
+							event_user(kEvent_AIOnAngry12);
 						}
 					}
 				}

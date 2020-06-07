@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "0979ef80-2353-424f-b7ed-96a620042d95",
+            "Value": {
+                "id": "a785ffec-ce55-4489-ae24-247be54ea320",
+                "resourcePath": "objects\\o_aiNotifyArea32\\o_aiNotifyArea32.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "09867cdd-1abd-4a43-9c97-8d02d8293329",
             "Value": {
                 "id": "63c3d6d2-2a70-49d8-a158-a5543203be2e",
@@ -2311,6 +2319,14 @@
             }
         },
         {
+            "Key": "2700893b-1d90-42e7-a4ce-a212fa179ceb",
+            "Value": {
+                "id": "1a8572f8-8573-4d69-ba32-a1fecf139567",
+                "resourcePath": "objects\\ob_areaAINotify\\ob_areaAINotify.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2722e2ed-5491-437f-8a8d-5a64dca67687",
             "Value": {
                 "id": "b5d8848d-f8c8-46ab-a738-ec003cc00bbe",
@@ -3855,6 +3871,14 @@
             }
         },
         {
+            "Key": "3e70a781-eaa0-4d24-9231-e826d213ba49",
+            "Value": {
+                "id": "96fdc7ab-5545-4712-af32-89f9c880d00c",
+                "resourcePath": "views\\3e70a781-eaa0-4d24-9231-e826d213ba49.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3ed365d3-2946-4bc0-b642-351901f3aa01",
             "Value": {
                 "id": "e81fae1e-d559-48b4-8ced-199782d1088c",
@@ -4828,6 +4852,14 @@
                 "id": "0fa36eb7-4880-4031-9453-b286ed6443e1",
                 "resourcePath": "sprites\\s_cropPotato\\s_cropPotato.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4eaae182-0328-4746-bdd8-863491d10674",
+            "Value": {
+                "id": "b3f6215b-5d85-490a-a74a-478fcba3008b",
+                "resourcePath": "scripts\\aiGAlertInit\\aiGAlertInit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5884,6 +5916,14 @@
                 "id": "57e64b5b-f869-450a-b426-773a38b0213a",
                 "resourcePath": "datafiles_yy\\audio\\oasis_1_bass.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "60b8ad34-1c92-4a41-ac8e-32b3423a5d72",
+            "Value": {
+                "id": "317ba4d8-1312-4894-91f2-a4f6ced478db",
+                "resourcePath": "views\\60b8ad34-1c92-4a41-ac8e-32b3423a5d72.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6964,6 +7004,14 @@
                 "id": "a7b61556-5362-4f27-bba5-a48a35f51a55",
                 "resourcePath": "sprites\\s_monSlimeRed\\s_monSlimeRed.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7200ecf1-32f9-478a-a80e-1dea653842d5",
+            "Value": {
+                "id": "dfd56e19-a578-4bc2-bde4-18acf7ed10ae",
+                "resourcePath": "scripts\\aiGAlertUpdateCurrent\\aiGAlertUpdateCurrent.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8244,6 +8292,14 @@
                 "id": "05802c02-98dc-4627-b0e7-ab3292ebe474",
                 "resourcePath": "scripts\\audio_get_index\\audio_get_index.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "89bcd4f5-b47b-4758-9fa2-5463f8330001",
+            "Value": {
+                "id": "a654613f-b4e8-43b8-95fb-6d07ab4a1d70",
+                "resourcePath": "views\\89bcd4f5-b47b-4758-9fa2-5463f8330001.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -11420,6 +11476,14 @@
                 "id": "3c29f24d-c69f-4328-8f97-77728c1f0598",
                 "resourcePath": "scripts\\characterAnimInit\\characterAnimInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bacec34a-9051-4fd7-88c8-2a059c8923e3",
+            "Value": {
+                "id": "de48827c-f395-482c-a335-de07e3b478d8",
+                "resourcePath": "sprites\\ssy_aiNotify\\ssy_aiNotify.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -16346,6 +16410,8 @@
         "c15e8f86-8b64-46fc-a2d9-a6a0b027190b",
         "41abc523-b098-46b0-9b93-936ca2dc753c",
         "de245fd7-f4a9-490a-8933-16aea1031d9b",
+        "4eaae182-0328-4746-bdd8-863491d10674",
+        "7200ecf1-32f9-478a-a80e-1dea653842d5",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",
