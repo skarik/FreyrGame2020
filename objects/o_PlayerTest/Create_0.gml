@@ -78,6 +78,10 @@ m_itemBalanceSpeed = [0, 0];
 	stats.m_stunMax = 5.0;
 #endregion
 
+#region Checkpoint state
+	playerCheckpointInit();
+#endregion
+
 #region Constants
 
 kMoveSpeed = 120;

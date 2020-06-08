@@ -5,7 +5,8 @@
 #macro kSavestateHeader_World		"WRLD"
 #macro kSavestateHeader_Quests		"QSTS"
 #macro kSavestateHeader_EnemyInfo	"EMI"
-#macro kSavestateVersion			0x00000001
+#macro kSavestateHeader_Checkpoints	"CHKS"
+#macro kSavestateVersion			0x00000003
 
 // Save any farms before the player
 with (o_farmAreaManager)
@@ -34,6 +35,11 @@ savestateWriteBufferHeader(buf, kSavestateHeader_PlayerInfo, kSavestateVersion);
 	buffer_write(buf, buffer_string, room_get_name(room));
 	buffer_write(buf, buffer_u32, pl.x);
 	buffer_write(buf, buffer_u32, pl.y);
+	
+	buffer_write(buf, buffer_u32, pl.m_checkpoint_valid);
+	buffer_write(buf, buffer_string, room_get_name(pl.m_checkpoint_room));
+	buffer_write(buf, buffer_u32, pl.m_checkpoint_x);
+	buffer_write(buf, buffer_u32, pl.m_checkpoint_y);
 }
 
 // write inventory
@@ -54,6 +60,9 @@ questSave(buf);
 
 // Write out enemy flags
 enemyInfoSave(buf);
+
+// Write out checkpoint state
+checkpointInfoSave(buf);
 
 // Save buffer to file
 buffer_save(buf, kSaveFile);

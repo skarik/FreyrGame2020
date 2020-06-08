@@ -37,6 +37,6 @@ xoffset = 0;
 yoffset = 0; 
 var prev_glow = m_glowAlpha;
 m_glowAlpha = m_glowAlpha * 0.3;
-event_user(5);
+event_user(kEvent_Lighting5);
 m_glowAlpha = prev_glow;
 gpu_set_blendmode(bm_normal);

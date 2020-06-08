@@ -51,7 +51,9 @@ else
 			else
 			{
 				// With enemy info, count number of deaths/ko's
-				if (max(enemy_info[0], enemy_info[1]) > m_respawnCount)
+				//if (max(enemy_info[0], enemy_info[1]) > m_respawnCount)
+				// only deaths count for now
+				if (enemy_info[1] > m_respawnCount)
 				{
 					return kEnemyInfoLoadAction_DontSpawn; // No need to spawn if here.
 				}

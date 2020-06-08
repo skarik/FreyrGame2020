@@ -78,3 +78,16 @@ windAudioGlobalUpdate();
 
 // Update MLG mode
 mlgmodeGlobalUpdate();
+
+// Update slowstep tick
+slowstep_tick -= Time.deltaTime;
+if (slowstep_tick <= 0.0)
+{
+	slowstep_tick += Time.deltaTime;
+	
+	// Perform slow step on all objects that have it.
+	with (ob_character)
+	{
+		event_user(kEvent_ChSlowStep7);
+	}
+}

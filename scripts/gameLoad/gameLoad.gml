@@ -53,6 +53,11 @@ while (buffer_tell(buf) < buffer_get_size(buf))
 		target_room		= room_get_index(buffer_read(buf, buffer_string));
 		pl.x            = buffer_read(buf, buffer_u32);
 		pl.y            = buffer_read(buf, buffer_u32);
+		
+		pl.m_checkpoint_valid = buffer_read(buf, buffer_u32);
+		pl.m_checkpoint_room = room_get_index(buffer_read(buf, buffer_string));
+		pl.m_checkpoint_x = buffer_read(buf, buffer_u32);
+		pl.m_checkpoint_y = buffer_read(buf, buffer_u32);
 	}
 	else if (next_header == kSavestateHeader_Inventory)
 	{
@@ -81,12 +86,22 @@ while (buffer_tell(buf) < buffer_get_size(buf))
 	{
 		enemyInfoLoad(buf);
 	}
+	else if (next_header == kSavestateHeader_Checkpoints)
+	{
+		checkpointInfoLoad(buf);
+	}
 }
 
 // Free resources
 buffer_delete(buf);
 
 // Move all player objects to the main object
+if (pl.m_checkpoint_valid)
+{
+	pl.x = pl.m_checkpoint_x;
+	pl.y = pl.m_checkpoint_y;
+	target_room = pl.m_checkpoint_room;
+}
 with (o_PlayerTest)
 {
     x = pl.x;
@@ -95,7 +110,10 @@ with (o_PlayerTest)
 
 // Now go to the target room
 global._transition_source = null;
-transition_to(target_room); 
+transition_to(target_room);
+
+// Update the checkpoint state
+playerCheckpointSave(pl.x, pl.y, target_room);
 
 // Return a successful load
 return true;

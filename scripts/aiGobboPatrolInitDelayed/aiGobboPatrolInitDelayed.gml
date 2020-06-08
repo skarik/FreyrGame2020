@@ -1,6 +1,6 @@
 
 var o_seed = mt19937_get_state();
-mt19937_seed(id);
+mt19937_seed(m_enemyinfo_id);
 
 // Start path with center point
 m_aiGobbo_patrol[0] = [m_aiGobbo_centerX, m_aiGobbo_centerY];

@@ -1,8 +1,8 @@
-/// @description On Death (health < 0)
+/// @description On KO (health < 0)
 
-if (!m_isDead)
+if (!m_isKOed)
 {
-	enemyInfoOnCharacterDeath();
+	enemyInfoOnCharacterKnockout();
 }
 
-m_isDead = true;
+m_isKOed = true;

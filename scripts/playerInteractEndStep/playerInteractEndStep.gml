@@ -1,4 +1,4 @@
-var l_canMove = canMove && !m_isDead && !m_isStunned && !isBusyInteracting && !m_usingInventory && !m_usingBook;
+var l_canMove = canMove && !m_isKOed && !m_isStunned && !isBusyInteracting && !m_usingInventory && !m_usingBook;
 
 // Do dashing
 if (dashCooldown <= 0.0)
@@ -13,7 +13,10 @@ else if (!isDashing)
 	dashCooldown -= Time.deltaTime;
 }
 // Do blocking
-if (dodgeButton.down && l_canMove && onGround && !m_isHolding && !m_isTilling && !m_isPlanting && !m_isHarvesting && !iexists(currentHeldUsable))
+if (dodgeButton.down && l_canMove && onGround
+	&& !isAttacking && !isDashing
+	&& !m_isTilling && !m_isPlanting && !m_isHarvesting
+	&& !m_isHolding && !iexists(currentHeldUsable))
 {
 	isBlocking = true;
 }

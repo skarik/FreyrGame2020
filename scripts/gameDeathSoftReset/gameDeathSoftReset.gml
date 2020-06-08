@@ -1,6 +1,6 @@
 with (o_PlayerTest)
 {
-	m_isDead = false;
+	m_isKOed = false;
 	x = xstart;
 	y = ystart;
 	
@@ -11,3 +11,5 @@ with (o_PlayerTest)
 	
 	stats.m_health = ceil(stats.m_healthMax * 0.4);
 }
+
+gameRespawnEnemies(kRespawnEnemeiesAll);

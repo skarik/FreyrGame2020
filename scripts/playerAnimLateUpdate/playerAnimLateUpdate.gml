@@ -62,6 +62,16 @@ if (!moAnimationPlayback)
 	{
 		// Nothing
 	}
+	else if (m_isDead)
+	{
+		sprite_index = kAnimKOed;
+		animationSpeed = 0.0;
+	}
+	else if (m_isKOed)
+	{
+		sprite_index = kAnimKOed;
+		animationSpeed = 3.0;
+	}
 	else if (m_isStunned)
 	{
 		sprite_index = kAnimStun;

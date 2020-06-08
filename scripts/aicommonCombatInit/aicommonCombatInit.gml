@@ -11,3 +11,5 @@ m_aiCombat_target = null;
 m_aiCombat_targetPosition = [0, 0];
 m_aiCombat_targetVisible = false;
 m_aiCombat_updateInterval = 0;
+
+aiGAlertInit();

@@ -5,7 +5,7 @@ event_inherited();
 
 #region Options
 
-m_name = "Anchor";
+m_name = "Iconolith";
 m_actionName = "Touch";
 m_canPickUp = false;
 m_isSuperHeavy = false;
@@ -20,3 +20,12 @@ m_collider.sprite_index = sprite_index;
 m_collider.mask_index = sprite_index;
 m_collider.x = x;
 m_collider.y = y;
+
+drawbuf_set_reflection(false);
+
+m_statePlayerNearby = false;
+m_stateInteracting = false;
+m_stateInteractingWarping = false;
+
+depthInit();
+z = collision3_get_highest_position(x, y, 0);

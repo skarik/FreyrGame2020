@@ -30,8 +30,9 @@ _playerMotionCommonCollision();
 x += xspeed * Time.deltaTime;
 y += yspeed * Time.deltaTime;
 
-// if before the hit time or after the key time, we can dash out of it
-if (meleeAtkTimer < meleeAtk0Hit || meleeAtkTimer > meleeAtk0Key)
+// if before the hit time or after the early-key (hit->key) time, we can dash out of it
+var kMeleeAtkEarlyKey = lerp(meleeAtk0Hit, meleeAtk0Key, 0.5);
+if (meleeAtkTimer < meleeAtk0Hit || meleeAtkTimer > kMeleeAtkEarlyKey)
 {
 	if (meleeDashQueued)
 	{

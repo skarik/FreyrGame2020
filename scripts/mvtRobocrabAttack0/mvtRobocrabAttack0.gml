@@ -137,7 +137,7 @@ if (meleeAtkTimer > meleeAtk0Time)
 }
 
 // if stunned, end early
-if (m_isStunned || m_isDead)
+if (m_isStunned || m_isKOed)
 {
 	meleeDashQueued = false;
 	meleeAtkQueued = false;

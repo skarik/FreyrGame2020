@@ -9,7 +9,7 @@ m_aiGobbo_squad = array_create(0);
 #region Update Squad
 
 // Look for a squad leader if we don't have one
-if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isDead)
+if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isKOed)
 {
 	// If we have a squad, select a new leader
 	if (array_length_1d(m_aiGobbo_squad) != 0)

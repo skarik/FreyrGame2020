@@ -7,7 +7,7 @@ if ((persistent && room != m_home) || m_homeless)
 	m_strength -= Time.deltaTime * m_definition.fadetime;
 	if (m_strength < 0.0)
 	{
-		event_user(9);
+		event_user(kEvent_AudioFree9);
 		idelete(this); // Free all the data
 		exit;
 	}
@@ -37,7 +37,7 @@ else
 	{		
 		// Prime audio state on start
 		if (m_strength <= 0)
-			event_user(8);
+			event_user(kEvent_AudioInit8);
 			
 		m_strength += Time.deltaTime * (m_definition.fadetime > 0 ? m_definition.fadetime : 10.0);
 		
@@ -49,9 +49,9 @@ else
 	{
 		m_strength -= Time.deltaTime * (m_definition.fadetime > 0 ? m_definition.fadetime : 10.0);
 		
-		// Prime audio state on start
+		// Clear out the audio
 		if (m_strength <= 0)
-			event_user(9);
+			event_user(kEvent_AudioFree9);
 	}
 	
 	m_strength = saturate(m_strength);
@@ -60,7 +60,7 @@ else
 // Update audio if it's active
 if (m_strength > 0)
 {
-	event_user(10);
+	event_user(kEvent_AudioUpdate10);
 	persistent = true;
 }
 else

@@ -9,4 +9,5 @@ if (iexists(m_lastDamageSource))
 		m_aiCombat_target = m_lastDamageSource;
 	}
 }
-m_aiCombat_angry = true;
+//m_aiCombat_angry = true;
+event_user(kEvent_AIOnAngry12);

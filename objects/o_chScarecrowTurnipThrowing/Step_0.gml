@@ -3,7 +3,7 @@
 
 event_inherited();
 
-if (!m_isDead)
+if (!m_isKOed)
 {
 	if (m_turnipTimer > 4.0)
 	{

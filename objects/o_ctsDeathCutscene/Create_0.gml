@@ -17,3 +17,5 @@ m_startTime = 0.0;
 depth = -9101;
 
 persistent = true;
+
+m_blockBoxEffect = null;

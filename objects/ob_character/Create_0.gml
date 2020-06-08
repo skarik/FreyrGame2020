@@ -4,6 +4,7 @@ enemyInfoOnCharacterCreate();
 
 m_team = kTeamNone;
 m_bloodType = kBloodRed;
+m_dieInsteadOfKO = false;
 m_uiwantsHealthShown = false;
 m_uiwantsStaminaShown = false;
 m_standingHeight = 32;
@@ -13,6 +14,7 @@ m_lastDamageSource = null;
 
 m_isPlayer = false;
 m_isFollower = false;
+m_isKOed = false;
 m_isDead = false;
 m_isStunned = false;
 m_stunTimer = 0.0;

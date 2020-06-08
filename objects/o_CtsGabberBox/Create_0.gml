@@ -22,6 +22,8 @@ display_font_height = 9;
 display_font_widths[0] = 0;
 display_font_bold_widths[0] = 0;
 display_width = 150;
+display_blackbox_override = false;
+display_whitebox_override = false;
 
 display_height_old = 0.0;
 display_height_blend = 1.0;

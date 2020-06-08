@@ -75,7 +75,7 @@ desert.oasis_farm
 	playlooping
 	{
 		volume		0.80
-		pitch		1.0
+		pitch		1.1
 		position	0
 		wave		snd_ambientWaterLapping
 	}
@@ -83,7 +83,7 @@ desert.oasis_farm
 	// looping audio for the stream
 	playlooping
 	{
-		volume		0.10
+		volume		0.14
 		pitch		0.6
 		position	1
 		wave		snd_ambientWaterStream0

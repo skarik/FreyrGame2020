@@ -464,98 +464,101 @@ else if (m_tab == BookTabs.Map)
 	
 	var map = o_PlayerHud.map;
 	
-	var ddx = dx + kXOffsetCenterRight;
-	var ddy = dy + kBookHeight * 0.5;
-	
-	// get center of map
-	var room_info = map.rooms_info[room];
-	var room_info_min = room_info[0];
-	var room_info_max = room_info[1];
-	var room_info_center = [
-		(room_info_min[0] + room_info_max[0]) * 0.5, 
-		(room_info_min[1] + room_info_min[1]) * 0.5
-		];
-		
-	// get position of player
-	var pl_pos_percent = [
-		m_player.x / room_width,
-		m_player.y / room_height
-		];
-	var pl_pos_grid = [
-		room_info_min[0] + (room_info_max[0] - room_info_min[0]) * pl_pos_percent[0],
-		room_info_min[1] + (room_info_max[1] - room_info_min[1]) * pl_pos_percent[1]
-		];
-		
-	// select the map bounds from the center
-	var kHalfDiv = 5.0;
-	var map_start = [
-		round(room_info_center[0] - kHalfDiv),
-		round(room_info_center[1] - kHalfDiv)
-		];
-	var map_end = [
-		map_start[0] + kHalfDiv * 2.0,
-		map_start[1] + kHalfDiv * 2.0
-		];
-	var map_center = [
-		(map_start[0] + map_end[0]) * 0.5,
-		(map_start[1] + map_end[1]) * 0.5
-		];
-		
-	// grid constants
-	var kGridW = 10.0;
-		
-	// draw the map from the bounds
-	for (var ix = map_start[0]; ix <= map_end[0]; ++ix)
+	if (room > 0 && room < array_length_1d(map.rooms_info))
 	{
-		for (var iy = map_start[1]; iy <= map_end[1]; ++iy)
+		var ddx = dx + kXOffsetCenterRight;
+		var ddy = dy + kBookHeight * 0.5;
+	
+		// get center of map
+		var room_info = map.rooms_info[room];
+		var room_info_min = room_info[0];
+		var room_info_max = room_info[1];
+		var room_info_center = [
+			(room_info_min[0] + room_info_max[0]) * 0.5, 
+			(room_info_min[1] + room_info_min[1]) * 0.5
+			];
+		
+		// get position of player
+		var pl_pos_percent = [
+			m_player.x / room_width,
+			m_player.y / room_height
+			];
+		var pl_pos_grid = [
+			room_info_min[0] + (room_info_max[0] - room_info_min[0]) * pl_pos_percent[0],
+			room_info_min[1] + (room_info_max[1] - room_info_min[1]) * pl_pos_percent[1]
+			];
+		
+		// select the map bounds from the center
+		var kHalfDiv = 5.0;
+		var map_start = [
+			round(room_info_center[0] - kHalfDiv),
+			round(room_info_center[1] - kHalfDiv)
+			];
+		var map_end = [
+			map_start[0] + kHalfDiv * 2.0,
+			map_start[1] + kHalfDiv * 2.0
+			];
+		var map_center = [
+			(map_start[0] + map_end[0]) * 0.5,
+			(map_start[1] + map_end[1]) * 0.5
+			];
+		
+		// grid constants
+		var kGridW = 10.0;
+		
+		// draw the map from the bounds
+		for (var ix = map_start[0]; ix <= map_end[0]; ++ix)
 		{
-			var v_ix = ix - map_center[0];
-			var v_iy = iy - map_center[1];
-			
-			var room_id = map.map[ix + iy * map.map_width];
-			if (room_id != null)
+			for (var iy = map_start[1]; iy <= map_end[1]; ++iy)
 			{
-				draw_set_alpha(0.5);
-				draw_set_color(merge_color(c_gold, c_dkgray, 0.5));
-				draw_rectangle(
-					ddx +  v_ix      * kGridW, ddy +  v_iy      * kGridW,
-					ddx + (v_ix + 1) * kGridW, ddy + (v_iy + 1) * kGridW,
-					false);
+				var v_ix = ix - map_center[0];
+				var v_iy = iy - map_center[1];
+			
+				var room_id = map.map[ix + iy * map.map_width];
+				if (room_id != null)
+				{
+					draw_set_alpha(0.5);
+					draw_set_color(merge_color(c_gold, c_dkgray, 0.5));
+					draw_rectangle(
+						ddx +  v_ix      * kGridW, ddy +  v_iy      * kGridW,
+						ddx + (v_ix + 1) * kGridW, ddy + (v_iy + 1) * kGridW,
+						false);
 					
-				var local_room_info = map.rooms_info[room_id];
-				var local_room_info_min = local_room_info[0];
-				var local_room_info_max = local_room_info[1];
-				draw_set_color(c_bookHeading);
-				draw_set_alpha(1.0);
-				draw_rectangle(
-					ddx + (local_room_info_min[0] - map_center[0]) * kGridW,
-					ddy + (local_room_info_min[1] - map_center[1]) * kGridW,
-					ddx + (local_room_info_max[0] - map_center[0]) * kGridW,
-					ddy + (local_room_info_max[1] - map_center[1]) * kGridW,
-					true);
+					var local_room_info = map.rooms_info[room_id];
+					var local_room_info_min = local_room_info[0];
+					var local_room_info_max = local_room_info[1];
+					draw_set_color(c_bookHeading);
+					draw_set_alpha(1.0);
+					draw_rectangle(
+						ddx + (local_room_info_min[0] - map_center[0]) * kGridW,
+						ddy + (local_room_info_min[1] - map_center[1]) * kGridW,
+						ddx + (local_room_info_max[0] - map_center[0]) * kGridW,
+						ddy + (local_room_info_max[1] - map_center[1]) * kGridW,
+						true);
+				}
 			}
 		}
+	
+		// draw the curret room
+		draw_set_color(c_white);
+		draw_set_alpha(1.0);
+		draw_rectangle(
+			ddx + (room_info_min[0] - map_center[0]) * kGridW,
+			ddy + (room_info_min[1] - map_center[1]) * kGridW,
+			ddx + (room_info_max[0] - map_center[0]) * kGridW,
+			ddy + (room_info_max[1] - map_center[1]) * kGridW,
+			true
+			);
+	
+		// todo: draw the current subroom
+	
+		// draw player position
+		draw_set_color(c_red);
+		draw_circle(
+			ddx + (pl_pos_grid[0] - map_center[0]) * kGridW,
+			ddy + (pl_pos_grid[1] - map_center[1]) * kGridW,
+			2, false);
 	}
-	
-	// draw the curret room
-	draw_set_color(c_white);
-	draw_set_alpha(1.0);
-	draw_rectangle(
-		ddx + (room_info_min[0] - map_center[0]) * kGridW,
-		ddy + (room_info_min[1] - map_center[1]) * kGridW,
-		ddx + (room_info_max[0] - map_center[0]) * kGridW,
-		ddy + (room_info_max[1] - map_center[1]) * kGridW,
-		true
-		);
-	
-	// todo: draw the current subroom
-	
-	// draw player position
-	draw_set_color(c_red);
-	draw_circle(
-		ddx + (pl_pos_grid[0] - map_center[0]) * kGridW,
-		ddy + (pl_pos_grid[1] - map_center[1]) * kGridW,
-		2, false);
 }
 
 draw_set_halign(fa_left);

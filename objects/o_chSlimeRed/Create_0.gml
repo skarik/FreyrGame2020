@@ -5,6 +5,7 @@ event_inherited();
 
 m_team = kTeamMonster;
 m_bloodType = kBloodNone;
+m_dieInsteadOfKO = true;
 
 stats.m_health = 5.0;
 stats.m_healthMax = stats.m_health;

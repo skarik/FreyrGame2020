@@ -140,7 +140,8 @@ else if (!m_aiCombat_angry && m_aiCombat_alerted)
 		// upgrade to angry if in view for 1 second
 		if (m_aiCombat_aggroTimer >= 1.0)
 		{
-			m_aiCombat_angry = true;
+			//m_aiCombat_angry = true;
+			event_user(kEvent_AIOnAngry12);
 		}
 	}
 }

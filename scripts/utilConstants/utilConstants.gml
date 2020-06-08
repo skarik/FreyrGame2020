@@ -18,7 +18,16 @@
 #macro kEvent_Lighting5 5
 #macro kEvent_UnifiedDraw6 6
 
-#macro kEvent_ChOnDeath0 0
+#macro kEvent_ChOnKO0 0
 #macro kEvent_ChOnHurt1 1
 #macro kEvent_ChOnStun2 2
 #macro kEvent_ChOnSchedule3 3
+#macro kEvent_ChOnDeath4 4
+#macro kEvent_ChSlowStep7 7
+
+#macro kEvent_AIOnAlert11 11
+#macro kEvent_AIOnAngry12 12
+
+#macro kEvent_AudioInit8 8
+#macro kEvent_AudioFree9 9
+#macro kEvent_AudioUpdate10 10
