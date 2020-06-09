@@ -3,10 +3,17 @@
 powerLogicGlobalUpdate();
 
 // Update timescale
-Time.scale = timescale_game * timescale_menu;
+var effective_timescale_game = 1.0;
+with (ob_timefx)
+{
+	effective_timescale_game *= m_multiplier;
+}
+
+Time.scale = effective_timescale_game * timescale_game * timescale_menu;
 if (Time.scale < 1.0 || timescale_previous < 1.0)
 {
 	// TODO: force update of all audio
+	debugOut(string(Time.scale));
 }
 timescale_previous = Time.scale;
 

@@ -6,7 +6,8 @@
     "children": [
         "e35406c0-81f9-4b41-9d7f-03d0627e7016",
         "9cbf8a9b-e822-401f-9302-82e25521b45c",
-        "46a2970a-4516-40c4-a08a-c9f97b44d349"
+        "46a2970a-4516-40c4-a08a-c9f97b44d349",
+        "ce59ff07-3528-4d93-9d5f-4cec0163d6b4"
     ],
     "filterType": "GMObject",
     "folderName": "Fx - Cutscene",

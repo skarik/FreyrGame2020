@@ -58,7 +58,26 @@ with (ob_doodadBreakable)
 }
 with (ob_character)
 {
-    if (id != source && ((m_team & source.m_team) == 0) && collision_rectangle(x1,y1,x2,y2, id, true, false) != null)
+	var damageHitType = damageGetHitResult(source, id);
+	if (damageHitType == kDamageResultMissDodge)
+	{	// Report the dodge misses to the player
+		if (m_isPlayer)
+		{
+			// Check if hit
+			if (collision_rectangle(x1,y1,x2,y2, id, true, false) != null)
+			{
+				_playerInteractOnMissDodge(source);
+			}
+		}
+	}
+	if (damageHitType != kDamageResultHit)
+	{
+		continue; // Skip things we can't hurt.
+	}
+	
+	// Are we still here? Let's check for collision.
+    //if (id != source && ((m_team & source.m_team) == 0) && collision_rectangle(x1,y1,x2,y2, id, true, false) != null)
+	if (collision_rectangle(x1,y1,x2,y2, id, true, false) != null)
     {
 		// Modify damage based on armor
 		var actualDamage = damageApplyModifiers(id, damage, type);

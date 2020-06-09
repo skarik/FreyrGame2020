@@ -34,6 +34,16 @@ with (target)
 	{
 		damage = floor(damage * 0.25);
 	}
+	
+	// deal counter damage
+	if (is_character)
+	{
+		if (type & kDamageTypeCounter)
+		{
+			damage = min(stats.m_healthMax, 60);
+		}
+	}
+	
 	// TODO: damage type weaknesses & buffs
 }
 return damage;

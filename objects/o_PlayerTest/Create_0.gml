@@ -63,6 +63,11 @@ m_manaMax = 20;
 m_itemBalancePivot = [x, y];
 m_itemBalanceSpeed = [0, 0];
 
+m_perfectCounterTarget = null;
+m_perfectCounterFreezer = null; // Freeze time object
+m_perfectCounterFocuser = null; // Focus effect object
+m_perfectCounterTimer = 0.0;
+
 #region Effects
 	// the player alright has a character-light, but for no-ambient rooms, it gets disabled
 	// thus, we need a specific light that shows the character location
