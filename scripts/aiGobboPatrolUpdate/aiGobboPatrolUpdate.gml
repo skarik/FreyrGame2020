@@ -102,47 +102,94 @@ else
 	}
 
 	// do angry check
-	var pl = getPlayer();
+	//var pl = getPlayer();
 
 	m_aiCombat_aggroTimer -= Time.deltaTime;
 
-	if (!pl.isHidden)
+	// make a list of all enemies that are not on the same team
+	var t_possibleTargetList = array_create(0);
+	with (ob_character)
 	{
-		// do distance check
-		if (point_distance(x, y, pl.x, pl.y) < m_aiCombat_noticeDistance)
+		if (m_team != kTeamNone && (m_team & other.m_team) == 0)
 		{
-			// do visibility angle check
-			var dir = point_direction(x, y, pl.x, pl.y);
-			var angle_dif = abs(angle_difference(dir, facingDirection));
-			if (angle_dif < m_aiCombat_noticeAngle)
+			t_possibleTargetList[array_length_1d(t_possibleTargetList)] = id;
+		}
+	}
+	
+	// check visibility with each target
+	var t_nextTarget = m_aiCombat_target;
+	for (var i = 0; i < array_length_1d(t_possibleTargetList); ++i)
+	{
+		var t_possibleTarget = t_possibleTargetList[i];
+		if (iexists(t_possibleTarget))
+		{
+			if (aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
+							   facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
+							   true))
 			{
-				// do occlusion visibility check
-				if (!collision3_line(x, y, pl.x, pl.y, z, true))
-				{	
-					if (!m_aiCombat_angry)
-					{
-						if (m_aiCombat_aggroTimer <= 0.0)
-						{
-							// Create the ? emote
-							var emote_fx = inew(o_fxEmote);
-								emote_fx.m_target = id;
-								emote_fx.image_index = 1;
-						}
+				t_nextTarget = t_possibleTarget; // we have a new best target yay
+			}
+		}
+	}
+
+	// Enable target switching
+	if (m_aiCombat_target != t_nextTarget)
+	{
+		if (!m_aiCombat_angry || !m_aiCombat_alerted || m_aiCombat_target == null || !iexists(m_aiCombat_target))
+		{	// Switch anger target
+			m_aiCombat_target = t_nextTarget;
+			m_aiCombat_aggroTimer = 0.0; // Refresh aggro.
+		}
+	}
+	// Check if can see the target
+	if (iexists(m_aiCombat_target)
+		&& aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
+						  facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
+						  true))
+	{
+		m_aiCombat_targetVisible = true;
+		m_aiCombat_targetPosition = [m_aiCombat_target.x, m_aiCombat_target.y];
+		m_aiCombat_targetTrackingLossTime = 0.0;
+	}
+	// If we cannot see the target, we want to stop tracking
+	else
+	{
+		m_aiCombat_targetTrackingLossTime += Time.deltaTime;
+		if (m_aiCombat_targetTrackingLossTime > 1.0)
+		{
+			m_aiCombat_targetVisible = false;
+			// Lost target, look for new target.
+			if (m_aiCombat_target != t_nextTarget)
+			{	// Switch anger target
+				m_aiCombat_target = t_nextTarget;
+				m_aiCombat_aggroTimer = 0.0; // Refresh aggro.
+			}
+		}
+	}
+
+	// Update anger state
+	if (iexists(m_aiCombat_target) && m_aiCombat_targetVisible)
+	{
+		if (!m_aiCombat_angry)
+		{
+			if (m_aiCombat_aggroTimer <= 0.0)
+			{
+				// Create the ? emote
+				var emote_fx = inew(o_fxEmote);
+					emote_fx.m_target = id;
+					emote_fx.image_index = 1;
+			}
 					
-						m_aiCombat_aggroTimer += Time.deltaTime * 2.0;
+			m_aiCombat_aggroTimer += Time.deltaTime * 2.0;
 					
-						if (m_aiCombat_aggroTimer > 1.0)
-						{
-							// Create the ! emote
-							var emote_fx = inew(o_fxEmote);
-								emote_fx.m_target = id;
-								emote_fx.image_index = 2;
+			if (m_aiCombat_aggroTimer > 1.0)
+			{
+				// Create the ! emote
+				var emote_fx = inew(o_fxEmote);
+					emote_fx.m_target = id;
+					emote_fx.image_index = 2;
 			
-							//m_aiCombat_angry = true;
-							event_user(kEvent_AIOnAngry12);
-						}
-					}
-				}
+				event_user(kEvent_AIOnAngry12);
 			}
 		}
 	}
@@ -152,9 +199,10 @@ else
 	m_aiCombat_deaggroTimer -= Time.deltaTime;
 	if (m_aiCombat_angry)
 	{
-		if (
-			(pl.isHidden && point_distance(x, y, pl.x, pl.y) > 48)
-			|| (point_distance(x, y, pl.x, pl.y) > 212)
+		if (!iexists(m_aiCombat_target)
+			|| (m_aiCombat_target.isHidden && point_distance(x, y, m_aiCombat_target.x, m_aiCombat_target.y) > 48)
+			|| (point_distance(x, y, m_aiCombat_target.x, m_aiCombat_target.y) > 212)
+			|| !m_aiCombat_targetVisible
 			)
 		{
 			m_aiCombat_deaggroTimer += Time.deltaTime * 2.0;
