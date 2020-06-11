@@ -14,7 +14,7 @@ var hitEffect = argument3;
 var hitShake = argument4;
 
 // Check if can hit first
-if (!damageCanHit(target, source))
+if (!damageCanHit(source, target))
 	return;
 
 // Generate intersecting BB for the effect spawning
@@ -53,9 +53,19 @@ if (iexists(source)) {
 
 with (target)
 {
-	if (damageCanHit(source, id) == false)
-		continue; // Skip things we can't hurt
-		
+	var damageHitType = damageGetHitResult(source, id);
+	if (damageHitType == kDamageResultMissDodge)
+	{	// Report the dodge misses to the player
+		if (m_isPlayer)
+		{
+			_playerInteractOnMissDodge(source);
+		}
+	}
+	if (damageHitType != kDamageResultHit)
+	{
+		continue; // Skip things we can't hurt.
+	}
+	
 	// Modify the damage
 	var actualDamage = damageApplyModifiers(target, damage, type);
 	

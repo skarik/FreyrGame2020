@@ -16,7 +16,8 @@
         "feac471a-191f-4fa0-b351-8ad9933e7e7b",
         "5244909b-a23f-4c1e-8fb4-226a7991e2fa",
         "2222eb6a-8769-4ba1-a0b9-32996fe02725",
-        "c3d040b0-205b-4a7e-87e9-ac6e70381ac8"
+        "c3d040b0-205b-4a7e-87e9-ac6e70381ac8",
+        "a64baa77-cb34-4c3e-a885-468dee690f9a"
     ],
     "filterType": "GMScript",
     "folderName": "Interaction",

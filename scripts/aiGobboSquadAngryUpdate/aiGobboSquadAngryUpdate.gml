@@ -62,7 +62,7 @@ else
 
 #endregion
 
-#region Update Anger Target
+/*#region Update Anger Target
 
 var m_angerTarget = null;
 m_angerTarget = getPlayer();
@@ -73,20 +73,20 @@ if (iexists(m_angerTarget))
 	var m_angerTargetPos = [m_angerTarget.x, m_angerTarget.y];
 }
 
-#endregion
+#endregion*/
 
 #region Squad Leader Gives Commands
 
 if (m_aiGobbo_squadLeader == id)
 {
-	if (iexists(m_angerTarget))
+	if (iexists(m_aiCombat_target))
 	{
-		// Update the position sparingly
+		// Update the position sparingly to prevent jiggling behavior
 		m_aiGobbo_squadManage_PositionTimer -= Time.deltaTime;
 		if (m_aiGobbo_squadManage_PositionTimer < 0.0)
 		{
-			m_aiGobbo_squadManage_PositionCenter = m_angerTargetPos;
-			m_aiGobbo_squadManage_PositionTimer = 2.0;
+			m_aiGobbo_squadManage_PositionCenter = m_aiCombat_targetPosition;
+			m_aiGobbo_squadManage_PositionTimer += 1.0;
 		}
 		
 		// Hand out the position commands first:
@@ -211,7 +211,7 @@ if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_Hover)
 		_controlStructUpdate(xAxis, 0.0);
 		_controlStructUpdate(yAxis, 0.0);
 	}
-	aimotionFaceAt(m_angerTargetPos[0], m_angerTargetPos[1], -1);
+	aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], -1);
 	
 	// Stop any signalling when walking
 	moAnimationExternal = false;
@@ -235,16 +235,16 @@ else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHesitate
 		m_aiGobbo_squadStateTime += Time.deltaTime;
 		
 		// Move up to the target we're attacking
-		var dir = point_direction(x, y, m_angerTargetPos[0], m_angerTargetPos[1]);
-		aipathMoveTo(m_angerTargetPos[0] + lengthdir_x(60, dir), m_angerTargetPos[1] + lengthdir_y(60, dir));
+		var dir = point_direction(x, y, m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+		aipathMoveTo(m_aiCombat_targetPosition[0] + lengthdir_x(60, dir), m_aiCombat_targetPosition[1] + lengthdir_y(60, dir));
 		
-		var target_dist_sqr = sqr(x - m_angerTargetPos[0]) + sqr(y - m_angerTargetPos[1]);
+		var target_dist_sqr = sqr(x - m_aiCombat_targetPosition[0]) + sqr(y - m_aiCombat_targetPosition[1]);
 		if (target_dist_sqr < sqr(26))
 		{
 			// Make them attack when close enough
 			_controlStructUpdate(atkButton, 1.0);
 			// fix facing for the attack
-			aimotionFaceAt(m_angerTargetPos[0], m_angerTargetPos[1], -1);
+			aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], -1);
 			
 			// Increment timer
 			m_aiGobbo_squadStateTime = kChaseTime + 0.01;

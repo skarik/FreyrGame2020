@@ -9,3 +9,4 @@
 #macro kDamageTypeBullet	0x0800
 #macro kDamageTypeMagic		0x1000
 #macro kDamageTypeMagicVoid	(0x1000 | 0x2000)
+#macro kDamageTypeCounter	0x4000

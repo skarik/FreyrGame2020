@@ -1079,6 +1079,14 @@
             }
         },
         {
+            "Key": "12ad5a26-cdcd-4264-a056-8bc8514be619",
+            "Value": {
+                "id": "94734b29-bddb-46ee-86e8-574aebdfadb2",
+                "resourcePath": "views\\12ad5a26-cdcd-4264-a056-8bc8514be619.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "12c0ea79-75b6-4d4d-8a01-4c3267213041",
             "Value": {
                 "id": "0d03990e-a76a-4be4-8b74-71f63bc2702d",
@@ -3639,6 +3647,14 @@
             }
         },
         {
+            "Key": "3a789013-d03a-4701-9917-f25fc452af6c",
+            "Value": {
+                "id": "4a2761e7-8ef7-40b6-926d-56e717be3bf2",
+                "resourcePath": "scripts\\_playerAttack_CounterHit\\_playerAttack_CounterHit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3a9e5d9d-d5d0-43dd-9820-125bf5a0c1b0",
             "Value": {
                 "id": "169ae108-7b5d-4509-b454-0382320da02a",
@@ -4623,6 +4639,14 @@
             }
         },
         {
+            "Key": "4a9ce0c8-de85-4c6c-9f44-da24522badcd",
+            "Value": {
+                "id": "2a135a87-83ee-4806-904f-0e468a4d3172",
+                "resourcePath": "scripts\\damageGetHitResult\\damageGetHitResult.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4aa6d746-c0f3-42cb-911c-3eb15f9291fe",
             "Value": {
                 "id": "e2fbedf6-411c-4302-a635-233873351d27",
@@ -5180,6 +5204,14 @@
                 "id": "f221bc42-d8ff-456f-aa5c-efa6b0875991",
                 "resourcePath": "objects\\o_CtsPortraitRenderer\\o_CtsPortraitRenderer.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "54788629-efd3-465c-b661-fbc89084f62d",
+            "Value": {
+                "id": "825dc2f0-fa3d-4f68-82f2-dbf3de130482",
+                "resourcePath": "scripts\\_playerMotionCounterSeekHit\\_playerMotionCounterSeekHit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6287,6 +6319,14 @@
             }
         },
         {
+            "Key": "67712a83-7611-4685-8807-481de235a880",
+            "Value": {
+                "id": "329a83fb-d10b-4aed-9c08-be26aa801f22",
+                "resourcePath": "objects\\o_timefxFader\\o_timefxFader.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "679ddc83-2312-4512-b3f7-6e5ed3a47a61",
             "Value": {
                 "id": "add85f72-c2e4-4fdc-a32f-98f14b8c8c46",
@@ -7091,6 +7131,14 @@
             "Value": {
                 "id": "8018164d-0138-41ed-a52e-a4955e3d1c33",
                 "resourcePath": "scripts\\avec2_divide\\avec2_divide.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "737047d3-2114-4968-9c71-168f586e234d",
+            "Value": {
+                "id": "c2c44a61-a316-479a-899b-4ffb2b87f4cb",
+                "resourcePath": "scripts\\_playerMotionCounterWait\\_playerMotionCounterWait.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -10111,6 +10159,14 @@
             }
         },
         {
+            "Key": "a64baa77-cb34-4c3e-a885-468dee690f9a",
+            "Value": {
+                "id": "1d1cce04-ec37-4a44-8389-028250d3b0ab",
+                "resourcePath": "scripts\\_playerInteractOnMissDodge\\_playerInteractOnMissDodge.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a6578fec-2b2d-474a-a91b-ccd674dce3f9",
             "Value": {
                 "id": "a557dfb6-0819-4c81-b852-70d36748fe1a",
@@ -11495,6 +11551,14 @@
             }
         },
         {
+            "Key": "bb52aab2-5855-4f6c-ba5f-3b262412b960",
+            "Value": {
+                "id": "446cf4ae-423c-4c33-b54e-8a01e1b7d276",
+                "resourcePath": "objects\\ob_timefx\\ob_timefx.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bb5a859d-02b3-42ea-8a10-665e9d838737",
             "Value": {
                 "id": "78c85f9b-4d15-4cd7-8f5e-35b137717410",
@@ -12739,6 +12803,14 @@
             "Value": {
                 "id": "d67911ff-7f54-448c-ae70-a4cf67fc5014",
                 "resourcePath": "objects\\o_pickupSeed_Melon\\o_pickupSeed_Melon.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ce59ff07-3528-4d93-9d5f-4cec0163d6b4",
+            "Value": {
+                "id": "601317cf-3eb4-488a-8f03-8720c1f4c6ac",
+                "resourcePath": "objects\\o_fxCounterFocus\\o_fxCounterFocus.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -16198,6 +16270,9 @@
         "f567dcd2-80ef-4646-9f04-613367ea7afb",
         "f9a5a3d9-b484-4796-b1de-b2cf3d25295d",
         "15bbf6a8-1c75-4aa1-b601-4b7a51e6347c",
+        "737047d3-2114-4968-9c71-168f586e234d",
+        "54788629-efd3-465c-b661-fbc89084f62d",
+        "3a789013-d03a-4701-9917-f25fc452af6c",
         "4c162c72-c4cc-4b15-b393-e4328ae1f9a5",
         "2e875ea2-8ea6-4603-a58f-46e58841da6d",
         "a2a14d96-67de-4544-9cd8-7c7968c5174d",
@@ -16212,6 +16287,7 @@
         "5244909b-a23f-4c1e-8fb4-226a7991e2fa",
         "2222eb6a-8769-4ba1-a0b9-32996fe02725",
         "c3d040b0-205b-4a7e-87e9-ac6e70381ac8",
+        "a64baa77-cb34-4c3e-a885-468dee690f9a",
         "81173471-4fa3-495d-963a-a0585aba9bd9",
         "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
         "7013ba5c-e4ae-42b8-b1fb-caa1103a95d6",
@@ -16295,6 +16371,7 @@
         "e02b8b61-3840-4665-8de5-7ec3350944cd",
         "33a16ba5-1540-47fa-b42f-f12adc454fba",
         "dc286b8b-27f9-4d4a-be5b-2dde37592d1a",
+        "4a9ce0c8-de85-4c6c-9f44-da24522badcd",
         "a6578fec-2b2d-474a-a91b-ccd674dce3f9",
         "f08e7891-bab2-4df8-a7ca-f90f337ef162",
         "ca6238b9-a7c1-40e9-8b43-7ce31e9bbb09",

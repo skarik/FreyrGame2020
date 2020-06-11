@@ -4,7 +4,7 @@
 var source = argument0;
 var target = argument1;
 
-if ( !iexists(source) ) {
+/*if ( !iexists(source) ) {
 	return true;
 }
 
@@ -20,5 +20,6 @@ if ( source.id != target.id )
 		}
     }
 }
-return false;
+return false;*/
 
+return (damageGetHitResult(source, target) == kDamageResultHit);
