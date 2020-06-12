@@ -1599,6 +1599,14 @@
             }
         },
         {
+            "Key": "1a9f7982-830b-4b6d-a27d-4eb71fa77ee7",
+            "Value": {
+                "id": "1879338b-8f3e-44d9-a2e6-44cd6b44871b",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_excite1.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "1acc4417-567a-4bf1-814f-d2b8c000ca52",
             "Value": {
                 "id": "a47d547a-a936-4d50-8611-a8ac6992ee7f",
@@ -3151,6 +3159,14 @@
             }
         },
         {
+            "Key": "32ac9705-6041-412c-bca3-7da6560d228b",
+            "Value": {
+                "id": "e48b1b69-6947-4eb5-81ac-d50569e19b55",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_beat.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "32e14ff8-2e38-4224-8487-36eaff49b589",
             "Value": {
                 "id": "5767895f-7d3b-4268-92fe-20f75dfcc659",
@@ -3308,6 +3324,14 @@
                 "id": "40b38395-66f1-4284-9c34-66f56b0cc271",
                 "resourcePath": "objects\\o_spawnerCaveSlug\\o_spawnerCaveSlug.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "35594054-8742-4de7-86ce-1c2e3e6dfdc4",
+            "Value": {
+                "id": "35d13637-4ca0-466a-a568-3b0ca4854caa",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_basic.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3508,6 +3532,14 @@
                 "id": "3f3009f2-7ae5-4a75-9b2f-e853b4c46d20",
                 "resourcePath": "sprites\\s_itemAcademicTome\\s_itemAcademicTome.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "37b9a2ef-700f-4e1a-b16f-e5622c9a967a",
+            "Value": {
+                "id": "e20a9233-8c5f-4270-95d3-18a276ee70d8",
+                "resourcePath": "objects\\o_mus00_FoolsMarch\\o_mus00_FoolsMarch.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4652,6 +4684,14 @@
                 "id": "e2fbedf6-411c-4302-a635-233873351d27",
                 "resourcePath": "sprites\\s_assetGroundStains\\s_assetGroundStains.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4ac7f1a0-a266-48c5-bcdc-53890bccf995",
+            "Value": {
+                "id": "8a3a8dd2-20c8-4a87-a127-b20b769d59ac",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_excite2.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7351,6 +7391,14 @@
             }
         },
         {
+            "Key": "771e6200-e426-4443-a83a-404958fbdb48",
+            "Value": {
+                "id": "c6405438-d87c-4caf-92fd-d5c47998e33b",
+                "resourcePath": "objects\\o_wmus_crescentTower\\o_wmus_crescentTower.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "77482e45-c3ff-4662-bc78-746926c0582f",
             "Value": {
                 "id": "72236d1f-0830-4a39-b2e2-96864769765c",
@@ -8356,6 +8404,14 @@
                 "id": "5eefc985-6edb-43fe-b280-5abecb9a7962",
                 "resourcePath": "scripts\\color_multiply\\color_multiply.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "89fb4def-66c1-4cdf-84ae-b3b6683c825a",
+            "Value": {
+                "id": "820e0c7b-8834-4b13-9b3d-99dae15a682b",
+                "resourcePath": "views\\89fb4def-66c1-4cdf-84ae-b3b6683c825a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -13447,6 +13503,14 @@
             }
         },
         {
+            "Key": "d8ad7d81-8da9-4034-9a77-6b0bc4d903ce",
+            "Value": {
+                "id": "f89605aa-c8fd-4717-a1fb-aa26cb645911",
+                "resourcePath": "views\\d8ad7d81-8da9-4034-9a77-6b0bc4d903ce.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d8c9b0f1-431d-431a-a020-2217090915e3",
             "Value": {
                 "id": "14e7d2e7-51b6-4631-9d64-db4cf8e20265",
@@ -14460,6 +14524,14 @@
                 "id": "ac6d5f19-dba8-4e27-944a-fc473084f50d",
                 "resourcePath": "scripts\\doodadSetupOnRoomStart\\doodadSetupOnRoomStart.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e7c12c5d-1903-4b8b-a5de-9c39ad2bd42f",
+            "Value": {
+                "id": "d85e1497-8835-4b8a-a25b-ac2e7ee5b2ca",
+                "resourcePath": "datafiles_yy\\music\\world\\crescent_theme_record.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -15767,6 +15839,14 @@
             }
         },
         {
+            "Key": "fcc98a21-547a-4fa0-a27a-1aa2cc0fb298",
+            "Value": {
+                "id": "4c3bf218-7cd4-40e0-831b-9ae225c3ef57",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_finale.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "fcf2c270-213a-45c5-badb-410658da8898",
             "Value": {
                 "id": "fc47ab1c-76f2-4ba6-8301-af3f40d5425f",
@@ -15820,6 +15900,14 @@
                 "id": "e582266c-4155-4315-8bb7-a5c91972a2e1",
                 "resourcePath": "objects\\o_ptcDarkdrop\\o_ptcDarkdrop.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fd9fdb17-ec9f-4300-b1d0-6aa5f6a1f0c4",
+            "Value": {
+                "id": "915e225b-f672-43c2-8603-2dfc8bae91b6",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_ambient.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
