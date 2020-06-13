@@ -3735,6 +3735,14 @@
             }
         },
         {
+            "Key": "3b654321-1ad0-452a-bdea-ede8a242204a",
+            "Value": {
+                "id": "f4727d38-c86c-42a0-9df5-c072b928b4c1",
+                "resourcePath": "sprites\\sui_portraitGoHatNeutral\\sui_portraitGoHatNeutral.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3b6668a4-fa69-4fba-a796-25d1daa555ee",
             "Value": {
                 "id": "853938f9-403a-4c37-ba2d-9067be00ae72",
@@ -5531,6 +5539,14 @@
             "Value": {
                 "id": "453d5004-45e4-4a57-b658-9204c7b774ac",
                 "resourcePath": "sprites\\sui_control16s_xbox\\sui_control16s_xbox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "58c7f40d-5548-4c23-ad9c-7295ad330b22",
+            "Value": {
+                "id": "dcd8d0b5-34ad-4873-b144-6781240c1376",
+                "resourcePath": "sprites\\sui_portraitGoNekkidNeutral\\sui_portraitGoNekkidNeutral.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12876,6 +12892,14 @@
                 "id": "ee6259e8-ef52-4e4a-af2d-d8a2b7981a89",
                 "resourcePath": "scripts\\fmusic_play_introtrack\\fmusic_play_introtrack.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cedf22aa-b9cf-4d41-af82-33b3241c6655",
+            "Value": {
+                "id": "a71b5447-f9ec-4c7f-8f7f-a9fd9319959d",
+                "resourcePath": "sprites\\sui_portraitGoNeutral\\sui_portraitGoNeutral.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
