@@ -6,6 +6,7 @@ event_user(0);
 
 // enable depth testing
 gpu_set_ztestenable(true);
+gpu_set_zfunc(cmpfunc_lessequal);
 
 // render the card mesh
 shader_set(sh_tarotCard);
@@ -34,5 +35,6 @@ shader_reset();
 
 // disable depth testing
 gpu_set_ztestenable(false);
+gpu_set_zfunc(cmpfunc_always);
 
 event_user(1);

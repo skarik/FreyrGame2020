@@ -18,7 +18,9 @@
         "f8e7bf82-cd95-4cb2-a6b3-f3810358ebe9",
         "ccaaeefe-5c18-49a9-8ca3-8cd81fb10608",
         "eeda2481-e756-4255-ba3b-d54bb377e14a",
-        "02328a73-7f25-424c-8973-7e09c0c50ef4"
+        "02328a73-7f25-424c-8973-7e09c0c50ef4",
+        "68c38816-3a4b-49cd-b0f8-a5cad71d8cf9",
+        "5f4df034-0c03-441f-a709-a11821570283"
     ],
     "filterType": "GMObject",
     "folderName": "Lively",

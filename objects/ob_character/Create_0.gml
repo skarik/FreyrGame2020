@@ -34,5 +34,8 @@ isPassthru = false;
 // Init depth setup
 depthInit();
 
+// Other state
+isHidden = false;
+
 // Mark as initialized
 m_initialized = true;
