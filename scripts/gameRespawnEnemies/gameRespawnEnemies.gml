@@ -10,9 +10,12 @@ var respawn_which = argument0;
 // Spawn the enemies
 with (o_spawnerBase)
 {
-	if (  (!m_characterIsMajor && (respawn_which & kRespawnEnemeiesMinor))
-		|| (m_characterIsMajor && (respawn_which & kRespawnEnemeiesMajor)))
+	if (!m_spawnOnlyOnTrigger)
 	{
-		enemySpawnerCheckAndRespawn(id);
+		if (  (!m_characterIsMajor && (respawn_which & kRespawnEnemeiesMinor))
+			|| (m_characterIsMajor && (respawn_which & kRespawnEnemeiesMajor)))
+		{
+			enemySpawnerCheckAndRespawn(id);
+		}
 	}
 }

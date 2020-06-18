@@ -1,4 +1,4 @@
-/// @description Default inspection
+/// @description On use - Default inspection
 
 if (m_usable && iexists(m_user) && m_user.id == o_PlayerTest.id)
 {

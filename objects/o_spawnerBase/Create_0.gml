@@ -1,4 +1,7 @@
 /// @description Spawn immediately
 visible = false; // For idiots.
 m_spawned_enemy = null;
-enemySpawnerCheckAndRespawn(this);
+if (!m_spawnOnlyOnTrigger)
+{
+	enemySpawnerCheckAndRespawn(this);
+}

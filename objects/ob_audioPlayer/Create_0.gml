@@ -1,9 +1,13 @@
+#macro kAudioFalloffModelExponential 0
+#macro kAudioFalloffModelLinear 1
+
 loop = false;
 priority = 5;
 
 falloff_start = 100;
 falloff_end = 1000;
 falloff_factor = 1.0;
+falloff_model = kAudioFalloffModelExponential;
 
 gain = 1.0;
 pitch = 1.0;

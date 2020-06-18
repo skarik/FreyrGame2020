@@ -5,7 +5,8 @@
     "name": "f8fa9e0a-a316-494f-b508-1f1ae1cc4df9",
     "children": [
         "63ee0b46-03b5-4fa6-8c1f-df3bd381e877",
-        "c636e759-2893-4be2-8465-7b4a5a73493c"
+        "c636e759-2893-4be2-8465-7b4a5a73493c",
+        "9023f8e3-54d4-4046-bb38-188b34e7b0e9"
     ],
     "filterType": "GMSprite",
     "folderName": "ancient",

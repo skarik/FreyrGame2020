@@ -15,5 +15,11 @@ if (!m_isKOed && !m_isDead && !m_aiCombat_alerted)
 				event_user(kEvent_AIOnAlert11);
 			}
 		}
+		
+		// Alert the area
+		with (m_aialert_area)
+		{
+			event_user(kEvent_AIOnAlert11);
+		}
 	}
 }

@@ -1,5 +1,12 @@
 /// @description Generate & set RTs
 
+// Force enable depth
+/*surface_depth_disable(false);
+gpu_set_zwriteenable(true);
+gpu_set_ztestenable(true);
+gpu_set_zfunc(cmpfunc_always);*/
+
+// Create the surfaces for render output
 if (!surface_exists(m_outputSurface))
 	m_outputSurface = surface_create(Screen.width, Screen.height);
 if (!surface_exists(m_gameSurface))

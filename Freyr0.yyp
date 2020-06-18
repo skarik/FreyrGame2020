@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "02d4232d-c0eb-4687-8d1d-ecccf5086e3a",
+            "Value": {
+                "id": "4f45d118-8833-4776-9a2b-5683b0600927",
+                "resourcePath": "objects\\o_livelyWatcherBase\\o_livelyWatcherBase.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "02fdbb76-cde4-4ee8-81c7-1f289fc0b10a",
             "Value": {
                 "id": "1880cd92-91a4-457b-ab4a-f44ea0c6b400",
@@ -1596,6 +1604,14 @@
                 "id": "7537d60b-d19c-4272-a99d-c774d9e88a6d",
                 "resourcePath": "views\\1a8babd1-e650-425e-8b89-51e376113ab8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1a9f7982-830b-4b6d-a27d-4eb71fa77ee7",
+            "Value": {
+                "id": "1879338b-8f3e-44d9-a2e6-44cd6b44871b",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_excite1.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3151,6 +3167,14 @@
             }
         },
         {
+            "Key": "32ac9705-6041-412c-bca3-7da6560d228b",
+            "Value": {
+                "id": "e48b1b69-6947-4eb5-81ac-d50569e19b55",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_beat.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "32e14ff8-2e38-4224-8487-36eaff49b589",
             "Value": {
                 "id": "5767895f-7d3b-4268-92fe-20f75dfcc659",
@@ -3308,6 +3332,14 @@
                 "id": "40b38395-66f1-4284-9c34-66f56b0cc271",
                 "resourcePath": "objects\\o_spawnerCaveSlug\\o_spawnerCaveSlug.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "35594054-8742-4de7-86ce-1c2e3e6dfdc4",
+            "Value": {
+                "id": "35d13637-4ca0-466a-a568-3b0ca4854caa",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_basic.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3511,6 +3543,14 @@
             }
         },
         {
+            "Key": "37b9a2ef-700f-4e1a-b16f-e5622c9a967a",
+            "Value": {
+                "id": "e20a9233-8c5f-4270-95d3-18a276ee70d8",
+                "resourcePath": "objects\\o_mus00_FoolsMarch\\o_mus00_FoolsMarch.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "381097f8-548b-465e-bf48-82154d11e21b",
             "Value": {
                 "id": "aff7ac8b-cb4e-41e4-afe6-dc34bbe2afc8",
@@ -3700,6 +3740,14 @@
                 "id": "89deba3e-bc0e-452f-baef-f07c960b7cba",
                 "resourcePath": "objects\\o_cropReturn\\o_cropReturn.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3b654321-1ad0-452a-bdea-ede8a242204a",
+            "Value": {
+                "id": "f4727d38-c86c-42a0-9df5-c072b928b4c1",
+                "resourcePath": "sprites\\sui_portraitGoHatNeutral\\sui_portraitGoHatNeutral.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4655,6 +4703,14 @@
             }
         },
         {
+            "Key": "4ac7f1a0-a266-48c5-bcdc-53890bccf995",
+            "Value": {
+                "id": "8a3a8dd2-20c8-4a87-a127-b20b769d59ac",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_excite2.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "4ad4cc98-1922-40ef-ae09-1ae0636b5bad",
             "Value": {
                 "id": "88b93bc2-ce40-4bfe-a8ba-1d012ec6242f",
@@ -5495,6 +5551,14 @@
             }
         },
         {
+            "Key": "58c7f40d-5548-4c23-ad9c-7295ad330b22",
+            "Value": {
+                "id": "dcd8d0b5-34ad-4873-b144-6781240c1376",
+                "resourcePath": "sprites\\sui_portraitGoNekkidNeutral\\sui_portraitGoNekkidNeutral.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "595d7641-71d1-4347-bfcb-487e043bf839",
             "Value": {
                 "id": "2136591c-7cac-406f-9983-ebe0a0be783e",
@@ -5876,6 +5940,14 @@
                 "id": "198c02e3-43a3-424b-96ca-fc93b916b9c1",
                 "resourcePath": "scripts\\playerRemovePitem\\playerRemovePitem.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5f4df034-0c03-441f-a709-a11821570283",
+            "Value": {
+                "id": "8e6e4cbd-52fd-43e8-b090-d27599c63c08",
+                "resourcePath": "views\\5f4df034-0c03-441f-a709-a11821570283.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6388,6 +6460,14 @@
                 "id": "ee58eda3-6067-41fa-a993-c1679148f236",
                 "resourcePath": "scripts\\powerLogicInit\\powerLogicInit.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "68c38816-3a4b-49cd-b0f8-a5cad71d8cf9",
+            "Value": {
+                "id": "2234d6a2-7417-49e1-a7f5-df64836e47d6",
+                "resourcePath": "objects\\o_livelyTriggeredDoor_Woodgate\\o_livelyTriggeredDoor_Woodgate.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6959,6 +7039,14 @@
             }
         },
         {
+            "Key": "70639fd6-bf8c-4574-aab9-510c03803e0d",
+            "Value": {
+                "id": "de5db88b-65d5-49a2-a30f-02ed138d5b7e",
+                "resourcePath": "objects\\o_livelyWatcherAIZoneAngry\\o_livelyWatcherAIZoneAngry.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "706cf677-ed33-45a7-b17d-61e41165c63b",
             "Value": {
                 "id": "8c6725bd-8418-43c7-a0b2-c068e28614db",
@@ -7348,6 +7436,14 @@
                 "id": "c59e052c-0d6b-4754-88b9-db373cb1052c",
                 "resourcePath": "datafiles_yy\\audio\\music\\farm_piano_short_6.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "771e6200-e426-4443-a83a-404958fbdb48",
+            "Value": {
+                "id": "c6405438-d87c-4caf-92fd-d5c47998e33b",
+                "resourcePath": "objects\\o_wmus_crescentTower\\o_wmus_crescentTower.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8311,6 +8407,14 @@
             }
         },
         {
+            "Key": "88d2c7da-8edc-48a8-8f76-1df2a5607861",
+            "Value": {
+                "id": "6acdad2f-ba2f-4ced-8e6d-4bb15aa75574",
+                "resourcePath": "objects\\ob_aiPushOnSpawn\\ob_aiPushOnSpawn.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "896d2c12-b342-4730-8385-698cb45dcda0",
             "Value": {
                 "id": "39438347-f653-4579-9af7-90e0a11ff46c",
@@ -8356,6 +8460,14 @@
                 "id": "5eefc985-6edb-43fe-b280-5abecb9a7962",
                 "resourcePath": "scripts\\color_multiply\\color_multiply.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "89fb4def-66c1-4cdf-84ae-b3b6683c825a",
+            "Value": {
+                "id": "820e0c7b-8834-4b13-9b3d-99dae15a682b",
+                "resourcePath": "views\\89fb4def-66c1-4cdf-84ae-b3b6683c825a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -8827,6 +8939,14 @@
             "Value": {
                 "id": "c61fbf74-ee81-4117-b628-49c171b8039c",
                 "resourcePath": "sprites\\sui_tarotSwordAce\\sui_tarotSwordAce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9023f8e3-54d4-4046-bb38-188b34e7b0e9",
+            "Value": {
+                "id": "d9572dd8-4ec2-448d-b8c2-17ee9cf662f0",
+                "resourcePath": "sprites\\s_propCheckpointReturn\\s_propCheckpointReturn.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9404,6 +9524,14 @@
                 "id": "ae5dcb6f-5036-4134-86f8-0cc7752d4ac4",
                 "resourcePath": "scripts\\mt19937_seed\\mt19937_seed.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "99bf236e-0d4d-4c29-91e1-29da1e432dd4",
+            "Value": {
+                "id": "c223d319-5d91-41ae-8d12-55c263b1117c",
+                "resourcePath": "views\\99bf236e-0d4d-4c29-91e1-29da1e432dd4.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -10103,6 +10231,14 @@
             }
         },
         {
+            "Key": "a56f34f6-8ccd-4d6e-8dd6-a112cb44accf",
+            "Value": {
+                "id": "d1ecc845-18df-4d10-9972-dda2025c8848",
+                "resourcePath": "sprites\\ssy_nodeAiPush\\ssy_nodeAiPush.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a590815f-3a9b-448e-9443-c8cfee621f12",
             "Value": {
                 "id": "f0d87b18-f2fc-4e2a-9518-c5cf890d10d6",
@@ -10228,6 +10364,14 @@
                 "id": "963e1aca-eac0-44ef-a398-a782a1cc9a67",
                 "resourcePath": "objects\\o_cropBox\\o_cropBox.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a76f0ab6-c3f5-468f-891b-cb949224b591",
+            "Value": {
+                "id": "9ce8dfb5-1df4-4f67-8684-81af9c0dc681",
+                "resourcePath": "views\\a76f0ab6-c3f5-468f-891b-cb949224b591.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -12399,6 +12543,14 @@
             }
         },
         {
+            "Key": "c80484be-d912-4357-a78d-d02863d54cf4",
+            "Value": {
+                "id": "e0be086d-274b-4055-824e-c48de44a728c",
+                "resourcePath": "sprites\\ssy_relay\\ssy_relay.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c8095eac-ef20-4c27-ba40-fde86240b68a",
             "Value": {
                 "id": "937042dd-c079-48f9-b52c-3e7655ef6e49",
@@ -12820,6 +12972,14 @@
                 "id": "ee6259e8-ef52-4e4a-af2d-d8a2b7981a89",
                 "resourcePath": "scripts\\fmusic_play_introtrack\\fmusic_play_introtrack.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cedf22aa-b9cf-4d41-af82-33b3241c6655",
+            "Value": {
+                "id": "a71b5447-f9ec-4c7f-8f7f-a9fd9319959d",
+                "resourcePath": "sprites\\sui_portraitGoNeutral\\sui_portraitGoNeutral.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13447,6 +13607,14 @@
             }
         },
         {
+            "Key": "d8ad7d81-8da9-4034-9a77-6b0bc4d903ce",
+            "Value": {
+                "id": "f89605aa-c8fd-4717-a1fb-aa26cb645911",
+                "resourcePath": "views\\d8ad7d81-8da9-4034-9a77-6b0bc4d903ce.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d8c9b0f1-431d-431a-a020-2217090915e3",
             "Value": {
                 "id": "14e7d2e7-51b6-4631-9d64-db4cf8e20265",
@@ -13884,6 +14052,14 @@
                 "id": "d670d90e-c833-47d9-b532-5f8238fe1d32",
                 "resourcePath": "sounds\\snd_physKeyBreak0\\snd_physKeyBreak0.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "dfaa32e5-a904-4c82-9e0f-a0706a375468",
+            "Value": {
+                "id": "622719dd-84a8-476b-b791-427f7793fbcc",
+                "resourcePath": "sprites\\sc_32x4sr_pink\\sc_32x4sr_pink.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -14460,6 +14636,22 @@
                 "id": "ac6d5f19-dba8-4e27-944a-fc473084f50d",
                 "resourcePath": "scripts\\doodadSetupOnRoomStart\\doodadSetupOnRoomStart.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e7c12c5d-1903-4b8b-a5de-9c39ad2bd42f",
+            "Value": {
+                "id": "d85e1497-8835-4b8a-a25b-ac2e7ee5b2ca",
+                "resourcePath": "datafiles_yy\\music\\world\\crescent_theme_record.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "e7cba69d-96d6-490f-9016-fda8e0bf3537",
+            "Value": {
+                "id": "bca3b6ca-9a61-4f38-8eec-6a36ed8e9be8",
+                "resourcePath": "objects\\o_pickupJunk_Spork\\o_pickupJunk_Spork.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -15359,6 +15551,14 @@
             }
         },
         {
+            "Key": "f7d9f2f1-134f-4bb7-b075-285342148314",
+            "Value": {
+                "id": "4639e87f-77a3-4fbb-9351-d6ae7dae485d",
+                "resourcePath": "sprites\\s_itemJunkSpork\\s_itemJunkSpork.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f7daba53-3a4b-4e03-aedc-a0168e74564f",
             "Value": {
                 "id": "51cf1236-8068-4389-acf9-fdd634c2c38d",
@@ -15767,6 +15967,14 @@
             }
         },
         {
+            "Key": "fcc98a21-547a-4fa0-a27a-1aa2cc0fb298",
+            "Value": {
+                "id": "4c3bf218-7cd4-40e0-831b-9ae225c3ef57",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_finale.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "fcf2c270-213a-45c5-badb-410658da8898",
             "Value": {
                 "id": "fc47ab1c-76f2-4ba6-8301-af3f40d5425f",
@@ -15820,6 +16028,14 @@
                 "id": "e582266c-4155-4315-8bb7-a5c91972a2e1",
                 "resourcePath": "objects\\o_ptcDarkdrop\\o_ptcDarkdrop.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fd9fdb17-ec9f-4300-b1d0-6aa5f6a1f0c4",
+            "Value": {
+                "id": "915e225b-f672-43c2-8603-2dfc8bae91b6",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_ambient.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

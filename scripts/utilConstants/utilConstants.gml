@@ -31,3 +31,8 @@
 #macro kEvent_AudioInit8 8
 #macro kEvent_AudioFree9 9
 #macro kEvent_AudioUpdate10 10
+
+#macro kEvent_DefaultTrigger0 0
+#macro kEvent_DoorTrigger0 0
+#macro kEvent_DoorOpen1 1
+#macro kEvent_DoorClose2 2
