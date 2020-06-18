@@ -14647,6 +14647,14 @@
             }
         },
         {
+            "Key": "e7cba69d-96d6-490f-9016-fda8e0bf3537",
+            "Value": {
+                "id": "bca3b6ca-9a61-4f38-8eec-6a36ed8e9be8",
+                "resourcePath": "objects\\o_pickupJunk_Spork\\o_pickupJunk_Spork.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e815a4b5-d816-49b5-bbc6-cf518e3614e2",
             "Value": {
                 "id": "53d370ed-c19b-4f1b-a0fc-d41ac1e90b13",
@@ -15540,6 +15548,14 @@
                 "id": "c0096c78-fc0a-4f5c-8054-f8a2c50136e9",
                 "resourcePath": "objects\\ob_lightRay\\ob_lightRay.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f7d9f2f1-134f-4bb7-b075-285342148314",
+            "Value": {
+                "id": "4639e87f-77a3-4fbb-9351-d6ae7dae485d",
+                "resourcePath": "sprites\\s_itemJunkSpork\\s_itemJunkSpork.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
