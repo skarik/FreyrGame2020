@@ -9871,6 +9871,14 @@
             }
         },
         {
+            "Key": "9f528421-cf3a-4c53-82a3-94c42f4ca95c",
+            "Value": {
+                "id": "d34e14ac-54f0-4d42-9b58-9369275b8a67",
+                "resourcePath": "objects\\o_livelyWatcherRelay_QuestFlag\\o_livelyWatcherRelay_QuestFlag.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9f991d7b-c5e6-4484-a7a6-e67a1aa97ea3",
             "Value": {
                 "id": "7bf4f6f9-7166-4c56-b910-ac51f4283dc6",

@@ -11,7 +11,7 @@ with (kQuestManager)
 {
 	// enemy_info_map updated as game runs
 	
-	var live_count = ds_map_size(enemy_live_map);
+	var live_count = ds_map_size(enemy_info_map);
 	buffer_write(buffer, buffer_u32, live_count);
 	
 	var current_key = ds_map_find_first(enemy_info_map);
