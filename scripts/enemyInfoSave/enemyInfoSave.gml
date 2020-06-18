@@ -11,10 +11,10 @@ with (kQuestManager)
 {
 	// enemy_info_map updated as game runs
 	
-	var live_count = ds_map_size(enemy_info_map);
+	var live_count = ds_map_size(enemy_live_map);
 	buffer_write(buffer, buffer_u32, live_count);
 	
-	var current_key = ds_map_find_first(enemy_info_map);
+	var current_key = ds_map_find_first(enemy_live_map);
 	for (var i = 0; i < live_count; ++i)
 	{
 		// write the map's id
@@ -25,7 +25,7 @@ with (kQuestManager)
 		buffer_write(buffer, buffer_u16, enemy_live);
 		
 		// seek to the next key
-		current_key = ds_map_find_next(enemy_info_map, current_key);
+		current_key = ds_map_find_next(enemy_live_map, current_key);
 	}
 	
 	var key_count = ds_map_size(enemy_info_map);
