@@ -36,3 +36,7 @@
 #macro kEvent_DoorTrigger0 0
 #macro kEvent_DoorOpen1 1
 #macro kEvent_DoorClose2 2
+
+#macro kCompareLess 0
+#macro kCompareEqual 1
+#macro kCompareGreater 2

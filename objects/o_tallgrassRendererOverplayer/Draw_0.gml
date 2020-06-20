@@ -11,6 +11,9 @@ with (ob_areaTallGrass)
 {
 	if (!visible)
 		continue;
+		
+	if (sqr(x - pl.x) + sqr(y - pl.y) > 10000)
+		continue;
 	
 	// draw grass
 	for (var i = 0; i < m_grassBitsCount; ++i)
