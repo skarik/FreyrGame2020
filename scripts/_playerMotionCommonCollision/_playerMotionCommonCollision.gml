@@ -1,16 +1,18 @@
 moHitWall = false;
 
 // Check collision in the X direction
-//if (place_meeting(x + xspeed * Time.deltaTime, y, ob_collider))
-if (collision3_meeting(x + xspeed * Time.deltaTime, y, z + z_height, !onGround))
+if (abs(xspeed) > 0)
 {
-	// Move contact
-	//move_contact_with(sign(xspeed), 0, ob_collider);
-	collision3_move_contact_meeting(sign(xspeed), 0, !onGround);
-	// Stop motion
-	xspeed = 0;
-	// Mark we hit a wall
-	moHitWall = true;
+	if (collision3_meeting(x + xspeed * Time.deltaTime, y, z + z_height, !onGround))
+	{
+		// Move contact
+		//move_contact_with(sign(xspeed), 0, ob_collider);
+		collision3_move_contact_meeting(sign(xspeed), 0, !onGround);
+		// Stop motion
+		xspeed = 0;
+		// Mark we hit a wall
+		moHitWall = true;
+	}
 }
 if (!isDashing)
 {
@@ -25,16 +27,18 @@ if (!isDashing)
 }
 
 // Check collision in the Y direction
-//if (place_meeting(x, y + yspeed * Time.deltaTime, ob_collider))
-if (collision3_meeting(x, y + yspeed * Time.deltaTime, z + z_height, !onGround))
+if (abs(yspeed) > 0.0)
 {
-	// Move contact
-	//move_contact_with(0, sign(yspeed), ob_collider);
-	collision3_move_contact_meeting(0, sign(yspeed), !onGround);
-	// Stop motion
-	yspeed = 0;
-	// Mark we hit a wall
-	moHitWall = true;
+	if (collision3_meeting(x, y + yspeed * Time.deltaTime, z + z_height, !onGround))
+	{
+		// Move contact
+		//move_contact_with(0, sign(yspeed), ob_collider);
+		collision3_move_contact_meeting(0, sign(yspeed), !onGround);
+		// Stop motion
+		yspeed = 0;
+		// Mark we hit a wall
+		moHitWall = true;
+	}
 }
 if (!isDashing)
 {

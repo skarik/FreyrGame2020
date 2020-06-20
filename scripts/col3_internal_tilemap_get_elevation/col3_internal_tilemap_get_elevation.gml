@@ -11,7 +11,8 @@ var cel_y = floor(check_y / 16);
 var tile_elevation = kElevationInvalid;
 
 col3_internal_query_collision_maps();
-for (var i = 0; i < array_length_1d(global.collidable_layers); ++i)
+var layer_count = array_length_1d(global.collidable_layers);
+for (var i = 0; i < layer_count; ++i)
 {
 	var tilemap = global.collidable_layers[i];
 	var tile = tilemap_get(tilemap, cel_x, cel_y);
