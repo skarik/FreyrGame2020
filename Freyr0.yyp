@@ -6191,6 +6191,14 @@
             }
         },
         {
+            "Key": "632b17d7-097a-4006-be80-caf0cfe41c35",
+            "Value": {
+                "id": "2e2e66ca-9c95-4175-aa10-ecab461ae171",
+                "resourcePath": "sprites\\s_propRuinLowWallVertCol2\\s_propRuinLowWallVertCol2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "635405fb-5601-49ef-bf6b-511b8679aafd",
             "Value": {
                 "id": "4d756a30-f216-44a4-aeaa-c3d8f0ed5bab",
@@ -8383,6 +8391,14 @@
             }
         },
         {
+            "Key": "883ab0a1-7299-45c2-9568-bee7c4f7a8ba",
+            "Value": {
+                "id": "e423602e-ed8f-4cb9-b2ab-65be591bbc89",
+                "resourcePath": "sprites\\s_propOuthouse\\s_propOuthouse.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "883fb0aa-3ce3-4695-93ba-a8a2ab308693",
             "Value": {
                 "id": "47474051-2221-4b01-bab1-a8e9f92ec518",
@@ -8778,7 +8794,7 @@
             "Key": "8e9000e9-a616-4191-a463-d3681fde49fa",
             "Value": {
                 "id": "8ff53995-3a23-4b5c-b85c-6a0123caa713",
-                "resourcePath": "sprites\\s_propCampfire\\s_propCampfire.yy",
+                "resourcePath": "sprites\\s_propMeatSlab\\s_propMeatSlab.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9516,6 +9532,14 @@
                 "id": "09bf2427-977d-4bf5-9220-adc9669109a6",
                 "resourcePath": "scripts\\string_rpos\\string_rpos.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9951fdf5-2925-44c7-93c9-37fb6f05950c",
+            "Value": {
+                "id": "22ee5309-78c6-4304-b84e-1d2d2b15c5f1",
+                "resourcePath": "sprites\\s_propRuinLowWallVertCol\\s_propRuinLowWallVertCol.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -10683,6 +10707,14 @@
             "Value": {
                 "id": "936cb805-77e9-4fbf-b959-140d2da7c96b",
                 "resourcePath": "sprites\\s_charBirdStand\\s_charBirdStand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ac1a9203-5a42-4b9f-8e74-35787d0d705d",
+            "Value": {
+                "id": "ab058ac5-f571-4cd4-ab27-f0eec548eebe",
+                "resourcePath": "sprites\\s_propCampfire\\s_propCampfire.yy",
                 "resourceType": "GMSprite"
             }
         },
