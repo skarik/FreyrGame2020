@@ -1,10 +1,17 @@
 /// @description Set up rendering
 visible = true;
 
-var cx1 = x - sprite_get_xoffset(sprite_index) * image_xscale;
+// Calculate position of all 4 sprite corners
+//var corner0_x = x - sprite_get_xoffset(sprite_index) * image_xscale;
+//var corner1_x = x 
+/*var cx1 = x - sprite_get_xoffset(sprite_index) * image_xscale;
 var cy1 = y - sprite_get_yoffset(sprite_index) * image_yscale;
 var cx2 = x + (-sprite_get_xoffset(sprite_index) + sprite_get_width(sprite_index)) * image_xscale;
-var cy2 = y + (-sprite_get_yoffset(sprite_index) + sprite_get_height(sprite_index)) * image_yscale;
+var cy2 = y + (-sprite_get_yoffset(sprite_index) + sprite_get_height(sprite_index)) * image_yscale;*/
+var cx1 = bbox_left;
+var cy1 = bbox_top;
+var cx2 = bbox_right;
+var cy2 = bbox_bottom;
 
 m_grassBits = array_create(0);
 m_grassBitsCount = 0;

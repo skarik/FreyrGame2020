@@ -2135,6 +2135,14 @@
             }
         },
         {
+            "Key": "22ca7814-12bb-45ac-9e23-ceccfc5dd91e",
+            "Value": {
+                "id": "2d4d21d9-c259-40a9-adf9-13c5a7935269",
+                "resourcePath": "objects\\ob_aiGaurdStand\\ob_aiGaurdStand.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "23095d81-5c20-45d7-ae4f-de8005af5bba",
             "Value": {
                 "id": "7257625c-9df0-45fb-90d8-5a65237eccb6",
@@ -3516,6 +3524,14 @@
                 "id": "a80ddec0-c8c8-4d4b-a595-a6c38fea4ec3",
                 "resourcePath": "objects\\o_livelyPoweredSubtracter\\o_livelyPoweredSubtracter.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "37448ec4-6032-4eb8-bc00-3147fd4bf3c2",
+            "Value": {
+                "id": "8fd36afa-c510-4ae7-b314-919558d36e3b",
+                "resourcePath": "datafiles_yy\\cts\\00_foolsmarch_escort0_stealthtutorial.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
