@@ -594,7 +594,7 @@
             "Key": "0a85c82a-7e6c-41c7-8ad3-2425d805739d",
             "Value": {
                 "id": "454128f2-e796-4b84-ac80-41f3dd7e102b",
-                "resourcePath": "objects\\o_lightDayglowLarge\\o_lightDayglowLarge.yy",
+                "resourcePath": "objects\\o_lightAllglowLarge\\o_lightAllglowLarge.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1359,6 +1359,14 @@
             }
         },
         {
+            "Key": "16746e05-c579-4fc0-a6e4-c90574904b39",
+            "Value": {
+                "id": "011603e6-6c26-423f-bce9-f1da64456568",
+                "resourcePath": "objects\\ob_usableTrigger\\ob_usableTrigger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1676a9cd-bd49-47e8-860f-94537ce1a3ed",
             "Value": {
                 "id": "683b8df9-8958-4037-82b0-bc01be2f0ec4",
@@ -1524,6 +1532,14 @@
                 "id": "c47cdd8f-ba52-4104-a2b6-8f932f941ca1",
                 "resourcePath": "objects\\o_lightEmber\\o_lightEmber.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "195aefa4-8e9e-454f-9cec-2fecac8289f5",
+            "Value": {
+                "id": "96f9316b-5f9e-4fda-9c13-27fbf6d3e005",
+                "resourcePath": "sprites\\s_propWinchTool\\s_propWinchTool.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2140,6 +2156,14 @@
                 "id": "2d4d21d9-c259-40a9-adf9-13c5a7935269",
                 "resourcePath": "objects\\ob_aiGaurdStand\\ob_aiGaurdStand.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "22d3b96c-827a-42ee-8390-4f6adf5e906f",
+            "Value": {
+                "id": "bb0a6adc-98ae-41e5-99e8-55738c90b85e",
+                "resourcePath": "sprites\\s_propDesertTermiteHill2\\s_propDesertTermiteHill2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4196,6 +4220,14 @@
                 "id": "cdd00483-321f-4e34-9c1e-23d9238e9acd",
                 "resourcePath": "objects\\o_chGobboTest\\o_chGobboTest.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "43c4aa0d-6af3-4c62-97c6-4617470b5b30",
+            "Value": {
+                "id": "c993f830-6d4a-4136-9148-4d7be05341d7",
+                "resourcePath": "sprites\\s_propDesertTermiteHill1\\s_propDesertTermiteHill1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7543,6 +7575,14 @@
             }
         },
         {
+            "Key": "794549f3-56a7-4437-97e4-fd1c31177945",
+            "Value": {
+                "id": "b2324912-dd21-49a7-b040-105bfb53f33c",
+                "resourcePath": "objects\\o_lightRaySquareDF\\o_lightRaySquareDF.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7946ac27-4ee9-4c61-ac57-583bac62af6c",
             "Value": {
                 "id": "5cf74e6c-adb9-4828-8268-c7a82c1b3da0",
@@ -9159,6 +9199,14 @@
             }
         },
         {
+            "Key": "941e6a19-8ae6-4b04-a89d-fd7618de4239",
+            "Value": {
+                "id": "029b9d8b-8bfb-4ebd-838f-7442f148da5d",
+                "resourcePath": "objects\\ob_usableTrigger_WinchTool\\ob_usableTrigger_WinchTool.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "942055e2-d018-4c57-a3d5-570117e357e7",
             "Value": {
                 "id": "16c4495f-17e6-4ed1-bd77-2582f9bb20fe",
@@ -9812,6 +9860,14 @@
                 "id": "84acce2f-b373-422a-b60a-c4f3faacf8d7",
                 "resourcePath": "objects\\o_CtsTalkerBox\\o_CtsTalkerBox.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9e12600d-60be-4026-852a-7ca6a9ce7186",
+            "Value": {
+                "id": "e300ca19-024b-4751-91ff-bb3453c081a9",
+                "resourcePath": "sprites\\s_propDesertTermiteHill0\\s_propDesertTermiteHill0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -11786,7 +11842,7 @@
             "Key": "bc06ad61-cae6-4a6b-83a2-948d0a086454",
             "Value": {
                 "id": "e3fc20ff-ed0c-476a-b43d-636a9fb3342d",
-                "resourcePath": "objects\\o_lightDayglowSmall\\o_lightDayglowSmall.yy",
+                "resourcePath": "objects\\o_lightAllglowSmall\\o_lightAllglowSmall.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -15130,7 +15186,7 @@
             "Key": "eedd18ec-d0e5-4eb0-9d21-83965e12f8ad",
             "Value": {
                 "id": "0c08668d-1469-4be9-9699-cd8c8acf2ac5",
-                "resourcePath": "objects\\o_lightDayglowMedium\\o_lightDayglowMedium.yy",
+                "resourcePath": "objects\\o_lightAllglowMedium\\o_lightAllglowMedium.yy",
                 "resourceType": "GMObject"
             }
         },

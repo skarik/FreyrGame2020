@@ -23,23 +23,35 @@ surface_set_target(m_lightBuffer);
 	draw_clear_alpha(c_black, 0.0);
 	
 	// Base floor cast
-	draw_sprite_ext(sprite_index, image_index,
-					m_lightBufferOriginX, m_lightBufferOriginY,
-					image_xscale, image_yscale,
-					image_angle, c_white, 1.0);
+	if (m_lightrayBlendStyle == kLightrayBlend_TopFade)
+	{
+		draw_sprite_ext(sprite_index, image_index,
+						m_lightBufferOriginX, m_lightBufferOriginY,
+						image_xscale, image_yscale,
+						image_angle, c_white, 1.0);
+	}
 					
 	// Light ray
 	var	offset_percent;
 	var offset_basex = lengthdir_x(-1.0, m_castAngle);
 	var offset_basey = lengthdir_y(-1.0, m_castAngle);
+	var piece_alpha = 0.0;
 	for (var i = 1; i < m_castDistance; ++i)
 	{
 		offset_percent = (i / m_castDistance);
+		if (m_lightrayBlendStyle == kLightrayBlend_TopFade)
+		{
+			piece_alpha = 0.4 * (1.0 - offset_percent);
+		}
+		else if (m_lightrayBlendStyle == kLightrayBlend_DoubleFade)
+		{
+			piece_alpha = 0.5 * (1.0 - 2.0 * abs(0.5 - offset_percent));
+		}
 		draw_sprite_ext(sprite_index, image_index,
 						m_lightBufferOriginX + offset_basex * i,
 						m_lightBufferOriginY + offset_basey * i,
 						image_xscale, image_yscale,
-						image_angle, c_white, 0.4 * (1.0 - offset_percent));
+						image_angle, c_white, piece_alpha);
 	}
 }
 surface_reset_target();

@@ -3,5 +3,5 @@
 if (!m_moving)
 {
 	m_wantsOpen = !m_wantsOpen;
-	m_moving = false;
+	m_moving = true;
 }
