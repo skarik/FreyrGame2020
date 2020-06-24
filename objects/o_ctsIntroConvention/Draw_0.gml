@@ -4,7 +4,7 @@ draw_set_color(c_white);
 draw_rectangle(0, 0, 640, 640, false);
 
 shader_set(sh_colormask);
-draw_sprite_ext(sui_logo1, 0, x, round(y + 24 + sin(current_time * 0.0015) * 9.4), 1.0, 1.0, 0.0, c_dkgray, 0.5);
+draw_sprite_ext(sui_logo2, 0, x, round(y + 24 + sin(current_time * 0.0015) * 9.4), 1.0, 1.0, 0.0, c_dkgray, 0.3);
 shader_reset();
 
 // draw text

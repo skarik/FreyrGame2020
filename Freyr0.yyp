@@ -8311,6 +8311,14 @@
             }
         },
         {
+            "Key": "8717b853-f6ee-4a5a-a9b8-746aec95de9f",
+            "Value": {
+                "id": "af93d12c-5eb6-4da8-be2f-c0265f10d0a3",
+                "resourcePath": "sprites\\sui_logo2\\sui_logo2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "872f1e04-53f2-4947-8c2b-1396ab8f903f",
             "Value": {
                 "id": "7e3e5330-17d2-4de9-8808-c9620867c925",
@@ -10714,7 +10722,7 @@
             "Key": "ac1a9203-5a42-4b9f-8e74-35787d0d705d",
             "Value": {
                 "id": "ab058ac5-f571-4cd4-ab27-f0eec548eebe",
-                "resourcePath": "sprites\\s_propCampfire\\s_propCampfire.yy",
+                "resourcePath": "sprites\\s_propDesertCampfire\\s_propDesertCampfire.yy",
                 "resourceType": "GMSprite"
             }
         },

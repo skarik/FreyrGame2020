@@ -34,12 +34,13 @@ if (!cutsceneUpdate())
 		// bring up the choice menu
 		if (!iexists(m_logo))
 		{
-			m_logo = instance_create_depth(x, y, 0, o_dummyDrawOutlineTemp);
-			m_logo.sprite_index = sui_logo1;
+			//m_logo = instance_create_depth(x, y, 0, o_dummyDrawOutlineTemp);
+			m_logo = instance_create_depth(x, y - 10, 0, _dummy);
+			m_logo.sprite_index = sui_logo2;
 			m_logo.image_alpha = 0.0;
 			m_logo.visible = true;
 			
-			instance_create_depth(x, y + 90, 5, o_doodadPressAnything);
+			instance_create_depth(x, y + 110, -5, o_doodadPressAnything);
 		}
 		else
 		{
