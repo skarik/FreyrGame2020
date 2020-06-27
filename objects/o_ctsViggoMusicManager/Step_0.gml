@@ -1,6 +1,6 @@
 /// @description base music on viggo proximity
 
-var current_music = instance_find(ob_musScripter, 0);
+/*var current_music = instance_find(ob_musScripter, 0);
 if (iexists(current_music) && current_music.object_index != o_mus00_Viggo)
 {
 	m_initialMusic = current_music.object_index;
@@ -25,4 +25,5 @@ else
 		idelete(o_mus00_Viggo);
 		inew(m_initialMusic);
 	}
-}
+}*/
+// managed elsewhere

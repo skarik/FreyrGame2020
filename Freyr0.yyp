@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "00854097-ee1f-486d-946d-043ae327eeb4",
+            "Value": {
+                "id": "c36076d7-2e4d-453d-9a80-b612632f07e8",
+                "resourcePath": "objects\\o_aiSafeArea32\\o_aiSafeArea32.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "00aaef0d-2adf-44fa-88d7-97e2a5d1a0c8",
             "Value": {
                 "id": "29900af7-d212-4234-a0f8-65e211aa0fa6",
@@ -6919,6 +6927,14 @@
             }
         },
         {
+            "Key": "6dfc95cb-5f83-4c05-b9c8-db800ccf6d9b",
+            "Value": {
+                "id": "dcd55ecf-7026-4ed8-84fa-fd66cd36db1a",
+                "resourcePath": "sprites\\ssy_aiSafe\\ssy_aiSafe.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6e0f790d-80f5-488a-8bac-84bbafeb961b",
             "Value": {
                 "id": "297a8815-d432-4dad-b12e-2a1ab67bbba6",
@@ -10540,6 +10556,14 @@
                 "id": "4559392d-251c-4965-b59b-172f1639af19",
                 "resourcePath": "scripts\\settingsControlLoad\\settingsControlLoad.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a7bb4d6e-0aed-48a6-a627-60dd100ff7dc",
+            "Value": {
+                "id": "853cc11b-4199-4885-832e-c0ab2d3d214f",
+                "resourcePath": "objects\\ob_areaAISafe\\ob_areaAISafe.yy",
+                "resourceType": "GMObject"
             }
         },
         {
