@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Unified book draw
 
 var c_bookHeading = make_color_rgb(165, 98, 67);
 var c_bookHeadingShadow = make_color_rgb(207, 182, 144);
@@ -57,15 +56,15 @@ if (m_tab == BookTabs.Main)
 	draw_sprite_ext(sui_book2Pages, 2, dx, dy, 1, 1, 0, c_white, 0.5);
 	draw_sprite_ext(sui_book2Pages, 2, dx + kBookWidth, dy, -1, 1, 0, c_white, 0.5);
 	
-	// REST SECTION
+	// WAIT SECTION
 	{
 		draw_set_font(global.font_will14);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_top);
 		draw_set_color(c_bookHeadingShadow);
-		draw_text_spaced(dx + kXOffsetCenterLeft, dy + 30 + 1, "REST", 2);
+		draw_text_spaced(dx + kXOffsetCenterLeft, dy + 30 + 1, "WAIT", 2);
 		draw_set_color(c_bookHeading);
-		draw_text_spaced(dx + kXOffsetCenterLeft, dy + 30    , "REST", 2);
+		draw_text_spaced(dx + kXOffsetCenterLeft, dy + 30    , "WAIT", 2);
 		
 		var left = kXOffsetCenterLeft - 85;
 		var right = kXOffsetCenterLeft + 85;
@@ -75,7 +74,7 @@ if (m_tab == BookTabs.Main)
 		draw_set_font(global.font_arvo7);
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
-		draw_text_spaced(dx + left + 6, dy + dy_rest0 - 18, "Progress is saved at each rest.", 2);
+		draw_text_spaced(dx + left + 6, dy + dy_rest0 - 18, "Progress is not saved when waiting.", 2);
 
 		if (m_top_hover == BookSelects.RestShort || m_top_selection == BookSelects.RestShort)
 		{
@@ -90,10 +89,12 @@ if (m_tab == BookTabs.Main)
 		draw_set_font(global.font_arvo9);
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
-		draw_text_spaced(dx + left + 6, dy + dy_rest0 + 1, "Camp for short time", 2);
+		draw_text_spaced(dx + left + 6, dy + dy_rest0 + 1, "Wait for short time", 2);
 		draw_sprite_ext(sui_book2TapeCorner, 0, dx + left, dy + dy_rest0, 1, 1, 0, c_white, 1.0);
 		draw_sprite_ext(sui_book2TapeCorner, 2, dx + right + 1, dy + dy_rest0 + 16 + 1, 1, 1, 180, c_white, 1.0);
-
+		m_hover_rects[BookSelects.RestShort] = [dx + left, dy + dy_rest0, dx + right, dy + dy_rest0 + 16];
+		
+		/*
 		if (m_top_hover == BookSelects.RestFull || m_top_selection == BookSelects.RestFull)
 		{
 			draw_set_color((m_top_selection == BookSelects.RestFull) ? c_gold : c_white);
@@ -110,17 +111,37 @@ if (m_tab == BookTabs.Main)
 		draw_text_spaced(dx + left + 6, dy + dy_rest1 + 1, "Camp until Sunrise", 2);
 		draw_sprite_ext(sui_book2TapeCorner, 2, dx + left, dy + dy_rest1, 1, 1, 0, c_white, 1.0);
 		draw_sprite_ext(sui_book2TapeCorner, 1, dx + right + 1, dy + dy_rest1, 1, 1, 270, c_white, 1.0);
+		*/
 		
-		// OPTIONS FOR SHORT REST
+		// OPTIONS FOR SHORT WAIT
 		{
 			var draw_alpha = (m_book_state == BookState.SelectionOptions && m_top_selection == BookSelects.RestShort) ? 1.0 : 0.5;
 			draw_set_alpha(draw_alpha);
 			
-			if (m_sub_hover == BookSelects.RestFull || m_sub_selection == BookSelects.RestFull)
+			if (m_sub_hover == BookSelects.RestShort_Duration || m_sub_selection == BookSelects.RestShort_Duration)
 			{
-				draw_set_color((m_sub_selection == BookSelects.RestFull) ? c_gold : c_white);
-				draw_set_alpha((m_sub_selection == BookSelects.RestFull) ? 1.0 : _playeruiBookAlphaPulse());
-				draw_rectangle(dx + left - 1, dy + dy_rest0 + 16 + 8 - 1, dx + kXOffsetCenterLeft - 4 + 1, dy + dy_rest1 - 8 + 1, false);
+				draw_set_color((m_sub_selection == BookSelects.RestShort_Duration) ? c_gold : c_white);
+				draw_set_alpha((m_sub_selection == BookSelects.RestShort_Duration) ? 1.0 : _playeruiBookAlphaPulse());
+				if (m_tri_hover < 0)
+				{
+					draw_rectangle_color(
+						dx + left, dy + dy_rest0 + 16 + 8, dx + kXOffsetCenterLeft - 4, dy + dy_rest1 - 8,
+						c_white, c_white,
+						c_gold, c_gold,
+						true);
+				}
+				else if (m_tri_hover > 0)
+				{
+					draw_rectangle_color(
+						dx + left, dy + dy_rest0 + 16 + 8, dx + kXOffsetCenterLeft - 4, dy + dy_rest1 - 8,
+						c_gold, c_gold,
+						c_white, c_white,
+						true);
+				}
+				else
+				{
+					draw_rectangle(dx + left - 1, dy + dy_rest0 + 16 + 8 - 1, dx + kXOffsetCenterLeft - 4 + 1, dy + dy_rest1 - 8 + 1, false);
+				}
 				draw_set_alpha(draw_alpha);
 			}
 			draw_set_color(c_bookHeadingShadow);
@@ -131,16 +152,17 @@ if (m_tab == BookTabs.Main)
 			draw_set_font(global.font_arvo8);
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_top);
-			draw_text_spaced(dx + (left + kXOffsetCenterLeft - 4) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 - 8, "3 Hours", 2);
+			draw_text_spaced(dx + (left + kXOffsetCenterLeft - 4) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 - 8, string(m_option_current_waittime) + " Hours", 2);
 			draw_arrow(dx + (left + kXOffsetCenterLeft - 4) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 - 10,
 					   dx + (left + kXOffsetCenterLeft - 4) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 - 20, 9);
 			draw_arrow(dx + (left + kXOffsetCenterLeft - 4) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 + 10,
 					   dx + (left + kXOffsetCenterLeft - 4) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 + 20, 9);
+			m_hover_rects[BookSelects.RestShort_Duration] = [dx + left, dy + dy_rest0 + 16 + 8, dx + kXOffsetCenterLeft - 4, dy + dy_rest1 - 8];
 
-			if (m_sub_hover == BookSelects.RestFull || m_sub_selection == BookSelects.RestFull)
+			if (m_sub_hover == BookSelects.RestShort_Confirm || m_sub_selection == BookSelects.RestShort_Confirm)
 			{
-				draw_set_color((m_sub_selection == BookSelects.RestFull) ? c_gold : c_white);
-				draw_set_alpha((m_sub_selection == BookSelects.RestFull) ? 1.0 : _playeruiBookAlphaPulse());
+				draw_set_color((m_sub_selection == BookSelects.RestShort_Confirm) ? c_gold : c_white);
+				draw_set_alpha((m_sub_selection == BookSelects.RestShort_Confirm) ? 1.0 : _playeruiBookAlphaPulse());
 				draw_rectangle(dx + kXOffsetCenterLeft + 4 - 1, dy + dy_rest0 + 16 + 8 - 1, dx + right + 1, dy + dy_rest1 - 8 + 1, false);
 				draw_set_alpha(draw_alpha);
 			}
@@ -152,12 +174,14 @@ if (m_tab == BookTabs.Main)
 			draw_set_font(global.font_arvo8);
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_top);
-			draw_text_spaced(dx + (kXOffsetCenterLeft + 4 + right) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 - 8, "Rest Now", 2);
+			draw_text_spaced(dx + (kXOffsetCenterLeft + 4 + right) * 0.5, dy + (dy_rest0 + 16 + dy_rest1) * 0.5 - 8, "Wait Now", 2);
+			m_hover_rects[BookSelects.RestShort_Confirm] = [dx + kXOffsetCenterLeft + 4, dy + dy_rest0 + 16 + 8, dx + right, dy + dy_rest1 - 8];
 			
 			draw_set_alpha(1.0);
 		}
 		
 		// OPTIONS FOR SUNRISE REST
+		/*
 		{
 			var draw_alpha = (m_book_state == BookState.SelectionOptions && m_top_selection == BookSelects.RestFull) ? 1.0 : 0.5;
 			draw_set_alpha(draw_alpha);
@@ -187,6 +211,7 @@ if (m_tab == BookTabs.Main)
 			
 			draw_set_alpha(1.0);
 		}
+		*/
 	}
 	
 	// RUNE SECTION

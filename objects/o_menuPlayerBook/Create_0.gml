@@ -86,6 +86,7 @@ m_hover_rects = array_create(300, null);
 #macro kOptionEntryHeading 1
 
 m_option_current_choice = null;
+m_option_current_waittime = 3;
 
 m_options_top_choices = ["Gameplay", "Controls", "Audio", "HUD Layout", "Search for Option"];
 m_options = [
