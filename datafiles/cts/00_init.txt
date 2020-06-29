@@ -36,19 +36,20 @@ wait
 
 audio
 {
-    play audio/intro_title_full.ogg
+    play music/outofthevoid_0_intro.ogg
 	channel music
 }
 wait
 {
     type time
-    time 10.1
+    time 8.6
 }
 
-//audio
-//{
-//    play audio/intro_title.ogg
-//}
+audio
+{
+    play music/outofthevoid_0_hit.ogg
+	channel music
+}
 wait
 {
     type input
@@ -65,14 +66,14 @@ wait
 
 music // start with the librarian track
 {
-    1 audio/intro_f1_piano1.ogg
-    2 audio/intro_f2_piano2.ogg
-    3 audio/intro_f3_piano3.ogg
-    4 audio/intro_f4_perc.ogg
-    5 audio/intro_f5_violin.ogg
-	6 audio/intro_f6_cello.ogg
-	7 audio/intro_f7_xylo.ogg
-	8 audio/intro_f8_strings.ogg
+    1 music/outofthevoid_1.ogg
+    2 music/outofthevoid_2_fuzz.ogg
+    3 music/outofthevoid_3.ogg
+    4 music/outofthevoid_4.ogg
+    5 music/outofthevoid_5.ogg
+	6 music/outofthevoid_6.ogg
+	7 music/outofthevoid_7_fuzz.ogg
+	8 music/outofthevoid_7_outtro.ogg
     volume 0.0
     1volume 1.0
     pitch 1.0
@@ -112,18 +113,17 @@ ai
 	loop true
 }
 
+// go to the fuzz track on the "curiosity"
+music
+{
+    volume 0.0
+    2volume 1.0
+}
+
 lines // continue with talking & the nonsense
 {
 	target	imp
     1 I've been doing upkeep on my library and it appears some of my records on you have been $2lost$0.$p $wHow curious$$.
-}
-
-// go to the first track on pre-choice
-music
-{
-    volume 0.0
-    1volume 1.0
-	3volume 1.0
 }
 
 // make librarian shake her head at this
@@ -173,10 +173,8 @@ ai
 // go to the first track on pre-choice
 music
 {
-    volume 0.0
-    1volume 1.0
-	3volume 1.0
-	6volume 1.0
+	volume 0.0
+	1volume 1.0
 }
 
 choice
@@ -204,9 +202,7 @@ signal // hide the librarian
 music
 {
     volume 0.0
-    2volume 1.0
-	3volume 1.0
-	6volume 1.0
+    4volume 1.0
 }
 
 lines
@@ -228,10 +224,7 @@ choice
 music
 {
     volume 0.0
-    2volume 1.0
-	3volume 1.0
-	6volume 1.0
-	7volume 1.0
+    3volume 1.0
 }
 
 lines
@@ -254,6 +247,12 @@ lines
     target  imp
     targeti 0
     1 It indicates here your name was once [PLAYER]. Is that right?
+}
+
+music
+{
+    volume 0.0
+    5volume 1.0
 }
 
 choice
@@ -288,11 +287,7 @@ ai
 music
 {
     volume 0.0
-	2volume 1.0
-	3volume 1.0
 	6volume 1.0
-	7volume 1.0
-	8volume 1.0
 }
 
 signal // show the librarian

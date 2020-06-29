@@ -27,7 +27,7 @@ if (!m_player.m_plantable
 	m_farmoverlay_cooldown_time = max(m_farmoverlay_cooldown_time, 0.02);
 }
 // Cool down when not able to farm
-if (iexists(ob_CtsTalker) || !o_PlayerTest.moEnabled)
+if (ctsGabbersHaveFocus() || !o_PlayerTest.moEnabled)
 {
 	m_farmoverlay_cooldown_time = max(m_farmoverlay_cooldown_time, 0.5);
 }

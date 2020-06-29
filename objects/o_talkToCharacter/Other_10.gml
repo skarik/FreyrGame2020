@@ -2,7 +2,7 @@
 
 if (m_owner != null && iexists(m_user) && m_user.id == o_PlayerTest.id)
 {
-	if (!iexists(ob_CtsTalker) && !m_interacting)
+	if (!ctsGabbersHaveFocus() && !m_interacting)
 	{
 		/*ctsMakeGabber(m_user, "Self", "It's a $b" + m_name + "$$.");*/
 		

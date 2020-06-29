@@ -959,14 +959,6 @@
             }
         },
         {
-            "Key": "10dc0ebb-9579-48ae-898e-032ddd2109b0",
-            "Value": {
-                "id": "cb9ae167-1972-4844-82f7-c0bf87d0af90",
-                "resourcePath": "datafiles_yy\\audio\\intro_f5_violin.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "10dd9307-de97-48ff-bb59-82ee0e2a8b1c",
             "Value": {
                 "id": "d071621d-240f-4c67-89fb-24f34f38e2c4",
@@ -1887,14 +1879,6 @@
             }
         },
         {
-            "Key": "1dcec205-ff70-4adc-9a4e-7e7d9fa16a3f",
-            "Value": {
-                "id": "95240680-c007-42cf-b8cb-fc47e0100d35",
-                "resourcePath": "datafiles_yy\\audio\\intro_f2_piano2.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "1dd33fe3-5cc1-40ab-8889-6c8bc05646e1",
             "Value": {
                 "id": "ba2274ce-25e0-45d9-ae01-56f5df736379",
@@ -2503,14 +2487,6 @@
             }
         },
         {
-            "Key": "28034fc5-1768-44b7-acb9-fd345598e81e",
-            "Value": {
-                "id": "1f09dee2-4fa3-495b-ae0e-6153639a473a",
-                "resourcePath": "datafiles_yy\\audio\\intro_f7_xylo.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "282e4830-f74f-4f50-b19d-e11bf07e5e3e",
             "Value": {
                 "id": "b94c4f2a-9cc1-4c92-9ee8-29dfc9a42804",
@@ -2556,14 +2532,6 @@
                 "id": "bc7adba6-f780-41ba-a499-578e229f23fc",
                 "resourcePath": "scripts\\powerLogic_SubtractOutput\\powerLogic_SubtractOutput.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "291ade67-d02c-4953-a3ab-154b5bde3971",
-            "Value": {
-                "id": "4429ff24-bb70-41ac-9f8e-b1dad6cc5c4b",
-                "resourcePath": "datafiles_yy\\audio\\intro_title_full.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3076,6 +3044,14 @@
                 "id": "5be656c5-4de8-4818-ad8c-3802264097d5",
                 "resourcePath": "sprites\\s_propWoodThickPole1\\s_propWoodThickPole1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2f4ea12e-5837-4e03-9cb3-235bfd6d00f3",
+            "Value": {
+                "id": "685c9e72-1297-4b31-b81b-9b3ba3c6fdcb",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_4.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3620,14 +3596,6 @@
                 "id": "e20a9233-8c5f-4270-95d3-18a276ee70d8",
                 "resourcePath": "objects\\o_mus00_FoolsMarch\\o_mus00_FoolsMarch.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "381097f8-548b-465e-bf48-82154d11e21b",
-            "Value": {
-                "id": "aff7ac8b-cb4e-41e4-afe6-dc34bbe2afc8",
-                "resourcePath": "datafiles_yy\\audio\\intro_f4_perc.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -4239,10 +4207,10 @@
             }
         },
         {
-            "Key": "43020f4c-c3a8-475a-9895-7e6269264df9",
+            "Key": "439d4f1e-c1e7-4123-aa94-2e237d18b174",
             "Value": {
-                "id": "f8dec8a8-1290-463a-b24b-64fe3eefdb6f",
-                "resourcePath": "datafiles_yy\\audio\\intro_f8_strings.ogg.yy",
+                "id": "bbbaacb2-45c3-492e-83d2-c70423592908",
+                "resourcePath": "datafiles_yy\\music\\oasis_3_freyr.ogg.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -4740,6 +4708,14 @@
                 "id": "356a6b54-ad13-4fe4-ac31-07295e7c2a9b",
                 "resourcePath": "sprites\\s_propWoodThickPole0\\s_propWoodThickPole0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "49b985e4-f1b4-45af-9170-2164d84eabaf",
+            "Value": {
+                "id": "7a1e7b84-140f-4106-8035-493fb89070f3",
+                "resourcePath": "datafiles_yy\\music\\oasis_6.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -5871,6 +5847,14 @@
             }
         },
         {
+            "Key": "5c3b2443-0d23-4069-b651-f08bcb586634",
+            "Value": {
+                "id": "7040baba-2b36-43be-ac49-d298b44796b2",
+                "resourcePath": "scripts\\playerPartyAdd\\playerPartyAdd.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5c42d6c1-9e5f-42c2-ab9b-6fbf7d7f8c44",
             "Value": {
                 "id": "57f1d23e-0ff7-4de4-8084-69a74d6481fe",
@@ -6044,6 +6028,14 @@
                 "id": "198c02e3-43a3-424b-96ca-fc93b916b9c1",
                 "resourcePath": "scripts\\playerRemovePitem\\playerRemovePitem.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5f234ac3-43c6-4520-be7d-d48968114486",
+            "Value": {
+                "id": "f7f813ab-4c89-4727-8a0e-0ceac93d6c12",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_0_hit.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -6339,6 +6331,14 @@
             "Value": {
                 "id": "7d4950c0-6dfa-4986-9092-dce890ca21e6",
                 "resourcePath": "datafiles_yy\\audio\\oasis_4_gt2_solo.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "650ab679-53bb-455e-95b9-7cc9535a2d9b",
+            "Value": {
+                "id": "e91765bf-6e16-4e86-bc62-f7c5761f00a3",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_1.ogg.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -6895,14 +6895,6 @@
             }
         },
         {
-            "Key": "6d6fd971-16c9-49c9-8083-72e02c59b3a0",
-            "Value": {
-                "id": "ac3933de-1c51-460c-9aa7-2d00c68c4940",
-                "resourcePath": "datafiles_yy\\audio\\intro_f3_piano3.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "6d924380-1527-4115-ae5c-a72e70a184bc",
             "Value": {
                 "id": "7718dffb-6ef2-444f-9e51-7628f8ffbfb5",
@@ -7004,6 +6996,14 @@
                 "id": "f7c1f35c-9ab6-4939-9303-4caa2599ce89",
                 "resourcePath": "objects\\o_lightRayFTowerEntrance\\o_lightRayFTowerEntrance.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6ea3baac-b1a9-4c39-ada7-7b858cd7c59a",
+            "Value": {
+                "id": "21d1654e-903e-422f-b42f-486cb182f12d",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_3.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7236,14 +7236,6 @@
                 "id": "88b327fe-7e0a-433b-8887-67cfce139c02",
                 "resourcePath": "objects\\o_pickupCrop_SugarCane\\o_pickupCrop_SugarCane.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "711b1ddf-1d67-44aa-9b7c-097705b7e588",
-            "Value": {
-                "id": "81c041cd-f2ad-4936-9ea9-b516eb06495f",
-                "resourcePath": "datafiles_yy\\audio\\intro_f1_piano1.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7492,6 +7484,14 @@
                 "id": "512ea289-65ac-441f-b425-e36b44bdaa5b",
                 "resourcePath": "sprites\\s_propRibs\\s_propRibs.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "75c58ac4-2488-4fba-9e3b-c480e1a850b0",
+            "Value": {
+                "id": "8632ef3f-079e-4b57-a48c-c64ec78cf9d5",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_6.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -8487,6 +8487,14 @@
             }
         },
         {
+            "Key": "8782f0a8-8157-46ac-b49a-c53862784d04",
+            "Value": {
+                "id": "0a053e58-3b37-43de-aed9-9f455339b142",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_5.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "878a2d5a-a9f3-4677-9fae-9ddeb5466eb8",
             "Value": {
                 "id": "79b261b0-2014-4f55-ba52-46d4882e3937",
@@ -8700,6 +8708,14 @@
                 "id": "67e06a32-0a34-40de-9830-8d5a9874c86e",
                 "resourcePath": "sprites\\s_propTLamp0\\s_propTLamp0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8ab50fae-789a-4dde-b0b2-baa72949f45d",
+            "Value": {
+                "id": "22690ab2-56d7-4ae4-88da-5aba7cee1609",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_7_outtro.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -9535,6 +9551,14 @@
             }
         },
         {
+            "Key": "9772dceb-1cce-450b-aee1-4a844a7148c2",
+            "Value": {
+                "id": "676f3d0e-19f7-403d-9dd8-90873f4418b0",
+                "resourcePath": "datafiles_yy\\music\\oasis_1_chill.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "978086b7-657f-4752-bfae-cedec6d69e23",
             "Value": {
                 "id": "c0e5286b-841c-497a-af3b-17e4814bcbe2",
@@ -10287,6 +10311,14 @@
             }
         },
         {
+            "Key": "a2aa3c8c-03eb-4b34-bf8b-aa7abfb30bf5",
+            "Value": {
+                "id": "df87a554-6b52-4a00-b946-8c125e3b4e82",
+                "resourcePath": "datafiles_yy\\music\\oasis_4_freyr_climax.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "a2c923fd-c522-4ba7-826a-414a078531f4",
             "Value": {
                 "id": "c00eec2b-3ea4-4f3c-b28b-bebe58d166f8",
@@ -10308,6 +10340,14 @@
                 "id": "ea9eeaf4-9fab-49b4-b769-dc28b4cc24d5",
                 "resourcePath": "sprites\\s_charHeroStand\\s_charHeroStand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a34b88e4-eebe-4474-b45c-87561cdc2fcb",
+            "Value": {
+                "id": "1e6f4e86-b188-4398-99c0-2d1c685b3fba",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_2_fuzz.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -13071,6 +13111,14 @@
             }
         },
         {
+            "Key": "cb6defe5-6cc4-432a-af1e-4b8e20f6f0b5",
+            "Value": {
+                "id": "620be402-1387-4d13-b3a9-902a94b8174e",
+                "resourcePath": "datafiles_yy\\music\\oasis_5.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "cba48218-ca51-499c-8116-d6b1448d253b",
             "Value": {
                 "id": "27c58e8b-a6e9-450c-8e8d-80eefd1dd867",
@@ -14311,6 +14359,14 @@
             }
         },
         {
+            "Key": "deb2930f-3b23-431e-b19f-a265844b40c9",
+            "Value": {
+                "id": "ed457567-9079-43e8-b3b2-c6a86dcef9bf",
+                "resourcePath": "datafiles_yy\\music\\oasis_2_nathan.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "dedfd6d9-a47d-4ba8-86b8-d24e81dc198b",
             "Value": {
                 "id": "eba2475c-8040-4866-8501-80978469d912",
@@ -14991,6 +15047,14 @@
             }
         },
         {
+            "Key": "e86c20b1-027a-4557-963c-44130f1f1ea6",
+            "Value": {
+                "id": "b96070c0-ad01-48ba-80b4-2af63e96a184",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_7_fuzz.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "e87479d8-71ad-4a43-8ad3-a48a0132a237",
             "Value": {
                 "id": "56b7d4e2-5049-4719-b992-ddbbcd17f352",
@@ -15183,14 +15247,6 @@
             }
         },
         {
-            "Key": "ebda635a-bcae-4d39-8804-0218eb6ce22a",
-            "Value": {
-                "id": "b5242e86-8be9-4796-8266-6ea4c313926a",
-                "resourcePath": "datafiles_yy\\audio\\intro_f6_cello.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "ebed6cfc-bcee-4f8a-a27d-478e6a8f98c1",
             "Value": {
                 "id": "169e180c-6b33-4b32-8aec-2894cf54c204",
@@ -15324,6 +15380,14 @@
                 "id": "d94c737f-fe50-4acb-a5f6-4e184b6a0cbd",
                 "resourcePath": "scripts\\itemArrayFree\\itemArrayFree.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ee2ff821-7bd1-46ed-ae4e-3750f9d41f0e",
+            "Value": {
+                "id": "a6f92dc1-eb0e-4c20-96a5-a367095bb4bf",
+                "resourcePath": "datafiles_yy\\music\\outofthevoid_0_intro.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -15772,6 +15836,14 @@
                 "id": "6d63ece5-b72d-4b26-ab71-edab5a026ffe",
                 "resourcePath": "objects\\o_chMithraGaurdNpc\\o_chMithraGaurdNpc.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f61729f8-90e3-4206-ac33-cfa85c54d42f",
+            "Value": {
+                "id": "6ca1fd43-80a6-4023-b417-d370bcba87dc",
+                "resourcePath": "scripts\\ctsGabbersHaveFocus\\ctsGabbersHaveFocus.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -16709,6 +16781,7 @@
         "c2ddcb57-3609-49df-812d-68ab60ffef6e",
         "8274eef0-fa5b-4337-a768-54a90b5f7899",
         "d8ef8cd1-2290-46c4-a533-323e272d047b",
+        "f61729f8-90e3-4206-ac33-cfa85c54d42f",
         "3b1024cd-23b4-4818-b232-abc9b27c9c57",
         "b2dfc473-3521-4002-a1b8-1055778b26c2",
         "846b94e0-6865-4c83-a05f-3943fcff36f9",
@@ -16839,6 +16912,7 @@
         "0dad8523-e9f3-410e-8736-e30a8cda47f6",
         "9836eb08-39f6-478b-b84a-208f8cb1011d",
         "801167d4-018a-4895-a642-de3a3477eb44",
+        "5c3b2443-0d23-4069-b651-f08bcb586634",
         "7af7373b-ec41-4459-86d1-d9db63b98ac0",
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
         "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",

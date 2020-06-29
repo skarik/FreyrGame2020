@@ -81,10 +81,22 @@ world
 //    7volume 1.0
 //    pitch 1.0
 //}
+//music
+//{
+//	1 audio/nathan_tent_loop.ogg
+//	volume 1.0
+//	pitch 1.0
+//}
 music
 {
-	1 audio/nathan_tent_loop.ogg
-	volume 1.0
+	1 music/oasis_1_chill.ogg
+	2 music/oasis_2_nathan.ogg
+	3 music/oasis_3_freyr.ogg
+	4 music/oasis_4_freyr_climax.ogg
+	5 music/oasis_5.ogg
+	6 music/oasis_6.ogg
+	volume 0.0
+	1volume 1.0
 	pitch 1.0
 }
 
@@ -151,6 +163,13 @@ wait
 {
 	type time
 	time 2.0
+}
+
+// fade in nathan's theme
+music
+{
+	volume 0.0
+	2volume 1.0
 }
 
 // slide in the portraits here:
@@ -329,12 +348,18 @@ choice
 
 #EndChoiceA
 
-music // start with the gentle music track (perc + guitar)
+//music // start with the gentle music track (perc + guitar)
+//{
+//    volume 0.0
+//    3volume 1.0
+//	7volume 1.0
+//}
+music // hint at freyr theme
 {
     volume 0.0
     3volume 1.0
-	7volume 1.0
 }
+
 
 // hide portraits
 portrait

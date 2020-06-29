@@ -1,3 +1,5 @@
+event_inherited();
+
 with ( ob_CtsTalker )
 {
     input_fadeout = true;

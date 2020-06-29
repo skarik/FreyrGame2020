@@ -10,7 +10,7 @@ playerInteractEndStep();
 var next_area = areaFromRoom(room);
 if (canMove
 	&& next_area != kAreaNoArea && next_area != m_currentArea
-	&& !iexists(ob_CtsTalker)
+	&& !ctsGabbersHaveFocus()
 	&& !iexists(o_uiNewArea)
 	&& !iexists(o_cts00_2_InitialWalkPast))
 {
