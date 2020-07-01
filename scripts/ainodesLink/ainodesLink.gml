@@ -69,6 +69,7 @@ with (sourceNode)
 		}
 		
 		// Add the link if we're here
+		// (TODO, ensure that you can in fact go back)
 		if (valid_connection)
 		{
 			var new_index;

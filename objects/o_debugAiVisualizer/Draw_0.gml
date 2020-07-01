@@ -24,4 +24,9 @@ with (o_chGobboTest)
 	draw_arrow(x, y, x + lengthdir_x(8, aimingDirection), y + lengthdir_y(8, aimingDirection), 4);*/
 }
 
+with (ob_aiNode)
+{
+	event_user(0); // Render them nodes.
+}
+
 draw_set_alpha(1.0);

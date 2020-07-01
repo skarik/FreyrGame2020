@@ -1,15 +1,29 @@
 /// @function ainodesLoad(id)
 /// @desc Loads up all nodes 
+/// @param Node
+
+#macro kNodegraphFile_Header "NODE"
+#macro kNodegraphFile_Version 1
 
 var node = argument0;
 
 if (!directory_exists("nodegraphs"))
 	directory_create("nodegraphs");
-	
+
 var filename_nodegraph = "nodegraphs/" + string_replace(room_get_name(room),"rm_","");
-	
+var save_to_file_enabled = true;
+
+// Ignore saving nodegraph on certain items
+if (!file_exists(filename_nodegraph))
+{
+	/*if (room == rm_test_aiplayground)
+	{
+		save_to_file_enabled = false;
+	}*/
+}
+
 // regen, and save
-if (!node.m_valid || !file_exists(filename_nodegraph))
+if ((!node.m_loaded || !node.m_valid) && !file_exists(filename_nodegraph))
 {
 	debugOut("Nodegraph out of date. Rebuilding...");
 	show_debug_message("Nodegraph out of date. Rebuilding...");
@@ -24,41 +38,81 @@ if (!node.m_valid || !file_exists(filename_nodegraph))
 	
 	show_debug_message("Rebuilding done.");
 	
-	// Record all node information
-	var buffer_nodegraph = buffer_create(1024, buffer_grow, 1);
-	
-	var node_count = instance_number(ob_aiNode);
-	buffer_write(buffer_nodegraph, buffer_u32, node_count);
-	for (var i = 0; i < node_count; ++i)
+	if (save_to_file_enabled)
 	{
-		var node_id = instance_find(ob_aiNode, i);
-		buffer_write(buffer_nodegraph, buffer_u64, node_id);
+		// Record all node information
+		var buffer_nodegraph = buffer_create(1024, buffer_grow, 1);
 		
-		var node_linkcount = array_length_1d(node_id.m_link);
-		buffer_write(buffer_nodegraph, buffer_u32, node_linkcount);
-		for (var ilink = 0; ilink < node_linkcount; ++ilink)
-		{
-			buffer_write(buffer_nodegraph, buffer_u64, node_id.m_link[ilink]);
-			buffer_write(buffer_nodegraph, buffer_u32, node_id.m_link_type[ilink]);
-		}
-	}
+		// Write the header
+		savestateWriteBufferHeader(buffer_nodegraph, kNodegraphFile_Header, kNodegraphFile_Version);
+		
+		// Write the date first.
+		buffer_write(buffer_nodegraph, buffer_u64, GM_build_date);
 	
-	buffer_save(buffer_nodegraph, filename_nodegraph);
-	buffer_delete(buffer_nodegraph);
+		var node_count = instance_number(ob_aiNode);
+		buffer_write(buffer_nodegraph, buffer_u32, node_count);
+		for (var i = 0; i < node_count; ++i)
+		{
+			var node_id = instance_find(ob_aiNode, i);
+			buffer_write(buffer_nodegraph, buffer_u64, node_id);
+		
+			var node_linkcount = array_length_1d(node_id.m_link);
+			buffer_write(buffer_nodegraph, buffer_u32, node_linkcount);
+			for (var ilink = 0; ilink < node_linkcount; ++ilink)
+			{
+				buffer_write(buffer_nodegraph, buffer_u64, node_id.m_link[ilink]);
+				buffer_write(buffer_nodegraph, buffer_u32, node_id.m_link_type[ilink]);
+			}
+		}
+	
+		buffer_save(buffer_nodegraph, filename_nodegraph);
+		buffer_delete(buffer_nodegraph);
+	}
 }
 // mark all nodes as loaded as we load em
-else
+else if ((!node.m_loaded || !node.m_valid))
 {
 	var buffer_nodegraph = buffer_load(filename_nodegraph);
 	
+	{
+		// Read & check the header first
+		var nodegraph_version = savestateCheckBufferHeader(buffer_nodegraph, kNodegraphFile_Header);
+		if (nodegraph_version != kNodegraphFile_Version)
+		{
+			// Old nodegraph - rebuild.
+			buffer_delete(buffer_nodegraph);
+			file_delete(filename_nodegraph);
+			ainodesLoad(node);
+			return false;
+		}
+		// Read the build-date next
+		var nodegraph_builddate = buffer_read(buffer_nodegraph, buffer_u64);
+		if (nodegraph_builddate < GM_build_date)
+		{
+			// Old nodegraph - rebuild.
+			buffer_delete(buffer_nodegraph);
+			file_delete(filename_nodegraph);
+			ainodesLoad(node);
+			return false;
+		}
+	}
+	
 	var node_count = buffer_read(buffer_nodegraph, buffer_u32);
+	
 	for (var i = 0; i < node_count; ++i)
 	{
 		var node_id = buffer_read(buffer_nodegraph, buffer_u64);
 		if (!iexists(node_id))
-		{
+		{	
+			// Invalid data! Clean up and return
 			with (ob_aiNode)
+			{
 				m_valid = false; // Mark all nodes as invalid
+				m_loaded = false;
+			}
+			buffer_delete(buffer_nodegraph);
+			file_delete(filename_nodegraph);
+			ainodesLoad(node);
 			return false;
 		}
 		else
@@ -90,12 +144,10 @@ else
 	
 	buffer_delete(buffer_nodegraph);
 }
-
-
-/*with (ob_aiNode)
+else
 {
-	m_loaded = true;
-	m_valid = true;
-}*/
+	// Invalid state. Should never get here.
+	show_error("Invalid buffer state with nodes.", true);
+}
 
 return true;

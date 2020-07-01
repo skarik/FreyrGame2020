@@ -21,9 +21,11 @@ var next_x = target_x;
 var next_y = target_y;
 
 if (m_aipath_listing == null || m_aipath_current >= array_length_1d(m_aipath_listing))
-{	// The target is just...the target. Straight shot.
+{	
+	// The target is just...the target. Straight shot.
 	next_x = target_x;
 	next_y = target_y;
+	m_aipath_state_onLast = true;
 	
 	// Provide a mechanism to repath if failed to make a path
 	if (m_aipath_listing == null)
@@ -40,8 +42,10 @@ else
 	if (iexists(m_aipath_listing[m_aipath_current]))
 	{
 		var next_dir = point_direction(x, y, m_aipath_listing[m_aipath_current].x, m_aipath_listing[m_aipath_current].y);
-		next_x = m_aipath_listing[m_aipath_current].x + lengthdir_x(4, next_dir);
-		next_y = m_aipath_listing[m_aipath_current].y + lengthdir_y(4, next_dir);
+		next_x = m_aipath_listing[m_aipath_current].x;// + lengthdir_x(4, next_dir);
+		next_y = m_aipath_listing[m_aipath_current].y;// + lengthdir_y(4, next_dir);
+		m_aipath_state_onLast = false;
+		
 		// We need to increment to the next position
 		if (point_distance(next_x, next_y, x, y) < 5 + m_aipath_failtime)
 		{
@@ -51,6 +55,32 @@ else
 		else
 		{
 			m_aipath_failtime += 5.0 * Time.deltaTime;
+		}
+		
+		// We also want to check if the next point on the path is visible at any time. If so, we can cut corners.
+		m_aipath_state_shortcutCheckTime += Time.deltaTime * 5.0;
+		if (m_aipath_state_shortcutCheckTime > 1.0)
+		{
+			var next_next_x = target_x;
+			var next_next_y = target_y;
+			if (m_aipath_current + 1 < array_length_1d(m_aipath_listing) && iexists(m_aipath_listing[m_aipath_current + 1]))
+			{
+				next_next_x = m_aipath_listing[m_aipath_current + 1].x;
+				next_next_y = m_aipath_listing[m_aipath_current + 1].y;
+			}
+			var next_next_dir = point_direction(x, y, next_next_x, next_next_y);
+			var next_next_ofx = lengthdir_x(5, next_next_dir + 90);
+			var next_next_ofy = lengthdir_y(5, next_next_dir + 90);
+			if (!collision3_line(x, y, next_next_x, next_next_y, z, false)
+				&& !collision3_line(x + next_next_ofx, y + next_next_ofy, next_next_x + next_next_ofx, next_next_y + next_next_ofy, z, false)
+				&& !collision3_line(x - next_next_ofx, y - next_next_ofy, next_next_x - next_next_ofx, next_next_y - next_next_ofy, z, false))
+			{	
+				// We've might as well made it to the currnet one
+				m_aipath_current += 1;
+				m_aipath_failtime = 0.0;
+			}
+			
+			m_aipath_state_shortcutCheckTime = min(1.0, m_aipath_state_shortcutCheckTime - 1.0);
 		}
 	}
 	else
@@ -118,14 +148,28 @@ if (m_aipath_newpath)
 
 // Update the control structs
 if (ddist > 10)
-{	// Move to the target
+{	
+	// Move to the target
 	//_controlStructUpdate(xAxis, clamp(dx / max(kMoveSpeed * 0.9, ddist - 10), -1.0, +1.0));
-	_controlStructUpdate(xAxis, clamp(dx / max(dspeed, ddist - 10), -1.0, +1.0));
 	//_controlStructUpdate(yAxis, clamp(dy / max(kMoveSpeed * 0.9, ddist - 10), -1.0, +1.0));
-	_controlStructUpdate(yAxis, clamp(dy / max(dspeed, ddist - 10), -1.0, +1.0));
+	//_controlStructUpdate(xAxis, clamp(dx / max(dspeed, ddist - 10), -1.0, +1.0));
+	//_controlStructUpdate(yAxis, clamp(dy / max(dspeed, ddist - 10), -1.0, +1.0));
+	
+	var t_effectiveSpeed = (m_aiScript_requestSpeed != 0.0) ? m_aiScript_requestSpeed : 1.0;
+	
+	var t_goalDeccelerationTime = dspeed / kMoveAccelerationStop;
+	var t_goalDecceleration = clamp(ddist / t_goalDeccelerationTime, 0.0, 1.0);
+	if (!m_aipath_state_onLast)
+		t_goalDecceleration = 1.0;
+	
+	_controlStructUpdate(xAxis, clamp(dx / max(1, ddist), -1.0, +1.0) * t_effectiveSpeed * t_goalDecceleration);
+	_controlStructUpdate(yAxis, clamp(dy / max(1, ddist), -1.0, +1.0) * t_effectiveSpeed * t_goalDecceleration);
+	
+	// TODO: add simple boid-style obstacle avoidance by "guessing" the normal (just add 90 degrees to the motion)
 }
 else
-{	// Close enough, we can stop
+{	
+	// Close enough, we can stop
 	_controlStructUpdate(xAxis, 0.0);
 	_controlStructUpdate(yAxis, 0.0);
 }
