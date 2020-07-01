@@ -27,6 +27,15 @@ if (keyboard_check_pressed(ord("1")))
 {
 	instance_create_depth(uPosition, vPosition, 0, o_chNathan);
 }
+if (keyboard_check_pressed(ord("2")))
+{
+	instance_create_depth(uPosition, vPosition, 0, o_chOasisNpc);
+}
+if (keyboard_check_pressed(ord("3")))
+{
+	instance_create_depth(uPosition, vPosition, 0, o_chMithraNpc);
+}
+
 
 // Select NPCs
 if (mouse_check_button_pressed(mb_left))

@@ -16,6 +16,22 @@ if (iexists(m_npc_selection))
 			m_npc_selection.m_aiScript_requestPositionY);
 	}
 	
+	// Draw current motion
+	{
+		if (m_npc_selection.m_aipath_visualize_nextPosition[0] != 0
+			|| m_npc_selection.m_aipath_visualize_nextPosition[1] != 0)
+		{
+			draw_set_color(c_maroon);
+			draw_set_alpha(0.6);
+			draw_arrow(
+				m_npc_selection.x, m_npc_selection.y,
+				m_npc_selection.m_aipath_visualize_nextPosition[0],
+				m_npc_selection.m_aipath_visualize_nextPosition[1],
+				8);
+			draw_set_alpha(1.0);
+		}
+	}
+	
 	// Draw character selector
 	draw_sprite_ext(
 		sui_arcaneSelect, 1,
@@ -35,7 +51,7 @@ if (iexists(m_npc_selection))
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_black);
-	draw_text(dx + 4, dy + 4, "1 - Spawn Nathan");
+	draw_text(dx + 4, dy + 4, "1 - Spawn Nathan\n2 - Spawn Oasis Villager\n3 - Spawn Mithra Villager");
 }
 
 {
