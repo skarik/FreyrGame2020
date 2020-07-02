@@ -111,7 +111,7 @@ ai
 	style cts
 	command move
 	origin player
-	position 48 10
+	position 48 1
 }
 wait
 {
