@@ -1,0 +1,41 @@
+#begin
+
+// stealth tutorial first time thru fool's march w/ the old snail
+
+goto_if_companion
+{
+	target KRunTutorial
+	with old
+}
+
+goto
+{
+	target KEarlyEnd
+}
+
+#KRunTutorial
+
+lines
+{
+    target  old
+	facing	player
+    1 Oi, look there's one of them gobbos right there.
+	2 Sneak up and knock em out!
+}
+
+wait
+{
+	type ai
+	trigger OnAngry
+}
+
+lines
+{
+	target	old
+	style	diegetic
+	1 Oh, well done killing everyone!
+}
+
+#KEarlyEnd
+
+#end

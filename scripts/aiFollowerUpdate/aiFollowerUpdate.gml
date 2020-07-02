@@ -44,7 +44,7 @@ if (m_aiFollowing)
 			m_aiFollow_timer += Time.deltaTime / 3.0;
 			
 			// If a talker exists, disable any wandering
-			if (iexists(ob_CtsTalker))
+			if (ctsGabbersHaveFocus())
 			{
 				m_aiFollow_timer = 0.0;
 			}

@@ -2,7 +2,6 @@ var doodad = argument0;
 
 if (doodad.sprite_index == s_propStickTorch
 	|| doodad.sprite_index == s_propStickTorchSmall
-	|| doodad.sprite_index == s_propCampfire
 	|| doodad.sprite_index == s_propLantern0)
 {
 	// Create a light on the doodad.
@@ -17,6 +16,11 @@ if (doodad.sprite_index == s_propStickTorch
 			light = instance_create_depth(x, y - sprite_yoffset + sprite_height * 0.1, 0, o_lightFireMedium);
 		}
 	}
+}
+else if (doodad.sprite_index == s_propDesertCampfire)
+{
+	// TODO some actual fire graphics
+	light = instance_create_depth(x, y - 5, 0, o_lightFireMedium);
 }
 else if (doodad.sprite_index == s_propRuinCandle0)
 {

@@ -20,7 +20,7 @@ if (m_usable && iexists(m_user) && m_user.id == pl.id)
 	var audio = sound_play_at(x, y, snd_CheckpointTouch);
 		audio.gain = 0.9;
 	
-	if (!iexists(ob_CtsTalker))
+	if (!ctsGabbersHaveFocus())
 	{
 		// Ask for if we want to restart at last checkpoint or at the farm
 		var gabber = inew(o_CtsChoiceBox);

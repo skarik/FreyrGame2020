@@ -81,6 +81,8 @@ if (m_running)
 			pl.canMove = true;
 			pl.moEnabled = true;
 			pl.moAnimationPlayback = false;
+			// Put Nathan in the player party
+			playerPartyAdd(o_chNathan);
 			// Set the final flag
 			questSetValue(kQidIntroSequence, 30);
 			// Create music manager

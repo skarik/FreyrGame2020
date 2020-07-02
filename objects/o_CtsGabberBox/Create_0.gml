@@ -1,4 +1,5 @@
 /// @description Gabberbox : For In-world
+event_inherited();
 
 #macro kUiDepthGabber -9005
 depth = kUiDepthGabber;

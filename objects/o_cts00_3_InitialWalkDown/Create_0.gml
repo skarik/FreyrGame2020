@@ -33,3 +33,8 @@ m_initialized = true;
 
 // Set up music state to read
 m_music_state = 0;
+
+
+// Previous state for watching till counts
+m_prev_fieldSquareCount = null;
+m_prev_fieldTillCount = null;

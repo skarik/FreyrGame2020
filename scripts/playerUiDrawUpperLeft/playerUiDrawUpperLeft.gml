@@ -6,7 +6,7 @@ draw_set_color(c_gray);
 draw_text(0,50,string(o_PlayerTest.stats.m_health) + "/" + string(o_PlayerTest.stats.m_healthMax));
 
 // Draw current usable active
-if (instance_exists(o_PlayerTest.currentUsable) && !iexists(ob_CtsTalker) && o_PlayerTest.moEnabled)
+if (instance_exists(o_PlayerTest.currentUsable) && !ctsGabbersHaveFocus() && o_PlayerTest.moEnabled)
 {
 	var usable = o_PlayerTest.currentUsable;
 	dx = usable.x - (GameCamera.x - GameCamera.width / 2);

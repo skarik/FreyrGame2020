@@ -27,7 +27,11 @@ else
 			var wait_id = cutsceneGetWaitId();
 			if (wait_id == "on_player_till")
 			{
-				if (iexists(o_fieldSquare))
+				if (m_prev_fieldSquareCount == null)
+				{
+					m_prev_fieldSquareCount = instance_number(o_fieldSquare);
+				}
+				if (m_prev_fieldSquareCount < instance_number(o_fieldSquare))
 				{
 					cutsceneWaitEnd();
 					m_music_state = 1;
@@ -35,14 +39,30 @@ else
 			}
 			if (wait_id == "on_player_till2")
 			{
-				var l_tilled = false;
+				var callee = id;
+				if (m_prev_fieldTillCount == null)
+				{
+					// Count number of tilled
+					m_prev_fieldTillCount = 0;
+					with (o_fieldSquare)
+					{
+						if (tilled)
+						{
+							callee.m_prev_fieldTillCount++;
+						}
+					}
+				}
+				
+				var l_tilledCount = 0;
 				with (o_fieldSquare)
 				{
 					if (tilled)
-						l_tilled = true;
+					{
+						l_tilledCount++
+					}
 				}
 				
-				if (l_tilled)
+				if (m_prev_fieldTillCount < l_tilledCount)
 				{
 					cutsceneWaitEnd();
 					m_music_state = 2;

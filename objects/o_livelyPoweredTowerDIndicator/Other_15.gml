@@ -13,7 +13,7 @@ if (visual_power > 0.0)
 gpu_set_blendmode(bm_normal);
 draw_sprite_ext(sprite_index, image_index + 1,
 				x + xoffset, y + yoffset,
-				image_xscale, image_yscale, image_angle, c_black, image_alpha * 0.25); // TODO: properly mask it
+				image_xscale, image_yscale, image_angle, c_black, image_alpha * 0.25); // TODO: properly mask previous line
 				
 // Draw the lighting
 lightingResetBlendMode();

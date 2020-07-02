@@ -15,6 +15,8 @@ var falling = argument5;
 
 #region Rasterizer-Based collision checking
 
+col3_internal_query_collision_maps();
+
 var t_collidableLayerCount = array_length_1d(global.collidable_layers);
 if (t_collidableLayerCount > 0)
 {
@@ -57,12 +59,27 @@ if (t_collidableLayerCount > 0)
 				tile_elevation = (tile_id - 64) * -16;
 			if (tile_elevation != kElevationInvalid)
 			{
-				var area_z = tile_elevation;
+				var area_z = tile_elevation + 8;
 				if (falling ? (area_z > check_z + 4) : (abs(area_z - check_z) > 4))
 					return true;
 			}
 			
 			// Check for elevation zones - we'll skip this for now since this depends on overlapping tile data.
+			tile_elevation = kElevationInvalid;
+			if (tile_id >= 16 && tile_id < 32)
+			{
+				tile_elevation = (tile_id - 16) * 16;
+			}
+			else if (tile_id >= 48 && tile_id < 64)
+			{
+				tile_elevation = (tile_id - 48) * -16;
+			}
+			if (tile_elevation != kElevationInvalid)
+			{
+				var area_z = tile_elevation;
+				if (falling ? (area_z > check_z + 4) : (abs(area_z - check_z) > 4))
+					return true;
+			}
 		}
 
 		// Go to next sample position
@@ -82,20 +99,23 @@ if (iexists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_colliderNo
 }
 
 // Check for elevation colliders
-var results_colliders = ds_list_create();
-var results_colliders_num = collision_line_list(check_x1, check_y1, check_x2, check_y2, ob_colliderDepth, false, true, results_colliders, false);
-for (var i = 0; i < results_colliders_num; ++i)
+if (iexists(ob_colliderDepth))
 {
-	var collider = results_colliders[|i];
-	var collider_z = collider.z;
-	var collider_z_height = collider.z_height;
-	if (collider_z + collider_z_height > check_z + 4)
+	var results_colliders = ds_list_create();
+	var results_colliders_num = collision_line_list(check_x1, check_y1, check_x2, check_y2, ob_colliderDepth, false, true, results_colliders, false);
+	for (var i = 0; i < results_colliders_num; ++i)
 	{
-		ds_list_destroy(results_colliders);
-		return true;
+		var collider = results_colliders[|i];
+		var collider_z = collider.z;
+		var collider_z_height = collider.z_height;
+		if (collider_z + collider_z_height > check_z + 4)
+		{
+			ds_list_destroy(results_colliders);
+			return true;
+		}
 	}
+	ds_list_destroy(results_colliders);
 }
-ds_list_destroy(results_colliders);
 
 // Check if ignoring elevation
 if (iexists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_elevationBlendArea, false, true)))
@@ -104,27 +124,30 @@ if (iexists(collision_line(check_x1, check_y1, check_x2, check_y2, ob_elevationB
 }
 
 // Check for all transition zones at the given area
-var results = ds_list_create();
-var results_num = collision_line_list(check_x1, check_y1, check_x2, check_y2, ob_elevationArea, false, true, results, false);
-// Find the one with the highest z
-var area_z_max = -1024;
-for (var i = 0; i < results_num; ++i)
+if (iexists(ob_elevationArea))
 {
-	var area_z = results[|i].z;
-	area_z_max = max(area_z_max, area_z);
-}
-// Loop through all of them to check collision
-for (var i = 0; i < results_num; ++i)
-{
-	var area_z = results[|i].z;
-	if (area_z != area_z_max) continue;
-	if (falling ? (area_z > check_z + 4) : (abs(area_z - check_z) > 4))
+	var results = ds_list_create();
+	var results_num = collision_line_list(check_x1, check_y1, check_x2, check_y2, ob_elevationArea, false, true, results, false);
+	// Find the one with the highest z
+	var area_z_max = -1024;
+	for (var i = 0; i < results_num; ++i)
 	{
-		ds_list_destroy(results);
-		return true;
+		var area_z = results[|i].z;
+		area_z_max = max(area_z_max, area_z);
 	}
+	// Loop through all of them to check collision
+	for (var i = 0; i < results_num; ++i)
+	{
+		var area_z = results[|i].z;
+		if (area_z != area_z_max) continue;
+		if (falling ? (area_z > check_z + 4) : (abs(area_z - check_z) > 4))
+		{
+			ds_list_destroy(results);
+			return true;
+		}
+	}
+	ds_list_destroy(results);
 }
-ds_list_destroy(results);
 
 #endregion
 

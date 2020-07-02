@@ -1,4 +1,4 @@
-if (!iexists(ob_CtsTalker))
+if (!ctsGabbersHaveFocus())
 {
 	with (o_PlayerTest)
 	{

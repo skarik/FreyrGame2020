@@ -5,9 +5,9 @@
     "name": "1a433fed-d660-4a0e-bc1d-138e209517e7",
     "children": [
         "faf99f12-2dce-47f4-b507-ddbe423b66d9",
-        "1da87ff2-39e2-4e2b-956b-46b610b3ee9f",
-        "353624b7-f473-4968-832c-1b90b3bb417a",
-        "98e37e2e-c3a0-4db2-9686-5a3c1a4ebf8a"
+        "d85242f3-c6f5-475b-9587-b0d8a5a2bd27",
+        "bd76f56d-2d0d-4507-8d06-4c90f8a32702",
+        "48645d17-7676-457f-bdb4-430c88c4f608"
     ],
     "filterType": "GMObject",
     "folderName": "Spawners",

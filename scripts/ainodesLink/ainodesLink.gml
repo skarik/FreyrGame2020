@@ -60,7 +60,9 @@ with (sourceNode)
 			
 			var collision = collision3_meeting(check_x, check_y, current_z, true);
 			if (!collision)
+			{
 				current_z = collision3_get_highest_meeting(check_x, check_y, current_z);
+			}
 			else
 			{	// Not an open connection
 				valid_connection = false;
@@ -69,6 +71,7 @@ with (sourceNode)
 		}
 		
 		// Add the link if we're here
+		// (TODO, ensure that you can in fact go back)
 		if (valid_connection)
 		{
 			var new_index;
@@ -79,9 +82,9 @@ with (sourceNode)
 			sourceNode.m_link_type[new_index] = 0;
 			
 			// Add connection going back
-			new_index = array_length_1d(targetNode.m_link);
+			/*new_index = array_length_1d(targetNode.m_link);
 			targetNode.m_link[new_index] = sourceNode;
-			targetNode.m_link_type[new_index] = 0;
+			targetNode.m_link_type[new_index] = 0;*/
 		}
 	}
 }

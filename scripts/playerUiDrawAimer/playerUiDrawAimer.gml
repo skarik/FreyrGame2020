@@ -4,7 +4,7 @@ var dx, dy;
 surface_reset_target();
 surface_set_target(m_surfaceLightweightBack);
 
-if (o_PlayerTest.canMove && !o_PlayerTest.m_isKOed && !iexists(ob_CtsTalker))
+if (o_PlayerTest.canMove && !o_PlayerTest.m_isKOed && !ctsGabbersHaveFocus())
 {
 	// aimer
 	dx = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));
