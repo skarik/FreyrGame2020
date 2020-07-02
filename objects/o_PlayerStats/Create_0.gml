@@ -6,6 +6,8 @@ m_head = 0;
 m_gender = kGenderMale;
 m_shirtless = false;
 
+m_party = array_create(3, null);
+
 #macro kGenderFemale 0
 #macro kGenderMale 1 
 #macro kGenderNonbi 2

@@ -3327,6 +3327,14 @@
             }
         },
         {
+            "Key": "34c00b39-af27-4877-ab0e-cfacd324e56c",
+            "Value": {
+                "id": "ae3e906b-511a-4286-a592-3057fe056465",
+                "resourcePath": "scripts\\playerPartyRemove\\playerPartyRemove.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "34ca9abb-d72e-42d3-9168-ad838680299c",
             "Value": {
                 "id": "2375fde6-8d49-4ba1-b410-70e7a2645009",
@@ -16937,6 +16945,7 @@
         "9836eb08-39f6-478b-b84a-208f8cb1011d",
         "801167d4-018a-4895-a642-de3a3477eb44",
         "5c3b2443-0d23-4069-b651-f08bcb586634",
+        "34c00b39-af27-4877-ab0e-cfacd324e56c",
         "7af7373b-ec41-4459-86d1-d9db63b98ac0",
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
         "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",

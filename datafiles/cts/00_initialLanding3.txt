@@ -111,7 +111,7 @@ ai
 	style cts
 	command move
 	origin player
-	position 48 20
+	position 48 10
 }
 wait
 {
@@ -139,7 +139,7 @@ lines
 music // start with the gentle music track (bring in some strings)
 {
     volume 0.0
-    5volume 1.0
+    6volume 1.0
 }
 
 lines
@@ -179,6 +179,13 @@ lines
 	target nathan
 	1 What's a $bgarden$$? $pWait, $pI think I've read that word before...
 }
+
+music // start with the gentle music track (bring in some strings)
+{
+    volume 0.0
+    5volume 1.0
+}
+
 
 // nathan needs to go back into the tent, then come out
 ai

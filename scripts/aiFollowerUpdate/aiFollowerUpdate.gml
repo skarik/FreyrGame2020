@@ -10,29 +10,71 @@ if (m_aiFollowing)
 	}
 	var followDistance = point_distance(x, y, m_aiFollow_targetX, m_aiFollow_targetY);
 	
-	// We want to enter the following state if we're in most states
-	if (m_aiFollow_state == kAiFollowState_Waiting
-		|| m_aiFollow_state == kAiFollowState_Wandering)
+	// Check the modes
+	var t_inFarmMode = false;
+	var t_inCombatMode = false;
+	
+	if (iexists(followTarget))
 	{
-		// Is the follow target far away? If so, we want to move towards them.
-		if (followDistance > kAiFollowBeginDistance)
+		// Check farm state
+		if (followTarget.m_isTilling || followTarget.m_isPlanting)
 		{
-			m_aiFollow_state = kAiFollowState_Following;
-			m_aiFollow_timer = 0.0;
+			t_inFarmMode = true;
+		}
+		else if (followTarget.hud.m_farmoverlay_blend >= 1.0)
+		{
+			t_inFarmMode = true;
+		}
+		
+		// Add cooldown for farm mode
+		if (t_inFarmMode)
+		{
+			m_aiFollow_farmingCooldown = 1.0;
 		}
 	}
+	if (m_aiFollow_farmingCooldown > 0.0)
+	{	
+		// Cool down farm mode
+		m_aiFollow_farmingCooldown -= Time.deltaTime;
+		t_inFarmMode = true;
+	}
 	
-	// We want to enter backing off in all states
-	if (m_aiFollow_state == kAiFollowState_Waiting
-		|| m_aiFollow_state == kAiFollowState_Wandering
-		|| m_aiFollow_state == kAiFollowState_Following)
+	// Perform state overrides
+	if (!t_inFarmMode && !t_inCombatMode)
 	{
-		// If we're too close to the follow distance (and the follow target is moving), we want to back off.
-		if (followDistance < 12.0 && followMoved)
+		// We want to enter the following state if we're in most states
+		if (m_aiFollow_state == kAiFollowState_Waiting
+			|| m_aiFollow_state == kAiFollowState_Wandering)
 		{
-			m_aiFollow_state = kAiFollowState_BackingOff;
-			m_aiFollow_timer = 0.0;
+			// Is the follow target far away? If so, we want to move towards them.
+			if (followDistance > kAiFollowBeginDistance)
+			{
+				m_aiFollow_state = kAiFollowState_Following;
+				m_aiFollow_timer = 0.0;
+			}
 		}
+	
+		// We want to enter backing off in all states
+		if (m_aiFollow_state == kAiFollowState_Waiting
+			|| m_aiFollow_state == kAiFollowState_Wandering
+			|| m_aiFollow_state == kAiFollowState_Following)
+		{
+			// If we're too close to the follow distance (and the follow target is moving), we want to back off.
+			if (followDistance < 12.0 && followMoved)
+			{
+				m_aiFollow_state = kAiFollowState_BackingOff;
+				m_aiFollow_timer = 0.0;
+			}
+		}
+	}
+	else if (t_inCombatMode)
+	{
+	}
+	else if (t_inFarmMode)
+	{
+		// Move to out of the way
+		m_aiFollow_state = kAiFollowState_FarWatch;
+		m_aiFollow_timer = 0.0;
 	}
 	
 	// Non-overriding states:
@@ -65,12 +107,7 @@ if (m_aiFollowing)
 			// We want to move to the player. TODO: pathfinding.
 			if (followDistance > kAiFollowCatchupDistance)
 			{
-				var follow_dir_x = (m_aiFollow_targetX - x) / followDistance;
-				var follow_dir_y = (m_aiFollow_targetY - y) / followDistance;
-
-				// Update the motion axes to the given motion
-				_controlStructUpdate(xAxis, follow_dir_x);
-				_controlStructUpdate(yAxis, follow_dir_y);
+				aipathMoveTo(m_aiFollow_targetX, m_aiFollow_targetY);
 			}
 			else
 			{
@@ -167,6 +204,11 @@ if (m_aiFollowing)
 				m_aiFollow_state = kAiFollowState_Waiting;
 				m_aiFollow_timer = 0.0;
 			}
+		}
+		break;
+	case kAiFollowState_FarWatch:
+		{
+			
 		}
 		break;
 	}

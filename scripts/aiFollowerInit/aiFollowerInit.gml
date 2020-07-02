@@ -5,6 +5,7 @@
 #macro kAiFollowState_Following 1
 #macro kAiFollowState_Wandering 2
 #macro kAiFollowState_BackingOff 3
+#macro kAiFollowState_FarWatch 4
 
 m_aiFollowing = false;
 m_aiFollow_targetX = 0;
@@ -19,6 +20,8 @@ m_aiFollow_wanderStayTime = 0.0;
 
 m_aiFollow_backoffX = 0;
 m_aiFollow_backoffY = 0;
+
+m_aiFollow_farmingCooldown = 1.0;
 
 kAiFollowBeginDistance = 100;
 kAiFollowCatchupDistance = 60;

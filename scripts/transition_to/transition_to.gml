@@ -9,12 +9,24 @@ with (o_PlayerTest)
 	stats.persistent = true;
 	quests.persistent = true;
 	pstats.persistent = true;
+	
+	// update followers
+	var pl_callee = id;
+	for (var i = 0; i < 3; ++i)
+	{
+		with (pstats.m_party[i])
+		{
+			persistent = true;
+			inventory.persistent = true;
+			stats.persistent = true;
+		}
+	}
 }
 with (o_PlayerHud)
 {
     persistent = true;
 }
-with (ob_character)
+/*with (ob_character)
 {
 	if (m_isFollower)
 	{
@@ -22,5 +34,5 @@ with (ob_character)
 		inventory.persistent = true;
 		stats.persistent = true;
 	}
-}
+}*/
 room_goto(argument0);
