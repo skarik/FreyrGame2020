@@ -23,6 +23,9 @@ m_aiFollow_backoffY = 0;
 
 m_aiFollow_farmingCooldown = 1.0;
 
+m_aiFollow_watchX = 0;
+m_aiFollow_watchY = 0;
+
 kAiFollowBeginDistance = 100;
 kAiFollowCatchupDistance = 60;
 

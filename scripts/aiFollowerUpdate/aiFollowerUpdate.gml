@@ -44,7 +44,8 @@ if (m_aiFollowing)
 	{
 		// We want to enter the following state if we're in most states
 		if (m_aiFollow_state == kAiFollowState_Waiting
-			|| m_aiFollow_state == kAiFollowState_Wandering)
+			|| m_aiFollow_state == kAiFollowState_Wandering
+			|| m_aiFollow_state == kAiFollowState_FarWatch)
 		{
 			// Is the follow target far away? If so, we want to move towards them.
 			if (followDistance > kAiFollowBeginDistance)
@@ -57,7 +58,8 @@ if (m_aiFollowing)
 		// We want to enter backing off in all states
 		if (m_aiFollow_state == kAiFollowState_Waiting
 			|| m_aiFollow_state == kAiFollowState_Wandering
-			|| m_aiFollow_state == kAiFollowState_Following)
+			|| m_aiFollow_state == kAiFollowState_Following
+			|| m_aiFollow_state == kAiFollowState_FarWatch)
 		{
 			// If we're too close to the follow distance (and the follow target is moving), we want to back off.
 			if (followDistance < 12.0 && followMoved)
@@ -72,9 +74,13 @@ if (m_aiFollowing)
 	}
 	else if (t_inFarmMode)
 	{
-		// Move to out of the way
-		m_aiFollow_state = kAiFollowState_FarWatch;
-		m_aiFollow_timer = 0.0;
+		if (m_aiFollow_state == kAiFollowState_Waiting
+			|| m_aiFollow_state == kAiFollowState_Wandering)
+		{
+			// Move to out of the way
+			m_aiFollow_state = kAiFollowState_FarWatch;
+			m_aiFollow_timer = 0.0;
+		}
 	}
 	
 	// Non-overriding states:
@@ -208,7 +214,42 @@ if (m_aiFollowing)
 		break;
 	case kAiFollowState_FarWatch:
 		{
+			if (m_aiFollow_timer <= 0.01)
+			{
+				// Choose a watching spot away from the player.
+				var followDirection = point_direction(x, y, m_aiFollow_targetX, m_aiFollow_targetY);
 			
+				// Default backoff is away from follow point at an angle
+				var backoff_dir_x = lengthdir_x(1.0, followDirection + 180 + 45);
+				var backoff_dir_y = lengthdir_y(1.0, followDirection + 180 + 45);
+				
+				// Choose the position a bit of ways off.
+				m_aiFollow_watchX = m_aiFollow_targetX + backoff_dir_x * 110;
+				m_aiFollow_watchY = m_aiFollow_targetY + backoff_dir_y * 110;
+			}
+			
+			// Go to the spot.
+			aipathMoveTo(m_aiFollow_watchX, m_aiFollow_watchY);
+			// If at the spot, face the player
+			if (point_distance(x, y, m_aiFollow_watchX, m_aiFollow_watchY) < 16 && abs(xspeed) < 0.1 && abs(yspeed) < 0.1)
+			{
+				aimotionFaceAt(m_aiFollow_targetX, m_aiFollow_targetY, 360);
+			}
+			
+			// And just update the follow timer.
+			m_aiFollow_timer += Time.deltaTime;
+			
+			// If player is too close, choose another spot
+			if (point_distance(x, y, m_aiFollow_targetX, m_aiFollow_targetY) < 64)
+			{
+				m_aiFollow_timer = 0.0; // Get a new watch position.
+			}
+			// If the spot is too far away, follow the player
+			if (!point_on_camera_wide(m_aiFollow_watchX, m_aiFollow_watchY, -80, -80))
+			{
+				m_aiFollow_state = kAiFollowState_Following;
+				m_aiFollow_timer = 0.0;
+			}
 		}
 		break;
 	}
