@@ -198,7 +198,7 @@ if (ddist > t_arrivalDistance)
 	
 	// if character is in the way, then avoid
 	var t_forwardNpcCheckRadius = min(k_aipath_npcAvoidRadius, ddist) * 0.5;
-	if (t_forwardNpcCheckRadius > 5)
+	if (!isPassthru && t_forwardNpcCheckRadius > 5)
 	{
 		var t_forwardNpcCheck = [x + t_controlVector[0] * t_forwardNpcCheckRadius, y + t_controlVector[1] * t_forwardNpcCheckRadius];
 		var t_forwardNpc = collision_circle(

@@ -52,6 +52,8 @@ if (cutsceneHasSignal())
 		o_chNathan.zspeed = 64;
 		o_chNathan.z_height = 2;
 		o_chNathan.onGround = false;
+		// and disable collisio stuff now
+		o_chNathan.isPassthru = true;
 	}
 	else if (signal_id == "round_positions")
 	{
@@ -68,6 +70,7 @@ if (cutsceneHasSignal())
 		o_chNathan.moEnabled = true;
 		o_chNathan.zspeed = 0;
 		o_chNathan.z_height = 0;
+		o_chNathan.isPassthru = false;
 	}
 	else if (signal_id == "ended")
 	{
