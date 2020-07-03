@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "00529ecb-462e-4131-8023-aa7ca63e5628",
+            "Value": {
+                "id": "94e81b0e-911a-4d6d-8367-d7e7bac84044",
+                "resourcePath": "objects\\o_ctsRig00_Rig\\o_ctsRig00_Rig.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "00854097-ee1f-486d-946d-043ae327eeb4",
             "Value": {
                 "id": "c36076d7-2e4d-453d-9a80-b612632f07e8",
@@ -156,6 +164,14 @@
                 "id": "5b56230c-f030-4625-bdd6-90baba8fbbae",
                 "resourcePath": "sprites\\s_propRuinHead\\s_propRuinHead.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "02457cdd-2ec8-409b-bb9d-c7d87509edf5",
+            "Value": {
+                "id": "8de9ad4f-adfc-4be4-ab68-e41d7f58c702",
+                "resourcePath": "shaders\\sh_rigring\\sh_rigring.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -1247,6 +1263,14 @@
             }
         },
         {
+            "Key": "14d86d0d-c49c-4878-b02f-1ab6450a43c0",
+            "Value": {
+                "id": "4331490f-e63c-4d0a-b04a-ab25c9f91a65",
+                "resourcePath": "objects\\ob_ctsRig00_3dObject\\ob_ctsRig00_3dObject.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "157c0bb6-8417-4972-8c25-72b8ea22a679",
             "Value": {
                 "id": "fc37b4cc-f35d-4a4c-97f7-d8b1f1ec915d",
@@ -2220,6 +2244,14 @@
                 "id": "c9edfa80-5378-47b1-8d5a-32a61b6100ea",
                 "resourcePath": "views\\23f3fa83-a75b-42d7-b98d-d17fb9a1e4de.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "24255dc3-caf4-4a65-a80a-68a3d4d556c1",
+            "Value": {
+                "id": "205456ba-6b26-4faa-a747-5e2fc429c390",
+                "resourcePath": "objects\\o_ctsRig00_PlanetRings\\o_ctsRig00_PlanetRings.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3255,6 +3287,14 @@
             }
         },
         {
+            "Key": "33a527c2-6705-4e0c-83e2-8b427d0ce1e1",
+            "Value": {
+                "id": "b818d226-fa35-4272-8762-6e50759f4a9c",
+                "resourcePath": "views\\33a527c2-6705-4e0c-83e2-8b427d0ce1e1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "33a87201-09a6-4e2a-a404-aaa3c578dbef",
             "Value": {
                 "id": "291b97dc-28e7-44b5-b4b7-c9a139c80028",
@@ -4175,6 +4215,14 @@
             }
         },
         {
+            "Key": "4200ae9d-ee84-4417-9b37-64ca1e925ee8",
+            "Value": {
+                "id": "3f9b78e1-ed0e-47e9-8339-c67dc3d1a0e8",
+                "resourcePath": "shaders\\sh_desaturateX3\\sh_desaturateX3.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "422668f4-3c76-4931-aa39-bd6d446354a2",
             "Value": {
                 "id": "5626f5b4-cd54-4612-85e7-675dfb456429",
@@ -4444,6 +4492,14 @@
                 "id": "6a7bc406-6b53-428a-8c16-a9ad8f67958a",
                 "resourcePath": "datafiles_yy\\cts\\00_init.txt.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "460c22b7-50b1-4e0b-abda-e8d8012a9f5a",
+            "Value": {
+                "id": "940118d3-5dc0-4284-a80b-d3985c608327",
+                "resourcePath": "sprites\\s_bgRigBits\\s_bgRigBits.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4748,6 +4804,14 @@
                 "id": "286196d1-7668-4668-b5c4-941cd5783c31",
                 "resourcePath": "scripts\\characterTeams\\characterTeams.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4a845b78-dda7-4750-9a5f-85d70e5d2a8a",
+            "Value": {
+                "id": "83ae602d-fb29-41ce-ac78-f6904e288fca",
+                "resourcePath": "shaders\\sh_reference3d\\sh_reference3d.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -6359,6 +6423,14 @@
             }
         },
         {
+            "Key": "6521d111-5cad-49af-a00e-279f30743e4e",
+            "Value": {
+                "id": "f90d7645-d1ab-480e-ba9c-a371ec491506",
+                "resourcePath": "sprites\\s_bgRigCard\\s_bgRigCard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6536cffb-6463-4156-abfd-83e4aa206a85",
             "Value": {
                 "id": "a1a2244c-2e23-47eb-8caf-fe7302c40653",
@@ -7895,6 +7967,14 @@
             }
         },
         {
+            "Key": "7d0c5fa8-2431-4b8b-bb5e-5a684d9f18d1",
+            "Value": {
+                "id": "6f05ea72-a359-4a06-902e-bc218f94fec8",
+                "resourcePath": "shaders\\sh_rigwaterDistanceFade\\sh_rigwaterDistanceFade.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "7d2bdbf1-3f44-4073-bd2d-4d1874a80b6a",
             "Value": {
                 "id": "96b7bd54-0165-4c0b-85ec-b0a5455eeeef",
@@ -8180,6 +8260,14 @@
                 "id": "e0155083-1577-46cd-bd65-d00207cac4c5",
                 "resourcePath": "sprites\\sce0_32x32\\sce0_32x32.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "81d7b845-30a7-4175-a5c5-d6147527a058",
+            "Value": {
+                "id": "7ec3f15f-beef-48ee-a207-b77514243e79",
+                "resourcePath": "objects\\o_ctsRig00_Rig_Ring1\\o_ctsRig00_Rig_Ring1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -9871,6 +9959,14 @@
             }
         },
         {
+            "Key": "9ba81929-1c46-40e5-b040-a9e9d2345532",
+            "Value": {
+                "id": "52922ef1-8950-4fb5-9623-214ce3e3ded2",
+                "resourcePath": "objects\\o_ctsRig00_CloudRing_RigHover\\o_ctsRig00_CloudRing_RigHover.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9bba3801-c5d3-47d3-b121-ec20f25103c0",
             "Value": {
                 "id": "024a3e80-4a28-47fb-a8ec-52aa21bcd644",
@@ -10015,6 +10111,14 @@
             }
         },
         {
+            "Key": "9d41edce-4cdd-4e88-a093-0a37197f4ae7",
+            "Value": {
+                "id": "cba47974-148f-42ec-aede-f1e733c4d00d",
+                "resourcePath": "shaders\\sh_desaturate\\sh_desaturate.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "9d74b698-6c3a-4706-a906-d045b1122a8e",
             "Value": {
                 "id": "0a0b3f72-5401-4455-a4a9-a860288378b7",
@@ -10155,6 +10259,14 @@
             "Value": {
                 "id": "d34e14ac-54f0-4d42-9b58-9369275b8a67",
                 "resourcePath": "objects\\o_livelyWatcherRelay_QuestFlag\\o_livelyWatcherRelay_QuestFlag.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9f6e78b2-4d43-4f54-a980-fe71ce231891",
+            "Value": {
+                "id": "43ce8cb1-8dbf-4a8c-8a9d-673b97be448a",
+                "resourcePath": "objects\\o_ctsRig00_Camera\\o_ctsRig00_Camera.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -10639,6 +10751,14 @@
             }
         },
         {
+            "Key": "a6bfeac0-0af2-48d1-ad88-a3bc71da0026",
+            "Value": {
+                "id": "fa31d847-0fae-4d8d-a99f-f28e4477c4d8",
+                "resourcePath": "views\\a6bfeac0-0af2-48d1-ad88-a3bc71da0026.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a73a7876-78dc-45ef-a3b5-b07d776bbe25",
             "Value": {
                 "id": "898f0387-7fe5-4e60-a80f-66dacc636a1f",
@@ -11076,6 +11196,14 @@
                 "id": "f3643af5-6e96-4c25-a11e-49731d426c8d",
                 "resourcePath": "scripts\\_settingsControlSaveArray\\_settingsControlSaveArray.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ad8925a6-cbad-45b7-ab24-7edec2a5cb36",
+            "Value": {
+                "id": "64b9be96-01e7-4cfd-8dcc-ae8c03f54e31",
+                "resourcePath": "objects\\o_ctsRig00_CloudRing_RigHoverBack\\o_ctsRig00_CloudRing_RigHoverBack.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12127,6 +12255,14 @@
             }
         },
         {
+            "Key": "bda38c73-fbb1-4256-9bf4-064a55eef695",
+            "Value": {
+                "id": "dbdca178-d080-4bbe-b851-22a39f6654f2",
+                "resourcePath": "objects\\o_ctsRig00_CloudRing_Bottom\\o_ctsRig00_CloudRing_Bottom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bdc73301-ca23-4bf4-be12-324839c1c56d",
             "Value": {
                 "id": "55c6ccb2-3d57-4bf9-a3a3-4ef71dbff5db",
@@ -13143,6 +13279,14 @@
             }
         },
         {
+            "Key": "cb667ad9-a087-40a8-bc42-d65ec997013c",
+            "Value": {
+                "id": "287db1d9-dd3a-4f2b-bb94-e0fbc45c2978",
+                "resourcePath": "objects\\o_ctsRig00_Rig_Ring0\\o_ctsRig00_Rig_Ring0.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cb6defe5-6cc4-432a-af1e-4b8e20f6f0b5",
             "Value": {
                 "id": "620be402-1387-4d13-b3a9-902a94b8174e",
@@ -13348,6 +13492,14 @@
                 "id": "6d9031cf-74e6-422c-abaa-769819588b2a",
                 "resourcePath": "sprites\\s_propSquatTree\\s_propSquatTree.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cee8924b-bc75-4209-a867-9ed4f231ab18",
+            "Value": {
+                "id": "7b6110be-13bd-4793-8c84-1fc734182af2",
+                "resourcePath": "objects\\o_ctsRig00_CloudRing_RigHoverUp\\o_ctsRig00_CloudRing_RigHoverUp.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -13996,6 +14148,14 @@
                 "id": "14e7d2e7-51b6-4631-9d64-db4cf8e20265",
                 "resourcePath": "scripts\\waterOcclusionColor\\waterOcclusionColor.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d8e5eb48-6575-428a-a1e7-cda957396810",
+            "Value": {
+                "id": "e6189afe-fc48-4fbb-a6f0-f27653b9b7ea",
+                "resourcePath": "objects\\o_ctsRig00_Ocean\\o_ctsRig00_Ocean.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -14903,6 +15063,14 @@
             }
         },
         {
+            "Key": "e5b9f6f4-6093-447f-aa4a-bbd040b250b1",
+            "Value": {
+                "id": "1bdf28b1-7b8a-4906-8baa-afd1a5e60092",
+                "resourcePath": "shaders\\sh_rigcloudsTwotone\\sh_rigcloudsTwotone.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "e5ba8506-3523-4acb-bce6-c1db7fa4dd5b",
             "Value": {
                 "id": "a50db5bc-6628-4745-9570-46fd8b19a9e9",
@@ -15215,6 +15383,14 @@
             }
         },
         {
+            "Key": "eaef86cc-e4f5-48d3-b90d-72e69db70801",
+            "Value": {
+                "id": "2c5965f4-36bf-4fd3-890c-155a34525b7f",
+                "resourcePath": "rooms\\rm_intro_primo_rig\\rm_intro_primo_rig.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "eb2048f3-27b7-4a66-b53d-bfaefdf21ae9",
             "Value": {
                 "id": "a6122db5-1336-4f93-95a7-79eaac13ce36",
@@ -15259,6 +15435,14 @@
             "Value": {
                 "id": "8305b44f-0db2-4f29-8668-839dfb922900",
                 "resourcePath": "objects\\o_ptcWaterDropHit\\o_ptcWaterDropHit.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "eba6068e-0766-4367-bb8a-8f283b13253e",
+            "Value": {
+                "id": "a1cbd225-9644-4de2-8a86-2ad6de0cfeb2",
+                "resourcePath": "objects\\o_ctsRig00_GodRay\\o_ctsRig00_GodRay.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -16423,6 +16607,14 @@
             }
         },
         {
+            "Key": "fd0f2dbb-ac08-43f1-a1a1-bf7182705076",
+            "Value": {
+                "id": "b03f8bc5-7b04-4654-a913-7fababc995c2",
+                "resourcePath": "objects\\o_ctsRig00_Rig_Card2\\o_ctsRig00_Rig_Card2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fd56a42d-9a50-462a-94fb-c2828ef00922",
             "Value": {
                 "id": "76401d62-8be3-4a18-abaf-7360ba87fe93",
@@ -16500,6 +16692,14 @@
                 "id": "17e72b31-d142-4fa4-bcdf-9844f1b3f901",
                 "resourcePath": "scripts\\powerLogic_InverterOutput\\powerLogic_InverterOutput.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fe240644-abbe-419c-9c44-734c685e373f",
+            "Value": {
+                "id": "03f1c2b8-822f-4ddf-a2aa-c12c374847de",
+                "resourcePath": "shaders\\sh_reference3dAlphablend\\sh_reference3dAlphablend.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -16628,6 +16828,14 @@
                 "id": "f42bf9fd-7abb-44c5-9549-18c3396e964b",
                 "resourcePath": "scripts\\instance_nth_nearest\\instance_nth_nearest.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ffcd209f-5a35-44e9-b733-c445b362f889",
+            "Value": {
+                "id": "f2ef82b3-f2bd-4f98-8094-7d2ce2c8f743",
+                "resourcePath": "views\\ffcd209f-5a35-44e9-b733-c445b362f889.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
