@@ -16,7 +16,8 @@
         "9ba81929-1c46-40e5-b040-a9e9d2345532",
         "ad8925a6-cbad-45b7-ab24-7edec2a5cb36",
         "24255dc3-caf4-4a65-a80a-68a3d4d556c1",
-        "eba6068e-0766-4367-bb8a-8f283b13253e"
+        "eba6068e-0766-4367-bb8a-8f283b13253e",
+        "d57eba70-f38e-4504-960d-fd1491954e6f"
     ],
     "filterType": "GMObject",
     "folderName": "00_3d",

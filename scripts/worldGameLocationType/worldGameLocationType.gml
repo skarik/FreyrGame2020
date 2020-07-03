@@ -13,6 +13,13 @@
 // TODO: something better than hardcoded, maybe
 switch (room)
 {
+	case rm_loader:
+	case rm_introduction:
+	case rm_conventionIntro:
+	case rm_map_editor:
+	case rm_generative:
+		return kWorldLocationType_Invalid;
+	
 	case rm_oasis_north_cave:
 		return kWorldLocationType_IndoorsCave;
 	

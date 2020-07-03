@@ -13871,6 +13871,14 @@
             }
         },
         {
+            "Key": "d57eba70-f38e-4504-960d-fd1491954e6f",
+            "Value": {
+                "id": "a5a50747-a73d-4cce-9dcb-a8be2e3effff",
+                "resourcePath": "objects\\o_ctsRig00_Logic\\o_ctsRig00_Logic.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d58ce0e2-1819-4f50-a8f8-ab85fbb182ab",
             "Value": {
                 "id": "e7eaa9c0-7fae-48be-8354-b9f106a4721b",
