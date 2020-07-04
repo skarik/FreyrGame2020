@@ -9,6 +9,9 @@ if (cutsceneHasSignal())
 	
 	if (signal_id == "player_fall_setup")
 	{
+		pl.xstart = 520;
+		pl.ystart = 640;
+		
 		pl.canMove = false; // Disable all motion input
 		pl.x = pl.xstart;
 		pl.y = pl.ystart;
