@@ -1,8 +1,8 @@
 {
-    "id": "88d2c7da-8edc-48a8-8f76-1df2a5607861",
+    "id": "22ca7814-12bb-45ac-9e23-ceccfc5dd91e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "ob_aiPushOnSpawn",
+    "name": "o_aiGaurdStand",
     "eventList": [
         
     ],

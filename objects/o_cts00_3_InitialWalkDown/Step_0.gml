@@ -3,7 +3,7 @@
 var pl;
 pl = getPlayer();
 
-if (!m_running)
+/*if (!m_running)
 {
 	aiscriptRequestStart(o_chNathan, kAiStyle_Lead);
 	aiscriptRequestPushPosition(o_chNathan, 400, 600);
@@ -14,7 +14,7 @@ if (!m_running)
 		m_running = true;
 	}
 }
-else
+else*/
 {
 	// Check for waits
 	if (!cutsceneUpdate())
@@ -66,6 +66,38 @@ else
 				{
 					cutsceneWaitEnd();
 					m_music_state = 2;
+				}
+			}
+			if (wait_id == "on_player_plant")
+			{
+				var has_planted = false;
+				with (o_fieldSquare)
+				{
+					if (planted)
+					{
+						has_planted = true;
+					}
+				}
+				
+				if (has_planted)
+				{
+					cutsceneWaitEnd();
+				}
+			}
+			if (wait_id == "on_player_water")
+			{
+				var has_watered = false;
+				with (o_fieldSquare)
+				{
+					if (watered)
+					{
+						has_watered = true;
+					}
+				}
+				
+				if (has_watered)
+				{
+					cutsceneWaitEnd();
 				}
 			}
 		}

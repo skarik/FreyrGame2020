@@ -1,8 +1,8 @@
 {
-    "id": "22ca7814-12bb-45ac-9e23-ceccfc5dd91e",
+    "id": "5b92d0c4-dc46-46eb-af2a-1cd4f8821cd3",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "ob_aiGaurdStand",
+    "name": "o_aiGawkPoint",
     "eventList": [
         
     ],

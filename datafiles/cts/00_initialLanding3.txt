@@ -1,5 +1,5 @@
 #begin
-// 
+// IntroSequence == 20
 
 music // start with the gentle music track for nathan again
 {

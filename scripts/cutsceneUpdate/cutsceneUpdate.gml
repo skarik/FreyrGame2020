@@ -33,7 +33,8 @@ case SEQTYPE_WAIT:
     }
     else
     {
-        if (ds_map_find_value(entry, SEQI_TYPE) == SEQWAIT_TIME)
+		var type = ds_map_find_value(entry, SEQI_TYPE);
+        if (type == SEQWAIT_TIME)
         {   // Increment timer and check for max time
             cts_execute_timer += Time.dt;
             if (cts_execute_timer > ds_map_find_value(entry, SEQI_TIME))
@@ -42,6 +43,34 @@ case SEQTYPE_WAIT:
                 cts_execute_state = 0;
             }
         }
+		else if (type == SEQWAIT_PLAYERDISTANCE)
+		{
+			var target = ds_map_find_value(entry, SEQI_TARGET);
+			var playerdistance = ds_map_find_value(entry, SEQI_WAIT_DISTANCE);
+			
+			var pl = getPlayer();
+			var target = instance_find(target, 0);
+			if (point_distance(pl.x, pl.y, target.x, target.y) < playerdistance)
+			{
+				cts_entry_current++;
+                cts_execute_state = 0;
+			}
+		}
+		else if (type == SEQWAIT_AI)
+		{
+			var target = ds_map_find_value(entry, SEQI_TARGET);
+			var aiaction = ds_map_find_value(entry, SEQI_WAIT_AIACTION);
+			
+			var target = instance_find(target, 0);
+			if (aiaction == "arrive")
+			{
+				if (point_distance(target.x, target.y, target.m_aiScript_requestPositionX, target.m_aiScript_requestPositionY) < 10)
+				{
+					cts_entry_current++;
+					cts_execute_state = 0;
+				}
+			}
+		}
         else
         {
             // We don't do anything...

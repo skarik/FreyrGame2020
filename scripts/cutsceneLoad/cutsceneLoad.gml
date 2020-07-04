@@ -272,17 +272,31 @@ while (!file_text_eof(fp))
                 var name = ds_map_find_value(read_object_map, "id");
                 var type = ds_map_find_value(read_object_map, "type");
                 var time = ds_map_find_value(read_object_map, "time");
+				var target = ds_map_find_value(read_object_map, "target");
+				var aiaction = ds_map_find_value(read_object_map, "aiaction");
+				var distance = ds_map_find_value(read_object_map, "distance");
+				
                 if (is_undefined(name)) name = "";
                 if (is_undefined(type)) type = "input";
                 if (is_undefined(time)) time = "1.0";
+				target = _cutsceneParseTarget(target);
+				if (is_undefined(aiaction)) aiaction = "";
+				if (is_undefined(distance)) distance = "50";
                 
                 var new_map = ds_map_create();
                 ds_map_add(new_map, SEQI_ID, name);
                 ds_map_add(new_map, SEQI_TIME, real(time));
+				ds_map_add(new_map, SEQI_TARGET, target);
+				ds_map_add(new_map, SEQI_WAIT_AIACTION, aiaction);
+				ds_map_add(new_map, SEQI_WAIT_DISTANCE, real(distance));
                 if (type == "time")
                     ds_map_add(new_map, SEQI_TYPE, SEQWAIT_TIME);
                 else if (type == "input")
                     ds_map_add(new_map, SEQI_TYPE, SEQWAIT_INPUT);
+				else if (type == "ai")
+					ds_map_add(new_map, SEQI_TYPE, SEQWAIT_AI);
+				else if (type == "playerdistance")
+					ds_map_add(new_map, SEQI_TYPE, SEQWAIT_PLAYERDISTANCE);
                 else
                     ds_map_add(new_map, SEQI_TYPE, SEQWAIT_INPUT);
                     

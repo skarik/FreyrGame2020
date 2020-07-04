@@ -2170,7 +2170,7 @@
             "Key": "22ca7814-12bb-45ac-9e23-ceccfc5dd91e",
             "Value": {
                 "id": "2d4d21d9-c259-40a9-adf9-13c5a7935269",
-                "resourcePath": "objects\\ob_aiGaurdStand\\ob_aiGaurdStand.yy",
+                "resourcePath": "objects\\o_aiGaurdStand\\o_aiGaurdStand.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -5863,6 +5863,14 @@
             }
         },
         {
+            "Key": "5b92d0c4-dc46-46eb-af2a-1cd4f8821cd3",
+            "Value": {
+                "id": "9956b1e6-a2af-47eb-a89f-0fe2e93ebb96",
+                "resourcePath": "objects\\o_aiGawkPoint\\o_aiGawkPoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5b93e381-171c-4efd-9e37-df25701425f8",
             "Value": {
                 "id": "bd33d4c9-cfdb-4099-a55c-db41edb83d45",
@@ -7351,6 +7359,14 @@
             }
         },
         {
+            "Key": "71a18cbc-a2c9-4a73-9702-a86dacdaab54",
+            "Value": {
+                "id": "89b2f563-b227-4a13-b05d-01a14607888d",
+                "resourcePath": "scripts\\dcmdParseGiveItem\\dcmdParseGiveItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "71af9e9c-7809-4c3f-8a2b-2effb918112d",
             "Value": {
                 "id": "a7b61556-5362-4f27-bba5-a48a35f51a55",
@@ -8714,7 +8730,7 @@
             "Key": "88d2c7da-8edc-48a8-8f76-1df2a5607861",
             "Value": {
                 "id": "6acdad2f-ba2f-4ced-8e6d-4bb15aa75574",
-                "resourcePath": "objects\\ob_aiPushOnSpawn\\ob_aiPushOnSpawn.yy",
+                "resourcePath": "objects\\o_aiPushOnSpawn\\o_aiPushOnSpawn.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -17055,6 +17071,7 @@
         "13451517-122d-495a-b84b-e3f5f7f1c599",
         "b861c07c-919c-47c7-8e5a-578300cb0d9e",
         "ffc2fc22-e7b9-4da8-9c00-1da6145c3d3c",
+        "71a18cbc-a2c9-4a73-9702-a86dacdaab54",
         "fd6549fc-acef-4c74-b35d-3595bcffc749",
         "e78e571a-f675-4164-8163-776235d6ec09",
         "7ded160e-a77a-4c7b-a0e4-8ff4cb077829",

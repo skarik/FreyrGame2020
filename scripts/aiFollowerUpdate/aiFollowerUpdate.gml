@@ -17,7 +17,7 @@ if (m_aiFollowing)
 	if (iexists(followTarget))
 	{
 		// Check farm state
-		if (followTarget.m_isTilling || followTarget.m_isPlanting)
+		if (followTarget.m_isTilling || followTarget.m_isPlanting || iexists(followTarget.currentCrop))
 		{
 			t_inFarmMode = true;
 		}
@@ -29,7 +29,11 @@ if (m_aiFollowing)
 		// Add cooldown for farm mode
 		if (t_inFarmMode)
 		{
-			m_aiFollow_farmingCooldown = 1.0;
+			m_aiFollow_farmingCooldown = 5.0;
+		}
+		else if (!place_meeting(followTarget.x, followTarget.y, ob_areaFarmable))
+		{	// Immediately end farm mode if not on farmable area.
+			m_aiFollow_farmingCooldown = 0.0;
 		}
 	}
 	if (m_aiFollow_farmingCooldown > 0.0)
