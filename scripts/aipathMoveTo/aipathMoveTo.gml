@@ -106,7 +106,8 @@ var dspeed = point_distance(0, 0, xspeed, yspeed);
 // find a path
 // reset the node status target shit
 
-if (m_aipath_newpath)
+m_aipath_newpath_cooldown -= Time.deltaTime;
+if (m_aipath_newpath && m_aipath_newpath_cooldown <= 0.0)
 {
 	// Find the closest node (weighted towards the target)
 	var closestNodeStart = ainodesGetClosest(x, y, z, true);
@@ -132,6 +133,7 @@ if (m_aipath_newpath)
 	// We no longer need a new path
 	m_aipath_newpath = false;
 	m_aipath_repathtime = 0.0;
+	m_aipath_newpath_cooldown = 0.1;
 	
 	if (m_aipath_listing != null)
 	{

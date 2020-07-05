@@ -21,7 +21,8 @@ for (var dist = travel_step; dist < travel_distance; ++dist)
 	var check_x = x1 + lengthdir_x(dist, travel_direction);
 	var check_y = y1 + lengthdir_y(dist, travel_direction);
 			
-	var collision = collision3_meeting(check_x, check_y, current_z, true);
+	//var collision = collision3_meeting(check_x, check_y, current_z, true);
+	var collision = collision3_point_meeting(check_x, check_y, current_z, true); // little faster until we can get better speed
 	if (!collision)
 		current_z = collision3_get_highest_meeting(check_x, check_y, current_z);
 	else
