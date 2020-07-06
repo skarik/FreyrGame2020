@@ -6671,6 +6671,14 @@
             }
         },
         {
+            "Key": "687028de-8bda-419d-acea-08dd46608925",
+            "Value": {
+                "id": "e10c05b0-8434-48e5-83d9-1a47991786ed",
+                "resourcePath": "objects\\o_cts00_iz0_WaitForRest\\o_cts00_iz0_WaitForRest.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "68c38816-3a4b-49cd-b0f8-a5cad71d8cf9",
             "Value": {
                 "id": "2234d6a2-7417-49e1-a7f5-df64836e47d6",
@@ -15015,6 +15023,14 @@
             }
         },
         {
+            "Key": "e4bcae5e-37ad-4618-8dc2-91948ee7f68f",
+            "Value": {
+                "id": "e926286d-8df8-495e-b24b-ae9755eac3af",
+                "resourcePath": "objects\\o_cts00_iz1_OldFarmIntro\\o_cts00_iz1_OldFarmIntro.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e50e7cad-ce0d-4738-b34a-c62b63765b8c",
             "Value": {
                 "id": "98535e21-8284-4344-b63b-8b4e9c230471",
@@ -16732,6 +16748,14 @@
                 "id": "f490b836-0950-450d-8b8a-9e864fee402c",
                 "resourcePath": "sprites\\s_propHugeCrate\\s_propHugeCrate.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fe4f5c77-af20-4ab3-97fe-24dc854cae04",
+            "Value": {
+                "id": "7911eb93-b585-46e8-8720-12e5123bcfa8",
+                "resourcePath": "objects\\o_chOld\\o_chOld.yy",
+                "resourceType": "GMObject"
             }
         },
         {

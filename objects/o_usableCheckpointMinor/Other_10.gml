@@ -27,7 +27,8 @@ if (m_usable && iexists(m_user) && m_user.id == pl.id)
 			gabber.input_choice_count = m_majorCheckpoint ? 3 : 2;
 			gabber.input_choice[0] = "Continue";
 			gabber.input_choice[1] = "Rest";
-			gabber.input_choice[2] = "Warp";
+			gabber.input_choice[2] = "Make Camp";
+			gabber.input_choice[3] = "Warp";
 			gabber.input_actor = id;
 			gabber.display_width = 70;
 			gabber.display_blackbox_override = true;

@@ -1,0 +1,35 @@
+#begin
+// The old man shows up and asks for some help across Fool's march
+
+// IntroSequence == 50
+// 30 pre farm
+// 40 post farm
+// 50 morning after
+// 60 began quest to mithra
+
+ai // move the old man down
+{
+	target old
+	style cts
+	command move
+	position 420 580
+}
+wait
+{
+	type ai
+	target old
+	aiaction arrive
+}
+wait
+{
+	type playerdistance
+	target old
+	distance 100
+}
+
+external
+{
+	run 00_iz_escortOld_FarmTalk.txt
+}
+
+#ended

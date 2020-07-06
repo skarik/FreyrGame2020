@@ -18,3 +18,8 @@ else*/
 sleep_time = clamp(sleep_time, 3.0, 12.0);
 
 gameCampWait(sleep_time);
+
+with (getPlayer())
+{
+	pstats.m_times_rested += 1;
+}
