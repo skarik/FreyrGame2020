@@ -84,6 +84,14 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_MUSIC;
 		}
+		else if (string_pos("goto_if_companion", line) == 1)
+		{
+			read_object_type = SEQTYPE_GOTO_IF_COMPANION;
+		}
+		else if (string_pos("goto_if_flag", line) == 1)
+		{
+			read_object_type = SEQTYPE_GOTO_IF_FLAG;
+		}
 		else if (string_pos("goto", line) == 1)
 		{
 			read_object_type = SEQTYPE_GOTO;
@@ -454,20 +462,104 @@ while (!file_text_eof(fp))
                 cts_entry_type[cts_entry_count] = SEQTYPE_MUSIC;
                 cts_entry_count++;
 			}
-			else if (read_object_type == SEQTYPE_GOTO)
+			else if (read_object_type == SEQTYPE_GOTO
+				|| read_object_type == SEQTYPE_GOTO_IF_COMPANION
+				|| read_object_type == SEQTYPE_GOTO_IF_FLAG)
 			{
+				// Parse all values
 				var target = ds_map_find_value(read_object_map, "target");
 				if (is_undefined(target)) show_error("goto objects must have a 'target' field", true);
 				
+				var quest_id = undefined;
+				var flag_value = undefined;
+				var flag_compare = undefined;
+				if (read_object_type == SEQTYPE_GOTO_IF_FLAG)
+				{
+					var quest_name = read_object_map[?"flag"];
+					var quest_name = string_ltrim(string_rtrim(string_fix_whitespace(quest_name)));
+					quest_id = ds_map_find_value(global.ctsBackend_QuestIds, quest_name);
+					if (is_undefined(quest_id))
+					{
+						var error = "Could not find quest id \"" + quest_name + "\" in the listing. please check spelling";
+						show_error(error, false);
+						debugOut(error);
+					}
+					
+					var flag_value = read_object_map[?"value"];
+					var flag_compare = read_object_map[?"compare"];
+				}
+				
+				var companion_with = [];
+				var companion_notwith = [];
+				if (read_object_type == SEQTYPE_GOTO_IF_COMPANION)
+				{
+					var try, with_next = undefined, notwith_next = undefined, lookup;
+					
+					try = 0;
+					lookup = "with";
+					do
+					{
+						with_next = read_object_map[?lookup];
+						if (!is_undefined(with_next))
+						{
+							companion_with[array_length_1d(companion_with)] = _cutsceneParseTarget(with_next);
+						}
+						
+						lookup = "with" + string(try);
+						try++;
+					}
+					until (is_undefined(with_next));
+					
+					try = 0;
+					lookup = "notwith";
+					do
+					{
+						notwith_next = read_object_map[?lookup];
+						if (!is_undefined(notwith_next))
+						{
+							companion_notwith[array_length_1d(companion_notwith)] = _cutsceneParseTarget(notwith_next);
+						}
+						
+						lookup = "notwith" + string(try);
+						try++;
+					}
+					until (is_undefined(notwith_next));
+				}
+				
+				// Create the GOTO structure
 				var new_map = ds_map_create();
 				ds_map_add(new_map, SEQI_TARGET, target);
+				
+				if (read_object_type == SEQTYPE_GOTO_IF_FLAG)
+				{
+					ds_map_add(new_map, SEQI_GOTO_FLAGID, quest_id);
+					ds_map_add(new_map, SEQI_GOTO_FLAGVALUE, real(flag_value));
+					if (flag_compare == "==" || flag_compare == "=")
+						ds_map_add(new_map, SEQI_GOTO_FLAGCOMPARE, kCompareOpEqual);
+					else if (flag_compare == "!=")
+						ds_map_add(new_map, SEQI_GOTO_FLAGCOMPARE, kCompareOpNotEqual);
+					else if (flag_compare == ">")
+						ds_map_add(new_map, SEQI_GOTO_FLAGCOMPARE, kCompareOpGreater);
+					else if (flag_compare == ">=")
+						ds_map_add(new_map, SEQI_GOTO_FLAGCOMPARE, kCompareOpGreaterEqual);
+					else if (flag_compare == "<")
+						ds_map_add(new_map, SEQI_GOTO_FLAGCOMPARE, kCompareOpLess);
+					else if (flag_compare == "<=")
+						ds_map_add(new_map, SEQI_GOTO_FLAGCOMPARE, kCompareOpLessEqual);
+				}
+				
+				if (read_object_type == SEQTYPE_GOTO_IF_COMPANION)
+				{
+					ds_map_add(new_map, SEQI_GOTO_COMPWITH, companion_with);
+					ds_map_add(new_map, SEQI_GOTO_COMPNOTWITH, companion_notwith);
+				}
 				
 				// Delete original map
                 ds_map_destroy(read_object_map);
                 
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
-                cts_entry_type[cts_entry_count] = SEQTYPE_GOTO;
+                cts_entry_type[cts_entry_count] = read_object_type;
                 cts_entry_count++;
 			}
 			else if (read_object_type == SEQTYPE_PALETTE)
@@ -789,7 +881,13 @@ while (!file_text_eof(fp))
         // Add the values to the ds_map
         if (!ds_map_add(read_object_map, key, value))
         {
-            debugOut("Sequence file had duplicate keys: \"" + string(key) + "\"");
+            debugOut("Sequence file had duplicate keys: \"" + key + "\"");
+			var try = 0;
+			while (!ds_map_add(read_object_map, key + string(try), value))
+			{
+				try += 1;
+			}
+			debugOut("Renamed as \"" + key + string(try) + "\" and added.");
         }
     }
 }

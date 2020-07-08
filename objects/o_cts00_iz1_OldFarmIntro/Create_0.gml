@@ -1,7 +1,7 @@
 /// @description Check Already Played & Init
 m_initialized = false;
 
-if (questGetValue(kQidIntroSequence) > 50)
+if (questGetValue(kQidIntroSequence) > 55)
 {
 	idelete(this);
 	exit;

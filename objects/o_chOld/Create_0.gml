@@ -6,6 +6,7 @@ if (singleton_this()) exit;
 
 m_name = "Old";
 m_interactionFile = ""; //
+m_interactChoices = 0;
 
 #endregion
 
@@ -26,5 +27,5 @@ m_isFollower = false;
 
 #endregion
 
-kAnimStanding = s_charViggoStand;
+//kAnimStanding = s_charViggoStand;
 //kAnimWalking = s_charNathanWalk;

@@ -3663,6 +3663,14 @@
             }
         },
         {
+            "Key": "38845c95-e1c0-4c53-acb7-5bb884837f5c",
+            "Value": {
+                "id": "f2cfbeda-fd37-4052-b3a5-37ed2f8f8158",
+                "resourcePath": "scripts\\playerPartyGetList\\playerPartyGetList.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "388c68aa-95b1-476c-b7d1-cbb077dd35d6",
             "Value": {
                 "id": "f28613db-964f-4ff8-bc5b-ac3c29995e8c",
@@ -11079,6 +11087,14 @@
             }
         },
         {
+            "Key": "abb09cec-f680-4cf1-a599-d7a4d6b66986",
+            "Value": {
+                "id": "f8c9ae84-ec0d-477b-a85f-8903a3cb2a8c",
+                "resourcePath": "datafiles_yy\\cts\\00_iz_escortOld_FarmIntro.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "abdb58e4-7831-4738-a963-7f9ec0967159",
             "Value": {
                 "id": "ba6cd031-6263-44af-8216-6d999622f4cd",
@@ -17203,6 +17219,7 @@
         "801167d4-018a-4895-a642-de3a3477eb44",
         "5c3b2443-0d23-4069-b651-f08bcb586634",
         "34c00b39-af27-4877-ab0e-cfacd324e56c",
+        "38845c95-e1c0-4c53-acb7-5bb884837f5c",
         "7af7373b-ec41-4459-86d1-d9db63b98ac0",
         "fc6ecf1b-d7bd-480f-a680-b9e0f4d235bc",
         "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",
