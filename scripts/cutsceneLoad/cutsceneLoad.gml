@@ -112,6 +112,10 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_COMPANION;
 		}
+		else if (string_pos("spawnstate", line) == 1)
+		{
+			read_object_type = SEQTYPE_SPAWNSTATE;
+		}
 		else if (string_pos("emote", line) == 1)
 		{
 			read_object_type = SEQTYPE_EMOTE;
