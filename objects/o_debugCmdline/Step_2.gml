@@ -26,6 +26,18 @@ if (focused)
 			command += chr(key);
 		}
 	}
+	// Check symbols
+	{
+		if (keyboard_check_pressed(0xBD))
+		{
+			if (keyboard_check(vk_shift)) {
+				command += "_";
+			}
+			else {
+				command += "-";
+			}
+		}
+	}
 	// Check space
 	if (keyboard_check_pressed(vk_space)) {
 		command += " ";

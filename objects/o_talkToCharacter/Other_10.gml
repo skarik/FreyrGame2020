@@ -60,6 +60,10 @@ if (m_owner != null && iexists(m_user) && m_user.id == o_PlayerTest.id)
 			// Set we are talking so we can check the ending of the choicebox
 			m_interacting = true;
 		}
+		else
+		{
+			m_owner.m_wasInteracted = true;
+		}
 		
 		if (m_interacting)
 		{

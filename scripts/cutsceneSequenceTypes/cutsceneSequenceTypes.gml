@@ -7,6 +7,8 @@
 #macro SEQTYPE_AUDIO 4
 #macro SEQTYPE_MUSIC 5
 #macro SEQTYPE_GOTO 6
+#macro SEQTYPE_GOTO_IF_COMPANION 60
+#macro SEQTYPE_GOTO_IF_FLAG 61
 #macro SEQTYPE_AI 7
 #macro SEQTYPE_PALETTE 8
 #macro SEQTYPE_SIGNAL 9
@@ -41,6 +43,17 @@
 
 #macro SEQWAIT_INPUT 0
 #macro SEQWAIT_TIME 1
+#macro SEQWAIT_PLAYERDISTANCE 2
+#macro SEQWAIT_AI 3
+
+#macro SEQI_GOTO_FLAGID 30
+#macro SEQI_GOTO_FLAGVALUE 31
+#macro SEQI_GOTO_FLAGCOMPARE 32
+#macro SEQI_GOTO_COMPWITH 33
+#macro SEQI_GOTO_COMPNOTWITH 34
+
+#macro SEQI_WAIT_AIACTION -21
+#macro SEQI_WAIT_DISTANCE -22
 
 #macro SEQEND_NONE 0
 #macro SEQEND_AUTO 1
@@ -93,3 +106,10 @@
 #macro SEQI_PORTRAIT_EXPRESSION -9
 #macro SEQI_PORTRAIT_SPRITE -16
 #macro SEQI_PORTRAIT_FACING -7
+
+#macro kCompareOpEqual 0
+#macro kCompareOpGreater 1
+#macro kCompareOpLess 2
+#macro kCompareOpGreaterEqual 3
+#macro kCompareOpLessEqual 4
+#macro kCompareOpNotEqual 5

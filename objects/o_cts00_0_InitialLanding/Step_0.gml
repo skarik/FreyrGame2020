@@ -9,6 +9,9 @@ if (cutsceneHasSignal())
 	
 	if (signal_id == "player_fall_setup")
 	{
+		pl.xstart = 520;
+		pl.ystart = 640;
+		
 		pl.canMove = false; // Disable all motion input
 		pl.x = pl.xstart;
 		pl.y = pl.ystart;
@@ -52,6 +55,8 @@ if (cutsceneHasSignal())
 		o_chNathan.zspeed = 64;
 		o_chNathan.z_height = 2;
 		o_chNathan.onGround = false;
+		// and disable collisio stuff now
+		o_chNathan.isPassthru = true;
 	}
 	else if (signal_id == "round_positions")
 	{
@@ -68,6 +73,7 @@ if (cutsceneHasSignal())
 		o_chNathan.moEnabled = true;
 		o_chNathan.zspeed = 0;
 		o_chNathan.z_height = 0;
+		o_chNathan.isPassthru = false;
 	}
 	else if (signal_id == "ended")
 	{

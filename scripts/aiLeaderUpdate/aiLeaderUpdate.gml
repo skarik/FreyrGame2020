@@ -62,12 +62,13 @@ if (m_aiLeadering)
 			// We want to move to the player. TODO: pathfinding.
 			if (leaderFollowDistance > kAiLeaderCatchupDistance)
 			{
-				var follow_dir_x = (leaderTarget.x - x) / leaderFollowDistance;
+				/*var follow_dir_x = (leaderTarget.x - x) / leaderFollowDistance;
 				var follow_dir_y = (leaderTarget.y - y) / leaderFollowDistance;
 
 				// Update the motion axes to the given motion
 				_controlStructUpdate(xAxis, follow_dir_x);
-				_controlStructUpdate(yAxis, follow_dir_y);
+				_controlStructUpdate(yAxis, follow_dir_y);*/
+				aipathMoveTo(leaderTarget.x, leaderTarget.y);
 			}
 			else
 			{

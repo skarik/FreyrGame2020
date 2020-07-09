@@ -9,6 +9,8 @@ else if (target == "nathan")
 	target = o_chNathan;
 else if (target == "viggo")
 	target = o_chViggo;
+else if (target == "old")
+	target = o_chOld;
 else
 	target = null;
 	

@@ -1,4 +1,5 @@
 #begin
+// IntroSequence == 20
 // Intro in the tent talking to Nathan.
 // TODO: under the covers sprite
 

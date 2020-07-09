@@ -5,12 +5,6 @@ m_initialized = false;
 
 if (questGetValue(kQidIntroSequence) != 30)
 {
-	/*if (questGetValue(kQidIntroSequence) > 30)
-	{
-		// Create music manager
-		inew(o_mus00_DayDesert);
-	}*/
-	
 	idelete(this);
 	exit;
 }
@@ -20,6 +14,8 @@ if (!iexists(o_chNathan))
 {
 	var pl = getPlayer();
 	instance_create_depth(pl.x, pl.y + 32, pl.depth, o_chNathan);
+	
+	playerPartyAdd(o_chNathan);
 }
 
 // Load the cutscene

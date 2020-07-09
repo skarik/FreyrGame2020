@@ -1,4 +1,106 @@
 #begin
+// IntroSequence == 30
+
+// Go to the checkpoint and show the save point.
+ai
+{
+	target nathan 
+	style lead
+	command start
+	position 470 215
+}
+
+wait
+{
+	type ai
+	target nathan
+	aiaction arrive
+}
+
+lines
+{
+    target  nathan
+	facing	player
+	end organic
+    1 Over here.
+}
+
+wait
+{
+	type playerdistance
+	target nathan
+	distance 40
+}
+
+lines
+{
+	target	nathan
+	facing	player
+	
+	1 Use this campsite to rest - $por I can share my tent with you.
+	2 This wolf statue is comforting to some, so I don't mind if you prefer it over my tent.
+}
+
+lines
+{
+	target	player
+	facing	nathan
+	
+	1c We got $3Iconoliths$0 like that on the Rig - $pthough, not statues.
+	1a Aye, we have $3Iconoliths$0 on the Rig, but not as an animal statues.
+	1p Oh, there's $3Iconoliths$0 like that on the Rig. Not as pretty.
+}
+
+lines
+{
+	style tutorial
+	1 [PLAYER] can touch Iconoliths to save progress. Simply walk up and touch, and progress will be saved. Progress is $bonly$$ saved when touching Iconoliths.
+}
+
+lines
+{
+    target  nathan
+	facing	player
+	end organic
+    1 When you're ready, follow me.
+}
+
+// Down to the bottom, let's go!
+ai
+{
+	target nathan 
+	style lead
+	command start
+	position 440 570
+}
+
+wait
+{
+	type ai
+	target nathan
+	aiaction arrive
+}
+
+wait
+{
+	type playerdistance
+	target nathan
+	distance 60
+}
+
+// Wait for the player to till some stuff
+lines
+{
+	style tutorial
+	1 Use [CONTROL_USE] to dig sand and till dirt. You can only plant on tilled dirt.
+}
+
+ai
+{
+	target nathan
+	style follow
+	command start
+}
 
 lines
 {
@@ -35,6 +137,66 @@ lines
 	end organic
     1 Punch the ground into special lines, okay.
 }
+
+// Now do the planting tutorial
+lines
+{
+	style tutorial
+	1 Select the seed item, then use [CONTROL_ITEMUSE] when tilled dirt is selected to plant the seeds. Most plants will require water to sprout and continue growing.
+}
+
+wait
+{
+	type input
+	id on_player_plant
+}
+
+lines
+{
+    target  nathan
+	facing	player
+	end organic
+    1 Just put the seeds in the dirt? That's it?
+	2 I guess you need water at some point - you can borrow one of my pots.
+}
+
+wait
+{
+	type input
+	id on_player_water
+}
+
+// We're done with the tutorial, do some scenario cleanup.
+lines
+{
+	target	player
+	1 That's one down. Pretty simple.
+	1a That should be it. Simple!
+}
+
+lines
+{
+    target  nathan
+	facing	player
+    1 Is that it? It'll really grow a plant - and we can eat fresh leaves?
+}
+
+lines
+{
+	target	player
+	facing	nathan
+	1 We still need to take care of it$p, but yeah.
+	2 Also, turnips aren't leaves!
+}
+
+lines
+{
+    target  nathan
+	facing	player
+    1 More than leaves...
+	2 Actually...$plooking forward to it, then.
+}
+
 
 
 #end

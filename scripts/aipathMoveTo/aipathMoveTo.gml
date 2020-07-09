@@ -106,7 +106,8 @@ var dspeed = point_distance(0, 0, xspeed, yspeed);
 // find a path
 // reset the node status target shit
 
-if (m_aipath_newpath)
+m_aipath_newpath_cooldown -= Time.deltaTime;
+if (m_aipath_newpath && m_aipath_newpath_cooldown <= 0.0)
 {
 	// Find the closest node (weighted towards the target)
 	var closestNodeStart = ainodesGetClosest(x, y, z, true);
@@ -132,6 +133,7 @@ if (m_aipath_newpath)
 	// We no longer need a new path
 	m_aipath_newpath = false;
 	m_aipath_repathtime = 0.0;
+	m_aipath_newpath_cooldown = 0.1;
 	
 	if (m_aipath_listing != null)
 	{
@@ -197,26 +199,45 @@ if (ddist > t_arrivalDistance)
 	}
 	
 	// if character is in the way, then avoid
-	var t_forwardNpcCheck = [x + t_controlVector[0] * k_aipath_npcAvoidRadius * 0.5, y + t_controlVector[1] * k_aipath_npcAvoidRadius * 0.5];
-	var t_forwardNpc = collision_circle(
-		t_forwardNpcCheck[0], t_forwardNpcCheck[1],
-		k_aipath_npcAvoidRadius * 0.5,
-		ob_characterGround, false, true);
-	if (iexists(t_forwardNpc))
+	var t_forwardNpcCheckRadius = min(k_aipath_npcAvoidRadius, ddist) * 0.5;
+	if (!isPassthru && t_forwardNpcCheckRadius > 5)
 	{
-		if (abs(t_forwardNpc.xspeed) < 0.1 && abs(t_forwardNpc.yspeed) < 0.1)
+		var t_forwardNpcCheck = [x + t_controlVector[0] * t_forwardNpcCheckRadius, y + t_controlVector[1] * t_forwardNpcCheckRadius];
+		var t_forwardNpc = collision_circle(
+			t_forwardNpcCheck[0], t_forwardNpcCheck[1],
+			t_forwardNpcCheckRadius,
+			ob_characterGround, false, true);
+		if (iexists(t_forwardNpc))
 		{
-			// Check if it's on the left or right of the current path, and move around accordingly
-			var path_difference = angle_difference(point_direction(0, 0, t_controlVector[0], t_controlVector[1]),
-												   point_direction(x, y, t_forwardNpc.x, t_forwardNpc.y));
+			if (abs(t_forwardNpc.xspeed) < 0.05 && abs(t_forwardNpc.yspeed) < 0.05)
+			{
+				// Check if it's on the left or right of the current path, and move around accordingly
+				var path_difference = angle_difference(point_direction(0, 0, t_controlVector[0], t_controlVector[1]),
+													   point_direction(x, y, t_forwardNpc.x, t_forwardNpc.y));
 			
-			if (path_difference > 0)
-			{
-				t_controlVector = [t_controlVector[0] + t_controlVector[1], t_controlVector[1] - t_controlVector[0]];
+				if (path_difference > 0)
+				{
+					t_controlVector = [t_controlVector[0] + t_controlVector[1], t_controlVector[1] - t_controlVector[0]];
+				}
+				else
+				{
+					t_controlVector = [t_controlVector[0] - t_controlVector[1], t_controlVector[1] + t_controlVector[0]];
+				}
 			}
-			else
+			else // TODO: change this for in-motion since the logic needs to be slightly different
 			{
-				t_controlVector = [t_controlVector[0] - t_controlVector[1], t_controlVector[1] + t_controlVector[0]];
+				// Check if it's on the left or right of the current path, and move around accordingly
+				var path_difference = angle_difference(point_direction(0, 0, t_controlVector[0], t_controlVector[1]),
+													   point_direction(x, y, t_forwardNpc.x, t_forwardNpc.y));
+			
+				if (path_difference > 0)
+				{
+					t_controlVector = [t_controlVector[0] + t_controlVector[1], t_controlVector[1] - t_controlVector[0]];
+				}
+				else
+				{
+					t_controlVector = [t_controlVector[0] - t_controlVector[1], t_controlVector[1] + t_controlVector[0]];
+				}
 			}
 		}
 	}

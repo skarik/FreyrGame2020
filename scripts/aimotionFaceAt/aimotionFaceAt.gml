@@ -18,24 +18,8 @@ if (angleSpeed < 0)
 else
 	angleSpeed *= Time.deltaTime;
 
-// Change the direction to fix properly
-if (abs(targetDirection - facingDirection) > 180)
-{
-	if (targetDirection > facingDirection)
-		targetDirection -= 180;
-	else
-		targetDirection += 180;
-}
-
 // Move to face
-if (abs(targetDirection - facingDirection) <= angleSpeed)
-{
-	facingDirection = targetDirection;
-}
-else
-{
-	facingDirection += sign(targetDirection - facingDirection) * angleSpeed;
-}
+facingDirection += median(-angleSpeed, +angleSpeed, angle_difference(targetDirection, facingDirection));
 
 // Update the aiming to match the facing for now
 aimingDirection = facingDirection;

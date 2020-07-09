@@ -17,6 +17,8 @@ if (l_commandSplitCount >= 1)
 		return dcmdParseHurt(l_parserMode, l_commandSplit);
 	else if (l_commandSplit[0] == "heal")
 		return dcmdParseHeal(l_parserMode, l_commandSplit);
+	else if (l_commandSplit[0] == "giveitem")
+		return dcmdParseGiveItem(l_parserMode, l_commandSplit);
 
 	debugOut("Invalid command \"" + l_commandSplit[0] + "\"");
 }

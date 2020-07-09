@@ -46,12 +46,33 @@ if (global._transition_source != null)
 			// update the Z now
 			z = collision3_get_highest_meeting(x, y, z);
 			z_height = 0;
+			
+			// update followers
+			var pl_callee = id;
+			for (var i = 0; i < 3; ++i)
+			{
+				with (pstats.m_party[i])
+				{
+					persistent = false;
+					inventory.persistent = false;
+					stats.persistent = false;
+					
+					x = pl_callee.x;
+					y = pl_callee.y;
+					z = pl_callee.z;
+					
+					var hardness = inew(o_scrSolidifyFollower);
+						hardness.target = id;
+						hardness.original_state = isPassthru;
+					isPassthru = true;
+				}
+			}
         }
         with (o_PlayerHud)
         {
             persistent = false;
         }
-		with (ob_character)
+		/*with (ob_character)
 		{
 			var pl = getPlayer();
 			
@@ -73,7 +94,7 @@ if (global._transition_source != null)
 					isPassthru = true;
 				}
 			}
-		}
+		}*/
         
 		// Message we switched rooms
 		debugOut("transition from " + room_get_name(global._transition_source) + " to " + room_get_name(room));

@@ -37,7 +37,7 @@ if (m_stateInteracting)
 			{	// Continue
 				m_stateInteracting = false;
 			}
-			else if (choice == 1)
+			else if (choice == 1 || choice == 2)
 			{	// Rest
 				m_stateInteracting = false;
 				
@@ -60,7 +60,7 @@ if (m_stateInteracting)
 				// save game
 				gameSaveSpecific(kSaveFromCheckpointMinor);
 			}
-			else if (choice == 2)
+			else if (choice == 3)
 			{	// Warp				
 				// remove old menu
 				idelete(o_CtsChoiceBox);

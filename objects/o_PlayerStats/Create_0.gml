@@ -6,6 +6,8 @@ m_head = 0;
 m_gender = kGenderMale;
 m_shirtless = false;
 
+m_party = array_create(3, null);
+
 #macro kGenderFemale 0
 #macro kGenderMale 1 
 #macro kGenderNonbi 2
@@ -29,8 +31,13 @@ m_fortune_flipped = false;
 
 m_hazards = array_create(kHazard_MAX, 0);
 
-m_harvestedCrops = ds_map_create();
+
+#region Progress Stats
+
+m_times_rested = 0;
+
 #macro kCropId_AllCrops 0
+m_harvestedCrops = ds_map_create();
 m_harvestedCrops[?kCropId_AllCrops] = 0;
 m_harvestedCrops[?o_cropTurnip] = 0;
 m_harvestedCrops[?o_cropCabbage] = 0;
@@ -42,3 +49,5 @@ m_harvestedCrops[?o_cropSugarCane] = 0;
 m_harvestedCrops[?o_cropBamboo] = 0;
 m_harvestedCrops[?o_cropTea] = 0;
 m_harvestedCrops[?o_cropRice] = 0;
+
+#endregion

@@ -33,7 +33,8 @@ case SEQTYPE_WAIT:
     }
     else
     {
-        if (ds_map_find_value(entry, SEQI_TYPE) == SEQWAIT_TIME)
+		var type = ds_map_find_value(entry, SEQI_TYPE);
+        if (type == SEQWAIT_TIME)
         {   // Increment timer and check for max time
             cts_execute_timer += Time.dt;
             if (cts_execute_timer > ds_map_find_value(entry, SEQI_TIME))
@@ -42,6 +43,34 @@ case SEQTYPE_WAIT:
                 cts_execute_state = 0;
             }
         }
+		else if (type == SEQWAIT_PLAYERDISTANCE)
+		{
+			var target = ds_map_find_value(entry, SEQI_TARGET);
+			var playerdistance = ds_map_find_value(entry, SEQI_WAIT_DISTANCE);
+			
+			var pl = getPlayer();
+			var target = instance_find(target, 0);
+			if (point_distance(pl.x, pl.y, target.x, target.y) < playerdistance)
+			{
+				cts_entry_current++;
+                cts_execute_state = 0;
+			}
+		}
+		else if (type == SEQWAIT_AI)
+		{
+			var target = ds_map_find_value(entry, SEQI_TARGET);
+			var aiaction = ds_map_find_value(entry, SEQI_WAIT_AIACTION);
+			
+			var target = instance_find(target, 0);
+			if (aiaction == "arrive")
+			{
+				if (point_distance(target.x, target.y, target.m_aiScript_requestPositionX, target.m_aiScript_requestPositionY) < 10)
+				{
+					cts_entry_current++;
+					cts_execute_state = 0;
+				}
+			}
+		}
         else
         {
             // We don't do anything...
@@ -356,7 +385,7 @@ case SEQTYPE_MUSIC:
 	break;
 	
 case SEQTYPE_GOTO:
-	var target = ds_map_find_value(entry, SEQI_TARGET);
+	var target = entry[?SEQI_TARGET];
 	if (target != undefined)
 	{
 		if (!cutsceneJumpToLabel(target))
@@ -377,7 +406,124 @@ case SEQTYPE_GOTO:
 	
 	// Debug output
 	debugOut("Doing goto...");
-
+	break;
+case SEQTYPE_GOTO_IF_FLAG:
+	var target = entry[?SEQI_TARGET];
+	var quest_id = entry[?SEQI_GOTO_FLAGID];
+	var flag_value = entry[?SEQI_GOTO_FLAGVALUE];
+	var flag_compare = entry[?SEQI_GOTO_FLAGCOMPARE];
+	
+	var quest_value = questGetValue(quest_id);
+	var check_valid = false;
+	if (flag_compare == kCompareOpEqual)
+	{
+		check_valid = (quest_value == flag_value);
+		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " == " + string(flag_value));
+	}
+	else if (flag_compare == kCompareOpNotEqual)
+	{
+		check_valid = (quest_value != flag_value);
+		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " != " + string(flag_value));
+	}
+	else if (flag_compare == kCompareOpGreater)
+	{
+		check_valid = (quest_value > flag_value);
+		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " > " + string(flag_value));
+	}
+	else if (flag_compare == kCompareOpGreaterEqual)
+	{
+		check_valid = (quest_value >= flag_value);
+		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " >= " + string(flag_value));
+	}
+	else if (flag_compare == kCompareOpLess)
+	{
+		check_valid = (quest_value < flag_value);
+		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " < " + string(flag_value));
+	}
+	else if (flag_compare == kCompareOpLessEqual)
+	{
+		check_valid = (quest_value <= flag_value);
+		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " <= " + string(flag_value));
+	}
+	
+	if (target != undefined && check_valid)
+	{
+		if (!cutsceneJumpToLabel(target))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else
+	{
+		// We're done here. Onto the next event
+		cts_entry_current++;
+	    cts_execute_state = 0;
+	}
+	
+	// Debug output
+	debugOut("Doing goto_if_flag...");
+	break;
+case SEQTYPE_GOTO_IF_COMPANION:
+	var target = entry[?SEQI_TARGET];
+	var companions_with = entry[?SEQI_GOTO_COMPWITH];
+	var companions_notwith = entry[?SEQI_GOTO_COMPNOTWITH];
+	
+	var check_valid = true;
+	var party = playerPartyGetList();
+	// Check all the WITH is in the party
+	for (var ic = 0; ic < array_length_1d(companions_with); ++ic)
+	{
+		var found = false;
+		for (var i = 0; i < array_length_1d(party); ++i)
+		{
+			if (iexists(party[i]) && companions_with[ic] == party[i].object_index)
+			{
+				found = true;
+				break;
+			}
+		}
+		if (!found)
+		{
+			check_valid = false;
+		}
+	}
+	// Check all the NOTWITH is not in the party
+	for (var ic = 0; ic < array_length_1d(companions_notwith); ++ic)
+	{
+		for (var i = 0; i < array_length_1d(party); ++i)
+		{
+			if (iexists(party[i]) && companions_notwith[ic] == party[i].object_index)
+			{
+				check_valid = false;
+				break;
+			}
+		}
+	}
+	
+	if (target != undefined && check_valid)
+	{
+		if (!cutsceneJumpToLabel(target))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else
+	{
+		// We're done here. Onto the next event
+		cts_entry_current++;
+	    cts_execute_state = 0;
+	}
+	
+	// Debug output
+	debugOut("Doing goto_if_companion...");
 	break;
 	
 case SEQTYPE_PALETTE:
