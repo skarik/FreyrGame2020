@@ -628,6 +628,43 @@ case SEQTYPE_AI:
     cts_execute_state = 0;
 	break;
 	
+case SEQTYPE_COMPANION:
+	// Pull common params
+	var count = ds_map_find_value(entry, SEQI_COUNT);
+    var target = ds_map_find_value(entry, SEQI_TARGET);
+    var style = ds_map_find_value(entry, SEQI_STYLE);
+	
+	// Find target
+    var target_inst = instance_find(target, count);
+	
+	// Do party command
+	if (style == 1)
+	{
+		if (iexists(target_inst))
+			playerPartyAdd(target_inst);
+		else
+			playerPartyAdd(target);
+	}
+	else if (style == -1)
+	{
+		if (iexists(target_inst))
+			playerPartyRemove(target_inst);
+		else
+			playerPartyRemove(target);
+	}
+	else if (style == null)
+	{
+		debugOut("Bad companion command!");
+	}
+
+	// Debug output
+	debugOut("Doing companion command " + string(target) + " in style " + string(style) + "...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
 case SEQTYPE_EMOTE:
 	// Pull common params
 	var count = ds_map_find_value(entry, SEQI_COUNT);
