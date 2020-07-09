@@ -628,6 +628,58 @@ case SEQTYPE_AI:
     cts_execute_state = 0;
 	break;
 	
+case SEQTYPE_SPAWNSTATE:
+
+	var facing = entry[?SEQI_FACING];
+	var spawnobject = entry[?SEQI_SPAWNSTATE_SPAWNOBJECT];
+	var deleteobject = entry[?SEQI_SPAWNSTATE_DELETEOBJECT];
+	
+	if (iexists(spawnobject) || object_exists(spawnobject))
+	{
+		var target_inst = instance_create_depth(
+			entry[?SEQI_SPAWNSTATE_POS_X],
+			entry[?SEQI_SPAWNSTATE_POS_Y],
+			0,
+			spawnobject);
+		
+		// Make the target face the input direction
+        if (iexists(target_inst))
+        {
+            //if (facing == -1 || facing == 1)
+			if (facing == SEQI_FACING_UP)
+				target_inst.facingDirection = 90;
+			else if (facing == SEQI_FACING_DOWN)
+				target_inst.facingDirection = 270;
+			else if (facing == SEQI_FACING_LEFT)
+				target_inst.facingDirection = 180;
+			else if (facing == SEQI_FACING_RIGHT)
+				target_inst.facingDirection = 0;
+            //{
+            //    target_inst.facingDir = facing;
+            //}
+            else if (iexists(facing))
+            {
+                //target_inst.facingDir = sign(facing.x - target_inst.x);
+				target_inst.facingDirection = point_direction(target_inst.x, target_inst.y, facing.x, facing.y);
+            }
+        }
+		
+		// Debug output
+		debugOut("Doing spawnstate command spawn " + object_get_name(target_inst.object_index) + "...");
+	}
+	else if (iexists(deleteobject) || object_exists(deleteobject))
+	{
+		idelete(deleteobject);
+		
+		// Debug output
+		debugOut("Doing spawnstate command delete " + object_get_name(deleteobject) + "...");
+	}
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
 case SEQTYPE_COMPANION:
 	// Pull common params
 	var count = ds_map_find_value(entry, SEQI_COUNT);

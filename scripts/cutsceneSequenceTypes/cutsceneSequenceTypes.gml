@@ -17,6 +17,7 @@
 #macro SEQTYPE_WORLD 12
 #macro SEQTYPE_PORTRAIT 13
 #macro SEQTYPE_COMPANION 14
+#macro SEQTYPE_SPAWNSTATE 15
 
 #macro SEQI_SIZE -1
 #macro SEQI_COUNT -1
@@ -114,3 +115,9 @@
 #macro kCompareOpGreaterEqual 3
 #macro kCompareOpLessEqual 4
 #macro kCompareOpNotEqual 5
+
+#macro SEQI_SPAWNSTATE_SPAWNOBJECT -11
+#macro SEQI_SPAWNSTATE_DELETEOBJECT -12
+#macro SEQI_SPAWNSTATE_POS_X -13
+#macro SEQI_SPAWNSTATE_POS_Y -14
+#macro SEQI_SPAWNSTATE_POS_Z -15

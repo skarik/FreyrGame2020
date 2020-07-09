@@ -2311,6 +2311,14 @@
             }
         },
         {
+            "Key": "251df181-724e-487b-a464-8f5de335e747",
+            "Value": {
+                "id": "63649d96-2cfd-4dd5-9d99-357c46b535cd",
+                "resourcePath": "datafiles_yy\\cts\\00_iz_escortOld2_Stuff.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "2529e65f-a83b-4fd1-af1b-65ec73bbc1e2",
             "Value": {
                 "id": "8bdf98a4-c114-4789-bc8a-e0203f6836bf",
@@ -11090,7 +11098,7 @@
             "Key": "abb09cec-f680-4cf1-a599-d7a4d6b66986",
             "Value": {
                 "id": "f8c9ae84-ec0d-477b-a85f-8903a3cb2a8c",
-                "resourcePath": "datafiles_yy\\cts\\00_iz_escortOld_FarmIntro.txt.yy",
+                "resourcePath": "datafiles_yy\\cts\\00_iz_escortOld1_FarmIntro.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -12724,6 +12732,14 @@
                 "id": "7181bb27-5b29-4fae-8638-b5f2920857a2",
                 "resourcePath": "views\\c3d5c169-b483-4c03-a0f5-f685b8f54146.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c3edd887-4b61-48a2-b9a9-6f355cf9a470",
+            "Value": {
+                "id": "2bb6d71d-25f4-4829-9bca-3d5cb0d871e7",
+                "resourcePath": "objects\\o_cts00_iz2_WaitNorth\\o_cts00_iz2_WaitNorth.yy",
+                "resourceType": "GMObject"
             }
         },
         {

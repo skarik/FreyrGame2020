@@ -1,0 +1,112 @@
+#begin
+// The old man waits at the top of the Oasis town
+
+// IntroSequence == 60
+// 30 pre farm
+// 40 post farm
+// 50 morning after
+// 55 waiting for response from OLD man
+// 60 wait to begin quest
+// 100 travelling across fool's march
+
+// skip if not flag 60
+goto_if_flag
+{
+	target OnEnd
+	flag IntroSequence
+	compare !=
+	value 60
+}
+
+spawnstate
+{
+	spawn old
+	facing down
+	position 400 290
+}
+
+wait
+{
+	type playerdistance
+	target old
+	distance 200
+}
+
+lines
+{
+	target	old
+	facing	player
+	style organic
+	1 You ready, kid?
+}
+
+#OnBeforeChoice
+
+	// wait for player to talk to the NPC - this requires some special finangling for now.
+	wait
+	{
+		type input
+		id OnInteractionWithNPC
+	}
+
+	choice
+	{
+		target player
+		1 (Not yet)
+		1goto OnBeforeChoice
+		2 (Get Going)
+		2goto OnGetGoing
+	}
+
+#OnGetGoing
+
+	lines
+	{
+		target	player
+		facing	old
+		1 Where to?
+	}
+
+	lines
+	{
+		target	old
+		facing	player
+		1 Town of $bMithra$$. Past the caves to the $1north$0, then $1south$0 across the $bFool's March$$.
+		2 $bFool's March$$ is the hard part. I'll follow your lead.
+	}
+	
+	lines
+	{
+		target	player
+		facing	old
+		1 Right, so $1north$0 first.
+	}
+	
+	// Add OLD to the companions
+	companion
+	{
+		target old
+		party add
+	}
+	// Make him start following
+	ai
+	{
+		target old
+		style follow
+		command start
+	}
+	
+	// And we're off!
+	flags
+	{
+		set IntroSequence 100
+	}
+	
+	goto
+	{
+		target OnEnd 
+	}
+
+#OnEnd
+
+#ended
