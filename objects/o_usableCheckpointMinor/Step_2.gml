@@ -21,6 +21,18 @@ else
 	}
 }
 
+if (m_stateWaitingForEndOfCamp)
+{
+	if (!iexists(o_ctsGameMakeCamp))
+	{
+		m_stateWaitingForEndOfCamp = false;
+		// play sound
+		var audio = faudio_create_stream("music/save/save_heavy.ogg");
+		var sound = sound_play_at(x, y, audio);
+			sound.gain = 0.8;
+	}
+}
+
 if (m_stateInteracting)
 {
 	if (!iexists(o_CtsChoiceBox))
@@ -36,14 +48,23 @@ if (m_stateInteracting)
 			if (choice == 0)
 			{	// Continue
 				m_stateInteracting = false;
+				
+				// save game
+				gameSaveSpecific(kSaveFromCheckpointMinor);
+				
+				// play continue sound
+				var audio = faudio_create_stream("music/save/save_light.ogg");
+				var sound = sound_play_at(x, y, audio);
+					sound.gain = 0.8;
 			}
-			else if (choice == 1 || choice == 2)
-			{	// Rest
+			else if (choice == 1)
+			{	// Short Rest
 				m_stateInteracting = false;
 				
 				// play sound
-				var audio = sound_play_at(x, y, snd_CheckpointClassic);
-					audio.gain = 0.8;
+				var audio = faudio_create_stream("music/save/save_heavy.ogg");
+				var sound = sound_play_at(x, y, audio);
+					sound.gain = 0.8;
 					
 				// heal player
 				pl.stats.m_health = pl.stats.m_healthMax;
@@ -58,7 +79,36 @@ if (m_stateInteracting)
 				playerCheckpointSave(x, y + 16, room);
 	
 				// save game
-				gameSaveSpecific(kSaveFromCheckpointMinor);
+				gameSaveSpecific(m_majorCheckpoint ? kSaveFromCheckpointMajor : kSaveFromCheckpointMinor);
+			}
+			else if (choice == 2)
+			{	// Long Rest
+				m_stateInteracting = false;
+				
+				// play sound
+				var audio = faudio_create_stream("music/save/save_loop.ogg");
+				var sound = faudio_play_sound(audio, 50, false); //sound_play_at(x, y, audio);
+					//sound.gain = 0.8;
+					
+				// heal player & give full will
+				pl.stats.m_health = pl.stats.m_healthMax;
+				pl.m_will = pl.m_willMax;
+	
+				// short rest
+				// TODO: make player sit
+	
+				// respawn all enemies
+				gameCampCheckpointLongRest();
+	
+				// save the checkpoint info
+				playerCheckpointSave(x, y + 16, room);
+	
+				// save game
+				gameSaveSpecific(m_majorCheckpoint ? kSaveFromCheckpointMajor : kSaveFromCheckpointMinor);
+				
+				// go to "wait for end of cutscene" state
+				m_stateWaitingForEndOfCamp = true;
+				
 			}
 			else if (choice == 3)
 			{	// Warp				

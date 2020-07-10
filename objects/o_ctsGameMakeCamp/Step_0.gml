@@ -9,6 +9,9 @@ if (m_state == CtsCamp.S1BeginSleep)
 }
 else if (m_state == CtsCamp.S2FadeOut)
 {
+	with (o_PlayerTest) controlZero(true);
+	with (o_PlayerTest) canMove = false;
+	
 	/*if (!iexists(o_fxFadeOutSolid))
 	{
 		var fadeout = inew(o_fxFadeOutSolid);
@@ -23,6 +26,9 @@ else if (m_state == CtsCamp.S2FadeOut)
 }
 else if (m_state == CtsCamp.S3Blackness)
 {
+	with (o_PlayerTest) controlZero(true);
+	with (o_PlayerTest) canMove = false;
+	
 	//gameDeathSoftReset();
 	// Change time of day now
 	m_startTime = o_dayNightCycle.m_timeOfDay;
@@ -36,6 +42,8 @@ else if (m_state == CtsCamp.S3Blackness)
 }
 else if (m_state == CtsCamp.S4SleepTravel)
 {
+	with (o_PlayerTest) controlZero(true);
+	with (o_PlayerTest) canMove = false;
 	// Nothing yet!
 	/*m_state = CtsCamp.S5FadeIn;
 	
@@ -48,7 +56,7 @@ else if (m_state == CtsCamp.S4SleepTravel)
 			depth = fadein.depth - 1;
 	}*/
 	
-	m_timer += Time.deltaTime * 2.0;
+	m_timer += Time.deltaTime / m_runtime;
 	
 	o_dayNightCycle.m_timeOfDay = lerp(m_startTime, m_endTime, saturate(m_timer)) % 24.00;
 	o_dayNightCycle.m_day = m_startDay;
@@ -57,7 +65,19 @@ else if (m_state == CtsCamp.S4SleepTravel)
 	{
 		o_dayNightCycle.m_timeOfDay = m_endTime;
 		o_dayNightCycle.m_day = m_startDay;
+		o_dayNightCycle.m_hourPassed = true; // Force on-hour updates
 		m_state = CtsCamp.S5FadeIn;
+	}
+	
+	// Perform proper time updates:
+	with (o_dayNightCycle)
+	{
+		// Loop the time around
+		if (m_timeOfDay >= 24.00)
+		{
+			m_timeOfDay -= 24.00;
+			m_day += 1;
+		}
 	}
 }
 else if (m_state == CtsCamp.S5FadeIn)

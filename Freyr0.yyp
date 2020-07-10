@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "051abc26-64ec-4e91-bafe-26a2ca5cd588",
+            "Value": {
+                "id": "bd3b8cb2-e81f-4af6-b188-f3fc05dc738c",
+                "resourcePath": "datafiles_yy\\music\\save\\save_light.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "0558c0c6-1e91-4903-81e0-e683aa40c06f",
             "Value": {
                 "id": "cc50eedf-97f9-4ace-bea0-91e8bd0f474d",
@@ -2420,6 +2428,14 @@
                 "id": "b5d8848d-f8c8-46ab-a738-ec003cc00bbe",
                 "resourcePath": "sprites\\s_propDRock0\\s_propDRock0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "272c9cd3-b76f-4da7-9663-4ef70faecf56",
+            "Value": {
+                "id": "5f35bee3-282c-4ef9-8d31-ee3e97325006",
+                "resourcePath": "datafiles_yy\\music\\save\\save_start.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -6639,6 +6655,14 @@
             }
         },
         {
+            "Key": "67c54fcb-2c86-4daf-87c1-4794cf9aef20",
+            "Value": {
+                "id": "b3ebf494-a341-4dae-8274-f9ccf244cc72",
+                "resourcePath": "datafiles_yy\\music\\save\\save_loop.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "67df87d8-c5ee-4b39-aa5e-973c03c607af",
             "Value": {
                 "id": "9834ba50-935b-4df9-84cf-2400e2586ecf",
@@ -7660,6 +7684,14 @@
                 "id": "9eb33e02-7fdf-4d79-925c-b3c17685e2b7",
                 "resourcePath": "objects\\o_fieldSquare\\o_fieldSquare.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "767799f7-d864-4f31-b9df-2b1aae5e9749",
+            "Value": {
+                "id": "f3de567e-c42a-43f8-9c21-09202b0406eb",
+                "resourcePath": "views\\767799f7-d864-4f31-b9df-2b1aae5e9749.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -11012,6 +11044,14 @@
                 "id": "b104d843-b280-4388-8139-563c5d7a2852",
                 "resourcePath": "objects\\o_pickupSeed_SugarCane\\o_pickupSeed_SugarCane.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "aa9f9ae5-1095-44e4-b656-d09f94c5a01a",
+            "Value": {
+                "id": "0f516800-5069-4822-a87d-fc6521ff2da4",
+                "resourcePath": "datafiles_yy\\music\\save\\save_heavy.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -15223,6 +15263,14 @@
             }
         },
         {
+            "Key": "e6aa81e7-0c92-4ab9-8346-0f16e870cac7",
+            "Value": {
+                "id": "4500a86a-bb2d-433e-91d0-9ff31f9b6334",
+                "resourcePath": "scripts\\gameCampCheckpointLongRest\\gameCampCheckpointLongRest.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e716f038-a1f6-495b-86ba-e54b74af5d4f",
             "Value": {
                 "id": "c4cdca6e-372f-4c5e-ad57-0a77cdec4b34",
@@ -17442,6 +17490,7 @@
         "997db4f4-7f16-4c94-ba47-6ece34d2adb7",
         "ef341803-bcf7-4124-b313-c0e0ff960bdd",
         "b4d04a4b-a95c-4bb0-8044-98baf0078a84",
+        "e6aa81e7-0c92-4ab9-8346-0f16e870cac7",
         "fb5f3748-c354-4d36-9b20-6aae4f7a34f6",
         "0e25310a-8fdd-45d6-b458-1b99d1c321ab",
         "b1666fee-590c-4810-8228-d269ed4149c6",

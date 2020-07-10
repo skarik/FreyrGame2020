@@ -16,9 +16,10 @@ if (m_usable && iexists(m_user) && m_user.id == pl.id)
 		checkpointInfoUnlock(id);
 	}
 	
-	// play audio
-	var audio = sound_play_at(x, y, snd_CheckpointTouch);
-		audio.gain = 0.9;
+	// play sound
+	var audio = faudio_create_stream("music/save/save_start.ogg");
+	var sound = sound_play_at(x, y, audio);
+		sound.gain = 0.8;
 	
 	if (!ctsGabbersHaveFocus())
 	{
