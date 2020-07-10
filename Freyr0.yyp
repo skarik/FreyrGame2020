@@ -551,6 +551,14 @@
             }
         },
         {
+            "Key": "08c7dc74-e325-4129-8764-57c12755dc36",
+            "Value": {
+                "id": "d28950a0-d9a0-4a05-9e43-bf32e0f08e2c",
+                "resourcePath": "sprites\\s_propBarnacleRig\\s_propBarnacleRig.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0979ef80-2353-424f-b7ed-96a620042d95",
             "Value": {
                 "id": "a785ffec-ce55-4489-ae24-247be54ea320",
@@ -563,6 +571,14 @@
             "Value": {
                 "id": "63c3d6d2-2a70-49d8-a158-a5543203be2e",
                 "resourcePath": "sprites\\s_itemToolVoidCapacitor\\s_itemToolVoidCapacitor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "09aebd56-8449-4982-a2ef-8840d7bf3e9b",
+            "Value": {
+                "id": "5bd0e413-4e09-47e2-ada1-350c8efa8712",
+                "resourcePath": "sprites\\s_propMetalStick\\s_propMetalStick.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1387,6 +1403,14 @@
             "Value": {
                 "id": "d7a0a5ad-06f5-4c8b-aa42-f3532fe0e2e0",
                 "resourcePath": "sprites\\ssy_ambientAudio\\ssy_ambientAudio.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "163be688-1945-435e-9af8-c6390d85f537",
+            "Value": {
+                "id": "78dcf3a3-5abc-4e73-aae5-9ae62f78ba18",
+                "resourcePath": "sprites\\s_propOilDrum\\s_propOilDrum.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3007,6 +3031,14 @@
             }
         },
         {
+            "Key": "2de45dba-285a-4a12-b379-886123c2d9e1",
+            "Value": {
+                "id": "e128ee79-08b8-42c1-9233-c98eca4e9275",
+                "resourcePath": "sprites\\s_propOilDrum02\\s_propOilDrum02.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2e0d837c-b3d7-48c9-94e9-63616966e6a1",
             "Value": {
                 "id": "0819f9a2-1595-4d44-9d6d-0bab71e73bbb",
@@ -3980,6 +4012,14 @@
                 "id": "170abbe0-4d3d-4331-8fd1-d284dae527b6",
                 "resourcePath": "scripts\\itemArrayCreate\\itemArrayCreate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3cc9090b-9555-4715-b0bd-4069892fd529",
+            "Value": {
+                "id": "ec260a35-1a2f-4983-9c0e-f07ab6d08121",
+                "resourcePath": "sprites\\s_propMetalSheet02\\s_propMetalSheet02.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9343,6 +9383,14 @@
             }
         },
         {
+            "Key": "8fbf9444-de18-4939-a99e-328e7fdb5597",
+            "Value": {
+                "id": "73fe7e55-99d6-40fd-8726-e6c25bb3d884",
+                "resourcePath": "sprites\\s_propSmallMetal\\s_propSmallMetal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8ffb4716-ae86-4129-8d98-f24c14a131e5",
             "Value": {
                 "id": "c952075c-1e44-4506-8655-e0fd415ffddf",
@@ -11108,6 +11156,14 @@
                 "id": "ac64e276-51ee-4d4f-a167-804d8f805ee5",
                 "resourcePath": "objects\\ob_weatherSystem\\ob_weatherSystem.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "aace2b1c-0e5c-41b3-8d5f-74684e327d62",
+            "Value": {
+                "id": "c62037a5-461e-4bba-b45d-cbfe5f516f0f",
+                "resourcePath": "sprites\\s_propBigRig\\s_propBigRig.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13943,6 +13999,14 @@
             }
         },
         {
+            "Key": "d3b3cac8-b033-415d-81c2-c28173c467a6",
+            "Value": {
+                "id": "bcc54227-d1e6-4a72-95e4-b28661b06dac",
+                "resourcePath": "sprites\\s_propMetalBurgerSign\\s_propMetalBurgerSign.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d3c1facd-149a-4e95-85b8-5d2172ff7597",
             "Value": {
                 "id": "ebb136e6-3d57-4096-a329-f9b09219d4ea",
@@ -15527,6 +15591,14 @@
             }
         },
         {
+            "Key": "ea330d9e-f28f-4910-a5e3-abd462322a56",
+            "Value": {
+                "id": "85996e3e-2ce0-4064-b474-97be336bbe5a",
+                "resourcePath": "sprites\\s_propMetalSheet01\\s_propMetalSheet01.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ea8ac441-bbf0-448a-b058-e51e6e4138ad",
             "Value": {
                 "id": "920cd88d-6a31-4b0d-8cb2-358bd6b597ea",
@@ -15652,6 +15724,14 @@
                 "id": "d5d9e8d0-08f4-4d20-94d7-6ebc060eadfa",
                 "resourcePath": "objects\\o_livelyPoweredInverter\\o_livelyPoweredInverter.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ec6bf5ea-f5f9-4350-abd6-c83139d15533",
+            "Value": {
+                "id": "ff7332c7-ec42-44db-8e7b-68037104858f",
+                "resourcePath": "sprites\\s_propMetalSheet\\s_propMetalSheet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -16540,6 +16620,14 @@
                 "id": "605bcbcb-837a-4aab-b2cb-9effa51f749a",
                 "resourcePath": "scripts\\fieldLoadState\\fieldLoadState.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fa483f0c-9092-42bc-8569-981aee172037",
+            "Value": {
+                "id": "73964b4f-adcc-4b79-b534-fa0122bdd8e9",
+                "resourcePath": "sprites\\s_propMetalRigPeice\\s_propMetalRigPeice.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
