@@ -6,7 +6,10 @@ if (m_streamed)
 	{
 		audio_stop_sound(m_audio);
 	}
-	audio_destroy_stream(m_stream);
+	if (m_stream != null)
+	{
+		audio_destroy_stream(m_stream);
+	}
 }
 else
 {

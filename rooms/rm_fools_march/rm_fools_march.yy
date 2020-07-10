@@ -1291,7 +1291,7 @@
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
             "name": "collisionLayer1",
             "id": "435c11a2-e5c1-4828-b393-0e84dd3312d4",
-            "depth": -7,
+            "depth": -8,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1534,7 +1534,7 @@
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
             "name": "collisionLayer0",
             "id": "76a8978b-1b9d-44ca-94aa-fc0bf7949f0c",
-            "depth": -4,
+            "depth": -6,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1772,6 +1772,53 @@
             "visible": false,
             "x": 0,
             "y": 0
+        },
+        {
+            "name": "cts",
+            "id": "d2a88768-aa5b-4258-a76c-4a9fb4a21131",
+            "depth": -4,
+            "grid_x": 16,
+            "grid_y": 16,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+                {
+                    "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+                    "name": "instances_cts_oldman_escort0",
+                    "id": "b33cbe63-102a-455b-af3c-559b89cd2ec5",
+                    "depth": -2,
+                    "grid_x": 16,
+                    "grid_y": 16,
+                    "hierarchyFrozen": false,
+                    "hierarchyVisible": true,
+                    "inheritLayerDepth": false,
+                    "inheritLayerSettings": false,
+                    "inheritSubLayers": false,
+                    "inheritVisibility": false,
+                    "instances": [
+
+                    ],
+                    "layers": [
+
+                    ],
+                    "m_parentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "modelName": "GMRInstanceLayer",
+                    "mvc": "1.0",
+                    "userdefined_depth": false,
+                    "visible": true
+                }
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
