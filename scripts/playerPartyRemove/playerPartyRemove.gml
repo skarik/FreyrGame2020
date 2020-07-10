@@ -1,5 +1,6 @@
 /// @function playerPartyRemove(member)
 /// @desc Removes the given NPC from the player party
+/// @param member {Object} Character to remove
 /// @returns {Boolean} True if removed, false if failed to remove.
 
 var partyMember = argument0;

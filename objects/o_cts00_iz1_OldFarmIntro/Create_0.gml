@@ -8,7 +8,7 @@ if (questGetValue(kQidIntroSequence) > 55)
 }
 
 // Load the cutscene
-cutsceneLoad("00_iz_escortOld_FarmIntro.txt");
+cutsceneLoad("00_iz_escortOld1_FarmIntro.txt");
 
 // Mark as ready
 m_initialized = true;

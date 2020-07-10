@@ -1,5 +1,6 @@
 /// @function playerPartyAdd(member)
 /// @desc Add the given NPC to the player party
+/// @param member {Object} Character to add.
 /// @returns {Boolean} True if added, false if failed to add.
 
 var partyMember = argument0;

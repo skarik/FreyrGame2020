@@ -26,6 +26,7 @@ drawbuf_set_reflection(false);
 m_statePlayerNearby = false;
 m_stateInteracting = false;
 m_stateInteractingWarping = false;
+m_stateWaitingForEndOfCamp = false;
 
 depthInit();
 z = collision3_get_highest_position(x, y, 0);

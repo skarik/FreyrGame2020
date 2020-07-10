@@ -16,6 +16,8 @@ m_timer = 0;
 
 m_startTime = 0.0;
 
+m_runtime = 6.0; // time this runs
+
 depth = -9101;
 
 persistent = true;

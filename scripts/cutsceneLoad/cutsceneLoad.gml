@@ -108,6 +108,14 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_AI;
 		}
+		else if (string_pos("companion", line) == 1)
+		{
+			read_object_type = SEQTYPE_COMPANION;
+		}
+		else if (string_pos("spawnstate", line) == 1)
+		{
+			read_object_type = SEQTYPE_SPAWNSTATE;
+		}
 		else if (string_pos("emote", line) == 1)
 		{
 			read_object_type = SEQTYPE_EMOTE;
@@ -589,7 +597,7 @@ while (!file_text_eof(fp))
 				var target = ds_map_find_value(read_object_map, "target");
 				target = _cutsceneParseTarget(target);
 					
-				var targeti = ds_map_find_value(read_object_map, "targeti");
+				var targeti = ds_map_find_value(read_object_map, "object");
 				if (is_undefined(targeti))
 					targeti = "0";
 					
@@ -670,13 +678,86 @@ while (!file_text_eof(fp))
                 cts_entry_type[cts_entry_count] = SEQTYPE_AI;
                 cts_entry_count++;
 			}
+			else if (read_object_type == SEQTYPE_SPAWNSTATE)
+			{
+				var spawn_object = read_object_map[?"spawn"];
+				spawn_object = _cutsceneParseTarget(spawn_object);
+				var delete_object = read_object_map[?"delete"];
+				delete_object = _cutsceneParseTarget(delete_object);
+				
+				var facing = ds_map_find_value(read_object_map, "facing");
+                if (is_undefined(facing))
+                    facing = null;
+                else if (facing == "left")
+                    facing = SEQI_FACING_LEFT;
+                else if (facing == "right")
+                    facing = SEQI_FACING_RIGHT;
+				else if (facing == "down")
+                    facing = SEQI_FACING_DOWN;
+				else if (facing == "up")
+                    facing = SEQI_FACING_UP;
+				else
+					facing = _cutsceneParseTarget(facing);
+				
+				var position = ds_map_find_value(read_object_map, "position");
+				if (is_undefined(position))
+					position = "0 0";
+				var position_list = string_split(position, " ", true);
+				
+				var new_map = ds_map_create();
+                ds_map_add(new_map, SEQI_SPAWNSTATE_SPAWNOBJECT, spawn_object);
+				ds_map_add(new_map, SEQI_SPAWNSTATE_DELETEOBJECT, delete_object);
+				ds_map_add(new_map, SEQI_FACING, facing);
+				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_X, real(position_list[0]));
+				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_Y, real(position_list[1]));
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+				
+				// Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_SPAWNSTATE;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_COMPANION)
+			{
+				var target = read_object_map[?"target"];
+				target = _cutsceneParseTarget(target);
+				
+				var targeti = read_object_map[?"object"];
+				if (is_undefined(targeti))
+					targeti = "0";
+					
+				var party = read_object_map[?"party"];
+				if (is_undefined(party))
+					party = null;
+				else if (party == "add")
+					party = 1;
+				else if (party == "remove")
+					party = -1;
+				else
+					party = null;
+					
+				var new_map = ds_map_create();
+                ds_map_add(new_map, SEQI_TARGET, target);
+                ds_map_add(new_map, SEQI_COUNT, real(targeti));
+				ds_map_add(new_map, SEQI_STYLE, party);
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_COMPANION;
+                cts_entry_count++;
+			}
             else if (read_object_type == SEQTYPE_EMOTE)
 			{
 				// First grab the target
 				var target = ds_map_find_value(read_object_map, "target");
 				target = _cutsceneParseTarget(target);
 					
-				var targeti = ds_map_find_value(read_object_map, "targeti");
+				var targeti = ds_map_find_value(read_object_map, "object");
 				if (is_undefined(targeti))
 					targeti = "0";
 				
