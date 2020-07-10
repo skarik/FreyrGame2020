@@ -17,7 +17,7 @@ with (camera)
 {
 	camPlayerUpdate(
 		round(round(pl.x) + lengthdir_x(aimerDistance, pl.aimingDirection)),
-		round(round(pl.y) + lengthdir_y(aimerDistance, pl.aimingDirection) - pl.z_height),
+		round(round(pl.y) + lengthdir_y(aimerDistance, pl.aimingDirection) - pl.z_height + pl.moAnimationYOffset),
 		pl.xspeed,
 		pl.yspeed);
 }

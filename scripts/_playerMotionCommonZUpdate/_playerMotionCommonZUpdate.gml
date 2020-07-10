@@ -37,7 +37,6 @@ else
 	z = collision3_get_highest_meeting(x, y, z);
 	
 	// Add to the height if falling
-	//if (z_prev > z)
 	if (z_ready)
 	{
 		var y_next = y + (z_prev - z);
@@ -48,6 +47,11 @@ else
 		if (abs(z_next - z) < 8)
 		{
 			y = y_next;
+		}
+		else
+		{
+			moAnimationYOffset += (z_prev - z);
+			//moAnimationYOffsetSpeed = abs(zspeed); // Too slow.
 		}
 	}
 	else

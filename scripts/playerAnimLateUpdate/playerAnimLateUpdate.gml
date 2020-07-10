@@ -1,4 +1,16 @@
 //
+// Offset Update
+if (onGround)
+{
+	moAnimationYOffsetSpeed = 256.0;
+}
+else
+{
+	moAnimationYOffsetSpeed = clamp(moAnimationYOffsetSpeed - Time.deltaTime *  256.0, 16.0, 128.0);
+}
+moAnimationYOffset = motion1d_to(moAnimationYOffset, 0.0, moAnimationYOffsetSpeed * Time.deltaTime);
+
+//
 // Angle Update
 
 // update facing
