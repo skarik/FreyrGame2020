@@ -983,6 +983,14 @@
             }
         },
         {
+            "Key": "10d01aed-cb2c-42a8-9b96-54616604245c",
+            "Value": {
+                "id": "9a2a09cd-9751-4ae1-8886-775be1ca8ebb",
+                "resourcePath": "sprites\\s_itemAppleButter\\s_itemAppleButter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "10dd9307-de97-48ff-bb59-82ee0e2a8b1c",
             "Value": {
                 "id": "d071621d-240f-4c67-89fb-24f34f38e2c4",
@@ -8119,6 +8127,14 @@
             }
         },
         {
+            "Key": "7e5ba311-a893-4044-bc62-cf6b199179bb",
+            "Value": {
+                "id": "3508c0b9-2752-4234-a162-3398f153869a",
+                "resourcePath": "sprites\\s_itemAshApplePie\\s_itemAshApplePie.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7e5be803-e523-49f7-a1bb-40b75a5ee468",
             "Value": {
                 "id": "1ec7fe95-0aa3-4cd1-bc9e-084b6692e58d",
@@ -8364,6 +8380,14 @@
                 "id": "e12249a0-a8c9-450c-bffa-62b6a797af7f",
                 "resourcePath": "objects\\o_uiNewMagicHazard\\o_uiNewMagicHazard.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "82444683-45c0-4f02-80d9-4d80fc4cbd3f",
+            "Value": {
+                "id": "9b7f5928-5e58-46e2-957f-34d2065f55bb",
+                "resourcePath": "sprites\\s_AshAppleTree\\s_AshAppleTree.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9091,6 +9115,14 @@
             "Value": {
                 "id": "0939481c-1307-4a28-a258-21da03f30747",
                 "resourcePath": "sprites\\s_propCairnPainted1\\s_propCairnPainted1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8e3a5342-7327-4b79-847c-215529730821",
+            "Value": {
+                "id": "ca294ab5-de71-45b7-8e3b-cc99740e499a",
+                "resourcePath": "sprites\\s_itemCropAshApple\\s_itemCropAshApple.yy",
                 "resourceType": "GMSprite"
             }
         },
