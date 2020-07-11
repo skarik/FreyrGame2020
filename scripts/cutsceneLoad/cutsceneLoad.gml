@@ -682,6 +682,8 @@ while (!file_text_eof(fp))
 			{
 				var spawn_object = read_object_map[?"spawn"];
 				spawn_object = _cutsceneParseTarget(spawn_object);
+				var spawn2_object = read_object_map[?"spawn_ifunique"];
+				spawn2_object = _cutsceneParseTarget(spawn2_object);
 				var delete_object = read_object_map[?"delete"];
 				delete_object = _cutsceneParseTarget(delete_object);
 				
@@ -706,6 +708,7 @@ while (!file_text_eof(fp))
 				
 				var new_map = ds_map_create();
                 ds_map_add(new_map, SEQI_SPAWNSTATE_SPAWNOBJECT, spawn_object);
+				ds_map_add(new_map, SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE, spawn2_object);
 				ds_map_add(new_map, SEQI_SPAWNSTATE_DELETEOBJECT, delete_object);
 				ds_map_add(new_map, SEQI_FACING, facing);
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_X, real(position_list[0]));

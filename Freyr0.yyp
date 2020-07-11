@@ -2999,6 +2999,14 @@
             }
         },
         {
+            "Key": "2d86ea0c-bb9b-4b2e-9dc4-3e1aa4ce7b29",
+            "Value": {
+                "id": "f0151948-3670-4425-aaea-c8d77393eae1",
+                "resourcePath": "views\\2d86ea0c-bb9b-4b2e-9dc4-3e1aa4ce7b29.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2d8798ec-6358-4aa8-80a0-d084466b6450",
             "Value": {
                 "id": "fa70f1cb-17db-442a-b05c-1950786800e9",
@@ -13772,6 +13780,14 @@
                 "id": "d5d8a99c-1ca6-44f4-a99b-059aafe8f0ba",
                 "resourcePath": "objects\\o_ashadowSquareGradient\\o_ashadowSquareGradient.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d0d57beb-f560-4c03-97d6-bdc766d5b6f1",
+            "Value": {
+                "id": "08286064-8970-4ced-8660-7ad4342812bb",
+                "resourcePath": "views\\d0d57beb-f560-4c03-97d6-bdc766d5b6f1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

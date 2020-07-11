@@ -129,7 +129,7 @@
 		target OnEnd
 	}
 	
-#OnPassStatue
+#OnPassIconolith
 	lines
 	{
 		target	old
@@ -141,6 +141,70 @@
 	{
 		target OnEnd
 	}
+	
+#OnInspectStatue
+	lines
+	{
+		target	old
+		facing	player
+		style organic
+		1 Wouldn't be askin' much of that, nothing but bad luck.
+	}
+	goto
+	{
+		target OnEnd
+	}
+	
+#OnShortRest
+	lines
+	{
+		target	old
+		facing	player
+		style organic
+		1 Please bless us and grant us a safe journey.
+	}
+	goto
+	{
+		target OnEnd
+	}
+	
+#OnLongRest0
+	lines
+	{
+		target	old
+		facing	player
+		style organic
+		1 May the Goddess protect us until dawn.
+	}
+	goto
+	{
+		target OnEnd
+	}
+#OnLongRest1
+	lines
+	{
+		target	old
+		facing	player
+		style organic
+		1 May the Goddess ward off Motses until dawn.
+	}
+	goto
+	{
+		target OnEnd
+	}
+#OnLongRest2
+	lines
+	{
+		target	old
+		facing	player
+		style organic
+		1 May Motses go after the other monsters this night.
+	}
+	goto
+	{
+		target OnEnd
+	}
+
 
 #OnEnd
 

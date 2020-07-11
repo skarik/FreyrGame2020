@@ -629,18 +629,21 @@ case SEQTYPE_AI:
 	break;
 	
 case SEQTYPE_SPAWNSTATE:
-
+	// Get all the params first
 	var facing = entry[?SEQI_FACING];
 	var spawnobject = entry[?SEQI_SPAWNSTATE_SPAWNOBJECT];
+	var spawnobject_unique = entry[?SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE];
 	var deleteobject = entry[?SEQI_SPAWNSTATE_DELETEOBJECT];
 	
-	if (iexists(spawnobject) || object_exists(spawnobject))
+	if (   (object_exists(spawnobject))
+		|| (!iexists(spawnobject_unique) && object_exists(spawnobject_unique))
+		)
 	{
 		var target_inst = instance_create_depth(
 			entry[?SEQI_SPAWNSTATE_POS_X],
 			entry[?SEQI_SPAWNSTATE_POS_Y],
 			0,
-			spawnobject);
+			object_exists(spawnobject_unique) ? spawnobject_unique : spawnobject);
 		
 		// Make the target face the input direction
         if (iexists(target_inst))
