@@ -1,5 +1,30 @@
 #begin
 // List of various talking cts
+// IntroSequence == 100
+// 30 pre farm
+// 40 post farm
+// 50 morning after
+// 55 waiting for response from OLD man
+// 60 wait to begin quest
+// 100 travelling across fool's march
+
+#Initialize
+	goto_if_flag
+	{
+		target OnEnd
+		flag IntroSequence
+		compare !=
+		value 100
+	}
+	spawnstate
+	{
+		spawn_ifunique old
+		position nearby
+	}
+	goto
+	{
+		target OnEnd
+	}
 
 #OnSeeGobbo
 	lines

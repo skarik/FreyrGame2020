@@ -1,12 +1,12 @@
 /// @description Cutscene_Update
 // Returns true if the cutscene is not being paused, false if it needs script input.
 
-global._cutscene_main = this;
-
 if (cutsceneIsDone())
 {
     return false;
 }
+
+global._cutscene_main = this;
 
 var entry_type = cts_entry_type[cts_entry_current];
 var entry = cts_entry[cts_entry_current];
@@ -635,13 +635,23 @@ case SEQTYPE_SPAWNSTATE:
 	var spawnobject_unique = entry[?SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE];
 	var deleteobject = entry[?SEQI_SPAWNSTATE_DELETEOBJECT];
 	
+	var position_special = entry[?SEQI_SPAWNSTATE_POS_SPECIAL];
+	var position_x = entry[?SEQI_SPAWNSTATE_POS_X];
+	var position_y = entry[?SEQI_SPAWNSTATE_POS_Y];
+	
+	if (position_special == kSpawnPositionNearby)
+	{
+		position_x = getPlayer().x + 16;
+		position_y = getPlayer().y;
+	}
+	
 	if (   (object_exists(spawnobject))
 		|| (!iexists(spawnobject_unique) && object_exists(spawnobject_unique))
 		)
 	{
 		var target_inst = instance_create_depth(
-			entry[?SEQI_SPAWNSTATE_POS_X],
-			entry[?SEQI_SPAWNSTATE_POS_Y],
+			position_x,
+			position_y,
 			0,
 			object_exists(spawnobject_unique) ? spawnobject_unique : spawnobject);
 		

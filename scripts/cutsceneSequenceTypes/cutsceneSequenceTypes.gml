@@ -122,3 +122,7 @@
 #macro SEQI_SPAWNSTATE_POS_Y -14
 #macro SEQI_SPAWNSTATE_POS_Z -15
 #macro SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE -16
+#macro SEQI_SPAWNSTATE_POS_SPECIAL -17
+
+#macro kSpawnPositionNormal 0
+#macro kSpawnPositionNearby 1

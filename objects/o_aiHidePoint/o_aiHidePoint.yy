@@ -1,8 +1,8 @@
 {
-    "id": "5b92d0c4-dc46-46eb-af2a-1cd4f8821cd3",
+    "id": "2d877474-0994-4610-bf78-b0a5965994c9",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_aiGawkPoint",
+    "name": "o_aiHidePoint",
     "eventList": [
         
     ],
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "4f50c282-216e-42e0-a027-3907c8019260",
+    "spriteId": "513dcc53-2252-4680-ace3-052dec42cdc0",
     "visible": false
 }

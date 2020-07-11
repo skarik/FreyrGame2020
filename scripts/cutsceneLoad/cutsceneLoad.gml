@@ -702,8 +702,14 @@ while (!file_text_eof(fp))
 					facing = _cutsceneParseTarget(facing);
 				
 				var position = ds_map_find_value(read_object_map, "position");
+				var position_special = kSpawnPositionNormal;
 				if (is_undefined(position))
 					position = "0 0";
+				else if (position == "nearby")
+				{
+					position = "0 0";
+					position_special = kSpawnPositionNearby;
+				}
 				var position_list = string_split(position, " ", true);
 				
 				var new_map = ds_map_create();
@@ -713,6 +719,7 @@ while (!file_text_eof(fp))
 				ds_map_add(new_map, SEQI_FACING, facing);
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_X, real(position_list[0]));
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_Y, real(position_list[1]));
+				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_SPECIAL, position_special);
 				
 				// Delete original map
                 ds_map_destroy(read_object_map);
