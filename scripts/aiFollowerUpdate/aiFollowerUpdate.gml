@@ -38,7 +38,10 @@ if (m_aiFollowing)
 		}
 		
 		// Check combat state
-		if (m_tookDamage || array_length_1d(followTarget.m_dealtDamageListAggregate) > 0) // TODO: improve this. if there's angry gobbos, don't let this be SAFE
+		var t_notifyArea = collision_point(followTarget.x, followTarget.y, ob_areaAINotify, false, true);
+		if (m_tookDamage
+			|| array_length_1d(followTarget.m_dealtDamageListAggregate) > 0
+			|| (iexists(t_notifyArea) && t_notifyArea.m_aiAngry)) // TODO: improve this. areas dont deaggro properly right now
 		{
 			t_inCombatMode = true;
 		}
