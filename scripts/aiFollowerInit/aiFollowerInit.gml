@@ -1,4 +1,3 @@
-
 #region Following States
 
 #macro kAiFollowState_Waiting 0
@@ -28,6 +27,8 @@ m_aiFollow_watchY = 0;
 
 kAiFollowBeginDistance = 100;
 kAiFollowCatchupDistance = 60;
+kAiFollowHiddenDistance = 30;
+kAiFollowHideDuringCombat = false;
 
 aipathInit();
 

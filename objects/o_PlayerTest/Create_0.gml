@@ -153,24 +153,24 @@ meleeAtk0Time = 0.5;
 meleeAtk0Hit = 1 / 8.0 * meleeAtk0Time;// 0.05;
 meleeAtk0Key = 4 / 8.0 * meleeAtk0Time;//0.10;
 meleeAtk0Script = _playerAttack0;
-meleeAtk0Damage = 1;
+meleeAtk0Damage = 0.5;
 
 meleeAtk1Time = 0.5;
 meleeAtk1Hit = 1 / 8.0 * meleeAtk1Time;//0.05;
 meleeAtk1Key = 4 / 8.0 * meleeAtk1Time;//0.10;
 meleeAtk1Script = _playerAttack1;
-meleeAtk1Damage = 1;
+meleeAtk1Damage = 0.5;
 
 meleeAtk2Time = 0.9;
 meleeAtk2Hit = 0.1;
 meleeAtk2Key = 0.3;
 meleeAtk2Script = _playerAttack2;
-meleeAtk2Damage = 1;
+meleeAtk2Damage = 0.5;
 
 meleeAtk3Time = 0.7;
 meleeAtk3Hit = 0.2;
 meleeAtk3Key = 0.21;
 meleeAtk3Script = _playerAttack3;
-meleeAtk3Damage = 2;
+meleeAtk3Damage = 1;
 
 #endregion

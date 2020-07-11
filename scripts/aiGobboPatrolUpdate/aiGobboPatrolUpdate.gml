@@ -8,91 +8,116 @@ if (m_isKOed || m_isDead)
 }
 else
 {
-	if (!m_aiCombat_angry && !m_aiCombat_alerted)
+	// Do pushing
+	var l_pushCheck = collision_circle(x, y, 9, o_aiPushOnSpawn, false, true);
+	if (iexists(l_pushCheck))
 	{
-		if (m_aiGobbo_state == kAiGobboPatrolState_StandCenter)
+		// Move in the direction of the pushes
+		_controlStructUpdate(xAxis, lengthdir_x(1.0, l_pushCheck.image_angle));
+		_controlStructUpdate(yAxis, lengthdir_y(1.0, l_pushCheck.image_angle));
+	}
+	// Actual behavior
+	else if (!m_aiCombat_angry && !m_aiCombat_alerted)
+	{
+		// Patrolling behavior
+		if (patrol_length > 0)
 		{
-			_controlStructUpdate(xAxis, 0.0);
-			_controlStructUpdate(yAxis, 0.0);
-	
-			m_aiGobbo_timer += Time.deltaTime;
-			if (m_aiGobbo_timer > 3.0)
-			{
-				m_aiGobbo_timer = 0.0;
-				m_aiGobbo_state = kAiGobboPatrolState_WalkOut;
-				m_aiGobbo_patrolWaypoint = 1;
-			}
-		}
-		// The directions travelled should always be consistent.
-		else if (m_aiGobbo_state == kAiGobboPatrolState_StandOut)
-		{
-			_controlStructUpdate(xAxis, 0.0);
-			_controlStructUpdate(yAxis, 0.0);
-	
-			m_aiGobbo_timer += Time.deltaTime;
-			if (m_aiGobbo_timer > 3.0)
-			{
-				m_aiGobbo_timer = 0.0;
-				m_aiGobbo_state = kAiGobboPatrolState_WalkIn;
-				m_aiGobbo_patrolWaypoint = patrol_length - 2;
-			}
-		}
-		// Move out to the target
-		if (m_aiGobbo_state == kAiGobboPatrolState_WalkOut || m_aiGobbo_state == kAiGobboPatrolState_WalkIn)
-		{
-			// First face the direction
-			if (m_aiGobbo_timer == 0.0)
-			{
-				/*var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
-				var patrol_direction = point_direction(x, y, patrol_point[0], patrol_point[1]);
-				_controlStructUpdate(xAxis, lengthdir_x(1.0, patrol_direction));
-				_controlStructUpdate(yAxis, lengthdir_y(1.0, patrol_direction));*/
-			}
-			// Stop motion if not been 1 second
-			else if (m_aiGobbo_timer < 1.0)
+			if (m_aiGobbo_state == kAiGobboPatrolState_StandCenter)
 			{
 				_controlStructUpdate(xAxis, 0.0);
 				_controlStructUpdate(yAxis, 0.0);
-			
-				var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
-				aimotionFaceAt(patrol_point[0], patrol_point[1], 180);
-			}
 	
-			m_aiGobbo_timer += Time.deltaTime;
-	
-			// If after a second, begin that waypoint follow
-			if (m_aiGobbo_timer > 1.0)
-			{
-				var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
-		
-				// Move to the patrol target
-				aipathMoveTo(patrol_point[0], patrol_point[1]);
-		
-				// If at the patrol point, move to the next point
-				if (sqr(x - patrol_point[0]) + sqr(y - patrol_point[1]) < sqr(16))
+				m_aiGobbo_timer += Time.deltaTime;
+				if (m_aiGobbo_timer > 3.0)
 				{
-					if (m_aiGobbo_state == kAiGobboPatrolState_WalkOut)
-					{
-						m_aiGobbo_patrolWaypoint += 1;
-						if (m_aiGobbo_patrolWaypoint >= patrol_length)
-						{
-							m_aiGobbo_timer = 0.0;
-							m_aiGobbo_state = kAiGobboPatrolState_StandOut;
-						}
-					}
-					else
-					{
-						m_aiGobbo_patrolWaypoint -= 1;
-						if (m_aiGobbo_patrolWaypoint < 0)
-						{
-							m_aiGobbo_timer = 0.0;
-							m_aiGobbo_state = kAiGobboPatrolState_StandCenter;
-						}
-					}
+					m_aiGobbo_timer = 0.0;
+					m_aiGobbo_state = kAiGobboPatrolState_WalkOut;
+					m_aiGobbo_patrolWaypoint = 1;
 				}
-		
-				// Otherwise, we just kinda. Do our thing.
 			}
+			// The directions travelled should always be consistent.
+			else if (m_aiGobbo_state == kAiGobboPatrolState_StandOut)
+			{
+				_controlStructUpdate(xAxis, 0.0);
+				_controlStructUpdate(yAxis, 0.0);
+	
+				m_aiGobbo_timer += Time.deltaTime;
+				if (m_aiGobbo_timer > 3.0)
+				{
+					m_aiGobbo_timer = 0.0;
+					m_aiGobbo_state = kAiGobboPatrolState_WalkIn;
+					m_aiGobbo_patrolWaypoint = patrol_length - 2;
+				}
+			}
+			// Move out to the target
+			if (m_aiGobbo_state == kAiGobboPatrolState_WalkOut || m_aiGobbo_state == kAiGobboPatrolState_WalkIn)
+			{
+				// First face the direction
+				if (m_aiGobbo_timer == 0.0)
+				{
+					// Stand.
+				}
+				// Stop motion if not been 1 second
+				else if (m_aiGobbo_timer < 1.0)
+				{
+					_controlStructUpdate(xAxis, 0.0);
+					_controlStructUpdate(yAxis, 0.0);
+			
+					var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
+					aimotionFaceAt(patrol_point[0], patrol_point[1], 180);
+				}
+	
+				m_aiGobbo_timer += Time.deltaTime;
+	
+				// If after a second, begin that waypoint follow
+				if (m_aiGobbo_timer > 1.0)
+				{
+					var patrol_point = m_aiGobbo_patrol[m_aiGobbo_patrolWaypoint];
+		
+					// Move to the patrol target
+					aipathMoveTo(patrol_point[0], patrol_point[1]);
+		
+					// If at the patrol point, move to the next point
+					if (sqr(x - patrol_point[0]) + sqr(y - patrol_point[1]) < sqr(16))
+					{
+						if (m_aiGobbo_state == kAiGobboPatrolState_WalkOut)
+						{
+							m_aiGobbo_patrolWaypoint += 1;
+							if (m_aiGobbo_patrolWaypoint >= patrol_length)
+							{
+								m_aiGobbo_timer = 0.0;
+								m_aiGobbo_state = kAiGobboPatrolState_StandOut;
+							}
+						}
+						else
+						{
+							m_aiGobbo_patrolWaypoint -= 1;
+							if (m_aiGobbo_patrolWaypoint < 0)
+							{
+								m_aiGobbo_timer = 0.0;
+								m_aiGobbo_state = kAiGobboPatrolState_StandCenter;
+							}
+						}
+					}
+		
+					// Otherwise, we just kinda. Do our thing.
+				}
+			}
+		}
+		// Gaurding behavior
+		else if (iexists(m_aiGobbo_patrolGuardpoint))
+		{
+			var dist = point_distance(x, y, m_aiGobbo_patrolGuardpoint.x, m_aiGobbo_patrolGuardpoint.y);
+			if (dist > 10)
+			{
+				aipathMoveTo(m_aiGobbo_patrolGuardpoint.x, m_aiGobbo_patrolGuardpoint.y);
+			}
+			else
+			{
+				_controlStructUpdate(xAxis, 0.0);
+				_controlStructUpdate(yAxis, 0.0);
+			}
+			aimotionFaceAtDirection(m_aiGobbo_patrolGuardpoint.image_angle, 360);
 		}
 		// That's all for the patrol motion.
 	}
@@ -121,14 +146,13 @@ else
 	for (var i = 0; i < array_length_1d(t_possibleTargetList); ++i)
 	{
 		var t_possibleTarget = t_possibleTargetList[i];
-		if (iexists(t_possibleTarget))
-		{
-			if (aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
+		if (iexists(t_possibleTarget)
+			&& !t_possibleTarget.isHidden
+			&& aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
 							   facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
 							   true))
-			{
-				t_nextTarget = t_possibleTarget; // we have a new best target yay
-			}
+		{
+			t_nextTarget = t_possibleTarget; // we have a new best target yay
 		}
 	}
 
@@ -143,6 +167,7 @@ else
 	}
 	// Check if can see the target
 	if (iexists(m_aiCombat_target)
+		&& !m_aiCombat_target.isHidden
 		&& aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
 						  facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
 						  true))

@@ -17,6 +17,7 @@ aipathInit();
 // Set up patrol path stuff
 m_aiGobbo_patrolWaypoint = 0;
 m_aiGobbo_patrol = array_create(0);
+m_aiGobbo_patrolGuardpoint = null;
 
 // Set up squad stuff
 

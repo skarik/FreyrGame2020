@@ -13,6 +13,7 @@ if (m_aiFollowing)
 	// Check the modes
 	var t_inFarmMode = false;
 	var t_inCombatMode = false;
+	var t_inStealthMode = false;
 	
 	if (iexists(followTarget))
 	{
@@ -35,6 +36,14 @@ if (m_aiFollowing)
 		{	// Immediately end farm mode if not on farmable area.
 			m_aiFollow_farmingCooldown = 0.0;
 		}
+		
+		// Check combat state
+		
+		// Check stealth state
+		if (followTarget.isHidden)
+		{
+			t_inStealthMode = true;
+		}
 	}
 	if (m_aiFollow_farmingCooldown > 0.0)
 	{	
@@ -43,8 +52,9 @@ if (m_aiFollowing)
 		t_inFarmMode = true;
 	}
 	
+	
 	// Perform state overrides
-	if (!t_inFarmMode && !t_inCombatMode)
+	if (!t_inFarmMode && !t_inCombatMode && !t_inStealthMode)
 	{
 		// We want to enter the following state if we're in most states
 		if (m_aiFollow_state == kAiFollowState_Waiting
@@ -73,8 +83,45 @@ if (m_aiFollowing)
 			}
 		}
 	}
-	else if (t_inCombatMode)
+	else if (t_inCombatMode && kAiFollowHideDuringCombat)
 	{
+		// Back away from the player
+		
+		// Find a hide spot
+		
+		// If hide spot compromised, find a new hide spot
+	}
+	else if (t_inCombatMode && !kAiFollowHideDuringCombat)
+	{
+		// Back away from the player
+	}
+	else if (t_inStealthMode)
+	{
+		// We want to enter the following state if we're in most states
+		if (m_aiFollow_state != kAiFollowState_BackingOff)
+		{
+			// Is the follow target far away? If so, we want to move towards them.
+			if (m_aiFollow_state == kAiFollowState_Wandering
+				|| followDistance > kAiFollowHiddenDistance)
+			{
+				m_aiFollow_state = kAiFollowState_Following;
+				m_aiFollow_timer = 0.0;
+			}
+		}
+		
+		// We want to enter backing off in all states
+		if (m_aiFollow_state == kAiFollowState_Waiting
+			|| m_aiFollow_state == kAiFollowState_Wandering
+			|| m_aiFollow_state == kAiFollowState_Following
+			|| m_aiFollow_state == kAiFollowState_FarWatch)
+		{
+			// If we're too close to the follow distance (and the follow target is moving), we want to back off.
+			if (followDistance < 12.0 && followMoved)
+			{
+				m_aiFollow_state = kAiFollowState_BackingOff;
+				m_aiFollow_timer = 0.0;
+			}
+		}
 	}
 	else if (t_inFarmMode)
 	{
@@ -114,8 +161,8 @@ if (m_aiFollowing)
 		break;
 	case kAiFollowState_Following:
 		{
-			// We want to move to the player. TODO: pathfinding.
-			if (followDistance > kAiFollowCatchupDistance)
+			// We want to move to the player.
+			if (followDistance > (t_inStealthMode ? kAiFollowHiddenDistance : kAiFollowCatchupDistance))
 			{
 				aipathMoveTo(m_aiFollow_targetX, m_aiFollow_targetY);
 			}

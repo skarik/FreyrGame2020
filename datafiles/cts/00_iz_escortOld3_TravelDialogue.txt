@@ -21,6 +21,12 @@
 		spawn_ifunique old
 		position nearby
 	}
+	ai // force it again
+	{
+		target old
+		style follow
+		command start
+	}
 	goto
 	{
 		target OnEnd

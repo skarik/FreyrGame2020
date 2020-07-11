@@ -1311,6 +1311,14 @@
             }
         },
         {
+            "Key": "15b1625b-3185-47a6-9696-3c5c0cbca342",
+            "Value": {
+                "id": "19c307f4-9628-4c37-87c3-7f23817bebc0",
+                "resourcePath": "datafiles_yy\\cts\\00_iz_escortOld3_TravelDialogue.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "15bbf6a8-1c75-4aa1-b601-4b7a51e6347c",
             "Value": {
                 "id": "9a7a334a-bfb6-45d7-994f-3f47a6be83f9",
@@ -7404,6 +7412,14 @@
                 "id": "acc7f813-dcf2-4600-830b-21a23751fa7c",
                 "resourcePath": "rooms\\rm_test_aiplayground\\rm_test_aiplayground.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "6fe61496-07a3-4686-a164-403c1a0a8507",
+            "Value": {
+                "id": "3bc9bbc3-3868-443a-9059-bd68dde10efe",
+                "resourcePath": "scripts\\aimotionFaceAtDirection\\aimotionFaceAtDirection.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -17637,6 +17653,7 @@
         "16731471-3d06-4b2a-a680-16008e4fcfe3",
         "98349e75-d623-4d6e-adce-4092d0ebaa18",
         "a5bb53f5-1255-41b9-8d5f-95f693659a46",
+        "6fe61496-07a3-4686-a164-403c1a0a8507",
         "86b29aad-e41d-4b3b-9924-e588c88a19dd",
         "ee3951e3-ca9f-4469-893d-f56829fde10d",
         "2f2e3955-3a42-4b7d-a6da-b9c583058781",

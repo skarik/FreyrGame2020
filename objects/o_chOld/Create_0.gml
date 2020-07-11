@@ -24,6 +24,7 @@ aiLeaderInit();
 // override default following: we want to follow
 m_aiFollowing = false;
 m_isFollower = false;
+kAiFollowHideDuringCombat = true; // Definitely hide during combat
 
 #endregion
 

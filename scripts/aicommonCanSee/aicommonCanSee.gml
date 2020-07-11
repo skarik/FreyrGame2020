@@ -29,7 +29,8 @@ if (!use_dist
 		|| abs(angle_difference(point_direction(x, y, tx, ty), tfacing)) < half_angle)
 	{
 		// do occlusion visibility check
-		if (!use_collision || !collision3_line(x, y, tx, ty, tz, true))
+		if (!use_collision
+			|| !collision3_line(x, y, tx, ty, min(z, tz), true))
 		{
 			return true; // can see
 		}
