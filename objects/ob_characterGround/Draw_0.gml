@@ -13,11 +13,11 @@ if (!inWater || z_height > 1)
 	gpu_set_alphatestenable(false);
 	gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_dest_color, bm_zero);
-	draw_set_color(c_ltgray);
+	draw_set_color(merge_color(c_white, c_ltgray, saturate(image_alpha)));
 	draw_ellipse(floor(dx - 1 - shadow_w), floor(dy - 1 - shadow_h), ceil(dx + shadow_w), ceil(dy + shadow_h), false);
 
 	gpu_set_blendmode(bm_normal);
-	gpu_set_alphatestenable(true);
+	gpu_set_alphatestenable((image_alpha > 0.9) ? true : false);
 	draw_sprite_ext(sprite_index, image_index,
 					dx, round(dy - z_height + moAnimationYOffset),
 					image_xscale, image_yscale,

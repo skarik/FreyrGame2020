@@ -1,7 +1,22 @@
 m_aiGobbo_patrolGuardpoint = collision_circle(x, y, 8, o_aiGaurdStand, false, true);
+var t_spawnPush = collision_circle(x, y, 8, o_aiPushOnSpawn, false, true);
 
 var init_patrol_path = !iexists(m_aiGobbo_patrolGuardpoint);
 var init_gaurd_point = iexists(m_aiGobbo_patrolGuardpoint);
+var init_spawnpush = iexists(t_spawnPush);
+
+// Spawnpush is a bit separate, since it can affect guard point & patrol path
+if (init_spawnpush)
+{
+	facingDirection = t_spawnPush.image_angle;
+	aimingDirection = t_spawnPush.image_angle;
+	
+	m_aiGobbo_state = kAiGobboPatrolState_OverrideSpawnPush;
+	m_aiGobbo_timer = 0.0;
+	
+	m_aiGobbo_centerX += lengthdir_x(32, t_spawnPush.image_angle);
+	m_aiGobbo_centerY += lengthdir_y(32, t_spawnPush.image_angle);
+}
 
 if (init_gaurd_point)
 {
@@ -14,6 +29,7 @@ else if (init_patrol_path)
 
 	// Start path with center point
 	m_aiGobbo_patrol[0] = [m_aiGobbo_centerX, m_aiGobbo_centerY];
+	var t_firstZ = collision3_get_highest_position(m_aiGobbo_centerX, m_aiGobbo_centerY, z);
 
 	// Essentially path from the start
 	var path_walker_pos = [m_aiGobbo_centerX, m_aiGobbo_centerY];
@@ -42,7 +58,7 @@ else if (init_patrol_path)
 	
 		for (var walk_amount = 0; walk_amount < dist; walk_amount += step_amount)
 		{
-			if (!collision3_meeting(path_walker_pos[0] + step_vector[0], path_walker_pos[1] + step_vector[1], z, false))
+			if (!collision3_meeting(path_walker_pos[0] + step_vector[0], path_walker_pos[1] + step_vector[1], t_firstZ, false))
 			{
 				path_walker_pos[0] += step_vector[0];
 				path_walker_pos[1] += step_vector[1];

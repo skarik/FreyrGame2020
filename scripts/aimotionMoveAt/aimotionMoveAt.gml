@@ -1,7 +1,7 @@
-// @function aimotionMoveTo(x, y, speed_percent)
-// @param xdir	xpos to look at
-// @param ydir	ypos to look at
-// @param speed_percent	at which we change angle
+/// @function aimotionMoveTo(x, y, speed_percent)
+/// @param xdir	xpos to look at
+/// @param ydir	ypos to look at
+/// @param speed_percent	at which we change angle
 
 var tx = argument0;
 var ty = argument1;

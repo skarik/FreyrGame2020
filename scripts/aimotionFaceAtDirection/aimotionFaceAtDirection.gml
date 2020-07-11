@@ -1,7 +1,7 @@
-// @function aimotionFaceAt(direction, speed)
-// @desc Turns the NPC to face at the given direction
-// @param direction to face to
-// @param speed	at which we change angle
+/// @function aimotionFaceAt(direction, speed)
+/// @desc Turns the NPC to face at the given direction
+/// @param direction to face to
+/// @param speed	at which we change angle
 
 // change
 //aimingDirection

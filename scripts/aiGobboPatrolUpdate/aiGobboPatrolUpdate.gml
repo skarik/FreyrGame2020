@@ -8,13 +8,19 @@ if (m_isKOed || m_isDead)
 }
 else
 {
-	// Do pushing
-	var l_pushCheck = collision_circle(x, y, 9, o_aiPushOnSpawn, false, true);
-	if (iexists(l_pushCheck))
+	// Do pushing override
+	if (m_aiGobbo_state == kAiGobboPatrolState_OverrideSpawnPush)
 	{
 		// Move in the direction of the pushes
-		_controlStructUpdate(xAxis, lengthdir_x(1.0, l_pushCheck.image_angle));
-		_controlStructUpdate(yAxis, lengthdir_y(1.0, l_pushCheck.image_angle));
+		_controlStructUpdate(xAxis, lengthdir_x(1.0, facingDirection));
+		_controlStructUpdate(yAxis, lengthdir_y(1.0, facingDirection));
+		
+		m_aiGobbo_timer += Time.deltaTime;
+		if (m_aiGobbo_timer > 1.0)
+		{
+			m_aiGobbo_state = kAiGobboPatrolState_StandCenter;
+			m_aiGobbo_timer = 0.0; // Reset state and go to normal behavior
+		}
 	}
 	// Actual behavior
 	else if (!m_aiCombat_angry && !m_aiCombat_alerted)
@@ -148,6 +154,7 @@ else
 		var t_possibleTarget = t_possibleTargetList[i];
 		if (iexists(t_possibleTarget)
 			&& !t_possibleTarget.isHidden
+			&& !aiPointInSafeArea(t_possibleTarget.x, t_possibleTarget.y)
 			&& aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
 							   facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
 							   true))
@@ -168,6 +175,7 @@ else
 	// Check if can see the target
 	if (iexists(m_aiCombat_target)
 		&& !m_aiCombat_target.isHidden
+		&& !aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y)
 		&& aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
 						  facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
 						  true))
@@ -180,11 +188,12 @@ else
 	else
 	{
 		m_aiCombat_targetTrackingLossTime += Time.deltaTime;
-		if (m_aiCombat_targetTrackingLossTime > 1.0)
+		if (m_aiCombat_targetTrackingLossTime > 1.0) // Lost tracking for 1 second
 		{
 			m_aiCombat_targetVisible = false;
+			
 			// Lost target, look for new target.
-			if (m_aiCombat_target != t_nextTarget)
+			if (iexists(t_nextTarget) && m_aiCombat_target != t_nextTarget)
 			{	// Switch anger target
 				m_aiCombat_target = t_nextTarget;
 				m_aiCombat_aggroTimer = 0.0; // Refresh aggro.
@@ -224,15 +233,27 @@ else
 	m_aiCombat_deaggroTimer -= Time.deltaTime;
 	if (m_aiCombat_angry)
 	{
-		if (!iexists(m_aiCombat_target)
+		var forced_deaggro = false;
+		if (iexists(m_aiCombat_target))
+		{
+			forced_deaggro = aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y);
+		}
+		else
+		{
+			forced_deaggro = true;
+		}
+		
+		if (forced_deaggro
+			|| !iexists(m_aiCombat_target)
 			|| (m_aiCombat_target.isHidden && point_distance(x, y, m_aiCombat_target.x, m_aiCombat_target.y) > 48)
 			|| (point_distance(x, y, m_aiCombat_target.x, m_aiCombat_target.y) > 212)
-			|| !m_aiCombat_targetVisible
+			|| (!m_aiCombat_targetVisible && m_aiCombat_targetTrackingLossTime > 1.0)
 			)
 		{
 			m_aiCombat_deaggroTimer += Time.deltaTime * 2.0;
 		
-			if (m_aiCombat_deaggroTimer > 1.0)
+			if (m_aiCombat_deaggroTimer > 2.0 // Deaggro after 2 seconds of lost target
+				|| forced_deaggro)
 			{
 				// Create the ? emote
 				var emote_fx = inew(o_fxEmote);

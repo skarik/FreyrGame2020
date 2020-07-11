@@ -1,26 +1,25 @@
-
-// Set up the initial point
-
+// Save initial starting point
 m_aiGobbo_centerX = xstart;
 m_aiGobbo_centerY = ystart;
 
+// Define (not alert & not angry behavior)
 #macro kAiGobboPatrolState_StandCenter 0
 #macro kAiGobboPatrolState_WalkOut 1
 #macro kAiGobboPatrolState_StandOut 2
 #macro kAiGobboPatrolState_WalkIn 3
+#macro kAiGobboPatrolState_OverrideSpawnPush 10
 
 m_aiGobbo_state = kAiGobboPatrolState_StandCenter;
 m_aiGobbo_timer = 0;
 
 aipathInit();
 
-// Set up patrol path stuff
+// Patrolling (not alert & not angry behavior)
 m_aiGobbo_patrolWaypoint = 0;
 m_aiGobbo_patrol = array_create(0);
 m_aiGobbo_patrolGuardpoint = null;
 
-// Set up squad stuff
-
+// Squad info
 m_aiGobbo_squadSize = 0;
 m_aiGobbo_squadLeader = null;
 m_aiGobbo_squad = array_create(0);

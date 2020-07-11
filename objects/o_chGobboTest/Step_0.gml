@@ -4,7 +4,7 @@
 aiScriptableUpdate();
 
 // fade in
-image_alpha = saturate(image_alpha + Time.deltaTime * 3.0);
+image_alpha = saturate(image_alpha + Time.deltaTime * 1.7);
 
 // Inherit the parent event
 event_inherited();

@@ -9543,6 +9543,14 @@
             }
         },
         {
+            "Key": "91373153-5fc9-4074-a41b-ba431091c5b1",
+            "Value": {
+                "id": "fb3bd0e2-3418-477d-a935-22361cd4b2ba",
+                "resourcePath": "scripts\\aiPointInSafeArea\\aiPointInSafeArea.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "919b6725-cf54-4283-b4bf-f1b04e63c9e6",
             "Value": {
                 "id": "570d11de-e5b3-46f2-a174-cc7fdfd48990",
@@ -17687,6 +17695,7 @@
         "de245fd7-f4a9-490a-8933-16aea1031d9b",
         "4eaae182-0328-4746-bdd8-863491d10674",
         "7200ecf1-32f9-478a-a80e-1dea653842d5",
+        "91373153-5fc9-4074-a41b-ba431091c5b1",
         "6f927dcc-8fe5-492f-a775-744aa8fb66db",
         "c069f93b-a696-4088-a164-1e7b0bff9691",
         "8e919907-e4f7-4027-95ac-113807804f37",
