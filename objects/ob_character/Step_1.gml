@@ -59,6 +59,15 @@ if (stats.m_health < stats.m_healthPrev)
 			do_death_callback = true;
 		}
 	}
+	
+	// Do took damage update
+	m_tookDamage = true;
+	m_tookDamageSource = m_lastDamageSource;
+}
+else
+{
+	m_tookDamage = false;
+	m_tookDamageSource = null;
 }
 stats.m_healthPrev = stats.m_health;
 stats.m_kohitsPrev = stats.m_kohits;
@@ -76,6 +85,21 @@ if (stats.m_stun > stats.m_stunPrev)
 	}
 }
 stats.m_stunPrev = stats.m_stun;
+
+// Update dealt damage
+if (m_dealtDamage)
+{
+	// Save the current aggregate
+	m_dealtDamageListAggregate = m_dealtDamageList;
+	m_dealtDamageList = [];
+	m_dealtDamage = false;
+}
+else
+{
+	// Clear listing
+	m_dealtDamageListAggregate = []; 
+	m_dealtDamageList = [];
+}
 
 // Perform callbacks
 if (do_hurt_callback)

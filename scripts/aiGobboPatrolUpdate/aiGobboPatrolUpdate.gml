@@ -193,7 +193,9 @@ else
 			m_aiCombat_targetVisible = false;
 			
 			// Lost target, look for new target.
-			if (iexists(t_nextTarget) && m_aiCombat_target != t_nextTarget)
+			if (m_aiCombat_target != t_nextTarget
+				&& (iexists(t_nextTarget) || m_aiCombat_targetTrackingLossTime > 3.0)
+				)
 			{	// Switch anger target
 				m_aiCombat_target = t_nextTarget;
 				m_aiCombat_aggroTimer = 0.0; // Refresh aggro.
@@ -264,5 +266,5 @@ else
 			}
 		}
 	}
-	m_aiCombat_deaggroTimer = clamp(m_aiCombat_deaggroTimer, 0.0, 1.0);
+	m_aiCombat_deaggroTimer = clamp(m_aiCombat_deaggroTimer, 0.0, 2.0);
 }

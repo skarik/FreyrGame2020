@@ -26,7 +26,6 @@ if (m_aiFollowing)
 		{
 			t_inFarmMode = true;
 		}
-		
 		// Add cooldown for farm mode
 		if (t_inFarmMode)
 		{
@@ -38,6 +37,15 @@ if (m_aiFollowing)
 		}
 		
 		// Check combat state
+		if (m_tookDamage || array_length_1d(followTarget.m_dealtDamageListAggregate) > 0)
+		{
+			t_inCombatMode = true;
+		}
+		// Add cooldown for combat mode
+		if (t_inCombatMode)
+		{
+			m_aiFollow_combatCooldown = 2.0;
+		}
 		
 		// Check stealth state
 		if (followTarget.isHidden)
@@ -51,6 +59,12 @@ if (m_aiFollowing)
 		m_aiFollow_farmingCooldown -= Time.deltaTime;
 		t_inFarmMode = true;
 	}
+	if (m_aiFollow_combatCooldown > 0.0)
+	{
+		// Cool down combat mode
+		m_aiFollow_combatCooldown -= Time.deltaTime;
+		t_inCombatMode = true;
+	}
 	
 	
 	// Perform state overrides
@@ -59,7 +73,8 @@ if (m_aiFollowing)
 		// We want to enter the following state if we're in most states
 		if (m_aiFollow_state == kAiFollowState_Waiting
 			|| m_aiFollow_state == kAiFollowState_Wandering
-			|| m_aiFollow_state == kAiFollowState_FarWatch)
+			|| m_aiFollow_state == kAiFollowState_FarWatch
+			|| m_aiFollow_state == kAiFollowState_AvoidAndSeekHidePoints)
 		{
 			// Is the follow target far away? If so, we want to move towards them.
 			if (followDistance > kAiFollowBeginDistance)
@@ -73,7 +88,8 @@ if (m_aiFollowing)
 		if (m_aiFollow_state == kAiFollowState_Waiting
 			|| m_aiFollow_state == kAiFollowState_Wandering
 			|| m_aiFollow_state == kAiFollowState_Following
-			|| m_aiFollow_state == kAiFollowState_FarWatch)
+			|| m_aiFollow_state == kAiFollowState_FarWatch
+			|| m_aiFollow_state == kAiFollowState_AvoidAndSeekHidePoints)
 		{
 			// If we're too close to the follow distance (and the follow target is moving), we want to back off.
 			if (followDistance < 12.0 && followMoved)
@@ -85,11 +101,28 @@ if (m_aiFollowing)
 	}
 	else if (t_inCombatMode && kAiFollowHideDuringCombat)
 	{
-		// Back away from the player
-		
-		// Find a hide spot
-		
-		// If hide spot compromised, find a new hide spot
+		// Check for too close first
+		m_aiFollow_cachedAvoidCharacter = instance_nearest_notme(x, y, ob_characterGround);
+		if (m_aiFollow_cachedAvoidCharacter.isAttacking || damageCanHit(m_aiFollow_cachedAvoidCharacter, id))
+		{
+			if (m_aiFollow_state == kAiFollowState_Waiting
+				|| m_aiFollow_state == kAiFollowState_Wandering
+				|| m_aiFollow_state == kAiFollowState_Following
+				|| m_aiFollow_state == kAiFollowState_FarWatch)
+			{
+				m_aiFollow_state = kAiFollowState_AvoidAllCharacters;
+				m_aiFollow_timer = 0.0;
+			}
+		}
+		// Override all other behavior with hiding
+		if (m_aiFollow_state == kAiFollowState_Waiting
+			|| m_aiFollow_state == kAiFollowState_Wandering
+			|| m_aiFollow_state == kAiFollowState_Following
+			|| m_aiFollow_state == kAiFollowState_FarWatch)
+		{
+			m_aiFollow_state = kAiFollowState_AvoidAndSeekHidePoints;
+			m_aiFollow_timer = 0.0;
+		}
 	}
 	else if (t_inCombatMode && !kAiFollowHideDuringCombat)
 	{
@@ -300,6 +333,114 @@ if (m_aiFollowing)
 			{
 				m_aiFollow_state = kAiFollowState_Following;
 				m_aiFollow_timer = 0.0;
+			}
+		}
+		break;
+	case kAiFollowState_AvoidAllCharacters:
+		{
+			// Back away from the nearest char
+			if (!iexists(m_aiFollow_cachedAvoidCharacter))
+			{
+				m_aiFollow_cachedAvoidCharacter = instance_nearest_notme(x, y, ob_characterGround);
+			}
+		
+			var t_doneAvoiding = false;
+			if (iexists(m_aiFollow_cachedAvoidCharacter))
+			{
+				var t_vectorFrom = [x - m_aiFollow_cachedAvoidCharacter.x, y - m_aiFollow_cachedAvoidCharacter.y];
+				var t_vectorFromLen = sqrt(sqr(t_vectorFrom[0]) + sqr(t_vectorFrom[1]));
+			
+				t_vectorFrom[0] /= t_vectorFromLen;
+				t_vectorFrom[1] /= t_vectorFromLen;
+			
+				if (t_vectorFromLen < 80)
+				{
+					_controlStructUpdate(xAxis, t_vectorFrom[0]);
+					_controlStructUpdate(yAxis, t_vectorFrom[1]);
+				}
+				else
+				{	// Far enough away, we can stop.
+					_controlStructUpdate(xAxis, 0.0);
+					_controlStructUpdate(yAxis, 0.0);
+					
+					t_doneAvoiding = true;
+				}
+			}
+			else
+			{
+				t_doneAvoiding = true;
+			}
+			
+			if (t_doneAvoiding)
+			{
+				m_aiFollow_timer += Time.deltaTime * 2.0;
+				if (m_aiFollow_timer > 1.0)
+				{
+					m_aiFollow_state = kAiFollowState_Following;
+					m_aiFollow_timer = 0.0;
+				}
+			}
+		}
+		break;
+	case kAiFollowState_AvoidAndSeekHidePoints:
+		{
+			var kMaximumHideDistance = 300;
+			
+			if (m_aiFollow_hidePoint == null || !iexists(m_aiFollow_hidePoint))
+			{
+				// Find a hide spot nearby
+				var t_nearestHidePoint = null;
+				var t_nearestHidePointSqrDist = sqr(kMaximumHideDistance);
+			
+				var t_hidepointCount = instance_number(o_aiHidePoint);
+				for (var i = 0; i < t_hidepointCount; ++i)
+				{
+					var t_hidepoint = instance_find(o_aiHidePoint, i);
+					var t_dist = sqr(x - t_hidepoint.x) + sqr(y - t_hidepoint.y);
+				
+					if (t_dist < t_nearestHidePointSqrDist)
+					{
+						if (!array_contains(m_aiFollow_hidePointsBurnt, t_hidepoint))
+						{
+							t_nearestHidePoint = t_hidepoint;
+							t_nearestHidePointSqrDist = t_dist;
+						}
+					}
+				}
+			
+				// Go to the hidespot
+				if (t_nearestHidePoint != null)
+				{
+					m_aiFollow_hidePoint = t_nearestHidePoint;
+				}
+				
+				// If no points found, go to avoid state and reset burn list
+				if (t_nearestHidePoint == null)
+				{
+					m_aiFollow_hidePointsBurnt = [];
+					m_aiFollow_state = kAiFollowState_AvoidAllCharacters;
+					m_aiFollow_timer = 0.0;
+				}
+			}
+			else
+			{
+				// Go to the spot.
+				aipathMoveTo(m_aiFollow_hidePoint.x, m_aiFollow_hidePoint.y);
+				// If at the spot, face the player
+				if (point_distance(x, y, m_aiFollow_hidePoint.x, m_aiFollow_hidePoint.y) < 10 && abs(xspeed) < 0.1 && abs(yspeed) < 0.1)
+				{
+					aimotionFaceAtDirection(m_aiFollow_hidePoint.image_angle, 360);
+				}
+				
+				// If hide spot compromised, find a new hide spot
+				if (m_tookDamage ||
+					(iexists(m_aiFollow_cachedAvoidCharacter)
+					&& damageCanHit(m_aiFollow_cachedAvoidCharacter, id)
+					&& point_distance(x, y, m_aiFollow_cachedAvoidCharacter.x, m_aiFollow_cachedAvoidCharacter.y) < 20))
+				{
+					m_aiFollow_hidePointsBurnt[array_length_1d(m_aiFollow_hidePointsBurnt)] = m_aiFollow_hidePoint;
+					m_aiFollow_hidePoint = null;
+				}
 			}
 		}
 		break;

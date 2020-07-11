@@ -11,6 +11,11 @@ m_standingHeight = 32;
 
 m_lastDamage = 0;
 m_lastDamageSource = null;
+m_tookDamage = false;
+m_tookDamageSource = null;
+m_dealtDamage = false;
+m_dealtDamageList = [];
+m_dealtDamageListAggregate = [];
 
 m_isPlayer = false;
 m_isFollower = false;
