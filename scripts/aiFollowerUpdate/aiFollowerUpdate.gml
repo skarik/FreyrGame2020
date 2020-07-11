@@ -14,6 +14,7 @@ if (m_aiFollowing)
 	var t_inFarmMode = false;
 	var t_inCombatMode = false;
 	var t_inStealthMode = false;
+	var t_inPrivacyMode = false;
 	
 	if (iexists(followTarget))
 	{
@@ -37,7 +38,7 @@ if (m_aiFollowing)
 		}
 		
 		// Check combat state
-		if (m_tookDamage || array_length_1d(followTarget.m_dealtDamageListAggregate) > 0)
+		if (m_tookDamage || array_length_1d(followTarget.m_dealtDamageListAggregate) > 0) // TODO: improve this. if there's angry gobbos, don't let this be SAFE
 		{
 			t_inCombatMode = true;
 		}
@@ -46,11 +47,21 @@ if (m_aiFollowing)
 		{
 			m_aiFollow_combatCooldown = 2.0;
 		}
+		else if (aiPointInSafeArea(m_aiFollow_targetX, m_aiFollow_targetY))
+		{
+			m_aiFollow_combatCooldown = 0.0;
+		}
 		
 		// Check stealth state
 		if (followTarget.isHidden)
 		{
 			t_inStealthMode = true;
+		}
+		
+		// Check privacy mode
+		if (aiPointInPrivacyArea(m_aiFollow_targetX, m_aiFollow_targetY))
+		{
+			t_inPrivacyMode = true;
 		}
 	}
 	if (m_aiFollow_farmingCooldown > 0.0)
@@ -68,7 +79,7 @@ if (m_aiFollowing)
 	
 	
 	// Perform state overrides
-	if (!t_inFarmMode && !t_inCombatMode && !t_inStealthMode)
+	if (!t_inFarmMode && !t_inCombatMode && !t_inStealthMode && !t_inPrivacyMode)
 	{
 		// We want to enter the following state if we're in most states
 		if (m_aiFollow_state == kAiFollowState_Waiting
@@ -83,7 +94,17 @@ if (m_aiFollowing)
 				m_aiFollow_timer = 0.0;
 			}
 		}
-	
+		
+		// We want to enter the following state with more restrictions
+		if (m_aiFollow_state == kAiFollowState_Gawking)
+		{
+			if (point_distance(m_aiFollow_gawk_starttargetX, m_aiFollow_gawk_starttargetY, followTarget.x, followTarget.y) > kAiFollowBeginDistanceWhenGawking)
+			{
+				m_aiFollow_state = kAiFollowState_Following;
+				m_aiFollow_timer = 0.0;
+			}
+		}
+		
 		// We want to enter backing off in all states
 		if (m_aiFollow_state == kAiFollowState_Waiting
 			|| m_aiFollow_state == kAiFollowState_Wandering
@@ -92,7 +113,7 @@ if (m_aiFollowing)
 			|| m_aiFollow_state == kAiFollowState_AvoidAndSeekHidePoints)
 		{
 			// If we're too close to the follow distance (and the follow target is moving), we want to back off.
-			if (followDistance < 12.0 && followMoved)
+			if (followDistance < 12.0)
 			{
 				m_aiFollow_state = kAiFollowState_BackingOff;
 				m_aiFollow_timer = 0.0;
@@ -166,6 +187,15 @@ if (m_aiFollowing)
 			m_aiFollow_timer = 0.0;
 		}
 	}
+	else if (t_inPrivacyMode)
+	{
+		// We want to force gawking
+		if (m_aiFollow_state != kAiFollowState_Gawking)
+		{
+			m_aiFollow_state = kAiFollowState_Wandering;
+			m_aiFollow_timer = 2.0;
+		}
+	}
 	
 	// Non-overriding states:
 	switch (m_aiFollow_state)
@@ -223,6 +253,42 @@ if (m_aiFollowing)
 
 				// Reset the wander timer
 				m_aiFollow_timer = 0.0;
+				
+				// Find a random position nearby, and maybe gawk at that instead
+				var t_validGawkpoints = [null];
+				var t_gawkpointCount = instance_number(o_aiGawkPoint);
+				for (var i = 0; i < t_gawkpointCount; ++i)
+				{
+					var t_gawkpoint = instance_find(o_aiGawkPoint, i);
+					if (sqr(t_gawkpoint.x - x) + sqr(t_gawkpoint.y - y) < sqr(kAiFollowGawkSearchDistance))
+					{
+						if (!array_contains(m_aiFollow_gawksBurnt, t_gawkpoint))
+						{
+							t_validGawkpoints[array_length_1d(t_validGawkpoints)] = t_gawkpoint;
+						}
+					}
+				}
+				var t_gawkchoiceIndex = floor(random(array_length_1d(t_validGawkpoints)));
+				var t_gawkchoice = t_validGawkpoints[t_gawkchoiceIndex];
+				if (t_gawkchoice != null)
+				{
+					debugOut("Entering gawk mode");
+					// Let's do some gawking instead of wandering.
+					m_aiFollow_gawk_starttargetX = m_aiFollow_targetX;
+					m_aiFollow_gawk_starttargetY = m_aiFollow_targetY;
+					m_aiFollow_gawkPoint = t_gawkchoice;
+					m_aiFollow_gawkTriggered = false;
+					m_aiFollow_gawkStayTime = random_range(8.0, 18.0);
+					m_aiFollow_state = kAiFollowState_Gawking;
+				}
+				else
+				{
+					// If no gawkpoints available, clear the burnt gawks
+					if (array_length_1d(t_validGawkpoints) == 1)
+					{
+						m_aiFollow_gawksBurnt = [];
+					}
+				}
 			}
 			
 			var wander_target_distance = point_distance(x, y, m_aiFollow_wanderX, m_aiFollow_wanderY);
@@ -244,6 +310,51 @@ if (m_aiFollowing)
 			else
 			{
 				m_aiFollow_timer += Time.deltaTime / m_aiFollow_wanderStayTime;
+				
+				// Clear out the motion axes
+				_controlStructUpdate(xAxis, 0.0);
+				_controlStructUpdate(yAxis, 0.0);
+			}
+		}
+		break;
+	case kAiFollowState_Gawking:
+		{
+			if (m_aiFollow_timer > 1.0)
+			{
+				// Go back to wandering (which could trigger gawking again lol)
+				m_aiFollow_state = kAiFollowState_Wandering;
+			}
+			
+			var gawk_target_distance = point_distance(x, y, m_aiFollow_gawkPoint.x, m_aiFollow_gawkPoint.y);
+			if (gawk_target_distance > 8)
+			{
+				aipathMoveTo(m_aiFollow_gawkPoint.x, m_aiFollow_gawkPoint.y);
+				
+				// We want to move towards the wander point
+				/*var gawk_target_direction = point_direction(x, y, m_aiFollow_gawkPoint.x, m_aiFollow_gawkPoint.y);
+				var gawk_dir_x = lengthdir_x(saturate(gawk_target_distance / 16.0), gawk_target_direction);
+				var gawk_dir_y = lengthdir_y(saturate(gawk_target_distance / 16.0), gawk_target_direction);
+				
+				// Slow down to walking speed
+				gawk_dir_x *= 0.5;
+				gawk_dir_y *= 0.5;
+				
+				// Update the motion axes to the given motion
+				_controlStructUpdate(xAxis, gawk_dir_x);
+				_controlStructUpdate(yAxis, gawk_dir_y);*/
+			}
+			else
+			{
+				m_aiFollow_timer += Time.deltaTime / m_aiFollow_gawkStayTime;
+				
+				if (!m_aiFollow_gawkTriggered)
+				{
+					m_aiFollow_gawkTriggered = true;
+					m_aiFollow_gawksBurnt[array_length_1d(m_aiFollow_gawksBurnt)] = m_aiFollow_gawkPoint;
+				}
+				
+				// Face the gawk angle
+				aimotionFaceAtDirection(m_aiFollow_gawkPoint.image_angle, 360);
 				
 				// Clear out the motion axes
 				_controlStructUpdate(xAxis, 0.0);
@@ -384,13 +495,11 @@ if (m_aiFollowing)
 		break;
 	case kAiFollowState_AvoidAndSeekHidePoints:
 		{
-			var kMaximumHideDistance = 300;
-			
 			if (m_aiFollow_hidePoint == null || !iexists(m_aiFollow_hidePoint))
 			{
 				// Find a hide spot nearby
 				var t_nearestHidePoint = null;
-				var t_nearestHidePointSqrDist = sqr(kMaximumHideDistance);
+				var t_nearestHidePointSqrDist = sqr(kAiFollowHideSearchDistance);
 			
 				var t_hidepointCount = instance_number(o_aiHidePoint);
 				for (var i = 0; i < t_hidepointCount; ++i)
