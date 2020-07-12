@@ -90,6 +90,12 @@ case SEQTYPE_LINES:
         
         var target_inst = instance_find(target, (style != kLinesStyle_Portrait) ? count : 0);
 		var l_organic = (ending == SEQEND_ORGANIC) || cts_organic;
+		
+		// style override
+		if (l_organic && style == kLinesStyle_Default)
+		{
+			style = kLinesStyle_Diagetic;
+		}
     
 		// FREYR SPECIFIC:
 		// Replace the line with the player gender-specific line if possible:
@@ -117,7 +123,7 @@ case SEQTYPE_LINES:
 	            gabber.input_priority = !l_organic;
 	            gabber.input_disable = l_organic;
 	            gabber.input_autoclose = (ending == SEQEND_AUTO);
-				gabber.input_minimal = l_organic;
+				gabber.input_minimal = false;
 		}
 		else if (style == kLinesStyle_Portrait)
 		{
@@ -125,6 +131,22 @@ case SEQTYPE_LINES:
 	            gabber.input_priority = !l_organic;
 	            gabber.input_disable = l_organic;
 	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+		}
+		else if (style == kLinesStyle_Diagetic)
+		{
+	        var gabber = ctsMakeGabber(target_inst, "", line);
+	            gabber.input_priority = false;
+	            gabber.input_disable = true;
+	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+				gabber.input_minimal = true;
+		}
+		else if (style == kLinesStyle_Tutorial)
+		{
+	        var gabber = ctsMakeGabber(target_inst, "", line);
+	            gabber.input_priority = !l_organic;
+	            gabber.input_disable = l_organic;
+	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+				gabber.input_minimal = l_organic;
 		}
             
 		// SILENT SKY SPECIFIC:

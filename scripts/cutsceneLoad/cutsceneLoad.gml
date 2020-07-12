@@ -241,6 +241,10 @@ while (!file_text_eof(fp))
 					style = kLinesStyle_Default;
 				else if (style == "portrait")
 					style = kLinesStyle_Portrait;
+				else if (style == "diegetic")
+					style = kLinesStyle_Diagetic;
+				else if (style == "tutorial")
+					style = kLinesStyle_Tutorial;
 				else
 					style = kLinesStyle_Default;
                     

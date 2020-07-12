@@ -37,6 +37,8 @@
 
 #macro kLinesStyle_Default 0
 #macro kLinesStyle_Portrait 1
+#macro kLinesStyle_Diagetic 2
+#macro kLinesStyle_Tutorial 3
 
 #macro SEQI_FACING_LEFT -1
 #macro SEQI_FACING_RIGHT 1
@@ -108,13 +110,6 @@
 #macro SEQI_PORTRAIT_EXPRESSION -9
 #macro SEQI_PORTRAIT_SPRITE -16
 #macro SEQI_PORTRAIT_FACING -7
-
-#macro kCompareOpEqual 0
-#macro kCompareOpGreater 1
-#macro kCompareOpLess 2
-#macro kCompareOpGreaterEqual 3
-#macro kCompareOpLessEqual 4
-#macro kCompareOpNotEqual 5
 
 #macro SEQI_SPAWNSTATE_SPAWNOBJECT -11
 #macro SEQI_SPAWNSTATE_DELETEOBJECT -12

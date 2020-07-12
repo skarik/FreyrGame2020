@@ -82,6 +82,10 @@ while (buffer_tell(buf) < buffer_get_size(buf))
 	{
 		questLoad(buf);
 	}
+	else if (next_header == kSavestateHeader_InstFlags)
+	{
+		iflagLoad(buf);
+	}
 	else if (next_header == kSavestateHeader_EnemyInfo)
 	{
 		enemyInfoLoad(buf);

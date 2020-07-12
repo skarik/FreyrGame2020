@@ -36,7 +36,8 @@ if (animationIndexPrev < 1.0 && animationIndex >= 1.0)
 }
 // Run the object dispensing
 var animationKeyPoint = image_number * 0.75;
-if (animationIndexPrev < animationKeyPoint && animationIndex >= animationKeyPoint)
+if (!m_empty
+	&& animationIndexPrev < animationKeyPoint && animationIndex >= animationKeyPoint)
 {
 	// Show a ding
 	for (var dangle = 0; dangle < 360; dangle += 40)

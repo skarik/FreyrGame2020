@@ -1,18 +1,18 @@
 {
-    "id": "02d4232d-c0eb-4687-8d1d-ecccf5086e3a",
+    "id": "e23108ba-d822-4ce7-b642-e96b4451e6cf",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_livelyWatcherBase",
+    "name": "o_livelyCtsTriggeredGoto",
     "eventList": [
         {
-            "id": "1b557c82-2422-475b-acb3-ba20cceb689c",
+            "id": "687cc528-34c0-4b7a-8dc2-73581a80623d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 10,
             "eventtype": 7,
-            "m_owner": "02d4232d-c0eb-4687-8d1d-ecccf5086e3a"
+            "m_owner": "e23108ba-d822-4ce7-b642-e96b4451e6cf"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,7 +33,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "5432aa83-d535-4037-a04b-d68656ad2322",
+            "id": "6d156298-12d4-4d52-a083-e8b8d0da4981",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -41,13 +41,13 @@
             "rangeEnabled": false,
             "rangeMax": 10,
             "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "[null]",
-            "varName": "m_targets",
-            "varType": 4
+            "resourceFilter": 256,
+            "value": "null",
+            "varName": "m_cutsceneTarget",
+            "varType": 5
         },
         {
-            "id": "3137f7eb-bcc3-4a86-9ae0-eef485baac87",
+            "id": "a4278094-38e5-4132-8b40-d02f893c9bee",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -56,12 +56,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "[kEvent_DefaultTrigger0]",
-            "varName": "m_targetEvents",
-            "varType": 4
+            "value": "\"Label\"",
+            "varName": "m_cutsceneLabel",
+            "varType": 2
         }
     ],
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
-    "visible": true
+    "spriteId": "ac44044e-3826-42b1-bdd0-6b03f4c54872",
+    "visible": false
 }

@@ -18,3 +18,12 @@ with (stats)
 
 xstart = x;
 ystart = y;
+
+m_empty = false;
+
+// Check if already opened
+if (iflagsGetValue(id) > 0)
+{
+	m_isKOed = true;
+	m_empty = true;
+}

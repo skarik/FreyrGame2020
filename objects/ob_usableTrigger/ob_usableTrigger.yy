@@ -73,6 +73,34 @@
     "physicsStartAwake": true,
     "properties": [
         {
+            "id": "7de6ad4b-5d10-4ffe-8c26-a4f46c9be7a5",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"Usable Trigger\"",
+            "varName": "m_usableName",
+            "varType": 2
+        },
+        {
+            "id": "fb411640-5e67-49c7-92da-8545da9cf0a6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"Use\"",
+            "varName": "m_usableAction",
+            "varType": 2
+        },
+        {
             "id": "42674b1b-cb6d-40d0-951d-45cc06d330ef",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -99,9 +127,27 @@
             "value": "[kEvent_DefaultTrigger0]",
             "varName": "m_targetEvents",
             "varType": 4
+        },
+        {
+            "id": "a2851379-65e9-4114-9d2e-4f5b7b97d57e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": [
+                "kTriggerReusable",
+                "kTriggerOncePerRoomload",
+                "kTriggerOncePerPlaythrough"
+            ],
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "kTriggerReusable",
+            "varName": "m_triggerMode",
+            "varType": 6
         }
     ],
     "solid": false,
-    "spriteId": "c952166e-bf64-4c7e-bc61-da72659c83c7",
+    "spriteId": "4ad5ac7a-7b66-428a-9fa1-c98b32eb7f05",
     "visible": true
 }

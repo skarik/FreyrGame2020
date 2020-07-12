@@ -1,0 +1,50 @@
+#begin
+
+	lines
+	{
+		target	player
+		1 ...$pWhat is this language?
+	}
+	goto_if_companion
+	{
+		with old
+		target HaveOldAlongside
+	}
+	goto
+	{
+		target OnEnd
+	}
+	
+#HaveOldAlongside
+
+	goto_if_flag
+	{
+		target FirstEscort
+		flag IntroSequence
+		compare <
+		value 200
+	}
+	goto
+	{
+		target OnEnd
+	}
+
+#FirstEscort
+
+	lines
+	{
+		target	old
+		facing player
+		1 Can't read, ey? Let me point some things out.
+		2 Yamoka Peak is north. Can't get there thanks to world fallin' apart.
+		3 Oasis is the small camp we came from.
+		4 Mithra is to the south - it's where we're goin'.
+	}
+	goto
+	{
+		target OnEnd
+	}
+
+#OnEnd
+
+#ended

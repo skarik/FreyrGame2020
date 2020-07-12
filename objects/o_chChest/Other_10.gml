@@ -15,3 +15,5 @@ for (var dangle = 0; dangle < 360; dangle += 60)
 		particle.length *= 1.0;
 		particle.life *= 0.5;
 }
+
+iflagsSetValue(id, 1); // Mark this chest as already-opened.

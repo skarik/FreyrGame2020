@@ -1,0 +1,9 @@
+#begin
+
+	lines
+	{
+		target	player
+		1 Not a whole lot to see here.
+	}
+
+#ended

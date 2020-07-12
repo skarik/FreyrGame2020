@@ -352,8 +352,15 @@ if (m_aiFollowing)
 				
 				if (!m_aiFollow_gawkTriggered)
 				{
-					m_aiFollow_gawkTriggered = true;
-					m_aiFollow_gawksBurnt[array_length_1d(m_aiFollow_gawksBurnt)] = m_aiFollow_gawkPoint;
+					if (!ctsGabbersHaveFocus())
+					{	// Only add burn points if not talking with someone.
+						with (m_aiFollow_gawkPoint)
+						{
+							event_user(kEvent_DefaultTrigger0);
+						}
+						m_aiFollow_gawkTriggered = true;
+						m_aiFollow_gawksBurnt[array_length_1d(m_aiFollow_gawksBurnt)] = m_aiFollow_gawkPoint;
+					}
 				}
 				
 				// Face the gawk angle

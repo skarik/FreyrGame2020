@@ -21,6 +21,11 @@
 		spawn_ifunique old
 		position nearby
 	}
+	companion
+	{
+		target old
+		party add
+	}
 	ai // force it again
 	{
 		target old
@@ -43,7 +48,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 Sneak up and take care of 'em!
 	}
 	goto
@@ -56,7 +61,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 Nice moves, blondie!
 		2 I can barely pick up a staff myself anymore.
 		3 You've a mighty fine style.
@@ -71,7 +76,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 I remember when people would travel the desert unhindered.
 	}
 	goto
@@ -84,7 +89,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 I don't know where all these Gobbos came from.
 		2 They didn't use to be so aggressive. 
 	}
@@ -98,7 +103,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 I used to be pretty handy at magic back in my young days.
 		2 Don't have the stamina for it now. 
 	}
@@ -112,7 +117,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 I hope the Goddess brings us a good heavy wet season.
 	}
 	goto
@@ -125,7 +130,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 Lack of sleep from the nightmares doesn't make this trek any easier. 
 	}
 	goto
@@ -138,7 +143,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 I once saw a person-shaped rock wandering around here.
 		2 Ran off before I could talk to them.
 	}
@@ -152,7 +157,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 Watch your step! Sometimes sandpits open to the bottom of the world.
 	}
 	goto
@@ -165,8 +170,21 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 You'd do well to ask the Goddess to protect you from evil spirits entering your dreams.
+	}
+	goto
+	{
+		target OnEnd
+	}
+	
+#OnIdleAtStatue
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Unsettling statue, that.
 	}
 	goto
 	{
@@ -178,7 +196,6 @@
 	{
 		target	old
 		facing	player
-		style organic
 		1 Wouldn't be askin' much of that, nothing but bad luck.
 	}
 	goto
@@ -191,7 +208,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 Please bless us and grant us a safe journey.
 	}
 	goto
@@ -204,7 +221,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 May the Goddess protect us until dawn.
 	}
 	goto
@@ -216,7 +233,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 May the Goddess ward off Motses until dawn.
 	}
 	goto
@@ -228,7 +245,7 @@
 	{
 		target	old
 		facing	player
-		style organic
+		style diegetic
 		1 May Motses go after the other monsters this night.
 	}
 	goto
