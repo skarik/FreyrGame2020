@@ -1775,6 +1775,14 @@
             }
         },
         {
+            "Key": "1be69a0a-02a8-42aa-8f5a-fa2803a5e4a3",
+            "Value": {
+                "id": "e7b618e2-66ff-4f60-83e7-344946049cd1",
+                "resourcePath": "sprites\\sui_wantedposter\\sui_wantedposter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1be85126-dfcb-45f6-9444-6e001193e083",
             "Value": {
                 "id": "1af2f828-ef69-4d38-be1c-3e1a2b95efc3",
@@ -3460,6 +3468,14 @@
                 "id": "dd885aec-6245-4f3d-b447-65a5ec745118",
                 "resourcePath": "views\\33f19330-36a7-453d-84c9-5b3430170e40.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "343936d1-8f14-4e31-ace5-547fc93c3e7c",
+            "Value": {
+                "id": "f5fa5baa-41bb-4345-bdc2-e18a543a073e",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\Oasis\\sandstonehead.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -10231,6 +10247,14 @@
             }
         },
         {
+            "Key": "9aea60bb-77ee-44fa-9740-20db3cf742e5",
+            "Value": {
+                "id": "171b3cf4-5eb6-4977-8ee9-af0544731121",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\flm\\enorskull.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "9afb86c2-aeef-4e4f-88f2-74838ab220d2",
             "Value": {
                 "id": "c60067e6-e883-402e-9c89-a5a9a5bc9f94",
@@ -11607,6 +11631,14 @@
             }
         },
         {
+            "Key": "adce98c8-3d55-436d-8461-48362f011326",
+            "Value": {
+                "id": "6e58f1a8-738b-4539-a21f-be64e60a6e88",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\Oasis\\ramtraining.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "ae0683df-be15-4962-b451-5eb43e0e6f4d",
             "Value": {
                 "id": "5dc8a1ef-8dd1-4ebe-9a98-01b6cc85d077",
@@ -12319,6 +12351,14 @@
             }
         },
         {
+            "Key": "b7816f30-7d98-4cfc-80b3-bd756fec5662",
+            "Value": {
+                "id": "8d210f89-1eb1-41b6-aaa6-66fc2c926491",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\flm\\talismanrock.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "b7887d25-f443-4e32-98a9-3617c72c99f7",
             "Value": {
                 "id": "2c4bd121-4b75-4429-995a-685c99ffc7cd",
@@ -12892,6 +12932,14 @@
                 "id": "d3bfee83-c78c-40ca-bb03-6d1add8ccc9a",
                 "resourcePath": "sprites\\s_charGobbo0Atk1\\s_charGobbo0Atk1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c1732fb0-9acc-4a3a-8b98-19347aa04e2e",
+            "Value": {
+                "id": "84178bcf-ca72-4429-96b6-27d3cd80879c",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\flm\\strangecol.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -13724,6 +13772,14 @@
                 "id": "790669df-b238-4b99-93c9-33a9e5a649c0",
                 "resourcePath": "scripts\\doodadSetElevation\\doodadSetElevation.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cc1c3580-2140-43a2-83ed-5cf021e2d700",
+            "Value": {
+                "id": "1408a46d-25e1-492d-a933-9ffd96a6de2c",
+                "resourcePath": "views\\cc1c3580-2140-43a2-83ed-5cf021e2d700.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

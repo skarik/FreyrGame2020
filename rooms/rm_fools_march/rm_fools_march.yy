@@ -489,7 +489,10 @@
         "0526d3c6-def9-4698-9838-aca9b39078c2",
         "cd99da57-4776-451c-be0b-0ec2cf837f0a",
         "c3c597c9-1d24-46ab-b029-f7e09d8266b3",
-        "5a44eea7-1de0-402f-84fb-1c49a276cc39"
+        "5a44eea7-1de0-402f-84fb-1c49a276cc39",
+        "e8bc1b9e-bae4-4cb0-8509-50843360559e",
+        "4cf2327a-5361-4615-b94c-4072232acc80",
+        "cbcf3c13-14bc-4e77-b5a4-72b231bf1baa"
     ],
     "IsDnD": false,
     "layers": [
@@ -794,7 +797,7 @@
         {
             "name": "cts",
             "id": "d2a88768-aa5b-4258-a76c-4a9fb4a21131",
-            "depth": -18,
+            "depth": -19,
             "grid_x": 16,
             "grid_y": 16,
             "hierarchyFrozen": false,
@@ -808,7 +811,7 @@
                     "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
                     "name": "instances_cts_oldman_escort0",
                     "id": "b33cbe63-102a-455b-af3c-559b89cd2ec5",
-                    "depth": -16,
+                    "depth": -18,
                     "grid_x": 16,
                     "grid_y": 16,
                     "hierarchyFrozen": false,
@@ -839,6 +842,34 @@
             "m_parentID": "00000000-0000-0000-0000-000000000000",
             "m_serialiseFrozen": false,
             "modelName": "GMRLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "descs",
+            "id": "93f91c5c-798d-42d8-9046-86ebc6bb9841",
+            "depth": -17,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_22AA4232","id": "e8bc1b9e-bae4-4cb0-8509-50843360559e","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_22AA4232","objId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","properties": [{"id": "11da3004-eb8c-4199-bb01-505df06c8d5e","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "b697f1e7-50e3-42ef-b89b-f0b1122e8b4d","mvc": "1.0","value": "\"Check\""},{"id": "1959db74-d252-4c5c-9fea-e04b20fcceb3","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "3f75fc49-ea6a-4c21-ac29-308a5a1b392a","mvc": "1.0","value": "\"Strange Column\""},{"id": "0a7d9d77-4872-4480-a317-cdbe559d607d","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "cf01d1f9-75e5-4502-8841-f8f9bfcf281c","mvc": "1.0","value": "kTriggerReusable"},{"id": "1d37e9b6-8061-418d-89d9-3f33f909a596","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "c206aeaa-f04b-4cd1-aa09-73916e2d9034","mvc": "1.0","value": "\"inspect/flm/strangecol.txt\""}],"rotation": 0,"scaleX": 1.4375,"scaleY": 3.6875,"mvc": "1.1","x": 2298,"y": 753},
+{"name": "inst_2BB06A3","id": "4cf2327a-5361-4615-b94c-4072232acc80","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2BB06A3","objId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","properties": [{"id": "d32a96ed-99d2-405f-8136-c1055a294724","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "b697f1e7-50e3-42ef-b89b-f0b1122e8b4d","mvc": "1.0","value": "\"Check\""},{"id": "ad4fed9f-ce6c-4a0c-a615-7b6873470663","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "3f75fc49-ea6a-4c21-ac29-308a5a1b392a","mvc": "1.0","value": "\"Enormous Skull\""},{"id": "5431b863-5745-4626-94cc-523e8b3d5e1b","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "cf01d1f9-75e5-4502-8841-f8f9bfcf281c","mvc": "1.0","value": "kTriggerReusable"},{"id": "cd0076ea-8b49-4743-9076-1037bf8e0a44","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "c206aeaa-f04b-4cd1-aa09-73916e2d9034","mvc": "1.0","value": "\"inspect/flm/enorskull.txt\""}],"rotation": 0,"scaleX": 2.5625,"scaleY": 2.5625,"mvc": "1.1","x": 1400,"y": 492},
+{"name": "inst_401868AC","id": "cbcf3c13-14bc-4e77-b5a4-72b231bf1baa","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_401868AC","objId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","properties": [{"id": "f4fbfd8d-e01a-4c04-aa7f-b6f44c3f00ff","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "b697f1e7-50e3-42ef-b89b-f0b1122e8b4d","mvc": "1.0","value": "\"Check\""},{"id": "5d5b2b4d-79fd-476e-bf77-06bf69ad3432","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "3f75fc49-ea6a-4c21-ac29-308a5a1b392a","mvc": "1.0","value": "\"Talisman Covered Rock\""},{"id": "1fcecce0-aed1-4a25-b6ab-bc85f5c4f1b6","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "cf01d1f9-75e5-4502-8841-f8f9bfcf281c","mvc": "1.0","value": "kTriggerReusable"},{"id": "aba33ae5-9b6d-41cb-a21f-a01550e05041","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "c206aeaa-f04b-4cd1-aa09-73916e2d9034","mvc": "1.0","value": "\"inspect/flm/talismanrock.txt\""}],"rotation": 0,"scaleX": 3.5625,"scaleY": 3.5,"mvc": "1.1","x": 1080,"y": 195}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
             "userdefined_depth": false,
             "visible": true

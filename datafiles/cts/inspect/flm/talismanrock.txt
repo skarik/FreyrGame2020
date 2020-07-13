@@ -1,0 +1,7 @@
+#begin
+lines
+	{
+		1 This rock seems to serve as a warning.
+		2 Some of the talismans look like they've been replaced recently. 
+	}
+#end

@@ -63,7 +63,9 @@
         "de03433b-8298-4d5f-aa6f-3ed31557c5b6",
         "622dc7f3-3a48-42b8-9786-cafe3c71b6dd",
         "1ebaaa68-99ae-43a2-9e90-aab92b9f8ede",
-        "36aadf65-0b41-4010-9922-119152ad4937"
+        "36aadf65-0b41-4010-9922-119152ad4937",
+        "97d4f04b-834f-4ff9-952a-d2c8d998360f",
+        "aaafdd75-a371-42c4-b3a2-12d08ac1f016"
     ],
     "IsDnD": false,
     "layers": [
@@ -71,7 +73,7 @@
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
             "name": "materialOverrideLayer",
             "id": "1c8aa45c-88ff-427d-9957-5af941e57161",
-            "depth": -213,
+            "depth": -313,
             "grid_x": 16,
             "grid_y": 16,
             "hierarchyFrozen": false,
@@ -165,6 +167,33 @@
             "visible": true,
             "x": 0,
             "y": 0
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "descs",
+            "id": "35c9f170-a1ff-407c-8618-e34fef8dbc73",
+            "depth": -213,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_258B69A3","id": "97d4f04b-834f-4ff9-952a-d2c8d998360f","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_258B69A3","objId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","properties": [{"id": "aa28a471-dd19-41aa-b05b-dce5843855b7","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "b697f1e7-50e3-42ef-b89b-f0b1122e8b4d","mvc": "1.0","value": "\"Check\""},{"id": "0215109a-528c-4353-bef9-239d80a42002","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "3f75fc49-ea6a-4c21-ac29-308a5a1b392a","mvc": "1.0","value": "\"Sandstone Head\""},{"id": "2a6f6606-37c8-4a8e-9348-282d4057e653","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "cf01d1f9-75e5-4502-8841-f8f9bfcf281c","mvc": "1.0","value": "kTriggerReusable"},{"id": "37287bc3-8bc7-4d07-8e2a-885e5a1d761f","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "c206aeaa-f04b-4cd1-aa09-73916e2d9034","mvc": "1.0","value": "\"inspect/Oasis/sandstonehead.txt\""}],"rotation": 0,"scaleX": 2.625,"scaleY": 3,"mvc": "1.1","x": 487,"y": 679},
+{"name": "inst_2BEB5F85","id": "aaafdd75-a371-42c4-b3a2-12d08ac1f016","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2BEB5F85","objId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","properties": [{"id": "30715abf-49be-4214-8fef-4389f3698a12","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "b697f1e7-50e3-42ef-b89b-f0b1122e8b4d","mvc": "1.0","value": "\"Check\""},{"id": "615762a3-d63b-4584-b49a-bd4fb1ec79eb","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "3f75fc49-ea6a-4c21-ac29-308a5a1b392a","mvc": "1.0","value": "\"Ramshackle Training Grounds\""},{"id": "163c0f5e-295b-4d6d-95d1-2a960c83451f","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "cf01d1f9-75e5-4502-8841-f8f9bfcf281c","mvc": "1.0","value": "kTriggerReusable"},{"id": "802b97d8-220a-4cb7-9bab-47aee743b8c1","modelName": "GMOverriddenProperty","objectId": "91043b8e-a133-4e1e-baf6-7eded2a7fcb6","propertyId": "c206aeaa-f04b-4cd1-aa09-73916e2d9034","mvc": "1.0","value": "\"inspect/Oasis/ramtraining.txt\""}],"rotation": 0,"scaleX": 5.4375,"scaleY": 1.6875,"mvc": "1.1","x": 657.5,"y": 575.5}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
         },
         {
             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",

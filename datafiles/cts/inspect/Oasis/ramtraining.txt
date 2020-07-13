@@ -1,0 +1,8 @@
+#begin
+
+	lines
+	{
+	1 These training grounds have been lovingly used.
+	}
+
+#ended

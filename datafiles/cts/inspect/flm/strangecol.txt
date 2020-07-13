@@ -1,0 +1,6 @@
+#begin
+lines
+	{
+		1 It's covered in runes, but it isn't the same architecture of the area. 
+	}
+#end
