@@ -2287,6 +2287,14 @@
             }
         },
         {
+            "Key": "2387a1fb-4bac-49be-ae44-e1b9e991cac0",
+            "Value": {
+                "id": "6ee30169-bdbb-402d-8117-ab05a9de4350",
+                "resourcePath": "sprites\\s_itemConsFermentedPotion\\s_itemConsFermentedPotion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "23d9fb0d-2299-4a7a-9745-9426e766134a",
             "Value": {
                 "id": "40e71974-f8e8-4ad7-85d1-f2bd8a0d5932",
@@ -8274,7 +8282,7 @@
             "Key": "7e5ba311-a893-4044-bc62-cf6b199179bb",
             "Value": {
                 "id": "3508c0b9-2752-4234-a162-3398f153869a",
-                "resourcePath": "sprites\\s_itemAshApplePie\\s_itemAshApplePie.yy",
+                "resourcePath": "sprites\\s_itemConsAshApplePie\\s_itemConsAshApplePie.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9799,6 +9807,14 @@
             }
         },
         {
+            "Key": "94f9a83c-4db7-49cb-aa6e-0f405efcc62d",
+            "Value": {
+                "id": "d363438c-f945-4d1b-a9cf-fd6aa21a3f43",
+                "resourcePath": "sprites\\s_itemConsScorpStick\\s_itemConsScorpStick.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "950850c6-7efc-4822-aa49-b9c5937e93bd",
             "Value": {
                 "id": "2f1938ad-ed57-4cc1-bb3d-1ac5e2e0e186",
@@ -10679,6 +10695,14 @@
             }
         },
         {
+            "Key": "a11a62d7-4325-44be-9d8b-828570eec533",
+            "Value": {
+                "id": "8ba6b80e-5750-4abb-9299-90b96f285c83",
+                "resourcePath": "sprites\\s_itemScorpTail\\s_itemScorpTail.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a15ddcac-5ec9-4ecb-a2fd-26120efc8357",
             "Value": {
                 "id": "80a0ef18-4362-404d-9421-3d49533d12ce",
@@ -10915,6 +10939,14 @@
             "Value": {
                 "id": "7766031c-bb80-4f82-8ad5-5a149425f946",
                 "resourcePath": "sprites\\s_propDeerBoneVertical\\s_propDeerBoneVertical.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a4e1fa98-2c56-433b-ac66-e1232d004c99",
+            "Value": {
+                "id": "6366cbbe-8886-4977-bd34-1176537c019e",
+                "resourcePath": "sprites\\s_itemConsFireCookedScorp\\s_itemConsFireCookedScorp.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11875,6 +11907,14 @@
             "Value": {
                 "id": "c9d7793e-b09e-4fa9-9a26-c078c257c601",
                 "resourcePath": "objects\\ob_projectile\\ob_projectile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b24a1150-b484-408e-bea6-5c25cfb1fb2f",
+            "Value": {
+                "id": "3b2bdd9d-e421-4ef4-acf4-ad228134d0ac",
+                "resourcePath": "objects\\o_pickupCons_ScorpStick\\o_pickupCons_ScorpStick.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -14255,6 +14295,14 @@
             }
         },
         {
+            "Key": "d583d6fd-11ed-4d65-b966-fc1f3cd7c8d7",
+            "Value": {
+                "id": "17f08a90-2622-4822-a4bd-0e17da1f64ed",
+                "resourcePath": "objects\\o_pickupCons_FermPotion\\o_pickupCons_FermPotion.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d58ce0e2-1819-4f50-a8f8-ab85fbb182ab",
             "Value": {
                 "id": "e7eaa9c0-7fae-48be-8354-b9f106a4721b",
@@ -14995,6 +15043,14 @@
             "Value": {
                 "id": "622719dd-84a8-476b-b791-427f7793fbcc",
                 "resourcePath": "sprites\\sc_32x4sr_pink\\sc_32x4sr_pink.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dfaa992e-745a-4ee0-bfec-a707510cc47f",
+            "Value": {
+                "id": "60dae366-1ee0-4eac-b973-ad260f943876",
+                "resourcePath": "sprites\\s_itemScorpChunk\\s_itemScorpChunk.yy",
                 "resourceType": "GMSprite"
             }
         },
