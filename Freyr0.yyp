@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "04ba85f0-8b0b-4de6-8eb3-1d2d945c630f",
+            "Value": {
+                "id": "29ceedd5-e2af-4ad9-b6f1-808656a57534",
+                "resourcePath": "sprites\\ssy_areaRelay\\ssy_areaRelay.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "04f41f23-317d-4603-94ee-d5186e8e57b2",
             "Value": {
                 "id": "9d94d667-d0c8-4014-aee7-f968650b8ebd",
@@ -1242,7 +1250,7 @@
             "Key": "1413c9d3-52e5-4f5f-9d85-256e4db12805",
             "Value": {
                 "id": "09e318b2-e8d4-4671-a145-ae5dfa97b689",
-                "resourcePath": "objects\\o_livelyTriggerRelay\\o_livelyTriggerRelay.yy",
+                "resourcePath": "objects\\o_livelyLogicRelay\\o_livelyLogicRelay.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1588,6 +1596,14 @@
                 "id": "fb534578-4987-488f-a603-d49863aa7216",
                 "resourcePath": "scripts\\gameDeathSoftReset\\gameDeathSoftReset.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "18636bc2-3be9-4f95-90b4-488532457ee7",
+            "Value": {
+                "id": "83b943e1-bc7f-4132-bb51-714822378219",
+                "resourcePath": "objects\\o_livelyTriggerRelay_QuestFlag\\o_livelyTriggerRelay_QuestFlag.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4155,6 +4171,14 @@
             "Value": {
                 "id": "2ebb9cd6-2f2a-4ae2-be58-5572393a1fad",
                 "resourcePath": "objects\\o_cameraFocus\\o_cameraFocus.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3d9e4094-0494-43b7-a772-d273cc6aa534",
+            "Value": {
+                "id": "4b73a767-c25d-44b7-8226-9e3a866be58d",
+                "resourcePath": "objects\\o_livelyTriggerCtsTriggeredGoto\\o_livelyTriggerCtsTriggeredGoto.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -7498,7 +7522,7 @@
             "Key": "70639fd6-bf8c-4574-aab9-510c03803e0d",
             "Value": {
                 "id": "de5db88b-65d5-49a2-a30f-02ed138d5b7e",
-                "resourcePath": "objects\\o_livelyWatcherAIZoneAngry\\o_livelyWatcherAIZoneAngry.yy",
+                "resourcePath": "objects\\o_livelyLogicWatcherAIZoneAngry\\o_livelyLogicWatcherAIZoneAngry.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -10111,6 +10135,14 @@
             }
         },
         {
+            "Key": "98e2c97a-1d2e-4c3a-8353-4c9b795c7196",
+            "Value": {
+                "id": "3cb2150a-b349-42a5-9bcd-748ac35a791d",
+                "resourcePath": "sprites\\ssy_areaRelayCts\\ssy_areaRelayCts.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "98e37e2e-c3a0-4db2-9686-5a3c1a4ebf8a",
             "Value": {
                 "id": "e1c9567a-d23a-4c7e-81ce-3894d8cb0394",
@@ -10602,7 +10634,7 @@
             "Key": "9f528421-cf3a-4c53-82a3-94c42f4ca95c",
             "Value": {
                 "id": "d34e14ac-54f0-4d42-9b58-9369275b8a67",
-                "resourcePath": "objects\\o_livelyTriggerRelay_QuestFlag\\o_livelyTriggerRelay_QuestFlag.yy",
+                "resourcePath": "objects\\o_livelyLogicRelay_QuestFlag\\o_livelyLogicRelay_QuestFlag.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -13994,7 +14026,7 @@
             "Key": "cfbb5758-d524-4f21-9baa-8b165e826034",
             "Value": {
                 "id": "2a87d327-ae5e-4ce0-b97c-a71beb256473",
-                "resourcePath": "objects\\o_livelyWatcherAIZoneEndCombat\\o_livelyWatcherAIZoneEndCombat.yy",
+                "resourcePath": "objects\\o_livelyLogicWatcherAIZoneEndCombat\\o_livelyLogicWatcherAIZoneEndCombat.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -14268,6 +14300,14 @@
                 "id": "f116a918-d6de-4f27-a840-dee11fd13192",
                 "resourcePath": "sprites\\s_itemJunkStick\\s_itemJunkStick.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d36f532b-e138-4b81-b381-814d8bba9863",
+            "Value": {
+                "id": "37f8dd6b-1cfc-4743-b5fc-7624699b7346",
+                "resourcePath": "objects\\o_livelyTriggerRelay\\o_livelyTriggerRelay.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -15298,7 +15338,7 @@
             "Key": "e23108ba-d822-4ce7-b642-e96b4451e6cf",
             "Value": {
                 "id": "e451aed6-15ea-4099-9170-c1f576312f8c",
-                "resourcePath": "objects\\o_livelyCtsTriggeredGoto\\o_livelyCtsTriggeredGoto.yy",
+                "resourcePath": "objects\\o_livelyLogicCtsTriggeredGoto\\o_livelyLogicCtsTriggeredGoto.yy",
                 "resourceType": "GMObject"
             }
         },

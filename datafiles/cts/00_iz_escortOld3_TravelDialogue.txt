@@ -72,6 +72,12 @@
 	}
 	
 #OnPostCombat0
+	wait
+	{
+		type playerdistance
+		target old
+		distance 80
+	}
 	lines
 	{
 		target	old
@@ -85,6 +91,12 @@
 	}
 	
 #OnPostCombat1
+	wait
+	{
+		type playerdistance
+		target old
+		distance 80
+	}
 	lines
 	{
 		target	old
@@ -99,6 +111,12 @@
 	}
 	
 #OnPostCombat2
+	wait
+	{
+		type playerdistance
+		target old
+		distance 80
+	}
 	lines
 	{
 		target	old

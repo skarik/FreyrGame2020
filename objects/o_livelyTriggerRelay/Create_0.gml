@@ -1,5 +1,10 @@
-/// @description Setup state
+/// @description Initial trigger state
 
-#macro kTriggerReusable 0
-#macro kTriggerOncePerRoomload 1
-#macro kTriggerOncePerPlaythrough 2
+#macro kTriggerByPlayer		0x01
+#macro kTriggerByParty		0x02
+#macro kTriggerByEnemy		0x04
+#macro kTriggerByProjectile	0x08
+
+event_inherited();
+
+m_retriggerCountdown = -1.0;

@@ -1,28 +1,28 @@
 {
-    "id": "70639fd6-bf8c-4574-aab9-510c03803e0d",
+    "id": "1413c9d3-52e5-4f5f-9d85-256e4db12805",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_livelyWatcherAIZoneAngry",
+    "name": "o_livelyLogicRelay",
     "eventList": [
         {
-            "id": "0b0ced53-c8aa-4b92-a6b0-008f5d857ac3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "70639fd6-bf8c-4574-aab9-510c03803e0d"
-        },
-        {
-            "id": "22f8a197-eacf-43ba-bb51-b6714d4bcf49",
+            "id": "507fe079-27da-403e-bfff-88d99e98584c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "70639fd6-bf8c-4574-aab9-510c03803e0d"
+            "m_owner": "1413c9d3-52e5-4f5f-9d85-256e4db12805"
+        },
+        {
+            "id": "891fd9db-6497-40e3-80a1-4cd670cc37a0",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "1413c9d3-52e5-4f5f-9d85-256e4db12805"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -43,18 +43,22 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "99152cef-51be-4614-858d-b55c4852a50d",
+            "id": "05613f2e-6229-471a-abb5-cff615a8a0ea",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
-            "listItems": null,
+            "listItems": [
+                "kTriggerReusable",
+                "kTriggerOncePerRoomload",
+                "kTriggerOncePerPlaythrough"
+            ],
             "multiselect": false,
             "rangeEnabled": false,
             "rangeMax": 10,
             "rangeMin": 0,
-            "resourceFilter": 256,
-            "value": "null",
-            "varName": "m_aiZone",
-            "varType": 5
+            "resourceFilter": 1023,
+            "value": "kTriggerReusable",
+            "varName": "m_triggerMode",
+            "varType": 6
         }
     ],
     "solid": false,
