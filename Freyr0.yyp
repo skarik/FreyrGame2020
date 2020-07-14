@@ -13311,6 +13311,14 @@
             }
         },
         {
+            "Key": "c5fd11d0-779b-4bcf-93b2-38265671cd37",
+            "Value": {
+                "id": "4b597ce9-7951-4af9-83ab-f52bcc7161e8",
+                "resourcePath": "objects\\o_pickupItem_CactusChunk\\o_pickupItem_CactusChunk.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c5fd6d11-263e-43d9-84ad-259782f2b03c",
             "Value": {
                 "id": "3240c6f3-6504-4bba-be40-d2a1f495a555",
@@ -14668,6 +14676,14 @@
                 "id": "f89605aa-c8fd-4717-a1fb-aa26cb645911",
                 "resourcePath": "views\\d8ad7d81-8da9-4034-9a77-6b0bc4d903ce.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d8c6ba35-a717-4d6d-99f4-6d9516159ff5",
+            "Value": {
+                "id": "7b63c2f7-99f5-48cc-862d-6cc00d499758",
+                "resourcePath": "sprites\\s_itemCactusChunk\\s_itemCactusChunk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
