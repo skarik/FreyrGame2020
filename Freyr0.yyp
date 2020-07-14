@@ -4183,6 +4183,14 @@
             }
         },
         {
+            "Key": "3dae2727-3304-48ef-a753-08458783e1d8",
+            "Value": {
+                "id": "dacdb426-8f48-4665-8bf4-9f5eaddf1f8f",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\coveredstatue.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "3dc47a51-fd6d-43de-a6e7-1348090a593a",
             "Value": {
                 "id": "0f047895-c603-457c-af04-42d36aef323b",
@@ -7231,6 +7239,14 @@
             }
         },
         {
+            "Key": "6d9cb62b-f550-4728-98b5-7863d5546fa8",
+            "Value": {
+                "id": "ea07ac94-a381-4095-9027-b5695f46cde3",
+                "resourcePath": "views\\6d9cb62b-f550-4728-98b5-7863d5546fa8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6da2ff58-e489-48bc-9821-73bd4e638059",
             "Value": {
                 "id": "5b6da16e-2111-4d07-9d44-9d4c1caaf54b",
@@ -8380,6 +8396,14 @@
                 "id": "c626016c-7cd0-47d0-8911-8075f8fc25f4",
                 "resourcePath": "views\\7f48d98d-e89c-43fd-8dc4-b72de15f9ac6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7f95cc94-a3ae-4b17-a9ab-c9679cfed919",
+            "Value": {
+                "id": "741338bb-e75c-4115-9d39-d42b58a0a9bc",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\disstatue.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -10135,6 +10159,14 @@
             }
         },
         {
+            "Key": "98de7138-649f-4994-90dc-87388756f8bb",
+            "Value": {
+                "id": "6b8f376b-eecb-4539-955e-2f5e425430c3",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\calmingpool.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "98e2c97a-1d2e-4c3a-8353-4c9b795c7196",
             "Value": {
                 "id": "3cb2150a-b349-42a5-9bcd-748ac35a791d",
@@ -11799,6 +11831,14 @@
             }
         },
         {
+            "Key": "afe15d31-d97c-4079-8a49-0b227e33f8c9",
+            "Value": {
+                "id": "f0e43878-60ed-4f62-b5b8-06f24c48d1bb",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\oldcubby.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",
             "Value": {
                 "id": "f41df4e2-00aa-484a-88fa-11ab5234ddc2",
@@ -11868,6 +11908,14 @@
                 "id": "cd881c0c-673c-41d0-ad5f-8ed2bfd1d71f",
                 "resourcePath": "views\\b0df45f0-5662-41ee-9b3e-ce49175a40da.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b0f76eaf-ccf9-4587-b9eb-0ccbe82eb5ab",
+            "Value": {
+                "id": "ca3522b2-68d4-43fc-9ffd-208c76ae9d2c",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\floorins.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -16543,6 +16591,14 @@
             }
         },
         {
+            "Key": "f3e4fe0e-659a-4112-81c2-d414ca067953",
+            "Value": {
+                "id": "518530a0-dda9-42a4-ac0a-228e0792b3f2",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\solitarytree.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "f409a070-be94-41ae-916b-5a29cb58a5f4",
             "Value": {
                 "id": "0e33fab5-7a28-466e-956f-7f78e156a0af",
@@ -17235,6 +17291,14 @@
             "Value": {
                 "id": "4c3bf218-7cd4-40e0-831b-9ae225c3ef57",
                 "resourcePath": "datafiles_yy\\music\\foolsmarch_finale.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "fcdcec6b-511d-41fe-a3cf-7a72b70fd92d",
+            "Value": {
+                "id": "32c802c6-0254-4cc0-bb42-197e8709cabf",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\lonelybed.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },

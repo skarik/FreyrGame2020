@@ -1,0 +1,8 @@
+#begin
+
+	lines
+	{
+		1 Its full of determination.
+	}
+
+#ended

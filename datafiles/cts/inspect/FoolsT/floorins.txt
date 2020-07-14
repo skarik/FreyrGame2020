@@ -1,0 +1,9 @@
+#begin
+
+	lines
+	{
+		1 Looks like a broken moon.
+		2 Might be a family crest. 
+	}
+
+#ended

@@ -1,0 +1,9 @@
+#begin
+
+	lines
+	{
+		1 This statue is covered up. 
+		2 There is no inscription.  
+	}
+
+#ended
