@@ -15319,6 +15319,14 @@
             }
         },
         {
+            "Key": "e15e0c85-ac02-4775-9ceb-53813f6a6f94",
+            "Value": {
+                "id": "5a950081-c235-44ab-af5f-fd58b8e0d907",
+                "resourcePath": "sprites\\s_propMithraBuildingTavern\\s_propMithraBuildingTavern.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e16700af-37a0-43b1-aa6c-2a6b0f6359b1",
             "Value": {
                 "id": "5fa0cc5f-1338-453a-9280-d3ab14541266",
