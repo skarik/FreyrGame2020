@@ -7,6 +7,7 @@
 // 55 waiting for response from OLD man
 // 60 wait to begin quest
 // 100 travelling across fool's march
+// 200 done
 
 #Initialize
 	goto_if_flag
@@ -103,7 +104,7 @@
 		facing	player
 		style diegetic
 		1 I don't know where all these Gobbos came from.
-		2 They didn't use to be so aggressive. 
+		2 They weren't always so aggressive.
 	}
 	goto
 	{
@@ -177,6 +178,19 @@
 		facing	player
 		style diegetic
 		1 Watch your step! Sometimes sandpits open to the bottom of the world.
+	}
+	goto
+	{
+		target OnEnd
+	}
+	
+#OnIdle4
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Although it's barren, parts of Fool's March are quite beautiful.
 	}
 	goto
 	{
@@ -270,7 +284,113 @@
 	{
 		target OnEnd
 	}
-
+	
+#OnApproachingMithra
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Mithra has a lovely bar. I might stop there before doing trading.
+	}
+	goto
+	{
+		target OnEnd
+	}
+	
+#OnReachMithra
+	lines
+	{
+		target	old
+		facing	player
+		1 Ah, Mithra at last!
+		2 I am glad you decided to help me. I might not have made it back. 
+	}
+	choice
+	{
+		target player
+		1 (Play it off)
+		1goto OnReachMithra_PlayItOff
+		2 (Ask for payment)
+		2goto OnReachMithra_AskForPayment
+	}
+	#OnReachMithra_PlayItOff
+		lines
+		{
+			target	player
+			facing	old
+			1a A bit dry, but enjoyed the, uh, new experience.
+			1 Well, figured I'd stretch my legs.
+		}
+		lines
+		{
+			target	old
+			facing	player
+			1 A bit more than stretching your legs, there. I owe you some trade.
+			2 I've a bit left over. It should be about what I owe you.
+		}
+		goto
+		{
+			target OnReachMithra_AfterChoice
+		}
+	#OnReachMithra_AskForPayment
+		lines
+		{
+			target	player
+			facing	old
+			1a Hey, I ain't a free escort service!
+			1c Glad my help was $hworth$$ something.
+			1p So, about payment...
+		}
+		lines
+		{
+			target	old
+			facing	player
+			1 Yeah, yeah. 
+			2 I've a bit left over. It should be about what I owe you.
+		}
+		goto
+		{
+			target OnReachMithra_AfterChoice
+		}
+	#OnReachMithra_AfterChoice
+		giveitem
+		{
+			target	player
+			from	old
+			item Res_Gear 15
+			item Res_Bolt 10
+			item Res_VoidShard 1
+		}
+		lines
+		{
+			target	old
+			facing	player
+			1 Now, I've got a bar to hit!
+			2a See you around, lass!
+			2c See you around, partner!
+			2p See you around, friend!
+		}
+		signal
+		{
+			type input
+			id OnReachMithra_ShowSuccess
+		}
+		ai // move the old man into town center (TODO: make him go into bar)
+		{
+			target old
+			style cts
+			command move
+			position 1800 1250
+		}
+		flags
+		{
+			set IntroSequence 200
+		}
+	goto
+	{
+		target OnEnd
+	}
 
 #OnEnd
 

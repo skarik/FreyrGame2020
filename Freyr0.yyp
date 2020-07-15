@@ -1071,6 +1071,14 @@
             }
         },
         {
+            "Key": "11e6c8cc-ac32-44a5-b442-4a9f5783cd2c",
+            "Value": {
+                "id": "5fd5dbbe-b763-4d1f-ba3f-ca4afb4d95d3",
+                "resourcePath": "objects\\o_aiWallHint\\o_aiWallHint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "11e93fac-8a57-44a5-bd90-4ccd1f75d12c",
             "Value": {
                 "id": "36ffd5a0-9bcd-4d89-ae45-4b5aa1d724b0",
@@ -8251,6 +8259,14 @@
             "Value": {
                 "id": "96b7bd54-0165-4c0b-85ec-b0a5455eeeef",
                 "resourcePath": "sprites\\s_tilesetMaterial0\\s_tilesetMaterial0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7d30329a-84d1-4e81-bf50-79c2fc8f97ef",
+            "Value": {
+                "id": "235ac1b5-ff41-40e2-843e-c9eae22a95af",
+                "resourcePath": "sprites\\ssy_aiWall\\ssy_aiWall.yy",
                 "resourceType": "GMSprite"
             }
         },
