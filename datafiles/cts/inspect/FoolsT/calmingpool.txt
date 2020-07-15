@@ -1,0 +1,8 @@
+#begin
+
+	lines
+	{
+	  1 The dancing bowls give off a pleasant sound.
+	}
+
+#ended

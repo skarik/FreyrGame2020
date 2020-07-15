@@ -1,0 +1,10 @@
+#begin
+
+	lines
+	{
+		1 Mostly empty except for a few musty mismatched shoes.
+		2 There are lots of different sizes. 
+		3 Some could even fit children. 
+	}
+
+#ended

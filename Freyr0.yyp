@@ -1815,6 +1815,14 @@
             }
         },
         {
+            "Key": "1bfacf39-a1cd-4e1d-9c36-eae928aaa4cf",
+            "Value": {
+                "id": "1081d07b-cf32-432d-a416-1463542e4adc",
+                "resourcePath": "sprites\\s_itemCactusRed\\s_itemCactusRed.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1c0c5ecc-875d-4e4d-864b-3814bbd20c14",
             "Value": {
                 "id": "3969c952-648b-4dff-9547-fad3de2bd3ba",
@@ -4191,6 +4199,14 @@
             }
         },
         {
+            "Key": "3dae2727-3304-48ef-a753-08458783e1d8",
+            "Value": {
+                "id": "dacdb426-8f48-4665-8bf4-9f5eaddf1f8f",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\coveredstatue.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "3dc47a51-fd6d-43de-a6e7-1348090a593a",
             "Value": {
                 "id": "0f047895-c603-457c-af04-42d36aef323b",
@@ -5759,6 +5775,14 @@
             }
         },
         {
+            "Key": "5658ea11-4c24-47ee-866c-347998690d5a",
+            "Value": {
+                "id": "4b0213f9-2ce2-49fb-90b3-6e390a713449",
+                "resourcePath": "sprites\\s_itemHoneyAbsinthe\\s_itemHoneyAbsinthe.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "56692e26-d3cc-4119-bffa-4bb127aa16ad",
             "Value": {
                 "id": "d3e6a16e-2c8b-4b38-8b00-aeba635f64da",
@@ -7239,6 +7263,14 @@
             }
         },
         {
+            "Key": "6d9cb62b-f550-4728-98b5-7863d5546fa8",
+            "Value": {
+                "id": "ea07ac94-a381-4095-9027-b5695f46cde3",
+                "resourcePath": "views\\6d9cb62b-f550-4728-98b5-7863d5546fa8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6da2ff58-e489-48bc-9821-73bd4e638059",
             "Value": {
                 "id": "5b6da16e-2111-4d07-9d44-9d4c1caaf54b",
@@ -8396,6 +8428,14 @@
                 "id": "c626016c-7cd0-47d0-8911-8075f8fc25f4",
                 "resourcePath": "views\\7f48d98d-e89c-43fd-8dc4-b72de15f9ac6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7f95cc94-a3ae-4b17-a9ab-c9679cfed919",
+            "Value": {
+                "id": "741338bb-e75c-4115-9d39-d42b58a0a9bc",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\disstatue.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -10151,6 +10191,14 @@
             }
         },
         {
+            "Key": "98de7138-649f-4994-90dc-87388756f8bb",
+            "Value": {
+                "id": "6b8f376b-eecb-4539-955e-2f5e425430c3",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\calmingpool.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "98e2c97a-1d2e-4c3a-8353-4c9b795c7196",
             "Value": {
                 "id": "3cb2150a-b349-42a5-9bcd-748ac35a791d",
@@ -11063,6 +11111,14 @@
             }
         },
         {
+            "Key": "a5630941-f392-45eb-ab29-8dbf8991cfce",
+            "Value": {
+                "id": "4f38c9dc-e706-4b3d-a6f1-3418b3309c46",
+                "resourcePath": "objects\\o_pickupCons_CactusRed\\o_pickupCons_CactusRed.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a56f34f6-8ccd-4d6e-8dd6-a112cb44accf",
             "Value": {
                 "id": "d1ecc845-18df-4d10-9972-dda2025c8848",
@@ -11815,6 +11871,14 @@
             }
         },
         {
+            "Key": "afe15d31-d97c-4079-8a49-0b227e33f8c9",
+            "Value": {
+                "id": "f0e43878-60ed-4f62-b5b8-06f24c48d1bb",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\oldcubby.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "b00f5abc-827f-4366-9e92-8ea49ecfbd8c",
             "Value": {
                 "id": "f41df4e2-00aa-484a-88fa-11ab5234ddc2",
@@ -11871,6 +11935,14 @@
             }
         },
         {
+            "Key": "b09a06ca-af4d-4bc9-96ea-8e9b4510f47b",
+            "Value": {
+                "id": "e09f158e-ca8c-4a00-b265-ef8b59b9523b",
+                "resourcePath": "objects\\o_pickupCons_HoneyAbsinthe\\o_pickupCons_HoneyAbsinthe.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b0c3ec87-1503-4086-bf71-d238cb885fb4",
             "Value": {
                 "id": "002353ff-0e63-4905-874c-4e80f712f731",
@@ -11884,6 +11956,14 @@
                 "id": "cd881c0c-673c-41d0-ad5f-8ed2bfd1d71f",
                 "resourcePath": "views\\b0df45f0-5662-41ee-9b3e-ce49175a40da.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b0f76eaf-ccf9-4587-b9eb-0ccbe82eb5ab",
+            "Value": {
+                "id": "ca3522b2-68d4-43fc-9ffd-208c76ae9d2c",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\floorins.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -13327,6 +13407,14 @@
             }
         },
         {
+            "Key": "c5fd11d0-779b-4bcf-93b2-38265671cd37",
+            "Value": {
+                "id": "4b597ce9-7951-4af9-83ab-f52bcc7161e8",
+                "resourcePath": "objects\\o_pickupItem_CactusChunk\\o_pickupItem_CactusChunk.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c5fd6d11-263e-43d9-84ad-259782f2b03c",
             "Value": {
                 "id": "3240c6f3-6504-4bba-be40-d2a1f495a555",
@@ -14684,6 +14772,14 @@
                 "id": "f89605aa-c8fd-4717-a1fb-aa26cb645911",
                 "resourcePath": "views\\d8ad7d81-8da9-4034-9a77-6b0bc4d903ce.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d8c6ba35-a717-4d6d-99f4-6d9516159ff5",
+            "Value": {
+                "id": "7b63c2f7-99f5-48cc-862d-6cc00d499758",
+                "resourcePath": "sprites\\s_itemCactusChunk\\s_itemCactusChunk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -16551,6 +16647,14 @@
             }
         },
         {
+            "Key": "f3e4fe0e-659a-4112-81c2-d414ca067953",
+            "Value": {
+                "id": "518530a0-dda9-42a4-ac0a-228e0792b3f2",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\solitarytree.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "f409a070-be94-41ae-916b-5a29cb58a5f4",
             "Value": {
                 "id": "0e33fab5-7a28-466e-956f-7f78e156a0af",
@@ -17243,6 +17347,14 @@
             "Value": {
                 "id": "4c3bf218-7cd4-40e0-831b-9ae225c3ef57",
                 "resourcePath": "datafiles_yy\\music\\foolsmarch_finale.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "fcdcec6b-511d-41fe-a3cf-7a72b70fd92d",
+            "Value": {
+                "id": "32c802c6-0254-4cc0-bb42-197e8709cabf",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\FoolsT\\lonelybed.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },

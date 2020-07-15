@@ -49,13 +49,16 @@
         "925b1e8b-c4d7-45fd-867b-ff0932b27d09",
         "2dd2e03a-a9ed-4b00-bf9d-e08f2e3855c9",
         "16aa68ac-0d24-4cff-ba57-b14d85f271e3",
+        "5658ea11-4c24-47ee-866c-347998690d5a",
+        "1bfacf39-a1cd-4e1d-9c36-eae928aaa4cf",
         "3ae3f60d-adc1-4348-988b-e7fd26fbe1fc",
         "869556e4-13e8-41f4-bc44-b030b0902683",
         "94f9a83c-4db7-49cb-aa6e-0f405efcc62d",
         "a4e1fa98-2c56-433b-ac66-e1232d004c99",
         "2387a1fb-4bac-49be-ae44-e1b9e991cac0",
         "db2c5345-db57-4e62-8317-75d586e070ed",
-        "f1e4ce56-aa67-49a0-a848-6190cdf76b38"
+        "f1e4ce56-aa67-49a0-a848-6190cdf76b38",
+        "d8c6ba35-a717-4d6d-99f4-6d9516159ff5"
     ],
     "filterType": "GMSprite",
     "folderName": "items",
