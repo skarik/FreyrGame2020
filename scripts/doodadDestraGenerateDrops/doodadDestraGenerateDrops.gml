@@ -1,4 +1,5 @@
-var sz, i, ret;
+var sz, i, ret = array_create(0);
+
 
 switch (sprite_index)
 {
@@ -10,7 +11,18 @@ switch (sprite_index)
 		sz = choose(1, 2, 3);
 		for (i = 0; i < sz; ++i)
 			ret[i] = o_pickupJunk_Rock;
+			
 		return ret;
+					
+	case s_propCactus:
+	case s_propDCactusMedium:
+		sz = choose(0,0,0,1);
+		for (i = 0; i < sz; ++i)
+			ret[i] = o_pickupItem_CactusChunk;
+	
+		return ret;
+		
 }
+
 
 return null;
