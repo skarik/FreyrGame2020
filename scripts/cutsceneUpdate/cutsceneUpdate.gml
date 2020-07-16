@@ -848,6 +848,49 @@ case SEQTYPE_PORTRAIT:
 	cts_entry_current++;
     cts_execute_state = 0;
 	break;
+	
+case SEQTYPE_GIVEITEM:
+	var target = entry[?SEQI_TARGET];
+	var from = entry[?SEQI_GIVEITEM_FROM];
+	var item_listing = entry[?SEQI_GIVEITEM_LISTING];
+	
+	var item_listing_len = array_length_1d(item_listing);
+	for (var i = 0; i < item_listing_len; ++i)
+	{
+		var t_itemEntry = item_listing[i];
+		
+		for (var i_item = 0; i_item < t_itemEntry[1]; ++i_item)
+		{
+			var t_item;
+			if (iexists(from))
+			{
+				t_item = instance_create_depth(from.x, from.y - from.m_standingHeight * 0.5 - from.z_height, from.depth - 8, t_itemEntry[0]);
+			}
+			else
+			{
+				t_item = instance_create_depth(target.x, target.y, target.depth - 8, t_itemEntry[0]);
+			}
+			with (t_item)
+			{
+				// Get picked up by the player!
+				m_isPickingUp = true;
+				m_pickupTarget = target;
+				m_pickupCooldown = kPickupTime * 3;
+	
+				m_pickupStartX = x;
+				m_pickupStartY = y;
+			}
+		}
+		
+	}
+
+	// Debug out
+	debugOut("Doing giveitem...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
 }
 
 return true;

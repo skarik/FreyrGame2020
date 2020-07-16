@@ -64,7 +64,7 @@ if (m_running)
 		
 			// Don't consume the signal.
 		}
-		if (signal_id == "give_player_seeds")
+		/*if (signal_id == "give_player_seeds")
 		{
 			// Create seed item
 			repeat (20)
@@ -72,7 +72,7 @@ if (m_running)
 			
 			// Consume the signal
 			cutsceneSignalConsume();
-		}
+		}*/
 		if (signal_id == "ended")
 		{
 			// Make nathan not passthru
@@ -130,13 +130,13 @@ if (m_running)
 					cutsceneWaitEnd();
 				}
 			}
-			if (wait_id == "give_player_seeds")
+			/*if (wait_id == "give_player_seeds")
 			{
 				if (!iexists(o_pickupSeed_Turnip))
 				{
 					cutsceneWaitEnd();
 				}
-			}
+			}*/
 		}
 		// continue~
 	}

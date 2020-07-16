@@ -314,14 +314,25 @@ choice
 		2p Is a garden where you grow food?
 	}
 	
-	signal
+	//signal
+	//{
+	//	id give_player_seeds
+	//}
+	//wait
+	//{
+	//	type input
+	//	id give_player_seeds
+	//}
+	giveitem
 	{
-		id give_player_seeds
+		target	player
+		from	nathan
+		item Seed_Turnip 20
 	}
 	wait
 	{
-		type input
-		id give_player_seeds
+		type time
+		time 0.4
 	}
 	
 	lines

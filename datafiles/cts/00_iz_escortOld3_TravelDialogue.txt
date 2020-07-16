@@ -33,10 +33,7 @@
 		style follow
 		command start
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 
 #OnSeeGobbo
 	lines
@@ -52,10 +49,7 @@
 		style diegetic
 		1 Sneak up and take care of 'em!
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 
 #OnBeatGobbo
 	lines
@@ -67,10 +61,7 @@
 		2 I can barely pick up a staff myself anymore.
 		3 You've a mighty fine style.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnPostCombat0
 	wait
@@ -86,10 +77,7 @@
 		style diegetic
 		1 I remember when people would travel the desert unhindered.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnPostCombat1
 	wait
@@ -106,10 +94,7 @@
 		1 I don't know where all these Gobbos came from.
 		2 They weren't always so aggressive.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnPostCombat2
 	wait
@@ -126,10 +111,7 @@
 		1 I used to be pretty handy at magic back in my young days.
 		2 Don't have the stamina for it now. 
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 
 #OnIdle0
 	lines
@@ -139,10 +121,7 @@
 		style diegetic
 		1 I hope the Goddess brings us a good heavy wet season.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnIdle1
 	lines
@@ -152,10 +131,7 @@
 		style diegetic
 		1 Lack of sleep from the nightmares doesn't make this trek any easier. 
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnIdle2
 	lines
@@ -166,11 +142,8 @@
 		1 I once saw a person-shaped rock wandering around here.
 		2 Ran off before I could talk to them.
 	}
-	goto
-	{
-		target OnEnd
-	}
-
+	goto { target OnEnd }
+	
 #OnIdle3
 	lines
 	{
@@ -179,10 +152,7 @@
 		style diegetic
 		1 Watch your step! Sometimes sandpits open to the bottom of the world.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnIdle4
 	lines
@@ -192,10 +162,7 @@
 		style diegetic
 		1 Although it's barren, parts of Fool's March are quite beautiful.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnPassIconolith
 	lines
@@ -205,10 +172,7 @@
 		style diegetic
 		1 You'd do well to ask the Goddess to protect you from evil spirits entering your dreams.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnIdleAtStatue
 	lines
@@ -218,10 +182,7 @@
 		style diegetic
 		1 Unsettling statue, that.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnInspectStatue
 	lines
@@ -230,10 +191,7 @@
 		facing	player
 		1 Wouldn't be askin' much of that, nothing but bad luck.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnShortRest
 	lines
@@ -243,10 +201,7 @@
 		style diegetic
 		1 Please bless us and grant us a safe journey.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnLongRest0
 	lines
@@ -256,10 +211,7 @@
 		style diegetic
 		1 May the Goddess protect us until dawn.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 #OnLongRest1
 	lines
 	{
@@ -268,10 +220,7 @@
 		style diegetic
 		1 May the Goddess ward off Motses until dawn.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 #OnLongRest2
 	lines
 	{
@@ -280,10 +229,7 @@
 		style diegetic
 		1 May Motses go after the other monsters this night.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnApproachingMithra
 	lines
@@ -293,10 +239,7 @@
 		style diegetic
 		1 Mithra has a lovely bar. I might stop there before doing trading.
 	}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 	
 #OnReachMithra
 	lines
@@ -387,10 +330,7 @@
 		{
 			set IntroSequence 1000
 		}
-	goto
-	{
-		target OnEnd
-	}
+	goto { target OnEnd }
 
 #OnEnd
 

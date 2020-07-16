@@ -60,6 +60,8 @@ while (!file_text_eof(fp))
 			&& string_char_at(read_state_line, read_state_cursor) != "\r"
 			&& string_char_at(read_state_line, read_state_cursor) != "\n"
 			&& string_char_at(read_state_line, read_state_cursor) != ";"
+			&& string_char_at(read_state_line, read_state_cursor) != "{"
+			&& string_char_at(read_state_line, read_state_cursor) != "}"
 			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 1) == "{")
 			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 1) == "}")
 			)
@@ -73,6 +75,15 @@ while (!file_text_eof(fp))
 			|| string_char_at(read_state_line, read_state_cursor) == "\n")
 		{
 			read_state_get_next_line = true;
+		}
+		// Is this a one-character stop and we need to force a move-on
+		if (string_length(line) == 0 && read_state_cursor <= read_state_line_length 
+			&& (string_char_at(read_state_line, read_state_cursor) == ";"
+			|| string_char_at(read_state_line, read_state_cursor) == "{"
+			|| string_char_at(read_state_line, read_state_cursor) == "}"))
+		{
+			line += string_char_at(read_state_line, read_state_cursor);
+			read_state_cursor++;
 		}
 	}
 	// Cut off any extra space that is hanging around that are not displayable
@@ -1013,7 +1024,72 @@ while (!file_text_eof(fp))
 			}
 			else if (read_object_type == SEQTYPE_GIVEITEM)
 			{
-				// TODO
+				var target = read_object_map[?"target"];
+				target = _cutsceneParseTarget(target);
+				var from = read_object_map[?"from"];
+				from = _cutsceneParseTarget(from);
+				
+				var item_listing = array_create(0);
+				{
+					var try, item_next = undefined, lookup;
+					try = 0;
+					lookup = "item";
+					do
+					{
+						item_next = read_object_map[?lookup];
+						if (!is_undefined(item_next))
+						{
+							// item_next is split into two values
+							var item_next_list = string_split(item_next, " ", true);
+							// Parse out item count
+							var item_count = 1;
+							if (array_length_1d(item_next_list) >= 2)
+							{
+								item_count = real(item_next_list[1]);
+							}
+							// Search for the item in the object listing
+							var item_name = string_lower(item_next_list[0]);
+							var item = null;
+							for (var i = 0; i < 9999; ++i)
+							{
+								if (object_exists(i))
+								{
+									var test_object_name = string_lower(object_get_name(i));
+									if (string_pos("o_pickup", test_object_name) != 0)
+									{
+										if (string_pos(item_name, test_object_name) != 0)
+										{
+											item = i;
+										}
+									}
+								}
+							}
+							if (item == null)
+							{
+								var error = "Could not find item id \"" + item_name + "\" in the bank. please check spelling";
+								show_error(error, false);
+								debugOut(error);
+							}
+							// Save item in the listing
+							item_listing[array_length_1d(item_listing)] = [item, item_count];
+						}
+						
+						lookup = "item" + string(try);
+						try++;
+					}
+					until (is_undefined(item_next));
+				}
+				
+				// Create the GOTO structure
+				var new_map = ds_map_create();
+				new_map[?SEQI_TARGET] = target;
+				new_map[?SEQI_GIVEITEM_FROM] = from;
+				new_map[?SEQI_GIVEITEM_LISTING] = item_listing;
+				
+				// Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_GIVEITEM;
+                cts_entry_count++;
 			}
 			
 			
