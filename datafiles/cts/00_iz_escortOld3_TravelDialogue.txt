@@ -7,7 +7,7 @@
 // 55 waiting for response from OLD man
 // 60 wait to begin quest
 // 100 travelling across fool's march
-// 200 done
+// 1000 done
 
 #Initialize
 	goto_if_flag
@@ -385,7 +385,7 @@
 		}
 		flags
 		{
-			set IntroSequence 200
+			set IntroSequence 1000
 		}
 	goto
 	{

@@ -16,14 +16,70 @@ var read_state = STATE_BEGIN;
 var read_object_type = SEQTYPE_NULL;
 var read_object_map = null;
 
+var read_state_line = "";
+var read_state_line_length = 0;
+var read_state_get_next_line = true;
+var read_state_cursor = 0;
+
 // Read in until EOF
 while (!file_text_eof(fp))
 {
-    var line = file_text_readln(fp);
+	if (read_state_get_next_line)
+	{
+		read_state_line = file_text_readln(fp);
+		read_state_line_length = string_length(read_state_line);
+		read_state_cursor = 1;
+		
+		read_state_get_next_line = false;
+	}
+	
+    /*var line = file_text_readln(fp);
     // Cut off the space from the start of it
     line = string_rtrim(string_ltrim(line));
     // Cut off any '//' that is found
-    line = string_rtrim_comment(line);
+    line = string_rtrim_comment(line);*/
+	
+	var line = "";
+#region Parse lines into virtual lines
+	// read past all the spaces until we hit a character
+	while (read_state_cursor <= read_state_line_length 
+		&& is_space(string_char_at(read_state_line, read_state_cursor)))
+	{
+		read_state_cursor++;
+	}
+	// empty line? 
+	if (read_state_cursor >= read_state_line_length)
+	{
+		read_state_get_next_line = true;
+	}
+	else
+	{
+		// read in the line we're looking at
+		while (read_state_cursor <= read_state_line_length
+			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 0) == "/" && string_char_at(read_state_line, read_state_cursor + 1) == "/")
+			&& string_char_at(read_state_line, read_state_cursor) != "\r"
+			&& string_char_at(read_state_line, read_state_cursor) != "\n"
+			&& string_char_at(read_state_line, read_state_cursor) != ";"
+			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 1) == "{")
+			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 1) == "}")
+			)
+		{
+			line += string_char_at(read_state_line, read_state_cursor);
+			read_state_cursor++;
+		}
+		// Is the rest of the line bunk?
+		if ((read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 0) == "/" && string_char_at(read_state_line, read_state_cursor + 1) == "/")
+			|| string_char_at(read_state_line, read_state_cursor) == "\r"
+			|| string_char_at(read_state_line, read_state_cursor) == "\n")
+		{
+			read_state_get_next_line = true;
+		}
+	}
+	// Cut off any extra space that is hanging around that are not displayable
+	line = string_rtrim(string_ltrim(line));
+#endregion
+	show_debug_message("source: " + string_rtrim(string_ltrim(read_state_line)));
+	show_debug_message("parsed: " + line);
 
     if (read_state == STATE_BEGIN)
     {
@@ -131,6 +187,10 @@ while (!file_text_eof(fp))
 		else if (string_pos("portrait", line) == 1)
 		{
 			read_object_type = SEQTYPE_PORTRAIT;
+		}
+		else if (string_pos("giveitem", line) == 1)
+		{
+			read_object_type = SEQTYPE_GIVEITEM;
 		}
 		
         // If an object was read - prepare to read it in
@@ -950,6 +1010,10 @@ while (!file_text_eof(fp))
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_PORTRAIT;
                 cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_GIVEITEM)
+			{
+				// TODO
 			}
 			
 			
