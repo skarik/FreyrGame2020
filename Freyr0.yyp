@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "04ea9cac-5a0a-4433-ac70-ff22b1cf8bf8",
+            "Value": {
+                "id": "ca700910-e297-43f2-81cc-f242c6cb6205",
+                "resourcePath": "sprites\\s_assetMithraTempleColumn\\s_assetMithraTempleColumn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "04f41f23-317d-4603-94ee-d5186e8e57b2",
             "Value": {
                 "id": "9d94d667-d0c8-4014-aee7-f968650b8ebd",
@@ -2943,6 +2951,14 @@
             }
         },
         {
+            "Key": "2b8b5223-a94e-4b53-aeb1-baae1dcad0a7",
+            "Value": {
+                "id": "d60227f2-5496-410e-b869-17d9e392a6ec",
+                "resourcePath": "sprites\\s_assetMithraTempleLining\\s_assetMithraTempleLining.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2b9a5d24-4f8a-4427-a092-7dae51d01655",
             "Value": {
                 "id": "8f0d17c4-b1d2-445b-936c-6ca9936371e8",
@@ -4236,6 +4252,14 @@
                 "id": "96fdc7ab-5545-4712-af32-89f9c880d00c",
                 "resourcePath": "views\\3e70a781-eaa0-4d24-9231-e826d213ba49.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3e7be2af-d9d7-4b96-8e47-b9b9466c6eed",
+            "Value": {
+                "id": "26be26f3-4851-4a9e-9c5f-b53ae667c291",
+                "resourcePath": "sprites\\s_assetMithraTempleEntrance\\s_assetMithraTempleEntrance.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5788,6 +5812,14 @@
                 "id": "d3e6a16e-2c8b-4b38-8b00-aeba635f64da",
                 "resourcePath": "sounds\\snd_physStepSand2\\snd_physStepSand2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "56796ae1-ccd6-4d65-921a-fc5451b784c7",
+            "Value": {
+                "id": "eca635ee-62ee-4030-b2f9-a9010ed00b97",
+                "resourcePath": "sprites\\s_assetMithraTempleBrickColumn\\s_assetMithraTempleBrickColumn.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -11695,6 +11727,14 @@
             }
         },
         {
+            "Key": "ad7df53b-3563-4114-b40e-1c0be9f0c49e",
+            "Value": {
+                "id": "b961dc0c-3315-4fec-be85-43d2a9b79528",
+                "resourcePath": "sprites\\s_assetMithraWindowLit\\s_assetMithraWindowLit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ad7e66ab-112e-4f16-907a-7c85b8d2ab69",
             "Value": {
                 "id": "f3643af5-6e96-4c25-a11e-49731d426c8d",
@@ -12156,6 +12196,14 @@
                 "id": "9d8b6427-8a97-4ae8-bacc-829daacf2671",
                 "resourcePath": "sprites\\sui_choiceBox2\\sui_choiceBox2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b32d74ae-e2cb-41a5-b223-d8fe263004d7",
+            "Value": {
+                "id": "147c7434-4055-4adf-b93f-74eb01d6643d",
+                "resourcePath": "views\\b32d74ae-e2cb-41a5-b223-d8fe263004d7.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -12924,6 +12972,14 @@
                 "id": "3dea5225-d7f4-4b14-96a6-ca0bd3187993",
                 "resourcePath": "datafiles_yy\\audio\\anime_opening0.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "bf682030-dcfd-434d-ab7c-1fcec3b632fd",
+            "Value": {
+                "id": "18174460-ea8c-4883-b7ed-29fa8d25ef85",
+                "resourcePath": "sprites\\s_assetMithraWindow\\s_assetMithraWindow.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
