@@ -1,6 +1,5 @@
 var sz, i, ret = array_create(0);
 
-
 switch (sprite_index)
 {
 	case s_propRock:
@@ -23,6 +22,5 @@ switch (sprite_index)
 		return ret;
 		
 }
-
 
 return null;

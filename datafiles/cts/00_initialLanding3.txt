@@ -454,14 +454,20 @@ choice
 		1 The book talks about something called $bseeds$$. I'm kind of guessing a garden is where you put those?
 	}
 	
-	signal
+	//signal
+	//{
+	//	id give_player_seeds
+	//}
+	//wait
+	//{
+	//	type input
+	//	id give_player_seeds
+	//}
+	giveitem
 	{
-		give_player_seeds
-	}
-	wait
-	{
-		type input
-		id give_player_seeds
+		target	player
+		from	nathan
+		item Seed_Turnip 20
 	}
 	
 	lines

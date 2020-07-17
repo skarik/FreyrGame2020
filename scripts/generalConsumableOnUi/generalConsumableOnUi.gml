@@ -1,61 +1,58 @@
 // TODO DRAW WILL
 
-
 var _itemType = argument0;
 var _itemDx = argument1;
 var _itemDy = argument2;
 var _itemDalpha = argument3;
 var _itemIsSelected = argument4;
 var _itemUiCategory = argument5;
- 
 
 if (_itemIsSelected && _itemUiCategory == kItemUiCategoryBelt)
 {
-switch(_itemType)
-{
+	var l_drawHealth = false;
+	var l_drawWill = false;
+	
+	var l_healthValue = 0;
+	var l_willValue = 0;
+	
+	switch(_itemType)
+	{
   
-        case o_pickupCons_ScorpStick:
-        l_drawHealth = true;
-        l_healthValue = 3;
-        break;
+		case o_pickupCons_ScorpStick:
+			l_drawHealth = true;
+			l_healthValue = 3;
+			break;
 		case o_pickupCons_Berries:
-        l_drawHealth = true;
-        l_healthValue = 2;
-        break;
+			l_drawHealth = true;
+			l_healthValue = 2;
+			break;
 		case o_pickupCons_Nuts:
-        l_drawHealth = true;
-        l_healthValue = 2;
-        break;
+			l_drawHealth = true;
+			l_healthValue = 2;
+			break;
 		case o_pickupCons_Meats:
-        l_drawHealth = true;
-        l_healthValue = 3;
-        break;
+			l_drawHealth = true;
+			l_healthValue = 3;
+			break;
 		case o_pickupCons_FermPotion:
-        l_drawHealth = true;
-        l_healthValue = 4;
-        break;
+			l_drawHealth = true;
+			l_healthValue = 4;
+			break;
 		
 		case o_pickupCons_CactusRed:
-        l_drawHealth = true;
-        l_healthValue = -5;
-		//l_drawWill = true;
-		//m_will += 1 * 60;
-        break;
+			l_drawHealth = true;
+			l_healthValue = -5;
+			l_drawWill = true;
+			l_willValue = 1 * 60;
+			break;
 		
 		case o_pickupCons_HoneyAbsinthe:
-        l_drawHealth = true;
-        l_healthValue = -3;
-		//l_drawWill = true;
-		//m_will += 1 * 40;
-        break;
-		
-		
-		
-	   
-}
-
-}
-
+			l_drawHealth = true;
+			l_healthValue = -3;
+			l_drawWill = true;
+			l_willValue = 1 * 40;
+			break;
+	}
 
 	if (l_drawHealth)
 	{
@@ -101,6 +98,6 @@ switch(_itemType)
 			surface_free(l_textSurface);
 		}
 	}
-	
+}
 		
-	return 0;
+return 0;
