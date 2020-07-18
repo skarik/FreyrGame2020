@@ -41,7 +41,10 @@
         "cce74a1a-5922-4931-ae2b-caf4c3cd75b7",
         "1c6e59e7-d145-4aaa-ab01-8888b4f28754",
         "23e1819a-480a-4622-845a-2c82fe29fd93",
-        "883ab0a1-7299-45c2-9568-bee7c4f7a8ba"
+        "883ab0a1-7299-45c2-9568-bee7c4f7a8ba",
+        "79991ad4-f054-4dbe-9cd8-af4f64153f24",
+        "ab9a926a-62bf-4ceb-8f0a-47d931e1ed49",
+        "fa26e8c5-2428-4d31-9527-38e15b451f4f"
     ],
     "filterType": "GMSprite",
     "folderName": "mithra",

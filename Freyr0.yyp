@@ -4111,6 +4111,14 @@
             }
         },
         {
+            "Key": "3c6e62ae-0b41-45c0-82c1-fb7e529aa6d4",
+            "Value": {
+                "id": "a46ba8f4-68c8-486d-92e8-3d789891a6ee",
+                "resourcePath": "rooms\\rm_mithra_church\\rm_mithra_church.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "3c6e8938-90fc-4cad-81b9-63c2db4a32f4",
             "Value": {
                 "id": "ee4c0dda-eed9-48fa-83ac-7a8ef08a6fca",
@@ -6223,6 +6231,14 @@
             }
         },
         {
+            "Key": "5c62a2a0-65bd-4451-b4e0-04459700269b",
+            "Value": {
+                "id": "673710b5-93d9-45b5-8cba-f23fcfde3aa9",
+                "resourcePath": "objects\\o_livelyLogicAuto\\o_livelyLogicAuto.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5c678883-8e8f-4fc0-894f-1e428f86adc4",
             "Value": {
                 "id": "d7717a5e-d0ab-4da6-b048-173e6b6016d7",
@@ -8131,6 +8147,14 @@
             "Value": {
                 "id": "8ef8c1f2-ee39-448b-83cf-212479d1fc7b",
                 "resourcePath": "sprites\\s_assetTWindow0\\s_assetTWindow0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "79991ad4-f054-4dbe-9cd8-af4f64153f24",
+            "Value": {
+                "id": "618a115e-e1ff-438a-8117-f519681fe355",
+                "resourcePath": "sprites\\s_propMithraShrine\\s_propMithraShrine.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11564,6 +11588,14 @@
                 "id": "a9828e1b-d303-4e3e-9bbd-497e85e165e5",
                 "resourcePath": "objects\\o_farmlandMetaball64\\o_farmlandMetaball64.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ab9a926a-62bf-4ceb-8f0a-47d931e1ed49",
+            "Value": {
+                "id": "99063151-b2db-4d44-b917-b2095255ee54",
+                "resourcePath": "sprites\\s_propMithraShrineOldStand\\s_propMithraShrineOldStand.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -17172,6 +17204,14 @@
                 "id": "1ad19130-b1b8-453d-aa5d-e3430cf9f777",
                 "resourcePath": "scripts\\enemyInfoOnCharacterCreate\\enemyInfoOnCharacterCreate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fa26e8c5-2428-4d31-9527-38e15b451f4f",
+            "Value": {
+                "id": "fff012e4-d9ae-4e8b-92e8-7a4701c6b472",
+                "resourcePath": "sprites\\s_propMithraShrineOld\\s_propMithraShrineOld.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
