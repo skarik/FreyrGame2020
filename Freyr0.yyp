@@ -6703,6 +6703,14 @@
             }
         },
         {
+            "Key": "64643f07-8409-4ba0-bd44-cc4d4ec65078",
+            "Value": {
+                "id": "e8da2817-6832-4173-9ae9-bc00003df1a8",
+                "resourcePath": "objects\\o_livelyTriggeredLayerManager\\o_livelyTriggeredLayerManager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "649bf027-8be0-473d-8cac-9e6c8d218771",
             "Value": {
                 "id": "b3353516-959c-45c6-8eef-4b140bb22f48",

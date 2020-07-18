@@ -8,7 +8,7 @@ if (global._transition_source != null)
 	}
 	
     // Find matching room
-    if (target == global._transition_source) // todo: choose only one
+    if (target == global._transition_source)
     {
         var pos_x = x;
         var pos_y = y;
@@ -17,6 +17,7 @@ if (global._transition_source != null)
             // Skip invalid players
             if (m_isPlayer == false) continue;
             
+			// Fix position
             if (pos_x <= 0) {
                 x = pos_x + 2;
             }
@@ -37,6 +38,27 @@ if (global._transition_source != null)
             }
 			x += global._transition_dx;
             y += global._transition_dy;
+			
+			// If teleporting to a non-edge transition, make sure the player is outside of the position
+			if (!other.m_isEdgeTransition)
+			{
+				if (global._transition_ddir == 0)
+				{
+					x += 2 + other.bbox_right - bbox_left;
+				}
+				else if (global._transition_ddir == 180)
+				{
+					x += -2 + other.bbox_left - bbox_right;
+				}
+				else if (global._transition_ddir == 270)
+				{
+					y += 2 + other.bbox_bottom - bbox_top;
+				}
+				else if (global._transition_ddir == 90)
+				{
+					y += -2 + other.bbox_top - bbox_bottom;
+				}
+			}
             
             persistent = false;
 			camera.persistent = false;
@@ -72,29 +94,6 @@ if (global._transition_source != null)
         {
             persistent = false;
         }
-		/*with (ob_character)
-		{
-			var pl = getPlayer();
-			
-			if (m_isFollower && m_isFollowing)
-			{
-				persistent = false;
-				inventory.persistent = false;
-				stats.persistent = false;
-				
-				if (iexists(pl))
-				{
-					x = pl.x;
-					y = pl.y;
-					z = pl.z;
-					
-					var hardness = inew(o_scrSolidifyFollower);
-						hardness.target = id;
-						hardness.original_state = isPassthru;
-					isPassthru = true;
-				}
-			}
-		}*/
         
 		// Message we switched rooms
 		debugOut("transition from " + room_get_name(global._transition_source) + " to " + room_get_name(room));

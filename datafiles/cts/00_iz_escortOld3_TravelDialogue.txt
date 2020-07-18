@@ -270,7 +270,7 @@
 			target	old
 			facing	player
 			1 A bit more than stretching your legs, there. I owe you some trade.
-			2 I've a bit left over. It should be about what I owe you.
+			2 I've a bit left over on me, but it should be about what I owe you.
 		}
 		goto
 		{
@@ -290,7 +290,7 @@
 			target	old
 			facing	player
 			1 Yeah, yeah. 
-			2 I've a bit left over. It should be about what I owe you.
+			2 I've a bit left over on me. It should be about what I owe you.
 		}
 		goto
 		{
