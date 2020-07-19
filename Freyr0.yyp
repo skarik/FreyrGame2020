@@ -11223,6 +11223,14 @@
             }
         },
         {
+            "Key": "a54c925c-740c-493e-ac07-e2962cccb93a",
+            "Value": {
+                "id": "bb9450d1-3b0e-4c6e-bfba-69fc47f54bc6",
+                "resourcePath": "objects\\o_forcedFallPoint\\o_forcedFallPoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a5630941-f392-45eb-ab29-8dbf8991cfce",
             "Value": {
                 "id": "4f38c9dc-e706-4b3d-a6f1-3418b3309c46",
