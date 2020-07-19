@@ -2,7 +2,8 @@ var doodad = argument0;
 
 if (doodad.sprite_index == s_propStickTorch
 	|| doodad.sprite_index == s_propStickTorchSmall
-	|| doodad.sprite_index == s_propLantern0)
+	|| doodad.sprite_index == s_propLantern0
+	|| doodad.sprite_index == s_propWallTorch)
 {
 	// Create a light on the doodad.
 	with (doodad)
