@@ -20,6 +20,7 @@ fader.image_yscale = 2;
 
 faderUpper = instance_create_depth(x, y - 48, round(-y * 0.8), o_fxScreenShield);
 faderUpper.width = 32 * fader.image_xscale;
+faderUpper.height = 32 * fader.image_xscale;
 faderUpper.visible = true;
 faderUpper.image_alpha = 0.0;
 faderUpper.image_blend = c_black;

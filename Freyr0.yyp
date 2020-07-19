@@ -5575,6 +5575,14 @@
             }
         },
         {
+            "Key": "52a46130-e8eb-4a09-8db7-43cf549e570e",
+            "Value": {
+                "id": "abdbad57-e8aa-4a74-9957-e2f208073211",
+                "resourcePath": "sprites\\sc_propMithraTestWindmill\\sc_propMithraTestWindmill.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "52a675cc-a03b-40ec-93d1-5064b41ceb3f",
             "Value": {
                 "id": "7a23dbf1-8dd6-4a78-b3b0-63dc038fa8d6",
@@ -7324,6 +7332,14 @@
                 "id": "ce8948d8-95bd-4b1e-8046-035f866d31fe",
                 "resourcePath": "sprites\\s_assetRailroadParts0H\\s_assetRailroadParts0H.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6d31d754-af2c-4ccd-8a7d-c96812f8bea9",
+            "Value": {
+                "id": "ca7ade9e-fe00-4008-bcb8-f5191dd069bd",
+                "resourcePath": "objects\\ob_usableClimbArea\\ob_usableClimbArea.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -10756,6 +10772,14 @@
                 "id": "61cf5f4b-4487-41a0-af0b-40e6c4391529",
                 "resourcePath": "sprites\\s_heroSinkingH2\\s_heroSinkingH2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9e7451fe-0441-40a9-9ea0-b89ac02e7bb2",
+            "Value": {
+                "id": "1bf7eb66-94da-4ce3-a85c-bb9fb713c8fc",
+                "resourcePath": "objects\\o_doodadHider_MithraTestMill\\o_doodadHider_MithraTestMill.yy",
+                "resourceType": "GMObject"
             }
         },
         {
