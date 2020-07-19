@@ -14,6 +14,7 @@ if (iexists(pl) && place_meeting(x,y,pl))
 	        global._transition_dw = abs(32 * image_xscale);
 			global._transition_dh = abs(32 * image_yscale);
 			global._transition_is_edge = true;
+			global._transition_target_override = position_override;
 			global._transition_ddir = 0;
 			if (bbox_left < 0)
 			{
@@ -47,6 +48,7 @@ if (iexists(pl) && place_meeting(x,y,pl))
 	    global._transition_dw = abs(32 * image_xscale);
 		global._transition_dh = abs(32 * image_yscale);
 		global._transition_is_edge = false;
+		global._transition_target_override = position_override;
 		global._transition_ddir = 0;
 		
 	    // Then we go to the next room:

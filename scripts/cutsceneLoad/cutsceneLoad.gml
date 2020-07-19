@@ -89,8 +89,8 @@ while (!file_text_eof(fp))
 	// Cut off any extra space that is hanging around that are not displayable
 	line = string_rtrim(string_ltrim(line));
 #endregion
-	show_debug_message("source: " + string_rtrim(string_ltrim(read_state_line)));
-	show_debug_message("parsed: " + line);
+	//show_debug_message("source: " + string_rtrim(string_ltrim(read_state_line)));
+	//show_debug_message("parsed: " + line);
 
     if (read_state == STATE_BEGIN)
     {

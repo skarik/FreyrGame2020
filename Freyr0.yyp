@@ -14287,6 +14287,14 @@
             }
         },
         {
+            "Key": "d0246d85-9833-4193-8d42-311f8c2b71f0",
+            "Value": {
+                "id": "6dc93d62-175e-4b77-9b3d-91f546507851",
+                "resourcePath": "objects\\ob_ambientMithraChurch\\ob_ambientMithraChurch.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d024e19e-3971-4944-a6c1-fde12d159676",
             "Value": {
                 "id": "7fae2d50-5671-42eb-8fef-7688f9562c00",

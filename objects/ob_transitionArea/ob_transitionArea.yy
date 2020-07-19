@@ -79,6 +79,20 @@
             "value": "$00000000",
             "varName": "blend_color",
             "varType": 7
+        },
+        {
+            "id": "02a422c6-7c0e-47ce-89d8-ecaebb11ada3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 256,
+            "value": "null",
+            "varName": "position_override",
+            "varType": 5
         }
     ],
     "solid": false,
