@@ -187,7 +187,8 @@ else
 		m_aiCombat_targetTrackingLossTime = 0.0;
 	}
 	// If we cannot see the target, we want to stop tracking
-	else if (!m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed)
+	else if (iexists(m_aiCombat_target)
+		&& !m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed)
 	{
 		m_aiCombat_targetTrackingLossTime += Time.deltaTime;
 		if (m_aiCombat_targetTrackingLossTime > 1.0) // Lost tracking for 1 second
