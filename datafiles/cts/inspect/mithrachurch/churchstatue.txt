@@ -1,0 +1,9 @@
+#begin
+
+	lines
+	{
+		1 It's a hand chiseled statue of the Goddess.
+		2 She is surrounded by incense and light. 
+	}
+
+#ended
