@@ -1,4 +1,4 @@
-/// @description Cutscene_Update
+/// @description cutsceneUpdate()
 // Returns true if the cutscene is not being paused, false if it needs script input.
 
 if (cutsceneIsDone())
@@ -78,6 +78,34 @@ case SEQTYPE_WAIT:
     }
     return false;
     
+case SEQTYPE_PLAYER:
+	var actions = entry[?0];
+	
+	var pl = getPlayer();
+	if (iexists(pl))
+	{
+		if (actions == kCtsPlayerActions_Lock)
+		{
+			pl.canMove = false;
+			pl.moEnabled = false;
+			pl.isPassthru = false;
+		}
+		else if (actions == kCtsPlayerActions_Unlock)
+		{
+			pl.canMove = true;
+			pl.moEnabled = true;
+			pl.isPassthru = true;
+		}
+	}
+	
+	// Debug output
+	debugOut("Doing player...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
 case SEQTYPE_LINES:
     if (cts_execute_state == 0)
     {
@@ -803,6 +831,15 @@ case SEQTYPE_WORLD:
 	else if (command = SEQWORLD_EVENT)
 	{
 		worldEventCreate(arg);
+	}
+	else if (command = SEQWORLD_WAITFOR)
+	{
+		var wait_time = arg - o_dayNightCycle.m_timeOfDay;
+		if (wait_time < 0.0)
+		{
+			wait_time += 24.0;
+		}
+		gameCampWait(wait_time);
 	}
 	
 	// Debug out

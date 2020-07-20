@@ -390,7 +390,7 @@ choice
 		facing nathan
 		
 		1c That book is in tatters! It's amazing you could learn anything.
-		1a $b $s $kOi!$$ If I say you're not dumb, you're not dumb!
+		1a $b$s$kOi!$$ If I say you're not dumb, you're not dumb!
 		1p Sure! I mean I hope so!
 	}
 	

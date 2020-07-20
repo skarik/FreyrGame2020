@@ -1,0 +1,243 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+
+// spawn the characters needed
+spawnstate
+{
+	spawn poppy
+	facing up
+	position 935 1800
+}
+
+lines
+{
+	target poppy
+	facing player
+	1 Hold it there!
+}
+player { actions lock }
+// move characters up
+ai
+{
+	target poppy
+	style cts
+	command move
+	position 935 1600
+}
+// after moves up, create sammy next to her
+wait
+{
+	type ai
+	target poppy
+	aiaction arrive
+}
+spawnstate
+{
+	spawn sammy
+	facing up
+	position 914 1600
+}
+// TODO: Move guards up
+
+
+lines
+{
+	target Poppy
+	facing player
+	1 State who you are$p and your reason for being here, $1stranger$0.
+}
+// move poppy upward and brandish the shield
+ai
+{
+	target poppy
+	style cts
+	command move
+	position 0 -20
+	origin poppy
+}
+wait
+{
+	type ai
+	target poppy
+	aiaction arrive
+}
+ai
+{
+	target poppy
+	style cts
+	command sprite
+	sprite Lower_Shield
+	loop false
+}
+wait
+{
+	type time
+	time 0.2
+}
+
+#OnTalkSmack
+screen { type ctsin }
+
+lines
+{
+	target player
+	facing poppy
+	1c Oh! Uh.$p Do I need a passport or something?
+	1a Oi? A reason? How about:$p I'm piss tired and could use a good ale.
+	1p U-um.$p I'm sorry! I uhm, just arrived from the desert. I didn't know there was a city!
+}
+lines
+{
+	target poppy
+	facing player
+	1 Please answer my questions.
+	1a Please answer my questions seriously.
+	2 I do not want to have to use force.
+}
+
+emote
+{
+	target player
+	emote beat
+}
+wait { type time; time 0.4s; }
+
+lines
+{
+	target player
+	facing poppy
+	
+	1c Yeah, yeah. I get it. Name's [PLAYER] and I came here from - that little shabby tent town.
+	2c That old man had me bring him here. You can ask him yourself. He mentioned a bar.
+	
+	1a Alright, don't get your habit in a twist. Name's [PLAYER_NICKNAME]. 
+	2a Came from that rundown camp in the desert, helping that old man that was allowed past.
+	
+	1p Ah! Yes ma'am! My name is [PLAYER]. I came from the desert.
+	2p I came to escort the old man that just entered the city. 
+}
+lines
+{
+	target samuel
+	facing player
+	
+	1 You came all the way from $sOasis$$?
+	2 Where are your $bweapons$$? Your $btalismans$$? 
+}
+lines
+{
+	target player
+	facing samuel
+	
+	1c Got all the weapons I need right here!
+	2c Got these two fists of mine - and my ability to sneak past any obstacle. 
+	
+	1a Those green pals were nothing!
+	2a Stood no chance against my left and right hook - and my stealth.
+	
+	1p I didn’t really need anything to get by!
+	2p I either hid in the tall grass or fought when I had to. 
+}
+lines
+{
+	target samuel
+	facing player
+	1 I'm afraid that we can't let you wander around Mithra without being detained first.
+}
+lines
+{
+	target poppy
+	facing player
+	1 We request that you come with us peacefully.
+	2 Currently, you must be questioned further -
+	3 - As strangers from Oasis are normally not allowed inside.
+}
+
+lines
+{
+	target player
+	facing poppy
+	1 Are you in charge or something?
+	1p Are you in command here?
+}
+lines
+{
+	target samuel
+	facing player
+	end auto
+	1 I-$p   
+}
+
+lines
+{
+	target poppy
+	facing player
+	1 V-$pVicar Samuel only speaks casually to those who have accepted the Goddess's divine gift.
+}
+
+lines 
+{
+	target player
+	facing poppy
+	1c The Goddess, eh?
+	2c Haven't heard someone take her seriously in a long time.
+	
+	1a The bloody Goddess, eh?
+	2a Suppose it's the bloody Goddess who got you listening to this clown?
+	
+	1p Um...
+	2p The Goddess? Divine gift?
+}
+
+lines
+{
+	target poppy
+	facing player
+	1 $s$kSilence!$$
+	2 How dare you speak in such a tone!
+	
+	1p Of course! It is certain that if you simply follow Vicar Samuel's instructions -
+	2p - She will bless you as she has done with everyone!
+}
+
+lines 
+{
+	target player
+	facing poppy
+	1 Hmph. Not much a choice but to go along with this, huh?
+	
+	1p O-$poh. I-$pI suppose I could. It's just a few tiny questions, right?
+}
+#OnPostIntroductoryTalk
+
+// TODO: Show everyone walking south and player being led
+
+flags
+{
+	set MithraEscape 10 // New quest state
+}
+
+screen
+{
+	type fadeout
+	rgb 0 0 0
+}
+
+#OnThrowIntoWindmill
+
+// just teleport them into the windmill for now
+ai
+{
+	target player
+	style cts
+	command teleport
+	position 1472 280
+}
+
+
+
+#OnEnd
+#ended

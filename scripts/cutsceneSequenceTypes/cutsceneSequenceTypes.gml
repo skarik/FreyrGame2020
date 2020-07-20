@@ -19,6 +19,7 @@
 #macro SEQTYPE_COMPANION 14
 #macro SEQTYPE_SPAWNSTATE 15
 #macro SEQTYPE_GIVEITEM 16
+#macro SEQTYPE_PLAYER 17
 
 #macro SEQI_SIZE -1
 #macro SEQI_COUNT -1
@@ -103,6 +104,7 @@
 #macro SEQI_WORLD_CMD_ARG -2
 #macro SEQWORLD_TIME 0
 #macro SEQWORLD_EVENT 1
+#macro SEQWORLD_WAITFOR 2
 
 #macro SEQI_PORTRAIT_INDEX -1
 #macro SEQI_PORTRAIT_ALIGNMENT -20
@@ -125,3 +127,7 @@
 
 #macro kSpawnPositionNormal 0
 #macro kSpawnPositionNearby 1
+
+#macro kCtsPlayerActions_None 0
+#macro kCtsPlayerActions_Lock 1
+#macro kCtsPlayerActions_Unlock 2

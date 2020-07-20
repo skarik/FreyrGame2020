@@ -1,0 +1,98 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+
+// set up needed npcs
+spawnstate
+{
+	spawn_ifunique poppy
+	position nearby
+}
+ai
+{
+	target poppy
+	style cts
+	command teleport
+	position 1470 345
+}
+
+screen
+{
+	type fadein
+}
+
+lines
+{
+	target Player
+	facing Poppy
+	1c $k$s$bHey!$$ I thought you were just going to question me?!
+	1a $k$s$bOh!$$ $sBloody lying red head...
+	1p $sW-$pwhy am I being put in here?!$$
+}
+lines 
+{
+	target poppy
+	facing player
+	1 W-$pwell, Vicar Samuel is a very busy man.
+	2 He said he will question you a few days from now.
+	3 P-$pplease be patient.
+}
+
+ai
+{
+	target poppy
+	style cts
+	command move
+	position 1570 318
+}
+
+lines
+{
+	target Player
+	facing Poppy
+	1 $kHey!$$ $k$bHey!$$ You can't just leave me here!
+	1p You can't just leave me here! It's hot!$p And there is no water!
+}
+lines
+{
+	target poppy
+	facing player
+	1 I will bring you something to eat and drink in a bit!
+}
+
+spawnstate
+{
+	delete poppy
+}
+spawnstate
+{
+	delete samuel
+}
+
+player { actions unlock }
+world // TODO: do this properly
+{
+	waitfor night
+}
+wait { type time; wait 6.0s; }
+player { actions lock }
+
+lines
+{
+	target player
+	1 Been a while. Well, breaking out isn't anything new.
+	1p B-been all day. Guess time to break out like at home, huh?
+}
+
+flags
+{
+	set MithraEscape 11
+}
+
+screen { type ctsout }
+player { actions unlock }
+
+#OnEnd
+#ended

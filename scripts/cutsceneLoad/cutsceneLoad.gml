@@ -1,5 +1,5 @@
-/// @description Cutscene_Load(cutscene_file);
-/// @param cutscene_file
+/// @description cutsceneLoad(cutscene_file)
+/// @param cutscene_file {String} Filename in CTS directory.
 cutsceneInit();
 
 var filename = argument0;
@@ -202,6 +202,10 @@ while (!file_text_eof(fp))
 		else if (string_pos("giveitem", line) == 1)
 		{
 			read_object_type = SEQTYPE_GIVEITEM;
+		}
+		else if (string_pos("player", line) == 1)
+		{
+			read_object_type = SEQTYPE_PLAYER;
 		}
 		
         // If an object was read - prepare to read it in
@@ -906,6 +910,7 @@ while (!file_text_eof(fp))
 				
 				var time = ds_map_find_value(read_object_map, "time");
 				var event = ds_map_find_value(read_object_map, "event");
+				var waitfor = ds_map_find_value(read_object_map, "waitfor");
 				if (!is_undefined(time))
 				{
 					if (time == "stop")
@@ -932,6 +937,16 @@ while (!file_text_eof(fp))
 					ds_map_add(new_map, SEQI_WORLD_COMMAND, SEQWORLD_EVENT);
 					ds_map_add(new_map, SEQI_WORLD_CMD_ARG, event);
 				}
+				else if (!is_undefined(waitfor))
+				{
+					if (waitfor == "night")
+						waitfor = 20.00;
+					else
+						waitfor = -1;
+					
+					new_map[?SEQI_WORLD_COMMAND] = SEQWORLD_WAITFOR;
+					new_map[?SEQI_WORLD_CMD_ARG] = waitfor;
+				}
 				
 				// Delete original map
                 ds_map_destroy(read_object_map);
@@ -939,6 +954,29 @@ while (!file_text_eof(fp))
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_WORLD;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_PLAYER)
+			{
+				var actions = read_object_map[?"actions"];
+				
+				if (is_undefined(actions)) actions = "none";
+				if (actions == "lock")
+					actions = kCtsPlayerActions_Lock;
+				else if (actions == "unlock")
+					actions = kCtsPlayerActions_Unlock;
+				else
+					actions = kCtsPlayerActions_None;
+				
+				var new_map = ds_map_create();
+				new_map[?0] = actions;
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_PLAYER;
                 cts_entry_count++;
 			}
 			else if (read_object_type == SEQTYPE_PORTRAIT)

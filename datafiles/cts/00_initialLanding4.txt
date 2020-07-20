@@ -1,6 +1,11 @@
 #begin
 // IntroSequence == 30
 
+world
+{	// Resume time of day - we need it for things to progress
+	time start
+}
+
 // Go to the checkpoint and show the save point.
 ai
 {
@@ -197,6 +202,4 @@ lines
 	2 Actually...$plooking forward to it, then.
 }
 
-
-
-#end
+#ended

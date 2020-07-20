@@ -1367,6 +1367,14 @@
             }
         },
         {
+            "Key": "15c93d8a-f6c6-40d0-a232-095419452ad9",
+            "Value": {
+                "id": "4c6211ea-503c-42d3-867a-15d572430953",
+                "resourcePath": "objects\\o_chPoppy\\o_chPoppy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "15d6cfaa-0638-4510-9bf1-d3ebba89eaf3",
             "Value": {
                 "id": "efc87b10-10a1-4c27-9934-bd61ab021ff4",
@@ -2207,6 +2215,14 @@
             }
         },
         {
+            "Key": "21796959-ea63-4a7d-a5d9-638b645158f1",
+            "Value": {
+                "id": "c1197692-5729-41cb-a00d-75cb077aec83",
+                "resourcePath": "objects\\o_cts00_esc2_Samuel\\o_cts00_esc2_Samuel.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "217d9573-ee8c-446b-bd0e-1a6e52372019",
             "Value": {
                 "id": "81403b4e-00e4-4314-9392-829ad49f778c",
@@ -2679,6 +2695,14 @@
             }
         },
         {
+            "Key": "283cca5a-b775-4074-be80-0247436e5788",
+            "Value": {
+                "id": "6c4c3a7c-6f65-4582-ae9e-91775cea42d1",
+                "resourcePath": "views\\283cca5a-b775-4074-be80-0247436e5788.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "28bb6e72-dffa-4526-aab0-a4dfc16db198",
             "Value": {
                 "id": "7e59b1d7-330d-44be-993d-77b5b85d4a3b",
@@ -2836,6 +2860,14 @@
                 "id": "cb3b3cd8-e49d-42e7-9020-5f459337644e",
                 "resourcePath": "views\\2a429a1e-781c-4112-a336-bdc2239b66df.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2a97eeb1-05cc-4dfd-82ae-b214c11db5a1",
+            "Value": {
+                "id": "756d3b27-a68f-4c09-a270-d6f0f72cb578",
+                "resourcePath": "objects\\o_cts00_esc0_Introduction\\o_cts00_esc0_Introduction.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3092,6 +3124,14 @@
                 "id": "f701a31c-af1d-4cb7-85c0-774157cdc087",
                 "resourcePath": "sprites\\ssy_nodeAiGuard\\ssy_nodeAiGuard.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2d6db42e-c48e-4354-9097-4d6ab0c608f9",
+            "Value": {
+                "id": "8fd5d75e-a7d3-4d46-999c-9188ac1e1b0c",
+                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\11_samuel.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7127,6 +7167,14 @@
             }
         },
         {
+            "Key": "69de7858-92fd-426d-af0a-4e02fdbd70cc",
+            "Value": {
+                "id": "a66e2aa7-6044-4e33-85c5-50860f9b8972",
+                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\10_windmill.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "69e0711f-a359-45fe-8388-01af050b1243",
             "Value": {
                 "id": "f9469504-1ab8-4426-9a62-03e801d50041",
@@ -10159,6 +10207,14 @@
             }
         },
         {
+            "Key": "968c0cb9-f2f3-4920-8b57-d445b27ecff8",
+            "Value": {
+                "id": "5d98ca34-4bcc-45db-9aa0-7147cc139e7e",
+                "resourcePath": "objects\\o_chSamuel\\o_chSamuel.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "96f9e9bd-b74b-4a92-9fee-c34687a2d595",
             "Value": {
                 "id": "faf7ba1e-785a-40da-953f-b7eb6a870e1a",
@@ -10452,6 +10508,14 @@
                 "id": "eb3e3984-a6dd-4476-98b0-730169a2e74a",
                 "resourcePath": "fonts\\f_arvo8\\f_arvo8.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "9a2dbc9a-f1d7-497d-a52b-d6abdb3de7b7",
+            "Value": {
+                "id": "0cc5b7c0-58aa-43e2-ab64-0a0040eaef07",
+                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\00_entrance.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -16276,6 +16340,14 @@
                 "id": "85996e3e-2ce0-4064-b474-97be336bbe5a",
                 "resourcePath": "sprites\\s_propMetalSheet01\\s_propMetalSheet01.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ea7c254d-60cc-4792-8e53-0b9b5b0b8df8",
+            "Value": {
+                "id": "ebb2b6cc-998d-4c62-a340-838d37f6f12a",
+                "resourcePath": "objects\\o_cts00_esc1_Windmill\\o_cts00_esc1_Windmill.yy",
+                "resourceType": "GMObject"
             }
         },
         {

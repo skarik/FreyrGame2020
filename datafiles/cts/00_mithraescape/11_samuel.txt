@@ -1,0 +1,153 @@
+#begin
+
+#Initialize
+	goto_if_flag
+	{
+		target OnEnd
+		flag MithraEscape
+		compare !=
+		value 11
+	}
+	spawnstate
+	{
+		spawn sam
+		facing down
+		position 670 568
+	}
+	goto { target OnEnd }
+
+#OnBegin
+
+player { actions lock }
+screen { type ctsin }
+
+lines
+{
+	target samuel
+	1 I mean you no harm.
+}
+lines
+{
+	target Player
+	facing samuel
+	1 And what do you call what ya done? Kindness?
+}
+wait { type time; time 0.2s; }
+lines
+{
+	target samuel
+	1 Even the gracious and gentle rabbit will strike out when cornered.
+}
+lines
+{
+	target Player
+	facing samuel
+	1a Listen mate, I don't know who you think you are,$p but I didn't do anything.
+	1c You make it sound like I did something unsavory.
+	1p But I didn't corner any rabbits...
+}
+// Todo, chuckling Samuel
+wait { type time; time 0.5s; }
+lines
+{
+	target samuel
+	facing down
+	1 You managed to escape so soon, and came to face me.
+	2 And before,$p you easily dispatched my $1mercenaries$0 in the desert.
+}
+wait { type time; time 0.1s; }
+lines
+{
+	target samuel
+	facing up
+	1 Wouldn't $byou$$ perceive that as a threat?
+}
+
+lines
+{
+	target Player
+	facing samuel
+	1a All those green creeps were working for you?
+	1c Ah, I see. I'm assuming all those Gobbos were $1'protecting'$0 this city.
+	1p Oh. I didn't know they were protecting. They were just very angry at me, and very green. 
+}
+lines
+{
+	target samuel
+	facing player
+	1 They are easily persuaded with riches and food.
+	2 Although, thanks to you -
+	3 - Now they are a threat to anyone who travels outside the city.
+}
+lines
+{
+	target Player
+	facing samuel
+	1 So maybe you had a good reason to be suspicious of me -
+	2 -But that’s no reason to lock me up for the rest of my life!
+}
+lines
+{
+	target samuel
+	facing player
+	1 I had no intention of keeping you in there.$p I just wanted to $1judge$0 you.
+}
+emote
+{
+	target samuel
+	emote beat
+}
+wait { type time; time 0.4s; }
+lines
+{
+	target samuel
+	facing player
+	1 And considering your demonstrated aptitudes, I have a request.
+}
+
+lines
+{
+	target Player
+	facing samuel
+	1 A request?
+	2a You got some balls to ask me a favor after locking me up in that building.
+	2c I take it that it’s something your green goons couldn't do?
+	2p Mm, that's a really suspicious thing to say. 
+}
+lines
+{
+	target samuel
+	facing player
+	1 I understand that you believe I have absolutely no right to ask you -
+	2 - but considering you've indirectly put this town in danger, I would appreciate if you listened.
+	3 Of course I can't force you, so - it is your call.
+}
+ai
+{
+	target samuel
+	style cts
+	command move
+	position 666 217
+}
+wait
+{
+	type ai
+	target samuel
+	aiaction arrive
+}
+
+// Now we break it up, since we've been talking for a while
+
+#BeginningTheTask
+
+
+flags
+{
+	set MithraEscape 20
+}
+
+screen { type ctsout }
+player { actions unlock }
+
+#OnEnd
+#ended

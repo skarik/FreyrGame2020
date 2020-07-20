@@ -153,6 +153,8 @@ if (m_aipath_newpath && m_aipath_newpath_cooldown <= 0.0)
 	}
 }
 
+debugLine(x, y, next_x, next_y, c_red);
+
 // Update the control structs
 var t_arrivalDistance = min(16, kMoveSpeed / 12);
 if (ddist > t_arrivalDistance)
