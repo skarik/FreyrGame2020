@@ -5,7 +5,7 @@ event_inherited();
 
 #region Options
 
-m_name = "Small Note";
+m_name = "Old Road Marker";
 m_actionName = "Read";
 m_canPickUp = false;
 m_isSuperHeavy = false;

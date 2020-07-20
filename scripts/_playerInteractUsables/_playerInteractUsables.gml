@@ -26,7 +26,8 @@ if (!iexists(currentHeldUsable) || !m_isHolding)
 	with (ob_useable)
 	{
 		if (!m_usable) continue; // Skip unusable usables.
-		var useDistance = point_distance(x, y, useX, useY);
+		//var useDistance = point_distance(x, y, useX, useY);
+		var useDistance = distance_to_point(useX, useY);
 		if (useDistance < closestDistance)
 		{
 			other.currentUsable = id;

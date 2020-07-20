@@ -1,0 +1,8 @@
+#begin
+
+	lines
+	{
+	1 It's a weathered sandstone head. Could be hundreds of years old.
+	}
+
+#ended

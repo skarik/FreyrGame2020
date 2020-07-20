@@ -1,13 +1,15 @@
 #macro kTileIdInfoOffset 4096
 
-#macro kTileMaterial_Sand 1
-#macro kTileMaterial_Grass 2
-#macro kTileMaterial_Stone 3
-#macro kTileMaterial_Water 4
-#macro kTileMaterial_Tar 5
-#macro kTileMaterial_Wood 6
-#macro kTileMaterial_Dirt 7
-#macro kTileMaterial_Metal 8
+#macro kTileMaterial_None	0
+#macro kTileMaterial_Sand	1
+#macro kTileMaterial_Grass	2
+#macro kTileMaterial_Stone	3
+#macro kTileMaterial_Water	4
+#macro kTileMaterial_Tar	5
+#macro kTileMaterial_Wood	6
+#macro kTileMaterial_Dirt	7
+#macro kTileMaterial_Metal	8
+#macro kTileMaterial_Hay	9
 
 // Select correct tileset
 var tile_id = argument0;

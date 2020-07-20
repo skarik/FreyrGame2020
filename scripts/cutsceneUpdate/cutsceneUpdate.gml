@@ -1,12 +1,12 @@
-/// @description Cutscene_Update
+/// @description cutsceneUpdate()
 // Returns true if the cutscene is not being paused, false if it needs script input.
-
-global._cutscene_main = this;
 
 if (cutsceneIsDone())
 {
     return false;
 }
+
+global._cutscene_main = this;
 
 var entry_type = cts_entry_type[cts_entry_current];
 var entry = cts_entry[cts_entry_current];
@@ -78,6 +78,34 @@ case SEQTYPE_WAIT:
     }
     return false;
     
+case SEQTYPE_PLAYER:
+	var actions = entry[?0];
+	
+	var pl = getPlayer();
+	if (iexists(pl))
+	{
+		if (actions == kCtsPlayerActions_Lock)
+		{
+			pl.canMove = false;
+			pl.moEnabled = false;
+			pl.isPassthru = false;
+		}
+		else if (actions == kCtsPlayerActions_Unlock)
+		{
+			pl.canMove = true;
+			pl.moEnabled = true;
+			pl.isPassthru = true;
+		}
+	}
+	
+	// Debug output
+	debugOut("Doing player...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
 case SEQTYPE_LINES:
     if (cts_execute_state == 0)
     {
@@ -90,6 +118,12 @@ case SEQTYPE_LINES:
         
         var target_inst = instance_find(target, (style != kLinesStyle_Portrait) ? count : 0);
 		var l_organic = (ending == SEQEND_ORGANIC) || cts_organic;
+		
+		// style override
+		if (l_organic && style == kLinesStyle_Default)
+		{
+			style = kLinesStyle_Diagetic;
+		}
     
 		// FREYR SPECIFIC:
 		// Replace the line with the player gender-specific line if possible:
@@ -117,7 +151,7 @@ case SEQTYPE_LINES:
 	            gabber.input_priority = !l_organic;
 	            gabber.input_disable = l_organic;
 	            gabber.input_autoclose = (ending == SEQEND_AUTO);
-				gabber.input_minimal = l_organic;
+				gabber.input_minimal = false;
 		}
 		else if (style == kLinesStyle_Portrait)
 		{
@@ -125,6 +159,22 @@ case SEQTYPE_LINES:
 	            gabber.input_priority = !l_organic;
 	            gabber.input_disable = l_organic;
 	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+		}
+		else if (style == kLinesStyle_Diagetic)
+		{
+	        var gabber = ctsMakeGabber(target_inst, "", line);
+	            gabber.input_priority = false;
+	            gabber.input_disable = true;
+	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+				gabber.input_minimal = true;
+		}
+		else if (style == kLinesStyle_Tutorial)
+		{
+	        var gabber = ctsMakeGabber(target_inst, "", line);
+	            gabber.input_priority = !l_organic;
+	            gabber.input_disable = l_organic;
+	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+				gabber.input_minimal = l_organic;
 		}
             
 		// SILENT SKY SPECIFIC:
@@ -629,18 +679,31 @@ case SEQTYPE_AI:
 	break;
 	
 case SEQTYPE_SPAWNSTATE:
-
+	// Get all the params first
 	var facing = entry[?SEQI_FACING];
 	var spawnobject = entry[?SEQI_SPAWNSTATE_SPAWNOBJECT];
+	var spawnobject_unique = entry[?SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE];
 	var deleteobject = entry[?SEQI_SPAWNSTATE_DELETEOBJECT];
 	
-	if (iexists(spawnobject) || object_exists(spawnobject))
+	var position_special = entry[?SEQI_SPAWNSTATE_POS_SPECIAL];
+	var position_x = entry[?SEQI_SPAWNSTATE_POS_X];
+	var position_y = entry[?SEQI_SPAWNSTATE_POS_Y];
+	
+	if (position_special == kSpawnPositionNearby)
+	{
+		position_x = getPlayer().x + 16;
+		position_y = getPlayer().y;
+	}
+	
+	if (   (object_exists(spawnobject))
+		|| (!iexists(spawnobject_unique) && object_exists(spawnobject_unique))
+		)
 	{
 		var target_inst = instance_create_depth(
-			entry[?SEQI_SPAWNSTATE_POS_X],
-			entry[?SEQI_SPAWNSTATE_POS_Y],
+			position_x,
+			position_y,
 			0,
-			spawnobject);
+			object_exists(spawnobject_unique) ? spawnobject_unique : spawnobject);
 		
 		// Make the target face the input direction
         if (iexists(target_inst))
@@ -769,6 +832,15 @@ case SEQTYPE_WORLD:
 	{
 		worldEventCreate(arg);
 	}
+	else if (command = SEQWORLD_WAITFOR)
+	{
+		var wait_time = arg - o_dayNightCycle.m_timeOfDay;
+		if (wait_time < 0.0)
+		{
+			wait_time += 24.0;
+		}
+		gameCampWait(wait_time);
+	}
 	
 	// Debug out
 	debugOut("Doing world command [" + string(command) + "](" + string(arg) + ")");
@@ -808,6 +880,49 @@ case SEQTYPE_PORTRAIT:
 
 	// Debug out
 	debugOut("Doing portrait...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+	
+case SEQTYPE_GIVEITEM:
+	var target = entry[?SEQI_TARGET];
+	var from = entry[?SEQI_GIVEITEM_FROM];
+	var item_listing = entry[?SEQI_GIVEITEM_LISTING];
+	
+	var item_listing_len = array_length_1d(item_listing);
+	for (var i = 0; i < item_listing_len; ++i)
+	{
+		var t_itemEntry = item_listing[i];
+		
+		for (var i_item = 0; i_item < t_itemEntry[1]; ++i_item)
+		{
+			var t_item;
+			if (iexists(from))
+			{
+				t_item = instance_create_depth(from.x, from.y - from.m_standingHeight * 0.5 - from.z_height, from.depth - 8, t_itemEntry[0]);
+			}
+			else
+			{
+				t_item = instance_create_depth(target.x, target.y, target.depth - 8, t_itemEntry[0]);
+			}
+			with (t_item)
+			{
+				// Get picked up by the player!
+				m_isPickingUp = true;
+				m_pickupTarget = target;
+				m_pickupCooldown = kPickupTime * 3;
+	
+				m_pickupStartX = x;
+				m_pickupStartY = y;
+			}
+		}
+		
+	}
+
+	// Debug out
+	debugOut("Doing giveitem...");
 	
 	// We're done here. Onto the next event
 	cts_entry_current++;

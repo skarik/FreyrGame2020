@@ -78,6 +78,20 @@
             "value": "False",
             "varName": "m_pathForceStop",
             "varType": 3
+        },
+        {
+            "id": "81e5d945-b217-4610-bfd4-cacda993dea4",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "z",
+            "varType": 0
         }
     ],
     "solid": false,

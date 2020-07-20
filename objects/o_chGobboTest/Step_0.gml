@@ -3,6 +3,8 @@
 
 aiScriptableUpdate();
 
+// fade in
+image_alpha = saturate(image_alpha + Time.deltaTime * 1.7);
 
 // Inherit the parent event
 event_inherited();
@@ -21,3 +23,4 @@ if (m_aiCombat_angry || stats.m_health < stats.m_healthMax || stats.m_stun > 0 |
 	m_uiwantsStaminaShown = true;
 else
 	m_uiwantsStaminaShown = false;
+	

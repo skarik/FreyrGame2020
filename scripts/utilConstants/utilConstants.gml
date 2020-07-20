@@ -37,6 +37,9 @@
 #macro kEvent_DoorOpen1 1
 #macro kEvent_DoorClose2 2
 
-#macro kCompareLess 0
-#macro kCompareEqual 1
-#macro kCompareGreater 2
+#macro kCompareOpEqual 0
+#macro kCompareOpGreater 1
+#macro kCompareOpLess 2
+#macro kCompareOpGreaterEqual 3
+#macro kCompareOpLessEqual 4
+#macro kCompareOpNotEqual 5

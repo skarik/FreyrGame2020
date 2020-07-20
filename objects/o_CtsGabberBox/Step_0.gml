@@ -92,15 +92,18 @@ else
 // If the done button showing?
 if ( done_alpha > 0.5 && l_can_end )
 {
-    controlUpdate(false);
-    if ( useButton.pressed )
-    {
-        if (!input_fadeout)
-        {
-            input_fadeout = true;
-            faudio_play_sound(snd_UiMsgBlip, 50, false);
-        }
-    }   
+	if ( !input_disable && !input_minimal )
+	{
+	    controlUpdate(false);
+	    if ( useButton.pressed )
+	    {
+	        if (!input_fadeout)
+	        {
+	            input_fadeout = true;
+	            faudio_play_sound(snd_UiMsgBlip, 50, false);
+	        }
+	    }   
+	}
 }
 else
 {

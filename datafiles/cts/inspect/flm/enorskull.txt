@@ -1,0 +1,7 @@
+#begin
+lines
+	{
+		1 An enormous calcified skull. Whoever it belonged to died a long time ago. 
+		2 It is covered in talismans written with a delicate hand. 
+	}
+#end

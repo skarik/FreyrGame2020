@@ -82,6 +82,10 @@ with (ob_character)
 		// Modify damage based on armor
 		var actualDamage = damageApplyModifiers(id, damage, type);
 		
+		// Save dealt damage
+		source.m_dealtDamage = true;
+		source.m_dealtDamageList[array_length_1d(m_dealtDamage)] = id;
+		
 		// Perform damage
         stats.m_health -= actualDamage;
         

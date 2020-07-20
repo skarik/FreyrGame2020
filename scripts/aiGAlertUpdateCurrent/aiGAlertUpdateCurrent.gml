@@ -1,5 +1,5 @@
 var t_aiAlertNextArea = m_aialert_area;
-var t_aiAlertArea = collision_point(x, y, o_aiNotifyArea32, false, true);
+var t_aiAlertArea = collision_point(x, y, ob_areaAINotify, false, true);
 if (iexists(t_aiAlertArea))
 {
 	if (m_aialert_collidingArea != t_aiAlertArea)

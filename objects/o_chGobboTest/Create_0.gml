@@ -73,7 +73,7 @@ kAnimSignal = s_charGobbo0Point;
 m_team = kTeamGobbo;
 m_bloodType = kBloodRed;
 
-stats.m_health = 46.0;
+stats.m_health = 24.0;
 stats.m_healthMax = stats.m_health;
 stats.m_healthPrev = stats.m_health;
 
@@ -84,3 +84,5 @@ kAiScriptDefaultStyle = kAiStyle_Custom;
 m_aiCustom_Script = aiGobboPatrolUpdate;
 aiGobboPatrolInit();
 alarm[0] = 4;
+
+image_alpha = 0.0;

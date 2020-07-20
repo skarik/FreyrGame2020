@@ -1,0 +1,9 @@
+#begin
+
+	lines
+	{
+		1 The statue gives off an uncomfertable feeling. 
+		2 The inscription carved into the base reads "The King Keeper". 
+	}
+
+#ended

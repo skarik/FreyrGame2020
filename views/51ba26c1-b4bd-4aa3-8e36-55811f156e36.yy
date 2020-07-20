@@ -6,6 +6,9 @@
     "children": [
         "36647849-117c-4a35-b176-fa07f83a1d50",
         "5e11206d-e5e5-45e3-9c28-78210b320c4b",
+        "b32d74ae-e2cb-41a5-b223-d8fe263004d7",
+        "bf682030-dcfd-434d-ab7c-1fcec3b632fd",
+        "ad7df53b-3563-4114-b40e-1c0be9f0c49e",
         "495c5909-0dac-4032-b016-2e646490ce44",
         "2f4510af-6b75-42db-a401-9c1266a99eb6",
         "dbd123ba-4319-41df-8685-0455ca821a6f",
@@ -38,7 +41,11 @@
         "cce74a1a-5922-4931-ae2b-caf4c3cd75b7",
         "1c6e59e7-d145-4aaa-ab01-8888b4f28754",
         "23e1819a-480a-4622-845a-2c82fe29fd93",
-        "883ab0a1-7299-45c2-9568-bee7c4f7a8ba"
+        "883ab0a1-7299-45c2-9568-bee7c4f7a8ba",
+        "79991ad4-f054-4dbe-9cd8-af4f64153f24",
+        "ab9a926a-62bf-4ceb-8f0a-47d931e1ed49",
+        "fa26e8c5-2428-4d31-9527-38e15b451f4f",
+        "16278f49-5329-4ac8-bf5e-0382107e9466"
     ],
     "filterType": "GMSprite",
     "folderName": "mithra",

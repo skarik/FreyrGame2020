@@ -1,0 +1,2 @@
+/// @description Run cutscene
+cutsceneUpdate();

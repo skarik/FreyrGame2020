@@ -2,7 +2,7 @@
 /// @param node
 
 var sourceNode = argument0;
-var kMaxLinkDistance = 250;
+var kMaxLinkDistance = 400;
 
 with (sourceNode)
 {

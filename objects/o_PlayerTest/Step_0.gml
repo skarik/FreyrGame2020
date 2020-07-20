@@ -17,7 +17,7 @@ with (camera)
 {
 	camPlayerUpdate(
 		round(round(pl.x) + lengthdir_x(aimerDistance, pl.aimingDirection)),
-		round(round(pl.y) + lengthdir_y(aimerDistance, pl.aimingDirection) - pl.z_height),
+		round(round(pl.y) + lengthdir_y(aimerDistance, pl.aimingDirection) - pl.z_height + pl.moAnimationYOffset),
 		pl.xspeed,
 		pl.yspeed);
 }
@@ -30,6 +30,7 @@ if (m_aiScript_requestCommand == kAiRequestCommand_Teleport)
 	m_aiScript_requestCommand = null;
 	x = m_aiScript_requestPositionX;
 	y = m_aiScript_requestPositionY;
+	z = collision3_get_highest_position(x, y, z);
 	z_ready = false;
 }
 else if (m_aiScript_requestCommand == kAiRequestCommand_Face)

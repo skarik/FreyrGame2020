@@ -9,8 +9,7 @@
         "6f33053a-ffc0-4e90-8b9e-7c5222292ac4",
         "7f0cc697-be3f-4b01-a8a3-4ea21ec2d4d1",
         "8053711d-717e-4e67-b72c-98ee666f782d",
-        "ec23ee67-2e74-4744-93bf-236360271e0a",
-        "89bcd4f5-b47b-4758-9fa2-5463f8330001"
+        "ec23ee67-2e74-4744-93bf-236360271e0a"
     ],
     "filterType": "GMObject",
     "folderName": "Areas",

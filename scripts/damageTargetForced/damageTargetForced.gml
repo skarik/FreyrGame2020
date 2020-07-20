@@ -17,6 +17,10 @@ var hitShake = argument4;
 //if (!damageCanHit(target, source))
 //	return;
 
+// Save dealt damage
+m_dealtDamage = true;
+m_dealtDamageList[array_length_1d(m_dealtDamage)] = target;
+
 // Generate intersecting BB for the effect spawning
 var c_x1 = target.x-target.sprite_xoffset;
 var c_y1 = target.y-target.sprite_yoffset;

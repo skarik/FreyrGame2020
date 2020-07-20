@@ -1,9 +1,24 @@
 var pal_index = argument0;
 var pal_source = argument1;
 
+var kFilenameSprite3D = "palette"+string(pal_index)+"_0.png";
+var kFilenameSprite3D2 = "palette"+string(pal_index)+"_1.png";
+
 // Init starting sprites
 global.pal_sprite3d[pal_index] = null;
 global.pal_sprite3d2[pal_index] = null;
+global.pal_color[pal_index] = [];
+global.pal_width[pal_index] = 0;
+
+if (file_exists(kFilenameSprite3D) && file_exists(kFilenameSprite3D2))
+{
+	global.pal_sprite3d[pal_index] = sprite_add(kFilenameSprite3D, 0, 0, 0, 0, 0);
+	global.pal_sprite3d2[pal_index] = sprite_add(kFilenameSprite3D2, 0, 0, 0, 0, 0);
+	
+	global.pal_granularity = 8;
+	global.pal_lutWidth = 256 / global.pal_granularity;
+	return;
+}
 
 var palette_width = sprite_get_width(pal_source);
 
@@ -151,3 +166,7 @@ draw_set_alpha(1.0);
 }
 // clear drawing
 surface_free(palette_surface3d);
+
+// Save the files
+sprite_save(global.pal_sprite3d[pal_index], 0, kFilenameSprite3D);
+sprite_save(global.pal_sprite3d2[pal_index], 0, kFilenameSprite3D2);

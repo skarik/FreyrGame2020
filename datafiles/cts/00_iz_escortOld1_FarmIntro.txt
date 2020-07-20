@@ -7,6 +7,7 @@
 // 50 morning after
 // 55 waiting for response from OLD man
 // 60 wait to begin quest
+// 100 travelling across fool's march
 
 goto_if_flag
 {

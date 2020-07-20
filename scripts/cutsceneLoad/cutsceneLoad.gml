@@ -1,5 +1,5 @@
-/// @description Cutscene_Load(cutscene_file);
-/// @param cutscene_file
+/// @description cutsceneLoad(cutscene_file)
+/// @param cutscene_file {String} Filename in CTS directory.
 cutsceneInit();
 
 var filename = argument0;
@@ -16,14 +16,81 @@ var read_state = STATE_BEGIN;
 var read_object_type = SEQTYPE_NULL;
 var read_object_map = null;
 
+var read_state_line = "";
+var read_state_line_length = 0;
+var read_state_get_next_line = true;
+var read_state_cursor = 0;
+
 // Read in until EOF
 while (!file_text_eof(fp))
 {
-    var line = file_text_readln(fp);
+	if (read_state_get_next_line)
+	{
+		read_state_line = file_text_readln(fp);
+		read_state_line_length = string_length(read_state_line);
+		read_state_cursor = 1;
+		
+		read_state_get_next_line = false;
+	}
+	
+    /*var line = file_text_readln(fp);
     // Cut off the space from the start of it
     line = string_rtrim(string_ltrim(line));
     // Cut off any '//' that is found
-    line = string_rtrim_comment(line);
+    line = string_rtrim_comment(line);*/
+	
+	var line = "";
+#region Parse lines into virtual lines
+	// read past all the spaces until we hit a character
+	while (read_state_cursor <= read_state_line_length 
+		&& is_space(string_char_at(read_state_line, read_state_cursor)))
+	{
+		read_state_cursor++;
+	}
+	// empty line? 
+	if (read_state_cursor >= read_state_line_length)
+	{
+		read_state_get_next_line = true;
+	}
+	else
+	{
+		// read in the line we're looking at
+		while (read_state_cursor <= read_state_line_length
+			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 0) == "/" && string_char_at(read_state_line, read_state_cursor + 1) == "/")
+			&& string_char_at(read_state_line, read_state_cursor) != "\r"
+			&& string_char_at(read_state_line, read_state_cursor) != "\n"
+			&& string_char_at(read_state_line, read_state_cursor) != ";"
+			&& string_char_at(read_state_line, read_state_cursor) != "{"
+			&& string_char_at(read_state_line, read_state_cursor) != "}"
+			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 1) == "{")
+			&& !(read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 1) == "}")
+			)
+		{
+			line += string_char_at(read_state_line, read_state_cursor);
+			read_state_cursor++;
+		}
+		// Is the rest of the line bunk?
+		if ((read_state_cursor + 1 <= read_state_line_length && string_char_at(read_state_line, read_state_cursor + 0) == "/" && string_char_at(read_state_line, read_state_cursor + 1) == "/")
+			|| string_char_at(read_state_line, read_state_cursor) == "\r"
+			|| string_char_at(read_state_line, read_state_cursor) == "\n")
+		{
+			read_state_get_next_line = true;
+		}
+		// Is this a one-character stop and we need to force a move-on
+		if (string_length(line) == 0 && read_state_cursor <= read_state_line_length 
+			&& (string_char_at(read_state_line, read_state_cursor) == ";"
+			|| string_char_at(read_state_line, read_state_cursor) == "{"
+			|| string_char_at(read_state_line, read_state_cursor) == "}"))
+		{
+			line += string_char_at(read_state_line, read_state_cursor);
+			read_state_cursor++;
+		}
+	}
+	// Cut off any extra space that is hanging around that are not displayable
+	line = string_rtrim(string_ltrim(line));
+#endregion
+	//show_debug_message("source: " + string_rtrim(string_ltrim(read_state_line)));
+	//show_debug_message("parsed: " + line);
 
     if (read_state == STATE_BEGIN)
     {
@@ -131,6 +198,14 @@ while (!file_text_eof(fp))
 		else if (string_pos("portrait", line) == 1)
 		{
 			read_object_type = SEQTYPE_PORTRAIT;
+		}
+		else if (string_pos("giveitem", line) == 1)
+		{
+			read_object_type = SEQTYPE_GIVEITEM;
+		}
+		else if (string_pos("player", line) == 1)
+		{
+			read_object_type = SEQTYPE_PLAYER;
 		}
 		
         // If an object was read - prepare to read it in
@@ -241,6 +316,10 @@ while (!file_text_eof(fp))
 					style = kLinesStyle_Default;
 				else if (style == "portrait")
 					style = kLinesStyle_Portrait;
+				else if (style == "diegetic")
+					style = kLinesStyle_Diagetic;
+				else if (style == "tutorial")
+					style = kLinesStyle_Tutorial;
 				else
 					style = kLinesStyle_Default;
                     
@@ -682,6 +761,8 @@ while (!file_text_eof(fp))
 			{
 				var spawn_object = read_object_map[?"spawn"];
 				spawn_object = _cutsceneParseTarget(spawn_object);
+				var spawn2_object = read_object_map[?"spawn_ifunique"];
+				spawn2_object = _cutsceneParseTarget(spawn2_object);
 				var delete_object = read_object_map[?"delete"];
 				delete_object = _cutsceneParseTarget(delete_object);
 				
@@ -700,16 +781,24 @@ while (!file_text_eof(fp))
 					facing = _cutsceneParseTarget(facing);
 				
 				var position = ds_map_find_value(read_object_map, "position");
+				var position_special = kSpawnPositionNormal;
 				if (is_undefined(position))
 					position = "0 0";
+				else if (position == "nearby")
+				{
+					position = "0 0";
+					position_special = kSpawnPositionNearby;
+				}
 				var position_list = string_split(position, " ", true);
 				
 				var new_map = ds_map_create();
                 ds_map_add(new_map, SEQI_SPAWNSTATE_SPAWNOBJECT, spawn_object);
+				ds_map_add(new_map, SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE, spawn2_object);
 				ds_map_add(new_map, SEQI_SPAWNSTATE_DELETEOBJECT, delete_object);
 				ds_map_add(new_map, SEQI_FACING, facing);
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_X, real(position_list[0]));
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_Y, real(position_list[1]));
+				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_SPECIAL, position_special);
 				
 				// Delete original map
                 ds_map_destroy(read_object_map);
@@ -821,6 +910,7 @@ while (!file_text_eof(fp))
 				
 				var time = ds_map_find_value(read_object_map, "time");
 				var event = ds_map_find_value(read_object_map, "event");
+				var waitfor = ds_map_find_value(read_object_map, "waitfor");
 				if (!is_undefined(time))
 				{
 					if (time == "stop")
@@ -847,6 +937,16 @@ while (!file_text_eof(fp))
 					ds_map_add(new_map, SEQI_WORLD_COMMAND, SEQWORLD_EVENT);
 					ds_map_add(new_map, SEQI_WORLD_CMD_ARG, event);
 				}
+				else if (!is_undefined(waitfor))
+				{
+					if (waitfor == "night")
+						waitfor = 20.00;
+					else
+						waitfor = -1;
+					
+					new_map[?SEQI_WORLD_COMMAND] = SEQWORLD_WAITFOR;
+					new_map[?SEQI_WORLD_CMD_ARG] = waitfor;
+				}
 				
 				// Delete original map
                 ds_map_destroy(read_object_map);
@@ -854,6 +954,29 @@ while (!file_text_eof(fp))
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_WORLD;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_PLAYER)
+			{
+				var actions = read_object_map[?"actions"];
+				
+				if (is_undefined(actions)) actions = "none";
+				if (actions == "lock")
+					actions = kCtsPlayerActions_Lock;
+				else if (actions == "unlock")
+					actions = kCtsPlayerActions_Unlock;
+				else
+					actions = kCtsPlayerActions_None;
+				
+				var new_map = ds_map_create();
+				new_map[?0] = actions;
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_PLAYER;
                 cts_entry_count++;
 			}
 			else if (read_object_type == SEQTYPE_PORTRAIT)
@@ -935,6 +1058,75 @@ while (!file_text_eof(fp))
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_PORTRAIT;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_GIVEITEM)
+			{
+				var target = read_object_map[?"target"];
+				target = _cutsceneParseTarget(target);
+				var from = read_object_map[?"from"];
+				from = _cutsceneParseTarget(from);
+				
+				var item_listing = array_create(0);
+				{
+					var try, item_next = undefined, lookup;
+					try = 0;
+					lookup = "item";
+					do
+					{
+						item_next = read_object_map[?lookup];
+						if (!is_undefined(item_next))
+						{
+							// item_next is split into two values
+							var item_next_list = string_split(item_next, " ", true);
+							// Parse out item count
+							var item_count = 1;
+							if (array_length_1d(item_next_list) >= 2)
+							{
+								item_count = real(item_next_list[1]);
+							}
+							// Search for the item in the object listing
+							var item_name = string_lower(item_next_list[0]);
+							var item = null;
+							for (var i = 0; i < 9999; ++i)
+							{
+								if (object_exists(i))
+								{
+									var test_object_name = string_lower(object_get_name(i));
+									if (string_pos("o_pickup", test_object_name) != 0)
+									{
+										if (string_pos(item_name, test_object_name) != 0)
+										{
+											item = i;
+										}
+									}
+								}
+							}
+							if (item == null)
+							{
+								var error = "Could not find item id \"" + item_name + "\" in the bank. please check spelling";
+								show_error(error, false);
+								debugOut(error);
+							}
+							// Save item in the listing
+							item_listing[array_length_1d(item_listing)] = [item, item_count];
+						}
+						
+						lookup = "item" + string(try);
+						try++;
+					}
+					until (is_undefined(item_next));
+				}
+				
+				// Create the GOTO structure
+				var new_map = ds_map_create();
+				new_map[?SEQI_TARGET] = target;
+				new_map[?SEQI_GIVEITEM_FROM] = from;
+				new_map[?SEQI_GIVEITEM_LISTING] = item_listing;
+				
+				// Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_GIVEITEM;
                 cts_entry_count++;
 			}
 			

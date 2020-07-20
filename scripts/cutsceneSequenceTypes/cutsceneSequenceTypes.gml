@@ -18,6 +18,8 @@
 #macro SEQTYPE_PORTRAIT 13
 #macro SEQTYPE_COMPANION 14
 #macro SEQTYPE_SPAWNSTATE 15
+#macro SEQTYPE_GIVEITEM 16
+#macro SEQTYPE_PLAYER 17
 
 #macro SEQI_SIZE -1
 #macro SEQI_COUNT -1
@@ -37,6 +39,8 @@
 
 #macro kLinesStyle_Default 0
 #macro kLinesStyle_Portrait 1
+#macro kLinesStyle_Diagetic 2
+#macro kLinesStyle_Tutorial 3
 
 #macro SEQI_FACING_LEFT -1
 #macro SEQI_FACING_RIGHT 1
@@ -100,6 +104,7 @@
 #macro SEQI_WORLD_CMD_ARG -2
 #macro SEQWORLD_TIME 0
 #macro SEQWORLD_EVENT 1
+#macro SEQWORLD_WAITFOR 2
 
 #macro SEQI_PORTRAIT_INDEX -1
 #macro SEQI_PORTRAIT_ALIGNMENT -20
@@ -109,15 +114,20 @@
 #macro SEQI_PORTRAIT_SPRITE -16
 #macro SEQI_PORTRAIT_FACING -7
 
-#macro kCompareOpEqual 0
-#macro kCompareOpGreater 1
-#macro kCompareOpLess 2
-#macro kCompareOpGreaterEqual 3
-#macro kCompareOpLessEqual 4
-#macro kCompareOpNotEqual 5
-
 #macro SEQI_SPAWNSTATE_SPAWNOBJECT -11
 #macro SEQI_SPAWNSTATE_DELETEOBJECT -12
 #macro SEQI_SPAWNSTATE_POS_X -13
 #macro SEQI_SPAWNSTATE_POS_Y -14
 #macro SEQI_SPAWNSTATE_POS_Z -15
+#macro SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE -16
+#macro SEQI_SPAWNSTATE_POS_SPECIAL -17
+
+#macro SEQI_GIVEITEM_FROM -20
+#macro SEQI_GIVEITEM_LISTING -21
+
+#macro kSpawnPositionNormal 0
+#macro kSpawnPositionNearby 1
+
+#macro kCtsPlayerActions_None 0
+#macro kCtsPlayerActions_Lock 1
+#macro kCtsPlayerActions_Unlock 2

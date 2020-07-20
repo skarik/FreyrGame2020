@@ -1,0 +1,337 @@
+#begin
+// List of various talking cts
+// IntroSequence == 100
+// 30 pre farm
+// 40 post farm
+// 50 morning after
+// 55 waiting for response from OLD man
+// 60 wait to begin quest
+// 100 travelling across fool's march
+// 1000 done
+
+#Initialize
+	goto_if_flag
+	{
+		target OnEnd
+		flag IntroSequence
+		compare !=
+		value 100
+	}
+	spawnstate
+	{
+		spawn_ifunique old
+		position nearby
+	}
+	companion
+	{
+		target old
+		party add
+	}
+	ai // force it again
+	{
+		target old
+		style follow
+		command start
+	}
+	goto { target OnEnd }
+
+#OnSeeGobbo
+	lines
+	{
+		target	old
+		facing	player
+		1 Careful, there's one of them Gobbos up there.
+	}
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Sneak up and take care of 'em!
+	}
+	goto { target OnEnd }
+
+#OnBeatGobbo
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Nice moves, blondie!
+		2 I can barely pick up a staff myself anymore.
+		3 You've a mighty fine style.
+	}
+	goto { target OnEnd }
+	
+#OnPostCombat0
+	wait
+	{
+		type playerdistance
+		target old
+		distance 80
+	}
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 I remember when people would travel the desert unhindered.
+	}
+	goto { target OnEnd }
+	
+#OnPostCombat1
+	wait
+	{
+		type playerdistance
+		target old
+		distance 80
+	}
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 I don't know where all these Gobbos came from.
+		2 They weren't always so aggressive.
+	}
+	goto { target OnEnd }
+	
+#OnPostCombat2
+	wait
+	{
+		type playerdistance
+		target old
+		distance 80
+	}
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 I used to be pretty handy at magic back in my young days.
+		2 Don't have the stamina for it now. 
+	}
+	goto { target OnEnd }
+
+#OnIdle0
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 I hope the Goddess brings us a good heavy wet season.
+	}
+	goto { target OnEnd }
+	
+#OnIdle1
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Lack of sleep from the nightmares doesn't make this trek any easier. 
+	}
+	goto { target OnEnd }
+	
+#OnIdle2
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 I once saw a person-shaped rock wandering around here.
+		2 Ran off before I could talk to them.
+	}
+	goto { target OnEnd }
+	
+#OnIdle3
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Watch your step! Sometimes sandpits open to the bottom of the world.
+	}
+	goto { target OnEnd }
+	
+#OnIdle4
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Although it's barren, parts of Fool's March are quite beautiful.
+	}
+	goto { target OnEnd }
+	
+#OnPassIconolith
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 You'd do well to ask the Goddess to protect you from evil spirits entering your dreams.
+	}
+	goto { target OnEnd }
+	
+#OnIdleAtStatue
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Unsettling statue, that.
+	}
+	goto { target OnEnd }
+	
+#OnInspectStatue
+	lines
+	{
+		target	old
+		facing	player
+		1 Wouldn't be askin' much of that, nothing but bad luck.
+	}
+	goto { target OnEnd }
+	
+#OnShortRest
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Please bless us and grant us a safe journey.
+	}
+	goto { target OnEnd }
+	
+#OnLongRest0
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 May the Goddess protect us until dawn.
+	}
+	goto { target OnEnd }
+#OnLongRest1
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 May the Goddess ward off Motses until dawn.
+	}
+	goto { target OnEnd }
+#OnLongRest2
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 May Motses go after the other monsters this night.
+	}
+	goto { target OnEnd }
+	
+#OnApproachingMithra
+	lines
+	{
+		target	old
+		facing	player
+		style diegetic
+		1 Mithra has a lovely bar. I might stop there before doing trading.
+	}
+	goto { target OnEnd }
+	
+#OnReachMithra
+	lines
+	{
+		target	old
+		facing	player
+		1 Ah, Mithra at last!
+		2 I am glad you decided to help me. I might not have made it back. 
+	}
+	choice
+	{
+		target player
+		1 (Play it off)
+		1goto OnReachMithra_PlayItOff
+		2 (Ask for payment)
+		2goto OnReachMithra_AskForPayment
+	}
+	#OnReachMithra_PlayItOff
+		lines
+		{
+			target	player
+			facing	old
+			1a A bit dry, but enjoyed the, uh, new experience.
+			1 Well, figured I'd stretch my legs.
+		}
+		lines
+		{
+			target	old
+			facing	player
+			1 A bit more than stretching your legs, there. I owe you some trade.
+			2 I've a bit left over on me, but it should be about what I owe you.
+		}
+		goto
+		{
+			target OnReachMithra_AfterChoice
+		}
+	#OnReachMithra_AskForPayment
+		lines
+		{
+			target	player
+			facing	old
+			1a Hey, I ain't a free escort service!
+			1c Glad my help was $hworth$$ something.
+			1p So, about payment...
+		}
+		lines
+		{
+			target	old
+			facing	player
+			1 Yeah, yeah. 
+			2 I've a bit left over on me. It should be about what I owe you.
+		}
+		goto
+		{
+			target OnReachMithra_AfterChoice
+		}
+	#OnReachMithra_AfterChoice
+		giveitem
+		{
+			target	player
+			from	old
+			item Res_Gear 15
+			item Res_Bolt 10
+			item Res_VoidShard 1
+		}
+		lines
+		{
+			target	old
+			facing	player
+			1 Now, I've got a bar to hit!
+			2a See you around, lass!
+			2c See you around, partner!
+			2p See you around, friend!
+		}
+		signal
+		{
+			type input
+			id OnReachMithra_ShowSuccess
+		}
+		ai // move the old man into town center (TODO: make him go into bar)
+		{
+			target old
+			style cts
+			command move
+			position 1800 1250
+		}
+		flags
+		{
+			set IntroSequence 1000
+		}
+	goto { target OnEnd }
+
+#OnEnd
+
+#ended

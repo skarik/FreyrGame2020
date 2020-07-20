@@ -10,3 +10,5 @@
 
 #macro kQidDeathtarDeaths		5
 #macro kQidViggoDeathtarTalk	6
+
+#macro kQidMithraEscape			7
