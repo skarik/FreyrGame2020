@@ -71,6 +71,34 @@ case SEQTYPE_WAIT:
 				}
 			}
 		}
+		else if (type == SEQWAIT_TALKTO)
+		{
+			var target = entry[?SEQI_TARGET];
+			var target = instance_find(target, 0);
+		
+			if (iexists(target))
+			{
+				// First state: clobber the state
+				if (cts_execute_state == 1)
+				{
+					target.m_interactionFile = "";
+					target.m_interactChoices = 0;
+				
+					cts_execute_state = 2;
+				}
+				// Second state: wait for interaction
+				else if (cts_execute_state == 2)
+				{
+					if (target.m_wasInteracted)
+					{
+						target.m_wasInteracted = false;
+					
+						cts_entry_current++;
+						cts_execute_state = 0;
+					}
+				}
+			}
+		}
         else
         {
             // We don't do anything...
@@ -89,6 +117,13 @@ case SEQTYPE_PLAYER:
 			pl.canMove = false;
 			pl.moEnabled = false;
 			pl.isPassthru = false;
+			
+			pl.xspeed = 0.0;
+			pl.yspeed = 0.0;
+			pl.zspeed = 0.0;
+			pl.z_height = 0.0;
+			pl.isDashing = false;
+			pl.isAttacking = false;
 		}
 		else if (actions == kCtsPlayerActions_Unlock)
 		{

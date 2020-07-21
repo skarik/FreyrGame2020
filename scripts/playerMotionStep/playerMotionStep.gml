@@ -27,3 +27,9 @@ if (moEnabled)
 		_playerMotionNormal();
 	}
 }
+else
+{
+	xspeed = 0.0;
+	yspeed = 0.0;
+	zspeed = 0.0; // ????
+}

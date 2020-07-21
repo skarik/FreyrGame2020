@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "02837a12-d6e3-4de4-a438-7b428ddebe28",
+            "Value": {
+                "id": "19b34520-55da-4406-83c1-d993211a9f9f",
+                "resourcePath": "objects\\o_cts00_esc2_Samuel_2\\o_cts00_esc2_Samuel_2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "029b49f7-d402-4e8b-8d78-f30d517de5ea",
             "Value": {
                 "id": "0b14a79a-e1e6-4ced-b4cd-7844288a2315",
@@ -996,6 +1004,14 @@
                 "id": "f85d0090-88cf-4086-bd64-ccce6cb07e7d",
                 "resourcePath": "scripts\\_playerInteractBuildables\\_playerInteractBuildables.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "10b08ca6-7b5a-4251-8fac-3c8b125fdf83",
+            "Value": {
+                "id": "b062abea-f1f0-429a-9825-1dbda44219ed",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\20_samuel.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3130,7 +3146,7 @@
             "Key": "2d6db42e-c48e-4354-9097-4d6ab0c608f9",
             "Value": {
                 "id": "8fd5d75e-a7d3-4d46-999c-9188ac1e1b0c",
-                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\11_samuel.txt.yy",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\11_samuel.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -3556,6 +3572,14 @@
                 "id": "e0f5cf60-dc19-4f7d-997f-060245ca82d9",
                 "resourcePath": "sounds\\snd_UIOnUse\\snd_UIOnUse.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "33e7212f-f511-4abd-80c7-d4cd1e28a1df",
+            "Value": {
+                "id": "1f03cfe5-4c2d-4f0f-9dcd-241df2809d1e",
+                "resourcePath": "objects\\o_cts00_esc2_Poppy\\o_cts00_esc2_Poppy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7178,7 +7202,7 @@
             "Key": "69de7858-92fd-426d-af0a-4e02fdbd70cc",
             "Value": {
                 "id": "a66e2aa7-6044-4e33-85c5-50860f9b8972",
-                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\10_windmill.txt.yy",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\10_windmill.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -8268,6 +8292,14 @@
                 "id": "8ef8c1f2-ee39-448b-83cf-212479d1fc7b",
                 "resourcePath": "sprites\\s_assetTWindow0\\s_assetTWindow0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7989d383-bb7d-4d0a-ab2c-c4c0cef5eb45",
+            "Value": {
+                "id": "9d25d6bf-e647-45f7-9523-0ee197304711",
+                "resourcePath": "views\\7989d383-bb7d-4d0a-ab2c-c4c0cef5eb45.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -10538,7 +10570,7 @@
             "Key": "9a2dbc9a-f1d7-497d-a52b-d6abdb3de7b7",
             "Value": {
                 "id": "0cc5b7c0-58aa-43e2-ab64-0a0040eaef07",
-                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\00_entrance.txt.yy",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\00_entrance.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -14444,6 +14476,14 @@
                 "id": "0b850c64-e7ce-4504-a9a4-0a726d49a72a",
                 "resourcePath": "sprites\\s_propCrate\\s_propCrate.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d0637bea-ef20-49b8-9f71-be43a7a7e4db",
+            "Value": {
+                "id": "53b8ac70-3473-4c95-8667-f9d69dcdd3af",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\21_poppy.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

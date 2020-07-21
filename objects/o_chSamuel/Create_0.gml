@@ -28,5 +28,17 @@ kAiFollowHideDuringCombat = true; // Definitely hide during combat
 
 #endregion
 
+kKickbackAmount = 1.0;
+
+kMoveSpeed = 100;//120;
+kMoveSpeedStunPercent = 0.05;
+kMoveSpeedWaterPercent = 0.50;
+kMoveSpeedTarPercent = 0.20;
+
+kMoveAcceleration = 400;//800;
+kMoveAccelerationStop = 500;
+kMoveAccelerationAir = 200;
+kMoveAccelerationAirStop = 10;
+
 //kAnimStanding = s_charViggoStand;
 //kAnimWalking = s_charNathanWalk;
