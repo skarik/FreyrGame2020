@@ -17415,6 +17415,14 @@
             }
         },
         {
+            "Key": "f949203d-a693-48f8-a3f3-1667c64e8917",
+            "Value": {
+                "id": "a7fb34c2-38fc-438f-80c0-3ed1bc59e06d",
+                "resourcePath": "scripts\\surface_free_if_exists\\surface_free_if_exists.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9586c3e-13b2-4496-9463-c890bc95d28e",
             "Value": {
                 "id": "7d2abecb-a3aa-4a9a-bd57-b6ce94825c5d",
@@ -18095,6 +18103,7 @@
         "35a0c59a-d22b-4bd1-8c2f-73034c2dcb2f",
         "c676649c-6bae-4657-8846-f81f78f9c4ba",
         "44297038-11f0-4b5d-9a3c-c9ad19bf8a1a",
+        "f949203d-a693-48f8-a3f3-1667c64e8917",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "f71cb40d-971c-44a4-8c3f-33e43f46567b",
         "24ac4ceb-2490-41d2-9219-f66823e9271c",
