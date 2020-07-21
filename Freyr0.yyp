@@ -8255,6 +8255,14 @@
             }
         },
         {
+            "Key": "79835f95-6408-4a99-b2be-b50acb3c6f30",
+            "Value": {
+                "id": "7a805f9d-24fc-4b75-b33f-37ad26d9b446",
+                "resourcePath": "sprites\\s_propMotsesStatue\\s_propMotsesStatue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7986eeec-ca22-4172-99f1-17dda24e93d4",
             "Value": {
                 "id": "8ef8c1f2-ee39-448b-83cf-212479d1fc7b",
