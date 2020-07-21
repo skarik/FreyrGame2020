@@ -167,12 +167,14 @@ _playerInteractItems(l_canMove && !inDelayFrame);
 _playerInteractItemsKeySlot(l_canMove && !inDelayFrame);
 _playerInteractItemsRuneSlot(l_canMove && !inDelayFrame);
 
-var belt;
+var belt = null;
 if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(inventory.belt))
+{
 	belt = inventory.belt[inventory.belt_selection];
-else
-	belt = null;
-if (belt != null && belt.type == kItemPickupSeed) {
+}
+
+if (m_isPlanting || (belt != null && belt.type == kItemPickupSeed))
+{
 	_playerInteractPlantables(l_canMove && onGround && !inDelayFrame);
 }
 
