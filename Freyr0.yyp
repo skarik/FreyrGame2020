@@ -3967,6 +3967,14 @@
             }
         },
         {
+            "Key": "39372cd0-0bba-4f8e-a98b-ad00f20fb4b6",
+            "Value": {
+                "id": "d2acfcaf-c066-4757-8f03-4fca5be4b9f1",
+                "resourcePath": "datafiles_yy\\cts\\08_huntdownnathan\\placeholder.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "395bc281-6c8f-4449-936e-a5b698d59346",
             "Value": {
                 "id": "d92c21c7-889f-4408-8444-8edf6306ea17",

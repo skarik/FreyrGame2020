@@ -44,19 +44,28 @@ if ( current_display_delay <= 0.0 )
     for (var i = previous_display_count; i < index; ++i)
     {
         // Do character-based updates
-        if ( display_flags[ceil(i)] == ord("p") )
-            current_display_delay = 0.5; // Wait for half a second
-		if ( display_flags[ceil(i)] == ord("k") )
-			current_display_letterShake = true;
-		if ( display_flags[ceil(i)] == ord("$") )
+		var flags = display_flags[ceil(i)];
+		if (is_array(flags))
 		{
-			current_display_letterShake = false;
+			var flags_len = array_length_1d(flags);
+			for (var iFlag = 0; iFlag < flags_len; ++iFlag)
+			{
+				var flag = flags[iFlag];
+		        if ( flag == ord("p") )
+		            current_display_delay = 0.5; // Wait for half a second
+				if ( flag == ord("k") )
+					current_display_letterShake = true;
+				if ( flag == ord("$") )
+				{
+					current_display_letterShake = false;
+				}
+			}
 		}
 		
 		// Yes, do character based updates
 		if (current_display_letterShake)
 		{
-			effectScreenShake(1.0, 0.05, false);
+			effectScreenShake(2.0, 0.05, false);
 		}
 		
 		// Play sound on a new character

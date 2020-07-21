@@ -29,7 +29,7 @@ if (moEnabled)
 }
 else
 {
-	xspeed = 0.0;
-	yspeed = 0.0;
-	zspeed = 0.0; // ????
+	//xspeed = 0.0;
+	//yspeed = 0.0;
+	//zspeed = 0.0; // ???? breaks cutscenes
 }

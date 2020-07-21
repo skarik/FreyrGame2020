@@ -244,7 +244,7 @@ lines
 	1c So uh$p, I don't usually drop from the sky too often.$p Or at least, not where anyone can see.
 	2c Assuming I did...$pnot too bad of a first choice.$p Who exactly are you?
 	
-	1a $b $s $kOi!$$ Don't baby me!$p I can put on me own bandage!
+	1a $b$s$kOi!$$ Don't baby me!$p I can put on me own bandage!
 	2a Who d'ya think yah are?
 	
 	1p U-$puh t-$pthank you so much! I have no idea what happened.
