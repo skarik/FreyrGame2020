@@ -1,0 +1,11 @@
+#begin
+
+	lines
+	{
+		1 All the pews are worn.  
+		2 The people of Mithra appear to have a feverent respect for the Goddess. 
+		3 $pOr maybe it was fear$$. 
+				
+	}
+
+#ended

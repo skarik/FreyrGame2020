@@ -1,0 +1,11 @@
+#begin
+
+	lines
+	{
+		1 It isn't very well crafted. 
+		2 Whoever made it was trying to copy the much larger one in the room.
+		3 Although it can't possibly match up, there is still something endearing about it. 
+		4 The Goddess would appreciate the effort. 
+	}
+
+#ended

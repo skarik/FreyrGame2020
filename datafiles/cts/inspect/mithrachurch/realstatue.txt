@@ -1,0 +1,12 @@
+#begin
+
+	lines
+	{
+		1 There is an inscription at the bottom. You only recognize two words $k$pWolf $pGoddess$$.
+       		2 Education on Primo prepared you for languages of all kinds, but this one was old. 
+       		3 This was the closest depiction to her seen in historical documents. 
+        	4 The one displayed before the pews was a fake. 
+
+	}
+
+#ended

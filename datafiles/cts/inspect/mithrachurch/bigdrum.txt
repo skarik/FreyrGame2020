@@ -1,0 +1,8 @@
+#begin
+
+	lines
+	{
+		1 It's a big drum called a Taiko.  
+	}
+
+#ended
