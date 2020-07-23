@@ -8,7 +8,7 @@
 var respawn_which = argument0;
 
 // Spawn the enemies
-with (o_spawnerBase)
+with (ob_spawner)
 {
 	if (!m_spawnOnlyOnTrigger)
 	{

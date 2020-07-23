@@ -6,6 +6,21 @@
 //stats.m_health = 24.0;
 //m_aiCombat_angry = false;
 
+// Update health showing
+{
+	var pl = getPlayer();
+	var pl_dist = 1000000.0;
+	if (iexists(pl))
+	{
+		pl_dist = sqr(x - pl.x) + sqr(y - pl.y);
+	}
+	
+	if (m_aiCombat_angry || stats.m_health < stats.m_healthMax || pl_dist < sqr(48)) 
+		m_uiwantsHealthShown = true;
+	else
+		m_uiwantsHealthShown = false;
+}
+
 //
 // Perform alert checks:
 

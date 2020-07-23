@@ -17586,7 +17586,7 @@
             "Key": "faf99f12-2dce-47f4-b507-ddbe423b66d9",
             "Value": {
                 "id": "64c80e91-1c34-4bbf-8d6f-2582acc29562",
-                "resourcePath": "objects\\o_spawnerBase\\o_spawnerBase.yy",
+                "resourcePath": "objects\\ob_spawner\\ob_spawner.yy",
                 "resourceType": "GMObject"
             }
         },
