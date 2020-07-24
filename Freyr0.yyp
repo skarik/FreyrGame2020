@@ -3103,6 +3103,14 @@
             }
         },
         {
+            "Key": "2ce7d61f-cc08-44eb-ad2e-09ad4f5d24a1",
+            "Value": {
+                "id": "ffabfd5b-93a6-4c1e-94d5-d462a6d1b5a0",
+                "resourcePath": "scripts\\aiNPCGuardInit\\aiNPCGuardInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2cf9f1fe-823a-4266-a60a-18bb96cfe9c5",
             "Value": {
                 "id": "717dd9b7-0671-45ed-b093-4784aa467b9d",
@@ -13903,6 +13911,14 @@
             }
         },
         {
+            "Key": "c7cabce6-dc6d-4fae-8ec6-9e8bea68f840",
+            "Value": {
+                "id": "d5d413d0-2d5d-4d75-a005-b03e1f1ca51f",
+                "resourcePath": "scripts\\aiNPCGuardInitDelayed\\aiNPCGuardInitDelayed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c7fa129d-8991-4bb2-8f1c-c7f35148eb64",
             "Value": {
                 "id": "f32d75a5-e2dc-4640-ae5a-c413ce91ba12",
@@ -16799,6 +16815,14 @@
             }
         },
         {
+            "Key": "f09daa26-81cc-4091-a47c-47af0ff9d283",
+            "Value": {
+                "id": "06824cf7-df5c-4f52-97d0-97a77130e88d",
+                "resourcePath": "scripts\\aiNPCGuardUpdate\\aiNPCGuardUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f0a80e06-3c16-437a-8f78-47eaed48a746",
             "Value": {
                 "id": "bab5b642-21c2-48a8-b049-9ea49797f999",
@@ -18532,6 +18556,9 @@
         "d7dc3a9b-9a3b-47d0-bb61-ffaf5cc6adc9",
         "bf881278-c148-47f4-ab9b-0d789f461976",
         "9a87ef17-5766-4230-9531-1648752f395a",
+        "2ce7d61f-cc08-44eb-ad2e-09ad4f5d24a1",
+        "c7cabce6-dc6d-4fae-8ec6-9e8bea68f840",
+        "f09daa26-81cc-4091-a47c-47af0ff9d283",
         "1baf96de-1feb-4ba4-b39a-5ed3be46d4b5",
         "930ee58e-d0dd-4560-95a0-0908ec2ac30d",
         "6dda03f6-f598-4aa5-9a1d-12c38ae05114",

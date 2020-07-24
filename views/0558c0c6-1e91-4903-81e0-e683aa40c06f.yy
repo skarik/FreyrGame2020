@@ -6,7 +6,10 @@
     "children": [
         "d7dc3a9b-9a3b-47d0-bb61-ffaf5cc6adc9",
         "bf881278-c148-47f4-ab9b-0d789f461976",
-        "9a87ef17-5766-4230-9531-1648752f395a"
+        "9a87ef17-5766-4230-9531-1648752f395a",
+        "2ce7d61f-cc08-44eb-ad2e-09ad4f5d24a1",
+        "c7cabce6-dc6d-4fae-8ec6-9e8bea68f840",
+        "f09daa26-81cc-4091-a47c-47af0ff9d283"
     ],
     "filterType": "GMScript",
     "folderName": "Basic NPC AI",
