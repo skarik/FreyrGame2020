@@ -52,6 +52,18 @@ if (_itemIsSelected && _itemUiCategory == kItemUiCategoryBelt)
 			l_drawWill = true;
 			l_willValue = 1 * 40;
 			break;
+			
+				case o_pickupCons_CactusJizz:
+			l_drawHealth = true;
+			l_healthValue = -7;
+			l_drawWill = true;
+			l_willValue = 1 * 90;
+			break;
+		
+		case o_pickupCons_ScorpJuice:
+			l_drawHealth = true;
+			l_healthValue = 3;
+			break;
 	}
 
 	if (l_drawHealth)
