@@ -13575,6 +13575,14 @@
             }
         },
         {
+            "Key": "c3ea7a92-9f53-4b62-9918-789289475f44",
+            "Value": {
+                "id": "2658a870-5bd3-4895-97e0-526a8b86e33c",
+                "resourcePath": "objects\\o_pickupCons_ScorpJuice\\o_pickupCons_ScorpJuice.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c3edd887-4b61-48a2-b9a9-6f355cf9a470",
             "Value": {
                 "id": "2bb6d71d-25f4-4829-9bca-3d5cb0d871e7",
@@ -13863,6 +13871,14 @@
             }
         },
         {
+            "Key": "c7338598-bef4-4506-9a13-4ed6ca7d1400",
+            "Value": {
+                "id": "79132dbb-a561-4260-86c5-51da2ec15043",
+                "resourcePath": "objects\\o_pickupCons_CactusJizz\\o_pickupCons_CactusJizz.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c780047d-856a-4043-a020-2ed7f760f40c",
             "Value": {
                 "id": "dda4c7ee-ab23-4a8b-9fea-88be891b1e83",
@@ -13908,6 +13924,14 @@
                 "id": "87fd9615-f383-4c95-8b5b-5bf6fa0113fe",
                 "resourcePath": "objects\\o_pickupSeed_Tea\\o_pickupSeed_Tea.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c7bdfc78-0c7f-4b00-ba51-aa7adc50f70b",
+            "Value": {
+                "id": "7a0ae6ae-b43c-4041-b286-3b3c149a6280",
+                "resourcePath": "sprites\\s_itemCactusJizz\\s_itemCactusJizz.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -16764,6 +16788,14 @@
                 "id": "29cb9927-19eb-469a-952e-21b23d2466a1",
                 "resourcePath": "scripts\\gameCampUntilMorning\\gameCampUntilMorning.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ef732bba-451f-4a7b-8d3a-aa12b821f146",
+            "Value": {
+                "id": "80b00925-6871-4a4c-b4c1-b9636346b1a4",
+                "resourcePath": "sprites\\s_itemScorpJuice\\s_itemScorpJuice.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
