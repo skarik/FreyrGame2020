@@ -270,7 +270,7 @@ else
 		{
 			m_aiCombat_deaggroTimer += Time.deltaTime * 2.0;
 		
-			if (m_aiCombat_deaggroTimer > 2.0 // Deaggro after 2 seconds of lost target
+			if (m_aiCombat_deaggroTimer > kAiCombat_DeAggroTime // Deaggro after 2 seconds of lost target
 				|| forced_deaggro)
 			{
 				// Create the ? emote

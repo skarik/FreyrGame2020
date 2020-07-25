@@ -123,10 +123,25 @@ else
 			m_aiNPC_alertTimer += Time.deltaTime;
 			
 			// Investigate after time
-			if (m_aiNPC_alertTimer >= 1.5)
+			if (m_aiNPC_alertTimer >= 2.0)
 			{
-				m_aiNPC_alertTimer = 0.0;
-				m_aiNPC_alertState = kAiNPCAlertState_Investigate;
+				// If target visible at this point, then we aggro
+				if (m_aiCombat_targetVisible)
+				{
+					// Create the ? emote
+					var emote_fx = inew(o_fxEmote);
+						emote_fx.m_target = id;
+						emote_fx.image_index = 2;
+						
+					// Force angry now
+					m_aiCombat_angry = true;
+				}
+				// Otherwise we go investigate
+				else
+				{
+					m_aiNPC_alertTimer = 0.0;
+					m_aiNPC_alertState = kAiNPCAlertState_Investigate;
+				}
 			}
 		}
 		else if (m_aiNPC_alertState == kAiNPCAlertState_Investigate)
@@ -162,7 +177,7 @@ else
 			}
 			m_aiNPC_alertTimer += Time.deltaTime;
 			
-			if (m_aiNPC_alertTimer < 1.5)
+			if (m_aiNPC_alertTimer < kAiCombat_DeAlertTime)
 			{
 				aimotionFaceAtDirection(m_aiNPC_alertFacing, 360);
 			}
@@ -181,6 +196,41 @@ else
 			m_aiNPC_alertState = kAiNPCAlertState_Notice;
 			m_aiNPC_alertTimer = 0.0;
 		}
+		
+		// If lost track for 5 seconds, go back to not aggro
+		if (m_aiCombat_targetTrackingLossTime > kAiCombat_DeAggroTime)
+		{
+			// Create the ? emote
+			var emote_fx = inew(o_fxEmote);
+				emote_fx.m_target = id;
+				emote_fx.image_index = 1;
+				
+			m_aiCombat_angry = false;
+			m_aiCombat_alerted = true;
+			m_aiNPC_alertPosition = m_aiCombat_targetPosition; // Update the alert position
+		}
+		
+		// For now, just have them seek out the player
+		var dist = point_distance(x, y, m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+		if (dist > 20)
+		{
+			aipathMoveTo(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+		}
+		else
+		{
+			_controlStructUpdate(xAxis, 0.0);
+			_controlStructUpdate(yAxis, 0.0);
+			
+			// TOOD: Proper attack. Right now it's insta-death which isn't good
+			if (m_aiCombat_targetVisible && iexists(m_aiCombat_target))
+			{
+				if (m_aiCombat_target.stats.m_health > 0)
+				{
+					m_aiCombat_target.stats.m_health -= m_aiCombat_target.stats.m_healthMax;
+				}
+			}
+		}
+		
 	}
 	
 	// If not angry, do notice checks

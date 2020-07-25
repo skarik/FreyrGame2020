@@ -45,11 +45,11 @@ var t_nextTarget = null;
 	else if (iexists(m_aiCombat_target)
 		&& !m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed)
 	{
+		m_aiCombat_targetVisible = false;
 		m_aiCombat_targetTrackingLossTime += Time.deltaTime;
+		
 		if (m_aiCombat_targetTrackingLossTime > 1.0) // Lost tracking for 1 second
-		{
-			m_aiCombat_targetVisible = false;
-			
+		{			
 			// Lost target, look for new target.
 			if (m_aiCombat_target != t_nextTarget
 				&& (iexists(t_nextTarget) || m_aiCombat_targetTrackingLossTime > 3.0)
@@ -63,8 +63,8 @@ var t_nextTarget = null;
 	// If is dead, immediately stop tracking
 	else
 	{
-		m_aiCombat_targetTrackingLossTime = max(1.0, m_aiCombat_targetTrackingLossTime + Time.deltaTime);
 		m_aiCombat_targetVisible = false;
+		m_aiCombat_targetTrackingLossTime = max(1.0, m_aiCombat_targetTrackingLossTime + Time.deltaTime);
 		
 		// Look for new target if it exists.
 		if (m_aiCombat_target != t_nextTarget && (iexists(t_nextTarget)))

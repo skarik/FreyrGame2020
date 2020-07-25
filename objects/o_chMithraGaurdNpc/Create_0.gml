@@ -24,3 +24,5 @@ alarm[0] = 4;
 
 m_aiCombat_noticeAngle = 80;
 m_aiCombat_noticeDistance = 159;
+kAiCombat_DeAlertTime = 1.5;
+kAiCombat_DeAggroTime = 5.0;

@@ -13,4 +13,7 @@ m_aiCombat_targetVisible = false;
 m_aiCombat_targetTrackingLossTime = 0.0;
 m_aiCombat_updateInterval = 0;
 
+kAiCombat_DeAlertTime = 5.0;
+kAiCombat_DeAggroTime = 2.0;
+
 aiGAlertInit();
