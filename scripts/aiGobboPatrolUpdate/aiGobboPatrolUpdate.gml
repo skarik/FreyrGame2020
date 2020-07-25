@@ -206,6 +206,7 @@ else
 		}
 	}
 	// If is dead, immediately stop tracking
+	else
 	{
 		m_aiCombat_targetTrackingLossTime = max(1.0, m_aiCombat_targetTrackingLossTime + Time.deltaTime);
 		m_aiCombat_targetVisible = false;

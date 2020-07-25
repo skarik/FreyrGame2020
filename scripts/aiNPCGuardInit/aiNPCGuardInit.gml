@@ -27,3 +27,13 @@ m_aiNPC_patrolNextWalkSimple = kTristateUnknown;
 #macro kTristateUnknown -1
 #macro kTristateFalse 0
 #macro kTristateTrue 1
+
+
+#macro kAiNPCAlertState_Notice 0
+#macro kAiNPCAlertState_Investigate 1
+#macro kAiNPCAlertState_Pause 2
+
+m_aiNPC_alertState = kAiNPCAlertState_Notice;
+m_aiNPC_alertTimer = 0.0;
+m_aiNPC_alertFacing = 0.0;
+m_aiNPC_alertPosition = [0, 0];

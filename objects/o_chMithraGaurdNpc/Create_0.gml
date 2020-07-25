@@ -21,3 +21,6 @@ m_aiCustom_Script = aiNPCGuardUpdate;
 aiNPCGuardInit();
 
 alarm[0] = 4;
+
+m_aiCombat_noticeAngle = 80;
+m_aiCombat_noticeDistance = 159;

@@ -1,8 +1,8 @@
 var t_spawnGuard = collision_circle(x, y, 8, o_aiGaurdStand, false, true);
 var t_spawnPush = collision_circle(x, y, 8, o_aiPushOnSpawn, false, true);
 
-var init_patrol_path = !iexists(m_aiNPC_patrolGuardpoint) && iexists(m_patrolPathStart);
-var init_gaurd_point = iexists(m_aiNPC_patrolGuardpoint);
+var init_patrol_path = !iexists(t_spawnGuard) && iexists(m_patrolPathStart);
+var init_gaurd_point = iexists(t_spawnGuard);
 var init_spawnpush = iexists(t_spawnPush);
 
 if (init_spawnpush)

@@ -24,8 +24,8 @@ else
 				{
 					_controlStructUpdate(xAxis, 0.0);
 					_controlStructUpdate(yAxis, 0.0);
+					aimotionFaceAtDirection(m_aiNPC_patrolGuardpoint.image_angle, 360);
 				}
-				aimotionFaceAtDirection(m_aiNPC_patrolGuardpoint.image_angle, 360);
 			}
 		}
 		else if (m_aiNPC_state == kAiNPCGuardState_DefinedPatrol)
@@ -102,5 +102,102 @@ else
 			_controlStructUpdate(xAxis, 0.0);
 			_controlStructUpdate(yAxis, 0.0);
 		}
+	}
+	// Do alert behavior
+	else if (!m_aiCombat_angry && m_aiCombat_alerted)
+	{
+		// Always force patrols to be recalculated when starting
+		{
+			m_aiNPC_patrolNextWalkSimple = kTristateUnknown;
+		}
+		
+		if (m_aiNPC_alertState == kAiNPCAlertState_Notice)
+		{
+			if (m_aiNPC_alertTimer == 0.0)
+			{
+				// Create the ? emote
+				var emote_fx = inew(o_fxEmote);
+					emote_fx.m_target = id;
+					emote_fx.image_index = 1;
+			}
+			m_aiNPC_alertTimer += Time.deltaTime;
+			
+			// Investigate after time
+			if (m_aiNPC_alertTimer >= 1.5)
+			{
+				m_aiNPC_alertTimer = 0.0;
+				m_aiNPC_alertState = kAiNPCAlertState_Investigate;
+			}
+		}
+		else if (m_aiNPC_alertState == kAiNPCAlertState_Investigate)
+		{
+			var dist = point_distance(x, y, m_aiNPC_alertPosition[0], m_aiNPC_alertPosition[1]);
+			if (dist > 10)
+			{
+				aipathMoveTo(m_aiNPC_alertPosition[0], m_aiNPC_alertPosition[1]);
+				xAxis.value *= m_aiNPC_patrolWalkSpeed;
+				yAxis.value *= m_aiNPC_patrolWalkSpeed;
+			}
+			else
+			{
+				_controlStructUpdate(xAxis, 0.0);
+				_controlStructUpdate(yAxis, 0.0);
+				
+				// Go to new alert state when at the position
+				m_aiNPC_alertState = kAiNPCAlertState_Pause;
+				m_aiNPC_alertTimer = 0.0;
+			}
+		}
+		else if (m_aiNPC_alertState == kAiNPCAlertState_Pause)
+		{
+			if (m_aiNPC_alertTimer == 0.0)
+			{
+				// Choose a WHAT angle.
+				m_aiNPC_alertFacing = random(360);
+				
+				// Create the ... emote
+				var emote_fx = inew(o_fxEmote);
+					emote_fx.m_target = id;
+					emote_fx.image_index = 0;
+			}
+			m_aiNPC_alertTimer += Time.deltaTime;
+			
+			if (m_aiNPC_alertTimer < 1.5)
+			{
+				aimotionFaceAtDirection(m_aiNPC_alertFacing, 360);
+			}
+			else
+			{
+				// No use being alerted, go back.
+				m_aiCombat_alerted = false;
+			}
+		}
+	}
+	// Do angry attacking behavior.
+	else if (m_aiCombat_angry)
+	{
+		// Always make sure alert state is reset, so that Notice always triggers on deaggro
+		{
+			m_aiNPC_alertState = kAiNPCAlertState_Notice;
+			m_aiNPC_alertTimer = 0.0;
+		}
+	}
+	
+	// If not angry, do notice checks
+	if (!m_aiCombat_angry)
+	{
+		aiNPCGuard_UpdateAggroCommon();
+		if (iexists(m_aiCombat_target))
+		{
+			if (m_aiCombat_targetVisible)
+			{
+				aiNPCGuard_NoticeAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+			}
+		}
+	}
+	// If angry do combat
+	else
+	{
+		aiNPCGuard_UpdateAggroCommon();
 	}
 }
