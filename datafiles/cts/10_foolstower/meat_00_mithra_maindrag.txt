@@ -1,0 +1,31 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+	lines
+	{
+		target 0
+		style diegetic
+		1 It's that blond person again.
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 Didn't the Vicar arrest them?
+	}
+	goto { target OnEnd }
+
+#OnInterruptNearby
+	lines
+	{
+		target 0
+		style diegetic
+		1 Please don't get us arrested with you.
+	}
+	goto { target OnEnd }
+
+#OnEnd
+
+#ended

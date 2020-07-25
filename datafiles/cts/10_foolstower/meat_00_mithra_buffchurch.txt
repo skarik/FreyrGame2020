@@ -1,0 +1,41 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+	lines
+	{
+		target 0
+		style diegetic
+		1 Do you think the Goddess really looked like that?
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 What part?
+	}
+	lines
+	{
+		target 0
+		style diegetic
+		1 I don't know. All of it?
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 Why would the statue be wrong?
+	}
+	lines
+	{
+		target 0
+		style diegetic
+		1 I don't know. I always thought she might be buff.
+	}
+	
+	goto { target OnEnd }
+
+#OnEnd
+
+#ended

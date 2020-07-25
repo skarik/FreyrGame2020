@@ -233,21 +233,29 @@ else
 		
 	}
 	
-	// If not angry, do notice checks
-	if (!m_aiCombat_angry)
+	if (!m_ai_disableAggression)
 	{
-		aiNPCGuard_UpdateAggroCommon();
-		if (iexists(m_aiCombat_target))
+		// If not angry, do notice checks
+		if (!m_aiCombat_angry)
 		{
-			if (m_aiCombat_targetVisible)
+			aiNPCGuard_UpdateAggroCommon();
+			if (iexists(m_aiCombat_target))
 			{
-				aiNPCGuard_NoticeAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+				if (m_aiCombat_targetVisible)
+				{
+					aiNPCGuard_NoticeAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+				}
 			}
 		}
+		// If angry do combat
+		else
+		{
+			aiNPCGuard_UpdateAggroCommon();
+		}
 	}
-	// If angry do combat
 	else
 	{
-		aiNPCGuard_UpdateAggroCommon();
+		m_aiCombat_alerted = false;
+		m_aiCombat_angry = false;
 	}
 }

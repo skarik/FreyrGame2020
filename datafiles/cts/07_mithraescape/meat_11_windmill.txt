@@ -1,0 +1,40 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+
+lines
+{
+	target 0
+	style diegetic
+	1 They've been quiet for a while.
+}
+lines
+{
+	target 1
+	style diegetic
+	1 Yeah, they're probably asleep.
+}
+lines
+{
+	target 0
+	style diegetic
+	1 Shouldn't we check to see if they're in there?
+}
+lines
+{
+	target 1
+	style diegetic
+	1 Come on. Nobody is crazy enough to leap off a windmill like that.
+}
+lines
+{
+	target 0
+	style diegetic
+	1 Y-yeah, I guess so.
+}
+
+#OnEnd
+
+#ended

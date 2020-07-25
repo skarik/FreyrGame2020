@@ -13,3 +13,6 @@
 
 #macro kQidMithraEscape			7
 #macro kQidHuntDownNathan		8
+#macro kQidMithraPoppyFirstTalk	9
+
+#macro kQidFoolsTower			10

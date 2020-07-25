@@ -24,7 +24,8 @@
         "8c3406ce-f8e4-4751-9d41-b684c3e0fcda",
         "700340e1-c056-4158-8f45-35938dd0ea7e",
         "746d2d37-7959-4cc2-9e68-7fff225f09bf",
-        "2d857c2a-dadc-4a2f-a340-e245629448be"
+        "2d857c2a-dadc-4a2f-a340-e245629448be",
+        "1e198d7c-0ec1-48e0-97c1-3575d597fb71"
     ],
     "filterType": "GMScript",
     "folderName": "Sequencer",

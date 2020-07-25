@@ -1,0 +1,34 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+
+lines
+{
+	target 0
+	style diegetic
+	1 I almost broke my neck the other day.
+}
+lines
+{
+	target 1
+	style diegetic
+	1 Church roof again?
+}
+lines
+{
+	target 0
+	style diegetic
+	1 When are they going to fix that?
+}
+lines
+{
+	target 1
+	style diegetic
+	1 Who are "they?" Isn’t that our job?
+}
+
+#OnEnd
+
+#ended

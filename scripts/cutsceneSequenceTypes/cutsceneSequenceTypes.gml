@@ -36,6 +36,7 @@
 #macro SEQI_LINE_OFFSET_MALE 200
 #macro SEQI_LINE_OFFSET_FEMALE 300
 #macro SEQI_LINE_OFFSET_NONBI 400
+#macro SEQI_TARGET_OFFSET_INDEX 30000
 
 #macro kLinesStyle_Default 0
 #macro kLinesStyle_Portrait 1

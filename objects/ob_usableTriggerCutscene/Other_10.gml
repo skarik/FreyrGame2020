@@ -31,7 +31,7 @@ if (m_usable && iexists(m_user) && m_user.id == o_PlayerTest.id)
 
 		// Create the temporary cutscene object
 		var callee = id;
-		var cts = inew(ob_ctsAutomated);
+		var cts = inew(o_ctsAutomated);
 		with (cts)
 		{
 			cutsceneLoad(callee.m_cutsceneFile);

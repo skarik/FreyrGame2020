@@ -6,6 +6,14 @@
 	
 	goto_if_flag
 	{
+		target OnEnd
+		flag MithraPoppyFirstTalk
+		compare =
+		value 0
+	}
+	
+	goto_if_flag
+	{
 		target OnWaitTalkToPoppy
 		flag MithraEscape
 		compare <
@@ -160,7 +168,7 @@
 	
 	flags
 	{
-		set MithraEscape 22
+		set MithraPoppyFirstTalk 10
 	}
 	
 screen { type ctsout }

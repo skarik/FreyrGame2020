@@ -1,3 +1,7 @@
+/// @function cutsceneJumpToLabel(label)
+/// @param label {String}
+/// @returns Bool if label was found to jump to.
+
 var label = argument0;
 // we want to loop through all the entries and find a matching label
 

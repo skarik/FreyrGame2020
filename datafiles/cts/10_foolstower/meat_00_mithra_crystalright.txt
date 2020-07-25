@@ -1,0 +1,63 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+	lines
+	{
+		target 0
+		style diegetic
+		1 You been in Fool’s March lately?
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 No, why would I go out there?
+	}
+	lines
+	{
+		target 0
+		style diegetic
+		1 Heard there is this fortune teller out there, they can predict the future.
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 Only Vicar Samuel is able to do that! With the grace of the Goddess, of course.
+	}
+	lines
+	{
+		target 0
+		style diegetic
+		1 Well, I've heard they haven't been wrong yet.
+	}
+	goto { target OnEnd }
+
+#OnInterruptNearby
+	lines
+	{
+		target 0
+		style diegetic
+		facing player
+		1 Hey! You came from Fool's March right?
+	}
+	lines
+	{
+		target 0
+		style diegetic
+		facing 1
+		1 See, they have, it's safe. 
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 I'm not so sure about that.
+	}
+	goto { target OnEnd }
+
+#OnEnd
+
+#ended

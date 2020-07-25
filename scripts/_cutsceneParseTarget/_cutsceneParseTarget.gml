@@ -18,6 +18,10 @@ else if (target == "poppy")
 	target = o_chPoppy;
 else if (target == "sammy" || target == "sam" || target == "samuel")
 	target = o_chSamuel;
+// Otherwise, might be a numeric target
+else if (string_length(string_digits(target)) > 0)
+	target = real(string_digits(target)) + SEQI_TARGET_OFFSET_INDEX;
+// Otherwise, no target
 else
 	target = null;
 	

@@ -151,7 +151,6 @@ case SEQTYPE_LINES:
         var ending = ds_map_find_value(entry, SEQI_ENDACTION);
 		var style = ds_map_find_value(entry, SEQI_STYLE);
         
-        var target_inst = instance_find(target, (style != kLinesStyle_Portrait) ? count : 0);
 		var l_organic = (ending == SEQEND_ORGANIC) || cts_organic;
 		
 		// style override
@@ -160,6 +159,19 @@ case SEQTYPE_LINES:
 			style = kLinesStyle_Diagetic;
 		}
     
+		// find target
+		var target_inst = instance_find(target, (style != kLinesStyle_Portrait) ? count : 0);
+		if (style != kLinesStyle_Portrait && !iexists(target_inst))
+		{
+			target -= SEQI_TARGET_OFFSET_INDEX; // Move it into offset range
+			if (cts_actor_override_list_enabled
+				&& target >= 0
+				&& target < array_length_1d(cts_actor_override_list))
+			{
+				target_inst = cts_actor_override_list[target];
+			}
+		}
+	
 		// FREYR SPECIFIC:
 		// Replace the line with the player gender-specific line if possible:
 		var pl = getPlayer();

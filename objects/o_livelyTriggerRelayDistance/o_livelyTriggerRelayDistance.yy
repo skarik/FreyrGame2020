@@ -2,7 +2,7 @@
     "id": "066c8cfb-a060-409f-8f34-8ea5d3547ca2",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_distanceTrigger",
+    "name": "o_livelyTriggerRelayDistance",
     "eventList": [
         {
             "id": "d2626cfa-2d0c-44cb-a631-a99d850db2a3",
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "18636bc2-3be9-4f95-90b4-488532457ee7",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -32,36 +32,9 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "07437fee-02da-4a1a-8d9f-f993d1aa84d2",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 256,
-            "value": "null",
-            "varName": "m_target",
-            "varType": 5
-        },
-        {
-            "id": "53df1a9d-f9bc-4d7d-9147-f39cc119ebb2",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "True",
-            "varName": "m_triggerOnce",
-            "varType": 3
-        }
+        
     ],
     "solid": false,
-    "spriteId": "9ed97aad-a577-484e-ad66-54e7c93574cf",
+    "spriteId": "1ad54571-ed29-4a1d-8ba3-ce08480de461",
     "visible": false
 }

@@ -450,7 +450,7 @@
             "Key": "066c8cfb-a060-409f-8f34-8ea5d3547ca2",
             "Value": {
                 "id": "e9d6290e-b721-43b7-82e3-895ebc860aeb",
-                "resourcePath": "objects\\o_distanceTrigger\\o_distanceTrigger.yy",
+                "resourcePath": "objects\\o_livelyTriggerRelayDistance\\o_livelyTriggerRelayDistance.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1287,6 +1287,14 @@
             }
         },
         {
+            "Key": "1418c8bb-bb92-4cbc-b13f-52f0236b3206",
+            "Value": {
+                "id": "f8e96e8e-4ccb-47cc-990a-ec0bca87e24e",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\meat_11_topcrates.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "1465c0dd-0cf6-4ef1-921b-e4a661e130f3",
             "Value": {
                 "id": "b190d864-67cf-4932-aee7-e91a707899c1",
@@ -1791,6 +1799,22 @@
             }
         },
         {
+            "Key": "1acf4912-bc6c-4a8d-b631-bec855fe168d",
+            "Value": {
+                "id": "82bec200-cef4-4662-a13a-6c1727b543ac",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\meat_00_mithra_buffchurch.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "1ad54571-ed29-4a1d-8ba3-ce08480de461",
+            "Value": {
+                "id": "a86320b3-94dc-40ea-9760-5d0a8a9edf01",
+                "resourcePath": "sprites\\ssy_areaRelay48\\ssy_areaRelay48.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1b772136-819a-4ad4-aec8-0b4da51e241f",
             "Value": {
                 "id": "f13d60a4-f1af-42bb-ae45-100c34b2715e",
@@ -2076,6 +2100,14 @@
                 "id": "e6d7146f-0ee6-4f26-8c58-860c96339e27",
                 "resourcePath": "sounds\\snd_physDig3\\snd_physDig3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "1e198d7c-0ec1-48e0-97c1-3575d597fb71",
+            "Value": {
+                "id": "7d99c080-04a1-41a9-a9ef-e3c41e319c47",
+                "resourcePath": "scripts\\cutsceneSetActorList\\cutsceneSetActorList.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3756,6 +3788,14 @@
                 "id": "2e92d0c9-ba27-403d-887a-c737ce7149d3",
                 "resourcePath": "scripts\\ctsParseDialogue\\ctsParseDialogue.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3607c4f5-2745-4ae9-a139-ce92169509de",
+            "Value": {
+                "id": "993630dc-f781-47a7-b37d-55c02d873f26",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\meat_11_windmill.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -6775,6 +6815,14 @@
             }
         },
         {
+            "Key": "63a0707b-ad6c-4a7b-b11d-aca6ce769a5d",
+            "Value": {
+                "id": "557f3afa-b931-4466-b12d-7815ed66a4a7",
+                "resourcePath": "objects\\o_ctsFromFileOrganic\\o_ctsFromFileOrganic.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "63ee0b46-03b5-4fa6-8c1f-df3bd381e877",
             "Value": {
                 "id": "60469abf-4fba-4bfb-b817-e62e80cad48a",
@@ -9778,7 +9826,7 @@
             "Key": "8f113cf8-abe8-4c36-8ec2-59ca05a935a8",
             "Value": {
                 "id": "fd5db2fc-181e-4627-9171-8d2a3e8cc1ef",
-                "resourcePath": "objects\\ob_ctsAutomated\\ob_ctsAutomated.yy",
+                "resourcePath": "objects\\o_ctsAutomated\\o_ctsAutomated.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -10251,6 +10299,14 @@
             "Value": {
                 "id": "bdcca112-adb6-4439-a42d-d03c9e178fb0",
                 "resourcePath": "sprites\\s_propSandLump2\\s_propSandLump2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "961f52d7-337d-4f9a-b585-56f0e0651aed",
+            "Value": {
+                "id": "17e4ed52-c956-4658-8ba5-fb2fa89b7d5d",
+                "resourcePath": "sprites\\ssy_cutsceneOrganic\\ssy_cutsceneOrganic.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12407,6 +12463,14 @@
             }
         },
         {
+            "Key": "b28ae2c5-1d25-400c-ab9e-171a7a468d60",
+            "Value": {
+                "id": "c755f9b0-90e6-400e-834f-328abf62757a",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\meat_11_midcrates.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "b2bc055a-b887-4a9c-818a-c20666336037",
             "Value": {
                 "id": "5920ff5c-d9ff-4003-bf93-cb06e16dc182",
@@ -12692,6 +12756,14 @@
                 "id": "01121835-d88a-4259-af1a-8da14df4e5e4",
                 "resourcePath": "scripts\\ctsHideBars\\ctsHideBars.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b657bb3d-1446-4485-8214-e433f07a8fd5",
+            "Value": {
+                "id": "3376ec58-48ef-43f7-a1fd-649226bc0c75",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\meat_00_mithra_soldiersbot.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -13124,6 +13196,14 @@
                 "id": "622da75b-c54d-4628-8625-2c578cf7e121",
                 "resourcePath": "objects\\o_livelyDoodadTowerWire_PhysWire3D\\o_livelyDoodadTowerWire_PhysWire3D.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bd1980d1-8b74-4e6c-86d3-90d90e33d4e3",
+            "Value": {
+                "id": "c6d7df4b-d635-4f17-ac9a-a608984b4c3c",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\meat_11_bottom.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -13940,6 +14020,14 @@
                 "id": "7a0ae6ae-b43c-4041-b286-3b3c149a6280",
                 "resourcePath": "sprites\\s_itemCactusJizz\\s_itemCactusJizz.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c7c2e861-6436-4b35-b69f-6673ea2e216e",
+            "Value": {
+                "id": "e6202d0a-cc5c-4539-8b52-f4f9fd4333f7",
+                "resourcePath": "objects\\ob_cts\\ob_cts.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -16479,6 +16567,14 @@
             }
         },
         {
+            "Key": "ea6d6263-9b03-4b35-8cba-f78a507d187d",
+            "Value": {
+                "id": "16d6cf29-00f4-47c2-a23c-14bc2cf392ae",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\meat_00_mithra_crystalright.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "ea7c254d-60cc-4792-8e53-0b9b5b0b8df8",
             "Value": {
                 "id": "ebb2b6cc-998d-4c62-a340-838d37f6f12a",
@@ -16884,6 +16980,14 @@
                 "id": "2489d4d2-fbbb-44bd-b10c-01405d29372e",
                 "resourcePath": "sprites\\s_charGobBomb0_Ref\\s_charGobBomb0_Ref.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f0f37b3e-34f2-4e00-999f-2ec7c3805076",
+            "Value": {
+                "id": "a157b6a1-4582-40f5-829f-90d2797d9321",
+                "resourcePath": "objects\\o_ctsFromFile\\o_ctsFromFile.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -17463,6 +17567,14 @@
             }
         },
         {
+            "Key": "f9072bc7-49b3-4d3e-9d70-fdc3e7fbeb42",
+            "Value": {
+                "id": "afd210d2-dde6-4ce6-b2d1-d7a4ced05d1f",
+                "resourcePath": "views\\f9072bc7-49b3-4d3e-9d70-fdc3e7fbeb42.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "f9260b8e-fe14-4111-bfb8-fa8364d6c47c",
             "Value": {
                 "id": "ec2e4fb8-91da-4031-a62d-0e379c5a397e",
@@ -17556,6 +17668,14 @@
                 "id": "6e31c6d8-7dfe-4a2b-b444-9162d1996d20",
                 "resourcePath": "objects\\o_pickupSeed_Turnip\\o_pickupSeed_Turnip.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f9bcc4c5-521d-409c-8779-bd3d5a4af27a",
+            "Value": {
+                "id": "b9e69aeb-4a48-42c8-85bf-9ce9b9cbab76",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\meat_00_mithra_maindrag.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -18280,6 +18400,7 @@
         "700340e1-c056-4158-8f45-35938dd0ea7e",
         "746d2d37-7959-4cc2-9e68-7fff225f09bf",
         "2d857c2a-dadc-4a2f-a340-e245629448be",
+        "1e198d7c-0ec1-48e0-97c1-3575d597fb71",
         "b776665e-3fe9-42f7-ae54-47ec8718d410",
         "35f30743-c456-4b74-87c5-4c92d60a7add",
         "0b013a6a-ffe8-4bd2-8186-3961f9098eba",

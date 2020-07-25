@@ -1,8 +1,9 @@
 /// @function ctsMakeGabber(character, name, string)
 /// @description Makes a banterbox. Escape sequences start with $. See engine docs for more info.
-/// @param character
-/// @param name
-/// @param string
+/// @param character {Object}
+/// @param name {String}
+/// @param string {String}
+/// --param (Optional) minimal {Bool}
 
 // Find existing gabber:
 var existing_gabber = null;

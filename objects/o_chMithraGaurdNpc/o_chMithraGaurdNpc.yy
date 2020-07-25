@@ -82,6 +82,20 @@
             "value": "noone",
             "varName": "m_patrolPathStart",
             "varType": 5
+        },
+        {
+            "id": "08996adf-3346-4323-bf20-124d759126d2",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_ai_disableAggression",
+            "varType": 3
         }
     ],
     "solid": false,

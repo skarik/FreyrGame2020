@@ -6,11 +6,16 @@ if ((m_triggerBy & kTriggerByPlayer))
 	var pl = getPlayer();
 	if (place_meeting(x, y, pl))
 	{
-		if (m_retriggerCountdown <= 0.0)
-		{
-			m_retriggerCountdown = m_retriggerDelay;
-			event_user(0);
-		}
+		run_trigger = true;
+	}
+}
+
+if (run_trigger)
+{
+	if (m_retriggerCountdown <= 0.0)
+	{
+		m_retriggerCountdown = m_retriggerDelay;
+		event_user(0);
 	}
 }
 

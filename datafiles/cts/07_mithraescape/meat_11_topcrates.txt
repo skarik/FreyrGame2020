@@ -1,0 +1,28 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+
+lines
+{
+	target 0
+	style diegetic
+	1 Why do they always put me alone?
+}
+goto { target OnEnd }
+
+#OnInterruptAlert
+
+lines
+{
+	target 0
+	style diegetic
+	1 $sW-who's there?
+}
+goto { target OnEnd }
+
+
+#OnEnd
+
+#ended

@@ -1,0 +1,40 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+
+lines
+{
+	target 0
+	style diegetic
+	1 Ever wonder if things could be better?
+}
+lines
+{
+	target 1
+	style diegetic
+	1 Got food, drink, and home, what could be better?
+}
+lines
+{
+	target 0
+	style diegetic
+	1 I dunno, each year we have more broken stuff, and more scaffolding.
+}
+lines
+{
+	target 1
+	style diegetic
+	1 Scaffolding doesn't prevent me from living.
+}
+lines
+{
+	target 0
+	style diegetic
+	1 I guess...
+}
+
+#OnEnd
+
+#ended

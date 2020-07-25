@@ -1,0 +1,41 @@
+#begin
+
+goto { target OnEnd }
+
+#OnBegin
+	lines
+	{
+		target 0
+		style diegetic
+		1 I hear you're getting married next month.
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 Can nobody keep a secret around here?
+	}
+	lines
+	{
+		target 0
+		style diegetic
+		1 No.
+	}
+	lines
+	{
+		target 1
+		style diegetic
+		1 I won't be getting married at all if I can't get to Yamaoka.
+	}
+	lines
+	{
+		target 0
+		style diegetic
+		1 You're going to need a way to get across first. 
+	}
+	
+	goto { target OnEnd }
+
+#OnEnd
+
+#ended
