@@ -314,6 +314,11 @@
 			2c See you around, partner!
 			2p See you around, friend!
 		}
+		companion
+		{
+			target old
+			party remove
+		}
 		signal
 		{
 			type input
