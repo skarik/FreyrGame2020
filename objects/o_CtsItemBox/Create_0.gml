@@ -19,7 +19,7 @@ input_autoclose = false;
 input_addItem = true;
 
 display_text = "";
-display_flags[0] = 0;
+display_flags[0] = null;
 display_font = global.font_arvo9;
 display_font_bold = global.font_arvo9Bold;
 display_font_height = 9;

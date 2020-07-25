@@ -8,7 +8,7 @@
     "exportAction": 0,
     "exportDir": "",
     "fileName": "10_windmill.txt",
-    "filePath": "datafiles\\cts\\00_mithraescape",
+    "filePath": "datafiles\\cts\\07_mithraescape",
     "freeData": false,
     "origName": "",
     "overwrite": false,

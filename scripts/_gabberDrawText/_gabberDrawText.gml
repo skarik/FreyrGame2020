@@ -25,47 +25,53 @@ var penshake = false;
 var penwigglex = false;
 for (var i = 0; i < floor(current_display_count); ++i)
 {
-    if ( display_flags[i] != 0 )
+    if ( is_array(display_flags[i]) )
     {
-        if ( display_flags[i] == ord("0") )
-            penc = blackbox ? c_white : make_color_rgb(31, 36, 10);
-        if ( display_flags[i] == ord("1") )
-            penc = c_red;
-        if ( display_flags[i] == ord("2") )
-            penc = c_gray;
-		if ( display_flags[i] == ord("3") )
-			penc = merge_color(c_electricity, c_navy, 0.5);
-		if ( display_flags[i] == ord("4") )
-			penc = c_gold;
-		if ( display_flags[i] == ord("5") )
-			penc = c_riftgreen;
-        if ( display_flags[i] == ord("b") )
-        {
-            draw_set_font(display_font_bold);
-            text_refw = string_width("m");
-            penw = 3;
-        }
-        if ( display_flags[i] == ord("$") )
-        {
-            draw_set_font(display_font);
-            text_refw = string_width("m");
-            penw = 2;
-			penwiggle = false;
-			penshake = false;
-			penwigglex = false;
-        }
-		if ( display_flags[i] == ord("w") )
-			penwiggle = true;
-		if ( display_flags[i] == ord("s") )
-			penshake = true;
-		if ( display_flags[i] == ord("h") )
-			penwigglex = true;
-        // Newline!
-        if ( display_flags[i] == ord("#") )
-        {
-            penx = 0;
-            peny += text_dx + 3
-        }
+		var flags = display_flags[i];
+		var flags_len = array_length_1d(flags);
+		for (var iFlag = 0; iFlag < flags_len; ++iFlag)
+		{
+			var flag = flags[iFlag];
+	        if ( flag == ord("0") )
+	            penc = blackbox ? c_white : make_color_rgb(31, 36, 10);
+	        if ( flag == ord("1") )
+	            penc = c_red;
+	        if ( flag == ord("2") )
+	            penc = c_gray;
+			if ( flag == ord("3") )
+				penc = merge_color(c_electricity, c_navy, 0.5);
+			if ( flag == ord("4") )
+				penc = c_gold;
+			if ( flag == ord("5") )
+				penc = c_riftgreen;
+	        if ( flag == ord("b") )
+	        {
+	            draw_set_font(display_font_bold);
+	            text_refw = string_width("m");
+	            penw = 3;
+	        }
+	        if ( flag == ord("$") )
+	        {
+	            draw_set_font(display_font);
+	            text_refw = string_width("m");
+	            penw = 2;
+				penwiggle = false;
+				penshake = false;
+				penwigglex = false;
+	        }
+			if ( flag == ord("w") )
+				penwiggle = true;
+			if ( flag == ord("s") )
+				penshake = true;
+			if ( flag == ord("h") )
+				penwigglex = true;
+	        // Newline!
+	        if ( flag == ord("#") )
+	        {
+	            penx = 0;
+	            peny += text_dx + 3
+	        }
+		}
     }
 
     var char = string_char_at(display_text,i + 1);

@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "02837a12-d6e3-4de4-a438-7b428ddebe28",
+            "Value": {
+                "id": "19b34520-55da-4406-83c1-d993211a9f9f",
+                "resourcePath": "objects\\o_cts00_esc2_Samuel_2\\o_cts00_esc2_Samuel_2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "029b49f7-d402-4e8b-8d78-f30d517de5ea",
             "Value": {
                 "id": "0b14a79a-e1e6-4ced-b4cd-7844288a2315",
@@ -996,6 +1004,14 @@
                 "id": "f85d0090-88cf-4086-bd64-ccce6cb07e7d",
                 "resourcePath": "scripts\\_playerInteractBuildables\\_playerInteractBuildables.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "10b08ca6-7b5a-4251-8fac-3c8b125fdf83",
+            "Value": {
+                "id": "b062abea-f1f0-429a-9825-1dbda44219ed",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\20_samuel.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3087,6 +3103,14 @@
             }
         },
         {
+            "Key": "2ce7d61f-cc08-44eb-ad2e-09ad4f5d24a1",
+            "Value": {
+                "id": "ffabfd5b-93a6-4c1e-94d5-d462a6d1b5a0",
+                "resourcePath": "scripts\\aiNPCGuardInit\\aiNPCGuardInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2cf9f1fe-823a-4266-a60a-18bb96cfe9c5",
             "Value": {
                 "id": "717dd9b7-0671-45ed-b093-4784aa467b9d",
@@ -3130,7 +3154,7 @@
             "Key": "2d6db42e-c48e-4354-9097-4d6ab0c608f9",
             "Value": {
                 "id": "8fd5d75e-a7d3-4d46-999c-9188ac1e1b0c",
-                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\11_samuel.txt.yy",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\11_samuel.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -3559,6 +3583,14 @@
             }
         },
         {
+            "Key": "33e7212f-f511-4abd-80c7-d4cd1e28a1df",
+            "Value": {
+                "id": "1f03cfe5-4c2d-4f0f-9dcd-241df2809d1e",
+                "resourcePath": "objects\\o_cts00_esc2_Poppy\\o_cts00_esc2_Poppy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "33f19330-36a7-453d-84c9-5b3430170e40",
             "Value": {
                 "id": "dd885aec-6245-4f3d-b447-65a5ec745118",
@@ -3940,6 +3972,14 @@
                 "id": "d8b52577-cbf6-4498-b757-016b073c1d62",
                 "resourcePath": "sprites\\ssy_light128\\ssy_light128.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "39372cd0-0bba-4f8e-a98b-ad00f20fb4b6",
+            "Value": {
+                "id": "d2acfcaf-c066-4757-8f03-4fca5be4b9f1",
+                "resourcePath": "datafiles_yy\\cts\\08_huntdownnathan\\placeholder.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -7178,7 +7218,7 @@
             "Key": "69de7858-92fd-426d-af0a-4e02fdbd70cc",
             "Value": {
                 "id": "a66e2aa7-6044-4e33-85c5-50860f9b8972",
-                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\10_windmill.txt.yy",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\10_windmill.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -8255,11 +8295,27 @@
             }
         },
         {
+            "Key": "79835f95-6408-4a99-b2be-b50acb3c6f30",
+            "Value": {
+                "id": "7a805f9d-24fc-4b75-b33f-37ad26d9b446",
+                "resourcePath": "sprites\\s_propMotsesStatue\\s_propMotsesStatue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7986eeec-ca22-4172-99f1-17dda24e93d4",
             "Value": {
                 "id": "8ef8c1f2-ee39-448b-83cf-212479d1fc7b",
                 "resourcePath": "sprites\\s_assetTWindow0\\s_assetTWindow0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7989d383-bb7d-4d0a-ab2c-c4c0cef5eb45",
+            "Value": {
+                "id": "9d25d6bf-e647-45f7-9523-0ee197304711",
+                "resourcePath": "views\\7989d383-bb7d-4d0a-ab2c-c4c0cef5eb45.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -10530,7 +10586,7 @@
             "Key": "9a2dbc9a-f1d7-497d-a52b-d6abdb3de7b7",
             "Value": {
                 "id": "0cc5b7c0-58aa-43e2-ab64-0a0040eaef07",
-                "resourcePath": "datafiles_yy\\cts\\00_mithraescape\\00_entrance.txt.yy",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\00_entrance.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -13519,6 +13575,14 @@
             }
         },
         {
+            "Key": "c3ea7a92-9f53-4b62-9918-789289475f44",
+            "Value": {
+                "id": "2658a870-5bd3-4895-97e0-526a8b86e33c",
+                "resourcePath": "objects\\o_pickupCons_ScorpJuice\\o_pickupCons_ScorpJuice.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c3edd887-4b61-48a2-b9a9-6f355cf9a470",
             "Value": {
                 "id": "2bb6d71d-25f4-4829-9bca-3d5cb0d871e7",
@@ -13807,6 +13871,14 @@
             }
         },
         {
+            "Key": "c7338598-bef4-4506-9a13-4ed6ca7d1400",
+            "Value": {
+                "id": "79132dbb-a561-4260-86c5-51da2ec15043",
+                "resourcePath": "objects\\o_pickupCons_CactusJizz\\o_pickupCons_CactusJizz.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c780047d-856a-4043-a020-2ed7f760f40c",
             "Value": {
                 "id": "dda4c7ee-ab23-4a8b-9fea-88be891b1e83",
@@ -13852,6 +13924,22 @@
                 "id": "87fd9615-f383-4c95-8b5b-5bf6fa0113fe",
                 "resourcePath": "objects\\o_pickupSeed_Tea\\o_pickupSeed_Tea.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c7bdfc78-0c7f-4b00-ba51-aa7adc50f70b",
+            "Value": {
+                "id": "7a0ae6ae-b43c-4041-b286-3b3c149a6280",
+                "resourcePath": "sprites\\s_itemCactusJizz\\s_itemCactusJizz.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c7cabce6-dc6d-4fae-8ec6-9e8bea68f840",
+            "Value": {
+                "id": "d5d413d0-2d5d-4d75-a005-b03e1f1ca51f",
+                "resourcePath": "scripts\\aiNPCGuardInitDelayed\\aiNPCGuardInitDelayed.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -14436,6 +14524,14 @@
                 "id": "0b850c64-e7ce-4504-a9a4-0a726d49a72a",
                 "resourcePath": "sprites\\s_propCrate\\s_propCrate.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d0637bea-ef20-49b8-9f71-be43a7a7e4db",
+            "Value": {
+                "id": "53b8ac70-3473-4c95-8667-f9d69dcdd3af",
+                "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\21_poppy.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -16695,6 +16791,14 @@
             }
         },
         {
+            "Key": "ef732bba-451f-4a7b-8d3a-aa12b821f146",
+            "Value": {
+                "id": "80b00925-6871-4a4c-b4c1-b9636346b1a4",
+                "resourcePath": "sprites\\s_itemScorpJuice\\s_itemScorpJuice.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "efb6d6ef-21d5-417a-84db-5a8d940d0f85",
             "Value": {
                 "id": "5c643064-bdd9-4b77-aa96-8e2a9e624e29",
@@ -16739,6 +16843,14 @@
             "Value": {
                 "id": "56f42af6-b0f9-4a9e-b04c-1a00175de989",
                 "resourcePath": "scripts\\effectGetImpactEffect\\effectGetImpactEffect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f09daa26-81cc-4091-a47c-47af0ff9d283",
+            "Value": {
+                "id": "06824cf7-df5c-4f52-97d0-97a77130e88d",
+                "resourcePath": "scripts\\aiNPCGuardUpdate\\aiNPCGuardUpdate.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -17359,6 +17471,14 @@
             }
         },
         {
+            "Key": "f949203d-a693-48f8-a3f3-1667c64e8917",
+            "Value": {
+                "id": "a7fb34c2-38fc-438f-80c0-3ed1bc59e06d",
+                "resourcePath": "scripts\\surface_free_if_exists\\surface_free_if_exists.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9586c3e-13b2-4496-9463-c890bc95d28e",
             "Value": {
                 "id": "7d2abecb-a3aa-4a9a-bd57-b6ce94825c5d",
@@ -17522,7 +17642,7 @@
             "Key": "faf99f12-2dce-47f4-b507-ddbe423b66d9",
             "Value": {
                 "id": "64c80e91-1c34-4bbf-8d6f-2582acc29562",
-                "resourcePath": "objects\\o_spawnerBase\\o_spawnerBase.yy",
+                "resourcePath": "objects\\ob_spawner\\ob_spawner.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -18039,6 +18159,7 @@
         "35a0c59a-d22b-4bd1-8c2f-73034c2dcb2f",
         "c676649c-6bae-4657-8846-f81f78f9c4ba",
         "44297038-11f0-4b5d-9a3c-c9ad19bf8a1a",
+        "f949203d-a693-48f8-a3f3-1667c64e8917",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "f71cb40d-971c-44a4-8c3f-33e43f46567b",
         "24ac4ceb-2490-41d2-9219-f66823e9271c",
@@ -18467,6 +18588,9 @@
         "d7dc3a9b-9a3b-47d0-bb61-ffaf5cc6adc9",
         "bf881278-c148-47f4-ab9b-0d789f461976",
         "9a87ef17-5766-4230-9531-1648752f395a",
+        "2ce7d61f-cc08-44eb-ad2e-09ad4f5d24a1",
+        "c7cabce6-dc6d-4fae-8ec6-9e8bea68f840",
+        "f09daa26-81cc-4091-a47c-47af0ff9d283",
         "1baf96de-1feb-4ba4-b39a-5ed3be46d4b5",
         "930ee58e-d0dd-4560-95a0-0908ec2ac30d",
         "6dda03f6-f598-4aa5-9a1d-12c38ae05114",

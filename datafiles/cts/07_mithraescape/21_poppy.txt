@@ -1,0 +1,172 @@
+#begin
+
+// TODO: Portraits
+
+#Initialize
+	
+	goto_if_flag
+	{
+		target OnWaitTalkToPoppy
+		flag MithraEscape
+		compare <
+		value 21
+	}
+	spawnstate
+	{
+		spawn poppy
+		facing right
+		position 408 648
+	}
+
+#OnWaitTalkToPoppy
+	wait
+	{
+		type talkto
+		target poppy
+	}
+
+	goto_if_flag
+	{
+		target OnEarlyTalk
+		flag MithraEscape
+		compare ==
+		value 20
+	}
+	goto_if_flag
+	{
+		target OnPostJobTalk
+		flag MithraEscape
+		compare ==
+		value 21
+	}
+
+	goto { target OnWaitTalkToPoppy }
+	
+#OnEarlyTalk
+
+	lines
+	{
+		target poppy
+		facing player
+		1 Please listen to the Vicar's request.
+	}
+	goto { target OnWaitTalkToPoppy }
+
+#OnPostJobTalk
+
+	// Lock player, as we're beginning a good cutscene right now
+	player { actions lock }
+	screen { type ctsin }
+	
+	lines
+	{
+		target player
+		facing poppy
+		1 So, I never got your name.
+	}
+	emote
+	{
+		target poppy
+		emote beat
+	}
+	wait { type time; time 1.2s; }
+	lines
+	{
+		target poppy
+		facing player
+		1 OH! Me?
+		2 I suppose now that Vicar Samuel has welcomed you...
+		3 My name is $bPoppy Bello$$, Vicar Samuel's Holy Confidant.
+	}
+	lines
+	{
+		target player
+		facing poppy
+		1a Well uh, still kinda pissed about the windmill thing, but thanks for the food, I guess. Poppy.
+		1c Despite the whole locking me up thing, I guess I oughta at least be grateful you didn’t let me starve to death, Miss Poppy.
+		1p You seem much nicer than that Vicar man, Poppy Bello.
+	}
+	lines
+	{
+		target poppy
+		facing player
+		1 I’m sorry if you feel mistreated. My duty is to protect Mithra and Vicar Samuel.
+		2 It is nothing against you as a person. 
+	}
+	lines
+	{
+		target player
+		facing poppy
+		1 Well, things seem to have worked out in the end. I guess I'll see you around.
+	}
+	lines
+	{
+		target poppy
+		facing player
+		1 Oh? I.$p Okay.$p I didn't think you would care to lay eyes on me after this.
+	}
+	lines
+	{
+		target player
+		facing poppy
+		1 You were just doing what you were told. I don’t really know if I can hold that against you.
+		2 After all, I did kind of beat up a bunch of your mercenaries.
+		2a After all, I did completely destroy a bunch of your mercenaries. // Because Aurum.
+		3 Maybe I would have appreciated some more independent thought, but that's alright. 
+	}
+	lines
+	{
+		target poppy
+		facing player
+		1 Independent thought?
+	}
+	emote
+	{
+		target poppy
+		emote beat
+	}
+	wait { type time; time 1.2s; }
+	lines
+	{
+		target poppy
+		facing player
+		1 Ah, well...ah! Yes! Um I'll see you around then! Thank you!
+	}
+	ai
+	{
+		target poppy
+		style cts
+		command move
+		position 512 760
+	}
+	wait
+	{
+		type ai
+		target poppy
+		aiaction arrive
+	}
+	lines
+	{
+		target player
+		1p Hm, that was an odd exchange.
+		2p She seems $wnice$$, though.
+		
+		1a Confusing gal, that one. Seems a lot less intimidating now.
+		2a Though still pretty sure she could bend me into a pretzel.
+		
+		1c That was an odd exchange.
+		2c She sure is jumpy - reminds me of $4Py$0.
+	}
+	
+	flags
+	{
+		set MithraEscape 22
+	}
+	
+screen { type ctsout }
+player { actions unlock }
+
+	goto { target OnEnd }
+
+#OnEnd
+#ended

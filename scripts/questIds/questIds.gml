@@ -12,3 +12,4 @@
 #macro kQidViggoDeathtarTalk	6
 
 #macro kQidMithraEscape			7
+#macro kQidHuntDownNathan		8

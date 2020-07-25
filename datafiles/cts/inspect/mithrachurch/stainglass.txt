@@ -2,7 +2,7 @@
 
 	lines
 	{
-		1 It's a giant stainglass window. The signature on the left bottom corner is illegible. 
+		1 It's a giant stained glass window. The signature on the left bottom corner is illegible. 
 		2 Something like this would have taken years to complete. 
 		3 Maybe even a whole lifetime. 
 	}

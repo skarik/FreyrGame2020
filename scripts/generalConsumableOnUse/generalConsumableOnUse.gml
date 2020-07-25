@@ -41,6 +41,17 @@ case o_pickupCons_HoneyAbsinthe:
 	m_will += 1 * 40;
 	_playerInteractItemDecrementBelt();
 	break;
+	
+	case o_pickupCons_CactusJizz:
+	stats.m_health += -7;
+	m_will += 1 * 90;
+	_playerInteractItemDecrementBelt();
+	break;
+
+case o_pickupCons_ScorpJuice:
+	stats.m_health += 3;
+	_playerInteractItemDecrementBelt();
+	break;
 
 }
 

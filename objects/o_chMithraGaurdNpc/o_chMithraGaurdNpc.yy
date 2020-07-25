@@ -36,7 +36,24 @@
         }
     ],
     "maskSpriteId": "ff0e0972-fdae-456f-95db-408b0b94811d",
-    "overriddenProperties": null,
+    "overriddenProperties": [
+        {
+            "id": "b8c0ccf1-ae83-4609-85aa-784afb0d6426",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "5266a0cc-8943-4e5c-878d-83565773789d",
+            "propertyId": "f2c2c1f1-a623-450c-a8d7-bb87c47ba099",
+            "value": ""
+        },
+        {
+            "id": "e5fcefc8-7f53-40c6-ad3c-35b7cb289cfb",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "5266a0cc-8943-4e5c-878d-83565773789d",
+            "propertyId": "687ce2be-5f9b-403b-812a-d2a5efa51092",
+            "value": "Mithra Guard"
+        }
+    ],
     "parentObjectId": "5266a0cc-8943-4e5c-878d-83565773789d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
@@ -51,7 +68,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "7eb754b4-2ae1-4154-820e-7ea00be7e0af",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 256,
+            "value": "noone",
+            "varName": "m_patrolPathStart",
+            "varType": 5
+        }
+    ],
     "solid": false,
     "spriteId": "8e640c67-68af-4ac2-b633-b5be68993bb3",
     "visible": true

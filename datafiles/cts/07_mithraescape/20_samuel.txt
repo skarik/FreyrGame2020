@@ -1,0 +1,247 @@
+#begin
+
+#Initialize
+	goto_if_flag
+	{
+		target OnEarlyWait
+		flag MithraEscape
+		compare ==
+		value 11
+	}
+	goto_if_flag
+	{
+		target OnLateWait
+		flag MithraEscape
+		compare ==
+		value 20
+	}
+	goto_if_flag
+	{
+		target OnLateWait
+		flag HuntDownNathan
+		compare ==
+		value 0
+	}
+	
+	goto { target OnEnd }
+
+#OnEarlyWait
+	goto { target OnWaitTalkTo }
+	
+#OnLateWait
+	spawnstate
+	{
+		spawn sam
+		facing left
+		position 670 224
+	}
+	goto { target OnWaitTalkTo }
+	
+#OnWaitTalkTo
+	wait
+	{
+		type talkto
+		target sam
+	}
+	// Lock player, as we're beginning a good cutscene right now
+	player { actions lock }
+	screen { type ctsin }
+
+	lines
+	{
+		target samuel
+		1 Thank you for listening.
+	}
+	lines
+	{
+		target player
+		facing samuel
+		1 Let's just keep this short.
+	}
+	wait { type time; time 0.2s; }
+	lines
+	{
+		target samuel
+		facing player
+		1 Of course.
+		2 I need you to kill a monster in Fool's March.$p It's been terrorizing it for far too long.
+	}
+	lines
+	{
+		target player
+		facing samuel
+		1 Right, listen, I walked all through that place and didn't see a single real life monster.
+	}
+	lines
+	{
+		target samuel
+		facing player
+		1 That's just it $p- the monster uses trickery to hide from others. It walks around on two legs and smiles just like the rest of us.
+	}
+	lines
+	{
+		target player
+		facing samuel
+		1a Assuming you aren’t just crazy from this desert heat - what does this monster look like?
+		1c Assuming you aren’t just crazy from this desert heat - what does this monster look like?
+		1p What does this monster look like?
+	}
+	lines
+	{
+		target samuel
+		facing player
+		1 It is dressed in purple, leather and strange metal.
+		2 It has green hair of the $1$bMotses$$$0 people, and is marked with the sign of the Chaos God for which they are named.
+	}
+	lines
+	{
+		target player
+		facing samuel
+		1 Hold on? Who are the $1$bMotses$$$0? And what Chaos God? This just sounds like another human.
+	}
+	lines
+	{
+		target player
+		style thinking
+		1c A very specific and handsome one.
+		1a This sounds like the skinny punk who rescued me.
+		1p Is he talking about Nathan?
+	}
+#OnPostThinkMuse
+	lines
+	{
+		target samuel
+		facing player
+		1 It is not a human! It simply wears the skin of one.
+		2 As for the Motses, they are $1heretics$0! Cursed by the Goddess to carry Motses's burden, $1forever undying$0.
+	}
+	emote
+	{
+		target player
+		emote beat
+	}
+	wait { type time; time 1.2s; }
+	lines
+	{
+		target player
+		style thinking
+		1 This is insane. This sounds like stuff out of old stories -
+		2 - But even those have nothing as crazy as that.
+	}
+	choice
+	{
+		target player
+		1 ('Accept' the job)
+		1goto OnAcceptJob
+		2 (Stay silent)
+		2goto OnStaySilent
+	}
+#OnAcceptJob
+	lines
+	{
+		target player
+		facing samuel
+		1a Okay, say I do kill this monster of yours? What does that get me, in exact terms?
+		1c Alright, sure, I'll kill this monster, but what does that actually get me?
+		1p I suppose if he -$p if $bit$$ really is a monster, it would be good to get rid of it...
+	}
+	lines
+	{
+		target samuel
+		facing right
+		1 Once you've killed the monster and brought me proof, I'll be able to reward you with -
+		2 - Perhaps a $bplace to live$$ here in Mithra?
+	}
+	lines
+	{
+		target samuel
+		facing left
+		1 I realize such a task may take some time. Please feel free to use whatever services Mithra has to offer.
+		2 The citizens are willing to trade and offer you advice now that they know you're welcome.
+	}
+	goto { target OnPostThinkChoice }
+#OnStaySilent
+	lines
+	{
+		target samuel
+		facing left
+		1 I realize such a task may take some time. Please feel free to use whatever services Mithra has to offer.
+		2 The citizens are willing to trade and offer you advice now that they know you're welcome.
+	}
+	lines
+	{
+		target samuel
+		facing right
+		1 And of course, once you've killed the monster and brought me proof - 
+		2 I'll be able to reward you with a $bplace to live$$, here in Mithra.
+	}
+	goto { target OnPostThinkChoice }
+#OnPostThinkChoice
+	lines
+	{
+		target player
+		facing samuel
+		1a Sure.$p I'll kibosh this monster if I see it. A place to live sounds pretty nice.
+		1c I suppose I could do a little monster hunting in my spare time. 
+		1p It would be nice to walk around the city and not get thrown into any more windmills.
+	}
+	lines
+	{
+		target player
+		style thinking
+		1a Like the void I'll murder for you!
+		1c Yeah right! No way I'll kill a monster that handsome!
+		1p I should probably just talk to Nathan.
+	}
+	lines
+	{
+		target player
+		facing samuel
+		1 Consider me Mithra's new monster hunter.
+	}
+	lines
+	{
+		target samuel
+		facing player
+		1 Really? You will? That’s wonderful!
+	}
+	// TODO, use ai{anim} to do anime girl spinning in chair
+	//ai
+	//{
+	//	style cts
+	//	command anim
+	//	anim SPEEN
+	//}
+	lines
+	{
+		target samuel
+		facing player
+		1 This is such good news! Please enjoy Mithra as long as you’d like.
+		2 Also, it $1may take time$0 for news to travel that you’re permitted in the city.
+		3 Do forgive the more excitable of the Civilian Guard.
+	}
+	
+	// move poppy to the proper position
+	ai
+	{
+		target poppy
+		style cts
+		command move
+		position 640 560
+	}
+	wait { type time; time 0.2s; }
+	
+	flags
+	{
+		set HuntDownNathan 10
+	}
+	flags
+	{
+		set MithraEscape 21
+	}
+	
+screen { type ctsout }
+player { actions unlock }
+
+#OnEnd
+#ended

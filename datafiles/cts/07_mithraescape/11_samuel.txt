@@ -5,15 +5,30 @@
 	{
 		target OnEnd
 		flag MithraEscape
+		compare >=
+		value 21
+	}
+	spawnstate
+	{
+		spawn poppy
+		facing right
+		position 408 648
+	}
+
+	goto_if_flag
+	{
+		target OnEnd
+		flag MithraEscape
 		compare !=
 		value 11
 	}
 	spawnstate
 	{
 		spawn sam
-		facing down
+		facing left
 		position 670 568
 	}
+	
 	goto { target OnEnd }
 
 #OnBegin
@@ -97,7 +112,7 @@ emote
 	target samuel
 	emote beat
 }
-wait { type time; time 0.4s; }
+wait { type time; time 1.2s; }
 lines
 {
 	target samuel

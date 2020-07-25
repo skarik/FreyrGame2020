@@ -10,11 +10,17 @@ if (iexists(o_PlayerStats))
 	input_text = string_replace(input_text, "[PLAYER_NICKNAME]", string_copy(o_PlayerStats.m_name, 1, 2));
 }
 
-// Go through the input_text character by character to parse
-var str_len = 0;
-display_text = "";
-for (var i = 0; i <= string_length(input_text); ++i) display_flags[i] = 0;
 
+var str_len = 0;
+
+// Initialize text
+display_text = "";
+for (var i = 0; i <= string_length(input_text); ++i)
+{
+	display_flags[i] = null;
+}
+
+// Go through the input_text character by character to parse
 for (var i = 1; i <= string_length(input_text); ++i)
 {
     var next_char = string_char_at(input_text, i);
@@ -22,10 +28,18 @@ for (var i = 1; i <= string_length(input_text); ++i)
     {   // Escape character! We pull the next character as the code.
         i += 1;
         next_char = string_char_at(input_text, i);
-        display_flags[str_len] = ord(next_char);
+        
+		//display_flags[str_len] = ord(next_char);
+		if (!is_array(display_flags[str_len]))
+		{
+			display_flags[str_len] = array_create(0);
+		}
+		var flags = display_flags[str_len];
+		flags[array_length_1d(flags)] = ord(next_char);
+		display_flags[str_len] = flags;
     }
     else
-    {   // It's a display character! Just save it and keep track fo the length.
+    {   // It's a display character! Just save it and keep track of the length.
         display_text += next_char;
         str_len++;
     }

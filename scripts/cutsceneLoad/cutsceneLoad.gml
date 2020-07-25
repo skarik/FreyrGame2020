@@ -392,6 +392,8 @@ while (!file_text_eof(fp))
 					ds_map_add(new_map, SEQI_TYPE, SEQWAIT_AI);
 				else if (type == "playerdistance")
 					ds_map_add(new_map, SEQI_TYPE, SEQWAIT_PLAYERDISTANCE);
+				else if (type == "talkto")
+					ds_map_add(new_map, SEQI_TYPE, SEQWAIT_TALKTO);
                 else
                     ds_map_add(new_map, SEQI_TYPE, SEQWAIT_INPUT);
                     

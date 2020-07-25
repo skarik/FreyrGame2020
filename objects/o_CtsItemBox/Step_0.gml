@@ -81,13 +81,20 @@ if ( current_display_delay <= 0.0 )
     for (var i = previous_display_count; i < index; ++i)
     {
         // Do character-based updates
-        if ( display_flags[ceil(i)] == ord("p") )
-            current_display_delay = 0.5; // Wait for half a second
-		if ( display_flags[ceil(i)] == ord("k") )
-			current_display_letterShake = true;
-		if ( display_flags[ceil(i)] == ord("$") )
+		var flags = display_flags[ceil(i)];
+		if (is_array(flags))
 		{
-			current_display_letterShake = false;
+			for (var iFlag = 0; iFlag < array_length_1d(flags); ++iFlag)
+			{
+		        if ( flags[iFlag] == ord("p") )
+		            current_display_delay = 0.5; // Wait for half a second
+				if ( flags[iFlag] == ord("k") )
+					current_display_letterShake = true;
+				if ( flags[iFlag] == ord("$") )
+				{
+					current_display_letterShake = false;
+				}
+			}
 		}
 		
 		// Yes, do character based updates

@@ -41,6 +41,8 @@ else
 
 //
 // Effect creation:
+var kMaxFootstepDistance = 900;
+var kMaxFootstepFalloff = 1.7;
 
 if (ground_material == kTileMaterial_Sand)
 {
@@ -71,8 +73,8 @@ if (ground_material == kTileMaterial_Sand)
 	sound_hit.pitch = random_range(0.9, 1.1);
 	sound_hit.gain = 0.84;
 	sound_hit.falloff_start = 20;
-	sound_hit.falloff_end = 800;
-	sound_hit.falloff_factor = 1;
+	sound_hit.falloff_end = kMaxFootstepDistance;
+	sound_hit.falloff_factor = kMaxFootstepFalloff;
 	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Dirt)
@@ -104,8 +106,8 @@ else if (ground_material == kTileMaterial_Dirt)
 	sound_hit.pitch = random_range(0.7, 0.8);
 	sound_hit.gain = random_range(0.8, 0.9) * 0.4;
 	sound_hit.falloff_start = 20;
-	sound_hit.falloff_end = 800;
-	sound_hit.falloff_factor = 1;
+	sound_hit.falloff_end = kMaxFootstepDistance;
+	sound_hit.falloff_factor = kMaxFootstepFalloff;
 	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Stone)
@@ -131,8 +133,8 @@ else if (ground_material == kTileMaterial_Stone)
 	sound_hit.pitch = random_range(0.7, 0.8);
 	sound_hit.gain = 0.7;
 	sound_hit.falloff_start = 20;
-	sound_hit.falloff_end = 800;
-	sound_hit.falloff_factor = 1;
+	sound_hit.falloff_end = kMaxFootstepDistance;
+	sound_hit.falloff_factor = kMaxFootstepFalloff;
 	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Water)
@@ -157,8 +159,8 @@ else if (ground_material == kTileMaterial_Water)
 	sound_hit.pitch = random_range(0.9, 1.1);
 	sound_hit.gain = 0.8;
 	sound_hit.falloff_start = 20;
-	sound_hit.falloff_end = 800;
-	sound_hit.falloff_factor = 1;
+	sound_hit.falloff_end = kMaxFootstepDistance;
+	sound_hit.falloff_factor = kMaxFootstepFalloff;
 	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Grass)
@@ -172,8 +174,8 @@ else if (ground_material == kTileMaterial_Grass)
 	sound_hit.pitch = random_range(0.95, 1.2);
 	sound_hit.gain = random_range(0.7, 0.9) * 0.4;
 	sound_hit.falloff_start = 20;
-	sound_hit.falloff_end = 800;
-	sound_hit.falloff_factor = 1;
+	sound_hit.falloff_end = kMaxFootstepDistance;
+	sound_hit.falloff_factor = kMaxFootstepFalloff;
 	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Metal)
@@ -187,8 +189,8 @@ else if (ground_material == kTileMaterial_Metal)
 	sound_hit.pitch = random_range(0.95, 1.2);
 	sound_hit.gain = random_range(0.7, 0.9) * 0.6;
 	sound_hit.falloff_start = 20;
-	sound_hit.falloff_end = 800;
-	sound_hit.falloff_factor = 1;
+	sound_hit.falloff_end = kMaxFootstepDistance;
+	sound_hit.falloff_factor = kMaxFootstepFalloff;
 	sound_hit.parent = id;
 }
 else if (ground_material == kTileMaterial_Wood)
@@ -202,7 +204,7 @@ else if (ground_material == kTileMaterial_Wood)
 	sound_hit.pitch = random_range(0.9, 1.0);
 	sound_hit.gain = random_range(0.7, 0.9) * 1.4;
 	sound_hit.falloff_start = 20;
-	sound_hit.falloff_end = 800;
-	sound_hit.falloff_factor = 1;
+	sound_hit.falloff_end = kMaxFootstepDistance;
+	sound_hit.falloff_factor = kMaxFootstepFalloff;
 	sound_hit.parent = id;
 }

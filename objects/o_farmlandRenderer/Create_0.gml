@@ -7,7 +7,7 @@ if (instance_number(object_index) > 1)
 }
 
 depth = 60;
-persistent = true;
+persistent = false;
 
 // Surface used for rendering the farmland
 m_surface = null;

@@ -1,2 +1,2 @@
 /// @description Load cutscene
-cutsceneLoad("00_mithraescape/10_windmill.txt");
+cutsceneLoad("07_mithraescape/10_windmill.txt");

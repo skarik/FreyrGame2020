@@ -7,7 +7,7 @@ if (instance_number(object_index) > 1)
 }
 
 depth = 45;
-persistent = true;
+persistent = false;
 
 // Surface used for metaballs
 m_surface = null;
