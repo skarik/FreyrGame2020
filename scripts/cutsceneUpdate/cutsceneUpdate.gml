@@ -50,7 +50,7 @@ case SEQTYPE_WAIT:
 			
 			var pl = getPlayer();
 			var target = instance_find(target, 0);
-			if (point_distance(pl.x, pl.y, target.x, target.y) < playerdistance)
+			if (!iexists(target) || point_distance(pl.x, pl.y, target.x, target.y) < playerdistance)
 			{
 				cts_entry_current++;
                 cts_execute_state = 0;
