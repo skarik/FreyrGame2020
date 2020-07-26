@@ -8,7 +8,7 @@
 	{
 		target OnEnd
 		flag MithraPoppyFirstTalk
-		compare =
+		compare !=
 		value 0
 	}
 	
