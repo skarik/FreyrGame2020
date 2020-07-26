@@ -130,6 +130,9 @@ else
 			}
 			m_aiNPC_alertTimer += Time.deltaTime;
 			
+			// Face at target position to keep tracking live
+			aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], 360);
+			
 			// Investigate after time
 			if (m_aiNPC_alertTimer >= 2.0)
 			{
