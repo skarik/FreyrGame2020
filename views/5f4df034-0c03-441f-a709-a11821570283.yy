@@ -11,11 +11,13 @@
         "70639fd6-bf8c-4574-aab9-510c03803e0d",
         "cfbb5758-d524-4f21-9baa-8b165e826034",
         "e23108ba-d822-4ce7-b642-e96b4451e6cf",
+        "5d59f00d-a2de-4367-aa11-077f4f06203f",
         "d36f532b-e138-4b81-b381-814d8bba9863",
         "18636bc2-3be9-4f95-90b4-488532457ee7",
+        "066c8cfb-a060-409f-8f34-8ea5d3547ca2",
         "3d9e4094-0494-43b7-a772-d273cc6aa534",
         "64643f07-8409-4ba0-bd44-cc4d4ec65078",
-        "066c8cfb-a060-409f-8f34-8ea5d3547ca2"
+        "3eacb8bd-40ae-4c32-8659-0748b2edadda"
     ],
     "filterType": "GMObject",
     "folderName": "Trigger",

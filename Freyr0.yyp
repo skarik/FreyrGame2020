@@ -2474,7 +2474,7 @@
             "Key": "24ac4ceb-2490-41d2-9219-f66823e9271c",
             "Value": {
                 "id": "3293b32f-9386-4530-8ae8-c1e5213d20fc",
-                "resourcePath": "scripts\\delete_delay\\delete_delay.yy",
+                "resourcePath": "scripts\\idelete_delay\\idelete_delay.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3959,6 +3959,14 @@
             }
         },
         {
+            "Key": "381d1824-3dfc-406b-9933-e222f3c37c82",
+            "Value": {
+                "id": "84b87a9c-032d-4134-9be6-346a55769056",
+                "resourcePath": "scripts\\aiscriptRequestFollowPath\\aiscriptRequestFollowPath.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "386a5664-280f-4731-ba74-26e6e493275b",
             "Value": {
                 "id": "23ce13a8-000a-4cf2-a384-5f48a8f04be2",
@@ -4404,6 +4412,14 @@
                 "id": "26be26f3-4851-4a9e-9c5f-b53ae667c291",
                 "resourcePath": "sprites\\s_assetMithraTempleEntrance\\s_assetMithraTempleEntrance.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3eacb8bd-40ae-4c32-8659-0748b2edadda",
+            "Value": {
+                "id": "11658609-2b30-47ce-88df-83fa1cf6e2e9",
+                "resourcePath": "objects\\o_livelyTriggeredObjectManager\\o_livelyTriggeredObjectManager.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6491,6 +6507,14 @@
             "Value": {
                 "id": "4c9d386a-6fb4-40d2-81f2-5af45c426276",
                 "resourcePath": "objects\\o_fxScreenshake\\o_fxScreenshake.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5d59f00d-a2de-4367-aa11-077f4f06203f",
+            "Value": {
+                "id": "fd417ca4-ae12-473e-91e7-5078b3dbedfd",
+                "resourcePath": "objects\\o_livelyLogicAiTriggeredPath\\o_livelyLogicAiTriggeredPath.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -9644,6 +9668,14 @@
                 "id": "4e3fdc48-a771-4b46-abb5-46e2b7271603",
                 "resourcePath": "sprites\\s_cropBamboo\\s_cropBamboo.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8d6edb98-6e02-48e1-969a-73961b09fb29",
+            "Value": {
+                "id": "706e88e9-887a-4ec5-91ce-582d3067a0f0",
+                "resourcePath": "objects\\o_chGo\\o_chGo.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -18694,6 +18726,7 @@
         "d0b4cc14-99dd-42db-be9c-072a61dd0c31",
         "e8a071ec-1b09-44e7-b1e9-36de710873f7",
         "9d2d2eb4-e35b-42c0-832a-3a24f22002a9",
+        "381d1824-3dfc-406b-9933-e222f3c37c82",
         "d1972855-3c82-4b2a-a3e6-2e216eb8d6b1",
         "53a33573-1c7c-4609-8b91-8d5beeae91c5",
         "d59d377c-be12-4100-9edd-c8b11cf89fa8",

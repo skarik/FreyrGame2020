@@ -37,6 +37,11 @@ else if (m_aiScript_style == kAiStyle_Scripted)
 	if (m_aiScript_requestCommand == kAiRequestCommand_Move)
 	{
 		aipathMoveTo(m_aiScript_requestPositionX, m_aiScript_requestPositionY);
+		if (m_aiScript_requestSpeed > 0.0)
+		{
+			xAxis.value *= m_aiScript_requestSpeed;
+			yAxis.value *= m_aiScript_requestSpeed;
+		}
 		if (!moHitWall)
 		{
 			// Resume motion & reset wallbash if done
@@ -85,6 +90,75 @@ else if (m_aiScript_style == kAiStyle_Scripted)
 	else if (m_aiScript_requestCommand == kAiRequestCommand_Face)
 	{
 		aimotionFaceAt(m_aiScript_requestPositionX, m_aiScript_requestPositionY, -1);
+	}
+	else if (m_aiScript_requestCommand == kAiRequestCommand_FollowPath)
+	{
+		if (iexists(m_aiScript_requestPathnode))
+		{
+			// Wait in place
+			if (m_aiScript_pathTimer > 0.0)
+			{
+				m_aiScript_pathTimer -= Time.deltaTime;
+				
+				_controlStructUpdate(xAxis, 0.0);
+				_controlStructUpdate(yAxis, 0.0);
+			
+				aimotionFaceAtDirection(m_aiScript_requestPathnode.image_angle, 360);
+			
+				if (m_aiScript_pathTimer <= 0.0)
+				{
+					with (m_aiScript_requestPathnode)
+					{
+						event_user(kEvent_PathnodeOnPass1);
+					}
+					m_aiScript_requestPathnode = m_aiScript_requestPathnode.m_pathNext;
+				}
+			}
+			// Go to next node
+			else
+			{
+				// Move to the patrol target
+				{
+					var control_vector = [m_aiScript_requestPathnode.x - x, m_aiScript_requestPathnode.y - y];
+					var control_vector_len = sqrt(sqr(control_vector[0]) + sqr(control_vector[1]));
+					if (control_vector_len > 0.01)
+					{
+						control_vector[0] /= control_vector_len;
+						control_vector[1] /= control_vector_len;
+					}
+					if (m_aiScript_requestSpeed > 0.0)
+					{
+						control_vector[0] *= m_aiScript_requestSpeed;
+						control_vector[1] *= m_aiScript_requestSpeed;
+					}
+					_controlStructUpdate(xAxis, control_vector[0]);
+					_controlStructUpdate(yAxis, control_vector[1]);
+				}
+				
+				// If at the patrol point, move to the next point
+				if (sqr(x - m_aiScript_requestPathnode.x) + sqr(y - m_aiScript_requestPathnode.y) < sqr(10))
+				{
+					if (m_aiScript_requestPathnode.m_pathPauseTime > 0.0)
+					{	// Pause at it for a time
+						m_aiScript_pathTimer = m_aiScript_requestPathnode.m_pathPauseTime;
+					}
+					else
+					{	// Continue going instead
+						with (m_aiScript_requestPathnode)
+						{
+							event_user(kEvent_PathnodeOnPass1);
+						}
+						m_aiScript_requestPathnode = m_aiScript_requestPathnode.m_pathNext;
+					}
+				}
+			}
+		}
+		else
+		{
+			// Stop motion if node missing or path done
+			_controlStructUpdate(xAxis, 0.0);
+			_controlStructUpdate(yAxis, 0.0);
+		}
 	}
 }
 // Update the leader AI style

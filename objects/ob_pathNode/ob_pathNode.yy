@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "ob_pathNode",
     "eventList": [
-        
+        {
+            "id": "97fb5fd8-a37d-48ac-9ffe-9bff18c69c17",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 11,
+            "eventtype": 7,
+            "m_owner": "53f8453e-4c36-4ab8-89c4-22f8fe8916b8"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -92,6 +101,34 @@
             "value": "0",
             "varName": "z",
             "varType": 0
+        },
+        {
+            "id": "b9d639bf-324c-4c2f-ac24-485f5470582e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "[null]",
+            "varName": "m_onPassTargets",
+            "varType": 4
+        },
+        {
+            "id": "6b2067c3-93a0-41e7-8a35-afd59c8b0c7e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "[kEvent_DefaultTrigger0]",
+            "varName": "m_onPassTargetEvents",
+            "varType": 4
         }
     ],
     "solid": false,

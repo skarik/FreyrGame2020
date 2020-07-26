@@ -8,7 +8,8 @@
         "8f7f8895-3ee1-4b3a-8219-b7989865eb7a",
         "fe4f5c77-af20-4ab3-97fe-24dc854cae04",
         "15c93d8a-f6c6-40d0-a232-095419452ad9",
-        "968c0cb9-f2f3-4920-8b57-d445b27ecff8"
+        "968c0cb9-f2f3-4920-8b57-d445b27ecff8",
+        "8d6edb98-6e02-48e1-969a-73961b09fb29"
     ],
     "filterType": "GMObject",
     "folderName": "Followers",

@@ -12,6 +12,7 @@
 #macro kAiRequestCommand_Move 3
 #macro kAiRequestCommand_Teleport 4
 #macro kAiRequestCommand_Face 5
+#macro kAiRequestCommand_FollowPath 6
 
 m_aiScript_style = kAiStyle_Default;
 kAiScriptDefaultStyle = kAiStyle_Default;
@@ -23,9 +24,12 @@ m_aiScript_requestPositionY = 0;
 m_aiScript_requestAnimation = null;
 m_aiScript_requestAnimationLoop = false;
 m_aiScript_requestSpeed = 0;
+m_aiScript_requestPathnode = null;
 
 m_aiScript_wallTimer = 0.0;
 m_aiScript_wallBashCount = 0;
+
+m_aiScript_pathTimer = 0.0;
 
 aipathInit();
 

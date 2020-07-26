@@ -42,6 +42,10 @@ else
 				
 				if (m_aiNPC_timer <= 0.0)
 				{
+					with (m_aiScript_requestPathnode)
+					{
+						event_user(kEvent_PathnodeOnPass1);
+					}
 					m_aiNPC_patrolPathnode = m_aiNPC_patrolPathnode.m_pathNext;
 				}
 			}
@@ -90,6 +94,10 @@ else
 					}
 					else
 					{	// Continue going instead
+						with (m_aiScript_requestPathnode)
+						{
+							event_user(kEvent_PathnodeOnPass1);
+						}
 						m_aiNPC_patrolPathnode = m_aiNPC_patrolPathnode.m_pathNext;
 					}
 					m_aiNPC_patrolNextWalkSimple = kTristateUnknown;

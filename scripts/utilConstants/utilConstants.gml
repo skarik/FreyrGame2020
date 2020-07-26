@@ -37,6 +37,8 @@
 #macro kEvent_DoorOpen1 1
 #macro kEvent_DoorClose2 2
 
+#macro kEvent_PathnodeOnPass1 1
+
 #macro kCompareOpEqual 0
 #macro kCompareOpGreater 1
 #macro kCompareOpLess 2

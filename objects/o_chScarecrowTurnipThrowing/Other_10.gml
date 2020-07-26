@@ -3,4 +3,4 @@
 // Inherit the parent event
 event_inherited();
 
-delete_delay(this, 0.0);
+idelete_delay(this, 0.0);

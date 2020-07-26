@@ -5,5 +5,13 @@ inTar = areaInDeathtar(x, y, z + z_height);
 isBusyInteracting = m_isTilling || m_isPlanting || m_isHarvesting;
 if (ctsGabbersHaveFocus())
 {
-	isBusyInteracting = isBusyInteracting || ob_CtsTalker.input_priority;
+	//isBusyInteracting = isBusyInteracting || ob_CtsTalker.input_priority;
+	with (ob_CtsTalker)
+	{
+		if (input_priority)
+		{
+			other.isBusyInteracting = true;
+			break;
+		}
+	}
 }
