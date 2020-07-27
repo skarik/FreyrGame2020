@@ -46,11 +46,15 @@ case SEQTYPE_WAIT:
 		else if (type == SEQWAIT_PLAYERDISTANCE)
 		{
 			var target = ds_map_find_value(entry, SEQI_TARGET);
+			var count = ds_map_find_value(entry, SEQI_COUNT);
 			var playerdistance = ds_map_find_value(entry, SEQI_WAIT_DISTANCE);
 			
 			var pl = getPlayer();
-			var target = instance_find(target, 0);
-			if (!iexists(target) || point_distance(pl.x, pl.y, target.x, target.y) < playerdistance)
+			
+			// Find target
+			var target_inst = _cutsceneUpdateGetTarget(target, count);
+			
+			if (iexists(target_inst) && point_distance(pl.x, pl.y, target_inst.x, target_inst.y) < playerdistance)
 			{
 				cts_entry_current++;
                 cts_execute_state = 0;
@@ -59,17 +63,28 @@ case SEQTYPE_WAIT:
 		else if (type == SEQWAIT_AI)
 		{
 			var target = ds_map_find_value(entry, SEQI_TARGET);
+			var count = ds_map_find_value(entry, SEQI_COUNT);
 			var aiaction = ds_map_find_value(entry, SEQI_WAIT_AIACTION);
 			
-			var target = instance_find(target, 0);
-			if (aiaction == "arrive")
+			// Find target
+			var target_inst = _cutsceneUpdateGetTarget(target, count);
+			
+			if (iexists(target_inst))
 			{
-				if (point_distance(target.x, target.y, target.m_aiScript_requestPositionX, target.m_aiScript_requestPositionY) < 10)
+				if (aiaction == "arrive")
 				{
-					cts_entry_current++;
-					cts_execute_state = 0;
+					if (point_distance(target_inst.x, target_inst.y, target_inst.m_aiScript_requestPositionX, target_inst.m_aiScript_requestPositionY) < 10)
+					{
+						cts_entry_current++;
+						cts_execute_state = 0;
+					}
 				}
 			}
+			/*else
+			{
+				cts_entry_current++;
+                cts_execute_state = 0;
+			}*/
 		}
 		else if (type == SEQWAIT_TALKTO)
 		{
@@ -159,18 +174,8 @@ case SEQTYPE_LINES:
 			style = kLinesStyle_Diagetic;
 		}
     
-		// find target
-		var target_inst = instance_find(target, (style != kLinesStyle_Portrait) ? count : 0);
-		if (style != kLinesStyle_Portrait && !iexists(target_inst))
-		{
-			target -= SEQI_TARGET_OFFSET_INDEX; // Move it into offset range
-			if (cts_actor_override_list_enabled
-				&& target >= 0
-				&& target < array_length_1d(cts_actor_override_list))
-			{
-				target_inst = cts_actor_override_list[target];
-			}
-		}
+		// Find target
+		var target_inst = (style != kLinesStyle_Portrait) ? _cutsceneUpdateGetTarget(target, count) : 0;
 	
 		// FREYR SPECIFIC:
 		// Replace the line with the player gender-specific line if possible:
@@ -657,7 +662,7 @@ case SEQTYPE_AI:
     var style = ds_map_find_value(entry, SEQI_AI_STYLE);
         
 	// Find target
-    var target_inst = instance_find(target, count);
+	var target_inst = _cutsceneUpdateGetTarget(target, count);
 
 	// Apply the AI command
 	var command = ds_map_find_value(entry, SEQI_AI_COMMAND);
@@ -715,10 +720,23 @@ case SEQTYPE_AI:
 			aiscriptRequestFace(target_inst, style,
 								tx, ty);
 			break;
+		case kAiRequestCommand_Jump:
+			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
+			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
+			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (iexists(origin))
+			{
+				tx += origin.x;
+				ty += origin.y;
+			}
+			aiscriptRequestJump(target_inst, style,
+								tx, ty,
+								ds_map_find_value(entry, SEQI_AI_SPEED));
+			break;
 	}
 
 	// Debug output
-	debugOut("Doing AI command " + string(command) + " in style " + string(style) + "...");
+	debugOut("Doing AI command " + string(command) + " in style " + string(style) + " to " + string(target_inst) + "...");
 	
 	// We're done here. Onto the next event
 	cts_entry_current++;
@@ -752,9 +770,9 @@ case SEQTYPE_SPAWNSTATE:
 			0,
 			object_exists(spawnobject_unique) ? spawnobject_unique : spawnobject);
 		
-		// Make the target face the input direction
         if (iexists(target_inst))
         {
+			// Make the target face the input direction
             //if (facing == -1 || facing == 1)
 			if (facing == SEQI_FACING_UP)
 				target_inst.facingDirection = 90;
@@ -771,11 +789,18 @@ case SEQTYPE_SPAWNSTATE:
             {
                 //target_inst.facingDir = sign(facing.x - target_inst.x);
 				target_inst.facingDirection = point_direction(target_inst.x, target_inst.y, facing.x, facing.y);
-            }
+			}
+			
+			// Save the instance
+			cts_actor_tracking_list[array_length_1d(cts_actor_tracking_list)] = target_inst;
+			
+			// Debug output
+			debugOut("Doing spawnstate command spawn " + object_get_name(target_inst.object_index) + "...");
         }
-		
-		// Debug output
-		debugOut("Doing spawnstate command spawn " + object_get_name(target_inst.object_index) + "...");
+		else
+		{
+			show_error("Invalid object index grabbed. This can never happen. Do a clean & build if it does.", true);
+		}
 	}
 	else if (iexists(deleteobject) || object_exists(deleteobject))
 	{
@@ -783,6 +808,10 @@ case SEQTYPE_SPAWNSTATE:
 		
 		// Debug output
 		debugOut("Doing spawnstate command delete " + object_get_name(deleteobject) + "...");
+	}
+	else
+	{
+		debugOut("Invalid spawn occurred...");
 	}
 	
 	// We're done here. Onto the next event

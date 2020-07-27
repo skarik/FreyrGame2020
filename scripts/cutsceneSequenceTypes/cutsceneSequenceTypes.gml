@@ -22,7 +22,7 @@
 #macro SEQTYPE_PLAYER 17
 
 #macro SEQI_SIZE -1
-#macro SEQI_COUNT -1
+#macro SEQI_COUNT -10
 #macro SEQI_TIME -1
 #macro SEQI_TARGET -2
 #macro SEQI_LINE -3

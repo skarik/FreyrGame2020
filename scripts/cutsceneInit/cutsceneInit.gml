@@ -13,3 +13,5 @@ cts_last_signal_consumed = true;
 
 cts_actor_override_list = [];
 cts_actor_override_list_enabled = false;
+
+cts_actor_tracking_list = [];

@@ -13,6 +13,7 @@
 #macro kAiRequestCommand_Teleport 4
 #macro kAiRequestCommand_Face 5
 #macro kAiRequestCommand_FollowPath 6
+#macro kAiRequestCommand_Jump 7
 
 m_aiScript_style = kAiStyle_Default;
 kAiScriptDefaultStyle = kAiStyle_Default;
@@ -30,6 +31,13 @@ m_aiScript_wallTimer = 0.0;
 m_aiScript_wallBashCount = 0;
 
 m_aiScript_pathTimer = 0.0;
+
+m_aiScript_jumpTimer = 0.0;
+m_aiScript_jumpDistance = 0.0;
+m_aiScript_jumpStartX = 0;
+m_aiScript_jumpStartY = 0;
+m_aiScript_jumpStartZ = 0;
+m_aiScript_jumpTargetZ = 0;
 
 aipathInit();
 

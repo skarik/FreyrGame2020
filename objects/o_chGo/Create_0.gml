@@ -4,7 +4,7 @@ if (singleton_this()) exit;
 
 #region Per Follower Info
 
-m_name = (questGetValue(kQidMithraEscape) >= 10) ? "Samuel" : "???";
+m_name = (questGetValue(kQidFoolsTower) >= 10) ? "Go" : "???";
 m_interactionFile = ""; //
 m_interactChoices = 0;
 

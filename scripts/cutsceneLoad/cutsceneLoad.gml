@@ -332,7 +332,7 @@ while (!file_text_eof(fp))
 					var linec = ds_map_find_value(read_object_map, string(index) + "c");
 					var linea = ds_map_find_value(read_object_map, string(index) + "a");
 					var linep = ds_map_find_value(read_object_map, string(index) + "p");
-                    var wave = ds_map_find_value(read_object_map, string(index)+"wav");
+                    var wave = ds_map_find_value(read_object_map, string(index) + "wav");
                     if (is_undefined(line) && is_undefined(linec)
 						&& is_undefined(linea) && is_undefined(linep))
 						break; // No more lines found!
@@ -368,6 +368,7 @@ while (!file_text_eof(fp))
                 var type = ds_map_find_value(read_object_map, "type");
                 var time = ds_map_find_value(read_object_map, "time");
 				var target = ds_map_find_value(read_object_map, "target");
+				var targeti = ds_map_find_value(read_object_map, "object");
 				var aiaction = ds_map_find_value(read_object_map, "aiaction");
 				var distance = ds_map_find_value(read_object_map, "distance");
 				
@@ -375,6 +376,7 @@ while (!file_text_eof(fp))
                 if (is_undefined(type)) type = "input";
                 if (is_undefined(time)) time = "1.0";
 				target = _cutsceneParseTarget(target);
+				if (is_undefined(targeti)) targeti = "0";
 				if (is_undefined(aiaction)) aiaction = "";
 				if (is_undefined(distance)) distance = "50";
                 
@@ -382,6 +384,7 @@ while (!file_text_eof(fp))
                 ds_map_add(new_map, SEQI_ID, name);
                 ds_map_add(new_map, SEQI_TIME, real(time));
 				ds_map_add(new_map, SEQI_TARGET, target);
+				ds_map_add(new_map, SEQI_COUNT, real(targeti));
 				ds_map_add(new_map, SEQI_WAIT_AIACTION, aiaction);
 				ds_map_add(new_map, SEQI_WAIT_DISTANCE, real(distance));
                 if (type == "time")
@@ -712,6 +715,8 @@ while (!file_text_eof(fp))
 					command = kAiRequestCommand_Teleport;
 				else if (command == "face")
 					command = kAiRequestCommand_Face;
+				else if (command == "jump")
+					command = kAiRequestCommand_Jump;
 				else
 					command = kAiRequestCommand_Stop;
 				

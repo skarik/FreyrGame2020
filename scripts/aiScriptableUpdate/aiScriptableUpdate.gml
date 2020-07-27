@@ -158,6 +158,43 @@ else if (m_aiScript_style == kAiStyle_Scripted)
 			// Stop motion if node missing or path done
 			_controlStructUpdate(xAxis, 0.0);
 			_controlStructUpdate(yAxis, 0.0);
+			
+			// And done
+			m_aiScript_requestCommand = null;
+		}
+	}
+	else if (m_aiScript_requestCommand == kAiRequestCommand_Jump)
+	{
+		// Do blend
+		m_aiScript_jumpTimer += Time.deltaTime / m_aiScript_requestSpeed * (m_aiScript_jumpDistance / kMoveSpeed) * 2;
+		
+		m_aiScript_jumpTimer = saturate(m_aiScript_jumpTimer);
+		x = lerp(m_aiScript_jumpStartX, m_aiScript_requestPositionX, m_aiScript_jumpTimer);
+		y = lerp(m_aiScript_jumpStartY, m_aiScript_requestPositionY, m_aiScript_jumpTimer);
+		z = lerp(m_aiScript_jumpStartZ, m_aiScript_jumpTargetZ, m_aiScript_jumpTimer);
+		z += sqrt(max(0.0, 0.5 - abs(0.5 - m_aiScript_jumpTimer))) * abs(m_aiScript_jumpStartZ - m_aiScript_jumpTargetZ) * 1.4;
+		
+		var t_znext = collision3_get_highest_meeting(x, y, z - 1024);
+		z_height = z - t_znext; //max(0.0, z - t_znext);
+		z -= z_height;
+		//z = t_znext;
+		
+		moEnabled = false;
+		xspeed = 0.0;
+		yspeed = 0.0;
+		zspeed = 0.0;
+		onGround = (z_height > 4) ? false : true;
+		moAnimationYOffset = 0.0;
+		z_ready = false;
+		
+		if (m_aiScript_jumpTimer >= 1.0)
+		{
+			moEnabled = true;
+			m_aiScript_requestCommand = null;
+			m_aiScript_requestPositionX = 0.0;
+			m_aiScript_requestPositionY = 0.0;
+			z_ready = true;
+			effectOnGroundHit(x, y);
 		}
 	}
 }

@@ -1,0 +1,166 @@
+//osf/cutscene
+#begin 
+
+goto { target OnEnd }
+
+#OnBegin
+
+	goto_if_flag
+	{
+		target OnEnd
+		flag FoolsTower
+		compare >
+		value 0
+	}
+
+	player { actions lock }
+	screen { type ctsin }
+
+	// Create the guard characters 
+	spawnstate
+	{
+		spawn guard
+		facing down
+		position 910 1960
+	}
+	spawnstate
+	{
+		spawn guard
+		facing down
+		position 950 1960
+	}
+	
+	ai
+	{
+		target guard
+		object 0
+		style cts
+		command move
+		position 960 2090
+	}
+	ai
+	{
+		target guard
+		object 1
+		style cts
+		command move
+		position 960 2130
+	}
+	
+	wait
+	{
+		type ai
+		target guard
+		object 0
+		aiaction arrive
+	}
+	
+	lines
+	{
+		target guard
+		object 0
+		1 $kStay where you are, stranger!$$
+	}
+	
+	lines
+	{
+		target player
+		1c For bloody sake -$p have we not been through this already?
+		2c Did Sammy not tell you I’m your new merc?
+		
+		1a Get any closer and I’ll throw you off this sorry excuse of a pier!
+		2a I’ve already been given the okay to be here by your high and mighty Vicar.
+		
+		1p Ah! I’m s-sorry!
+		2p Mr. Samuel said that I was free to go!
+	}
+	
+	player { actions unlock }
+	screen { type ctsout }
+
+	flags
+	{
+		set FoolsTower 10
+	}
+	wait
+	{
+		type time
+		time 5.0s
+	}
+
+#OnBeginAgain
+
+	flags
+	{
+		set FoolsTower 20
+	}
+
+	player { actions lock }
+	screen { type ctsin }
+	
+	// Create even more guard characters 
+	spawnstate
+	{
+		spawn guard
+		facing left
+		position 1540 2020
+	}
+	spawnstate
+	{
+		spawn guard
+		facing left
+		position 1540 2070
+	}
+	
+	ai
+	{
+		target guard
+		object 2
+		style cts
+		command move
+		position 1190 2090
+	}
+	ai
+	{
+		target guard
+		object 3
+		style cts
+		command move
+		position 1190 2130
+	}
+	wait
+	{
+		type ai
+		target guard
+		object 2
+		aiaction arrive
+	}
+	
+	lines
+	{
+		target guard
+		object 0
+		1 Why should I believe you?
+		2 Why would the Vicar grant a complete stranger the freedom to wander around our city?
+	}
+
+// TODO: later
+spawnstate
+{
+	spawn go
+	facing down
+	position 1080 2050
+}
+
+ai
+{
+	target go
+	style cts
+	command jump
+	position -32 0
+	origin player
+	time 2.4
+}
+
+#OnEnd
+#ended

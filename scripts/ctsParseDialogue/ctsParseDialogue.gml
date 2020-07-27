@@ -9,6 +9,11 @@ if (iexists(o_PlayerStats))
 	input_text = string_replace(input_text, "[PLAYER]", o_PlayerStats.m_name);
 	input_text = string_replace(input_text, "[PLAYER_NICKNAME]", string_copy(o_PlayerStats.m_name, 1, 2));
 }
+// Replace unicode characters for sanity
+input_text = string_replace(input_text, "\u2018", "'");
+input_text = string_replace(input_text, "\u2019", "'");
+input_text = string_replace(input_text, "\u201C", "\"");
+input_text = string_replace(input_text, "\u201D", "\"");
 
 
 var str_len = 0;
