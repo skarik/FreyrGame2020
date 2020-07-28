@@ -143,24 +143,268 @@ goto { target OnEnd }
 		1 Why should I believe you?
 		2 Why would the Vicar grant a complete stranger the freedom to wander around our city?
 	}
+	
+	lines
+	{
+		target player
+		1 Ask him! I’m just trying to leave!
+	}
+	
+	// Move guards closer!
+		ai
+		{
+			target guard
+			object 0
+			style cts
+			command move
+			position 16 0
+			origin self
+		}
+		ai
+		{
+			target guard
+			object 1
+			style cts
+			command move
+			position 16 0
+			origin self
+		}
+		ai
+		{
+			target guard
+			object 2
+			style cts
+			command move
+			position -16 0
+			origin self
+		}
+		ai
+		{
+			target guard
+			object 3
+			style cts
+			command move
+			position -16 0
+			origin self
+		}
+		wait
+		{
+			type ai
+			target guard
+			object 3
+			aiaction arrive
+		}
+	// Wait
+	
+	lines
+	{
+		target guard
+		object 3
+		1 We'll see about that!
+	}
+	lines
+	{
+		target guard
+		object 0
+		1 You could just be lying! The Vicar will know what to do.
+	}
+	
+	// Move guards closer again!
+		ai
+		{
+			target guard
+			object 0
+			style cts
+			command move
+			position 16 0
+			origin self
+		}
+		ai
+		{
+			target guard
+			object 1
+			style cts
+			command move
+			position 16 0
+			origin self
+		}
+		ai
+		{
+			target guard
+			object 2
+			style cts
+			command move
+			position -16 0
+			origin self
+		}
+		ai
+		{
+			target guard
+			object 3
+			style cts
+			command move
+			position -16 0
+			origin self
+		}
+		wait
+		{
+			type ai
+			target guard
+			object 3
+			aiaction arrive
+		}
+	// Wait
 
-// TODO: later
-spawnstate
-{
-	spawn go
-	facing down
-	position 1080 2050
-}
+#GoSplashesIn
+	spawnstate
+	{
+		spawn go
+		facing down
+		position 1080 2050
+	}
 
-ai
-{
-	target go
-	style cts
-	command jump
-	position -32 0
-	origin player
-	time 2.4
-}
+	ai
+	{
+		target go
+		style cts
+		command jump
+		position -32 0
+		origin player
+		time 2.4
+	}
+	wait
+	{
+		type time
+		time 0.6s
+	}
+	
+	// All of the guards react
+		emote
+		{
+			target guard; object 0;
+			emote beat
+		}
+		emote
+		{
+			target guard; object 1;
+			emote !
+		}
+		emote
+		{
+			target guard; object 2;
+			emote ?
+		}
+		emote
+		{
+			target guard; object 3;
+			emote !
+		}
+		
+		wait
+		{
+			type time
+			time 1.0s
+		}
+	// Wait
+		
+	lines
+	{
+		target player
+		facing go
+		1c Please tell me you’re here to be heroic.
+		1a Where do you people keep coming from?!
+		1p Ah! Please don’t hurt me or make me hurt you!
+	}
+	
+	lines
+	{
+		target go
+		facing player
+		1c Only if you need me to be, $wbeautiful$$.
+		1a Just passing through, $wgorgeous$$.
+		1p You look like you’ve had a rough day, $whandsome$$.
+	}
+	
+	// Create guard that runs up and goes after Go
+	spawnstate
+	{
+		spawn guard
+		facing down
+		position 1090 1820
+	}
+	ai
+	{
+		target guard
+		object 4
+		style cts
+		command jump
+		position 1080 2050
+		speed 0.8
+	}
+	wait
+	{
+		type time
+		time 0.3s
+	}
+	
+	lines
+	{
+		target guard
+		object 4
+		end auto
+		1 $s$kSomeone stop that green-tailed beast!$p$p
+	}
+	
+	// TODO: Have Go knock out both guards
+	spawnstate { delete guard; object 0; }
+	spawnstate { delete guard; object 0; }
+	
+#OnPlayerLetsGo
+
+	lines
+	{
+		target go
+		1 Time to $bGo$$.
+	}
+	
+	player { actions unlock }
+	screen { type ctsout }
+
+	flags
+	{
+		set FoolsTower 30
+	}
+	
+	ai
+	{
+		target guard
+		object 0
+		style default
+		command start
+	}
+	ai
+	{
+		target guard
+		object 1
+		style default
+		command start
+	}
+	
+	ai
+	{
+		target go 
+		style lead
+		command start
+		position 840 -64
+	}
+	
+	// add go to the party
+	companion
+	{
+		target go
+		party add
+	}
+	
 
 #OnEnd
 #ended

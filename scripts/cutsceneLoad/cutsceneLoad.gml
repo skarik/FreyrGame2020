@@ -697,6 +697,8 @@ while (!file_text_eof(fp))
 					style = kAiStyle_Follow;
 				else if (style == "lead")
 					style = kAiStyle_Lead;
+				else if (style == "default")
+					style = kAiStyle_Default;
 				else
 					style = kAiStyle_Scripted;
 					
@@ -773,6 +775,10 @@ while (!file_text_eof(fp))
 				var delete_object = read_object_map[?"delete"];
 				delete_object = _cutsceneParseTarget(delete_object);
 				
+				var targeti = ds_map_find_value(read_object_map, "object");
+				if (is_undefined(targeti))
+					targeti = "0";
+				
 				var facing = ds_map_find_value(read_object_map, "facing");
                 if (is_undefined(facing))
                     facing = null;
@@ -803,6 +809,7 @@ while (!file_text_eof(fp))
 				ds_map_add(new_map, SEQI_SPAWNSTATE_SPAWNOBJECT_UNIQUE, spawn2_object);
 				ds_map_add(new_map, SEQI_SPAWNSTATE_DELETEOBJECT, delete_object);
 				ds_map_add(new_map, SEQI_FACING, facing);
+				ds_map_add(new_map, SEQI_COUNT, real(targeti));
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_X, real(position_list[0]));
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_Y, real(position_list[1]));
 				ds_map_add(new_map, SEQI_SPAWNSTATE_POS_SPECIAL, position_special);

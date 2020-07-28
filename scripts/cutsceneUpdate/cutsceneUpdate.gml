@@ -687,6 +687,7 @@ case SEQTYPE_AI:
 			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
 			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
 			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (origin == self) origin = target_inst;
 			if (iexists(origin))
 			{
 				tx += origin.x;
@@ -700,6 +701,7 @@ case SEQTYPE_AI:
 			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
 			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
 			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (origin == self) origin = target_inst;
 			if (iexists(origin))
 			{
 				tx += origin.x;
@@ -712,6 +714,7 @@ case SEQTYPE_AI:
 			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
 			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
 			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (origin == self) origin = target_inst;
 			if (iexists(origin))
 			{
 				tx += origin.x;
@@ -724,6 +727,7 @@ case SEQTYPE_AI:
 			var origin = ds_map_find_value(entry, SEQI_AI_POS_ORIGIN);
 			var tx = ds_map_find_value(entry, SEQI_AI_POS_X);
 			var ty = ds_map_find_value(entry, SEQI_AI_POS_Y);
+			if (origin == self) origin = target_inst;
 			if (iexists(origin))
 			{
 				tx += origin.x;
@@ -753,6 +757,8 @@ case SEQTYPE_SPAWNSTATE:
 	var position_special = entry[?SEQI_SPAWNSTATE_POS_SPECIAL];
 	var position_x = entry[?SEQI_SPAWNSTATE_POS_X];
 	var position_y = entry[?SEQI_SPAWNSTATE_POS_Y];
+	
+	var count = entry[?SEQI_COUNT];
 	
 	if (position_special == kSpawnPositionNearby)
 	{
@@ -804,7 +810,11 @@ case SEQTYPE_SPAWNSTATE:
 	}
 	else if (iexists(deleteobject) || object_exists(deleteobject))
 	{
-		idelete(deleteobject);
+		//idelete(deleteobject);
+		
+		// Find target
+		var target_inst = _cutsceneUpdateGetTarget(deleteobject, count);
+		idelete(target_inst);
 		
 		// Debug output
 		debugOut("Doing spawnstate command delete " + object_get_name(deleteobject) + "...");
@@ -863,7 +873,7 @@ case SEQTYPE_EMOTE:
     var emote = ds_map_find_value(entry, SEQI_TYPE); 
         
 	// Find target
-    var target_inst = instance_find(target, count);
+	var target_inst = _cutsceneUpdateGetTarget(target, count);
 	
 	// Create the emote
 	var emote_fx = inew(o_fxEmote);

@@ -4,6 +4,8 @@ if (!is_undefined(target))
 
 if (is_undefined(target))
 	target = null;
+else if (target == "self")
+	target = self;
 else if (target == "imp")
 	target = o_PlayerImp;
 else if (target == "hero" || target == "player" || target == "idiot")
