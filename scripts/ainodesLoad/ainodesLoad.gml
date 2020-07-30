@@ -2,8 +2,10 @@
 /// @desc Loads up all nodes 
 /// @param Node
 
+#macro REBUILD_NODEGRAPH_ON_DATE false
+
 #macro kNodegraphFile_Header "NODE"
-#macro kNodegraphFile_Version 1
+#macro kNodegraphFile_Version 2
 
 var node = argument0;
 
@@ -42,7 +44,7 @@ else
 		}
 		// Read the build-date next
 		var nodegraph_builddate = buffer_read(buffer_nodegraph, buffer_f64);
-		if (nodegraph_builddate < GM_build_date && (GM_build_date - nodegraph_builddate > 0.1))
+		if (REBUILD_NODEGRAPH_ON_DATE && nodegraph_builddate < GM_build_date && (GM_build_date - nodegraph_builddate > 0.1))
 		{
 			var l_dbgInfo = "Nodegraph: check (" + string(nodegraph_builddate) +") vs (" + string(GM_build_date) + ")";
 			debugOut(l_dbgInfo);

@@ -364,7 +364,7 @@ goto { target OnEnd }
 	lines
 	{
 		target go
-		1 Time to $bGo$$.
+		1 $hTime to $bGo.$$
 	}
 	
 	player { actions unlock }

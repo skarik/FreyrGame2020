@@ -3967,6 +3967,14 @@
             }
         },
         {
+            "Key": "3849a146-dea8-4a97-a3c7-d640b81f68db",
+            "Value": {
+                "id": "ae2bc1de-fe09-4206-b0d7-058ff873335d",
+                "resourcePath": "objects\\o_livelyTransition\\o_livelyTransition.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "386a5664-280f-4731-ba74-26e6e493275b",
             "Value": {
                 "id": "23ce13a8-000a-4cf2-a384-5f48a8f04be2",
@@ -6436,6 +6444,14 @@
                 "id": "5a018b29-7824-4323-ac8d-b399f3d25208",
                 "resourcePath": "sprites\\sui_book2Closed\\sui_book2Closed.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5ccbd610-0168-4f49-b07a-4e52649221ac",
+            "Value": {
+                "id": "18de019a-82f6-44d0-8d10-0ca0fa2c75d5",
+                "resourcePath": "datafiles_yy\\nodegraphs\\fools_march.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -11207,6 +11223,14 @@
             }
         },
         {
+            "Key": "a11001cc-dfd9-40f0-a39f-4a3156ce8a53",
+            "Value": {
+                "id": "1194ff33-447e-45b8-a482-91c330ce8c96",
+                "resourcePath": "datafiles_yy\\nodegraphs\\mithra.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "a11a62d7-4325-44be-9d8b-828570eec533",
             "Value": {
                 "id": "8ba6b80e-5750-4abb-9299-90b96f285c83",
@@ -12748,6 +12772,14 @@
                 "id": "b8d782a8-b931-4b34-98cf-1b9e829a0715",
                 "resourcePath": "scripts\\aiGobboPatrolInitDelayed\\aiGobboPatrolInitDelayed.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b5bd6b34-5c31-4205-a974-4bb7616fa77b",
+            "Value": {
+                "id": "8fa67c0c-04ee-44aa-9fd8-3f5b65e3f369",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\30_foolsmarch_follow_go.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -15631,6 +15663,14 @@
             }
         },
         {
+            "Key": "ddc81737-c58e-4df0-b44e-a71792b26042",
+            "Value": {
+                "id": "65606435-af2c-4456-8c11-d34861f57662",
+                "resourcePath": "objects\\o_cts10_go_follow\\o_cts10_go_follow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dde180ee-5771-49bc-9773-78bc89d167b9",
             "Value": {
                 "id": "e68b27c9-7fea-4e2c-a876-2f05c24ffd61",
@@ -16620,6 +16660,14 @@
                 "id": "85996e3e-2ce0-4064-b474-97be336bbe5a",
                 "resourcePath": "sprites\\s_propMetalSheet01\\s_propMetalSheet01.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ea403b54-c68e-4985-9ed4-8794744098fd",
+            "Value": {
+                "id": "4b9e6d7c-7539-444f-a7fe-cf638afc0ea4",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\flm\\lockeddoors.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

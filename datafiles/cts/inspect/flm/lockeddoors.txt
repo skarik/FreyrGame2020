@@ -1,0 +1,6 @@
+#begin
+lines
+	{
+		1 The worn doors are chained shut with a heavy lock.
+	}
+#end

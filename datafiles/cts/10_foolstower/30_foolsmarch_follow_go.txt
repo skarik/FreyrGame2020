@@ -1,0 +1,75 @@
+//osf/cutscene
+#begin 
+
+#FlagCheck
+	goto_if_flag
+	{
+		target OnEnd
+		flag FoolsTower
+		compare <
+		value 30
+	}
+	goto_if_flag
+	{
+		target OnEnd
+		flag FoolsTower
+		compare >=
+		value 40
+	}
+
+#OnBegin
+	spawnstate
+	{
+		spawn_ifunique go
+		position nearby
+	}
+	
+	ai
+	{
+		target go 
+		style cts
+		command move
+		position 2160 2880
+	}
+	companion
+	{
+		target go
+		party add
+	}
+	
+	wait
+	{
+		type ai
+		target go
+		aiaction arrive
+	}
+	
+	// wait for player to approach
+	wait
+	{
+		type playerdistance
+		target go
+		distance 100
+	}
+	
+	lines
+	{
+		target	go
+		style diegetic
+		1 Come on, I know where they can't follow us!
+	}
+	
+	ai
+	{
+		target go 
+		style lead
+		command start
+		position 585 1520
+	}
+	
+	// now, spawn the things for the guards chasing
+	
+	
+
+#OnEnd
+#ended
