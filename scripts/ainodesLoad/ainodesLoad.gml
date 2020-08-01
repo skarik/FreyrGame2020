@@ -1,13 +1,15 @@
-/// @function ainodesLoad(id)
+/// @function ainodesLoad(id, [force_rebuild])
 /// @desc Loads up all nodes 
 /// @param Node
+/// @param force_rebuild
 
 #macro REBUILD_NODEGRAPH_ON_DATE false
 
 #macro kNodegraphFile_Header "NODE"
 #macro kNodegraphFile_Version 2
 
-var node = argument0;
+var node = argument[0];
+var forced_rebuild = (argument_count == 2) ? argument[1] : false;
 
 if (!directory_exists("nodegraphs"))
 	directory_create("nodegraphs");
@@ -24,7 +26,7 @@ if (!file_exists(filename_nodegraph))
 	}
 }
 // If nodegraph file exists, load it in
-else
+else if (!forced_rebuild)
 {
 	var buffer_nodegraph = buffer_load(filename_nodegraph);
 	
@@ -39,7 +41,7 @@ else
 			// Old nodegraph - rebuild.
 			buffer_delete(buffer_nodegraph);
 			file_delete(filename_nodegraph);
-			ainodesLoad(node);
+			ainodesLoad(node, true);
 			return false;
 		}
 		// Read the build-date next
@@ -53,7 +55,7 @@ else
 			// Old nodegraph - rebuild.
 			buffer_delete(buffer_nodegraph);
 			file_delete(filename_nodegraph);
-			ainodesLoad(node);
+			ainodesLoad(node, true);
 			return false;
 		}
 	}
@@ -76,7 +78,7 @@ else
 			}
 			buffer_delete(buffer_nodegraph);
 			file_delete(filename_nodegraph);
-			ainodesLoad(node);
+			ainodesLoad(node, true);
 			return false;
 		}
 		else
@@ -116,7 +118,7 @@ else
 		
 			buffer_delete(buffer_nodegraph);
 			file_delete(filename_nodegraph);
-			ainodesLoad(node);
+			ainodesLoad(node, true);
 			return false;
 		}
 	}
@@ -125,7 +127,8 @@ else
 }
 
 // regen, and save
-if ((!node.m_loaded || !node.m_valid) && !file_exists(filename_nodegraph))
+if (forced_rebuild || 
+	((!node.m_loaded || !node.m_valid) && !file_exists(filename_nodegraph)))
 {
 	debugOut("Nodegraph out of date. Rebuilding...");
 	show_debug_message("Nodegraph out of date. Rebuilding...");
@@ -167,7 +170,7 @@ if ((!node.m_loaded || !node.m_valid) && !file_exists(filename_nodegraph))
 			}
 		}
 	
-		buffer_save(buffer_nodegraph, filename_nodegraph);
+		buffer_save(buffer_nodegraph, filename_nodegraph + ".nodegraph");
 		buffer_delete(buffer_nodegraph);
 	}
 }
