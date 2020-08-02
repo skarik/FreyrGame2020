@@ -1,0 +1,22 @@
+//osf/cutscene
+#begin 
+
+#OnInit
+	goto { target OnEnd; }
+	
+	// todo: spawn Go as he's needed
+	
+#OnBegin
+
+	// signal for shit to chase
+	
+	// set flag NOW
+	flags
+	{
+		set FoolsTower 60
+	}
+	
+
+#OnEnd
+
+#ended

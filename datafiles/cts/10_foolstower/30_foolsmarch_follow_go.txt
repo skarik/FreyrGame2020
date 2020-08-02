@@ -55,7 +55,8 @@
 	lines
 	{
 		target	go
-		style diegetic
+		//style diegetic
+		facing player
 		1 Come on, I know where they can't follow us!
 	}
 	
@@ -67,9 +68,48 @@
 		position 585 1520
 	}
 	
+#OnSpawnChasers
 	// now, spawn the things for the guards chasing
 	
 	
+	wait
+	{
+		type ai
+		target go
+		aiaction arrive
+	}
+	
+#OnArrive
+	
+	// wait for player to approach
+	wait
+	{
+		type playerdistance
+		target go
+		distance 100
+	}
+	
+	// set flag NOW
+	flags
+	{
+		set FoolsTower 40
+	}
+	
+	// switch to follow mode with the player
+	ai
+	{
+		target go 
+		style follow
+		command start
+	}
+	
+	lines
+	{
+		target go
+		facing player
+		style diegetic
+		1 Door's open! Get in!
+	}
 
 #OnEnd
 #ended

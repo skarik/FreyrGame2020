@@ -2,7 +2,7 @@
     "id": "ddc81737-c58e-4df0-b44e-a71792b26042",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_cts10_go_follow",
+    "name": "o_cts10_30_go_follow",
     "eventList": [
         {
             "id": "4346e7c4-cc34-42e3-94c9-5e000e82bf79",

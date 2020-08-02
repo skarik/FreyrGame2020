@@ -4615,6 +4615,14 @@
             }
         },
         {
+            "Key": "41f217dc-6626-40e9-bf66-251dabbaf68f",
+            "Value": {
+                "id": "111d19a3-ad55-4528-8f8a-512c61c0dd48",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\40_foolstower_descend.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "41fd3730-9dd6-4514-bb86-b21d2f15fd5c",
             "Value": {
                 "id": "3af04a46-01a5-4e02-a7b9-1d9c44cf428e",
@@ -4863,6 +4871,14 @@
             }
         },
         {
+            "Key": "45afb987-0939-4269-8466-0d72831fa364",
+            "Value": {
+                "id": "2c6b0c4d-5378-4c2c-84b4-4230534e229c",
+                "resourcePath": "objects\\o_cts10_40_go_descend\\o_cts10_40_go_descend.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "45b7713f-f55f-4b1c-909c-a38eecc5eab4",
             "Value": {
                 "id": "7013d8ae-04c6-4bb5-bd79-6e640cad2f4c",
@@ -4988,6 +5004,14 @@
                 "id": "7eea250b-004d-46ff-8ac3-8956e61051ff",
                 "resourcePath": "sprites\\sc_32x32c_blue\\sc_32x32c_blue.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "47327821-6235-4010-86b0-af4636bab772",
+            "Value": {
+                "id": "62d21456-b69b-4793-9572-acc7f1fda964",
+                "resourcePath": "objects\\o_cts10_50_go_kidnapp\\o_cts10_50_go_kidnapp.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5308,6 +5332,14 @@
                 "id": "da060554-c052-408f-a7d5-b839392ee229",
                 "resourcePath": "scripts\\questDebugDisplayFlags\\questDebugDisplayFlags.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4bb912b9-366e-4226-a7b1-32f45b6557c4",
+            "Value": {
+                "id": "95b528f3-3281-4976-8fb9-6ad9e76c5bcd",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\50_foolstower_go_kidnap.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -15666,7 +15698,7 @@
             "Key": "ddc81737-c58e-4df0-b44e-a71792b26042",
             "Value": {
                 "id": "65606435-af2c-4456-8c11-d34861f57662",
-                "resourcePath": "objects\\o_cts10_go_follow\\o_cts10_go_follow.yy",
+                "resourcePath": "objects\\o_cts10_30_go_follow\\o_cts10_30_go_follow.yy",
                 "resourceType": "GMObject"
             }
         },

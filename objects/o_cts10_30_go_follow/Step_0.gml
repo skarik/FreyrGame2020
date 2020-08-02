@@ -9,7 +9,7 @@ if (!cutsceneUpdate())
 		var wait_id = cutsceneGetWaitId();
 		if (wait_id == "")
 		{
-			
+			// spawn enemies that follow
 		}
 	}
 }

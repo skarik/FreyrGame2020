@@ -1,0 +1,62 @@
+//osf/cutscene
+#begin 
+
+#FlagCheck
+	goto_if_flag
+	{
+		target OnEnd
+		flag FoolsTower
+		compare <
+		value 40
+	}
+	goto_if_flag
+	{
+		target OnEnd
+		flag FoolsTower
+		compare >=
+		value 50
+	}
+	
+#OnBegin
+
+	// signal for shit to chase
+	
+	// set flag NOW
+	flags
+	{
+		set FoolsTower 50
+	}
+	
+	// the special AI here stops the guards at the top
+	lines
+	{
+		target guard
+		object 0
+		style diegetic
+		1 We can't follow them into this deathtrap!
+	}
+	lines
+	{
+		target guard
+		object 1
+		style diegetic
+		1 We have to get that key back!
+	}
+	lines
+	{
+		target guard
+		object 2
+		style diegetic
+		1 I can't believe you let him take it.
+	}
+	lines
+	{
+		target guard
+		object 0
+		style diegetic
+		1 I was taking a nap!
+	}
+
+#OnEnd
+
+#ended

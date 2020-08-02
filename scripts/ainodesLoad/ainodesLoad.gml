@@ -4,9 +4,10 @@
 /// @param force_rebuild
 
 #macro REBUILD_NODEGRAPH_ON_DATE false
+#macro REBUILD_NODEGRAPH_ON_MISSING_DATA true
 
 #macro kNodegraphFile_Header "NODE"
-#macro kNodegraphFile_Version 2
+#macro kNodegraphFile_Version 3
 
 var node = argument[0];
 var forced_rebuild = (argument_count == 2) ? argument[1] : false;
@@ -64,7 +65,8 @@ else if (!forced_rebuild)
 	
 	for (var i = 0; i < node_count; ++i)
 	{
-		var node_id = buffer_read(buffer_nodegraph, buffer_u64);
+		var node_index = buffer_read(buffer_nodegraph, buffer_u64);
+		var node_id = instance_find(ob_aiNode, node_index);
 		if (!iexists(node_id))
 		{	
 			debugOut("Nodegraph: invalid for this room.");
@@ -109,17 +111,20 @@ else if (!forced_rebuild)
 	// All the nodes are now loaded
 	
 	// Check that all nodes are loaded
-	with (ob_aiNode)
+	if (REBUILD_NODEGRAPH_ON_MISSING_DATA)
 	{
-		if (!m_loaded || !m_valid)
+		with (ob_aiNode)
 		{
-			debugOut("Nodegraph: incomplete for this room.");
-			show_debug_message("Nodegraph: incomplete for this room.");
+			if (!m_loaded || !m_valid)
+			{
+				debugOut("Nodegraph: incomplete for this room.");
+				show_debug_message("Nodegraph: incomplete for this room.");
 		
-			buffer_delete(buffer_nodegraph);
-			file_delete(filename_nodegraph);
-			ainodesLoad(node, true);
-			return false;
+				buffer_delete(buffer_nodegraph);
+				file_delete(filename_nodegraph);
+				ainodesLoad(node, true);
+				return false;
+			}
 		}
 	}
 	
@@ -159,7 +164,7 @@ if (forced_rebuild ||
 		for (var i = 0; i < node_count; ++i)
 		{
 			var node_id = instance_find(ob_aiNode, i);
-			buffer_write(buffer_nodegraph, buffer_u64, node_id);
+			buffer_write(buffer_nodegraph, buffer_u64, i);
 		
 			var node_linkcount = array_length_1d(node_id.m_link);
 			buffer_write(buffer_nodegraph, buffer_u32, node_linkcount);
