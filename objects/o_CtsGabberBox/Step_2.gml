@@ -49,3 +49,7 @@ else
 	else if (uiPosY > max_y) 
 		uiPosY = lerp(uiPosY, max_y, 0.4);
 }
+
+// Move postions to screenspace
+uiPosX -= view_xview0;
+uiPosY -= view_yview0;

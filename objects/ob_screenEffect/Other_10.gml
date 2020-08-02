@@ -1,1 +1,1 @@
-/// @description Apply the screen effect
+/// @description Apply the screen effect to Game

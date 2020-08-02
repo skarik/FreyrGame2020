@@ -5,7 +5,7 @@ if (surface_exists(m_glitchBaseBuffer))
 	// Create the delta buffer
 	if (!surface_exists(m_glitchDeltaBuffer))
 	{
-		m_glitchDeltaBuffer = surface_create(surface_get_width(m_glitchBaseBuffer), surface_get_height(m_glitchBaseBuffer));
+		m_glitchDeltaBuffer = surface_create_from_surface_params(m_glitchBaseBuffer);
 		surface_set_target(m_glitchDeltaBuffer);
 		
 		draw_clear_alpha(c_black, 0.0);
@@ -27,7 +27,7 @@ if (surface_exists(m_glitchBaseBuffer))
 	// Perform the delta-fuck
 	if (!surface_exists(m_glitchFuckBuffer))
 	{
-		m_glitchFuckBuffer = surface_create(surface_get_width(m_glitchBaseBuffer), surface_get_height(m_glitchBaseBuffer));
+		m_glitchFuckBuffer = surface_create_from_surface_params(m_glitchBaseBuffer);
 		surface_set_target(m_glitchFuckBuffer);
 		
 		draw_clear_alpha(c_black, 0.0);
@@ -41,7 +41,7 @@ if (surface_exists(m_glitchBaseBuffer))
 	m_glitchFuckStepSimmer += Time.deltaTime * 25.0;
 	if (m_glitchFuckStepSimmer > 0)
 	{
-		var temp_glitchfuck = surface_create(surface_get_width(m_glitchBaseBuffer), surface_get_height(m_glitchBaseBuffer));
+		var temp_glitchfuck = surface_create_from_surface_params(m_glitchBaseBuffer);
 		while (m_glitchFuckStepSimmer > 0)
 		{		
 			// Perform the washy simulation

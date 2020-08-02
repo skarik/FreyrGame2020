@@ -6895,6 +6895,14 @@
             }
         },
         {
+            "Key": "6363226b-e601-40e9-92d4-7bc786c19d9c",
+            "Value": {
+                "id": "79f06c2a-d3b9-44c7-a362-d260ee6abad1",
+                "resourcePath": "shaders\\sh_repaletteUI\\sh_repaletteUI.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "63a0707b-ad6c-4a7b-b11d-aca6ce769a5d",
             "Value": {
                 "id": "557f3afa-b931-4466-b12d-7815ed66a4a7",
@@ -9223,6 +9231,14 @@
             }
         },
         {
+            "Key": "859a8ce3-648c-4a82-936b-9c390bbe2d9f",
+            "Value": {
+                "id": "0639e5a9-0045-45e3-9ec0-d9e99d5cd141",
+                "resourcePath": "objects\\ob_userInterfaceElement\\ob_userInterfaceElement.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "85e2c267-767d-4bcc-8e42-8b4e263791ac",
             "Value": {
                 "id": "9b7ef755-788d-4c7c-a8c8-74cbff765bd0",
@@ -11471,6 +11487,14 @@
             }
         },
         {
+            "Key": "a43e9040-6d5a-4ddc-bc6c-55f55daab1a5",
+            "Value": {
+                "id": "8cca67d7-ad3d-4bc6-99cc-387d8655f65d",
+                "resourcePath": "scripts\\surface_create_from_surface_params\\surface_create_from_surface_params.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a462ec4b-30cf-4e84-8f75-3d5eaf807850",
             "Value": {
                 "id": "6a28d0bc-4c9f-461d-a4b4-0985e6988479",
@@ -11796,6 +11820,14 @@
                 "id": "7ee05a94-6ed7-44bc-aae3-fe966083162c",
                 "resourcePath": "sounds\\snd_physStepWood1\\snd_physStepWood1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "a8a24459-b8b6-4a3b-b234-83fcf2141813",
+            "Value": {
+                "id": "e58cb5ce-46e1-4f20-b700-f96b2849c7ca",
+                "resourcePath": "views\\a8a24459-b8b6-4a3b-b234-83fcf2141813.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -18432,6 +18464,7 @@
         "c676649c-6bae-4657-8846-f81f78f9c4ba",
         "44297038-11f0-4b5d-9a3c-c9ad19bf8a1a",
         "f949203d-a693-48f8-a3f3-1667c64e8917",
+        "a43e9040-6d5a-4ddc-bc6c-55f55daab1a5",
         "ffc94a8d-7254-43b9-97c7-fb8b21b5ae2d",
         "f71cb40d-971c-44a4-8c3f-33e43f46567b",
         "24ac4ceb-2490-41d2-9219-f66823e9271c",

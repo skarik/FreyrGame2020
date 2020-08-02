@@ -39,6 +39,10 @@
 
 #macro kEvent_PathnodeOnPass1 1
 
+#macro kEvent_ScreenEffectOnGame0 0
+#macro kEvent_ScreenEffectOnUI1 1
+#macro kEvent_UIElementOnDraw0 0
+
 #macro kCompareOpEqual 0
 #macro kCompareOpGreater 1
 #macro kCompareOpLess 2

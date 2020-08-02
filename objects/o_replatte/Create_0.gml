@@ -15,3 +15,7 @@ paletteInit();
 uni_samplerPaletteLUT = shader_get_sampler_index( sh_repaletteScene, "samplerPaletteLUT" );
 uni_samplerPaletteLUTSecond = shader_get_sampler_index( sh_repaletteScene, "samplerPaletteLUTSecond" );
 uni_lookupDivs = shader_get_uniform( sh_repaletteScene, "uLookupDivs" );
+
+uni_samplerPaletteLUT_UI = shader_get_sampler_index( sh_repaletteUI, "samplerPaletteLUT" );
+uni_samplerPaletteLUTSecond_UI = shader_get_sampler_index( sh_repaletteUI, "samplerPaletteLUTSecond" );
+uni_lookupDivs_UI = shader_get_uniform( sh_repaletteUI, "uLookupDivs" );

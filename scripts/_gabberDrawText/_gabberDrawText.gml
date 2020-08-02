@@ -100,7 +100,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		}
 		else
 		{	// otherwise, do simple dropshadow outline
-			draw_set_color( blackbox ? c_dkgray : make_color_rgb(239, 216, 161) );
+			draw_set_color( blackbox ? c_dkgray : make_color_rgb(200, 200, 200) );
 			draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
 		}
 	}

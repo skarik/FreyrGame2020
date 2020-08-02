@@ -5,18 +5,18 @@ if (iexists(o_waterMetalballRenderer))
 	o_waterMetalballRenderer.visible = false;
 
 // Grab the main surface we need to work with
-var game_surface = view_get_surface_id(0);
+var game_surface = Screen.m_gameSurfaceHistory[0]; // Surface doesn't exist at this point, so use History to grab info
 if (!surface_exists(game_surface))
 	exit;
 
 // Create the surfaces needed
 if (!surface_exists(surface_tilemapComposite))
 {
-	surface_tilemapComposite = surface_create(surface_get_width(game_surface), surface_get_height(game_surface));
+	surface_tilemapComposite = surface_create_from_surface_params(game_surface);
 }
 if (!surface_exists(surface_tilemapCompositeBlur))
 {
-	surface_tilemapCompositeBlur = surface_create(surface_get_width(game_surface), surface_get_height(game_surface));
+	surface_tilemapCompositeBlur = surface_create_from_surface_params(game_surface);
 }
 
 // Sort all the tiled water
@@ -61,7 +61,7 @@ surface_reset_target();
 ds_priority_destroy(render_queue);
 
 // Render a blurred variant of the tile map
-var surface_blurred_temp = surface_create(surface_get_width(game_surface), surface_get_height(game_surface));
+var surface_blurred_temp = surface_create_from_surface_params(game_surface);
 shader_set(sh_7tapBlurFilter);
 	surface_set_target(surface_blurred_temp);
 	shader_set_uniform_f(uBlurPixelInfo, 1.0 / surface_get_width(game_surface), 0.0);

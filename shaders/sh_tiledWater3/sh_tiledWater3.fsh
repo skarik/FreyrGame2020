@@ -53,7 +53,9 @@ void main()
 	
 	// Perform check against the base alpha mask.
 	float l_alphaTest = texture2D( gm_BaseTexture, v_vTexcoord + l_bufferWavePeturb ).a;
+	//float l_alphaTest = texture2D( samplerDensity, v_vTexcoord + l_bufferWavePeturb ).a;
 	if (l_alphaTest > 0.5)
+	//if (l_alphaTest < 0.5)
 		discard;
 		
 	// Reference dirt color for showing stuff under the water:

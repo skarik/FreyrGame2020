@@ -13,6 +13,8 @@ _paletteLoad(kPaletteWide, global.pal_sourceWide);
 // clear out surfaces
 global.pal_surface3d = null;
 global.pal_surface3d2 = null;
+global.pal_surfaceWIDE3d = null;
+global.pal_surfaceWIDE3d2 = null;
 
 // Set up overlay values
 global.pal_overlay_madd2 = make_color_rgb(128,128,128);

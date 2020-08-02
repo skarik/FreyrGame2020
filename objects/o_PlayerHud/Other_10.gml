@@ -1,7 +1,7 @@
 /// @description push directly to game surface
 
 // copy back
-surface_set_target(Screen.m_gameSurface);
+//surface_set_target(Screen.m_gameSurface);
 
 if (m_inCutsceneBlend < 1.0)
 {	
@@ -15,7 +15,7 @@ if (m_inCutsceneBlend < 1.0)
 		draw_surface(m_surfaceLightweightBack, 0, 0);
 	
 	// draw heavy
-	gpu_set_blendmode_ext(bm_zero, bm_inv_src_alpha);
+	gpu_set_blendmode_ext_sepalpha(bm_zero, bm_inv_src_alpha, bm_one, bm_one);
 	for (var ix = -1; ix <= 1; ++ix)
 		for (var iy = -1; iy <= 1; ++iy)
 			draw_surface(m_surface, +ix, +iy);
@@ -35,4 +35,4 @@ if (m_inCutsceneBlend > 0.0)
 	draw_rectangle(0, GameCamera.height - 20 * m_inCutsceneBlend, GameCamera.width, GameCamera.height, false);
 }
 
-surface_reset_target();
+//surface_reset_target();

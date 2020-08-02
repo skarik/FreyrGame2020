@@ -1,4 +1,4 @@
-/// @description draw the DARKNESS
+/// @description draw the DARKNESS to Game
 /*
 // multiply mode:
 if (surface_exists(m_darkness))
@@ -69,7 +69,7 @@ surface_reset_target();*/
 
 if (!surface_exists(m_compositingBuffer))
 {
-	m_compositingBuffer = surface_create(surface_get_width(Screen.m_gameSurface), surface_get_height(Screen.m_gameSurface));
+	m_compositingBuffer = surface_create_from_surface_params(Screen.m_gameSurface);
 }
 
 // composite the darkness & bloom with the main scene

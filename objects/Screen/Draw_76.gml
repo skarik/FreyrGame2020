@@ -7,11 +7,14 @@ gpu_set_ztestenable(true);
 gpu_set_zfunc(cmpfunc_always);*/
 
 // Create the surfaces for render output
-if (!surface_exists(m_outputSurface))
+/*if (!surface_exists(m_outputSurface))
 	m_outputSurface = surface_create(Screen.width, Screen.height);
 if (!surface_exists(m_gameSurface))
-	m_gameSurface = surface_create(Screen.width / Screen.pixelScale, Screen.height / Screen.pixelScale);
-	
+	m_gameSurface = surface_create(Screen.width / Screen.pixelScale, Screen.height / Screen.pixelScale);*/
+m_outputSurface	= surface_create(Screen.width, Screen.height);
+m_gameSurface	= surface_create(Screen.width / Screen.pixelScale, Screen.height / Screen.pixelScale);
+m_uiSurface		= surface_create(Screen.width / Screen.pixelScale, Screen.height / Screen.pixelScale);
+
 // Set the game surface as the main RT
 //application_surface = m_gameSurface;
 //surface_set_target(m_gameSurface);

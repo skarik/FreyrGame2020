@@ -12,7 +12,9 @@ debugOut(string(application_surface) + " : " + string(Screen.m_gameSurface))*/
 gpu_set_alphatestenable(false);
 
 var game_surface = view_get_surface_id(0);
-
+if (!surface_exists(game_surface))
+	exit;
+	
 //debugOut(string(game_surface) + " : " + string(Screen.m_gameSurface))
 
 var water_surface = surface_create(surface_get_width(game_surface), surface_get_height(game_surface));
@@ -24,6 +26,9 @@ surface_set_target(water_surface);
 surface_reset_target();
 
 shader_set(sh_tiledWater3);
+
+	// Set up blend state
+	gpu_set_blendmode(bm_normal);
 
 	// Get texture information
 	var texturePaletteLut = sprite_get_texture(s_paletteWater, 0);

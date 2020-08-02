@@ -1,5 +1,8 @@
 /// @description Constants & render init
 
+#macro kScreenCorner_DrawDevelopmentInfo true
+#macro kScreenCorner_String "Development Build"
+
 if (singleton_this()) exit;
 
 width = 1280;
@@ -19,6 +22,9 @@ application_surface_draw_enable(false);
 // Set up surfaces
 m_outputSurface = null;
 m_gameSurface = null;
+m_uiSurface = null;
+
+m_gameSurfaceHistory[0] = null;
 
 // Set up output camera
 m_outputCamera = camera_create_view(0, 0, Screen.width, Screen.height);
