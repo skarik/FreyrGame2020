@@ -31,7 +31,7 @@ if (l_parserMode == kCmdlineParserModeWork)
 }
 else if (l_parserMode == kCmdlineParserModeSuggest)
 {
-	return l_command;
+	return [];
 }
 else if (l_parserMode == kCmdlineParserModeAutocomplete)
 {

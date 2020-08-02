@@ -1,1 +1,1 @@
-#macro kTarotData_AquireThought
+#macro kTarotData_AquireThought 0
