@@ -26,10 +26,10 @@ global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time
 	}
 
 	// now draw overlays that are registered
-	gpu_set_blendenable(true);
+	/*gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 	draw_set_color(global.pal_overlay_madd2);
-	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);
+	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);*/
 
 	// pop render stack (dumb)
 	surface_reset_target();
@@ -58,10 +58,10 @@ global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time
 	}
 
 	// now draw overlays that are registered
-	gpu_set_blendenable(true);
+	/*gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 	draw_set_color(global.pal_overlay_madd2);
-	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);
+	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);*/
 
 	// pop render stack (dumb)
 	surface_reset_target();
@@ -83,10 +83,10 @@ global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time
 	draw_sprite(global.pal_sprite3d[kPaletteWide], 0, 0, 0);
 
 	// now draw overlays that are registered
-	gpu_set_blendenable(true);
+	/*gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 	draw_set_color(global.pal_overlay_madd2);
-	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);
+	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);*/
 
 	// pop render stack (dumb)
 	surface_reset_target();
@@ -107,10 +107,10 @@ global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time
 	draw_sprite(global.pal_sprite3d2[kPaletteWide], 0, 0, 0);
 
 	// now draw overlays that are registered
-	gpu_set_blendenable(true);
+	/*gpu_set_blendenable(true);
 	gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 	draw_set_color(global.pal_overlay_madd2);
-	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);
+	draw_rectangle(0, 0, global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth, false);*/
 
 	// pop render stack (dumb)
 	surface_reset_target();

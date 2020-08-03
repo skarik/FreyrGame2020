@@ -14,7 +14,7 @@ dy = lerp(dy, -200, smoothstep(m_inCutsceneBlend));
 draw_set_alpha(1.0);
 
 // darw the arm backing
-var arm_backing_index = 1;
+/*var arm_backing_index = 1;
 if (pl.pstats.m_pitem[kPitemVoidCapacitor] >= 1 && pl.pstats.m_pitem[kPitemVoidAlternator])
 {
 	//draw_sprite(sui_roboArm, 1, dx, dy);
@@ -23,17 +23,50 @@ else if (pl.pstats.m_pitem[kPitemVoidCapacitor] >= 1)
 {
 	arm_backing_index = 3;
 }
-draw_sprite(sui_roboArm, arm_backing_index, dx, dy);
+draw_sprite(sui_roboArm, arm_backing_index, dx, dy);*/
+
+// Draw the bar backings
+draw_sprite(sui_barsHealth, 0, dx, dy);
+draw_sprite(sui_barsWill, 0, dx, dy + 19);
+if (pl.pstats.m_pitem[kPitemVoidCapacitor] >= 1)
+{
+	draw_sprite(sui_barsMagicS, 0, dx, dy + 19 + 15);
+}
+draw_sprite(sui_barsHealthHandTopper, 0, dx + 113, dy); 
 
 // draw the health bar
-var health_percent = saturate(m_arm_healthbar_percent);//clamp(pl.stats.m_health / pl.stats.m_healthMax, 0.0, 1.0);
+/*var health_percent = saturate(m_arm_healthbar_percent);
 draw_sprite_part(sui_roboArm, 2,
 				 0, 0,
 				 5, 30 * health_percent,
-				 dx + 16, dy + 32 + 30 * (1.0 - health_percent));
+				 dx + 16, dy + 32 + 30 * (1.0 - health_percent));*/
+				 
+// draw the health bar
+var health_percent = saturate(m_arm_healthbar_percent);
+for (var i = 0; i < 4; ++i)
+{
+	var health_fraction = (m_arm_healthbar_percent - 0.25 * i) * 4.0;
+	
+	if (health_fraction > 1.0)
+	{
+		draw_sprite(sui_barsHealthBip, 0, dx + 10 + 15 * i, dy + 3);
+	}
+	else if (health_fraction > 0.0)
+	{
+		draw_sprite_part(sui_barsHealthBip, 0, 0, 0, ceil(12 * health_fraction), 10, dx + 10 + 15 * i, dy + 3);
+		// Draw a glow at the edge
+		gpu_set_blendmode(bm_add);
+		draw_sprite_ext(s_effectGradientLine, 0,
+						dx + 10 + 15 * i + ceil(12 * health_fraction),
+						dy + 3 + 5,
+						0.5, 0.3,
+						0.0, merge_color(c_white, c_maroon, 0.5), 1.0);
+		gpu_set_blendmode(bm_normal);
+	}
+}
 	
 // draw the health text & icon
-var l_healthTextY = dy + 32 + 30 * (1.0 - health_percent);
+/*var l_healthTextY = dy + 32 + 30 * (1.0 - health_percent);
 var l_colorRedBright = make_color_rgb(239, 58, 12);
 var l_colorRedHighlight = make_color_rgb(239, 183, 117);
 draw_sprite_ext(sui_heart, 0,
@@ -72,7 +105,17 @@ draw_sprite_ext(sui_heart, 0,
 	
 	// no longer need the text surface
 	surface_free(l_textSurface);
-}
+}*/
+
+// draw health text
+draw_set_font(global.font_arvo7);
+draw_set_valign(fa_top);
+draw_set_color(c_black);
+var l_healthValue = ceil(pl.stats.m_healthMax * health_percent);
+draw_set_halign(fa_left);
+draw_text(dx + 88, dy + 2, string(floor(l_healthValue / 10.0)));
+draw_set_halign(fa_right);
+draw_text(dx + 98, dy + 2, string(floor(l_healthValue % 10.0)));
 	
 // draw the charge bar
 if (pl.pstats.m_pitem[kPitemVoidCapacitor] >= 1)
@@ -130,7 +173,7 @@ if (l_draw_void_sparks)
 }
 
 // draw the will power
-dx += 48;
+/*dx += 48;
 draw_set_color(c_gold);
 draw_set_halign(fa_right);
 draw_set_valign(fa_top);
@@ -159,4 +202,37 @@ else
 					   dy + (i) * 8 + (8-2) + 1,
 					   false);
 	}
+}*/
+
+// draw the will bar
+if (pl.m_will > 0)
+{
+	var will_width = 59 * saturate(pl.m_will / pl.m_willMax);
+	draw_sprite_part(sui_barsWillBip, 0, 0, 0, will_width, 6, dx + 9, dy + 19 + 3);
+	
+	// Draw a glow at the edge
+	gpu_set_blendmode(bm_add);
+	draw_sprite_ext(s_effectGradientLine, 0,
+					dx + 9 + will_width,
+					dy + 19 + 3 + 3,
+					0.5, 0.2,
+					0.0, merge_color(c_white, c_gold, 0.7), 1.0);
+	gpu_set_blendmode(bm_normal);
 }
+// draw the pushwill bips
+else
+{
+	for (var i = 0; i < pl.m_willpush; ++i)
+	{
+		draw_sprite(sui_barsWillBip, 1, dx + 9 + 14 * i, dy + 19 + 3);
+	}
+}
+
+// draw pushwill text
+draw_set_font(f_04b03);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_black);
+var l_willValue = ceil(pl.m_will / 60.0);//ceil(pl.stats.m_healthMax * health_percent);
+draw_text(dx + 85, dy + 19 + 3, string(floor(l_willValue / 10.0)));
+draw_text(dx + 92, dy + 19 + 3, string(floor(l_willValue % 10.0)));

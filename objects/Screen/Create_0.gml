@@ -24,6 +24,7 @@ m_outputSurface = null;
 m_gameSurface = null;
 m_uiSurface = null;
 
+m_outputSurfaceHistory[0] = null;
 m_gameSurfaceHistory[0] = null;
 
 // Set up output camera

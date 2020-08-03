@@ -43,7 +43,12 @@ if (!input_minimal)
 	if (iexists(input_actor))
 	{
 		//draw_sprite_part_ext( suiChoiceBox, 3, 125-25,0,10,20, x-boxw*0.5,y+offYa-7, boxw/10,1.0, c_white, offA ); // bottom border
-		draw_sprite_ext( suiChoiceBox, 3, x + clamp(input_actor.x - x - 19, -boxw * 0.5, boxw * 0.5), y + offYa - 7 + (18-5), 1.0, 1.0, 0.0, c_white, offA );
+		var input_actor_x_screenspace = input_actor.x - GameCamera.view_x;
+		draw_sprite_ext(suiChoiceBox, 3,
+						x + clamp(input_actor_x_screenspace - x - 21, -boxw * 0.5 + 8, boxw * 0.5 - 25 - 8), 
+						y + offYa - 7 + (18-5),
+						1.0, 1.0,
+						0.0, c_white, offA);
 	}
 
 	// draw the name

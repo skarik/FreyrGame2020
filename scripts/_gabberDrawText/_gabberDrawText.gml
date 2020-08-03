@@ -3,8 +3,7 @@ var dx, dy;
 dx = uiPosX; 
 dy = uiPosY + (iexists(input_actor) ? 10 : 0);
 
-var seed = mt19937_get_state();//random_get_seed();
-//random_set_seed(floor(current_time / 1000.0 * 30.0));
+var seed = mt19937_get_state();
 mt19937_seed(floor(current_time / 1000.0 * 30.0));
 
 draw_set_halign(fa_left);
@@ -100,7 +99,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		}
 		else
 		{	// otherwise, do simple dropshadow outline
-			draw_set_color( blackbox ? c_dkgray : make_color_rgb(200, 200, 200) );
+			draw_set_color( blackbox ? c_dkgray : make_color_rgb(180, 180, 180) );
 			draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
 		}
 	}

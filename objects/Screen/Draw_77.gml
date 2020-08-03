@@ -159,9 +159,14 @@ if (kScreenCorner_DrawDevelopmentInfo)
 surface_free(l_bufferGameAndUiComposite);
 
 // Release the used buffers
-surface_free_if_exists(m_outputSurface);
+//surface_free_if_exists(m_outputSurface);
 surface_free_if_exists(m_uiSurface);
 // Store history of game surface sans-UI
 surface_free_if_exists(m_gameSurfaceHistory[0]);
 m_gameSurfaceHistory[0] = m_gameSurface;
 m_gameSurface = null;
+
+// Store history of our final output
+surface_free_if_exists(m_outputSurfaceHistory[0]);
+m_outputSurfaceHistory[0] = m_outputSurface;
+m_outputSurface = null;

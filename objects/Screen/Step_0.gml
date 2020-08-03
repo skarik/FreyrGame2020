@@ -7,7 +7,9 @@ if (keyboard_check_pressed(vk_f5))
 	screenshot_requested = true;
 }
 
-if (screenshot_requested || (screenshot_auto_enabled && surface_exists(m_outputSurface)))
+var t_capturedSurface = m_outputSurfaceHistory[0];
+
+if ((screenshot_requested || screenshot_auto_enabled) && surface_exists(t_capturedSurface))
 {
     screenshot_timer += Time.dt;
     // Take a screenshot every 1.0s
@@ -26,8 +28,8 @@ if (screenshot_requested || (screenshot_auto_enabled && surface_exists(m_outputS
             
         // Save the current screen
         var filename = "shot_" + string_replace_all(string_format(screenshot_count,4,0)," ","0") + ".png";
-        //surface_save(m_outputSurface, working_directory + "/" + filename);
-		surface_save(m_outputSurface, dir + "/" + filename);
+        //surface_save(t_capturedSurface, working_directory + "/" + filename);
+		surface_save(t_capturedSurface, dir + "/" + filename);
         screenshot_count += 1;
 		
 		debugOut("screenshot " + string(screenshot_count) + " taken to " + filename);

@@ -32,7 +32,14 @@ surface_set_target(m_repaletteBuffer);
 	gpu_set_tex_filter_ext(uni_samplerPaletteLUTSecond, false);
 	gpu_set_tex_repeat_ext(uni_samplerPaletteLUTSecond, false);
 	shader_set_uniform_f(uni_lookupDivs,
-		1.0 / global.pal_lutWidth, 1.0, global.pal_lutWidth, 1.0 / global.pal_lutWidth);
+						 1.0 / global.pal_lutWidth,
+						 1.0,
+						 global.pal_lutWidth, 1.0 / global.pal_lutWidth);
+	shader_set_uniform_f(uni_overlayMadd2,
+						 color_get_red(global.pal_overlay_madd2) / 255.0,
+						 color_get_green(global.pal_overlay_madd2) / 255.0,
+						 color_get_blue(global.pal_overlay_madd2) / 255.0,
+						 1.0);
 
 	// Draw the screen
 	draw_set_color(c_white);

@@ -8,6 +8,7 @@ varying vec4 v_vWorldPosition;
 uniform sampler2D samplerPaletteLUT;
 uniform sampler2D samplerPaletteLUTSecond;
 uniform vec4 uLookupDivs;
+uniform vec4 uOverlayMadd2;
 
 //============================================================================//
 // Helpers (Color):
@@ -78,6 +79,9 @@ void main()
 	//float percent = calculateLinearWeight(color_distances.x, color_distances.y);
 	
 	//color_lookup.rgb = mix(color_lookup.rgb, color_lookup2.rgb, calculateAlphaDither(percent, floor(v_vWorldPosition.xy)));
+	
+	// Apply overlay
+	color_lookup.rgb *= uOverlayMadd2.rgb * 2.0;
 	
 	//gl_FragColor = vec4(abs(color_lookup - color_scene).rgb, 1.0);
 	//gl_FragColor = vec4(percent, percent, percent, 1.0);
