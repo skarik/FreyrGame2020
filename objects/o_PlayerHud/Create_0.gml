@@ -1,3 +1,5 @@
+event_inherited();
+
 m_surface = null;
 m_surfaceLightweight = null;
 m_surfaceLightweightBack = null;

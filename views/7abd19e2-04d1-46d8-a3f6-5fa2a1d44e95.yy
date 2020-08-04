@@ -7,8 +7,7 @@
         "9a6564ce-9ed2-4a51-a2fa-a574542ff4d4",
         "e2434a60-5d28-4e54-8ba9-fc7435992104",
         "d7bfca4c-05a8-4bff-8a12-f3fa3bbbeda4",
-        "ad9ca7d5-52f3-477d-a78a-d54a391c7479",
-        "859a8ce3-648c-4a82-936b-9c390bbe2d9f"
+        "ad9ca7d5-52f3-477d-a78a-d54a391c7479"
     ],
     "filterType": "GMObject",
     "folderName": "Screen Effects",

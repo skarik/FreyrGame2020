@@ -116,5 +116,9 @@ global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time
 	surface_reset_target();
 }
 
+// reset draw state
+gpu_set_blendenable(true);
+gpu_set_blendmode(bm_normal);
+
 // return the 3d palette
 return global.pal_surface3d;

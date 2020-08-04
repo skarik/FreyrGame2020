@@ -1,8 +1,5 @@
 /// @description renders w/ palette to Game
 
-// update the palette:
-global.pal_surface3d = paletteUpdate();
-
 if (!surface_exists(m_repaletteBuffer))
 {
 	m_repaletteBuffer = surface_create_from_surface_params(Screen.m_gameSurface);
