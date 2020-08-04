@@ -13,27 +13,35 @@ surface_set_target(m_uiSurface);
 	// render UI objects
 	{
 		// Create the priority queue of all UI objects
-		var ui_queue = ds_priority_create();
-		with (ob_userInterfaceElement)
+		if (m_renderQueue_UIObjectDirty)
 		{
-			ds_priority_add(ui_queue, id, depth);
+			var ui_queue = ds_priority_create();
+			// Add in all objects
+			with (ob_userInterfaceElement)
+			{
+				ds_priority_add(ui_queue, id, depth);
+			}
+			// Generate rendering order
+			ds_list_clear(m_renderQueue_UIObject);
+			while (!ds_priority_empty(ui_queue))
+			{
+				ds_list_add(m_renderQueue_UIObject, ds_priority_delete_min(ui_queue));
+			}
+			// Done with queue
+			ds_priority_destroy(ui_queue);
+			m_renderQueue_UIObjectDirty = false;
 		}
 		
 		// Draw all the UI objects in order
-		while (!ds_priority_empty(ui_queue))
+		var object_count = ds_list_size(m_renderQueue_UIObject);
+		for (var i = 0; i < object_count; ++i)
 		{
-			with (ds_priority_delete_min(ui_queue))
+			with (m_renderQueue_UIObject[|i])
 			{
 				event_user(kEvent_UIElementOnDraw0);
 			}
 		}
 		
-		// Draw remaining elements manually
-		//with (o_PlayerHud) event_user(0);
-		//with (o_CtsPortraitRenderer) event_user(0);
-		//with (o_CtsTalkerBox) event_user(0);
-		
-		ds_priority_destroy(ui_queue);
 	}
 	
 	// And we're done here
@@ -43,49 +51,73 @@ surface_reset_target();
 // update effects (UI)
 {
 	// Create priority queue of all effect objects
-	var effect_queue = ds_priority_create();
-	with (ob_screenEffect)
+	if (m_renderQueue_UIEffectDirty)
 	{
-		if (m_applyToUI)
+		var effect_queue = ds_priority_create();
+		// Add in all objects
+		with (ob_screenEffect)
 		{
-			ds_priority_add(effect_queue, id, m_depth);
+			if (m_applyToUI)
+			{
+				ds_priority_add(effect_queue, id, m_depth);
+			}
 		}
+		// Generate rendering order
+		ds_list_clear(m_renderQueue_UIEffect);
+		while (!ds_priority_empty(effect_queue))
+		{
+			ds_list_add(m_renderQueue_UIEffect, ds_priority_delete_min(effect_queue));
+		}
+		// Done with queue
+		ds_priority_destroy(effect_queue);
+		m_renderQueue_UIEffectDirty = false;
 	}
 	
 	// Execute all effects in order
-	while (!ds_priority_empty(effect_queue))
+	var object_count = ds_list_size(m_renderQueue_UIEffect);
+	for (var i = 0; i < object_count; ++i)
 	{
-		with (ds_priority_delete_min(effect_queue))
+		with (m_renderQueue_UIEffect[|i])
 		{
 			event_user(kEvent_ScreenEffectOnUI1);
 		}
 	}
-	
-	ds_priority_destroy(effect_queue);
 }
 
 // update effects (Game)
 {
 	// Create priority queue of all effect objects
-	var effect_queue = ds_priority_create();
-	with (ob_screenEffect)
+	if (m_renderQueue_GameEffectDirty)
 	{
-		if (m_applyToGame)
+		var effect_queue = ds_priority_create();
+		// Add in all objects
+		with (ob_screenEffect)
 		{
-			ds_priority_add(effect_queue, id, m_depth);
+			if (m_applyToGame)
+			{
+				ds_priority_add(effect_queue, id, m_depth);
+			}
 		}
+		// Generate rendering order
+		ds_list_clear(m_renderQueue_GameEffect);
+		while (!ds_priority_empty(effect_queue))
+		{
+			ds_list_add(m_renderQueue_GameEffect, ds_priority_delete_min(effect_queue));
+		}
+		// Done with queue
+		ds_priority_destroy(effect_queue);
+		m_renderQueue_GameEffectDirty = false;
 	}
 	
 	// Execute all effects in order
-	while (!ds_priority_empty(effect_queue))
+	var object_count = ds_list_size(m_renderQueue_GameEffect);
+	for (var i = 0; i < object_count; ++i)
 	{
-		with (ds_priority_delete_min(effect_queue))
+		with (m_renderQueue_GameEffect[|i])
 		{
 			event_user(kEvent_ScreenEffectOnGame0);
 		}
 	}
-	
-	ds_priority_destroy(effect_queue);
 }
 
 // composite both game & UI in post

@@ -19,13 +19,21 @@ window_set_cursor(cr_none);
 application_surface_enable(false);
 application_surface_draw_enable(false);
 
-// Set up surfaces
+// Declare surfaces
 m_outputSurface = null;
 m_gameSurface = null;
 m_uiSurface = null;
-
 m_outputSurfaceHistory[0] = null;
 m_gameSurfaceHistory[0] = null;
+
+// Declare render lists
+m_renderQueue_UIObjectDirty = true;
+m_renderQueue_GameEffectDirty = true;
+m_renderQueue_UIEffectDirty = true;
+
+m_renderQueue_UIObject = ds_list_create();
+m_renderQueue_GameEffect = ds_list_create();
+m_renderQueue_UIEffect = ds_list_create();
 
 // Set up output camera
 m_outputCamera = camera_create_view(0, 0, Screen.width, Screen.height);

@@ -1,13 +1,11 @@
 /// @description update the darkness
 
-if (!surface_exists(m_darkness))
-	m_darkness = surface_create(GameCamera.width, GameCamera.height);
+//if (!surface_exists(m_darkness))
+surface_free_if_exists(m_darkness);
+m_darkness = surface_create(GameCamera.width, GameCamera.height);
 	
-if (!surface_exists(m_bloom))
-	m_bloom = surface_create(GameCamera.width / 2, GameCamera.height / 2);
-	
-if (!surface_exists(m_bloom2))
-	m_bloom2 = surface_create(GameCamera.width / 2, GameCamera.height / 2);
+surface_free_if_exists(m_bloom);
+m_bloom = surface_create(GameCamera.width / 2, GameCamera.height / 2);
 
 var outdoor_lighting = true;
 if (iexists(ob_ambientLighting))

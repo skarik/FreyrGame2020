@@ -19,19 +19,25 @@ gpu_set_blendenable(false);
 gpu_set_blendmode_ext(bm_one, bm_zero);
 gpu_set_tex_filter(true);
 
+var l_bloomBlurTemp = surface_create_from_surface_params(m_bloom);
+var l_bloomSizeX = surface_get_width(m_bloom);
+var l_bloomSizeY = surface_get_height(m_bloom);
+
 shader_set(sh_9tapBlur);
-shader_set_uniform_f(uni_pixelSize, 1.0 / surface_get_width(m_bloom), 1.0 / surface_get_height(m_bloom));
+shader_set_uniform_f(uni_pixelSize, 1.0 / l_bloomSizeX, 1.0 / l_bloomSizeY);
 {
-	surface_set_target(m_bloom2);
-	draw_surface_stretched(m_darkness, 0, 0, surface_get_width(m_bloom), surface_get_height(m_bloom));
+	surface_set_target(l_bloomBlurTemp);
+	draw_surface_stretched(m_darkness, 0, 0, l_bloomSizeX, l_bloomSizeY);
 	surface_reset_target();
 	
 	surface_set_target(m_bloom);
-	draw_surface_stretched(m_bloom2, 0, 0, surface_get_width(m_bloom), surface_get_height(m_bloom));
+	draw_surface_stretched(l_bloomBlurTemp, 0, 0, l_bloomSizeX, l_bloomSizeY);
 	surface_reset_target();
 }
 gpu_set_tex_filter(false);
 shader_reset();
+
+surface_free_if_exists(l_bloomBlurTemp);
 
 // draw the darkness to screen
 /*surface_set_target(Screen.m_gameSurface);
@@ -67,10 +73,7 @@ shader_reset();
 }
 surface_reset_target();*/
 
-if (!surface_exists(m_compositingBuffer))
-{
-	m_compositingBuffer = surface_create_from_surface_params(Screen.m_gameSurface);
-}
+m_compositingBuffer = surface_create_from_surface_params(Screen.m_gameSurface);
 
 // composite the darkness & bloom with the main scene
 surface_set_target(m_compositingBuffer);
@@ -99,7 +102,7 @@ surface_set_target(m_compositingBuffer);
 surface_reset_target();
 
 // copy back
-surface_set_target(Screen.m_gameSurface);
+/*surface_set_target(Screen.m_gameSurface);
 {
 	gpu_set_blendenable(false);
 	gpu_set_blendmode_ext(bm_one, bm_zero);
@@ -108,4 +111,10 @@ surface_set_target(Screen.m_gameSurface);
 	
 	gpu_set_blendmode(bm_normal);
 }
-surface_reset_target();
+surface_reset_target();*/
+
+// "copy" back
+var l_old_surface = Screen.m_gameSurface;
+Screen.m_gameSurface = m_compositingBuffer;
+m_compositingBuffer = l_old_surface;
+surface_free_if_exists(m_compositingBuffer);

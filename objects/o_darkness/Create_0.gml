@@ -7,7 +7,7 @@ persistent = true;
 
 m_darkness = null;
 m_bloom = null;
-m_bloom2 = null;
+//m_bloom2 = null;
 m_compositingBuffer = null;
 
 uni_pixelOffset = shader_get_uniform( sh_shadowBanding, "u_pixelOffset" );
