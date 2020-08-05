@@ -1,3 +1,7 @@
+/// @function vtileGetAtPosition(x, y)
+/// @param x
+/// @param y
+
 var check_x = argument0;
 var check_y = argument1;
 
@@ -17,27 +21,17 @@ for (var i = 0; i < layer_count; ++i)
 		return tile_get_index(tile) + kTileIdInfoOffset * 2;
 }
 
-// set up all the collision layers too
-var all_layers = layer_get_all();
-layer_count = array_length_1d(all_layers);
+// check all the visual layers too
+layer_count = array_length_1d(global.material_tile_layers);
 for (var i = 0; i < layer_count; ++i)
 {
-	var tilemap = layer_tilemap_get_id(all_layers[i]); // TODO: Cache the layers.
-	if (!layer_tilemap_exists(all_layers[i], tilemap))
-		continue;
-		
+	var tilemap = global.material_tile_layers[i];
 	var tileset = tilemap_get_tileset(tilemap);
-	if (tileset != tilesetCollision && tileset != tilesetMaterial)
-	{
-		var offset = (tileset == tileset0) ? 0 : kTileIdInfoOffset;
-			//offset += (tileset != tilesetMaterial) ? 0 : kTileIdInfoOffset;
-		var tile = tilemap_get(tilemap, cel_x, cel_y);
-		//var tile_id = tile & 0xFF;
-
-		//return tile_id + offset;
-		if (tile != 0)
-			return tile_get_index(tile) + offset; // slow, probably
-	}
+	var offset = (tileset == tileset0) ? 0 : kTileIdInfoOffset;
+	var tile = tilemap_get(tilemap, cel_x, cel_y);
+	
+	if (tile != 0)
+		return tile_get_index(tile) + offset; // slow, probably
 }
 
 return -1;

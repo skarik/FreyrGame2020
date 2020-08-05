@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "03146635-4080-465f-9497-0142c6b0f9d6",
+            "Value": {
+                "id": "1ef6e7c2-9373-4632-a2e0-d9737dfb4162",
+                "resourcePath": "views\\03146635-4080-465f-9497-0142c6b0f9d6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0368aa5a-6ffb-43e6-a3c7-6d786bcf2902",
             "Value": {
                 "id": "3f4b4e29-1a3e-4075-a721-87faed971932",
@@ -4708,6 +4716,14 @@
                 "id": "47ddfab1-089a-4af7-a72b-b6f72317b20e",
                 "resourcePath": "scripts\\controlSettingGet\\controlSettingGet.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "42be9f38-ba2a-4f7c-b39f-8c12ea3bebb5",
+            "Value": {
+                "id": "046aa6b5-046b-4fe3-857a-405133ed772d",
+                "resourcePath": "objects\\o_spawnerMithraGuard\\o_spawnerMithraGuard.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -17479,6 +17495,14 @@
             }
         },
         {
+            "Key": "f4b8d364-db76-4760-8009-c3558691c23b",
+            "Value": {
+                "id": "7850d727-3db3-43b0-a5be-b441befbeec5",
+                "resourcePath": "scripts\\inew_unique\\inew_unique.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f52dbb02-2d8b-40fe-8a33-f3962e0b92b6",
             "Value": {
                 "id": "03f05494-ce89-4d49-ad05-077bf89fde5d",
@@ -18484,6 +18508,7 @@
         "75fa063c-d20d-46ba-a7d8-56068054442b",
         "786b4d6b-f4c2-4417-b0f3-46536bfeb311",
         "8ae87ec2-c497-411e-8b0e-f9e3e3481cfb",
+        "f4b8d364-db76-4760-8009-c3558691c23b",
         "36e542ee-3e15-4516-afa2-d30b86bafc13",
         "3b8b8f4f-c01d-4304-96f0-469aa575851f",
         "c49079db-0232-4388-a859-281831a2d506",

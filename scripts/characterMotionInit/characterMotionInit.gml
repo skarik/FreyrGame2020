@@ -7,6 +7,8 @@ isAttacking = false;
 m_isStunned = false;
 isBusyInteracting = false;
 
+moInternal_UnstuckTimer = 0.0;
+
 #region Constants
 
 kKickbackAmount = 1.0;

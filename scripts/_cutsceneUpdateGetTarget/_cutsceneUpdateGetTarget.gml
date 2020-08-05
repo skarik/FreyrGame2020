@@ -3,6 +3,7 @@ var count = argument1;
 
 var target_inst = null;
 
+// Using normal actor spawning tracking list
 if (!cts_actor_override_list_enabled
 	&& array_length_1d(cts_actor_tracking_list) > 0)
 {
@@ -38,9 +39,16 @@ if (cts_actor_override_list_enabled
 	}
 }
 
+// Default finding instance
 if (target_inst == null)
 {
 	target_inst = instance_find(object_target, count);
+}
+
+// Forward references to spawners
+if (iexists(target_inst) && object_get_base_parent(target_inst.object_index) == ob_spawner)
+{
+	target_inst = target_inst.m_spawned_enemy;
 }
 
 return target_inst;

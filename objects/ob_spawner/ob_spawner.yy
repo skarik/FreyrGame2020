@@ -23,6 +23,26 @@
             "enumb": 10,
             "eventtype": 7,
             "m_owner": "faf99f12-2dce-47f4-b507-ddbe423b66d9"
+        },
+        {
+            "id": "4414b99f-fc7e-4cce-99aa-fc73ffc2fafc",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 11,
+            "eventtype": 7,
+            "m_owner": "faf99f12-2dce-47f4-b507-ddbe423b66d9"
+        },
+        {
+            "id": "c2d1f9dd-92ae-4c46-9918-504cd54880e4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "faf99f12-2dce-47f4-b507-ddbe423b66d9"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -110,6 +130,20 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "m_spawnOnlyOnTrigger",
+            "varType": 3
+        },
+        {
+            "id": "03cefb6e-6e6b-44aa-90dc-4b181a245f47",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_activeDespawnManagement",
             "varType": 3
         }
     ],

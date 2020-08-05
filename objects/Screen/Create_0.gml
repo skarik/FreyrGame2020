@@ -3,6 +3,8 @@
 #macro kScreenCorner_DrawDevelopmentInfo true
 #macro kScreenCorner_String "Development Build"
 
+m_initialized = false;
+
 if (singleton_this()) exit;
 
 width = 1280;
@@ -38,8 +40,9 @@ m_renderQueue_UIEffect = ds_list_create();
 // Set up output camera
 m_outputCamera = camera_create_view(0, 0, Screen.width, Screen.height);
 
-inew(o_replatte);
-inew(o_darkness);
+// Create screen shader effects
+inew_unique(o_replatte);
+inew_unique(o_darkness);
 
 // Variables for keeping track of auto-screenshots
 screenshot_auto_enabled = false;
@@ -50,3 +53,5 @@ screenshot_count = 0;
 record_shot_output_count = 0;
 record_shot_count = 0;
 record_shot[0] = 0;
+
+m_initialized = true;

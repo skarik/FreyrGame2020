@@ -3,6 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
+moCanMoveUnstuck = false;
 m_bloodType = kBloodMetal;
 kKickbackAmount = 0.5;
 

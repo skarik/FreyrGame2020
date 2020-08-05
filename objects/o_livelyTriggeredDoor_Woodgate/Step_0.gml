@@ -1,5 +1,8 @@
 /// @description Open/close
 
+// update camera culling using doodad code
+event_perform_object(ob_doodad, ev_user0, 0);
+
 if (m_moving)
 {
 	if (m_wantsOpen)

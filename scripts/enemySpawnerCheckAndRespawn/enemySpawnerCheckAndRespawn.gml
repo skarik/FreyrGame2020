@@ -15,6 +15,8 @@ with (argument0)
 			character.m_saveTracked = m_saveTracked; // Override save tracked state
 		
 			m_spawned_enemy = character;
+			
+			event_user(1); // On character respawned
 		}
 		else if (enemyInfoLoadAction == kEnemyInfoLoadAction_DontSpawn)
 		{

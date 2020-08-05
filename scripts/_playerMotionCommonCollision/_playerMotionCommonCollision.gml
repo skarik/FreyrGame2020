@@ -57,10 +57,18 @@ if (moCanMoveUnstuck)
 {
 	if (xspeed == 0 && yspeed == 0 && zspeed == 0)
 	{
-		if (collision3_meeting(x, y, z + z_height, false))
+		if (moInternal_UnstuckTimer > 1.0)
 		{
-			// We need to move-unstuck.
-			_characterMoveUnstuck3();
+			if (collision3_meeting(x, y, z + z_height, false))
+			{
+				// We need to move-unstuck.
+				_characterMoveUnstuck3();
+			}
+			moInternal_UnstuckTimer = min(1.0, moInternal_UnstuckTimer - Time.deltaTime);
+		}
+		else
+		{
+			moInternal_UnstuckTimer += Time.deltaTime * 4.0;
 		}
 	}
 }
