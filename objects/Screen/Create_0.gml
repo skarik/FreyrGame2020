@@ -6,6 +6,7 @@
 m_initialized = false;
 
 if (singleton_this()) exit;
+persistent = true;
 
 width = 1280;
 height = 720;

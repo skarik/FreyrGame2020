@@ -1,5 +1,7 @@
 /// @description Set up renderer
 
+event_inherited();
+
 depth = kUiDepthGabber + 1;
 
 #macro kPortraitIndex_Max 8

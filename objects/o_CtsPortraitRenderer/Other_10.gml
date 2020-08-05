@@ -1,6 +1,6 @@
 /// @description Draw the portraits in screenspace
 
-surface_set_target(Screen.m_gameSurface);
+//surface_set_target(Screen.m_gameSurface);
 
 var dx = 0;
 var dy = 0;
@@ -19,4 +19,4 @@ for (var i = kPortraitIndex_Max - 1; i >= 0; --i)
 	}
 }
 
-surface_reset_target();
+//surface_reset_target();

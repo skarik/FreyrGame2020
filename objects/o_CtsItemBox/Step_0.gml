@@ -17,7 +17,7 @@ else
 		var cts = inew(o_CtsTimeExpand);
 			cts.input_priority = this.input_priority; 
 		
-		event_user(0);
+		event_user(6);
 		
         idelete(this);
         exit;
