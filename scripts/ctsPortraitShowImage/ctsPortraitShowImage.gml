@@ -41,22 +41,6 @@ with (portrait_renderer)
 	preparams_facing[index] = params_facing[index];
 	
 	// Set new state
-	/*if (state_sprite[index] != null && sprite == null)
-	{
-		preparams_alpha[index] = 1.0;
-		params_alpha[index] = 0.0;
-	}
-	else
-	{
-		state_sprite[index] = sprite;
-		params_alpha[index] = 1.0;
-		params_position[index] = x_pos_percent;
-		params_alignment[index] = alignment;
-		state_facing[index] = facing;
-	
-		state_blend[index] = 0.0;
-	}*/
-	
 	if (sprite != null)
 	{
 		params_sprite[index] = sprite;

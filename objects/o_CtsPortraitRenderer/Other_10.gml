@@ -21,6 +21,8 @@ for (var i = kPortraitIndex_Max - 1; i >= 0; --i)
 				saturate(state_alignment[i])
 				),
 			saturate(state_alignment[i] + 1.0));
+		// Do X/Y fades when fading in and out
+		xoffset += width * smoothstep(1.0 - state_alpha[i]) * state_facing[i];
 		
 		draw_sprite_ext(
 			state_sprite[i], 0,

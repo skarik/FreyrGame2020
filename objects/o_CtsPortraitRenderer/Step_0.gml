@@ -84,25 +84,23 @@ for (var i = 0; i < kPortraitIndex_Max; ++i)
 	}
 	
 	// Blend to state
-	state_position[i] = lerp(preposition, position, state_blend[i]);
+	state_position[i] = lerp(preposition, position, smoothstep(state_blend[i]));
 	state_alpha[i] = lerp(preparams_alpha[i], params_alpha[i], state_blend[i]);
 	
-	// update sprite now
-	state_sprite[i] = params_sprite[i];
+	// update sprite
+	if (params_sprite[i] != null)
+	{
+		state_sprite[i] = params_sprite[i];
+	}
+	else
+	{
+		if (state_alpha[i] <= 0.0)
+		{	// set preparams to null so the optimized skip can kick in
+			state_sprite[i] = null;
+			preparams_sprite[i] = null;
+		}
+	}
 	
 	state_facing[i] = lerp(preparams_facing[i], params_facing[i], state_blend[i]);
 	state_alignment[i] = lerp(prealignment, alignment, state_blend[i]);
-	/*state_sprite[i] = null;
-	state_alpha[i] = 0.0;
-	state_position[i] = 0.0;
-	state_facing[i] = 1.0;
-	state_blend[i] = 1.0;
-	
-	params_alpha[i] = 0.0;
-	params_position[i] = 0.0;
-	params_alignment[i] = kPortraitAlignCenter;
-	
-	preparams_alpha[i] = params_alpha[i];
-	preparams_position[i] = params_position[i];
-	preparams_alignment[i] = params_alignment[i];*/
 }
