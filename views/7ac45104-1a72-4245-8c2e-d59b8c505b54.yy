@@ -11,7 +11,8 @@
         "c7c2e861-6436-4b35-b69f-6673ea2e216e",
         "8f113cf8-abe8-4c36-8ec2-59ca05a935a8",
         "f0f37b3e-34f2-4e00-999f-2ec7c3805076",
-        "63a0707b-ad6c-4a7b-b11d-aca6ce769a5d"
+        "63a0707b-ad6c-4a7b-b11d-aca6ce769a5d",
+        "cd8cf1b0-de86-4824-940a-43ae10332958"
     ],
     "filterType": "GMObject",
     "folderName": "XX_Repeat",

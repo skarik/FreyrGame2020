@@ -1,6 +1,6 @@
 /// @description Draw scene in screenspace
 
-var t_alpha = saturate(time * 4.0);
+var t_alpha = saturate(time * 4.0) - saturate(time_fade);
 var t_backgroundY = lerp(20, -20, sqrt(saturate(time / 1.5)));   // 360 total, with 20 from bottom & 20 from top
 var t_backgroundX = lerp(-40, 0, smoothstep(saturate((time - 1.5) / 2.0)));
 

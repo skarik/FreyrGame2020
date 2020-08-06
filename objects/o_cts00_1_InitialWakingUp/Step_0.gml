@@ -51,9 +51,15 @@ if (cutsceneHasSignal())
 	}
 	
 	
-	if (signal_id == "nathan_cg")
+	if (signal_id == "nathan_cg_show")
 	{
-		inew(o_cts00_10_CgNathan);
+		inew_unique(o_cts00_10_CgNathan);
+		with (o_cts00_10_CgNathan) { m_show = true; }
+		cutsceneSignalConsume();
+	}
+	if (signal_id == "nathan_cg_hide")
+	{
+		with (o_cts00_10_CgNathan) { m_show = false; }
 		cutsceneSignalConsume();
 	}
 }
@@ -64,13 +70,13 @@ if (!cutsceneUpdate())
 	var cts_type = cutsceneGetCurrentType();
 	if (cts_type == SEQTYPE_WAIT)
 	{
-		var wait_id = cutsceneGetWaitId();
+		/*var wait_id = cutsceneGetWaitId();
 		if (wait_id == "nathan_cg")
 		{
 			if (!iexists(o_cts00_10_CgNathan))
 			{
 				cutsceneWaitEnd();
 			}
-		}
+		}*/
 	}
 }

@@ -153,8 +153,20 @@ music
 }
 
 //o_cts00_01_CgNathan
-signal { id nathan_cg; }
-wait { type input; id nathan_cg; }
+signal { id nathan_cg_show; }
+//wait { type input; id nathan_cg; }
+
+wait { type time; time 1.3s; }
+lines
+{
+    target  nathan
+	style portrait
+	object 0
+	1 $bAre$$ you alive?
+	tail 0.8 1.0 right
+}
+
+signal { id nathan_cg_hide; }
 
 // slide in the portraits here:
 portrait
@@ -178,13 +190,13 @@ portrait
 	expression neutral
 }
 
-lines
-{
-    target  nathan
-	style portrait
-	object 0
-	1 $bAre$$ you alive?
-}
+//lines
+//{
+//    target  nathan
+//	style portrait
+//	object 0
+//	1 $bAre$$ you alive?
+//}
 
 lines
 {
@@ -203,8 +215,9 @@ lines
 //	target EndChoiceA
 //}
 // END DEBUG
-
 // TODO: Cg right here, or have nathan walk up
+
+// Nathan then smacks player with bandage
 
 
 portrait
