@@ -6,6 +6,20 @@ m_head = 0;
 m_gender = kGenderMale;
 m_shirtless = false;
 
+{
+	// Randomly generate gender for some variation
+	m_gender = choose(kGenderMale, kGenderFemale, kGenderNonbi);
+	if (m_gender == kGenderMale)
+		m_name = "Cortez";
+	else if (m_gender == kGenderFemale)
+		m_name = "Aurum";
+	else if (m_gender == kGenderNonbi)
+		m_name = "Pyrite";
+		
+	m_body = choose(0, 1, 2);
+	m_head = choose(0, 1, 2);
+}
+
 m_party = array_create(3, null);
 
 #macro kGenderFemale 0

@@ -12,10 +12,10 @@ surface_set_target(m_repaletteBuffer);
 	
 	// Set up the shader
 	shader_set(sh_repaletteUI);
-	texture_set_stage(uni_samplerPaletteLUT_UI, surface_get_texture(global.pal_surfaceWIDE3d));
+	texture_set_stage(uni_samplerPaletteLUT_UI, surface_get_texture(global.pal_surfaceUI3d));
 	gpu_set_tex_filter_ext(uni_samplerPaletteLUT_UI, false);
 	gpu_set_tex_repeat_ext(uni_samplerPaletteLUT_UI, false);
-	texture_set_stage(uni_samplerPaletteLUTSecond_UI, surface_get_texture(global.pal_surfaceWIDE3d2));
+	texture_set_stage(uni_samplerPaletteLUTSecond_UI, surface_get_texture(global.pal_surfaceUI3d2));
 	gpu_set_tex_filter_ext(uni_samplerPaletteLUTSecond_UI, false);
 	gpu_set_tex_repeat_ext(uni_samplerPaletteLUTSecond_UI, false);
 	shader_set_uniform_f(uni_lookupDivs_UI,

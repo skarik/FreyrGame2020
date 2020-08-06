@@ -71,16 +71,16 @@ global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time
 // update static wide palette
 {
 	// Create surface
-	if (!surface_exists(global.pal_surfaceWIDE3d))
-		global.pal_surfaceWIDE3d = surface_create(global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth);
+	if (!surface_exists(global.pal_surfaceUI3d))
+		global.pal_surfaceUI3d = surface_create(global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth);
 	
 	// Set to draw onto the 3D palette
-	surface_set_target(global.pal_surfaceWIDE3d);
+	surface_set_target(global.pal_surfaceUI3d);
 
 	// Refresh with the base 3D palette
 	gpu_set_blendenable(false);
 	gpu_set_blendmode_ext(bm_one, bm_zero);
-	draw_sprite(global.pal_sprite3d[kPaletteWide], 0, 0, 0);
+	draw_sprite(global.pal_sprite3d[kPaletteUI], 0, 0, 0);
 
 	// now draw overlays that are registered
 	/*gpu_set_blendenable(true);
@@ -95,16 +95,16 @@ global.pal_current_blend = motion1d_to(global.pal_current_blend, pal_index, Time
 // also update the secondary palette
 {
 	// Create surface
-	if (!surface_exists(global.pal_surfaceWIDE3d2))
-		global.pal_surfaceWIDE3d2 = surface_create(global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth);
+	if (!surface_exists(global.pal_surfaceUI3d2))
+		global.pal_surfaceUI3d2 = surface_create(global.pal_lutWidth * global.pal_lutWidth, global.pal_lutWidth);
 	
 	// Set to draw onto the 3D palette
-	surface_set_target(global.pal_surfaceWIDE3d2);
+	surface_set_target(global.pal_surfaceUI3d2);
 
 	// Refresh with the base 3d palette
 	gpu_set_blendenable(false);
 	gpu_set_blendmode_ext(bm_one, bm_zero);
-	draw_sprite(global.pal_sprite3d2[kPaletteWide], 0, 0, 0);
+	draw_sprite(global.pal_sprite3d2[kPaletteUI], 0, 0, 0);
 
 	// now draw overlays that are registered
 	/*gpu_set_blendenable(true);
