@@ -29,10 +29,12 @@ if (m_inCutsceneBlend < 1.0)
 // Draw the bars at top and bottom
 if (m_inCutsceneBlend > 0.0)
 {
+	#macro kCutsceneBarWidth 20
+	
 	draw_set_color(c_black);
 	draw_set_alpha(1.0);
-	draw_rectangle(0, 0, GameCamera.width, 20 * m_inCutsceneBlend, false);
-	draw_rectangle(0, GameCamera.height - 20 * m_inCutsceneBlend, GameCamera.width, GameCamera.height, false);
+	draw_rectangle(0, 0, GameCamera.width, kCutsceneBarWidth * m_inCutsceneBlend, false);
+	draw_rectangle(0, GameCamera.height - kCutsceneBarWidth * m_inCutsceneBlend, GameCamera.width, GameCamera.height, false);
 }
 
 //surface_reset_target();

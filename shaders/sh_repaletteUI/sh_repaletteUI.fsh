@@ -103,9 +103,19 @@ void main()
 	vec2 color_distances = vec2( rgbDistanceSqr(color_scene.rgb, color_lookup.rgb), rgbDistanceSqr(color_scene.rgb, color_lookup2.rgb) ); // breaks with nighttime overlay. needs fix. maybe do madding in shader?
 	float percent = calculateLinearWeight(color_distances.x, color_distances.y);
 	
+	// Get original HSV of the color
+	//vec3 color_original_hsv = rgb2hsv(color_scene.rgb);
+	
 	// Blend in-palette
-	//color_lookup.rgb = mix(color_lookup.rgb, color_lookup2.rgb, calculateAlphaDither(percent, floor(v_vWorldPosition.xy)));
 	color_lookup.rgb = mix(color_lookup.rgb, color_lookup2.rgb, percent);
+	
+	// Push the original HSV onto the current HSV:
+	/*vec3 color_lookup_hsv = rgb2hsv(color_lookup.rgb);
+	// Saturate it based on the brightness - the brighter, the less the push should be.
+	color_lookup_hsv.y = mix(color_lookup_hsv.y, color_original_hsv.y, 1.0 - color_lookup_hsv.z * 0.2);
+	// Also push the original hue.
+	color_lookup_hsv.x = mix(color_lookup_hsv.x, color_original_hsv.x, 1.0 - color_lookup_hsv.z * 0.2);
+	color_lookup.rgb = hsv2rgb(color_lookup_hsv);*/
 	
 	//
 	// Apply overlay, with constant luma

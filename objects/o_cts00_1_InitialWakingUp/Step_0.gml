@@ -49,9 +49,28 @@ if (cutsceneHasSignal())
 		// Consume!
 		cutsceneSignalConsume();
 	}
+	
+	
+	if (signal_id == "nathan_cg")
+	{
+		inew(o_cts00_10_CgNathan);
+		cutsceneSignalConsume();
+	}
 }
 
 // Check for waits
 if (!cutsceneUpdate())
 {
+	var cts_type = cutsceneGetCurrentType();
+	if (cts_type == SEQTYPE_WAIT)
+	{
+		var wait_id = cutsceneGetWaitId();
+		if (wait_id == "nathan_cg")
+		{
+			if (!iexists(o_cts00_10_CgNathan))
+			{
+				cutsceneWaitEnd();
+			}
+		}
+	}
 }

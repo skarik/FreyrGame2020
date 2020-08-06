@@ -25,7 +25,7 @@ surface_set_target(m_uiSurface);
 			ds_list_clear(m_renderQueue_UIObject);
 			while (!ds_priority_empty(ui_queue))
 			{
-				ds_list_add(m_renderQueue_UIObject, ds_priority_delete_min(ui_queue));
+				ds_list_add(m_renderQueue_UIObject, ds_priority_delete_max(ui_queue));
 			}
 			// Done with queue
 			ds_priority_destroy(ui_queue);

@@ -67,27 +67,6 @@ world
 	event makePlayerShirtless
 }
 
-//music // start with the gentle music track
-//{
-//    1 audio/oasis_1_bass.ogg
-//    2 audio/oasis_2_gt1.ogg
-//    3 audio/oasis_3_gt2_strum.ogg
-//    4 audio/oasis_4_gt2_solo.ogg
-//	5 audio/oasis_5_str_stacc.ogg
-//	6 audio/oasis_6_str_leg.ogg
-//	7 audio/oasis_7_perc_light.ogg
-//	8 audio/oasis_8_perc_hard.ogg
-//	9 audio/oasis_9_perc_bells.ogg
-//    volume 0.0
-//    7volume 1.0
-//    pitch 1.0
-//}
-//music
-//{
-//	1 audio/nathan_tent_loop.ogg
-//	volume 1.0
-//	pitch 1.0
-//}
 music
 {
 	1 music/oasis_1_chill.ogg
@@ -173,6 +152,10 @@ music
 	2volume 1.0
 }
 
+//o_cts00_01_CgNathan
+signal { id nathan_cg; }
+wait { type input; id nathan_cg; }
+
 // slide in the portraits here:
 portrait
 {	// Nathan portrait
@@ -222,6 +205,7 @@ lines
 // END DEBUG
 
 // TODO: Cg right here, or have nathan walk up
+
 
 portrait
 {	// Player portrait
