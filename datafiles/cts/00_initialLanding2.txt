@@ -154,18 +154,12 @@ music
 
 //o_cts00_01_CgNathan
 signal { id nathan_cg_show; }
-//wait { type input; id nathan_cg; }
-
-wait { type time; time 1.3s; }
+wait { type time; time 1.7s; }
 lines
 {
-    target  nathan
-	style portrait
-	object 0
 	1 $bAre$$ you alive?
-	tail 0.8 1.0 right
+	tail position 0.8 1.0 right
 }
-
 signal { id nathan_cg_hide; }
 
 // slide in the portraits here:
@@ -224,7 +218,7 @@ portrait
 {	// Player portrait
 	index 1
 	action show
-	position 0.0
+	position 0.1
 	align left
 	face right
 	character player
@@ -246,6 +240,17 @@ lines
 	
 	1p U-$puh t-$pthank you so much! I have no idea what happened.
 	2p I-$pI, uh, w-$pwho are you?
+}
+
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.06
+	align left
+	face right
+	character player
+	expression neutral
 }
 
 lines

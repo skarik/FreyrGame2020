@@ -32,6 +32,10 @@
 #macro SEQI_FACING -7
 #macro SEQI_ENDACTION -8
 #macro SEQI_STYLE -9
+#macro SEQI_LINE_TAIL_TYPE -11
+#macro SEQI_LINE_TAIL_X -13
+#macro SEQI_LINE_TAIL_Y -14
+#macro SEQI_LINE_TAIL_DIRECTION -15
 #macro SEQI_JUMP_OFFSET 100
 #macro SEQI_LINE_OFFSET_MALE 200
 #macro SEQI_LINE_OFFSET_FEMALE 300
@@ -42,6 +46,10 @@
 #macro kLinesStyle_Portrait 1
 #macro kLinesStyle_Diagetic 2
 #macro kLinesStyle_Tutorial 3
+
+#macro kLinesTail_Auto 0
+#macro kLinesTail_Off 1
+#macro kLinesTail_Position 2
 
 #macro SEQI_FACING_LEFT -1
 #macro SEQI_FACING_RIGHT 1

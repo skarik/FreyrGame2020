@@ -1,3 +1,5 @@
+/// @description Update position
+
 var view_xview0 = GameCamera.x - GameCamera.width / 2;
 var view_yview0 = GameCamera.y - GameCamera.height / 2;
 var view_wview0 = GameCamera.width;
@@ -15,15 +17,15 @@ else if (iexists(o_CtsKeyPoint))
     uiPosX = o_CtsKeyPoint.x - display_width / 2;
     uiPosY = o_CtsKeyPoint.y - _gabberBoxHeight() - (input_minimal ? 10 : 28);
 }
-else if (iexists(o_PlayerTest))
+else if (iexists(o_PlayerTest) && !display_tail_override)
 {
     uiPosX = view_xview0 + view_wview0 / 2 - display_width / 2;
     uiPosY = o_PlayerTest.y - o_PlayerTest.sprite_yoffset - _gabberBoxHeight() - (input_minimal ? 0 : 18);
 }
 else
 {
-    uiPosX = view_xview0 + 64;
-    uiPosY = view_yview0 + 64;
+    uiPosX = view_xview0 + 48;
+    uiPosY = view_yview0 + 48;
 }
 
 if (!input_minimal)

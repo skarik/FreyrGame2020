@@ -29,6 +29,12 @@ display_whitebox_override = false;
 display_height_old = 0.0;
 display_height_blend = 1.0;
 
+display_tail_disabled = false;
+display_tail_override = false;
+display_tail_override_x = 0.0;
+display_tail_override_y = 0.0;
+display_tail_override_direction = SEQI_FACING_RIGHT;
+
 current_display_count = 0;
 current_display_delay = 0;
 current_display_time = 0;

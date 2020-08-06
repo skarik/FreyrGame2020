@@ -27,17 +27,21 @@ with (portrait_renderer)
 	if (params_alpha[index] <= 0.0)
 	{
 		//params_alpha[index] = 0.0;
+		params_sprite[index] = sprite;
 		params_position[index] = x_pos_percent;
 		params_alignment[index] = alignment;
+		params_facing[index] = facing;
 	}
 	
 	// Save previous state
+	preparams_sprite[index] = params_sprite[index];
 	preparams_alpha[index] = params_alpha[index];
 	preparams_position[index] = params_position[index];
 	preparams_alignment[index] = params_alignment[index];
+	preparams_facing[index] = params_facing[index];
 	
 	// Set new state
-	if (state_sprite[index] != null && sprite == null)
+	/*if (state_sprite[index] != null && sprite == null)
 	{
 		preparams_alpha[index] = 1.0;
 		params_alpha[index] = 0.0;
@@ -51,7 +55,23 @@ with (portrait_renderer)
 		state_facing[index] = facing;
 	
 		state_blend[index] = 0.0;
+	}*/
+	
+	if (sprite != null)
+	{
+		params_sprite[index] = sprite;
+		params_alpha[index] = 1.0;
+		params_position[index] = x_pos_percent;
+		params_alignment[index] = alignment;
+		params_facing[index] = facing;
 	}
+	else
+	{
+		params_sprite[index] = sprite;
+		params_alpha[index] = 0.0;
+	}
+	
+	state_blend[index] = 0.0;
 }
 
 

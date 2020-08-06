@@ -165,6 +165,10 @@ case SEQTYPE_LINES:
         var facing = ds_map_find_value(entry, SEQI_FACING);
         var ending = ds_map_find_value(entry, SEQI_ENDACTION);
 		var style = ds_map_find_value(entry, SEQI_STYLE);
+		var tail_style = entry[?SEQI_LINE_TAIL_TYPE];
+		var tail_x = entry[?SEQI_LINE_TAIL_X];
+		var tail_y = entry[?SEQI_LINE_TAIL_Y];
+		var tail_direction = entry[?SEQI_LINE_TAIL_DIRECTION];
         
 		var l_organic = (ending == SEQEND_ORGANIC) || cts_organic;
 		
@@ -175,7 +179,8 @@ case SEQTYPE_LINES:
 		}
     
 		// Find target
-		var target_inst = (style != kLinesStyle_Portrait) ? _cutsceneUpdateGetTarget(target, count) : 0;
+		//var target_inst = (style != kLinesStyle_Portrait) ? _cutsceneUpdateGetTarget(target, count) : 0;
+		var target_inst = _cutsceneUpdateGetTarget(target, count);
 	
 		// FREYR SPECIFIC:
 		// Replace the line with the player gender-specific line if possible:
@@ -197,36 +202,50 @@ case SEQTYPE_LINES:
 		}
 	
         // Make a talker with all the input info
+		var gabber = null;
 		if (style == kLinesStyle_Default)
 		{
-	        var gabber = ctsMakeGabber(target_inst, "", line);
-	            gabber.input_priority = !l_organic;
-	            gabber.input_disable = l_organic;
-	            gabber.input_autoclose = (ending == SEQEND_AUTO);
-				gabber.input_minimal = false;
+	        gabber = ctsMakeGabber(target_inst, "", line);
+	        gabber.input_priority = !l_organic;
+	        gabber.input_disable = l_organic;
+	        gabber.input_autoclose = (ending == SEQEND_AUTO);
+			gabber.input_minimal = false;
 		}
 		else if (style == kLinesStyle_Portrait)
 		{
-			var gabber = ctsMakeTalker(target_inst, count, "", line);
-	            gabber.input_priority = !l_organic;
-	            gabber.input_disable = l_organic;
-	            gabber.input_autoclose = (ending == SEQEND_AUTO);
+			gabber = ctsMakeTalker(target_inst, count, "", line);
+	        gabber.input_priority = !l_organic;
+	        gabber.input_disable = l_organic;
+	        gabber.input_autoclose = (ending == SEQEND_AUTO);
 		}
 		else if (style == kLinesStyle_Diagetic)
 		{
-	        var gabber = ctsMakeGabber(target_inst, "", line);
-	            gabber.input_priority = false;
-	            gabber.input_disable = true;
-	            gabber.input_autoclose = (ending == SEQEND_AUTO);
-				gabber.input_minimal = true;
+	        gabber = ctsMakeGabber(target_inst, "", line);
+	        gabber.input_priority = false;
+	        gabber.input_disable = true;
+	        gabber.input_autoclose = (ending == SEQEND_AUTO);
+			gabber.input_minimal = true;
 		}
 		else if (style == kLinesStyle_Tutorial)
 		{
-	        var gabber = ctsMakeGabber(target_inst, "", line);
-	            gabber.input_priority = !l_organic;
-	            gabber.input_disable = l_organic;
-	            gabber.input_autoclose = (ending == SEQEND_AUTO);
-				gabber.input_minimal = l_organic;
+	        gabber = ctsMakeGabber(target_inst, "", line);
+	        gabber.input_priority = !l_organic;
+	        gabber.input_disable = l_organic;
+	        gabber.input_autoclose = (ending == SEQEND_AUTO);
+			gabber.input_minimal = l_organic;
+		}
+		
+		if (iexists(gabber))
+		{
+			if (tail_style == kLinesTail_Off)
+				gabber.display_tail_disabled = true;
+			else if (tail_style == kLinesTail_Position)
+			{
+				gabber.display_tail_override = true;
+				gabber.display_tail_override_x = tail_x;
+				gabber.display_tail_override_y = tail_y;
+				gabber.display_tail_override_direction = tail_direction;
+			}
 		}
             
 		// SILENT SKY SPECIFIC:

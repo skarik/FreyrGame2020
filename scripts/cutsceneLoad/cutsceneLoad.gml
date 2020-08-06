@@ -322,6 +322,38 @@ while (!file_text_eof(fp))
 					style = kLinesStyle_Tutorial;
 				else
 					style = kLinesStyle_Default;
+					
+				var tail_unparsed = read_object_map[?"tail"];
+				if (is_undefined(tail_unparsed))
+					tail_unparsed = "default";
+				var tail_parsed = string_split(tail_unparsed, " ", true);
+				var tail_mode = kLinesTail_Auto;
+				var tail_x = 0.0;
+				var tail_y = 0.0;
+				var tail_direction = SEQI_FACING_LEFT;
+				if (tail_parsed[0] == "default" || tail_parsed[0] == "auto")
+					tail_mode = kLinesTail_Auto;
+				else if (tail_parsed[0] == "off" || tail_parsed[0] == "none")
+					tail_mode = kLinesTail_Off;
+				else if (tail_parsed[0] == "position")
+				{
+					tail_mode = kLinesTail_Position;
+					tail_x = real(tail_parsed[1]);
+					tail_y = real(tail_parsed[2]);
+					tail_direction = "left";
+					if (array_length_1d(tail_parsed) > 3)
+						tail_direction = string_lower(tail_parsed[3]);
+					if (tail_direction == "left")
+						tail_direction = SEQI_FACING_LEFT;
+					else if (tail_direction == "right")
+						tail_direction = SEQI_FACING_RIGHT;
+					else if (tail_direction == "up")
+						tail_direction = SEQI_FACING_UP;
+					else if (tail_direction == "down")
+						tail_direction = SEQI_FACING_DOWN;
+					else
+						tail_direction = SEQI_FACING_LEFT;
+				}
                     
                 // Now, loop through the input map and select lines
                 var index = 0;
@@ -352,6 +384,10 @@ while (!file_text_eof(fp))
                     ds_map_add(new_map, SEQI_FACING, facing);
                     ds_map_add(new_map, SEQI_ENDACTION, ending);
 					ds_map_add(new_map, SEQI_STYLE, style);
+					new_map[?SEQI_LINE_TAIL_TYPE] = tail_mode;
+					new_map[?SEQI_LINE_TAIL_X] = tail_x;
+					new_map[?SEQI_LINE_TAIL_Y] = tail_y;
+					new_map[?SEQI_LINE_TAIL_DIRECTION] = tail_direction;
                     
                     // Save the new map data
                     cts_entry[cts_entry_count] = new_map;

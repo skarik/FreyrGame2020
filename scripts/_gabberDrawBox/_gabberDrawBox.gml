@@ -39,16 +39,31 @@ if (!input_minimal)
 	draw_sprite_part_ext( suiChoiceBox, 2, 0,0,15,20, x-boxw*0.5-9,y+offYa-7, 1.0,1.0,c_white, offA ); // bottom left corner
 	draw_sprite_part_ext( suiChoiceBox, 2, 250-15,0,15,20, x+boxw*0.5+10-15,y+offYa-7, 1.0,1.0,c_white, offA ); // bottom right corner
 
-	// Draw the pointer to the character
-	if (iexists(input_actor))
+	// Draw box tail
+	if (!display_tail_disabled)
 	{
-		//draw_sprite_part_ext( suiChoiceBox, 3, 125-25,0,10,20, x-boxw*0.5,y+offYa-7, boxw/10,1.0, c_white, offA ); // bottom border
-		var input_actor_x_screenspace = input_actor.x - GameCamera.view_x;
-		draw_sprite_ext(suiChoiceBox, 3,
-						x + clamp(input_actor_x_screenspace - x - 21, -boxw * 0.5 + 8, boxw * 0.5 - 25 - 8), 
-						y + offYa - 7 + (18-5),
-						1.0, 1.0,
-						0.0, c_white, offA);
+		if (!display_tail_override)
+		{
+			// Draw the pointer to the character
+			if (iexists(input_actor))
+			{
+				var input_actor_x_screenspace = input_actor.x - GameCamera.view_x;
+				draw_sprite_ext(suiChoiceBox, 3,
+								x + clamp(input_actor_x_screenspace - x - 21, -boxw * 0.5 + 8, boxw * 0.5 - 25 - 8), 
+								y + offYa - 7 + (18-5),
+								1.0, 1.0,
+								0.0, c_white, offA);
+			}
+		}
+		else
+		{
+			// Draw overridden character.
+			draw_sprite_ext(suiChoiceBox, 3,
+							x + clamp(boxw * display_tail_override_x - 21, -boxw * 0.5 + 8, boxw * 0.5 - 25 - 8), 
+							y + offYa - 7 + (18-5),
+							1.0, 1.0,
+							0.0, c_white, offA);
+		}
 	}
 
 	// draw the name
