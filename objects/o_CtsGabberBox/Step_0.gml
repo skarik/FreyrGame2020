@@ -77,7 +77,13 @@ if ( current_display_delay <= 0.0 )
 			faudio_sound_set_gain(audio, random_range(0.3, 0.4) * 0.5);
 			faudio_sound_set_pitch(audio, choose(0.2, 0.2, 0.25, 0.25, 0.3) * 4.0);
 		}
-    }
+		
+		// Stop outputting text if there's any sort of delay
+		if (current_display_delay > 0.0)
+		{
+			break;
+		}
+    } // End for-loop (adding characters & parsing effects)
 }
 else
 {

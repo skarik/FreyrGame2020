@@ -1,8 +1,13 @@
 var suiChoiceBox = ((iexists(o_CtsBlackBoxes) || display_blackbox_override) && !display_whitebox_override) ? sui_choiceBox3Black : sui_choiceBox4;
 //var dx, dy;
 
-draw_set_font(display_font);
-var boxw_st = display_width + 8;
+// Set up fonts
+var l_display_font = input_minimal ? display_font_minimal : display_font;
+var l_display_font_bold = input_minimal ? display_font_minimal_bold : display_font_bold;
+var l_display_font_height = input_minimal ? display_font_minimal_height : display_font_height;
+
+draw_set_font(l_display_font);
+var boxw_st = display_width + (display_thin_margins ? -8 : 8);
 var boxh_st = _gabberBoxHeight();
 var boxw = ceil( boxw_st * smoothstep(image_alpha*2) );
 var boxh = max(10, ceil( boxh_st * bouncestep((image_alpha-0.5)*2) ));
@@ -12,6 +17,11 @@ var offA = clamp(image_alpha*2, 0.0, 1.0);
 
 x = uiPosX + boxw_st * 0.5; 
 y = uiPosY + boxh;
+
+if (display_thin_margins)
+{
+	boxh -= 8;
+}
 
 /*var tC = make_colour_hsv(colour_get_hue(background_colour), 255, 90);
 draw_set_color( merge_color( c_gray, tC, offA ) );
@@ -72,8 +82,7 @@ if (!input_minimal)
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
 		draw_set_color(make_color_rgb(142, 126, 106));
-		//draw_set_font(display_font_bold);
-		draw_set_font(display_font);
+		draw_set_font(l_display_font);
 		draw_set_alpha( offA );
 		var penx = 0;
 		for (var i = 1; i <= string_length(input_actor.m_name); ++i)

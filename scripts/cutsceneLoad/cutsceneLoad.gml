@@ -320,6 +320,8 @@ while (!file_text_eof(fp))
 					style = kLinesStyle_Diagetic;
 				else if (style == "tutorial")
 					style = kLinesStyle_Tutorial;
+				else if (style == "mumble")
+					style = kLinesStyle_Mumble;
 				else
 					style = kLinesStyle_Default;
 					

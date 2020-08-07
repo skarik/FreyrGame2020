@@ -15,9 +15,9 @@ switch (settingname)
 		return 2;
 		
 	case "ui_font_size":
-		return 9;
+		return 10;
 	case "ui_font_size_talk":
-		return 7;
+		return 8;
 		
 	case "ui_font_style":
 		return 0;

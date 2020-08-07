@@ -8,6 +8,18 @@ screen
 	type hold
     rgb 0 0 0
 }
+
+lines
+{
+	style mumble
+	1 $q$MAre they dead? Can I eat them?
+}
+lines
+{
+	style mumble
+	1 $qShush, that isn't funny.
+}
+
 screen
 {
 	type ctsin
@@ -260,7 +272,7 @@ lines
 	object 0
 	
 	1 My name is $3Nathan$0.
-	2 At least, that's what everyone calls me.
+	2 At least, that's what everyone calls me.$p$#$q$MI'm$$$0$q-$s *cough*
 }
 
 portrait

@@ -46,6 +46,7 @@
 #macro kLinesStyle_Portrait 1
 #macro kLinesStyle_Diagetic 2
 #macro kLinesStyle_Tutorial 3
+#macro kLinesStyle_Mumble 4
 
 #macro kLinesTail_Auto 0
 #macro kLinesTail_Off 1

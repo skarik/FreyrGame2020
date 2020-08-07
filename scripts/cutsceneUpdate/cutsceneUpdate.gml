@@ -203,13 +203,14 @@ case SEQTYPE_LINES:
 	
         // Make a talker with all the input info
 		var gabber = null;
-		if (style == kLinesStyle_Default)
+		if (style == kLinesStyle_Default || style == kLinesStyle_Mumble)
 		{
 	        gabber = ctsMakeGabber(target_inst, "", line);
 	        gabber.input_priority = !l_organic;
 	        gabber.input_disable = l_organic;
 	        gabber.input_autoclose = (ending == SEQEND_AUTO);
 			gabber.input_minimal = false;
+			gabber.display_thin_margins = (style == kLinesStyle_Mumble);
 		}
 		else if (style == kLinesStyle_Portrait)
 		{

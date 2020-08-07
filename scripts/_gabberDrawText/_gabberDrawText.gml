@@ -10,9 +10,19 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(smoothstep((image_alpha-0.5)*2.0));
 
-draw_set_font(input_minimal ? global.font_arvo7 : display_font);
-var text_dx = input_minimal ? 7 : display_font_height;
+// Set up fonts
+var l_display_font = input_minimal ? display_font_minimal : display_font;
+var l_display_font_bold = input_minimal ? display_font_minimal_bold : display_font_bold;
+var l_display_font_height = input_minimal ? display_font_minimal_height : display_font_height;
+var l_display_mumble_font = display_font_mumble;
+var l_display_mumble_font_bold = display_font_mumble_bold;
+
+draw_set_font(l_display_font);
+var text_dx = l_display_font_height;
 var text_refw = string_width("m");
+
+// Lilac for motses
+#macro c_motsestext make_color_rgb(229, 139, 210)
 
 var text_w = display_width;
 var penx = 0;
@@ -22,6 +32,8 @@ var penw = 2;
 var penwiggle = false;
 var penshake = false;
 var penwigglex = false;
+var pensmol = false;
+var penbold = false;
 for (var i = 0; i < floor(current_display_count); ++i)
 {
     if ( is_array(display_flags[i]) )
@@ -45,18 +57,15 @@ for (var i = 0; i < floor(current_display_count); ++i)
 				penc = c_riftgreen;
 	        if ( flag == ord("b") )
 	        {
-	            draw_set_font(display_font_bold);
-	            text_refw = string_width("m");
-	            penw = 3;
+				penbold = true;
 	        }
 	        if ( flag == ord("$") )
 	        {
-	            draw_set_font(display_font);
-	            text_refw = string_width("m");
-	            penw = 2;
+				penbold = false;
 				penwiggle = false;
 				penshake = false;
 				penwigglex = false;
+				pensmol = false;
 	        }
 			if ( flag == ord("w") )
 				penwiggle = true;
@@ -64,12 +73,51 @@ for (var i = 0; i < floor(current_display_count); ++i)
 				penshake = true;
 			if ( flag == ord("h") )
 				penwigglex = true;
+			if ( flag == ord("q") )
+				pensmol = true;
+			if ( flag == ord("M") )
+			{ // motses shorthand
+				penc = c_motsestext;
+				//penbold = true;
+			}
 	        // Newline!
 	        if ( flag == ord("#") )
 	        {
 	            penx = 0;
 	            peny += text_dx + 3
 	        }
+		}
+		
+		// Update complex overlapping font flags at this font
+		if (!pensmol)
+		{
+			if (!penbold)
+			{
+				draw_set_font(l_display_font);
+			    text_refw = string_width("m");
+			    penw = 2;
+			}
+			else
+			{
+				draw_set_font(l_display_font_bold);
+			    text_refw = string_width("m");
+			    penw = 3;
+			}
+		}
+		else
+		{
+			if (!penbold)
+			{
+				draw_set_font(l_display_mumble_font);
+			    text_refw = string_width("m");
+			    penw = 1;
+			}
+			else
+			{
+				draw_set_font(l_display_mumble_font_bold);
+			    text_refw = string_width("m");
+			    penw = 2;
+			}
 		}
     }
 
@@ -85,17 +133,31 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		xoffset += round(mt19937_random_range(-1.4, 1.4));
 		yoffset += round(mt19937_random_range(-1.4, 1.4));
 	}
+	if (pensmol)
+	{
+		xoffset *= 0.5;
+		yoffset *= 0.5;
+		xoffset += 0.4;
+		yoffset += l_display_font_height * 0.6;
+		
+		xoffset = round(xoffset);
+		yoffset = round(yoffset);
+	}
 	
     // draw the text
 	if (!input_minimal)
 	{
-		if (penc == c_gold)
+		if (penc == c_gold || penc == c_motsestext)
 		{	// gold (and other colors) get a special outline
 			draw_set_color( c_black );
 			draw_text(dx + penx + xoffset, dy + peny + 1 + yoffset, char);
 			draw_text(dx + penx + xoffset, dy + peny - 1 + yoffset, char);
 			draw_text(dx + penx + 1 + xoffset, dy + peny + yoffset, char);
 			draw_text(dx + penx - 1 + xoffset, dy + peny + yoffset, char);
+			draw_text(dx + penx - 1 + xoffset, dy + peny + 1 + yoffset, char);
+			draw_text(dx + penx + 1 + xoffset, dy + peny - 1 + yoffset, char);
+			draw_text(dx + penx + 1 + xoffset, dy + peny + 1 + yoffset, char);
+			draw_text(dx + penx - 1 + xoffset, dy + peny - 1 + yoffset, char);
 		}
 		else
 		{	// otherwise, do simple dropshadow outline

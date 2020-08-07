@@ -1191,6 +1191,14 @@
             }
         },
         {
+            "Key": "12a61ebc-883e-4e24-a8df-a9393b758069",
+            "Value": {
+                "id": "4eb6529e-3156-4359-9197-385da64bb977",
+                "resourcePath": "sprites\\sui_f_arvo10\\sui_f_arvo10.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "12ad5a26-cdcd-4264-a056-8bc8514be619",
             "Value": {
                 "id": "94734b29-bddb-46ee-86e8-574aebdfadb2",
@@ -8092,6 +8100,14 @@
                 "id": "fc725690-66c8-470e-8c8e-55fd74ddabc7",
                 "resourcePath": "scripts\\controlSettingSet\\controlSettingSet.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "721257da-fcb0-4a58-a824-298d6676ea5d",
+            "Value": {
+                "id": "49b2e1ad-c337-4d81-befe-22578173e11b",
+                "resourcePath": "sprites\\sui_f_arvo6Bold\\sui_f_arvo6Bold.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -17903,6 +17919,14 @@
             }
         },
         {
+            "Key": "f90052a5-3ab6-46ef-8c9b-21476b59c589",
+            "Value": {
+                "id": "622e8fa6-92a0-4f1b-8f42-27b7f64936ea",
+                "resourcePath": "sprites\\sui_f_arvo6\\sui_f_arvo6.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f9072bc7-49b3-4d3e-9d70-fdc3e7fbeb42",
             "Value": {
                 "id": "afd210d2-dde6-4ce6-b2d1-d7a4ced05d1f",
@@ -18260,6 +18284,14 @@
                 "id": "105e8825-0d74-4f31-8d4d-a6b80fbfb01d",
                 "resourcePath": "shaders\\sh_shadowBanding\\sh_shadowBanding.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "fcb2f0be-9f06-447d-856b-59227d812e85",
+            "Value": {
+                "id": "8319e2df-497b-4636-9a03-9fe544750f7c",
+                "resourcePath": "sprites\\sui_f_arvo10Bold\\sui_f_arvo10Bold.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
