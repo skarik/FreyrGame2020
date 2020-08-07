@@ -45,11 +45,11 @@ else if (m_aiScript_requestCommand == kAiRequestCommand_Animation)
 	var sprite_target = null;
 	if (m_aiScript_requestAnimation == "wakeup0")
 	{
-		sprite_target = sc_16x16char;
+		sprite_target = s_heroSleepingH0;
 	}
 	else if (m_aiScript_requestAnimation == "wakeup1")
 	{
-		sprite_target = sc_16x16char;
+		sprite_target = s_heroSleepingH0; // TODO
 	}
 	else if (m_aiScript_requestAnimation == "sleepSnore")
 	{

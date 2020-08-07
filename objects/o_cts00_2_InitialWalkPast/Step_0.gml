@@ -90,7 +90,7 @@ if (m_running)
 			// Consume!
 			cutsceneSignalConsume();
 			// Delete self
-			idelete(this);
+			idelete_delay(this, 2.0);
 		}
 	}
 

@@ -9,17 +9,6 @@ screen
     rgb 0 0 0
 }
 
-lines
-{
-	style mumble
-	1 $q$MAre they dead? Can I eat them?
-}
-lines
-{
-	style mumble
-	1 $qShush, that isn't funny.
-}
-
 screen
 {
 	type ctsin
@@ -63,13 +52,6 @@ ai
 	loop true
 	speed 5.0
 }
-
-screen
-{
-	type fadein
-    rgb 0 0 0
-}
-
 world
 {	// Stop the time of day from advancing during this intro sequence
 	time stop
@@ -77,6 +59,26 @@ world
 world
 {	// :)
 	event makePlayerShirtless
+}
+
+// Setup is done, let's have some lines:
+
+lines
+{
+	style mumble
+	1 $q$MAre they dead? Can I eat them?
+}
+lines
+{
+	style mumble
+	1 $qShush, that isn't funny.
+}
+
+// Now, we begin to fade in
+screen
+{
+	type fadein
+    rgb 0 0 0
 }
 
 music
@@ -196,14 +198,6 @@ portrait
 	expression neutral
 }
 
-//lines
-//{
-//    target  nathan
-//	style portrait
-//	object 0
-//	1 $bAre$$ you alive?
-//}
-
 lines
 {
     target player
@@ -215,16 +209,8 @@ lines
 	1p Y-yes.
 }
 
-// DEBUG HERE
-//goto
-//{
-//	target EndChoiceA
-//}
-// END DEBUG
-// TODO: Cg right here, or have nathan walk up
-
+// TODO HERE
 // Nathan then smacks player with bandage
-
 
 portrait
 {	// Player portrait

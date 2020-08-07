@@ -54,7 +54,7 @@ lines
 	target nathan
 	facing up
 	
-	1 Maybe this bandage thing isn't the chapter I should be reading...
+	1 Maybe this bandage thing isn't the chapter I should be reading...$p$#$q$MMaybe under insanity...
 }
 
 lines
@@ -128,7 +128,7 @@ lines
 	target nathan
 	facing player
 	1 Of course it's a sun...$pare you alright?
-	2 The pages I have don't say anything about falling from the sky...
+	2 The pages I have don't say anything about falling from the sky...$p$#$q$MThat fall mighta knocked something loose.
 }
 
 //goto
@@ -151,7 +151,7 @@ lines
 	2c I just need to hit a $2spa$0, or something.
 	3c Could really go for a $2tofu salad sandwich$0.
 	
-	1a I'm great! What makes you think I ain't!
+	1a What are ya mumbling?! I'm great! What makes you think I ain't!
 	2a Just need a bit of $2nosh$0 or something! What yah got?
 	3a I'll take an $2egg salad sandwich$0 if yah got one.
 	
@@ -177,7 +177,7 @@ lines
 lines
 {
 	target nathan
-	1 What's a $bgarden$$? $pWait, $pI think I've read that word before...
+	1 What's a $bgarden$$? $pWait, $pI think I've read that word before...$p$#$q$MCome on, you know...
 }
 
 music // start with the gentle music track (bring in some strings)
@@ -260,7 +260,7 @@ lines
 lines
 {
 	target nathan
-	1 I don't really know what that is, so it wouldn't really be much use to me anyway.
+	1 I don't really know what that is, so it wouldn't really be much use to me anyway. $qUsed for stars? I think?
 }
 
 // ---------------------------------------------------------------
@@ -306,8 +306,17 @@ choice
 	{
 		target nathan
 		facing player
+		style murmur
 		
-		1 U-uh. Well, are gardens a place where you grow food?
+		1 $q$MWhy are we blushing? What is the matter with you?
+		1p $q$MCome on, say something.
+	}
+	lines
+	{
+		target nathan
+		facing player
+		
+		1 $q$s*cough*$$ U-uh. Well, are gardens a place where you grow food?
 		2 It mentions something about $bseeds$$? Are these the same as these?
 		
 		1p It mentions something about $bseeds$$ as well.
@@ -429,7 +438,7 @@ choice
 		2p I’ve never seen that much water before and plants need water so...
 		3p I can take you there!
 	}
-		
+	
 	goto
 	{
 		target EndChoiceB
@@ -443,7 +452,7 @@ choice
 		facing nathan
 		style inner
 		
-		1 (Man, I've got a bad feeling about all this).
+		1 Man, I've got a bad feeling about all this.
 	}
 	
 	lines
@@ -494,7 +503,7 @@ choice
 		facing player
 		
 		1 Do you think you could show me how to grow them?
-		2 I'd take that as payment for treating you.
+		2 I'd take that as payment for treating you.$p$#$q$MWe're apparently running a clinic.
 	}
 	
 	lines
@@ -563,6 +572,16 @@ screen
 signal
 {
 	id ended
+}
+
+lines
+{
+    target  nathan
+	facing	player
+	end organic
+	style diegetic
+    1 $q$MYou think they're cute? $$N-no, just helping.
+	1p $q$MYou're suddenly charitable? $$Maybe.
 }
 
 #ended

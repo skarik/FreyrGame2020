@@ -138,7 +138,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		xoffset *= 0.5;
 		yoffset *= 0.5;
 		xoffset += 0.4;
-		yoffset += l_display_font_height * 0.6;
+		yoffset += l_display_font_height * 0.5;
 		
 		xoffset = round(xoffset);
 		yoffset = round(yoffset);

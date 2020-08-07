@@ -9,6 +9,41 @@ if (Debug.visible)
 	draw_circle(x, y, 3, false);
 }
 
+// Draw the player
+var kPlayerSurfaceSize = 64;
+var kPlayerSurfaceCenter = 32;
+var l_playerBuffer = surface_create(kPlayerSurfaceSize, kPlayerSurfaceSize);
+surface_set_target(l_playerBuffer);
+draw_clear_alpha(c_white, 0.0);
+{
+	var ihead = pstats.m_head;
+	var ibody = pstats.m_body;
+	var igend = _gendToIndex(pstats.m_gender);
+	
+	if (sprite_index == s_heroSleepingH0)
+	{
+		var head = [s_heroSleepingH0, s_heroSleepingH1, s_heroSleepingH2];
+		var gend = [s_heroSleepingG0, s_heroSleepingG1, s_heroSleepingG2];
+		var bott = [s_heroSleepingB0, s_heroSleepingB1, s_heroSleepingB2];
+		_drawChara(head[ihead], image_index, kPlayerSurfaceCenter);
+		_drawChara(gend[igend], image_index, kPlayerSurfaceCenter);
+		_drawChara(bott[ibody], image_index, kPlayerSurfaceCenter);
+	}
+	else if (sprite_index == s_charHeroStand)
+	{
+		var head = [s_heroStandH0, s_heroStandH1, s_heroStandH2];
+		var body = [s_heroStandB0, s_heroStandB1, s_heroStandB2];
+		_drawChara(head[ihead], image_index, kPlayerSurfaceCenter);
+		_drawChara(body[ibody], image_index, kPlayerSurfaceCenter);
+	}
+	else
+	{
+		_drawChara(sprite_index, image_index, kPlayerSurfaceCenter);
+	}
+}
+surface_reset_target();
+
+// Draw the actual composited player
 if ((!inWater && !inTar) || z_height > 1)
 {	// Draw normal depth, but with the moAnimationYOffset change vs depthDrawSelf().
 	var shadow_pct = max(0.75, sprite_height / 32.0);
@@ -24,12 +59,9 @@ if ((!inWater && !inTar) || z_height > 1)
 
 	gpu_set_blendmode(bm_normal);
 	gpu_set_alphatestenable(true);
-	draw_sprite_ext(sprite_index, image_index,
-					dx, round(dy - z_height + moAnimationYOffset),
-					image_xscale, image_yscale,
-					image_angle,
-					image_blend,
-					image_alpha);
+	draw_surface(l_playerBuffer,
+				 dx - kPlayerSurfaceCenter,
+				 round(dy - z_height + moAnimationYOffset) - kPlayerSurfaceCenter);
 }
 else
 {	// Draw in-liquid
@@ -45,12 +77,21 @@ else
 
 	gpu_set_blendmode(bm_normal);
 	gpu_set_alphatestenable(true);
-	draw_sprite_part(sprite_index, image_index,
+	/*draw_sprite_part(sprite_index, image_index,
 					 0, 0,
 					 sprite_get_width(sprite_index), sprite_get_height(sprite_index) - 8,
 					 x - sprite_get_xoffset(sprite_index),
-					 y - sprite_get_yoffset(sprite_index) + 4);
+					 y - sprite_get_yoffset(sprite_index) + 4);*/
+	draw_surface_part(l_playerBuffer,
+					 0, 0,
+					 kPlayerSurfaceSize,
+					 kPlayerSurfaceCenter - 2 - 8,
+					 dx - kPlayerSurfaceCenter,
+					 round(dy - z_height + moAnimationYOffset) - kPlayerSurfaceCenter);
 }
+
+// Free up temp buffer used for player
+surface_free(l_playerBuffer);
 
 // Draw the held item
 if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(inventory.belt))
