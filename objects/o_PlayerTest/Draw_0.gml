@@ -85,7 +85,7 @@ else
 	draw_surface_part(l_playerBuffer,
 					 0, 0,
 					 kPlayerSurfaceSize,
-					 kPlayerSurfaceCenter - 2 - 8,
+					 kPlayerSurfaceCenter + 2 - 8,
 					 dx - kPlayerSurfaceCenter,
 					 round(dy - z_height + moAnimationYOffset) - kPlayerSurfaceCenter);
 }

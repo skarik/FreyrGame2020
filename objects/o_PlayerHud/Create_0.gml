@@ -21,6 +21,7 @@ m_inventory_selectorDisengageBlend = 0.0;
 //m_book_enabled = false;
 m_book_totalBlend = 0;
 m_bag_totalBlend = 0;
+m_vendor_totalBlend = 0;
 
 playerUiInit();
 

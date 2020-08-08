@@ -21,7 +21,7 @@ if (l_name != null)
 }
 
 // TODO: If iventory doesnt exist, load from the disk
-if (l_inventory == null)
+if (l_inventory == null && l_name != null)
 {
 	// Load from disk
 }
@@ -31,7 +31,7 @@ if (l_inventory == null)
 {
 	l_inventory = inew(ob_inventoryChest);
 	l_inventory.persistent = true;
-	l_inventory.name = (l_name == null) ? inventory.name : l_name;
+	l_inventory.name = (l_name == null) ? "" : l_name;
 	
 	l_inventory.item_count = l_size;
 	l_inventory.item = itemArrayCreate(l_size);

@@ -76,6 +76,10 @@ playerUiDrawBag();
 playerUiDrawInventory();
 
 //
+// vendor
+playerUiDrawVendor();
+
+//
 // aimer
 playerUiDrawAimer();
 
@@ -88,7 +92,7 @@ playerUiDrawBook();
 	surface_reset_target();
 	surface_set_target(m_surfaceLightweight);
 
-	draw_set_alpha(max(m_bag_totalBlend, m_book_totalBlend));
+	draw_set_alpha(max(m_bag_totalBlend, m_book_totalBlend, m_vendor_totalBlend));
 	_playerUiDrawCursor();
 	draw_set_alpha(1.0);
 }

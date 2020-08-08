@@ -53,6 +53,7 @@ inDelayFrame = false;
 m_usingBook = false;
 m_usingInventory = false;
 m_currentChest = null;
+m_currentVendor = null;
 
 #macro kInteractionAttack 0 
 #macro kInteractionUse 1

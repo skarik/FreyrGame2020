@@ -1,20 +1,20 @@
 if (o_PlayerTest.m_usingInventory)
 {
-	m_bag_totalBlend = min(1.0, m_bag_totalBlend + Time.deltaTime * 3.0);
+	m_bag_totalBlend = min(1.0, m_bag_totalBlend + Time.unscaledDeltaTime * 3.0);
 }
 else
 {
-	m_bag_totalBlend = max(0.0, m_bag_totalBlend - Time.deltaTime * 3.0);
+	m_bag_totalBlend = max(0.0, m_bag_totalBlend - Time.unscaledDeltaTime * 3.0);
 }
 
 // update sbag blend
 if (m_sbag_seeds)
 {
-	m_sbag_blend = min(1.0, m_sbag_blend + Time.deltaTime * 5.0);
+	m_sbag_blend = min(1.0, m_sbag_blend + Time.unscaledDeltaTime * 5.0);
 }
 else
 {
-	m_sbag_blend = max(0.0, m_sbag_blend - Time.deltaTime * 5.0);
+	m_sbag_blend = max(0.0, m_sbag_blend - Time.unscaledDeltaTime * 5.0);
 }
 
 // update offsets

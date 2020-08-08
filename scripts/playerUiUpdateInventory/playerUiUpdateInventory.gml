@@ -5,11 +5,11 @@ var inventory = o_PlayerTest.inventory;
 	// update the selector
 	if (inventory.belt_selection == null)
 	{
-		m_inventory_selectorDisengageBlend = saturate(m_inventory_selectorDisengageBlend + Time.deltaTime * 4.0);
+		m_inventory_selectorDisengageBlend = saturate(m_inventory_selectorDisengageBlend + Time.unscaledDeltaTime * 4.0);
 	}
 	else
 	{
-		m_inventory_selectorDisengageBlend = saturate(m_inventory_selectorDisengageBlend - Time.deltaTime * 4.0);
+		m_inventory_selectorDisengageBlend = saturate(m_inventory_selectorDisengageBlend - Time.unscaledDeltaTime * 4.0);
 
 		if (m_inventory_selectorTarget != inventory.belt_selection)
 		{
@@ -31,15 +31,15 @@ var inventory = o_PlayerTest.inventory;
 		m_inventory_selectorTarget,
 		bouncestep(smoothstep(m_inventory_selectorBlend))
 		);
-	m_inventory_selectorBlend = saturate(m_inventory_selectorBlend + Time.deltaTime * 3.0);
+	m_inventory_selectorBlend = saturate(m_inventory_selectorBlend + Time.unscaledDeltaTime * 3.0);
 	
 	// Cool off the selector
-	m_inventory_selectorTimerCd -= Time.deltaTime;
+	m_inventory_selectorTimerCd -= Time.unscaledDeltaTime;
 	// Perform that blend for the blender
 	if (m_inventory_selectorTimerCd > 0.0)
-		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft + Time.deltaTime * 6.0);
+		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft + Time.unscaledDeltaTime * 6.0);
 	else
-		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft - Time.deltaTime * 2.0);
+		m_inventory_selectorBlendCruft = saturate(m_inventory_selectorBlendCruft - Time.unscaledDeltaTime * 2.0);
 		
 	// if name doesn't match, we need to swap names
 	if (inventory.belt_selection != null)
@@ -73,12 +73,12 @@ var inventory = o_PlayerTest.inventory;
 	}
 	
 	// Cool off the selector
-	m_inventory_selectorNameTimerCd -= Time.deltaTime;
+	m_inventory_selectorNameTimerCd -= Time.unscaledDeltaTime;
 	// Perform that blend for the blender
 	if (m_inventory_selectorNameTimerCd > 0.0)
-		m_inventory_selectorNameBlend = saturate(m_inventory_selectorNameBlend + Time.deltaTime * 5.0);
+		m_inventory_selectorNameBlend = saturate(m_inventory_selectorNameBlend + Time.unscaledDeltaTime * 5.0);
 	else
-		m_inventory_selectorNameBlend = saturate(m_inventory_selectorNameBlend - Time.deltaTime * 5.0);
+		m_inventory_selectorNameBlend = saturate(m_inventory_selectorNameBlend - Time.unscaledDeltaTime * 5.0);
 }
 
 // perform the mouse-over checks

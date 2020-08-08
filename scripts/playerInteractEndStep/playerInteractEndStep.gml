@@ -136,13 +136,15 @@ if (l_canMove)
 }
 
 // Update book & inventory popups - if using book or inventory then we override the CTS stop stuff.
-if (l_canMove || m_usingInventory || m_usingBook)
+if (l_canMove || m_usingInventory || m_usingBook || m_currentVendor != null)
 {
 	if (journalButton.pressed)
 	{
 		//o_PlayerHud.m_book_enabled = !o_PlayerHud.m_book_enabled; // todo: make this a cutscene menu
 		m_usingInventory = false; 
 		m_usingBook = !m_usingBook;
+		m_currentVendor = null;
+		
 		if (m_usingBook && !iexists(o_menuPlayerBook))
 			inew(o_menuPlayerBook);
 	}
@@ -150,6 +152,7 @@ if (l_canMove || m_usingInventory || m_usingBook)
 	{
 		m_usingBook = false;
 		m_usingInventory = !m_usingInventory;
+		m_currentVendor = null;
 	}
 }
 if (!m_usingInventory)
