@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "0829cafa-4409-4145-a26a-42285aa6026b",
+            "Value": {
+                "id": "ba8c4d1e-8dd3-4cc5-b418-65f6cf2383ad",
+                "resourcePath": "sprites\\s_dropMushroom\\s_dropMushroom.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0836323c-b82e-42b7-9d9c-d8488475df03",
             "Value": {
                 "id": "1dde3abf-fe18-4bf1-9132-317643466736",
@@ -804,6 +812,14 @@
                 "id": "891050e7-aa98-4c0e-9510-c47ec8d1f935",
                 "resourcePath": "scripts\\playerUiUpdateChest\\playerUiUpdateChest.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0d227416-3389-48d5-b45f-eb5d65340e5f",
+            "Value": {
+                "id": "c28d97a7-a93b-4dec-98ab-ad0a498f9c54",
+                "resourcePath": "objects\\o_collectParsnip\\o_collectParsnip.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2580,6 +2596,14 @@
                 "id": "cdd880f9-34b6-4e1b-9ee6-d3d887c35af0",
                 "resourcePath": "scripts\\_playeruiBookAlphaPulse\\_playeruiBookAlphaPulse.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "250297ad-101b-4106-9538-803146bae607",
+            "Value": {
+                "id": "0b540fd4-4c45-43a1-9c91-00ea209df0db",
+                "resourcePath": "sprites\\s_dropCoconutTree\\s_dropCoconutTree.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7844,6 +7868,14 @@
                 "id": "cc7297f3-b72e-4831-b679-9a95e5da0778",
                 "resourcePath": "scripts\\shadowOcclusionColor\\shadowOcclusionColor.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6e4a4e74-a0ba-4cba-a9af-e2f62db9d1ad",
+            "Value": {
+                "id": "10ad1d53-4fb5-4d0a-889e-2aa39f5e71a1",
+                "resourcePath": "sprites\\s_dropWildParsnip\\s_dropWildParsnip.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13495,6 +13527,14 @@
             }
         },
         {
+            "Key": "bb1c28cf-b3cd-49af-be91-30e456a1700e",
+            "Value": {
+                "id": "7e9ec80c-5300-4bce-ab38-94b2e410f21a",
+                "resourcePath": "sprites\\s_itemMushroom\\s_itemMushroom.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bb52aab2-5855-4f6c-ba5f-3b262412b960",
             "Value": {
                 "id": "446cf4ae-423c-4c33-b54e-8a01e1b7d276",
@@ -14127,6 +14167,14 @@
             }
         },
         {
+            "Key": "c483dd77-0679-4894-a07d-3ead129b67da",
+            "Value": {
+                "id": "350e0ea6-f7e1-4728-b4e4-26fc2ead1575",
+                "resourcePath": "objects\\o_pickupItem_Mushroom\\o_pickupItem_Mushroom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c490141b-fe8e-4068-8aff-aa8c6e64ff91",
             "Value": {
                 "id": "2f41f240-2cf6-47b4-b5fd-6a7306bf5b9c",
@@ -14468,6 +14516,14 @@
                 "id": "6fb822d0-326b-4dc2-bef1-9ac5b57b7939",
                 "resourcePath": "scripts\\camPlayerDrawDebug\\camPlayerDrawDebug.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c81441d5-ea4f-4667-9804-0eda1318aad1",
+            "Value": {
+                "id": "c66eaadb-ce5d-4dfc-8646-c6496db0d19e",
+                "resourcePath": "objects\\o_collectMushroom\\o_collectMushroom.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -16431,6 +16487,14 @@
             }
         },
         {
+            "Key": "e2ae1933-d403-40d8-b0c0-2dfdab650dde",
+            "Value": {
+                "id": "1717f6fb-270c-4677-af7c-ecc33aacae2b",
+                "resourcePath": "objects\\o_collectCoconut\\o_collectCoconut.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e2bfaf36-8f41-4324-ba25-9511775a7ad3",
             "Value": {
                 "id": "1dd6e3f4-cdcf-48ae-b3ca-e7387babef6f",
@@ -17999,6 +18063,14 @@
             }
         },
         {
+            "Key": "f872a7eb-a79c-4d5b-bcf9-89e37f780a80",
+            "Value": {
+                "id": "3de30c70-f93c-454e-a5c8-6eeca82823d8",
+                "resourcePath": "objects\\o_pickupItem_Coconut\\o_pickupItem_Coconut.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f88ac528-e68c-4322-9c8b-dd4a76715d3d",
             "Value": {
                 "id": "800aa0d7-4a52-4d69-bb00-39283aaa901f",
@@ -18124,6 +18196,14 @@
                 "id": "136500f4-b4d2-4085-9814-4879137d45ac",
                 "resourcePath": "scripts\\_settingsControlLoadArray\\_settingsControlLoadArray.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f98a0edc-d7bd-452d-9867-edd8117b6dbe",
+            "Value": {
+                "id": "85edd759-9b31-4eb5-9080-99a51e1de510",
+                "resourcePath": "sprites\\s_itemCoconut\\s_itemCoconut.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
