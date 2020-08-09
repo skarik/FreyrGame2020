@@ -10,7 +10,8 @@
         "4a2931d4-830c-442b-83ed-6c4c08ce700d",
         "af58a970-9633-42eb-8093-43577b293ff2",
         "61d13f4d-f6fb-4c75-afd2-32cc02f1667b",
-        "1fb99de3-1107-4238-b0e3-9b7c313c0669"
+        "1fb99de3-1107-4238-b0e3-9b7c313c0669",
+        "6a380808-861b-4ec2-a0d9-3786dadd3caf"
     ],
     "filterType": "GMSprite",
     "folderName": "miscelleneous",

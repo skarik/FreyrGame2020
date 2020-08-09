@@ -35,17 +35,24 @@ var panel_y;
 
 // player on left
 panel_x = dx - 140;
-panel_y = dy;
-draw_rectangle(panel_x - 50, panel_y + 20, panel_x + 50, panel_y + 320, false);
+panel_y = dy + 50;
+_playeruiVendorDrawItemBox(panel_x, panel_y, 100, 150, 4, 6, 1.0, m_player.inventory.bag, m_boxgs_player, m_boxds_player);
 
 // vendor on right
 panel_x = dx + 140;
-panel_y = dy;
-draw_rectangle(panel_x - 50, panel_y + 20, panel_x + 50, panel_y + 320, false);
+panel_y = dy + 50;
+_playeruiVendorDrawItemBox(panel_x, panel_y, 100, 150, 4, 6, 1.0, m_vendor.m_inventory.item, m_boxgs_vendor, m_boxds_vendor);
 
-// center
+// center (give & take)
 panel_x = dx;
-panel_y = dy;
-draw_rectangle(panel_x - 30, panel_y + 120, panel_x + 30, panel_y + 200, false);
+panel_y = dy + GameCamera.height / 2 - 50;
+_playeruiVendorDrawItemBox(panel_x, panel_y - 60, 100, 100, 4, 4, 1.0, null, m_boxgs_rx, m_boxds_rx);
+_playeruiVendorDrawItemBox(panel_x, panel_y + 60, 100, 100, 4, 4, 1.0, null, m_boxgs_tx, m_boxds_tx);
+
+
+_playeruiVendorDrawItemBoxOverlay(m_player.inventory.bag, m_boxgs_player, m_boxds_player);
+_playeruiVendorDrawItemBoxOverlay(m_vendor.m_inventory.item, m_boxgs_vendor, m_boxds_vendor);
+_playeruiVendorDrawItemBoxOverlay(null, m_boxgs_rx, m_boxds_rx);
+_playeruiVendorDrawItemBoxOverlay(null, m_boxgs_tx, m_boxds_tx);
 
 gpu_set_blendmode(bm_normal);

@@ -31,5 +31,10 @@ else
 // Only do logic if book is front and center
 if (m_player.m_currentVendor != null || m_totalBlend == 1.0)
 {
+	_playeruiVendorStepItemBox(m_boxgs_player, m_boxds_player);
+	_playeruiVendorStepItemBox(m_boxgs_vendor, m_boxds_vendor);
+	_playeruiVendorStepItemBox(m_boxgs_rx, m_boxds_rx);
+	_playeruiVendorStepItemBox(m_boxgs_tx, m_boxds_tx);
 	
+	// TODO: click selection needs to consider all states together
 }

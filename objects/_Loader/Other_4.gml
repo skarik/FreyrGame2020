@@ -26,6 +26,8 @@ Settings.layer = System.layer;
 
 // Load fonts
 fontsLoad();
+// Load global shaders
+shadersGlobalLoad();
 
 // Load soundscales
 soundscapesLoad();
