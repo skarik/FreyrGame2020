@@ -28,7 +28,8 @@
         "d055bd6e-5d5c-4572-a84e-8824795c4c2a",
         "1d9aa2ed-d975-4cfe-89d9-25cdd34f080e",
         "c13e1feb-1196-4e82-a53e-d06ef9375451",
-        "d7622698-9db9-4649-ab48-bbc84b7610c8"
+        "d7622698-9db9-4649-ab48-bbc84b7610c8",
+        "e52ef91a-04cb-4cd0-9aee-7c50c87766f1"
     ],
     "filterType": "GMSprite",
     "folderName": "oasis",

@@ -8559,6 +8559,14 @@
             }
         },
         {
+            "Key": "770c4e9f-6ec7-4cce-837c-d96cae4b38b7",
+            "Value": {
+                "id": "904911c2-f985-453f-a07f-71869717caf4",
+                "resourcePath": "objects\\o_pickupCons_MedLeaf\\o_pickupCons_MedLeaf.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "771e6200-e426-4443-a83a-404958fbdb48",
             "Value": {
                 "id": "c6405438-d87c-4caf-92fd-d5c47998e33b",
@@ -13615,6 +13623,14 @@
             }
         },
         {
+            "Key": "bc673227-a4cb-4c3d-8ab7-7ae1dea3b8fe",
+            "Value": {
+                "id": "18d20c30-4a2a-4489-aa2f-9b4aa1c06df6",
+                "resourcePath": "sprites\\s_itemConsMedicinalLeaf\\s_itemConsMedicinalLeaf.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bca44c75-2ce1-44e6-b49c-5dc8c8d119cf",
             "Value": {
                 "id": "bcca1ce6-08fb-4882-a811-2d8bbff03500",
@@ -16727,6 +16743,14 @@
             }
         },
         {
+            "Key": "e52ef91a-04cb-4cd0-9aee-7c50c87766f1",
+            "Value": {
+                "id": "c521c53f-c562-4f15-b625-e3cb1e6a029c",
+                "resourcePath": "sprites\\s_dropMedPlant\\s_dropMedPlant.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e531b53b-7897-4de5-a1e9-3f5be645ee8b",
             "Value": {
                 "id": "1ec7693b-c979-444b-aeff-6d2b26cfdf72",
@@ -17876,6 +17900,14 @@
                 "id": "13185024-cc6c-47eb-bfc9-ad0a120db05e",
                 "resourcePath": "views\\f5b01780-4253-4b96-948b-655495dd10b3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f5b29495-05f6-4f8d-aabb-dcf94ae6b44f",
+            "Value": {
+                "id": "06b1bd00-cf76-4646-8633-9c3cec3a49d5",
+                "resourcePath": "objects\\o_collectScallop1\\o_collectScallop1.yy",
+                "resourceType": "GMObject"
             }
         },
         {

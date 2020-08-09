@@ -26,6 +26,10 @@ if (_itemIsSelected && _itemUiCategory == kItemUiCategoryBelt)
 			l_drawHealth = true;
 			l_healthValue = 2;
 			break;
+		case o_pickupCons_MedLeaf:
+			l_drawHealth = true;
+			l_healthValue = 5;
+			break;
 		case o_pickupCons_Nuts:
 			l_drawHealth = true;
 			l_healthValue = 2;
