@@ -8,7 +8,8 @@
         "5a6102e3-969d-4e61-a4ac-693fe56e5878",
         "e2ae1933-d403-40d8-b0c0-2dfdab650dde",
         "0d227416-3389-48d5-b45f-eb5d65340e5f",
-        "c81441d5-ea4f-4667-9804-0eda1318aad1"
+        "c81441d5-ea4f-4667-9804-0eda1318aad1",
+        "3db582ea-2802-4334-8254-a0333a4713d9"
     ],
     "filterType": "GMObject",
     "folderName": "Harvestable",

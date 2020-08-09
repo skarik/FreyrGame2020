@@ -4503,6 +4503,14 @@
             }
         },
         {
+            "Key": "3db582ea-2802-4334-8254-a0333a4713d9",
+            "Value": {
+                "id": "3b9716f1-256c-45eb-bedc-b5ab922ca194",
+                "resourcePath": "objects\\o_collectScallop\\o_collectScallop.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3dc47a51-fd6d-43de-a6e7-1348090a593a",
             "Value": {
                 "id": "0f047895-c603-457c-af04-42d36aef323b",
@@ -5471,6 +5479,14 @@
             }
         },
         {
+            "Key": "4b17c88b-6054-42c8-9fce-e54606b570ec",
+            "Value": {
+                "id": "2a8cb675-5271-4080-a641-c1378ad4107b",
+                "resourcePath": "objects\\o_pickupItem_Scallop\\o_pickupItem_Scallop.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4b18a309-8763-417f-93c6-9f6de32aa878",
             "Value": {
                 "id": "dc7eeb54-d737-4b03-96c6-9e701c3160e4",
@@ -5660,6 +5676,14 @@
                 "id": "38c3fd66-299e-4d4e-a347-c500f3068e66",
                 "resourcePath": "scripts\\collision3_get_highest_meeting\\collision3_get_highest_meeting.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4df1ff3b-0b9d-4450-a873-09c482170a75",
+            "Value": {
+                "id": "c3f40282-24ba-4aea-b1b7-16a972cc5999",
+                "resourcePath": "sprites\\s_itemScallop\\s_itemScallop.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -18484,6 +18508,14 @@
                 "id": "69950f7b-6419-490e-940d-1bf675c715a3",
                 "resourcePath": "sounds\\snd_physStepWater1\\snd_physStepWater1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "fc3fca31-ebc3-40e7-abb8-e9ec872ae1d6",
+            "Value": {
+                "id": "e6a28bd8-3092-466b-b183-04957a3d4729",
+                "resourcePath": "sprites\\s_dropScallop\\s_dropScallop.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
