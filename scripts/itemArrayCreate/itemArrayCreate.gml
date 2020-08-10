@@ -1,3 +1,6 @@
+/// @function itemArrayCreate(length)
+/// @param length
+
 var itemArrayLength = argument0;
 
 var array = array_create(itemArrayLength);

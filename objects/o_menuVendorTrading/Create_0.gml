@@ -32,6 +32,9 @@ m_boxds_rx = ds_map_create();
 m_boxgs_tx = ds_map_create_copy(base_gs_struct);
 m_boxds_tx = ds_map_create();
 
+m_itemarray_rx = itemArrayCreate(16);
+m_itemarray_tx = itemArrayCreate(16);
+
 //m_main_selection = null;
 //m_main_hover = null;
 /*

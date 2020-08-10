@@ -53,7 +53,7 @@ for (var i_itemRow = 0; i_itemRow < l_itemRowCount; ++i_itemRow)
 	{
 		var i_itemIndex = i_itemRow * item_count_x + i_itemEntry;
 		
-		var ditemx = dxcenter - dhalfwidth + l_itemSpacingX * i_itemEntry + 1 + l_itemOffsetX;
+		var ditemx = floor(dxcenter - dhalfwidth + l_itemSpacingX * i_itemEntry + 1 + l_itemOffsetX);
 		var ditemy = dytop + l_itemSpacingY * i_itemRow + 2;
 	
 		// store draw position in caller

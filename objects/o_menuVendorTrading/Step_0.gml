@@ -37,4 +37,6 @@ if (m_player.m_currentVendor != null || m_totalBlend == 1.0)
 	_playeruiVendorStepItemBox(m_boxgs_tx, m_boxds_tx);
 	
 	// TODO: click selection needs to consider all states together
+	_playeruiVendorStepItemBoxGlobal([m_boxgs_player, m_boxgs_vendor, m_boxgs_rx, m_boxgs_tx],
+									 [m_boxds_player, m_boxds_vendor, m_boxds_rx, m_boxds_tx]);
 }
