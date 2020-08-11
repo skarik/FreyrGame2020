@@ -35,6 +35,18 @@ m_boxds_tx = ds_map_create();
 m_itemarray_rx = itemArrayCreate(16);
 m_itemarray_tx = itemArrayCreate(16);
 
+// button ui states
+m_buttongs = ds_map_create_copy(base_gs_struct);
+m_buttonds = ds_map_create();
+
+enum VendorButtons {
+	Trade = 0,
+	ClearGive = 1,
+	ClearGet = 2,
+	Leave = 3,
+	
+	COUNT = 4
+}
 //m_main_selection = null;
 //m_main_hover = null;
 /*

@@ -28,16 +28,31 @@ if (dalignment == fa_left)
 	for (var i = 1; i <= l_renderStringLength; ++i)
 	{
 		var l_character = string_char_at(l_renderString, i);
+		
 		draw_text(dx + l_penX, dy + l_penY, l_character);
 		l_penX += ceil(string_width(l_character) + l_pixelLetterPadding);
 		
 		if (is_space(l_character))
 		{
-			if (l_penX > dwrapwidth) // TODO: wrap on words
+			// Look ahead at next word to make sure not going to go over the limit
+			var l_virtualPenX = l_penX;
+			for (var j = i + 1; j < l_renderStringLength; ++j)
 			{
-				l_penY += l_pixelHeight;
-				l_penX = 0;
+				var l_nextCharacter = string_char_at(l_renderString, j);
+				l_virtualPenX += ceil(string_width(l_nextCharacter) + l_pixelLetterPadding);
+				
+				if (l_virtualPenX > dwrapwidth)
+				{
+					l_penY += l_pixelHeight;
+					l_penX = 0;
+					break;
+				}
+				else if (is_space(l_nextCharacter))
+				{
+					break;
+				}
 			}
+			// Let's continue
 		}
 	}
 }

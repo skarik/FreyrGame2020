@@ -194,43 +194,16 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 			}
 		}
 		
-		// draw the item we're hovering over
+		// draw the item info we're hovering over
 		if (m_bag_hover != null)
 		{
 			var item = bag[m_bag_hover];
 			if (item.object != null)
 			{
 				var offset = m_bag_offsets[m_bag_hover];
-				var dix = offset[0] - sprite_get_xoffset(sui_inventory_bag_0) - 5;
+				var dix = -sprite_get_xoffset(sui_inventory_mainbag_0) + sprite_get_width(sui_inventory_mainbag_0);//offset[0] - sprite_get_xoffset(sui_inventory_mainbag_0) - 5;
 				var diy = offset[1] - 5;
-				var dw = 76;
-				
-				draw_sprite_part(sui_choiceBox3, 0, 0,0,dw,20,			dx + dix + 30,		dy + diy);
-				draw_sprite_part(sui_choiceBox3, 0, 250-dw,0,dw,20,		dx + dix + 30 + dw,	dy + diy);
-				draw_sprite_part(sui_choiceBox3, 1, 0,0,dw,20,			dx + dix + 30,		dy + diy + 20);
-				draw_sprite_part(sui_choiceBox3, 1, 250-dw,0,dw,20,		dx + dix + 30 + dw,	dy + diy + 20);
-				draw_sprite_part(sui_choiceBox3, 1, 0,0,dw,20,			dx + dix + 30,		dy + diy + 40);
-				draw_sprite_part(sui_choiceBox3, 1, 250-dw,0,dw,20,		dx + dix + 30 + dw,	dy + diy + 40);
-				draw_sprite_part(sui_choiceBox3, 2, 0,0,dw,20,			dx + dix + 30,		dy + diy + 60);
-				draw_sprite_part(sui_choiceBox3, 2, 250-dw,0,dw,20,		dx + dix + 30 + dw,	dy + diy + 60);
-				
-				// Draw item name & info as well
-				draw_set_font(global.font_arvo8);
-				draw_set_halign(fa_left);
-				draw_set_valign(fa_top);
-				draw_set_color(c_gold);
-				draw_text_spaced(dx + dix + 36 + 1, dy + diy + 4 + 1, item.name, 2);
-				draw_set_color(c_black);
-				draw_text_spaced(dx + dix + 36, dy + diy + 4, item.name, 2);
-				
-				//
-				var temp_item = inew(item.object);
-				draw_set_font(global.font_arvo7);
-				draw_set_color(c_gold);
-				draw_text_spaced_wrap(dx + dix + 36 + 1, dy + diy + 19 + 1, temp_item.m_description, 2, dw * 2 - 11 * 3);
-				draw_set_color(c_black);
-				draw_text_spaced_wrap(dx + dix + 36, dy + diy + 19, temp_item.m_description, 2, dw * 2 - 11 * 3);
-				idelete(temp_item);
+				_playeruiDrawItemInfoBox(item, dx + dix, dy + diy);
 			}
 		}
 	}
@@ -306,24 +279,18 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 				gpu_set_blendmode(bm_normal);
 			}
 		}
+		
+		// draw the item info we're hovering over
+		if (m_seed_hover != null)
+		{
+			var item = seed[m_seed_hover];
+			if (item.object != null)
+			{
+				var offset = m_seed_offsets[m_seed_hover];
+				var dix = -sprite_get_xoffset(sui_inventory_seedbag_0) + sprite_get_width(sui_inventory_seedbag_0); //offset[0] + 20 - 5;
+				var diy = offset[1] - 5;
+				_playeruiDrawItemInfoBox(item, dx + dix, dy + diy);
+			}
+		}
 	}
 }
-
-/*
-draw_sprite(sui_bookElements, 0, dx + 40, dy + 4);
-draw_sprite(sui_bookElements, 0, dx + 61, dy + 9);
-draw_sprite(sui_bookElements, 0, dx + 82, dy + 7);
-
-draw_sprite(sui_bookPages, 1, dx, dy);*/
-
-/*
-draw_set_halign(fa_left);
-draw_set_valign(fa_bottom);
-draw_set_color(c_black);
-draw_set_alpha(1.0);
-draw_set_font(f_josefinSlab9);
-
-draw_text(dx + 24, dy + 30, "I should make camp.");
-draw_text(dx + 24, dy + 50, "Time for a journal entry.");
-draw_text(dx + 24, dy + 70, "Options");
-draw_text(dx + 24, dy + 90, "Quicksave and Quit");*/

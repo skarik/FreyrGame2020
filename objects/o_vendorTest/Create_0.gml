@@ -14,4 +14,4 @@ m_airFriction = 100;
 
 #endregion
 
-m_inventory = inventoryCreateOrLoad(null, 23);
+m_inventory = inventoryCreateOrLoad(null, 24);
