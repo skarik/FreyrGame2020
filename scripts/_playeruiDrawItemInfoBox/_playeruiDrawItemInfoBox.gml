@@ -30,9 +30,12 @@ if (item != null)
 	var title_width = draw_text_spaced(dix + 6, diy + 4, item.name, 2);
 	
 	// Draw item count after the name
-	draw_set_font(global.font_arvo7);
-	draw_set_color(c_dkgray);
-	draw_text_spaced(dix + 6 + title_width + 6, diy + 4 + 2, "x" + string(item.count), 2);
+	/*if (item.count != kCountPositiveInfinite)
+	{
+		draw_set_font(global.font_arvo7);
+		draw_set_color(c_dkgray);
+		draw_text_spaced(dix + 6 + title_width + 6, diy + 4 + 2, "x" + string(item.count), 2);
+	}*/
 	
 	// Create temp item to get the additional information
 	var temp_item = inew(item.object);
@@ -54,14 +57,6 @@ if (item != null)
 		draw_set_color(c_gray);
 		if (temp_item.m_flags & kItemFlagsConsumable)
 		{
-			/*
-			var _itemType = argument0;
-			var _itemDx = argument1;
-			var _itemDy = argument2;
-			var _itemDalpha = argument3;
-			var _itemIsSelected = argument4;
-			var _itemUiCategory = argument5;
-			*/
 			script_execute(item.onUi, // Following are arguments for onUi
 						   item.object,
 						   //dx + dspace * i + 15, dy + 15 + y_offset,
@@ -84,11 +79,12 @@ if (item != null)
 		{
 			draw_text_spaced(dix + 6, diy + 19, "Can Plant", 2);
 		}
-		else
+		else // Default case of unclassified item
 		{
 			draw_text_spaced(dix + 6, diy + 19, "Todo", 2);
 		}
 	}
+	draw_set_valign(fa_top);
 	
 	//
 	// draw trade info
@@ -124,19 +120,23 @@ if (item != null)
 		if (value != -1 && value_item != null)
 		{
 			// Draw the value & the value measurement in the corner
-			draw_sprite(object_get_sprite(value_item), 0, dix + dw * 2.0 - 20, diy + 10);
 			draw_set_font(c_uigold);
 			draw_set_font(global.font_arvo7);
 			draw_set_color(c_dkgray);
 			var str_value = string_ltrim(string_format(value, 3, 1));
+			var str_width = 0;
 			if (string_char_at(str_value, string_length(str_value)) == "0")
 			{
-				draw_text_spaced(dix + dw * 2.0 - 14, diy + 6, string(round(value)), 2);
+				str_value = string(round(value));
+				str_width = string_width(str_value) * 2;
+				draw_text_spaced(dix + dw * 2.0 - 4 - str_width, diy + 4, str_value, 2);
 			}
 			else
 			{
-				draw_text_spaced(dix + dw * 2.0 - 14, diy + 6, str_value, 2);
+				str_width = string_width(str_value) * 2;
+				draw_text_spaced(dix + dw * 2.0 - 4 - str_width, diy + 4, str_value, 2);
 			}
+			draw_sprite(object_get_sprite(value_item), 0, dix + dw * 2.0 - 10 - str_width, diy + 10);
 		}
 	}
 	// end draw trade info

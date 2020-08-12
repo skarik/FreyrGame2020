@@ -45,6 +45,9 @@ draw_set_alpha(1.0);
 			// Run UI script
 			if (inventory.belt[i].onUi != itemNullUiScript)
 			{
+				surface_reset_target();
+				surface_set_target(m_surface); // Go to heavy outline surface for a moment
+				
 				var is_hovered = (i == m_belt_hover) || (i == m_belt_selection);
 				var y_offset = -8.0 * saturate(1.5 - abs(i - m_inventory_selector) * 2.0);
 				script_execute(inventory.belt[i].onUi, // Following are arguments for onUi
@@ -54,6 +57,9 @@ draw_set_alpha(1.0);
 							   (i == inventory.belt_selection) || is_hovered, 
 							   kItemUiCategoryBelt);
 				draw_set_alpha(1.0);
+				
+				surface_reset_target();
+				surface_set_target(m_surfaceLightweight); // Back to lightweight again
 			}
 		}
 		/*if (inventory.belt[i].type == kItemPickupSeed)

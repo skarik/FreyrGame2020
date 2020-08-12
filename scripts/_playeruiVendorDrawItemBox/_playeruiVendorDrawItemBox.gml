@@ -96,11 +96,14 @@ for (var i_itemRow = 0; i_itemRow < l_itemRowCount; ++i_itemRow)
 			{
 				draw_sprite_ext(object_get_sprite(item.object), 0, ditemx + 11 * item_scale, ditemy + 11 * item_scale, item_scale, item_scale, 0.0, c_white, 1.0);
 				
-				draw_set_color(c_white);
-				draw_set_font(f_04b03);
-				draw_set_halign(fa_right);
-				draw_set_valign(fa_bottom);
-				draw_text(ditemx + 21, ditemy + 22, string(item.count));
+				if (item.count != kCountPositiveInfinite)
+				{
+					draw_set_color(c_white);
+					draw_set_font(f_04b03);
+					draw_set_halign(fa_right);
+					draw_set_valign(fa_bottom);
+					draw_text(ditemx + 21, ditemy + 22, string(item.count));
+				}
 			}
 		}
 		

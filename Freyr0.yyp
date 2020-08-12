@@ -12511,6 +12511,14 @@
             }
         },
         {
+            "Key": "aba052f5-8867-4157-a088-3d75e8c0f304",
+            "Value": {
+                "id": "4dcebd3d-4b5a-4a8f-aa99-769e61099b39",
+                "resourcePath": "sprites\\sui_statIcons\\sui_statIcons.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "aba58267-7e80-4b7b-a3f7-9eeebcb2ac4c",
             "Value": {
                 "id": "dabd4de7-89e9-4082-b653-4157330aeacd",
@@ -17956,6 +17964,14 @@
                 "id": "fbdba15b-ff17-4780-b35d-d287107212ba",
                 "resourcePath": "objects\\o_potEnergyPlug\\o_potEnergyPlug.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f274a5d2-e0a2-4d0b-af7c-200410dde3cb",
+            "Value": {
+                "id": "afe04b79-6b51-4770-b676-5aa21a216d02",
+                "resourcePath": "sprites\\sui_willdiamond\\sui_willdiamond.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
