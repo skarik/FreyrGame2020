@@ -11,7 +11,8 @@
         "24dac189-e16f-4269-a8c0-eb0ccd7ca851",
         "027d0818-fc7e-4ec8-89f5-5f219725e63e",
         "0fbd6fd1-d524-471b-9f83-41396dd7cc4b",
-        "66f98218-c988-4946-ba20-a0441f7f255c"
+        "66f98218-c988-4946-ba20-a0441f7f255c",
+        "0829cafa-4409-4145-a26a-42285aa6026b"
     ],
     "filterType": "GMSprite",
     "folderName": "oasis cave",

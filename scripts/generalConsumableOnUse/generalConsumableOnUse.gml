@@ -9,6 +9,11 @@ case o_pickupCons_Berries:
 	stats.m_health += 2;
 	_playerInteractItemDecrementBelt();
 	break;
+	
+case o_pickupCons_MedLeaf:
+	stats.m_health += 5;
+	_playerInteractItemDecrementBelt();
+	break;
 
 case o_pickupCons_Meats:
 	stats.m_health += 3;
