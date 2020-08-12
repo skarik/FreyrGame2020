@@ -1,5 +1,6 @@
 #macro kItemUiCategoryBelt 0
 #macro kItemUiCategoryBag 1
+#macro kItemUiCategoryInspect 2
 
 var _itemType = argument0;
 var _itemDx = argument1;

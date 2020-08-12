@@ -3,7 +3,8 @@ event_inherited();
 
 m_name           = "Cabbage";
 m_maxStack       = 10;
-m_description   = "Green, leafy and not a child.";
+m_description   = "Green, leafy, and not a child.";
 m_onUseScript    = generalYeetableOnUse;
 m_checkUseScript = nullScript;
-m_tradeItem		 = [o_pickupRes_Bolt, 5];
+m_tradeItem		 = [o_pickupRes_Bolt, 1.2];
+m_worthInGears   = 1.2;

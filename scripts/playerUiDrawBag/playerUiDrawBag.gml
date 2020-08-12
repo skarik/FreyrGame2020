@@ -152,7 +152,7 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 				draw_set_font(f_04b03);
 				draw_set_halign(fa_right);
 				draw_set_valign(fa_bottom);
-				draw_text(dx + dix + 25, dy + diy + 25, string(item.count));
+				draw_text(dx + dix + 25, dy + diy + 26, string(item.count));
 				
 				// Run UI script
 				if (item.onUi != itemNullUiScript)
@@ -238,7 +238,7 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 				draw_set_font(f_04b03);
 				draw_set_halign(fa_right);
 				draw_set_valign(fa_bottom);
-				draw_text(dx + dix + 25, dy + diy + 25, string(item.count));
+				draw_text(dx + dix + 25, dy + diy + 26, string(item.count));
 				
 				// Run UI script
 				if (item.onUi != itemNullUiScript)

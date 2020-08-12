@@ -5,3 +5,4 @@ m_name           = "Void Shard";
 m_description   = "Emits an unsettling hum."
 m_maxStack       = 999;
 m_type           = kItemPickupResource;
+m_worthInGears   = 20;

@@ -40,7 +40,7 @@ draw_set_alpha(1.0);
 			draw_set_font(f_04b03);
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_bottom);
-			draw_text(dx + dspace * i + 25, dy + 25, string(inventory.belt[i].count));
+			draw_text(dx + dspace * i + 25, dy + 26, string(inventory.belt[i].count));
 			
 			// Run UI script
 			if (inventory.belt[i].onUi != itemNullUiScript)

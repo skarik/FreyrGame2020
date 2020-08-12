@@ -8,7 +8,9 @@ event_inherited();
 
 m_name          = "Tea Cigar";
 m_description   = "Tea Cigar!"
+m_flags         = kItemFlagsConsumable;
 m_maxStack      = 10;
 m_type          = kItemPickupNormal;
 m_onUiScript    = generalConsumableOnUi;
 m_onUseScript   = generalConsumableOnUse;
+m_worthInGears  = 2;

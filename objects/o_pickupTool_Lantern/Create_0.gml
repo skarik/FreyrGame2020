@@ -2,6 +2,7 @@
 event_inherited();
 
 m_name           = "Lantern";
+m_description	 = "An ornate lantern, lit by glowing grubs. Stolen from Fool's Tower.";
 m_maxStack       = 1;
 m_type           = kItemPickupTool;
 

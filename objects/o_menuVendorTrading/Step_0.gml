@@ -84,5 +84,13 @@ if (m_player.m_currentVendor != null || m_totalBlend == 1.0)
 		{
 			m_player.m_currentVendor = null; // Clear out vendor to close the UI
 		}
+		if (m_buttongs[?"hover"] == VendorButtons.ClearGive)
+		{
+			vendorKickItemsBackTo(m_itemarray_tx, m_player.inventory.bag, true);
+		}
+		if (m_buttongs[?"hover"] == VendorButtons.ClearGet)
+		{
+			vendorKickItemsBackTo(m_itemarray_rx, m_vendor.m_inventory.item, false);
+		}
 	}
 }

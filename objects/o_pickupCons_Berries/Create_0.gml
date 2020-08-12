@@ -3,7 +3,9 @@ event_inherited();
 
 m_name          = "Berries";
 m_description   = "Some suspicious-looking berries. They're fragrant.";
+m_flags         = kItemFlagsConsumable;
 m_maxStack      = 10;
 m_type          = kItemPickupNormal;
 m_onUiScript    = generalConsumableOnUi;
 m_onUseScript   = generalConsumableOnUse;
+m_worthInGears  = 2;

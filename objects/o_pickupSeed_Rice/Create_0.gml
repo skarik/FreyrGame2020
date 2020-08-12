@@ -8,5 +8,6 @@ m_onUseScript    = generalSeedOnUse;
 m_checkUseScript = plantableWaterCheckUse;
 m_onDepleteScript= plantableOnDeplete;
 m_type           = kItemPickupSeed;
+m_worthInGears   = 1 / 3;
 m_userInfo       = o_cropRice;
 m_userInfoString = object_get_name(m_userInfo);

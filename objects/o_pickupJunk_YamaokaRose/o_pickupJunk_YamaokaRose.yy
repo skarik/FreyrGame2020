@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_pickupJunk_YamaokaRose",
     "eventList": [
-        
+        {
+            "id": "84161421-d6ae-4b65-82fe-2215f469d472",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "5c678883-8e8f-4fc0-894f-1e428f86adc4"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

@@ -1591,6 +1591,14 @@
             }
         },
         {
+            "Key": "16b88149-8f66-4682-8844-597e7d947f06",
+            "Value": {
+                "id": "5c2481ec-7a53-47c3-83c2-de5b57ca6856",
+                "resourcePath": "views\\16b88149-8f66-4682-8844-597e7d947f06.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "16e1c640-37b6-433d-a9e7-50fadaf98a5f",
             "Value": {
                 "id": "395cec60-e7f1-447a-98a8-d0558d98727d",
@@ -8687,6 +8695,14 @@
             }
         },
         {
+            "Key": "7944eb20-cd40-46d8-a11b-b9c8f9736416",
+            "Value": {
+                "id": "cf3ab324-5d98-4bd0-b308-f22db1bf43be",
+                "resourcePath": "scripts\\itemEntryInstantiate\\itemEntryInstantiate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "794549f3-56a7-4437-97e4-fd1c31177945",
             "Value": {
                 "id": "b2324912-dd21-49a7-b040-105bfb53f33c",
@@ -9260,6 +9276,14 @@
                 "id": "e0155083-1577-46cd-bd65-d00207cac4c5",
                 "resourcePath": "sprites\\sce0_32x32\\sce0_32x32.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "81bb5700-23d8-41f4-8d57-7d5443c071e5",
+            "Value": {
+                "id": "3ae59e4f-da78-411b-96eb-dac94cecec4b",
+                "resourcePath": "scripts\\vendorKickItemsBackTo\\vendorKickItemsBackTo.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -13551,6 +13575,14 @@
             }
         },
         {
+            "Key": "b9169073-1b94-45c1-a6a1-2c6e06da8d51",
+            "Value": {
+                "id": "85b183e9-74d5-4680-b729-7cc5b0c65ebc",
+                "resourcePath": "scripts\\itemExchangeRates\\itemExchangeRates.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b93d2161-18c4-48bb-b97b-321249e8326a",
             "Value": {
                 "id": "5090b820-5355-45fd-9d3e-4d17313de857",
@@ -13908,6 +13940,14 @@
                 "id": "a3f706ad-e52f-48b7-ab77-34fcf2414159",
                 "resourcePath": "objects\\o_livelyDoodadTowerWire\\o_livelyDoodadTowerWire.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bfa526da-332a-4522-8173-063f0f868560",
+            "Value": {
+                "id": "a08b3fcd-b4a7-4a62-96eb-6066bfe0f85e",
+                "resourcePath": "scripts\\vendorCanTradeItem\\vendorCanTradeItem.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -19314,6 +19354,8 @@
         "863ae25a-0303-476b-ba04-eeebbb1abd70",
         "1c10ed74-ba8a-45e2-b108-1149b2c6f376",
         "131fb646-b512-45c6-b286-472aee7c79fd",
+        "bfa526da-332a-4522-8173-063f0f868560",
+        "81bb5700-23d8-41f4-8d57-7d5443c071e5",
         "99e43396-3d99-4d62-aade-e2ec05864499",
         "1bc21baf-763e-44fa-819f-6a33bbdbcb66",
         "d78c29c8-7589-42c0-a602-1dd96f43e13d",
@@ -19325,6 +19367,7 @@
         "9b5ebd36-5e2f-4833-94e3-375a22376bdc",
         "afb63600-6089-4b30-921e-58c9b64b7610",
         "8e8cbe4a-e58c-4412-aabc-08bfd9302147",
+        "7944eb20-cd40-46d8-a11b-b9c8f9736416",
         "3f9bade9-93fd-465e-b6e9-622671ebc991",
         "db203fe2-0b6f-4715-b000-ed1864603b95",
         "3cb04a92-da55-4d45-8018-a6541b7e8e54",
@@ -19338,6 +19381,7 @@
         "595d7641-71d1-4347-bfcb-487e043bf839",
         "6f8c02a7-fe29-4a20-95f4-82ca3e686d7b",
         "13555fd4-a744-4528-9d3b-2b18406e5d6c",
+        "b9169073-1b94-45c1-a6a1-2c6e06da8d51",
         "22921097-4ccf-43b6-93b1-e115e4d7554c",
         "b4af498e-e3a8-40b0-a41d-fd241200c90b",
         "4d409182-c3d1-45d1-8ede-72161fbb8f69",
