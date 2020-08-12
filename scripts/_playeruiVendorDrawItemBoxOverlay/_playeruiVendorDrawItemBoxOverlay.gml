@@ -20,6 +20,9 @@ if (!is_undefined(inout_box_state[?"hover"]) && inout_box_state[?"hover"] != nul
 		var offset = inout_box_draw_state[?inout_box_state[?"hover"]];
 		var dix = offset[0] + (kBaseItemSpacing + 2) * inout_box_draw_state[?"scale"];
 		var diy = offset[1] + 0;
-		_playeruiDrawItemInfoBox(item, dix, diy);
+		if (dix < GameCamera.width / 2.0)
+			_playeruiDrawItemInfoBox(item, dix, diy, m_tradeBasis);
+		else
+			_playeruiDrawItemInfoBox(item, dix - 86 * 2 - 24, diy, m_tradeBasis);
 	}
 }

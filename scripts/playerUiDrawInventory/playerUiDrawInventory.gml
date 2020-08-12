@@ -110,6 +110,20 @@ draw_set_alpha(1.0);
 	//draw_text_spaced(dx + 4 - 100.0 * smoothstep(1.0 - m_inventory_selectorNameBlend), dy - 25,
 	draw_text_spaced(dx + 4, dy - 25 - 4 * smoothstep(1.0 - m_inventory_selectorNameBlend),
 					 m_inventory_selectorName, 3);
+					 
+	// while on the outlined UI, draw the heavy ui info
+	if (m_bag_totalBlend > 0.95)
+	{
+		if (m_belt_hover != null)
+		{
+			var item = inventory.belt[m_belt_hover];
+			if (item.object != null)
+			{
+				draw_set_alpha(1.0);
+				_playeruiDrawItemInfoBox(item, dx + inventory.belt_size * dspace + 8, dy - 102 + 25 + 9, null);
+			}
+		}
+	}
 		
 	// reset target to proper one
 	surface_reset_target();

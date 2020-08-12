@@ -14,3 +14,6 @@ m_tradeItem      = [object_index, 1];
 m_worthInGears   = 1;
 m_userInfo       = 0;
 m_userInfoString = "";
+
+// Used for system-size or effect items. Avoid use.
+m_count          = 1;

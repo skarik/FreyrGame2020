@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "02e4f5f8-2d6b-47e2-ba8a-2b1e0500df29",
+            "Value": {
+                "id": "c737ab74-5608-42b3-b446-307761ede196",
+                "resourcePath": "scripts\\_playeruiVendorStepButtons\\_playeruiVendorStepButtons.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "02fdbb76-cde4-4ee8-81c7-1f289fc0b10a",
             "Value": {
                 "id": "1880cd92-91a4-457b-ab4a-f44ea0c6b400",
@@ -16807,6 +16815,14 @@
             }
         },
         {
+            "Key": "e44d61ef-0fb4-4930-b40a-500b0c0ba07c",
+            "Value": {
+                "id": "a5fcb047-2557-41ba-8b6c-e97406b1a5e4",
+                "resourcePath": "scripts\\pickupAddToArray\\pickupAddToArray.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e44e4dea-91eb-4ae5-94e7-fd8d32f5fb6e",
             "Value": {
                 "id": "67e4cc70-bb37-475e-9209-f3fc1716bd73",
@@ -19354,6 +19370,7 @@
         "863ae25a-0303-476b-ba04-eeebbb1abd70",
         "1c10ed74-ba8a-45e2-b108-1149b2c6f376",
         "131fb646-b512-45c6-b286-472aee7c79fd",
+        "02e4f5f8-2d6b-47e2-ba8a-2b1e0500df29",
         "bfa526da-332a-4522-8173-063f0f868560",
         "81bb5700-23d8-41f4-8d57-7d5443c071e5",
         "99e43396-3d99-4d62-aade-e2ec05864499",
@@ -19380,6 +19397,7 @@
         "7cdc86b6-93c7-4a01-9f5a-b0675d7f7153",
         "595d7641-71d1-4347-bfcb-487e043bf839",
         "6f8c02a7-fe29-4a20-95f4-82ca3e686d7b",
+        "e44d61ef-0fb4-4930-b40a-500b0c0ba07c",
         "13555fd4-a744-4528-9d3b-2b18406e5d6c",
         "b9169073-1b94-45c1-a6a1-2c6e06da8d51",
         "22921097-4ccf-43b6-93b1-e115e4d7554c",

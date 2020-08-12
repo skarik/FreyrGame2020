@@ -3,6 +3,7 @@
 /// @param y
 /// @param text
 /// @param padding
+/// @returns Last width used to draw.
 var dx = argument0;
 var dy = argument1;
 var dtext = argument2;
@@ -48,3 +49,5 @@ else if (dalignment == fa_right)
 }
 
 draw_set_halign(dalignment);
+
+return l_penX;

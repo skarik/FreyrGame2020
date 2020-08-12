@@ -12,35 +12,13 @@ var inventory = m_pickupTarget.inventory;
 //if (m_type != kItemPickupResource)
 {
 	var item;
-	item = itemArrayAddItemProp(inventory.belt,
-								object_index,
-								1,
-								m_maxStack,
-								m_name,
-								m_checkUseScript,
-								m_onUseScript,
-								m_onDepleteScript,
-								m_onUiScript,
-								m_type,
-								m_tradeItem,
-								m_userInfo, m_userInfoString);
-								
+	item = pickupAddToArray(inventory.belt);
+	
 	// todo: add shit to bag
 	if (item == null)
 	{
 		// add to either bag or seeds
-		item = itemArrayAddItemProp(m_type == kItemPickupSeed ? inventory.seed : inventory.bag,
-									object_index,
-									1,
-									m_maxStack,
-									m_name,
-									m_checkUseScript,
-									m_onUseScript,
-									m_onDepleteScript,
-									m_onUiScript,
-									m_type,
-									m_tradeItem,
-									m_userInfo, m_userInfoString);
+		item = pickupAddToArray(m_type == kItemPickupSeed ? inventory.seed : inventory.bag);
 	}
 
 	// If item is not null by the end...

@@ -37,38 +37,7 @@ if (m_player.m_currentVendor != null || m_totalBlend == 1.0)
 	_playeruiVendorStepItemBox(m_boxgs_rx, m_boxds_rx);
 	_playeruiVendorStepItemBox(m_boxgs_tx, m_boxds_tx);
 	
-	// check buttons as well
-	{
-		var cursor_x = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));
-		var cursor_y = round(o_PlayerTest.vPosition - (GameCamera.y - GameCamera.height / 2));
-	
-		// reset if mouse move
-		if (o_PlayerTest.uPosition != o_PlayerTest.uPositionPrevious
-			|| o_PlayerTest.vPosition != o_PlayerTest.vPositionPrevious)
-		{
-			m_buttongs[?"hover"] = null;
-		}
-
-		var item_count = m_buttonds[?"count"];
-		if (is_undefined(item_count))
-			item_count = 0;
-
-		for (var i = 0; i < VendorButtons.COUNT; ++i)
-		{
-			var offset = m_buttonds[?i];
-			var box_x = offset[0];
-			var box_y = offset[1];
-			var box_w = offset[2];
-			var box_h = offset[3];
-		
-			if (cursor_x >= box_x && cursor_x <= box_x + box_w
-				&& cursor_y >= box_y && cursor_y <= box_y + box_h)
-			{
-				m_buttongs[?"hover"] = i;
-				break;
-			}
-		}
-	}
+	_playeruiVendorStepButtons(m_buttongs, m_buttonds);
 	
 	// click selection needs to consider all states together
 	_playeruiVendorStepItemBoxGlobal([m_boxgs_player, m_boxgs_vendor, m_boxgs_rx, m_boxgs_tx],
@@ -82,6 +51,10 @@ if (m_player.m_currentVendor != null || m_totalBlend == 1.0)
 	{
 		if (m_buttongs[?"hover"] == VendorButtons.Leave)
 		{
+			// halt current trade
+			vendorKickItemsBackTo(m_itemarray_tx, m_player.inventory.bag, true);
+			vendorKickItemsBackTo(m_itemarray_rx, m_vendor.m_inventory.item, false);
+			
 			m_player.m_currentVendor = null; // Clear out vendor to close the UI
 		}
 		if (m_buttongs[?"hover"] == VendorButtons.ClearGive)
@@ -91,6 +64,12 @@ if (m_player.m_currentVendor != null || m_totalBlend == 1.0)
 		if (m_buttongs[?"hover"] == VendorButtons.ClearGet)
 		{
 			vendorKickItemsBackTo(m_itemarray_rx, m_vendor.m_inventory.item, false);
+		}
+		if (m_buttongs[?"hover"] == VendorButtons.Trade)
+		{
+			// TODO: check the value of things
+			vendorKickItemsBackTo(m_itemarray_tx, m_vendor.m_inventory.item, false);
+			vendorKickItemsBackTo(m_itemarray_rx, m_player.inventory.bag, true);
 		}
 	}
 }

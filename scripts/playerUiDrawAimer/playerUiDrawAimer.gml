@@ -11,7 +11,7 @@ if (o_PlayerTest.canMove && !o_PlayerTest.m_isKOed && !ctsGabbersHaveFocus())
 	dy = round(o_PlayerTest.vPosition - (GameCamera.y - GameCamera.height / 2));
 
 	draw_set_color(c_black);
-	gpu_set_blendmode_ext(bm_zero, bm_inv_src_alpha);
+	gpu_set_blendmode_ext_sepalpha(bm_zero, bm_inv_src_alpha, bm_src_alpha, bm_one);
 	draw_sprite(sui_aimer, 0, dx-1, dy);
 	draw_sprite(sui_aimer, 0, dx+1, dy);
 	draw_sprite(sui_aimer, 0, dx, dy-1);

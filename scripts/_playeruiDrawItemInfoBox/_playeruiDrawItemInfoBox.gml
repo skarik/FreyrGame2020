@@ -1,11 +1,13 @@
-/// @function _playeruiDrawItemInfoBox(item_entry, x, y)
+/// @function _playeruiDrawItemInfoBox(item_entry, x, y, vendor_info)
 /// @param item_entry
 /// @param x
 /// @param y
+/// @param vendor_info {Nullable}
 
 var item = argument0;
 var dix = argument1;
 var diy = argument2;
+var vendor_info = argument3;
 
 if (item != null)
 {
@@ -25,8 +27,13 @@ if (item != null)
 	draw_set_alpha(base_alpha);
 	draw_text_spaced(dix + 6 + 1, diy + 4 + 1, item.name, 2);
 	draw_set_color(c_black);
-	draw_text_spaced(dix + 6, diy + 4, item.name, 2);
-				
+	var title_width = draw_text_spaced(dix + 6, diy + 4, item.name, 2);
+	
+	// Draw item count after the name
+	draw_set_font(global.font_arvo7);
+	draw_set_color(c_dkgray);
+	draw_text_spaced(dix + 6 + title_width + 6, diy + 4 + 2, "x" + string(item.count), 2);
+	
 	// Create temp item to get the additional information
 	var temp_item = inew(item.object);
 	temp_item.visible = false;
@@ -82,6 +89,57 @@ if (item != null)
 			draw_text_spaced(dix + 6, diy + 19, "Todo", 2);
 		}
 	}
+	
+	//
+	// draw trade info
+	if (is_array(vendor_info))
+	{
+		var value = -1;
+		var value_item = null;
+		// find either the lowest or the least-fractional value
+		for (var i = 0; i < array_length_1d(vendor_info); ++i)
+		{
+			var next_value = -1;
+			var trade_type = vendor_info[i];
+			
+			if (trade_type == o_pickupRes_Bolt)
+				next_value = temp_item.m_worthInGears * kResourceExchangeGearToBolts;
+			else if (trade_type == o_pickupRes_Gear)
+				next_value = temp_item.m_worthInGears;
+			else if (trade_type == o_pickupRes_BoneShard)
+				next_value = temp_item.m_worthInGears * kResourceExchangeGearToBoneShards;
+			else if (trade_type == o_pickupRes_VoidShard)
+				next_value = temp_item.m_worthInGears / kResourceExchangeVoidShardToGears;
+				
+			if (value == -1
+				|| (next_value > 0.5 && abs(0.5 - frac(next_value)) > abs(0.5 - frac(value)))
+				|| (next_value > 1.0 && next_value < value * 0.2)
+				|| (value > 10 && next_value < value))
+			{
+				value = next_value;
+				value_item = trade_type;
+			}
+		}
+		
+		if (value != -1 && value_item != null)
+		{
+			// Draw the value & the value measurement in the corner
+			draw_sprite(object_get_sprite(value_item), 0, dix + dw * 2.0 - 20, diy + 10);
+			draw_set_font(c_uigold);
+			draw_set_font(global.font_arvo7);
+			draw_set_color(c_dkgray);
+			var str_value = string_ltrim(string_format(value, 3, 1));
+			if (string_char_at(str_value, string_length(str_value)) == "0")
+			{
+				draw_text_spaced(dix + dw * 2.0 - 14, diy + 6, string(round(value)), 2);
+			}
+			else
+			{
+				draw_text_spaced(dix + dw * 2.0 - 14, diy + 6, str_value, 2);
+			}
+		}
+	}
+	// end draw trade info
 	
 	// Draw item info
 	draw_set_font(global.font_arvo8);

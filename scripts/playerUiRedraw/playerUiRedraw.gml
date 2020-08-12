@@ -72,7 +72,7 @@ playerUiDrawChest();
 playerUiDrawBag();
 
 //
-// inventory
+// belt, over the bag
 playerUiDrawInventory();
 
 //

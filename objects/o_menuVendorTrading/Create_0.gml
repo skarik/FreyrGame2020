@@ -38,6 +38,7 @@ m_itemarray_tx = itemArrayCreate(16);
 // button ui states
 m_buttongs = ds_map_create_copy(base_gs_struct);
 m_buttonds = ds_map_create();
+m_buttonds[?"count"] = VendorButtons.COUNT;
 
 enum VendorButtons {
 	Trade = 0,
@@ -46,4 +47,18 @@ enum VendorButtons {
 	Leave = 3,
 	
 	COUNT = 4
+}
+
+// generate the item state based on the vendor inventory
+m_tradeBasis = array_create(0);
+for (var i = 0; i < array_length_1d(m_vendor.m_inventory.item); ++i)
+{
+	var l_item = m_vendor.m_inventory.item[i].object;
+	if (l_item == o_pickupRes_Bolt
+		|| l_item == o_pickupRes_Gear
+		|| l_item == o_pickupRes_BoneShard
+		|| l_item == o_pickupRes_VoidShard)
+	{
+		m_tradeBasis[array_length_1d(m_tradeBasis)] = l_item;
+	}
 }

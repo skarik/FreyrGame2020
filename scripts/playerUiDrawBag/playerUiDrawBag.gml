@@ -203,7 +203,7 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 				var offset = m_bag_offsets[m_bag_hover];
 				var dix = -sprite_get_xoffset(sui_inventory_mainbag_0) + sprite_get_width(sui_inventory_mainbag_0);//offset[0] - sprite_get_xoffset(sui_inventory_mainbag_0) - 5;
 				var diy = offset[1] - 5;
-				_playeruiDrawItemInfoBox(item, dx + dix, dy + diy);
+				_playeruiDrawItemInfoBox(item, dx + dix, dy + diy, null);
 			}
 		}
 	}
@@ -289,7 +289,7 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 				var offset = m_seed_offsets[m_seed_hover];
 				var dix = -sprite_get_xoffset(sui_inventory_seedbag_0) + sprite_get_width(sui_inventory_seedbag_0); //offset[0] + 20 - 5;
 				var diy = offset[1] - 5;
-				_playeruiDrawItemInfoBox(item, dx + dix, dy + diy);
+				_playeruiDrawItemInfoBox(item, dx + dix, dy + diy, null);
 			}
 		}
 	}

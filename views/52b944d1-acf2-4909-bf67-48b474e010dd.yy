@@ -23,7 +23,8 @@
         "c2bce2a9-c2e6-4b6b-8f45-d24010631733",
         "7cdc86b6-93c7-4a01-9f5a-b0675d7f7153",
         "595d7641-71d1-4347-bfcb-487e043bf839",
-        "6f8c02a7-fe29-4a20-95f4-82ca3e686d7b"
+        "6f8c02a7-fe29-4a20-95f4-82ca3e686d7b",
+        "e44d61ef-0fb4-4930-b40a-500b0c0ba07c"
     ],
     "filterType": "GMScript",
     "folderName": "Inventory System",
