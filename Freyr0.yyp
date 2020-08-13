@@ -4663,6 +4663,14 @@
             }
         },
         {
+            "Key": "3f332836-861b-4a14-87c0-d0196cc9f984",
+            "Value": {
+                "id": "e1e235c4-280f-432c-b882-e83b1c82a9fa",
+                "resourcePath": "sprites\\s_itemSlimeOil\\s_itemSlimeOil.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3f5fe000-4b83-45d4-a298-57f305fd8aad",
             "Value": {
                 "id": "73e4989f-f281-44dd-bb3f-b12b60528eaa",
@@ -5524,6 +5532,14 @@
                 "id": "8a3a8dd2-20c8-4a87-a127-b20b769d59ac",
                 "resourcePath": "datafiles_yy\\music\\foolsmarch_excite2.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "4acf9e8d-f8f5-4480-b1e3-61d14cf0e2d7",
+            "Value": {
+                "id": "d3279425-e0c1-45c7-a8b9-722623332d21",
+                "resourcePath": "objects\\o_pickupItem_SlimeOil\\o_pickupItem_SlimeOil.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -9364,6 +9380,14 @@
                 "id": "3ae59e4f-da78-411b-96eb-dac94cecec4b",
                 "resourcePath": "scripts\\vendorKickItemsBackTo\\vendorKickItemsBackTo.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "81bfeccd-885d-4320-9cb8-4e6a3a449275",
+            "Value": {
+                "id": "4493d3d8-da36-41a8-8e19-5299d9f386d2",
+                "resourcePath": "sprites\\s_itemJunkOldCoins\\s_itemJunkOldCoins.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -14455,6 +14479,14 @@
             }
         },
         {
+            "Key": "c4b4f794-87d2-447f-a784-79fa8cd5c962",
+            "Value": {
+                "id": "50d3cbd5-dad7-4006-b761-e8a69627d3d2",
+                "resourcePath": "objects\\o_pickupJunk_OldCoins\\o_pickupJunk_OldCoins.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c4c2f723-0e1d-42dd-aa78-5996378e8927",
             "Value": {
                 "id": "275d529c-f990-4fc9-a3ff-6a0763656cc2",
@@ -14883,6 +14915,14 @@
             "Value": {
                 "id": "20941e03-7013-4153-8ad7-f3f176b4d35a",
                 "resourcePath": "objects\\o_ptcDustPoof\\o_ptcDustPoof.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c904d3fd-2c25-480f-b48c-c8d668abff3c",
+            "Value": {
+                "id": "8660c160-8cba-4d48-9aa8-99d44a3f146f",
+                "resourcePath": "objects\\o_pickupJunk_CeramicFrags\\o_pickupJunk_CeramicFrags.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -15707,6 +15747,14 @@
             "Value": {
                 "id": "0c57a35e-e66a-4689-ab45-c92da657be9c",
                 "resourcePath": "sprites\\sui_vendor_itembox\\sui_vendor_itembox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d4c564d8-d973-49bb-8294-90ec698f616c",
+            "Value": {
+                "id": "f367cb73-624f-483f-87cb-0c1bf9bc6796",
+                "resourcePath": "sprites\\s_itemJunkWoodChips\\s_itemJunkWoodChips.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -16842,7 +16890,15 @@
             "Key": "e327efef-bca1-4ee7-b509-c0e752e078f5",
             "Value": {
                 "id": "88748309-07f3-4b07-b2d8-1735e870d1b1",
-                "resourcePath": "sprites\\s_BigPot\\s_BigPot.yy",
+                "resourcePath": "sprites\\s_propBigPot\\s_propBigPot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e32b1a60-782b-4159-8d14-02713583e016",
+            "Value": {
+                "id": "5178f8d1-b51e-44d9-8c76-eb4c15a6ddd6",
+                "resourcePath": "sprites\\s_itemJunkCeramicFrags\\s_itemJunkCeramicFrags.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -18628,6 +18684,14 @@
                 "id": "1ad19130-b1b8-453d-aa5d-e3430cf9f777",
                 "resourcePath": "scripts\\enemyInfoOnCharacterCreate\\enemyInfoOnCharacterCreate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fa06cddf-c679-4611-87b4-98b3333aced7",
+            "Value": {
+                "id": "9d41e6d6-a4e9-4123-bf4e-a24653c4820d",
+                "resourcePath": "objects\\o_pickupJunk_WoodChips\\o_pickupJunk_WoodChips.yy",
+                "resourceType": "GMObject"
             }
         },
         {

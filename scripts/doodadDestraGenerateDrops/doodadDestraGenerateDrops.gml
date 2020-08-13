@@ -21,6 +21,21 @@ switch (sprite_index)
 	
 		return ret;
 		
+	case s_propCrate:
+		sz = choose(1,2,3);
+		for (i = 0; i < sz; ++i)
+			ret[i] = o_pickupJunk_WoodChips;
+	
+		return ret;
+		
+			
+	case s_propBigPot:
+		sz = choose(0,1,2);
+		for (i = 0; i < sz; ++i)
+			ret[i] = o_pickupJunk_CeramicFrags;
+	
+		return ret;
+		
 }
 
 return null;

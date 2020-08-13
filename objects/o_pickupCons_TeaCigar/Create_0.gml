@@ -7,7 +7,7 @@ event_inherited();
 //requires 2x tea leaves to make
 
 m_name          = "Tea Cigar";
-m_description   = "Tea Cigar!"
+m_description   = "Smells like mint. Still causes cancer."
 m_flags         = kItemFlagsConsumable;
 m_maxStack      = 10;
 m_type          = kItemPickupNormal;
