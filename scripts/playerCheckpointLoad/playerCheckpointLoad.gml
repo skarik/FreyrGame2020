@@ -9,5 +9,6 @@ with (pl)
 		{
 			room_goto(m_checkpoint_room);
 		}
+		z = collision3_get_highest_position(m_checkpoint_x, m_checkpoint_y, z);
 	}
 }
