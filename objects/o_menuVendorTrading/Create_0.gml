@@ -15,6 +15,14 @@ m_tab = 0; // TODO: Make this persist thru death
 m_base_x = 0;
 m_base_y = 0;
 
+m_tradevalue_tx = 0;
+m_tradevalue_rx = 0;
+m_tradebalance = 0.0;
+m_tradeenabled = false;
+
+m_tradebalance_visual = 0.0;
+m_tradebalance_visual_previous = 0.0;
+
 // TODO: create structs instead
 var base_gs_struct = ds_map_create();
 base_gs_struct[?"hover"] = null;

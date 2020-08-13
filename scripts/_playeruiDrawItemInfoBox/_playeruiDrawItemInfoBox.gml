@@ -59,11 +59,8 @@ if (item != null)
 		{
 			script_execute(item.onUi, // Following are arguments for onUi
 						   item.object,
-						   //dx + dspace * i + 15, dy + 15 + y_offset,
 						   dix + 6, diy + 19,
-						   //saturate( saturate(1.5 - abs(i - m_inventory_selector) * 2.0) + (is_hovered ? 1.0 : 0.0) ),
 						   base_alpha,
-						   //(i == inventory.belt_selection) || is_hovered, 
 						   true,
 						   kItemUiCategoryInspect);
 		}
@@ -144,10 +141,6 @@ if (item != null)
 	// Draw item info
 	draw_set_font(global.font_arvo8);
 	draw_set_color(merge_color(c_gold, c_white, 0.7));
-	//draw_set_alpha(base_alpha * 0.3);
-	//draw_text_spaced_wrap(dix + 6 + 0, diy + 19 + 1, temp_item.m_description, 2, dw * 2 - 11 * 3);
-	//draw_text_spaced_wrap(dix + 6 + 1, diy + 19 + 0, temp_item.m_description, 2, dw * 2 - 11 * 3);
-	//draw_set_alpha(base_alpha);
 	draw_text_spaced_wrap(dix + 6 + 1, diy + 12 + 19 + 1, temp_item.m_description, 2, dw * 2 - 11);
 	draw_set_color(c_black);
 	draw_text_spaced_wrap(dix + 6, diy + 12 + 19, temp_item.m_description, 2, dw * 2 - 11);

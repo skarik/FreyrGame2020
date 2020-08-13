@@ -72,8 +72,8 @@ draw_set_color(c_white);
 draw_set_font(global.font_will14);
 draw_set_halign(fa_middle);
 draw_set_valign(fa_bottom);
-draw_text_spaced(panel_x + 65, panel_y - 5, "GET", 4);
-draw_text_spaced(panel_x - 65, panel_y - 5, "GIVE", 4);
+draw_text_spaced(panel_x + 65 + 24, panel_y - 5, "GET", 4);
+draw_text_spaced(panel_x - 65 - 24, panel_y - 5, "GIVE", 4);
 
 panel_x = dx;
 panel_y = dy + GameCamera.height / 2 + 30;
@@ -81,7 +81,10 @@ panel_y = dy + GameCamera.height / 2 + 30;
 //draw_rectangle(panel_x - 10, panel_y - 40, panel_x + 9, panel_y + 40, false);
 draw_9slice_flex(panel_x - 12, panel_y - 46, 24, 92, sui_vendor_button, 1, 7, 15);
 m_buttonds[?VendorButtons.Trade] = [panel_x - 12, panel_y - 46, 24, 92];
-draw_set_color((m_buttongs[?"hover"] == VendorButtons.Trade) ? c_gold : c_uigold);
+if (m_tradeenabled)
+	draw_set_color((m_buttongs[?"hover"] == VendorButtons.Trade) ? c_gold : c_uigold);
+else
+	draw_set_color(c_black);
 draw_set_font(global.font_will14);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
@@ -119,6 +122,26 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text_spaced(panel_x, panel_y, "Leave", 2);
 
+// favor indicator
+panel_x = dx;
+panel_y = dy + GameCamera.height / 2 - 50 + 30 - 40;
+draw_9slice_flex(panel_x - 55, panel_y, 110, 37, sui_vendor_button, 1, 7, 15);
+draw_set_color(c_ltgray);
+draw_set_font(global.font_arvo8);
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_text_spaced(panel_x, panel_y + 2, "Favors", 2);
+draw_set_valign(fa_middle);
+draw_set_font(global.font_arvo6Bold);
+draw_text_spaced(panel_x - 35, panel_y + 18, "Loss", 2);
+draw_text_spaced(panel_x +  0, panel_y + 18, "Fair", 2);
+draw_text_spaced(panel_x + 35, panel_y + 18, "Gift", 2);
+draw_line(panel_x - 35, panel_y + 23, panel_x - 35, panel_y + 31);
+draw_line(panel_x -  7, panel_y + 23, panel_x -  7, panel_y + 31);
+draw_line(panel_x +  0, panel_y + 23, panel_x +  0, panel_y + 31);
+draw_line(panel_x + 35, panel_y + 23, panel_x + 35, panel_y + 31);
+// draw favor line
+draw_sprite(sui_arcaneSelect, 2, panel_x + 35 * -m_tradebalance_visual, panel_y + 18);
 
 // item overlay at end
 _playeruiVendorDrawItemBoxOverlay(m_player.inventory.bag, m_boxgs_player, m_boxds_player);
