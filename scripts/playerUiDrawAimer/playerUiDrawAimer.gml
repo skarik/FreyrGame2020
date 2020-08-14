@@ -41,4 +41,34 @@ if (o_PlayerTest.canMove && !o_PlayerTest.m_isKOed && !ctsGabbersHaveFocus())
 			draw_circle(round(dx), round(dy), 2, true);
 		}
 	}
+	
+	if (o_PlayerTest.m_aimingEnabled
+		&& !o_PlayerTest.m_isStunned && !o_PlayerTest.isBusyInteracting)
+	{
+		// aim line
+		dx = round(o_PlayerTest.aimingStartX - (GameCamera.x - GameCamera.width / 2));
+		dy = round(o_PlayerTest.aimingStartY - (GameCamera.y - GameCamera.height / 2));
+		
+		var aimerCount = 6;
+		var aimerDistanceDiv = 10.0;
+		var aimerDistance = sqr(o_PlayerTest.m_aimingForce) * aimerCount;
+		
+		for (var i = 0; i < aimerDistance; ++i)
+		{
+			dx += lengthdir_x(aimerDistanceDiv, o_PlayerTest.aimingDirection);
+			dy += lengthdir_y(aimerDistanceDiv, o_PlayerTest.aimingDirection);
+	
+			//draw_set_color(c_gold);
+			//draw_circle(round(dx), round(dy), 2, true);
+			if (i < (aimerCount - 1))
+			{
+				draw_sprite(sui_aimer, 0, round(dx), round(dy));
+			}
+			else
+			{
+				draw_sprite(sui_cursor, 0, round(dx), round(dy));
+			}
+		}
+	}
+		
 }

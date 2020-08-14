@@ -24,10 +24,30 @@ if (iexists(collision_character))
 
 // Check against the collider:
 //if (iexists(collision_rectangle(x - 4, y - 4, x + 4, y + 4, ob_collider, false, true)))
-if (z_height <= 0.0
-	|| collision3_point_meeting(x, y, z, true)
+if (collision3_point_meeting(x, y, z, true)
 	|| collision3_point_meeting(x, y - z_height, z + z_height, true))
 {
+	// prep for pulling back from the wall
+	var travel_distance_sqr = sqr(xspeed) + sqr(yspeed);
+	var travel_direction = 0;
+	if (travel_distance_sqr > 1.0)
+	{
+		travel_direction = point_direction(0, 0, xspeed, yspeed);
+	}
+	// then do the collision CB
+	m_collisionIsForWall = true;
+	event_user(2);
+	// pull back from the wall now
+	if (travel_distance_sqr > 1.0)
+	{
+		x -= lengthdir_x(4, travel_direction);
+		y -= lengthdir_y(4, travel_direction);
+	}
+	exit;
+}
+else if (z_height <= 0.0)
+{
+	m_collisionIsForWall = false;
 	event_user(2);
 	exit;
 }

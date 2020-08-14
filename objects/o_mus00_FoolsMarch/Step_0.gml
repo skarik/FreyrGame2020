@@ -13,7 +13,7 @@ for (var i = 0; i < array_length_1d(m_tracks); ++i)
 // Query the current state
 var isClimaxing = (pl.moScriptOverride == _playerMotionCounterWait)
 	|| (pl.moScriptOverride == _playerMotionCounterSeekHit)
-	|| (pl.moScriptOverride == _playerAttack_CounterHit);
+	|| (pl.moScriptOverride == _playerMoAttackCounterHit);
 var isEnemyAngry = false;
 with (o_chGobboTest)
 {

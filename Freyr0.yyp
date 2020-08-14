@@ -1426,7 +1426,7 @@
             "Key": "14cc191f-2a15-44a5-9562-3120beda5f09",
             "Value": {
                 "id": "95264524-28c5-4fe1-84cf-97f3a37b10c2",
-                "resourcePath": "scripts\\_playerAttack1\\_playerAttack1.yy",
+                "resourcePath": "scripts\\_playerMoAttack1\\_playerMoAttack1.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1834,7 +1834,7 @@
             "Key": "19cc310f-9e80-45d4-abd6-0925e0ff69f2",
             "Value": {
                 "id": "4223dbbb-540b-4c4c-9d99-6e4c82d67f15",
-                "resourcePath": "scripts\\_playerAttack0\\_playerAttack0.yy",
+                "resourcePath": "scripts\\_playerMoAttack0\\_playerMoAttack0.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4314,7 +4314,7 @@
             "Key": "3a789013-d03a-4701-9917-f25fc452af6c",
             "Value": {
                 "id": "4a2761e7-8ef7-40b6-926d-56e717be3bf2",
-                "resourcePath": "scripts\\_playerAttack_CounterHit\\_playerAttack_CounterHit.yy",
+                "resourcePath": "scripts\\_playerMoAttack_CounterHit\\_playerMoAttack_CounterHit.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -9527,6 +9527,14 @@
             }
         },
         {
+            "Key": "83664aaf-4c42-4390-b1c2-b0d24a57beb9",
+            "Value": {
+                "id": "afd6972c-b3da-4106-9a09-666ee696918f",
+                "resourcePath": "scripts\\_playerMoYeetPayload\\_playerMoYeetPayload.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "83a41381-7056-4666-87d7-5a42953d5760",
             "Value": {
                 "id": "82a48651-685a-4b05-9b92-44c681105b25",
@@ -10035,6 +10043,14 @@
             "Value": {
                 "id": "239382ff-fafd-411b-b675-37648753bc63",
                 "resourcePath": "scripts\\doodadSetFinalType\\doodadSetFinalType.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8b0d9b4b-2895-4048-8ab0-69633643a5c9",
+            "Value": {
+                "id": "a392c4f9-31f6-470a-9691-987117b08e48",
+                "resourcePath": "scripts\\_playerMoYeetChargeup\\_playerMoYeetChargeup.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -18210,7 +18226,7 @@
             "Key": "f567dcd2-80ef-4646-9f04-613367ea7afb",
             "Value": {
                 "id": "96610da2-8bb5-4902-b65f-66c42dc9ce96",
-                "resourcePath": "scripts\\_playerAttack3\\_playerAttack3.yy",
+                "resourcePath": "scripts\\_playerMoAttack3\\_playerMoAttack3.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -18794,7 +18810,7 @@
             "Key": "fb3f2951-5948-4dec-bcac-2f44ee3112a9",
             "Value": {
                 "id": "b16f74c3-87b9-48e4-91da-c398759d0b0c",
-                "resourcePath": "scripts\\_playerAttack2\\_playerAttack2.yy",
+                "resourcePath": "scripts\\_playerMoAttack2\\_playerMoAttack2.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -19542,6 +19558,8 @@
         "737047d3-2114-4968-9c71-168f586e234d",
         "54788629-efd3-465c-b661-fbc89084f62d",
         "3a789013-d03a-4701-9917-f25fc452af6c",
+        "8b0d9b4b-2895-4048-8ab0-69633643a5c9",
+        "83664aaf-4c42-4390-b1c2-b0d24a57beb9",
         "4c162c72-c4cc-4b15-b393-e4328ae1f9a5",
         "2e875ea2-8ea6-4603-a58f-46e58841da6d",
         "a2a14d96-67de-4544-9cd8-7c7968c5174d",

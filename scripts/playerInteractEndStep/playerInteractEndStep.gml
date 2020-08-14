@@ -26,7 +26,9 @@ else
 }
 
 // Inventory selection!
-if (l_canMove)
+if (l_canMove
+	&& !m_isMoveCharging // Disable invetory selection if charging a move
+	&& !m_isVoidPunchCharging)
 {
 	if (itemPrevButton.pressed)
 	{

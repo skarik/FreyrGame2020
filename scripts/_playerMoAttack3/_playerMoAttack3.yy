@@ -1,8 +1,8 @@
 {
-    "id": "3a789013-d03a-4701-9917-f25fc452af6c",
+    "id": "f567dcd2-80ef-4646-9f04-613367ea7afb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "_playerAttack_CounterHit",
+    "name": "_playerMoAttack3",
     "IsCompatibility": false,
     "IsDnD": false
 }

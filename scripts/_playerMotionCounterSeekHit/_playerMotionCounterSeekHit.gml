@@ -25,7 +25,7 @@ if (Time.deltaTime > 0.0)
 	// If at the enemy, kick some ass.
 	if (place_meeting(x + xspeed * Time.deltaTime, y + yspeed * Time.deltaTime, m_perfectCounterTarget))
 	{
-		moScriptOverride = _playerAttack_CounterHit;
+		moScriptOverride = _playerMoAttackCounterHit;
 		// Set up attach variables
 		meleeAtkCurrent = 0;
 		// do the thing

@@ -36,6 +36,13 @@ m_isVoidPunchCharging = false; //TODO: reuse for other key items
 m_voidPunch_fill = 1.0;
 m_voidPunch_charged = 0.0;
 
+m_isMoveCharging = false; //TODO: combine with above?
+m_moveCharge = 0.0;
+m_moveChargeItem = null;
+
+m_aimingEnabled = false;
+m_aimingForce = 0.0;
+
 aimingDirection = 0.0;
 aimingHeight = 11;
 aimingStartX = x;

@@ -2,7 +2,7 @@
 
 //m_moving = false;
 
-if (z_height > 0)
+if (z_height > 0 || m_collisionIsForWall)
 {
 	// Flip motion by 135 to 225 degrees.
 	var dir = point_direction(0, 0, xspeed, yspeed);
@@ -21,7 +21,7 @@ else
 	var len = point_distance(0, 0, xspeed, yspeed);
 	// todo: this math can be wildly optimized
 	
-	len = motion1d_to(len, 0, 300 * Time.deltaTime);
+	len = motion1d_to(len, 0, 1000 * Time.deltaTime);
 	xspeed = lengthdir_x(len, dir);
 	yspeed = lengthdir_y(len, dir);
 	

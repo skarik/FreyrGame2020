@@ -19,7 +19,7 @@ var itemType = argument0;
 	m_plant_timer = 0.0;
 }*/
 
-var projectile = instance_create_depth(x, y, depth - 1, ob_projectileYeetedItem);
+/*var projectile = instance_create_depth(x, y, depth - 1, ob_projectileYeetedItem);
 	projectile.z = z;
 	projectile.z_height = 24;
 	projectile.m_itemObject = itemType;
@@ -28,4 +28,13 @@ var projectile = instance_create_depth(x, y, depth - 1, ob_projectileYeetedItem)
 	projectile.m_owner = id;
 	projectile.m_team = m_team;
 
-_playerInteractItemDecrementBelt();
+_playerInteractItemDecrementBelt();*/
+
+if (moScriptOverride != _playerMoYeetChargeup
+	&& moScriptOverride != _playerMoYeetPayload)
+{
+	// Go to the throwing movestate
+	m_moveCharge = 0.0;
+	m_moveChargeItem = itemType;
+	moScriptOverride = _playerMoYeetChargeup;
+}

@@ -13,6 +13,7 @@ m_damageType = kDamageTypeBlunt;
 m_isPlayer = false;
 
 m_moving = true;
+m_collisionIsForWall = false;
 
 // Fallback for when the character dies before hit (or no character sourced)
 isBlocking = false;
