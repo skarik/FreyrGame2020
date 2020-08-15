@@ -3215,6 +3215,14 @@
             }
         },
         {
+            "Key": "2ba5adae-5b1b-4f8a-8e01-23e937444962",
+            "Value": {
+                "id": "4f4eb164-b6ef-4230-b0b8-b924cd1b4c35",
+                "resourcePath": "views\\2ba5adae-5b1b-4f8a-8e01-23e937444962.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2bb2023a-d0cf-4a1b-8e4d-5ee2357a05af",
             "Value": {
                 "id": "9a6fba3c-05cd-42c7-9055-0226194a581a",
@@ -5596,6 +5604,14 @@
                 "id": "dc7eeb54-d737-4b03-96c6-9e701c3160e4",
                 "resourcePath": "sprites\\sui_portraitNathanNeutral\\sui_portraitNathanNeutral.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4b4e2f79-71e1-406e-addc-76ce608cc7ad",
+            "Value": {
+                "id": "d3886ce3-39f0-4761-b936-199b66c5c489",
+                "resourcePath": "scripts\\_playerMoStealthChokeout\\_playerMoStealthChokeout.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -19564,6 +19580,7 @@
         "08a2263b-90d6-4bbe-bd47-08a3fddf656a",
         "e68a206d-1473-437d-b86b-e04ac24abccd",
         "dc7e0778-4147-4d91-a5af-c23f40c838f0",
+        "81173471-4fa3-495d-963a-a0585aba9bd9",
         "b5d22ab5-1150-454a-98e8-aa6fde28a399",
         "7a0ed307-5041-4ab8-a13e-3b6800cb1af9",
         "19cc310f-9e80-45d4-abd6-0925e0ff69f2",
@@ -19577,7 +19594,7 @@
         "3a789013-d03a-4701-9917-f25fc452af6c",
         "8b0d9b4b-2895-4048-8ab0-69633643a5c9",
         "83664aaf-4c42-4390-b1c2-b0d24a57beb9",
-        "4c162c72-c4cc-4b15-b393-e4328ae1f9a5",
+        "4b4e2f79-71e1-406e-addc-76ce608cc7ad",
         "2e875ea2-8ea6-4603-a58f-46e58841da6d",
         "a2a14d96-67de-4544-9cd8-7c7968c5174d",
         "088d9175-e37f-4a00-9bb9-dc65d4aca786",
@@ -19592,9 +19609,9 @@
         "2222eb6a-8769-4ba1-a0b9-32996fe02725",
         "c3d040b0-205b-4a7e-87e9-ac6e70381ac8",
         "a64baa77-cb34-4c3e-a885-468dee690f9a",
-        "81173471-4fa3-495d-963a-a0585aba9bd9",
         "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
         "7013ba5c-e4ae-42b8-b1fb-caa1103a95d6",
+        "4c162c72-c4cc-4b15-b393-e4328ae1f9a5",
         "5f09bb3a-8b83-4902-9fa7-72f9320d0521",
         "0dad8523-e9f3-410e-8736-e30a8cda47f6",
         "9836eb08-39f6-478b-b84a-208f8cb1011d",
