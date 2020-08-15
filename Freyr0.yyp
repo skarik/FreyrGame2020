@@ -10727,6 +10727,14 @@
             }
         },
         {
+            "Key": "93c3af82-a796-4b06-9a41-25a2fb7c3648",
+            "Value": {
+                "id": "9088cee7-2cf0-4a7a-b85d-aa238c1319f5",
+                "resourcePath": "objects\\o_pickupMat_Scrap\\o_pickupMat_Scrap.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "941e6a19-8ae6-4b04-a89d-fd7618de4239",
             "Value": {
                 "id": "029b9d8b-8bfb-4ebd-838f-7442f148da5d",
@@ -15855,11 +15863,27 @@
             }
         },
         {
+            "Key": "d526eb9f-d77c-44f2-a040-c2f0150e1cdd",
+            "Value": {
+                "id": "50c13976-042f-40ff-a949-5b1cd2c88028",
+                "resourcePath": "sprites\\s_itemResPaper\\s_itemResPaper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d5320e8c-1f40-4761-8ae8-b3c96a5109a1",
             "Value": {
                 "id": "ffcc66dc-d411-4793-a164-77c0ff5b4e00",
                 "resourcePath": "sprites\\sui_astrolabeTimeOfDay\\sui_astrolabeTimeOfDay.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d55bf866-58e4-4fd6-b9ff-f67624b617b4",
+            "Value": {
+                "id": "1250f16a-c8bc-40ff-aae7-4d092fd68708",
+                "resourcePath": "objects\\o_pickupMat_Paper\\o_pickupMat_Paper.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -15932,6 +15956,14 @@
                 "id": "b6e54b25-727d-435e-a216-4fe8f7b3c455",
                 "resourcePath": "views\\d6640ea3-72f7-4656-b957-c0117ec21743.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d67657d8-4e50-4f3b-94c7-0ca253efd595",
+            "Value": {
+                "id": "a4893de1-edaa-4f19-ba2f-68f2cf236e96",
+                "resourcePath": "sprites\\s_itemResScrap\\s_itemResScrap.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
