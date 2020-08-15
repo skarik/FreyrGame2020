@@ -1,10 +1,10 @@
 /// @description Set up the inventory options
 event_inherited();
 
-m_name          = "Medicinal Leaf";
-m_description   = "Incredibly bitter. Tastes strongly of misery.";
+m_name          = "Mithran Cheese";
+m_description   = "Made from Coconuts. 100% non-dairy. Mouth feel, creamy.";
 m_maxStack      = 10;
 m_type          = kItemPickupNormal;
 m_onUiScript    = generalConsumableOnUi;
 m_onUseScript   = generalConsumableOnUse;
-m_worthInGears  = 3;
+m_worthInGears  = 5;
