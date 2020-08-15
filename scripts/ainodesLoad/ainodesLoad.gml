@@ -7,7 +7,7 @@
 #macro REBUILD_NODEGRAPH_ON_MISSING_DATA true
 
 #macro kNodegraphFile_Header "NODE"
-#macro kNodegraphFile_Version 3
+#macro kNodegraphFile_Version 4
 
 var node = argument[0];
 var forced_rebuild = (argument_count == 2) ? argument[1] : false;
@@ -67,7 +67,7 @@ else if (!forced_rebuild)
 	{
 		var node_index = buffer_read(buffer_nodegraph, buffer_u64);
 		var node_id = instance_find(ob_aiNode, node_index);
-		if (!iexists(node_id))
+		if (!iexists(node_id) || object_get_base_parent(node_id.object_index) != ob_aiNode)
 		{	
 			debugOut("Nodegraph: invalid for this room.");
 			show_debug_message("Nodegraph: invalid for this room.");
@@ -75,6 +75,8 @@ else if (!forced_rebuild)
 			// Invalid data! Clean up and return
 			with (ob_aiNode)
 			{
+				m_link = [];
+				m_link_type = [];
 				m_valid = false; // Mark all nodes as invalid
 				m_loaded = false;
 			}
@@ -99,7 +101,7 @@ else if (!forced_rebuild)
 					return false;
 				}
 				
-				node_id.m_link[ilink] = c_link;
+				node_id.m_link[ilink] = instance_find(ob_aiNode, c_link);
 				node_id.m_link_type[ilink] = c_type;
 			}
 			
@@ -150,6 +152,13 @@ if (forced_rebuild ||
 	
 	if (save_to_file_enabled)
 	{
+		// Generate the node listing used - instance_find() stays constant between shit
+		var node_instance_listing = [];
+		for (var i = 0; i < instance_number(ob_aiNode); ++i)
+		{
+			node_instance_listing[i] = instance_find(ob_aiNode, i);
+		}
+		
 		// Record all node information
 		var buffer_nodegraph = buffer_create(1024, buffer_grow, 1);
 		
@@ -170,7 +179,8 @@ if (forced_rebuild ||
 			buffer_write(buffer_nodegraph, buffer_u32, node_linkcount);
 			for (var ilink = 0; ilink < node_linkcount; ++ilink)
 			{
-				buffer_write(buffer_nodegraph, buffer_u64, node_id.m_link[ilink]);
+				//buffer_write(buffer_nodegraph, buffer_u64, node_id.m_link[ilink]);
+				buffer_write(buffer_nodegraph, buffer_u64, array_get_index(node_instance_listing, node_id.m_link[ilink]));
 				buffer_write(buffer_nodegraph, buffer_u32, node_id.m_link_type[ilink]);
 			}
 		}

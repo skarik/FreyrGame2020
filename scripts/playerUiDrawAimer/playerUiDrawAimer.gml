@@ -42,6 +42,7 @@ if (o_PlayerTest.canMove && !o_PlayerTest.m_isKOed && !ctsGabbersHaveFocus())
 		}
 	}
 	
+	// Draw the charge-up aimer
 	if (o_PlayerTest.m_aimingEnabled
 		&& !o_PlayerTest.m_isStunned && !o_PlayerTest.isBusyInteracting)
 	{
@@ -58,8 +59,6 @@ if (o_PlayerTest.canMove && !o_PlayerTest.m_isKOed && !ctsGabbersHaveFocus())
 			dx += lengthdir_x(aimerDistanceDiv, o_PlayerTest.aimingDirection);
 			dy += lengthdir_y(aimerDistanceDiv, o_PlayerTest.aimingDirection);
 	
-			//draw_set_color(c_gold);
-			//draw_circle(round(dx), round(dy), 2, true);
 			if (i < (aimerCount - 1))
 			{
 				draw_sprite(sui_aimer, 0, round(dx), round(dy));
@@ -70,5 +69,7 @@ if (o_PlayerTest.canMove && !o_PlayerTest.m_isKOed && !ctsGabbersHaveFocus())
 			}
 		}
 	}
+	
+	// TODO: draw auto lockon
 		
 }

@@ -4,10 +4,11 @@
     "mvc": "1.1",
     "name": "d0d57beb-f560-4c03-97d6-bdc766d5b6f1",
     "children": [
-        "5ccbd610-0168-4f49-b07a-4e52649221ac",
-        "a11001cc-dfd9-40f0-a39f-4a3156ce8a53",
-        "5d134e43-9cdb-4be7-89ab-2ae453e0fec5",
-        "3c53f69b-271f-4b46-8e6f-76afb9fb02c1"
+        "3a903134-080a-401e-b54f-285fbf91cce0",
+        "6686759d-9147-4d98-9ff2-322cb0e7aeed",
+        "3d2bfb70-583a-4ee8-aca3-7a9209410df2",
+        "bf23bf7f-ad60-4759-a4aa-261213803077",
+        "d89dd4e1-53d1-4190-bb8d-6c9b226f12e2"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "nodegraphs",
