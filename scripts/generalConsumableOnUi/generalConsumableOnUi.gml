@@ -19,10 +19,9 @@ if (_itemIsSelected
 	
 	switch(_itemType)
 	{
-		case o_pickupCons_ScorpStick:
-			l_drawHealth = true;
-			l_healthValue = 3;
-			break;
+		
+			//NON-CRAFTED
+		
 		case o_pickupCons_Berries:
 			l_drawHealth = true;
 			l_healthValue = 2;
@@ -39,6 +38,11 @@ if (_itemIsSelected
 			l_drawHealth = true;
 			l_healthValue = 3;
 			break;
+				
+			//CRAFTED
+			
+			//DRINKS
+			
 		case o_pickupCons_FermPotion:
 			l_drawHealth = true;
 			l_healthValue = 4;
@@ -62,6 +66,33 @@ if (_itemIsSelected
 			l_willValue = 1 * 90;
 			break;
 		case o_pickupCons_ScorpJuice:
+			l_drawHealth = true;
+			l_healthValue = 3;
+			break;
+			
+			//FOOD
+			
+		case o_pickupCons_RiceBalls:
+			l_drawHealth = true;
+			l_healthValue = 2;
+			break;
+		case o_pickupCons_SweetBun:
+			l_drawHealth = true;
+			l_healthValue = 4;
+			break;
+		case o_pickupCons_StuffedBun:
+			l_drawHealth = true;
+			l_healthValue = 5;
+			break;
+		case o_pickupCons_RedCroiss:
+			l_drawHealth = true;
+			l_healthValue = 3;
+			break;
+		case o_pickupCons_MithranCheese:
+			l_drawHealth = true;
+			l_healthValue = 4;
+			break;
+		case o_pickupCons_ScorpStick:
 			l_drawHealth = true;
 			l_healthValue = 3;
 			break;

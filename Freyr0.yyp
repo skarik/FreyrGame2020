@@ -2383,6 +2383,14 @@
             }
         },
         {
+            "Key": "20ce310b-c81c-4b33-a4ca-1bd408c22d75",
+            "Value": {
+                "id": "e72851d0-c685-4ee4-a9d7-fb81589a1c37",
+                "resourcePath": "objects\\o_pickupCons_RedCroiss\\o_pickupCons_RedCroiss.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "20eaf6c6-85e7-4054-89d4-6c4298270f9e",
             "Value": {
                 "id": "e7d31649-570f-455d-bca0-a2688c06ba86",
@@ -4559,6 +4567,14 @@
             }
         },
         {
+            "Key": "3d86d48b-a36d-4302-9a22-6c0a74ebc243",
+            "Value": {
+                "id": "bcdbd531-8f42-43fd-8eca-37408cdefcef",
+                "resourcePath": "objects\\o_pickupCons_MithranCheese\\o_pickupCons_MithranCheese.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3d9a09d5-f1a2-4a7f-bde2-8a5e22e87d9a",
             "Value": {
                 "id": "2ebb9cd6-2f2a-4ae2-be58-5572393a1fad",
@@ -5196,6 +5212,14 @@
                 "id": "a940e089-db3a-44af-8e1c-fa41a5760f45",
                 "resourcePath": "objects\\o_fxEmote\\o_fxEmote.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "46b1b0b5-7892-4c78-aab8-9d7f77036755",
+            "Value": {
+                "id": "2f75a6c9-d996-4873-9404-37af1d8e793d",
+                "resourcePath": "sprites\\s_itemConsEggBun\\s_itemConsEggBun.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6956,6 +6980,14 @@
                 "id": "f7f813ab-4c89-4727-8a0e-0ceac93d6c12",
                 "resourcePath": "datafiles_yy\\music\\outofthevoid_0_hit.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "5f44f7c0-db7f-4aab-b3d1-fac0c1eb6536",
+            "Value": {
+                "id": "a24613d2-7538-4999-b769-053cf05cb960",
+                "resourcePath": "objects\\o_pickupCons_SweetBun\\o_pickupCons_SweetBun.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12695,6 +12727,14 @@
             }
         },
         {
+            "Key": "ad20c4a2-c24c-4257-a16c-1a4ff3cb3278",
+            "Value": {
+                "id": "139a4f37-89e9-4762-9309-60e2c253442f",
+                "resourcePath": "sprites\\s_itemConsCoconutCheese\\s_itemConsCoconutCheese.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ad271f56-5e2b-4893-ba8b-ebbde06f22b1",
             "Value": {
                 "id": "d94ea7e1-9eb6-4473-95c0-71990f03b1bb",
@@ -14175,6 +14215,14 @@
             }
         },
         {
+            "Key": "c0f70e64-5cb7-49a8-9873-47a1a444a874",
+            "Value": {
+                "id": "f5133a4e-c85d-4c6e-a2a0-57f2795be626",
+                "resourcePath": "objects\\o_pickupCons_RiceBalls\\o_pickupCons_RiceBalls.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c111060f-8801-4bc9-b9ad-ccee19fd46ff",
             "Value": {
                 "id": "8fac8c40-da42-4043-96b2-25d20add5719",
@@ -14611,6 +14659,14 @@
             "Value": {
                 "id": "3240c6f3-6504-4bba-be40-d2a1f495a555",
                 "resourcePath": "sprites\\s_propMithraTestWindmill\\s_propMithraTestWindmill.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c62478a2-8234-4818-95cc-8b961266636f",
+            "Value": {
+                "id": "ae8954f9-3fb3-4750-8b55-8ae21f04f768",
+                "resourcePath": "sprites\\s_itemConsRedBun\\s_itemConsRedBun.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -15116,6 +15172,14 @@
                 "id": "620be402-1387-4d13-b3a9-902a94b8174e",
                 "resourcePath": "datafiles_yy\\music\\oasis_5.ogg.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "cb8d2081-d32f-4843-8250-93f87ab8992f",
+            "Value": {
+                "id": "8cdc54a7-91a9-49d0-9001-eb3232f5f7c1",
+                "resourcePath": "sprites\\s_itemConsRiceBalls\\s_itemConsRiceBalls.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -18343,6 +18407,14 @@
             }
         },
         {
+            "Key": "f6c05f63-0c00-492a-93f5-0dc803d2f7b1",
+            "Value": {
+                "id": "a8a70f0a-7b78-474e-a5a3-e9aff17b86b1",
+                "resourcePath": "objects\\o_pickupCons_StuffedBun\\o_pickupCons_StuffedBun.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f6e28bb8-0a97-49ab-a9ca-b0b60c752b79",
             "Value": {
                 "id": "ea449803-dd7a-4e3f-b910-8ff9fede0683",
@@ -18715,6 +18787,14 @@
             "Value": {
                 "id": "fff012e4-d9ae-4e8b-92e8-7a4701c6b472",
                 "resourcePath": "sprites\\s_propMithraShrineOld\\s_propMithraShrineOld.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fa3956af-6ce3-41e6-919f-3ec1094f67b3",
+            "Value": {
+                "id": "ac95bfa1-5466-425a-891f-595bc0099237",
+                "resourcePath": "sprites\\s_itemConsRedCroiss\\s_itemConsRedCroiss.yy",
                 "resourceType": "GMSprite"
             }
         },

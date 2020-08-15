@@ -5,6 +5,8 @@ var _itemType = argument0;
 switch (_itemType)
 {
 
+	//NON-CRAFTED
+
 case o_pickupCons_Berries:
 	stats.m_health += 2;
 	_playerInteractItemDecrementBelt();
@@ -19,16 +21,16 @@ case o_pickupCons_Meats:
 	stats.m_health += 3;
 	_playerInteractItemDecrementBelt();
 	break;
-
-case o_pickupCons_ScorpStick:
-	stats.m_health += 3;
-	_playerInteractItemDecrementBelt();
-	break;
-
+	
 case o_pickupCons_Nuts:
 	stats.m_health += 2;
 	_playerInteractItemDecrementBelt();
 	break;
+
+	//CRAFTED
+
+	//DRINKS
+
 
 case o_pickupCons_FermPotion:
 	stats.m_health += 4;
@@ -57,6 +59,43 @@ case o_pickupCons_ScorpJuice:
 	stats.m_health += 3;
 	_playerInteractItemDecrementBelt();
 	break;
+	
+	//FOOD
+	
+case o_pickupCons_RiceBalls:
+	stats.m_health += 2;
+	_playerInteractItemDecrementBelt();
+	break;
+	
+
+case o_pickupCons_SweetBun:
+	stats.m_health += 4;
+	_playerInteractItemDecrementBelt();
+	break;
+	
+case o_pickupCons_StuffedBun:
+	stats.m_health += 5;
+	_playerInteractItemDecrementBelt();
+	break;
+	
+case o_pickupCons_RedCroiss:
+	stats.m_health += 3;
+	_playerInteractItemDecrementBelt();
+	break;
+	
+case o_pickupCons_MithranCheese:
+	stats.m_health += 4;
+	_playerInteractItemDecrementBelt();
+	break;
+	
+case o_pickupCons_ScorpStick:
+	stats.m_health += 3;
+	_playerInteractItemDecrementBelt();
+	break;
+
+
+
+
 
 }
 
