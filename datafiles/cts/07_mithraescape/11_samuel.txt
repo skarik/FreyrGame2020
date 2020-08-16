@@ -51,7 +51,7 @@ wait { type time; time 0.2s; }
 lines
 {
 	target samuel
-	1 Even the gracious and gentle rabbit will strike out when cornered.
+	1 No, I wouldn't , but you didn't give me any other option. Mithra comes first.
 }
 lines
 {
@@ -59,7 +59,7 @@ lines
 	facing samuel
 	1a Listen mate, I don't know who you think you are,$p but I didn't do anything.
 	1c You make it sound like I did something unsavory.
-	1p But I didn't corner any rabbits...
+	1p This place is really important huh...
 }
 // Todo, chuckling Samuel
 wait { type time; time 0.5s; }
@@ -69,6 +69,7 @@ lines
 	facing down
 	1 You managed to escape so soon, and came to face me.
 	2 And before,$p you easily dispatched my $1mercenaries$0 in the desert.
+	
 }
 wait { type time; time 0.1s; }
 lines
@@ -92,7 +93,7 @@ lines
 	facing player
 	1 They are easily persuaded with riches and food.
 	2 Although, thanks to you -
-	3 - Now they are a threat to anyone who travels outside the city.
+	3 - Now they maybe a threat to anyone who travels outside the city.
 }
 lines
 {
@@ -105,7 +106,7 @@ lines
 {
 	target samuel
 	facing player
-	1 I had no intention of keeping you in there.$p I just wanted to $1judge$0 you.
+	1 I had no intention of keeping you in there.$p I'm honestly impressed by you$0.
 }
 emote
 {

@@ -8,4 +8,4 @@ m_maxStack      = 5;
 m_type          = kItemPickupNormal;
 m_onUiScript    = generalConsumableOnUi;
 m_onUseScript   = generalConsumableOnUse;
-m_worthInGears  = 5;
+m_worthInGears  = 7;
