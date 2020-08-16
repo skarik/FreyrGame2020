@@ -25,7 +25,7 @@ else
 	isBlocking = false;
 }
 
-// Inventory selection!
+#region Inventory selection!
 if (l_canMove
 	&& !m_isMoveCharging // Disable invetory selection if charging a move
 	&& !m_isVoidPunchCharging)
@@ -84,7 +84,9 @@ if (l_canMove
 		else
 			inventory.belt_selection = 5;
 }
+#endregion
 
+#region Aiming Calculations
 // update aiming
 aimingStartX = x;
 aimingStartY = y - (aimingHeight + z_height);
@@ -136,6 +138,7 @@ if (l_canMove)
 		}
 	}
 }
+#endregion
 
 // Update book & inventory popups - if using book or inventory then we override the CTS stop stuff.
 if (l_canMove || m_usingInventory || m_usingBook || m_currentVendor != null)
@@ -188,23 +191,15 @@ if (m_isPlanting || (belt != null && belt.type == kItemPickupSeed))
 //	m_isPlanting = false;
 //} // Shitty hack anyways
 
+#region Combat
 // do combat mode calculations
 inCombatMode = !inDelayFrame;
 //if (collision_circle(x, y, )
 // todo: loop thru near enemies, if they're hostile, then we in combat mode
-if (iexists(currentUsable) || iexists(currentHeldUsable))
-{
-	inCombatMode = false;
-}
-if (iexists(currentCrop))
-{
-	inCombatMode = false;
-}
-if (iexists(currentTillable) || m_isTilling)
-{
-	inCombatMode = false;
-}
-if (m_isHarvesting)
+if (iexists(currentUsable) || iexists(currentHeldUsable)
+	|| iexists(currentCrop)
+	|| iexists(currentTillable) || m_isTilling
+	|| m_isHarvesting)
 {
 	inCombatMode = false;
 }
@@ -214,9 +209,50 @@ if (inCombatMode && m_currentInteractionType == kInteractionDefault)
 	m_currentInteractionType = kInteractionAttack;
 }
 
-// update attacking
+// Updating
 if (l_canMove && !isDashing && !isBlocking)
 {
+	// Do choke-out checks
+	var l_overrideAttackTarget = null;
+	var l_overrideAttackWithStealth = false;
+	{
+		var l_checkX = x + lengthdir_x(10, facingDirection);
+		var l_checkY = y + lengthdir_y(10, facingDirection);
+		with (ob_character)
+		{
+			if (!m_isDead && !m_isKOed
+				&& (m_team & (kTeamMonster|kTeamBandit))
+				&& damageCanHit(other, id))
+			{
+				if (collision_circle(l_checkX, l_checkY, 8, id, false, false))
+				{
+					// is facing away?
+					var caller_direction = point_direction(other.x, other.y, x, y);
+					if (abs(angle_difference(caller_direction, facingDirection)) < 50)
+					{
+						// We got a target
+						l_overrideAttackTarget = id;
+						l_overrideAttackWithStealth = true;
+						break;
+					}
+				}
+			}
+		}
+	}
+	// Do choke-out action
+	if (!isAttacking
+		&& m_isPlayer
+		&& l_overrideAttackWithStealth)
+	{
+		if (atkButton.value > 0.707)
+		{
+			m_moveCharge = 0.0;
+			m_attackKnockoutTarget = l_overrideAttackTarget;
+			moScriptOverride = _playerMoStealthChokeout;
+		}
+	}
+	
+	// Begin attacking
 	if (!isAttacking)
 	{
 		meleeAtkTimer += Time.deltaTime * 2.0;
@@ -253,6 +289,7 @@ if (l_canMove && !isDashing && !isBlocking)
 			meleeAtkCurrent = 0;
 		}
 	}
+	// Queue up attacks during attacking for the attack movetype to handle
 	else
 	{
 		if (dodgeButton.pressed)
@@ -275,11 +312,13 @@ if (l_canMove && !isDashing && !isBlocking)
 		isAttacking = false;
 	}
 }
+// Reset all melee stuff when dashing
 else if (isDashing)
 {
 	meleeAtkTimer = +2.0;
 	meleeAtkCurrent = 0;
 }
+#endregion
 
 // reset delay frame
 inDelayFrame = false;

@@ -40,6 +40,8 @@ m_isMoveCharging = false; //TODO: combine with above?
 m_moveCharge = 0.0;
 m_moveChargeItem = null;
 
+m_attackKnockoutTarget = null;
+
 m_aimingEnabled = false;
 m_aimingForce = 0.0;
 
