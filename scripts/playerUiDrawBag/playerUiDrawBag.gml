@@ -127,8 +127,8 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 		var bag_size = array_length_1d(bag);
 	
 		// store the bag offset
-		m_bag_base_x = dx - sprite_get_xoffset(sui_inventory_bag_0);
-		m_bag_base_y = dy;
+		//m_bag_base_x = dx - sprite_get_xoffset(sui_inventory_bag_0);
+		//m_bag_base_y = dy;
 
 		for (var i = 0; i < bag_size; ++i)
 		{
@@ -143,6 +143,7 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 							1.0, 1.0,
 							0.0, c_white,
 							1.0);
+			m_bag_draw_rects[i] = [dx + dix + 5, dy + diy + 5];
 	
 			if (item.object != null)
 			{
@@ -213,8 +214,8 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 		var seed_size = array_length_1d(seed);
 	
 		// store the bag offset
-		m_seed_base_x = dx - sprite_get_xoffset(sui_inventory_bag_1);
-		m_seed_base_y = dy;
+		//m_seed_base_x = dx - sprite_get_xoffset(sui_inventory_bag_1);
+		//m_seed_base_y = dy;
 
 		for (var i = 0; i < seed_size; ++i)
 		{
@@ -229,6 +230,7 @@ if (abs(m_sbag_blend - 0.5) > 0.45 && m_bag_totalBlend > 0.95)
 							1.0, 1.0,
 							0.0, c_white,
 							1.0);
+			m_seed_draw_rects[i] = [dx + dix + 5, dy + diy + 5];
 	
 			if (item.object != null)
 			{

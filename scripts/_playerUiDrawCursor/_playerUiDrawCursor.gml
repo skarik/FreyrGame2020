@@ -17,3 +17,26 @@ draw_sprite(sui_cursor, 0, dx, dy+1);
 gpu_set_blendmode(bm_normal);
 draw_set_color(c_white);
 draw_sprite(sui_cursor, 0, dx, dy);
+
+// Draw current hand inventory as well
+if (o_PlayerTest.m_usingInventory)
+{
+	if (m_held_inventory[0].object != null)
+	{
+		dx -= 4;
+		dy -= 4;
+		
+		// Inventory bg
+		draw_sprite(sui_inventory_box_0, 0, dx, dy);
+		
+		// Object sprite
+		draw_sprite(object_get_sprite(m_held_inventory[0].object), 0, dx + 15, dy + 15);
+		
+		// Object count
+		draw_set_color(c_white);
+		draw_set_font(f_04b03);
+		draw_set_halign(fa_right);
+		draw_set_valign(fa_bottom);
+		draw_text(dx + 25, dy + 26, string(m_held_inventory[0].count));
+	}
+}

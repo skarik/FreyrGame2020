@@ -17,6 +17,7 @@ idelete(itemPrevButton);
 idelete(itemUnequipButton);
 idelete(itemsButton);
 idelete(selectButton);
+idelete(actUiButton);
 idelete(cancelButton);
 idelete(prevUiButton);
 idelete(nextUiButton);

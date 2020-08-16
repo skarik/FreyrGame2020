@@ -24,6 +24,7 @@ if (argument0 == false)
 	itemUnequipButton.value = 0.0;
 	itemsButton.value = 0.0;
 	selectButton.value = 0.0;
+	actUiButton.value = 0.0;
 	cancelButton.value = 0.0;
 	prevUiButton.value = 0.0;
 	nextUiButton.value = 0.0;

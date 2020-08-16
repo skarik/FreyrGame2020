@@ -24,6 +24,7 @@ itemNextButton = _controlStructCreate();
 itemUnequipButton = _controlStructCreate();
 itemsButton = _controlStructCreate();
 selectButton = _controlStructCreate();
+actUiButton = _controlStructCreate();
 cancelButton = _controlStructCreate();
 prevUiButton = _controlStructCreate();
 nextUiButton = _controlStructCreate();

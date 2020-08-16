@@ -10,8 +10,8 @@ draw_set_alpha(1.0);
 	dy = GameCamera.height - 30 + smoothstep(m_inCutsceneBlend) * 80;
 	
 	// save the position
-	m_belt_base_x = dx;
-	m_belt_base_y = dy;
+	//m_belt_base_x = dx;
+	//m_belt_base_y = dy;
 	
 	// inventory selector bg
 	surface_reset_target();
@@ -30,7 +30,8 @@ draw_set_alpha(1.0);
 	surface_set_target(m_surfaceLightweight);
 	for (var i = 0; i < inventory.belt_size; ++i)
 	{
-		draw_sprite(sui_bagBox, 0, dx + dspace * i, dy );
+		draw_sprite(sui_bagBox, 0, dx + dspace * i, dy);
+		m_belt_draw_rects[i] = [dx + dspace * i + 5, dy + 5];
 	
 		if (inventory.belt[i].object != null)
 		{

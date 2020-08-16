@@ -37,6 +37,7 @@ with (Settings)
 	ctUiPrevious	= _settingsControlSaveArray("uiprevious", ctUiPrevious);
 	ctUiNext		= _settingsControlSaveArray("uinext", ctUiNext);
 	ctUiSelect		= _settingsControlSaveArray("uiselect", ctUiSelect);
+	ctUiAction		= _settingsControlSaveArray("uiaction", ctUiAction);
 	ctUiCancel		= _settingsControlSaveArray("uicancel", ctUiCancel);
 
     ini_close();

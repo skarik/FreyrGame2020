@@ -70,8 +70,6 @@ playerUiDrawChest();
 //
 // bag, under the inventory bar
 playerUiDrawBag();
-
-//
 // belt, over the bag
 playerUiDrawInventory();
 
@@ -80,7 +78,7 @@ playerUiDrawInventory();
 playerUiDrawVendor();
 
 //
-// aimer
+// aimer (& temp inventory)
 playerUiDrawAimer();
 
 // on top of it all, draw the fuckin book

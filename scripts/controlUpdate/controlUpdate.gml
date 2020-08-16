@@ -48,6 +48,7 @@ if (argument0 == false && !(Debug.on && iexists(o_debugCmdline) && o_debugCmdlin
 	_controlStructUpdate(itemUnequipButton, controlParseAndPoll(Settings.ctItemUnequip));
 	
 	_controlStructUpdate(selectButton, controlParseAndPoll(Settings.ctUiSelect));
+	_controlStructUpdate(actUiButton, controlParseAndPoll(Settings.ctUiAction));
 	_controlStructUpdate(cancelButton, controlParseAndPoll(Settings.ctUiCancel));
 	_controlStructUpdate(prevUiButton, controlParseAndPoll(Settings.ctUiPrevious));
 	_controlStructUpdate(nextUiButton, controlParseAndPoll(Settings.ctUiNext));
@@ -141,6 +142,7 @@ else
 	_controlStructUpdate(itemNextButton, 0.0);
 	_controlStructUpdate(itemsButton, 0.0);
 	_controlStructUpdate(selectButton, 0.0);
+	_controlStructUpdate(actUiButton, 0.0);
 	_controlStructUpdate(cancelButton, 0.0);
 	_controlStructUpdate(prevUiButton, 0.0);
 	_controlStructUpdate(nextUiButton, 0.0);

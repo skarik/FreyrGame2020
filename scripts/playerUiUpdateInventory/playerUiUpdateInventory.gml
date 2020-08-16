@@ -83,7 +83,6 @@ var inventory = o_PlayerTest.inventory;
 
 // perform the mouse-over checks
 {
-	//dx + dspace * i + 15, dy + 15
 	var cursor_x = round(o_PlayerTest.uPosition - (GameCamera.x - GameCamera.width / 2));
 	var cursor_y = round(o_PlayerTest.vPosition - (GameCamera.y - GameCamera.height / 2));
 	
@@ -94,18 +93,10 @@ var inventory = o_PlayerTest.inventory;
 		m_belt_hover = null;
 	}
 	
-	// Update the mouse-over 
-	var dspace = 25;
-	// Update box offsets
+	// Update the mouse-over for the inventory line
 	for (var i = 0; i < 6; ++i)
 	{
-		var box_x = m_belt_base_x + dspace * i + 5;
-		var box_y = m_belt_base_y + 5;
-		m_belt_abs_offsets[i] = [box_x, box_y];
-	}
-	for (var i = 0; i < 6; ++i)
-	{
-		var box_pos = m_belt_abs_offsets[i];
+		var box_pos = m_belt_draw_rects[i];
 		var box_x = box_pos[0];
 		var box_y = box_pos[1];
 		

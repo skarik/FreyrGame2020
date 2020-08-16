@@ -37,32 +37,35 @@ m_seed_offsets = [
 
 m_bag_alignright = 0;
 
-m_bag_abs_offsets = array_create(0);
-m_bag_base_x = 0;
-m_bag_base_y = 0;
+m_bag_draw_rects = array_create(array_length_1d(m_bag_offsets), [0, 0]);
+//m_bag_base_x = 0;
+//m_bag_base_y = 0;
 m_bag_selection = null;
 m_bag_hover = null;
 
-m_seed_abs_offsets = array_create(0);
-m_seed_base_x = 0;
-m_seed_base_y = 0;
+m_seed_draw_rects = array_create(array_length_1d(m_seed_offsets), [0, 0]);
+//m_seed_base_x = 0;
+//m_seed_base_y = 0;
 m_seed_selection = null;
 m_seed_hover = null;
 
 m_sbag_blend = 0.0;
 m_sbag_seeds = false;
 
-m_belt_abs_offsets = array_create(0);
-m_belt_base_x = 0;
-m_belt_base_y = 0;
+m_belt_draw_rects = array_create(6, [0, 0]);
+//m_belt_base_x = 0;
+//m_belt_base_y = 0;
 m_belt_selection = null;
 m_belt_hover = null;
 
-m_chest_abs_offsets = array_create(0);
+m_chest_draw_rects = array_create(0);
 m_chest_base_x = 0;
 m_chest_base_y = 0;
 m_chest_selection = null;
 m_chest_hover = null;
+
+// Inventory slot used to hold & pick up items.
+m_held_inventory = itemArrayCreate(1);
 
 #endregion
 
