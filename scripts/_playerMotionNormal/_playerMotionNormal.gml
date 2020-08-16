@@ -15,6 +15,13 @@ if (m_isHolding)
 	l_moveSpeed *= kMoveSpeedCarryingPercent;
 if (useButton.value > 0.8 || m_isVoidPunchCharging || m_isMoveCharging)
 	l_moveSpeed *= kMoveSpeedUsingPercent;
+if (m_isStunned || m_isKOed)
+{
+	if (onGround)
+		l_moveSpeed *= kMoveSpeedStunPercent;
+	else
+		l_moveSpeed *= kMoveSpeedStunAirPercent;
+}
 
 // Generate the target motion
 var xspeedTarget = 0.0;
@@ -44,9 +51,12 @@ if (sqr(xspeedTarget) + sqr(yspeedTarget) < 0.01)
 	l_moveAcceleration = onGround ? kMoveAccelerationStop : kMoveAccelerationAirStop;
 }
 // Slow down when stunned
-if (m_isStunned)
+if (m_isStunned || m_isKOed)
 {
-	l_moveAcceleration *= kMoveSpeedStunPercent;
+	if (onGround)
+		l_moveAcceleration = kMoveAccelerationStunned;
+	else
+		l_moveAcceleration = kMoveAccelerationAirStunned;
 }
 
 // Accelerate up to the target

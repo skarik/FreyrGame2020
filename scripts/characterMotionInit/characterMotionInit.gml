@@ -14,7 +14,8 @@ moInternal_UnstuckTimer = 0.0;
 kKickbackAmount = 1.0;
 
 kMoveSpeed = 120;
-kMoveSpeedStunPercent = 0.05;
+kMoveSpeedStunPercent = 1.50;
+kMoveSpeedStunAirPercent = 1.50;
 kMoveSpeedWaterPercent = 0.50;
 kMoveSpeedTarPercent = 0.20;
 
@@ -22,6 +23,8 @@ kMoveAcceleration = 800;
 kMoveAccelerationStop = 500;
 kMoveAccelerationAir = 200;
 kMoveAccelerationAirStop = 10;
+kMoveAccelerationStunned = 100;
+kMoveAccelerationAirStunned = 10;
 
 #endregion
 

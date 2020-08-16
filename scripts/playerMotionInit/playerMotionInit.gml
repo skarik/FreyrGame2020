@@ -1,7 +1,8 @@
 #region Constants
 
 kMoveSpeed = 120;
-kMoveSpeedStunPercent = 0.05;
+kMoveSpeedStunPercent = 1.50;
+kMoveSpeedStunAirPercent = 1.50;
 kMoveSpeedWaterPercent = 0.50;
 kMoveSpeedBlockingPercent = 0.50;
 kMoveSpeedCarryingPercent = 0.50;
@@ -12,6 +13,8 @@ kMoveAcceleration = 800;
 kMoveAccelerationStop = 500;
 kMoveAccelerationAir = 200;
 kMoveAccelerationAirStop = 10;
+kMoveAccelerationStunned = 100;
+kMoveAccelerationAirStunned = 10;
 
 kDashDistance = 52;
 kDashTime = 0.5;
