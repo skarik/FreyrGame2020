@@ -1,5 +1,7 @@
 /// @description 
 
+idelete(o_menuVendorTrading); // Force delete vendor UI to kick back inventory "early"
+
 event_inherited();
 
 if (m_initialized)

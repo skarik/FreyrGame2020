@@ -36,7 +36,8 @@ for (var i = 0; i < itemArrayLength; ++i)
 	{
 		if (itemArray[i].count < max_count)
 		{
-			itemArray[i].count += new_count; // TODO properly support stacks
+			var transfer_amount = min(max_count - itemArray[i].count, new_count);
+			itemArray[i].count += transfer_amount; // TODO properly support stacks
 			itemArray[i].name = new_name;
 			itemArray[i].checkUse = new_checkUse;
 			itemArray[i].onUse = new_onUse;
@@ -46,6 +47,23 @@ for (var i = 0; i < itemArrayLength; ++i)
 			itemArray[i].tradeItem = new_tradeItem;
 			itemArray[i].userInfo = new_userInfo;
 			itemArray[i].userInfoS = new_userInfoS;
+			
+			if (transfer_amount < new_count)
+			{
+				var overflowCount = transfer_amount - new_count;
+				var overflowEntry = itemArrayAddItemProp(itemArray, new_object,
+														 overflowCount,
+														 max_count,
+														 new_name,
+														 new_checkUse, new_onUse, new_onDeplete, new_onUi,
+														 new_type, new_tradeItem,
+														 new_userInfo, new_userInfoS);
+				if (overflowEntry == null) // No space in inventory, just spawn item to replace
+				{
+					var entry = instance_create_depth(x, y, 0, new_object);
+					entry.m_count = overflowCount;
+				}
+			}
 			return itemArray[i];
 		}
 	}

@@ -3,8 +3,8 @@
 controlCleanup();
 
 // cleanup item array and shunt it back to the respective inventories
-vendorKickItemsBackTo(m_itemarray_tx, m_player.inventory.bag, true);
-vendorKickItemsBackTo(m_itemarray_rx, m_vendor.m_inventory.item, false);
+if (iexists(m_player)) vendorKickItemsBackTo(m_itemarray_tx, m_player.inventory.bag, true);
+if (iexists(m_vendor)) vendorKickItemsBackTo(m_itemarray_rx, m_vendor.m_inventory.item, false);
 
 itemArrayFree(m_itemarray_rx);
 itemArrayFree(m_itemarray_tx);
