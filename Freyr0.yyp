@@ -3343,6 +3343,14 @@
             }
         },
         {
+            "Key": "2d471096-08ce-466d-b537-5d73e4486861",
+            "Value": {
+                "id": "f124f7ab-b5a9-4f26-bd05-bc7ac70413ed",
+                "resourcePath": "sprites\\s_itemConsCactusTato\\s_itemConsCactusTato.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2d53609e-a0ac-485a-9def-00aaf0880287",
             "Value": {
                 "id": "f701a31c-af1d-4cb7-85c0-774157cdc087",
@@ -7791,6 +7799,14 @@
             }
         },
         {
+            "Key": "6a992311-27bf-4235-a40d-ed6dc17fadc9",
+            "Value": {
+                "id": "f72705d7-5213-4aaf-a685-458683082d3f",
+                "resourcePath": "objects\\o_pickupCons_StoneSoup\\o_pickupCons_StoneSoup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6aab1fc6-1009-4618-8ec5-5d1e6c7a1dfa",
             "Value": {
                 "id": "c02b0127-611a-4aa5-901a-ea7bc4bffe68",
@@ -7967,6 +7983,14 @@
             }
         },
         {
+            "Key": "6d40b3a8-f647-4706-b6ad-736a33aa8d02",
+            "Value": {
+                "id": "8cc1e8b9-4d67-4b10-a3e2-47ac2fc27349",
+                "resourcePath": "sprites\\s_itemConNathansSoup\\s_itemConNathansSoup.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6d530ecb-b311-41e9-9561-b8f4b89a2987",
             "Value": {
                 "id": "e16e1d9f-93d8-403d-a79a-aa12cf47ff24",
@@ -8004,6 +8028,14 @@
                 "id": "2d5932f3-39ac-424c-a0b8-e795f58078a5",
                 "resourcePath": "datafiles_yy\\cts\\oasis\\NPC1.txt.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "6dd48d73-dd2e-429a-a1f3-6fd9bf9fc036",
+            "Value": {
+                "id": "14d89f43-1828-4c6b-827c-a1ce2468f4fa",
+                "resourcePath": "sprites\\s_itemConsVeggieSoup\\s_itemConsVeggieSoup.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -11295,6 +11327,14 @@
             }
         },
         {
+            "Key": "9a750411-1a54-47c3-b14c-978387ecd34f",
+            "Value": {
+                "id": "4d11c776-ff1f-4314-9038-babc4f235c84",
+                "resourcePath": "sprites\\s_itemConStuffedMush\\s_itemConStuffedMush.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9a87ef17-5766-4230-9531-1648752f395a",
             "Value": {
                 "id": "1288ee6c-e6cf-4782-89f3-ec045d9cb214",
@@ -11628,6 +11668,14 @@
                 "id": "1bf7eb66-94da-4ce3-a85c-bb9fb713c8fc",
                 "resourcePath": "objects\\o_doodadHider_MithraTestMill\\o_doodadHider_MithraTestMill.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9e9e9d2d-7f12-4d3a-b2d4-55efc95951f6",
+            "Value": {
+                "id": "56b451f3-a4e0-4c98-a5b3-6ce93e8fdbfa",
+                "resourcePath": "sprites\\s_itemConsCoconutMilk\\s_itemConsCoconutMilk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12452,6 +12500,14 @@
                 "id": "a0966471-66ca-4905-9078-896fd2e55450",
                 "resourcePath": "scripts\\timeofdayIsDaytime\\timeofdayIsDaytime.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a95342da-32f6-4c73-808c-62e97ad0ffa4",
+            "Value": {
+                "id": "85205ad8-8dc7-4978-9e64-90374396f42f",
+                "resourcePath": "objects\\o_pickupCons_CoconutMilk\\o_pickupCons_CoconutMilk.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -13807,6 +13863,14 @@
             }
         },
         {
+            "Key": "b9cc116e-f9fd-46bd-bd31-dff769128ac3",
+            "Value": {
+                "id": "cbd05bde-d178-438d-aa47-4c41a0216172",
+                "resourcePath": "sprites\\s_itemConsStoneSoup\\s_itemConsStoneSoup.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b9d6ab6a-64f9-40fc-b49c-2a81164ea5fd",
             "Value": {
                 "id": "a52d101f-6318-4365-9c33-7d68e7f6e9ed",
@@ -14403,6 +14467,14 @@
             "Value": {
                 "id": "4b85ffb3-4b39-4499-9b80-9cbf689f7b0b",
                 "resourcePath": "objects\\o_livelyFloatingLayerGroup\\o_livelyFloatingLayerGroup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c3919047-a9d2-4d4c-8d8b-14857ae3771e",
+            "Value": {
+                "id": "a7e1a295-9431-4880-818d-08a4e6a61a33",
+                "resourcePath": "objects\\o_pickupCons_CactusTato\\o_pickupCons_CactusTato.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -16124,6 +16196,14 @@
                 "id": "03da19a8-47c6-4192-8169-ed48b579b508",
                 "resourcePath": "scripts\\collision3_line\\collision3_line.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d81be3df-80c2-4604-ae3b-4df4c51ea584",
+            "Value": {
+                "id": "44c454ba-b4b6-4d2b-9d59-3df2a6bfc09c",
+                "resourcePath": "objects\\o_pickupCons_StuffedMush\\o_pickupCons_StuffedMush.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -18303,6 +18383,14 @@
             }
         },
         {
+            "Key": "f51a0d7b-0e5e-4be3-b6bb-a7bccce5e9fd",
+            "Value": {
+                "id": "e6ef5d77-25d2-4c58-a214-425876c2913b",
+                "resourcePath": "objects\\o_pickupCons_NathanSoup\\o_pickupCons_NathanSoup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f52dbb02-2d8b-40fe-8a33-f3962e0b92b6",
             "Value": {
                 "id": "03f05494-ce89-4d49-ad05-077bf89fde5d",
@@ -18991,6 +19079,14 @@
             }
         },
         {
+            "Key": "fbef67ee-a72e-4d74-9c13-421d6fb74f94",
+            "Value": {
+                "id": "4f4421d6-4947-4e50-a5c8-3a0ca5ff6718",
+                "resourcePath": "sprites\\s_itemConSlimeBowl\\s_itemConSlimeBowl.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fbf60dd8-3495-4027-b419-045e706ea62c",
             "Value": {
                 "id": "465a92c4-84b2-45f7-ac6c-eb62da520636",
@@ -19068,6 +19164,14 @@
                 "id": "8319e2df-497b-4636-9a03-9fe544750f7c",
                 "resourcePath": "sprites\\sui_f_arvo10Bold\\sui_f_arvo10Bold.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fcc4f360-3fe3-43a3-b3f0-a9471d837868",
+            "Value": {
+                "id": "4039e12e-472a-4743-b94b-c3596fc06a42",
+                "resourcePath": "objects\\o_pickupCons_VeggieSoup\\o_pickupCons_VeggieSoup.yy",
+                "resourceType": "GMObject"
             }
         },
         {

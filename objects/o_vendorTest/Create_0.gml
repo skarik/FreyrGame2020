@@ -20,6 +20,7 @@ m_inventory = inventoryCreateOrLoad(null, 24);
 var items = [o_pickupRes_Bolt, kCountPositiveInfinite,
 			o_pickupRes_Gear, kCountPositiveInfinite,
 			o_pickupCons_Meats, 2,
+			o_pickupCons_NathanSoup, 1,
 			o_pickupCons_MedLeaf, 1,
 			o_pickupCons_SweetBun, 2,
 			o_pickupCons_ScorpStick, 2,
