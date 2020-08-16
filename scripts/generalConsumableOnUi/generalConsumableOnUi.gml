@@ -69,6 +69,11 @@ if (_itemIsSelected
 			l_drawHealth = true;
 			l_healthValue = 3;
 			break;
+				
+		case o_pickupCons_CoconutMilk:
+			l_drawHealth = true;
+			l_healthValue = 5;
+			break;
 			
 			//FOOD
 			
@@ -96,6 +101,33 @@ if (_itemIsSelected
 			l_drawHealth = true;
 			l_healthValue = 3;
 			break;
+			
+			// SOUP VENDOR SPECIFIC
+			
+		case o_pickupCons_VeggieSoup:
+			l_drawHealth = true;
+			l_healthValue = 12;
+			break;
+		case o_pickupCons_CactusTato:
+			l_drawHealth = true;
+			l_healthValue =  10;
+			break;
+		case o_pickupCons_StoneSoup:
+			l_drawHealth = true;
+			l_healthValue = 8;
+			break;
+		case o_pickupCons_StuffedMush:
+			l_drawHealth = true;
+			l_healthValue = 6;
+			break;
+			
+			// NATE'S SOUP SPECIAL
+			
+		case o_pickupCons_NathanSoup:
+			l_drawHealth = true;
+			l_healthValue = "Full";
+			break;
+			
 	}
 
 	var l_colorRedBright = make_color_rgb(239, 58, 12);
