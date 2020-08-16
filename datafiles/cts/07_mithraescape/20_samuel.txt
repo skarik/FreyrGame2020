@@ -112,8 +112,8 @@
 	{
 		target samuel
 		facing player
-		1 It is not a human! It simply wears the skin of one.
-		2 As for the Motses, they are $1heretics$0! Cursed by the Goddess to carry Motses's burden, $1forever undying$0.
+		1 It is not a human! It's a shapeshifter. Surely you know of them. 
+		2 As for the Motses, they are $1heretics$0! Cursed by the Goddess to never die.
 	}
 	emote
 	{
@@ -151,13 +151,14 @@
 		facing right
 		1 Once you've killed the monster and brought me proof, I'll be able to reward you with -
 		2 - Perhaps a $bplace to live$$ here in Mithra?
+		
 	}
 	lines
 	{
 		target samuel
 		facing left
 		1 I realize such a task may take some time. Please feel free to use whatever services Mithra has to offer.
-		2 The citizens are willing to trade and offer you advice now that they know you're welcome.
+		2 The citizens are willing to trade and offer you advice if they know you're welcome.
 	}
 	goto { target OnPostThinkChoice }
 #OnStaySilent
@@ -166,7 +167,7 @@
 		target samuel
 		facing left
 		1 I realize such a task may take some time. Please feel free to use whatever services Mithra has to offer.
-		2 The citizens are willing to trade and offer you advice now that they know you're welcome.
+		2 The citizens are willing to trade and offer you advice if they know you're welcome.
 	}
 	lines
 	{
@@ -174,6 +175,7 @@
 		facing right
 		1 And of course, once you've killed the monster and brought me proof - 
 		2 I'll be able to reward you with a $bplace to live$$, here in Mithra.
+		3 Or perhaps something else if you prefer it.
 	}
 	goto { target OnPostThinkChoice }
 #OnPostThinkChoice
@@ -204,6 +206,7 @@
 		target samuel
 		facing player
 		1 Really? You will? That’s wonderful!
+		
 	}
 	// TODO, use ai{anim} to do anime girl spinning in chair
 	//ai
@@ -219,6 +222,7 @@
 		1 This is such good news! Please enjoy Mithra as long as you’d like.
 		2 Also, it $1may take time$0 for news to travel that you’re permitted in the city.
 		3 Do forgive the more excitable of the Civilian Guard.
+		4 I am so relieved. This is truely a blessing. Thank you.
 	}
 	
 	// move poppy to the proper position

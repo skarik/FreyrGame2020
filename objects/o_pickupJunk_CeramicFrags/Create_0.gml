@@ -7,4 +7,4 @@ m_flags          = kItemFlagsYeetable;
 m_maxStack       = 20;
 m_onUseScript    = generalYeetableOnUse;
 m_type           = kItemPickupNormal;
-m_worthInGears   = 1 / 12;
+m_worthInGears   = 1 / 13;
