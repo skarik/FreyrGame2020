@@ -4,8 +4,7 @@
 /// @returns {Boolean} True if removed, false if failed to remove.
 
 var partyMember = argument0;
-partyMember = partyMember.id;
-var partyMemberObject = partyMember.object_index;
+var partyMemberObject = iexists(partyMember) ? partyMember.object_index : partyMember;
 
 var pl = getPlayer();
 if (!iexists(pl)) return false;
@@ -13,13 +12,20 @@ var pstats = pl.pstats;
 if (!iexists(pstats)) return false;
 
 // is member already in party?
-for (var i = 0; i < 3; ++i)
+if (iexists(partyMember))
 {
-	if (pstats.m_party[i] == partyMember)
+	// Grab ID now
+	partyMember = partyMember.id;
+	
+	// Loop through members and check if in the party....
+	for (var i = 0; i < 3; ++i)
 	{
-		// already in party, YEETETH
-		pstats.m_party[i] = null;
-		return true;
+		if (pstats.m_party[i] == partyMember)
+		{
+			// already in party, YEETETH
+			pstats.m_party[i] = null;
+			return true;
+		}
 	}
 }
 

@@ -30,7 +30,8 @@ if (m_triggered && !cutsceneIsDone())
 	{
 		for (var i = 0; i < array_length_1d(m_actors); ++i)
 		{
-			if (iexists(m_actors[i]) && m_actors[i].m_aiCombat_alerted)
+			var l_actor = actorGetNpc(m_actors[i]);
+			if (iexists(l_actor) && l_actor.m_aiCombat_alerted)
 			{
 				m_interruptedAlert = true;
 				t_jumpToAlert = true;
@@ -42,7 +43,8 @@ if (m_triggered && !cutsceneIsDone())
 	{
 		for (var i = 0; i < array_length_1d(m_actors); ++i)
 		{
-			if (iexists(m_actors[i]) && m_actors[i].m_aiCombat_angry)
+			var l_actor = actorGetNpc(m_actors[i]);
+			if (iexists(l_actor) && l_actor.m_aiCombat_angry)
 			{
 				m_interruptedAngry = true;
 				t_jumpToAngry = true;
