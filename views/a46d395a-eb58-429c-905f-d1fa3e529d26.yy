@@ -28,7 +28,8 @@
         "c25c6925-fff9-4b57-9e62-165747774832",
         "b102dbca-f360-48d7-9e4e-64318555509f",
         "3e70a781-eaa0-4d24-9231-e826d213ba49",
-        "60b8ad34-1c92-4a41-ac8e-32b3423a5d72"
+        "60b8ad34-1c92-4a41-ac8e-32b3423a5d72",
+        "da53557b-7900-4898-bd15-31b1cce59587"
     ],
     "filterType": "GMScript",
     "folderName": "AI & NPCs",

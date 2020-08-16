@@ -12,8 +12,8 @@ if (iexists(m_target))
 
 if (m_fadestate == 0)
 {
-	image_yscale = saturate(m_fade * 2.0);
-	y -= sin(m_fade * 4.0) * 5.0 * (1.0 - m_fade);
+	image_yscale = elasticOut(saturate(m_fade * 1.0));
+	y -= sin(m_fade * 5.0) * 6.0 * (1.0 - m_fade);
 	
 	m_fade += Time.deltaTime * 4.0;
 	if (m_fade >= 1.0)
@@ -32,7 +32,7 @@ else if (m_fadestate == 1)
 }
 else if (m_fadestate == 2)
 {
-	image_xscale = m_fade;
+	image_xscale = smoothstep(saturate(m_fade));
 	
 	m_fade -= Time.deltaTime * 4.0;
 	if (m_fade <= 0.0)

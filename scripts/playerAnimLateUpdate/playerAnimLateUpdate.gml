@@ -29,27 +29,39 @@ if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
 // update facing direction
 if (moEnabled)
 {
-	if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
+	if (isAttacking)
 	{
-		facingDirection = point_direction(0, 0, xAxis.value, yAxis.value);
+		facingDirection = meleeAtkDirection;
 	}
-	// override facing direction with the aiming when standing or attacking, and the mouse moves
-	//if (lastControlType == kControlKB || lastControlType == kControlMouse)
-	if (uvPositionStyle == kControlUvStyle_Mouse || uvPositionStyle == kControlUvStyle_FakeMouse)
+	else if (moScriptOverride == _playerMoYeetChargeup)
 	{
-		if (sqr(xspeed) + sqr(yspeed) < 10
-		    && (uPosition != uPositionPrevious || vPosition != vPositionPrevious))
+		// Override with aiming also if charging attack
+		facingDirection = aimingDirection;
+	}
+	else
+	{
+		if (!isBusyInteracting && abs(xAxis.value) + abs(yAxis.value) > 0.1)
 		{
-			facingDirection = aimingDirection;
+			facingDirection = point_direction(0, 0, xAxis.value, yAxis.value);
 		}
-	}
-	//else if (lastControlType == kControlGamepad)
-	else if (uvPositionStyle == kControlUvStyle_Unused)
-	{
-		if (sqr(xspeed) + sqr(yspeed) < 10
-		    && (abs(uAxis.value) > 0.1 || abs(vAxis.value) > 0.1))
+		// override facing direction with the aiming when standing or attacking, and the mouse moves
+		//if (lastControlType == kControlKB || lastControlType == kControlMouse)
+		if (uvPositionStyle == kControlUvStyle_Mouse || uvPositionStyle == kControlUvStyle_FakeMouse)
 		{
-			facingDirection = aimingDirection;
+			if (sqr(xspeed) + sqr(yspeed) < 10
+			    && (uPosition != uPositionPrevious || vPosition != vPositionPrevious))
+			{
+				facingDirection = aimingDirection;
+			}
+		}
+		//else if (lastControlType == kControlGamepad)
+		else if (uvPositionStyle == kControlUvStyle_Unused)
+		{
+			if (sqr(xspeed) + sqr(yspeed) < 10
+			    && (abs(uAxis.value) > 0.1 || abs(vAxis.value) > 0.1))
+			{
+				facingDirection = aimingDirection;
+			}
 		}
 	}
 }

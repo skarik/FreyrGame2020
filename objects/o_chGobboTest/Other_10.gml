@@ -7,3 +7,6 @@ dropItems(kDropSeparateChances,[
 	[o_pickupCons_ScorpStick, 0.33, 1],
 	[o_pickupCons_HoneyAbsinthe, 0.25, 1],
 ]);
+
+// Can passthru when we die
+isPassthru = true;

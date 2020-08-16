@@ -6,7 +6,7 @@ if (m_isKOed || m_isDead)
 	m_aiCombat_angry = false;
 	m_aiCombat_alerted = false;
 }
-else
+else if (m_aiCombat_enabled)
 {
 	// Do pushing override
 	if (m_aiGobbo_state == kAiGobboPatrolState_OverrideSpawnPush)

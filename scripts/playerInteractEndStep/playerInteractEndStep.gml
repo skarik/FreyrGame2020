@@ -216,11 +216,12 @@ if (l_canMove && !isDashing && !isBlocking)
 	var l_overrideAttackTarget = null;
 	var l_overrideAttackWithStealth = false;
 	{
-		var l_checkX = x + lengthdir_x(10, facingDirection);
-		var l_checkY = y + lengthdir_y(10, facingDirection);
+		var l_checkX = x + lengthdir_x(16, facingDirection);
+		var l_checkY = y + lengthdir_y(16, facingDirection);
 		with (ob_character)
 		{
 			if (!m_isDead && !m_isKOed
+				&& !npcIsAngry(id)
 				&& (m_team & (kTeamMonster|kTeamBandit))
 				&& damageCanHit(other, id))
 			{
@@ -239,6 +240,15 @@ if (l_canMove && !isDashing && !isBlocking)
 			}
 		}
 	}
+	// Update status
+	if (!isAttacking)
+	{
+		m_attackKnockoutTarget = l_overrideAttackTarget;
+	}
+	else if (meleeAtkCurrent != 0)
+	{
+		m_attackKnockoutTarget = null;
+	}
 	// Do choke-out action
 	if (!isAttacking
 		&& m_isPlayer
@@ -247,7 +257,8 @@ if (l_canMove && !isDashing && !isBlocking)
 		if (atkButton.value > 0.707)
 		{
 			m_moveCharge = 0.0;
-			m_attackKnockoutTarget = l_overrideAttackTarget;
+			meleeAtkDirection = aimingDirection;
+			meleeAtkCurrent = 0;
 			moScriptOverride = _playerMoStealthChokeout;
 		}
 	}
@@ -317,6 +328,12 @@ else if (isDashing)
 {
 	meleeAtkTimer = +2.0;
 	meleeAtkCurrent = 0;
+	
+	m_attackKnockoutTarget = null;
+}
+else
+{
+	m_attackKnockoutTarget = null;
 }
 #endregion
 

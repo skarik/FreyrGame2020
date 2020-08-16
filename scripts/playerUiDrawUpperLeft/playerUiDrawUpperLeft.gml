@@ -177,6 +177,24 @@ else
 }
 //draw_text(dx + 20, dy + 15, "LMB");
 
+if (iexists(pl.m_attackKnockoutTarget)
+	&& !pl.isAttacking)
+{
+	// Draw the control popup under the enemy.
+	dx = pl.m_attackKnockoutTarget.x - GameCamera.view_x - 10;
+	dy = pl.m_attackKnockoutTarget.y - GameCamera.view_y + 16;
+	
+	drawControl(dx, dy, null, kControlDrawStyle_Flat, Settings.ctAttack, m_player.lastControlType, m_player.lastGamepadType);
+	
+	dx += 13;
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_middle);
+	draw_set_font(global.font_arvo9);
+	draw_set_color(c_white);
+	
+	draw_text_spaced(dx, dy, "Knockout", 2);
+}
+
 //dx = 15;
 //dy = 115 - smoothstep(m_inCutsceneBlend) * 200
 dx = dx_btn_base;
