@@ -21,8 +21,62 @@ if (array_length_1d(inout_box_state_array) != array_length_1d(inout_box_draw_sta
 	show_error("Bad args to _playeruiVendorStepItemBoxGlobal", false);
 }
 
+var item_array_array_input = [];
+var item_hover_array_input = [];
+
+// Nothing held: do all item arrays
+if (m_held_inventory[0].object == null || m_last_worked_inventory == null)
+{
+	for (var i = 0; i < array_length_1d(inout_item_array_array); ++i)
+	{	
+		var box_state = inout_box_state_array[i];
+	
+		item_array_array_input[i] = inout_item_array_array[i];
+		item_hover_array_input[i] = box_state[?"hover"];
+	}
+}
+else
+{
+	// Find the transfer group the last worked inventory is in
+	var transfer_group = null;
+	for (var i = 0; i < array_length_1d(transfer_groups); ++i)
+	{
+		if (array_contains(transfer_groups[i], m_last_worked_inventory))
+		{
+			transfer_group = transfer_groups[i];
+			break;
+		}
+	}
+	
+	// Add everything in the transfer group to the inventory input
+	for (var i = 0; i < array_length_1d(inout_item_array_array); ++i)
+	{	
+		var item_array = inout_item_array_array[i];
+		var box_state = inout_box_state_array[i];
+	
+		if (array_contains(transfer_group, item_array))
+		{
+			item_array_array_input[array_length_1d(item_array_array_input)] = item_array;
+			item_hover_array_input[array_length_1d(item_hover_array_input)] = box_state[?"hover"];
+		}
+	}
+}
+
+var l_last_worked_item_array = _playerUiGeneralInventoryInputs(m_held_inventory, item_array_array_input, item_hover_array_input);
+if (m_held_inventory[0].object != null)
+{
+	if (l_last_worked_item_array != null)
+	{
+		m_last_worked_inventory = l_last_worked_item_array;
+	}
+}
+else
+{
+	m_last_worked_inventory = null;
+}
+
 // Check if there is a selection:
-var box_state_selected = null;
+/*var box_state_selected = null;
 for (var i = 0; i < array_length_1d(inout_box_state_array); ++i)
 {
 	var box_state = inout_box_state_array[i];
@@ -134,4 +188,4 @@ if(o_PlayerTest.cancelButton.pressed)
 			box_state[?"selection"] = null;
 		}
 	}
-}
+}*/

@@ -43,6 +43,9 @@ m_boxds_tx = ds_map_create();
 m_itemarray_rx = itemArrayCreate(16);
 m_itemarray_tx = itemArrayCreate(16);
 
+m_held_inventory = itemArrayCreate(1);
+m_last_worked_inventory = null;
+
 // button ui states
 m_buttongs = ds_map_create_copy(base_gs_struct);
 m_buttonds = ds_map_create();

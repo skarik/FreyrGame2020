@@ -2,6 +2,7 @@
 ///@param holderItemArray {array}
 ///@param itemArrayArray {array}
 ///@param hoverArray {array}
+///@returns Inventory last worked on.
 
 var holderItemArray = argument0;
 var itemArrayArray = argument1;
@@ -61,9 +62,14 @@ if (o_PlayerTest.selectButton.pressed && l_inventory != null)
 		l_held_inventory[0].count = 1;
 	}
 	// Base case, just swap items from the hand
-	else
+	else if (l_inventory[l_inventory_selection].count != kCountPositiveInfinite)
 	{
 		itemEntrySwap(l_held_inventory[0], l_inventory[l_inventory_selection]);
+	}
+	// Bad case, cannot do thing, spit annoying sound
+	else
+	{
+		audio_play_sound(snd_UIOnUse, 0, false);
 	}
 }
 // If any item is secondary-actioned:
@@ -79,9 +85,14 @@ if (o_PlayerTest.actUiButton.pressed && l_inventory != null)
 			max_stack = temp_item.m_maxStack;
 			idelete(temp_item);
 		}
-			
+		
+		// Decrease current by one if inventory one is infinite
+		if (l_inventory[l_inventory_selection].count == kCountPositiveInfinite)
+		{
+			l_held_inventory[0].count -= 1;
+		}
 		// Combine the stacks incrementally if the inventory one is not at max
-		if (l_inventory[l_inventory_selection].count < max_stack)
+		else if (l_inventory[l_inventory_selection].count < max_stack)
 		{
 			var transfer_amount = min(max_stack - l_inventory[l_inventory_selection].count, 1);
 			l_held_inventory[0].count -= transfer_amount;
@@ -101,12 +112,27 @@ if (o_PlayerTest.actUiButton.pressed && l_inventory != null)
 	// Base case, just split stacks (rounded up) from the inventory
 	else if (l_held_inventory[0].object == null && l_inventory[l_inventory_selection].object != null)
 	{
-		itemEntryCopy(l_held_inventory[0], l_inventory[l_inventory_selection]);
-		l_held_inventory[0].count = 0;
+		// Splitting from infinite, only grab one
+		if (l_inventory[l_inventory_selection].count == kCountPositiveInfinite)
+		{
+			itemEntryCopy(l_held_inventory[0], l_inventory[l_inventory_selection]);
+			l_held_inventory[0].count = 1;
+		}
+		// Base case, just split stacks (rounded up) from the inventory
+		else
+		{
+			itemEntryCopy(l_held_inventory[0], l_inventory[l_inventory_selection]);
+			l_held_inventory[0].count = 0;
 			
-		var transfer_amount = ceil(l_inventory[l_inventory_selection].count / 2);
-		l_held_inventory[0].count += transfer_amount;
-		l_inventory[l_inventory_selection].count -= transfer_amount;
+			var transfer_amount = ceil(l_inventory[l_inventory_selection].count / 2);
+			l_held_inventory[0].count += transfer_amount;
+			l_inventory[l_inventory_selection].count -= transfer_amount;
+		}
+	}
+	// Bad case, cannot do thing, spit annoying sound
+	else
+	{
+		audio_play_sound(snd_UIOnUse, 0, false);
 	}
 }
 	
@@ -119,3 +145,5 @@ if (l_inventory != null && l_inventory[l_inventory_selection].count == 0)
 {
 	itemEntryClear(l_inventory[l_inventory_selection]);
 }
+
+return l_inventory;

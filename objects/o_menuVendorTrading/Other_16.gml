@@ -144,9 +144,33 @@ draw_line(panel_x + 35, panel_y + 23, panel_x + 35, panel_y + 31);
 draw_sprite(sui_arcaneSelect, 2, panel_x + 35 * -m_tradebalance_visual, panel_y + 18);
 
 // item overlay at end
-_playeruiVendorDrawItemBoxOverlay(m_player.inventory.bag, m_boxgs_player, m_boxds_player);
-_playeruiVendorDrawItemBoxOverlay(m_vendor.m_inventory.item, m_boxgs_vendor, m_boxds_vendor);
-_playeruiVendorDrawItemBoxOverlay(m_itemarray_rx, m_boxgs_rx, m_boxds_rx);
-_playeruiVendorDrawItemBoxOverlay(m_itemarray_tx, m_boxgs_tx, m_boxds_tx);
+if (m_held_inventory[0].object == null)
+{
+	_playeruiVendorDrawItemBoxOverlay(m_player.inventory.bag, m_boxgs_player, m_boxds_player);
+	_playeruiVendorDrawItemBoxOverlay(m_vendor.m_inventory.item, m_boxgs_vendor, m_boxds_vendor);
+	_playeruiVendorDrawItemBoxOverlay(m_itemarray_rx, m_boxgs_rx, m_boxds_rx);
+	_playeruiVendorDrawItemBoxOverlay(m_itemarray_tx, m_boxgs_tx, m_boxds_tx);
+}
+else
+{
+	dx = round(o_PlayerTest.uPosition - GameCamera.view_x);
+	dy = round(o_PlayerTest.vPosition - GameCamera.view_y);
+	
+	dx -= 4;
+	dy -= 4;
+		
+	// Inventory bg
+	draw_sprite(sui_inventory_box_0, 0, dx, dy);
+		
+	// Object sprite
+	draw_sprite(object_get_sprite(m_held_inventory[0].object), 0, dx + 15, dy + 15);
+		
+	// Object count
+	draw_set_color(c_white);
+	draw_set_font(f_04b03);
+	draw_set_halign(fa_right);
+	draw_set_valign(fa_bottom);
+	draw_text(dx + 25, dy + 26, string(m_held_inventory[0].count));
+}
 
 gpu_set_blendmode(bm_normal);

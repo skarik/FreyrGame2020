@@ -8,7 +8,7 @@ if (iexists(m_vendor)) vendorKickItemsBackTo(m_itemarray_rx, m_vendor.m_inventor
 
 itemArrayFree(m_itemarray_rx);
 itemArrayFree(m_itemarray_tx);
-
+itemArrayFree(m_held_inventory);
 
 // cleanup maps
 ds_map_destroy(m_boxgs_player);
