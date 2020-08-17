@@ -1,0 +1,9 @@
+#begin
+
+	lines
+	{
+	1 This dummy looks like it's seen better days. 
+	2 Its modeled after a pompous looking fella.
+	}
+
+#ended
