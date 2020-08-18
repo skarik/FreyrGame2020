@@ -93,7 +93,8 @@ if (m_aiGobbo_squadLeader == id)
 		var squad_size = array_length_1d(m_aiGobbo_squad);
 		var squad_angle_div = 360 / squad_size;
 		var squad_hover_dist = 50 + squad_size * 10;
-		var squad_angle_offset = Time.time * 10.0;
+		//var squad_angle_offset = Time.time * 10.0;
+		var squad_angle_offset = round(Time.time / 3.0 * 0.3) / 0.3 * 10.0 * 3.0;
 		
 		for (var i = 0; i < squad_size; ++i)
 		{
@@ -162,6 +163,8 @@ if (m_aiGobbo_squadLeader == id)
 				// Make the gobbo attack after signal up for 0.5 s
 				gobbo_attacker.m_aiGobbo_squadStateCase = kAiGobboSquadStateCase_AttackToHesitate;
 				gobbo_attacker.m_aiGobbo_squadStateTime = 0.0;
+				// Update the gobbo's attack target
+				gobbo_attacker.m_aiCombat_target = m_aiCombat_target;
 			}
 			// If the leader signaled (is not the attacker) we need to resume motion now
 			if (gobbo_attacker != id)
@@ -178,8 +181,9 @@ if (m_aiGobbo_squadLeader == id)
 			var gobbo_attacker = m_aiGobbo_squad[m_aiGobbo_squadManage_Attacker];
 			if (iexists(gobbo_attacker))
 			{
-				if (gobbo_attacker.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_AttackToHesitate
-					&& gobbo_attacker.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_AttackToHover)
+				if (gobbo_attacker.m_aiGobbo_squadPosition != kAiGobboSquadPosition_Attacker
+					|| (gobbo_attacker.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_AttackToHesitate
+					&& gobbo_attacker.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_AttackToHover))
 				{
 					// Move onto next attacker:
 					m_aiGobbo_squadManage_Attacker = (m_aiGobbo_squadManage_Attacker + 1) % squad_size;

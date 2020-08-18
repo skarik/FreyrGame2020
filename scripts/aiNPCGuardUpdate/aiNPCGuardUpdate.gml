@@ -139,7 +139,7 @@ else
 				// If target visible at this point, then we aggro
 				if (m_aiCombat_targetVisible)
 				{
-					// Create the ? emote
+					// Create the ! emote
 					var emote_fx = inew(o_fxEmote);
 						emote_fx.m_target = id;
 						emote_fx.image_index = 2;

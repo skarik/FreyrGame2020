@@ -1,3 +1,11 @@
+aiNPCGuardInit(); // Start with NPC guard common
+
+// Gobbo specific behaviors
+#macro kAiGobboSquadPosition_Attacker 0
+#macro kAiGobboSquadPosition_Support 1
+
+m_aiGobbo_squadPosition = kAiGobboSquadPosition_Attacker;
+
 // Save initial starting point
 m_aiGobbo_centerX = xstart;
 m_aiGobbo_centerY = ystart;

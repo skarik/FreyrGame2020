@@ -12,6 +12,25 @@ if (iexists(m_target))
 
 if (m_fadestate == 0)
 {
+	if (m_fade <= 0.0)
+	{
+		// make sound
+		var sound = null;
+		
+		if (image_index == 1)
+			sound = sound_play_at(x, y, snd_npcNotice);
+			
+		if (sound != null)
+		{
+			sound.pitch = random_range(0.95, 1.1);
+			sound.gain = random_range(0.7, 0.9) * 0.7;
+			sound.falloff_start = 20;
+			sound.falloff_end = 800;
+			sound.falloff_factor = 1;
+			sound.parent = id;
+		}
+	}
+	
 	image_yscale = elasticOut(saturate(m_fade * 1.0));
 	y -= sin(m_fade * 5.0) * 6.0 * (1.0 - m_fade);
 	

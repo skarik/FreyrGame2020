@@ -8,12 +8,16 @@ if (atkButton.value > 0.707
 	var l_moveChargePrevious = m_moveCharge;
 	m_moveCharge += Time.deltaTime;
 	
-	// Show KO thing
+	// Do sound & effect when KO'd
 	if (l_moveChargePrevious < 1.0 && m_moveCharge >= 1.0)
 	{
+		// Do emote
 		var emote_fx = inew(o_fxEmote);
 			emote_fx.m_target = m_attackKnockoutTarget;
 			emote_fx.image_index = 4;
+			
+		// Play sound
+		effectOnNpcHurt(m_attackKnockoutTarget);
 	}
 	
 	// Pull target close

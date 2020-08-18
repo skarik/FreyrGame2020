@@ -1,3 +1,5 @@
+m_ai_disableAggression = false;
+
 m_aiCombat_enabled = true;
 m_aiCombat_angry = false;
 m_aiCombat_alerted = false;

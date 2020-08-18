@@ -1,15 +1,19 @@
+///@function aiNPCGuard_UpdateAggroCommon()
 var t_nextTarget = null;
 {
 	// Update AI target
 	var t_possibleTargetList = array_create(0);
 	t_possibleTargetList[0] = getPlayer();
-	/*with (ob_character)
+	if (object_index != o_chMithraGaurdNpc)
 	{
-		if (m_team != kTeamNone && (m_team & other.m_team) == 0)
+		with (ob_character)
 		{
-			t_possibleTargetList[array_length_1d(t_possibleTargetList)] = id;
+			if (m_team != kTeamNone && (m_team & other.m_team) == 0)
+			{
+				t_possibleTargetList[array_length_1d(t_possibleTargetList)] = id;
+			}
 		}
-	}*/
+	}
 	
 	// check visibility with each target
 	t_nextTarget = m_aiCombat_target;

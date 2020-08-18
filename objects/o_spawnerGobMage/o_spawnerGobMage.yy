@@ -14,7 +14,7 @@
             "mvc": "1.0",
             "objectId": "faf99f12-2dce-47f4-b507-ddbe423b66d9",
             "propertyId": "4e6d26fc-5701-40ca-a365-d685bdeeb09b",
-            "value": "o_chGobboTest"
+            "value": "o_chGobboMage"
         },
         {
             "id": "2b288372-44e9-48fc-afd1-2637d6bdc743",

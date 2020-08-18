@@ -127,6 +127,49 @@ else if (m_aiCombat_enabled)
 		}
 		// That's all for the patrol motion.
 	}
+	else if (!m_aiCombat_angry && m_aiCombat_alerted)
+	{
+		if (true)
+		{
+			if (m_aiNPC_alertTimer == 0.0)
+			{
+				// Create the ? emote
+				var emote_fx = inew(o_fxEmote);
+					emote_fx.m_target = id;
+					emote_fx.image_index = 1;
+			}
+			m_aiNPC_alertTimer += Time.deltaTime;
+		
+			// Face at target position to keep tracking live
+			aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], 360);
+			
+			// Investigate after time
+			if (m_aiNPC_alertTimer >= 2.0)
+			{
+				// If target visible at this point, then we aggro
+				if (m_aiCombat_targetVisible)
+				{
+					// Create the ! emote
+					var emote_fx = inew(o_fxEmote);
+						emote_fx.m_target = id;
+						emote_fx.image_index = 2;
+						
+					// Force angry now
+					m_aiCombat_angry = true;
+				}
+				// Otherwise we go investigate
+				else
+				{
+					m_aiNPC_alertTimer = 0.0;
+					m_aiCombat_alerted = false;
+					//m_aiNPC_alertState = kAiNPCAlertState_Investigate;
+				}
+			}
+		}
+		
+		_controlStructUpdate(xAxis, 0.0);
+		_controlStructUpdate(yAxis, 0.0);
+	}
 	else
 	{
 		aiGobboSquadAngryUpdate();
@@ -135,7 +178,7 @@ else if (m_aiCombat_enabled)
 	// do angry check
 	//var pl = getPlayer();
 
-	m_aiCombat_aggroTimer -= Time.deltaTime;
+	/*m_aiCombat_aggroTimer -= Time.deltaTime;
 
 	// make a list of all enemies that are not on the same team
 	var t_possibleTargetList = array_create(0);
@@ -245,7 +288,34 @@ else if (m_aiCombat_enabled)
 			}
 		}
 	}
-	m_aiCombat_aggroTimer = clamp(m_aiCombat_aggroTimer, 0.0, 1.0);
+	m_aiCombat_aggroTimer = clamp(m_aiCombat_aggroTimer, 0.0, 1.0);*/
+	
+	//aiNPCGuard_UpdateAggroCommon
+	if (!m_ai_disableAggression)
+	{
+		// If not angry, do notice checks
+		if (!m_aiCombat_angry)
+		{
+			aiNPCGuard_UpdateAggroCommon();
+			if (iexists(m_aiCombat_target))
+			{
+				if (m_aiCombat_targetVisible)
+				{
+					aiNPCGuard_NoticeAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1]);
+				}
+			}
+		}
+		// If angry do combat
+		else
+		{
+			aiNPCGuard_UpdateAggroCommon();
+		}
+	}
+	else
+	{
+		m_aiCombat_alerted = false;
+		m_aiCombat_angry = false;
+	}
 
 	// hacky de-aggro
 	m_aiCombat_deaggroTimer -= Time.deltaTime;

@@ -2055,6 +2055,14 @@
             }
         },
         {
+            "Key": "1ca4a15c-5196-4cbb-b002-698452728efe",
+            "Value": {
+                "id": "910ee206-54fd-4827-bfb0-d85fde629bf1",
+                "resourcePath": "objects\\o_chGobboMage\\o_chGobboMage.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1cb4ad58-e645-4b8f-98fe-006eefd10619",
             "Value": {
                 "id": "f77b742c-c9f3-4eb6-a0f8-3b9e8b73916f",
@@ -6127,6 +6135,14 @@
             }
         },
         {
+            "Key": "5275cb1b-c661-4cd5-b9a7-cd3e491107ae",
+            "Value": {
+                "id": "bd5b4b94-ff3b-4c52-8ecd-c047b1dc9c6a",
+                "resourcePath": "sounds\\snd_npcGobboHurt1\\snd_npcGobboHurt1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "52a46130-e8eb-4a09-8db7-43cf549e570e",
             "Value": {
                 "id": "abdbad57-e8aa-4a74-9957-e2f208073211",
@@ -6391,6 +6407,14 @@
             }
         },
         {
+            "Key": "5643390d-87fb-42f1-961f-b62452851e39",
+            "Value": {
+                "id": "41153dfc-6174-4653-b5b9-ccec8dd858e6",
+                "resourcePath": "sounds\\snd_npcGobboKO\\snd_npcGobboKO.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "564bb23c-a81e-4fe0-ab79-8db8f1c70ce2",
             "Value": {
                 "id": "33164e25-8e45-475b-97de-b2e8b67489b3",
@@ -6492,6 +6516,14 @@
                 "id": "3a267c5d-a1ae-4590-8c3d-03e4753e1598",
                 "resourcePath": "objects\\ob_colliderDepth\\ob_colliderDepth.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "572b8eea-dff2-45f4-b48b-bce236dbdb12",
+            "Value": {
+                "id": "407b4a78-a628-450f-b2fd-234d0edfa8da",
+                "resourcePath": "sounds\\snd_npcNotice\\snd_npcNotice.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -9652,6 +9684,14 @@
                 "id": "e003b4af-6822-4a11-bf97-9d1ce92c819d",
                 "resourcePath": "sprites\\s_propBuildingTest1\\s_propBuildingTest1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "842cc5e6-ae0e-4e2a-af9c-50199333f843",
+            "Value": {
+                "id": "aaed55ff-7245-48a9-aeda-8dddfb423cae",
+                "resourcePath": "scripts\\effectOnNpcHurt\\effectOnNpcHurt.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -19994,6 +20034,7 @@
         "e6292fdc-7cec-4d0a-a1d2-617bc6e96b39",
         "f20de884-5989-4164-a71b-f1af26db57d0",
         "3204d686-cc99-4983-b070-b13ecbfcf42e",
+        "842cc5e6-ae0e-4e2a-af9c-50199333f843",
         "ca34c33c-566e-40a3-90d9-33980ca6aced",
         "1d0b2088-de85-454b-92b6-faaab5876ccc",
         "f13a0a44-51c3-4013-a4bd-2bfaf0f7dbb3",
