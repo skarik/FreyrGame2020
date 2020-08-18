@@ -5199,6 +5199,14 @@
             }
         },
         {
+            "Key": "45e0da12-dbf5-436d-a743-875d6d3501a3",
+            "Value": {
+                "id": "e785c023-4f43-4170-8f6d-e77aea913afb",
+                "resourcePath": "sprites\\s_propTrainingDummy\\s_propTrainingDummy.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "45ef2dc5-e7dc-4c0b-bc47-36a1e7b411bd",
             "Value": {
                 "id": "6a7bc406-6b53-428a-8c16-a9ad8f67958a",
@@ -5943,6 +5951,14 @@
             }
         },
         {
+            "Key": "4f600f8e-769e-4012-9c37-9d766381fa94",
+            "Value": {
+                "id": "ec6e7b1f-059d-40ea-b434-7a751c663245",
+                "resourcePath": "datafiles_yy\\cts\\inspect\\Oasis\\downdummy.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "4f656b16-8921-4fd8-84aa-203e8ddb9fa3",
             "Value": {
                 "id": "7f843344-b947-45ff-8066-9c589a9fb74e",
@@ -6324,6 +6340,14 @@
                 "id": "a3e80888-cec5-4df6-8979-0d2ee8e24d27",
                 "resourcePath": "objects\\o_ptcPebble\\o_ptcPebble.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "55437d3d-ea85-4485-88a8-7d35ab4fdd43",
+            "Value": {
+                "id": "c2a464b0-cac6-4b36-bf81-9948e73e6b8a",
+                "resourcePath": "sprites\\s_propTrainingDummyDown\\s_propTrainingDummyDown.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8419,6 +8443,14 @@
             "Value": {
                 "id": "a1580f53-559b-4ea1-8da0-bc8c94036c7d",
                 "resourcePath": "sprites\\s_assetTowerRuinsLarge1\\s_assetTowerRuinsLarge1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "707cdf66-f674-409a-b041-f4fcc81e08e3",
+            "Value": {
+                "id": "bbb68ac9-24b4-4f0f-b398-b864d6831ecf",
+                "resourcePath": "sprites\\s_propTrainingDummy2\\s_propTrainingDummy2.yy",
                 "resourceType": "GMSprite"
             }
         },
