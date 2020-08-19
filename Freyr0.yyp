@@ -895,6 +895,14 @@
             }
         },
         {
+            "Key": "0e068cf9-8b5c-4bf5-a879-04adf4f47229",
+            "Value": {
+                "id": "0e4994a2-3979-4541-b543-ba22fa4b8402",
+                "resourcePath": "objects\\o_pickupCons_SlimePho\\o_pickupCons_SlimePho.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0e0ef512-2859-4d50-a130-8dd3a90d7b60",
             "Value": {
                 "id": "73805216-aaf0-4e08-873f-e51f733da8c3",

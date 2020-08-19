@@ -88,6 +88,10 @@ switch (_itemType)
 	
 	//SOUP VENDOR
 	
+	case o_pickupCons_SlimePho:
+		stats.m_health += 15;
+		_playerInteractItemDecrementBelt();
+		break;
 	case o_pickupCons_VeggieSoup:
 		stats.m_health += 12;
 		_playerInteractItemDecrementBelt();
