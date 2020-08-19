@@ -3327,6 +3327,14 @@
             }
         },
         {
+            "Key": "2cf5995d-e2d4-4c9a-adb6-dc85a1efc135",
+            "Value": {
+                "id": "f766b007-418b-48fe-a54c-dc6ef7b559d5",
+                "resourcePath": "objects\\o_collectPom\\o_collectPom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2cf9f1fe-823a-4266-a60a-18bb96cfe9c5",
             "Value": {
                 "id": "717dd9b7-0671-45ed-b093-4784aa467b9d",
@@ -7004,6 +7012,14 @@
                 "id": "fd417ca4-ae12-473e-91e7-5078b3dbedfd",
                 "resourcePath": "objects\\o_livelyLogicAiTriggeredPath\\o_livelyLogicAiTriggeredPath.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5d603e0c-c889-4718-8d66-b823441bfd46",
+            "Value": {
+                "id": "c47079c7-1c7e-4d15-ab72-5c4c72f1d48f",
+                "resourcePath": "sprites\\s_itemPom\\s_itemPom.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13359,6 +13375,14 @@
             }
         },
         {
+            "Key": "b25f0e1b-953f-40bc-b4a5-c21f78db0e80",
+            "Value": {
+                "id": "c0829e02-2801-45ed-99d2-08012afe5013",
+                "resourcePath": "objects\\o_pickupItem_Pom\\o_pickupItem_Pom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b276928e-157b-4332-94c7-57f2d7bf1527",
             "Value": {
                 "id": "b287d09f-fbca-4ddc-b3f1-fb5892fb7260",
@@ -13815,6 +13839,14 @@
             }
         },
         {
+            "Key": "b7a1bedd-7fe2-40d9-aa4d-a4a7f22289b2",
+            "Value": {
+                "id": "98557881-3914-4d04-bb37-f3dbf5153b20",
+                "resourcePath": "sprites\\s_propWildPom\\s_propWildPom.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b7a2d1c1-ee2d-479b-a820-9f7e828d1070",
             "Value": {
                 "id": "1763845d-c18e-4f2a-97c2-332d6518b840",
@@ -14019,6 +14051,14 @@
             "Value": {
                 "id": "2d4e877a-618b-4022-b791-2fe35d2c98da",
                 "resourcePath": "sprites\\s_propWindmillArms\\s_propWindmillArms.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ba353ec5-bb6d-45fa-963f-96085f2f8761",
+            "Value": {
+                "id": "6d10c07b-9501-4a45-8210-8d128c2dd11e",
+                "resourcePath": "sprites\\s_propOrchardPom\\s_propOrchardPom.yy",
                 "resourceType": "GMSprite"
             }
         },

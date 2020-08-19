@@ -11,10 +11,13 @@ if (doodad_type == ob_doodad)
 		case s_propPuffFlower:
 		case s_propWildFlowers:
 		case s_propWildFlowers2:
+		case s_propWildPom:
+		case o_collectCoconut:
+		case o_collectPom:
 		case s_BaoTree:
 		case s_propWildLemonTree:
 		case s_propSquatTree:
-		case s_oasisTree: case s_propDPalm0:
+		case s_oasisTree: case s_propDPalm0: case s_dropCoconutTree:
 		case s_propViggoTrainCar_Flowers:
 		case s_propViggoTrainCar_Tree:
 			doodad_type = ob_doodadTreeWiggle;
