@@ -38,7 +38,8 @@ var t_nextTarget = null;
 		&& !m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed
 		&& !aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y)
 		&& aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
-							facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
+							facingDirection, m_aiCombat_noticeDistance,
+							m_aiCombat_angry ? 360 : m_aiCombat_noticeAngle,
 							true))
 	{
 		m_aiCombat_targetVisible = true;
