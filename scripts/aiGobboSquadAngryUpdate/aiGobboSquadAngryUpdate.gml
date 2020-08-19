@@ -6,6 +6,12 @@ m_aiGobbo_squadMember = null;
 m_aiGobbo_squad = array_create(0);
 */
 
+// Hack to fix sprite
+if (moAnimationExternal == true && sprite_index != kAnimSignal)
+{
+	moAnimationExternal = false;
+}
+
 #region Update Squad
 
 // Look for a squad leader if we don't have one

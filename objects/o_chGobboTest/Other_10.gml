@@ -14,10 +14,14 @@ isPassthru = true;
 // Do KO velocity
 if (iexists(m_tookDamageSource))
 {
-	var ldir = point_direction(x, y, m_tookDamageSource.x, m_tookDamageSource.y);
-	var lspeed = random_range(160, 260);
+	var ldir = point_direction(m_tookDamageSource.x, m_tookDamageSource.y, x, y);
+	var lspeed = random_range(70, 120);
 	
-	zspeed = (300 - lspeed) * 0.5;
+	// Perform a "jump"
+	onGround = false;
+	z += 2;
+	zspeed = (220 - lspeed) * 0.4;
+	// Begin moving
 	xspeed = lengthdir_x(lspeed, ldir);
 	yspeed = lengthdir_y(lspeed, ldir);
 }
@@ -30,3 +34,6 @@ sound.falloff_start = 20;
 sound.falloff_end = 800;
 sound.falloff_factor = 1;
 sound.parent = id;
+
+// Override motion with death motion
+moScriptOverride = _characterMoDeadSlide;
