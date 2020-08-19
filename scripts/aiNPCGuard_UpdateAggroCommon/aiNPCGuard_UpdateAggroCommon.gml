@@ -25,7 +25,8 @@ var t_nextTarget = null;
 			&& !t_possibleTarget.m_isDead && !t_possibleTarget.m_isKOed
 			&& !aiPointInSafeArea(t_possibleTarget.x, t_possibleTarget.y)
 			&& aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
-								facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
+								facingDirection, m_aiCombat_noticeDistance,
+								(m_aiCombat_angry && t_possibleTarget == m_aiCombat_target) ? 360 : m_aiCombat_noticeAngle,
 								true))
 		{
 			t_nextTarget = t_possibleTarget; // we have a new best target yay
