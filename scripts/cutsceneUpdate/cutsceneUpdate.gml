@@ -647,6 +647,39 @@ case SEQTYPE_GOTO_IF_COMPANION:
 	// Debug output
 	debugOut("Doing goto_if_companion...");
 	break;
+case SEQTYPE_GOTO_IF_PLAYER:
+	var target = entry[?SEQI_TARGET];
+	var player_as = entry[?SEQI_GOTO_PLAYERTYPE];
+	
+	var check_valid = false;
+	
+	var pl = getPlayer();
+	if (iexists(pl))
+	{
+		check_valid = pl.pstats.m_gender == player_as;
+	}
+	
+	if (target != undefined && check_valid)
+	{
+		if (!cutsceneJumpToLabel(target))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else
+	{
+		// We're done here. Onto the next event
+		cts_entry_current++;
+	    cts_execute_state = 0;
+	}
+	
+	// Debug output
+	debugOut("Doing goto_if_player...");
+	break;
 	
 case SEQTYPE_PALETTE:
 	var type = ds_map_find_value(entry, SEQI_TYPE);

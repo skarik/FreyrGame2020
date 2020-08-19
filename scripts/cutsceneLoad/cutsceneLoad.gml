@@ -159,6 +159,10 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_GOTO_IF_FLAG;
 		}
+		else if (string_pos("goto_if_player", line) == 1)
+		{
+			read_object_type = SEQTYPE_GOTO_IF_PLAYER;
+		}
 		else if (string_pos("goto", line) == 1)
 		{
 			read_object_type = SEQTYPE_GOTO;
@@ -594,7 +598,8 @@ while (!file_text_eof(fp))
 			}
 			else if (read_object_type == SEQTYPE_GOTO
 				|| read_object_type == SEQTYPE_GOTO_IF_COMPANION
-				|| read_object_type == SEQTYPE_GOTO_IF_FLAG)
+				|| read_object_type == SEQTYPE_GOTO_IF_FLAG
+				|| read_object_type == SEQTYPE_GOTO_IF_PLAYER)
 			{
 				// Parse all values
 				var target = ds_map_find_value(read_object_map, "target");
@@ -656,6 +661,21 @@ while (!file_text_eof(fp))
 					until (is_undefined(notwith_next));
 				}
 				
+				var player_as = null;
+				if (read_object_type == SEQTYPE_GOTO_IF_PLAYER)
+				{
+					var player_as = read_object_map[?"as"];
+					
+					if (is_undefined(player_as))
+						player_as = null;
+					else if (player_as == "cortez")
+						player_as = kGenderMale;
+					else if (player_as == "aurum")
+						player_as = kGenderFemale;
+					else if (player_as == "pyrite")
+						player_as = kGenderNonbi;
+				}
+				
 				// Create the GOTO structure
 				var new_map = ds_map_create();
 				ds_map_add(new_map, SEQI_TARGET, target);
@@ -682,6 +702,11 @@ while (!file_text_eof(fp))
 				{
 					ds_map_add(new_map, SEQI_GOTO_COMPWITH, companion_with);
 					ds_map_add(new_map, SEQI_GOTO_COMPNOTWITH, companion_notwith);
+				}
+				
+				if (read_object_type == SEQTYPE_GOTO_IF_PLAYER)
+				{
+					ds_map_add(new_map, SEQI_GOTO_PLAYERTYPE, player_as);
 				}
 				
 				// Delete original map

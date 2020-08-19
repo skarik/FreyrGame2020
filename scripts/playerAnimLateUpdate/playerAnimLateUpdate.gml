@@ -93,7 +93,14 @@ if (!moAnimationPlayback)
 	}
 	else if (m_isKOed)
 	{
-		sprite_index = kAnimKOed;
+		if (onGround)
+		{
+			sprite_index = kAnimKOed;
+		}
+		else
+		{
+			sprite_index = kAnimStun; // TODO
+		}
 		animationSpeed = 3.0;
 	}
 	else if (m_isStunned)
