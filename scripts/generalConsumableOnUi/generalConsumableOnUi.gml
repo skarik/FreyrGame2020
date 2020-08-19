@@ -112,6 +112,10 @@ if (_itemIsSelected
 			l_drawHealth = true;
 			l_healthValue =  10;
 			break;
+		case o_pickupCons_SlimePho:
+			l_drawHealth = true;
+			l_healthValue = 15;
+			break;
 		case o_pickupCons_StoneSoup:
 			l_drawHealth = true;
 			l_healthValue = 8;
@@ -120,6 +124,7 @@ if (_itemIsSelected
 			l_drawHealth = true;
 			l_healthValue = 6;
 			break;
+		
 			
 			// NATE'S SOUP SPECIAL
 			
