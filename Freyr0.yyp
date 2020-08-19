@@ -16767,6 +16767,14 @@
             }
         },
         {
+            "Key": "dcdebe26-e191-4f25-9c6a-1f6b7370266a",
+            "Value": {
+                "id": "98c14437-726c-4ef1-8ad2-f37ba84af653",
+                "resourcePath": "sprites\\s_charGobMag0Stand\\s_charGobMag0Stand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dd02586b-7629-4c00-8fd7-6b7c66803ea9",
             "Value": {
                 "id": "748894b0-4c7c-450d-b835-ae4773c2dcb6",

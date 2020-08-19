@@ -55,7 +55,7 @@ meleeAtk3Damage = 2;
 */
 #region Animation
 
-kAnimStanding = sprite_index;
+kAnimStanding = s_charGobMag0Stand;
 kAnimWalking = sprite_index;
 kAnimRolling = sprite_index;
 kAnimAttack1 = sprite_index;
