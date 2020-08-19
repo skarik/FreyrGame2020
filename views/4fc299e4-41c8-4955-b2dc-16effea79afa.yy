@@ -8,7 +8,8 @@
         "20a27a1f-db91-41b5-86da-8c18df7ff14a",
         "d138cbe1-7875-4035-861f-e988e1e3c7ff",
         "b43a1c23-ae6b-4c75-9a10-b15d5a21d345",
-        "36783e6c-b220-4360-9756-4a0463341039"
+        "36783e6c-b220-4360-9756-4a0463341039",
+        "bd77985e-c7c0-4120-802d-6b0fecfa5e11"
     ],
     "filterType": "GMSprite",
     "folderName": "notable",

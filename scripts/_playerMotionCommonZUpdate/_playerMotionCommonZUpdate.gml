@@ -60,7 +60,10 @@ else
 	}
 	
 	// Perform falling
-	zspeed -= Time.deltaTime * 256.0;
+	if (m_isStunned)
+		zspeed -= Time.deltaTime * 128.0;
+	else
+		zspeed -= Time.deltaTime * 256.0;
 	
 	// Perform on-ground check
 	if (z_height + zspeed * Time.deltaTime < 0)
@@ -72,8 +75,12 @@ else
 		// Do on-ground hit
 		if (zspeed < 0)
 		{
-			xspeed = 0.0;
-			yspeed = 0.0;
+			// Stop motion if not stunned, otherwise we want to keep moving
+			if (!m_isStunned)
+			{
+				xspeed = 0.0;
+				yspeed = 0.0;
+			}
 			
 			if (abs(zspeed) > 64.0 || time_off_ground > 0.8)
 			{
