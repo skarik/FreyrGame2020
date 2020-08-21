@@ -1991,6 +1991,14 @@
             }
         },
         {
+            "Key": "1c087411-b054-4518-98a8-fcd3d3708a99",
+            "Value": {
+                "id": "6c9871ed-e903-4625-823a-dab94c598dd0",
+                "resourcePath": "sprites\\s_charGobMag0Stun\\s_charGobMag0Stun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1c0c5ecc-875d-4e4d-864b-3814bbd20c14",
             "Value": {
                 "id": "3969c952-648b-4dff-9547-fad3de2bd3ba",
@@ -10127,6 +10135,14 @@
             }
         },
         {
+            "Key": "89abb2b8-ee3c-4032-8785-0b9153108439",
+            "Value": {
+                "id": "1bc0460f-2232-44eb-a04c-44e8b007e783",
+                "resourcePath": "sprites\\s_charGobMag0KOed\\s_charGobMag0KOed.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "89aea96b-7f6a-4a2e-b53b-556d58993f74",
             "Value": {
                 "id": "a61482d1-02f4-4e1c-a240-676cc1d6cec9",
@@ -11559,6 +11575,14 @@
             }
         },
         {
+            "Key": "9c0b32d0-77c5-4a84-8226-521fc85a0c1f",
+            "Value": {
+                "id": "6a97e9de-55b1-4761-9846-ef2fc14cd2f2",
+                "resourcePath": "scripts\\_playerMoCommonAttackPreMove\\_playerMoCommonAttackPreMove.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9c0de23d-a581-4a65-a754-aa5963109c05",
             "Value": {
                 "id": "faa92e5e-9fe5-4c7c-ad87-6c52d996bb96",
@@ -12203,6 +12227,14 @@
             "Value": {
                 "id": "2beebbba-4bb8-4b7c-b80f-f909eadef650",
                 "resourcePath": "sprites\\s_propTDoor1\\s_propTDoor1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a428947c-f993-4a46-9b71-21301a77e578",
+            "Value": {
+                "id": "662e04c2-3606-4fb0-87bc-6e35ea3bacc0",
+                "resourcePath": "sprites\\s_charGobMag0Cast\\s_charGobMag0Cast.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -20023,6 +20055,7 @@
         "8b0d9b4b-2895-4048-8ab0-69633643a5c9",
         "83664aaf-4c42-4390-b1c2-b0d24a57beb9",
         "4b4e2f79-71e1-406e-addc-76ce608cc7ad",
+        "9c0b32d0-77c5-4a84-8226-521fc85a0c1f",
         "2e875ea2-8ea6-4603-a58f-46e58841da6d",
         "a2a14d96-67de-4544-9cd8-7c7968c5174d",
         "088d9175-e37f-4a00-9bb9-dc65d4aca786",

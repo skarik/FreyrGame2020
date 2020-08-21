@@ -56,14 +56,14 @@ meleeAtk3Damage = 2;
 #region Animation
 
 kAnimStanding = s_charGobMag0Stand;
-kAnimWalking = sprite_index;
+kAnimWalking = s_charGobMag0Stand;
 kAnimRolling = sprite_index;
-kAnimAttack1 = sprite_index;
-kAnimStun = sprite_index;
-kAnimKOed = sprite_index;
+kAnimAttack1 = s_charGobMag0Cast;
+kAnimStun = s_charGobMag0Stun;
+kAnimKOed = s_charGobMag0KOed;
 
 // Special anim used by gobbo AI
-kAnimSignal = sprite_index;
+kAnimSignal = s_charGobMag0Cast;
 
 #endregion
 

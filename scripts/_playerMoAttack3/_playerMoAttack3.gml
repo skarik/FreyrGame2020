@@ -1,34 +1,11 @@
-// Update checks
-_playerMotionCommonChecks();
-
-// Set up the move speed
-var l_moveSpeed = kMoveSpeed;
-if (inWater)
-	l_moveSpeed *= kMoveSpeedWaterPercent;
-if (isBlocking)
-	l_moveSpeed *= kMoveSpeedBlockingPercent;
-if (m_isHolding)
-	l_moveSpeed *= kMoveSpeedCarryingPercent;
-
 // Increment timer
 var l_meleeAtkTimerPrev = meleeAtkTimer;
 meleeAtkTimer += Time.deltaTime;
-
 // Get percent of time
 var l_meleePercent = clamp(meleeAtkTimer / meleeAtk3Time, 0.0, 1.0);
 
-// Modify move speed
-l_moveSpeed *= power(1.0 - l_meleePercent, 2.0);
-
-// Move the player...
-xspeed = lengthdir_x(l_moveSpeed, meleeAtkDirection);
-yspeed = lengthdir_y(l_moveSpeed, meleeAtkDirection);
-
-_playerMotionCommonCollision();
-
-// Finally move
-x += xspeed * Time.deltaTime;
-y += yspeed * Time.deltaTime;
+// Do checks & motion
+_playerMoCommonAttackPreMove(power(1.0 - l_meleePercent, 2.0), true);
 
 // if before the hit time or after the early-key (hit->key) time, we can dash out of it
 var kMeleeAtkEarlyKey = lerp(meleeAtk0Hit, meleeAtk3Key, 0.5);

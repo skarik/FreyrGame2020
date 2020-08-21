@@ -21,6 +21,8 @@ kDashTime = 0.5;
 kDashCooldown = 0.15;
 kDashInAir = true;
 
+kIsDetailedCharacter = true;
+
 #endregion
 
 isBusyInteracting = false; // Controlled by script

@@ -26,6 +26,8 @@ kMoveAccelerationAirStop = 10;
 kMoveAccelerationStunned = 30;
 kMoveAccelerationAirStunned = 15;
 
+kIsDetailedCharacter = false;
+
 #endregion
 
 #region Common States
