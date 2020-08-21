@@ -3,9 +3,12 @@ var t_nextTarget = null;
 {
 	// Update AI target
 	var t_possibleTargetList = array_create(0);
+	
 	t_possibleTargetList[0] = getPlayer();
+	
 	if (object_index != o_chMithraGaurdNpc)
 	{
+		// Add other possible targets
 		with (ob_character)
 		{
 			if (m_team != kTeamNone && (m_team & other.m_team) == 0)
@@ -14,6 +17,7 @@ var t_nextTarget = null;
 			}
 		}
 	}
+	
 	
 	// check visibility with each target
 	t_nextTarget = m_aiCombat_target;

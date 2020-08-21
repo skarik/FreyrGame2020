@@ -15,14 +15,15 @@ if (moAnimationExternal == true && sprite_index != kAnimSignal)
 #region Update Squad
 
 // Look for a squad leader if we don't have one
-if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isKOed)
+if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isKOed || m_aiGobbo_squadLeader.m_aiGobbo_squadId != m_aiGobbo_squadId)
 {
 	// If we have a squad, select a new leader
 	if (array_length_1d(m_aiGobbo_squad) != 0)
 	{
 		for (var i = 0; i < array_length_1d(m_aiGobbo_squad); ++i)
 		{
-			if (iexists(m_aiGobbo_squad[i]))
+			if (iexists(m_aiGobbo_squad[i])
+				&& m_aiGobbo_squad[i].m_aiGobbo_squadPosition == kAiGobboSquadPosition_Attacker)
 			{
 				m_aiGobbo_squadLeader = m_aiGobbo_squad[i];
 				break;
@@ -31,7 +32,7 @@ if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isKOed)
 		aiGobboSquad_SetLeader(m_aiGobbo_squadLeader, m_aiGobbo_squad);
 	}
 	// If we have no squad, find a squad
-	else
+	else if (m_aiGobbo_squadPosition == kAiGobboSquadPosition_Attacker)
 	{
 		aiGobboSquad_CreateSquad();
 		aiGobboSquad_SetLeader(id, m_aiGobbo_squad);
@@ -46,7 +47,7 @@ if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isKOed)
 		}
 	}
 }
-else
+else if (m_aiGobbo_squadPosition == kAiGobboSquadPosition_Attacker)
 {
 	// Refresh squad every N amount of time
 	if (m_aiGobbo_squadAge > 1.0)

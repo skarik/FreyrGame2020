@@ -23,7 +23,7 @@ kDashCooldown = 0.5;
 kDashInAir = true;*/
 
 #endregion
-/*
+
 #region Attacks
 
 meleeAtk0Time = 0.7;
@@ -50,9 +50,19 @@ meleeAtk3Key = 0.65;
 meleeAtk3Script = _characterGobboAttack0;
 meleeAtk3Damage = 2;
 
+magicMove0Time = 2.0;
+magicMove0PreCast = 0.5;
+magicMove0Hit = 1.4;
+magicMove0Script = _characterGobboMageMoHeal0;
 
 #endregion
-*/
+
+#region State
+
+magicMoveTarget = null;
+
+#endregion
+
 #region Animation
 
 kAnimStanding = s_charGobMag0Stand;
@@ -78,6 +88,7 @@ stats.m_stunMax = 3.0;
 
 aiScriptableInit();
 kAiScriptDefaultStyle = kAiStyle_Custom;
-m_aiCustom_Script = nullScript;//aiGobboPatrolUpdate;
+m_aiCustom_Script = aiGobboPatrolUpdate;
 aiGobboPatrolInit();
 m_aiGobbo_squadPosition = kAiGobboSquadPosition_Support;
+m_aiGobbo_angryOverride = aiGobboMageSquadAngryUpdate;

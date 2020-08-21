@@ -3287,6 +3287,14 @@
             }
         },
         {
+            "Key": "2bf651bd-5c8b-4331-b970-de3fafe15305",
+            "Value": {
+                "id": "c8f2cf0e-b148-47a8-92bf-9392b2733b01",
+                "resourcePath": "scripts\\_characterGobboMageMoHeal0\\_characterGobboMageMoHeal0.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2c69a8db-3414-4058-b012-2a1753187b53",
             "Value": {
                 "id": "695650bd-e91c-48e3-825f-1e5bb614af84",
@@ -6668,6 +6676,14 @@
                 "id": "dcd8d0b5-34ad-4873-b144-6781240c1376",
                 "resourcePath": "sprites\\sui_portraitGoNekkidNeutral\\sui_portraitGoNekkidNeutral.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "58ec443d-8b24-45fb-a55f-3475670dcbd1",
+            "Value": {
+                "id": "d8c7b697-8fdd-4b76-94b8-93612629519c",
+                "resourcePath": "scripts\\aiGobboMageSquadAngryUpdate\\aiGobboMageSquadAngryUpdate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -20273,7 +20289,9 @@
         "b5b071d2-2b67-4b1b-8166-d02e5e3a7c98",
         "5d2092b0-22c7-43c8-a911-4a275a4061ad",
         "b4b2e5c7-d52a-4841-b8fc-2e5107fd05b9",
+        "2bf651bd-5c8b-4331-b970-de3fafe15305",
         "5820995c-7b91-4eaa-bc65-e0af18e93f8f",
+        "58ec443d-8b24-45fb-a55f-3475670dcbd1",
         "686d308c-8b8e-4654-a010-7e46faaf3e8d",
         "5a59fe95-2df5-41df-b46d-342203d6d542",
         "f77d68f2-0b9c-4bf1-807a-46f6a29b41f1",

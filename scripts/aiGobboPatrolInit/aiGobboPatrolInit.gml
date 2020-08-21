@@ -5,6 +5,7 @@ aiNPCGuardInit(); // Start with NPC guard common
 #macro kAiGobboSquadPosition_Support 1
 
 m_aiGobbo_squadPosition = kAiGobboSquadPosition_Attacker;
+m_aiGobbo_angryOverride = null;
 
 // Save initial starting point
 m_aiGobbo_centerX = xstart;
@@ -30,6 +31,7 @@ m_aiGobbo_patrolGuardpoint = null;
 // Squad info
 m_aiGobbo_squadSize = 0;
 m_aiGobbo_squadLeader = null;
+m_aiGobbo_squadId = null;
 m_aiGobbo_squad = array_create(0);
 
 m_aiGobbo_squadMember = -1;

@@ -22,7 +22,7 @@ else if (m_aiCombat_enabled)
 			m_aiGobbo_timer = 0.0; // Reset state and go to normal behavior
 		}
 	}
-	// Actual behavior
+	// Do non-combat behavior
 	else if (!m_aiCombat_angry && !m_aiCombat_alerted)
 	{
 		// Patrolling behavior
@@ -127,6 +127,7 @@ else if (m_aiCombat_enabled)
 		}
 		// That's all for the patrol motion.
 	}
+	// Do alerted behavior
 	else if (!m_aiCombat_angry && m_aiCombat_alerted)
 	{
 		if (true)
@@ -159,9 +160,14 @@ else if (m_aiCombat_enabled)
 				}
 				// Otherwise we go investigate
 				else
-				{
+				{	// Forget it, we immeidately go back to normal stuff
 					m_aiNPC_alertTimer = 0.0;
 					m_aiCombat_alerted = false;
+					
+					// Create the ... emote
+					var emote_fx = inew(o_fxEmote);
+						emote_fx.m_target = id;
+						emote_fx.image_index = 0;
 					//m_aiNPC_alertState = kAiNPCAlertState_Investigate;
 				}
 			}
@@ -172,125 +178,16 @@ else if (m_aiCombat_enabled)
 	}
 	else
 	{
-		aiGobboSquadAngryUpdate();
-	}
-
-	// do angry check
-	//var pl = getPlayer();
-
-	/*m_aiCombat_aggroTimer -= Time.deltaTime;
-
-	// make a list of all enemies that are not on the same team
-	var t_possibleTargetList = array_create(0);
-	with (ob_character)
-	{
-		if (m_team != kTeamNone && (m_team & other.m_team) == 0)
+		if (m_aiGobbo_angryOverride == null)
 		{
-			t_possibleTargetList[array_length_1d(t_possibleTargetList)] = id;
+			aiGobboSquadAngryUpdate();
 		}
-	}
-	
-	// check visibility with each target
-	var t_nextTarget = m_aiCombat_target;
-	for (var i = 0; i < array_length_1d(t_possibleTargetList); ++i)
-	{
-		var t_possibleTarget = t_possibleTargetList[i];
-		if (iexists(t_possibleTarget)
-			&& !t_possibleTarget.isHidden
-			&& !t_possibleTarget.m_isDead && !t_possibleTarget.m_isKOed
-			&& !aiPointInSafeArea(t_possibleTarget.x, t_possibleTarget.y)
-			&& aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
-							   facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
-							   true))
+		else
 		{
-			t_nextTarget = t_possibleTarget; // we have a new best target yay
+			script_execute(m_aiGobbo_angryOverride);
 		}
 	}
 
-	// Enable target switching
-	if (m_aiCombat_target != t_nextTarget)
-	{
-		if (!m_aiCombat_angry || !m_aiCombat_alerted || m_aiCombat_target == null || !iexists(m_aiCombat_target))
-		{	// Switch anger target
-			m_aiCombat_target = t_nextTarget;
-			m_aiCombat_aggroTimer = 0.0; // Refresh aggro.
-		}
-	}
-	// Check if can see the target
-	if (iexists(m_aiCombat_target)
-		&& !m_aiCombat_target.isHidden
-		&& !m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed
-		&& !aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y)
-		&& aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
-						  facingDirection, m_aiCombat_noticeDistance, m_aiCombat_noticeAngle,
-						  true))
-	{
-		m_aiCombat_targetVisible = true;
-		m_aiCombat_targetPosition = [m_aiCombat_target.x, m_aiCombat_target.y];
-		m_aiCombat_targetTrackingLossTime = 0.0;
-	}
-	// If we cannot see the target, we want to stop tracking
-	else if (iexists(m_aiCombat_target)
-		&& !m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed)
-	{
-		m_aiCombat_targetTrackingLossTime += Time.deltaTime;
-		if (m_aiCombat_targetTrackingLossTime > 1.0) // Lost tracking for 1 second
-		{
-			m_aiCombat_targetVisible = false;
-			
-			// Lost target, look for new target.
-			if (m_aiCombat_target != t_nextTarget
-				&& (iexists(t_nextTarget) || m_aiCombat_targetTrackingLossTime > 3.0)
-				)
-			{	// Switch anger target
-				m_aiCombat_target = t_nextTarget;
-				m_aiCombat_aggroTimer = 0.0; // Refresh aggro.
-			}
-		}
-	}
-	// If is dead, immediately stop tracking
-	else
-	{
-		m_aiCombat_targetTrackingLossTime = max(1.0, m_aiCombat_targetTrackingLossTime + Time.deltaTime);
-		m_aiCombat_targetVisible = false;
-		
-		// Look for new target if it exists.
-		if (m_aiCombat_target != t_nextTarget && (iexists(t_nextTarget)))
-		{	// Switch anger target
-			m_aiCombat_target = t_nextTarget;
-			m_aiCombat_aggroTimer = 0.0; // Refresh aggro.
-		}
-	}
-
-	// Update anger state
-	if (iexists(m_aiCombat_target) && m_aiCombat_targetVisible)
-	{
-		if (!m_aiCombat_angry)
-		{
-			if (m_aiCombat_aggroTimer <= 0.0)
-			{
-				// Create the ? emote
-				var emote_fx = inew(o_fxEmote);
-					emote_fx.m_target = id;
-					emote_fx.image_index = 1;
-			}
-					
-			m_aiCombat_aggroTimer += Time.deltaTime * 2.0;
-					
-			if (m_aiCombat_aggroTimer > 1.0)
-			{
-				// Create the ! emote
-				var emote_fx = inew(o_fxEmote);
-					emote_fx.m_target = id;
-					emote_fx.image_index = 2;
-			
-				event_user(kEvent_AIOnAngry12);
-			}
-		}
-	}
-	m_aiCombat_aggroTimer = clamp(m_aiCombat_aggroTimer, 0.0, 1.0);*/
-	
-	//aiNPCGuard_UpdateAggroCommon
 	if (!m_ai_disableAggression)
 	{
 		// If not angry, do notice checks
@@ -321,27 +218,31 @@ else if (m_aiCombat_enabled)
 	m_aiCombat_deaggroTimer -= Time.deltaTime;
 	if (m_aiCombat_angry)
 	{
-		var forced_deaggro = false;
-		if (iexists(m_aiCombat_target))
+		var bTargetExists = iexists(m_aiCombat_target);
+		var bForcedDeaggro = false;
+		if (bTargetExists)
 		{
-			forced_deaggro = aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y);
-		}
-		else
-		{
-			forced_deaggro = true;
+			// Safe areas need the de-aggro to happen immediately, so that no fights can happen in them.
+			// Essential for properly pacing some areas with no-combat zones.
+			bForcedDeaggro = aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y);
 		}
 		
-		if (forced_deaggro
-			|| !iexists(m_aiCombat_target)
+		if (bForcedDeaggro
+			// Target not exists?
+			|| !bTargetExists
+			// Is target in the grass, hidden, and is far enough away?
 			|| (m_aiCombat_target.isHidden && point_distance(x, y, m_aiCombat_target.x, m_aiCombat_target.y) > 48)
-			|| (point_distance(x, y, m_aiCombat_target.x, m_aiCombat_target.y) > 212)
+			// Too far from the target? 
+			|| (point_distance(x, y, m_aiCombat_target.x, m_aiCombat_target.y) > m_aiCombat_combatDistance)
+			// Haven't seen the target for a second?
 			|| (!m_aiCombat_targetVisible && m_aiCombat_targetTrackingLossTime > 1.0)
 			)
 		{
-			m_aiCombat_deaggroTimer += Time.deltaTime * 2.0;
+			m_aiCombat_deaggroTimer += bTargetExists ? Time.deltaTime : (Time.deltaTime * 3.0);
 		
-			if (m_aiCombat_deaggroTimer > kAiCombat_DeAggroTime // Deaggro after 2 seconds of lost target
-				|| forced_deaggro)
+			if (bForcedDeaggro
+				|| m_aiCombat_deaggroTimer >= kAiCombat_DeAggroTime // Deaggro after 2 seconds of lost target
+				)
 			{
 				// Create the ? emote
 				var emote_fx = inew(o_fxEmote);
@@ -352,5 +253,5 @@ else if (m_aiCombat_enabled)
 			}
 		}
 	}
-	m_aiCombat_deaggroTimer = clamp(m_aiCombat_deaggroTimer, 0.0, 2.0);
+	m_aiCombat_deaggroTimer = clamp(m_aiCombat_deaggroTimer, 0.0, kAiCombat_DeAggroTime);
 }
