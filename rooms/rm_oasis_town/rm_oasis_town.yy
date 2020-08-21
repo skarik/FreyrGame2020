@@ -69,7 +69,9 @@
         "3021b7bf-2fe1-4c2d-9b82-cdeaa3275226",
         "9673ea9b-9926-4883-9d06-f3feae83ed2f",
         "c1dd232e-5e0b-4b2f-8048-e6d93043071a",
-        "8d4d27a7-b644-42d8-ac5f-75519bb053c6"
+        "8d4d27a7-b644-42d8-ac5f-75519bb053c6",
+        "74765ca0-ca9c-4e54-aba1-1cb54c44ccce",
+        "12b0b26b-6b94-4017-97ca-fc399b68c214"
     ],
     "IsDnD": false,
     "layers": [
@@ -416,10 +418,58 @@
             "visible": true
         },
         {
+            "name": "Event_CTS",
+            "id": "2fe725ce-92d1-4733-9ea8-e2d6cd310755",
+            "depth": -8,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+                {
+                    "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+                    "name": "Nathan_EVENT01",
+                    "id": "14117477-f6cb-4a43-835d-df882ba7660d",
+                    "depth": -6,
+                    "grid_x": 32,
+                    "grid_y": 32,
+                    "hierarchyFrozen": false,
+                    "hierarchyVisible": true,
+                    "inheritLayerDepth": false,
+                    "inheritLayerSettings": false,
+                    "inheritSubLayers": false,
+                    "inheritVisibility": false,
+                    "instances": [
+{"name": "Nate_6CC72822","id": "74765ca0-ca9c-4e54-aba1-1cb54c44ccce","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "Nate_6CC72822","objId": "f0f37b3e-34f2-4e00-999f-2ec7c3805076","properties": [{"id": "85caeb51-3111-4050-bf89-ee36b0976562","modelName": "GMOverriddenProperty","objectId": "f0f37b3e-34f2-4e00-999f-2ec7c3805076","propertyId": "52815eb4-435d-47fa-9dfd-4e62bf2a2ac8","mvc": "1.0","value": "\"15_nathanevents/00_Event01.txt\""}],"rotation": 0,"scaleX": 1.125,"scaleY": 0.375,"mvc": "1.1","x": 730,"y": 473},
+{"name": "inst_4AEF2297","id": "12b0b26b-6b94-4017-97ca-fc399b68c214","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4AEF2297","objId": "3d9e4094-0494-43b7-a772-d273cc6aa534","properties": [{"id": "0196570f-0177-4c15-8eb0-4721f449d8de","modelName": "GMOverriddenProperty","objectId": "e23108ba-d822-4ce7-b642-e96b4451e6cf","propertyId": "6d156298-12d4-4d52-a083-e8b8d0da4981","mvc": "1.0","value": "Nate_6CC72822"},{"id": "b7ab58ab-ae27-45b1-98e7-58809175ffce","modelName": "GMOverriddenProperty","objectId": "e23108ba-d822-4ce7-b642-e96b4451e6cf","propertyId": "a4278094-38e5-4132-8b40-d02f893c9bee","mvc": "1.0","value": "\"OnBegin\""},{"id": "69d34f71-44bb-44f9-8d69-96528c629797","modelName": "GMOverriddenProperty","objectId": "3d9e4094-0494-43b7-a772-d273cc6aa534","propertyId": "e9aea25d-01f4-44ad-bcd0-412a0d424727","mvc": "1.0","value": "kTriggerOncePerRoomload"},{"id": "66008d5f-ab2e-4200-81ee-5f0a20aa64e2","modelName": "GMOverriddenProperty","objectId": "3d9e4094-0494-43b7-a772-d273cc6aa534","propertyId": "f4c102bc-367b-4e90-8fff-dd7cc02f1f79","mvc": "1.0","value": "True"},{"id": "1a44d34c-07ca-46c6-8d27-d2d99f296ae9","modelName": "GMOverriddenProperty","objectId": "3d9e4094-0494-43b7-a772-d273cc6aa534","propertyId": "873d9495-3524-4c31-aac4-e57e691d3407","mvc": "1.0","value": "kQidNathanEvents"},{"id": "5152d025-ef02-4684-ae2e-058c6d86f772","modelName": "GMOverriddenProperty","objectId": "3d9e4094-0494-43b7-a772-d273cc6aa534","propertyId": "3b380aa5-1bb0-46c5-a230-fe21b66ce778","mvc": "1.0","value": "kCompareOpEqual"},{"id": "ad0189a4-3623-4ecf-a1b2-c5d9cf1b27eb","modelName": "GMOverriddenProperty","objectId": "3d9e4094-0494-43b7-a772-d273cc6aa534","propertyId": "583a4ca4-0073-4980-94dd-af1a022dd458","mvc": "1.0","value": "0"}],"rotation": 0,"scaleX": 0.875,"scaleY": 0.53125,"mvc": "1.1","x": 704,"y": 471}
+                    ],
+                    "layers": [
+
+                    ],
+                    "m_parentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "modelName": "GMRInstanceLayer",
+                    "mvc": "1.0",
+                    "userdefined_depth": false,
+                    "visible": true
+                }
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Collectables",
             "id": "3be76005-914c-402b-b759-7fdab7186766",
-            "depth": -5,
+            "depth": -4,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,

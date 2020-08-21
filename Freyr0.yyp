@@ -679,6 +679,14 @@
             }
         },
         {
+            "Key": "0a1412c1-6546-4c81-a9dc-dda676c46742",
+            "Value": {
+                "id": "81695fc2-a27f-44a7-99d1-5b49b4813a4e",
+                "resourcePath": "datafiles_yy\\cts\\15_nathanevents\\00_Event01.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "0a2a0992-c54d-4ac1-b5bf-8f24e6e2b4b3",
             "Value": {
                 "id": "5a4220c7-ffe4-423b-9d86-c0ff075ebd0f",
@@ -3716,6 +3724,14 @@
                 "id": "b0390f56-8a3f-434c-bd2c-9954b38adf5a",
                 "resourcePath": "objects\\ob_doodadModularBuilding\\ob_doodadModularBuilding.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "31d6d7a0-c4dc-49de-a635-9388ebba4828",
+            "Value": {
+                "id": "72ebd70d-eb41-420c-9438-347d00734292",
+                "resourcePath": "views\\31d6d7a0-c4dc-49de-a635-9388ebba4828.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -10215,6 +10231,14 @@
             }
         },
         {
+            "Key": "8a0ede9e-7085-412c-b874-ac6ab984afd6",
+            "Value": {
+                "id": "5dfc918c-1219-4fe9-a998-37525ea6de08",
+                "resourcePath": "views\\8a0ede9e-7085-412c-b874-ac6ab984afd6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8a2187f6-4054-4cc1-9cbf-c18a1e78abf5",
             "Value": {
                 "id": "4e52c9e7-37c0-45f2-bb0b-eb31f5da58bc",
@@ -10428,6 +10452,14 @@
                 "id": "f0368f5f-6f41-468f-a5c4-ffc6d5dfee2b",
                 "resourcePath": "objects\\o_chBoidCrull\\o_chBoidCrull.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8d458f67-f0b9-4d3b-b4f6-67e8b7ba575e",
+            "Value": {
+                "id": "a20c0cbb-78e5-4c8a-89d2-431a3d77734f",
+                "resourcePath": "datafiles_yy\\group0\\00_Event 01.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
