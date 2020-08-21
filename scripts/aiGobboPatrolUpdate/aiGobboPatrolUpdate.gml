@@ -135,9 +135,11 @@ else if (m_aiCombat_enabled)
 			if (m_aiNPC_alertTimer == 0.0)
 			{
 				// Create the ? emote
-				var emote_fx = inew(o_fxEmote);
+				/*var emote_fx = inew(o_fxEmote);
 					emote_fx.m_target = id;
-					emote_fx.image_index = 1;
+					emote_fx.image_index = 1;*/
+					
+				// Set initial status
 			}
 			m_aiNPC_alertTimer += Time.deltaTime;
 		
@@ -151,12 +153,12 @@ else if (m_aiCombat_enabled)
 				if (m_aiCombat_targetVisible)
 				{
 					// Create the ! emote
-					var emote_fx = inew(o_fxEmote);
+					/*var emote_fx = inew(o_fxEmote);
 						emote_fx.m_target = id;
 						emote_fx.image_index = 2;
-						
+						*/
 					// Force angry now
-					m_aiCombat_angry = true;
+					event_user(kEvent_AIOnAngry12);
 				}
 				// Otherwise we go investigate
 				else

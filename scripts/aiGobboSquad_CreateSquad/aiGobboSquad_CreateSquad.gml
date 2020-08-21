@@ -7,7 +7,7 @@ var squad_id = id;
 
 // Locate squad nearby now:
 var kMaxJoinDistance = 1024;
-with (object_index)
+with (m_aiGobbo_baseObject)
 {
 	// Always add self
 	if (id == source_gobbo)

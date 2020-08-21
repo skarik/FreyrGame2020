@@ -100,7 +100,6 @@ if (m_aiGobbo_squadLeader == id)
 		var squad_size = array_length_1d(m_aiGobbo_squad);
 		var squad_angle_div = 360 / squad_size;
 		var squad_hover_dist = 50 + squad_size * 10;
-		//var squad_angle_offset = Time.time * 10.0;
 		var squad_angle_offset = round(Time.time / 3.0 * 0.3) / 0.3 * 10.0 * 3.0;
 		
 		for (var i = 0; i < squad_size; ++i)
@@ -108,11 +107,21 @@ if (m_aiGobbo_squadLeader == id)
 			var gobbo = m_aiGobbo_squad[i];
 			if (iexists(gobbo))
 			{
+				// If not in hesitate mode, update the motion
 				if (gobbo.m_aiGobbo_squadStateCase != kAiGobboSquadStateCase_Hesitate)
 				{
-					gobbo.m_aiGobbo_squadStateTargetPosition = [
-						m_aiGobbo_squadManage_PositionCenter[0] + lengthdir_x(squad_hover_dist, squad_angle_offset + i * squad_angle_div),
-						m_aiGobbo_squadManage_PositionCenter[1] + lengthdir_y(squad_hover_dist, squad_angle_offset + i * squad_angle_div)];
+					if (gobbo.m_aiGobbo_squadPosition == kAiGobboSquadPosition_Attacker)
+					{
+						gobbo.m_aiGobbo_squadStateTargetPosition = [
+							m_aiGobbo_squadManage_PositionCenter[0] + lengthdir_x(squad_hover_dist, squad_angle_offset + i * squad_angle_div),
+							m_aiGobbo_squadManage_PositionCenter[1] + lengthdir_y(squad_hover_dist, squad_angle_offset + i * squad_angle_div)];
+					}
+					else if (gobbo.m_aiGobbo_squadPosition == kAiGobboSquadPosition_Support)
+					{
+						gobbo.m_aiGobbo_squadStateTargetPosition = [
+							m_aiGobbo_squadManage_PositionCenter[0] + lengthdir_x(squad_hover_dist + 80, squad_angle_offset + i * squad_angle_div),
+							m_aiGobbo_squadManage_PositionCenter[1] + lengthdir_y(squad_hover_dist + 80, squad_angle_offset + i * squad_angle_div)];
+					}
 				}
 				// If not the leader, we want to end any hesitation
 				else if (gobbo != m_aiGobbo_squadLeader)

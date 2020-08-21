@@ -7,6 +7,8 @@ aiNPCGuardInit(); // Start with NPC guard common
 m_aiGobbo_squadPosition = kAiGobboSquadPosition_Attacker;
 m_aiGobbo_angryOverride = null;
 
+m_aiGobbo_baseObject = o_chGobboTest;
+
 // Save initial starting point
 m_aiGobbo_centerX = xstart;
 m_aiGobbo_centerY = ystart;
@@ -27,6 +29,12 @@ aipathInit();
 m_aiGobbo_patrolWaypoint = 0;
 m_aiGobbo_patrol = array_create(0);
 m_aiGobbo_patrolGuardpoint = null;
+
+// Angry state
+m_aiGobbo_angrystateTimer = 1.0;
+m_aiGobbo_angrystateCurrent = 0;
+m_aiGobbo_angrystatePosition = [0, 0];
+m_aiGobbo_angrystateTarget = null;
 
 // Squad info
 m_aiGobbo_squadSize = 0;
