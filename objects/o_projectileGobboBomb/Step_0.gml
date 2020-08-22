@@ -36,10 +36,16 @@ else
 m_fuseTimer -= Time.deltaTime;
 if (m_fuseTimer < 0.0)
 {
-	var circle = instance_create_depth(x, y, depth - 100, o_ptcCircleHit_Outline);
-		circle.fadeSpeed = 3;
-		circle.image_blend = merge_color(c_gold, c_orange, 0.7);
+	var effect = instance_create_depth(x, y, depth - 100, o_fxExplosionGobboBomb);
+		effect.z = z;
 		
+	// Shake screen
+	if (point_on_camera_wide(x, y, 64, 64))
+	{
+		effectScreenShake(3, 1.5, true);
+	}
+		
+	// Deal damage
 	var kDamageRadius = 70;
 	var kDamage = 10;
 	var t_hitList = ds_list_create();

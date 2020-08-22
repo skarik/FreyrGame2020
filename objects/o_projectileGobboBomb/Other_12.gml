@@ -3,6 +3,9 @@
 // Make sure fuse is almost about to blow
 m_fuseTimer = min(m_fuseTimer, 1.0);
 
+// Switch to large sprite
+sprite_index = s_projectileBombBig;
+
 // Hit the wall? Bounce, but with high slowdown
 if (z_height > 0 || m_collisionIsForWall)
 {

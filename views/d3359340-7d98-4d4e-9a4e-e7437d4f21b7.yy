@@ -23,7 +23,11 @@
         "bff29ccb-e21b-4e2b-94b2-e97a58c60a1b",
         "fd9fa3e5-7ee2-4559-85d9-86c972ec21f3",
         "09fb2ad8-e8a5-4a7b-b655-63a4a04e91c2",
-        "d1c71916-5bde-4932-9702-34ec020ea031"
+        "d1c71916-5bde-4932-9702-34ec020ea031",
+        "d9caaef3-c83c-4b53-ac4b-59dd3b05d558",
+        "481a2e83-cca7-4ade-a9ca-0518b957e992",
+        "39057cb0-2e2e-43dd-9b93-074dcde2b746",
+        "c036f6b2-14a9-4a1f-9f7c-ea38c1f5ecda"
     ],
     "filterType": "GMObject",
     "folderName": "Particle",
