@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "06e4d9ae-2405-45d6-beab-a3f9b24299ae",
+            "Value": {
+                "id": "ce111d9f-9cdd-4ae3-9993-d382f1322f60",
+                "resourcePath": "views\\06e4d9ae-2405-45d6-beab-a3f9b24299ae.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "07510a06-bbc4-42ad-a13c-acb4bfd32f3a",
             "Value": {
                 "id": "bb8b2fdd-7e39-407a-a804-97ee52fc5ab9",
@@ -827,6 +835,14 @@
             "Value": {
                 "id": "8f05e54c-8f40-488e-a777-5d79c25f4f38",
                 "resourcePath": "sprites\\s_charOasis0Stand\\s_charOasis0Stand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0c3b88e2-2a42-4f99-bbda-125e89679489",
+            "Value": {
+                "id": "fbdb97a0-13b8-4903-99c6-925b52c5fbc4",
+                "resourcePath": "sprites\\s_projectileBomb\\s_projectileBomb.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6711,6 +6727,14 @@
             }
         },
         {
+            "Key": "59305019-67c2-4b8e-8dd4-21e182f98c16",
+            "Value": {
+                "id": "2535c788-8a17-4a8c-a100-488bd8088362",
+                "resourcePath": "objects\\o_projectileGobboBomb\\o_projectileGobboBomb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "595d7641-71d1-4347-bfcb-487e043bf839",
             "Value": {
                 "id": "2136591c-7cac-406f-9983-ebe0a0be783e",
@@ -10148,6 +10172,14 @@
                 "id": "6acdad2f-ba2f-4ced-8e6d-4bb15aa75574",
                 "resourcePath": "objects\\o_aiPushOnSpawn\\o_aiPushOnSpawn.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "893d6bcc-0e8e-413a-aa16-5d70dda3f13d",
+            "Value": {
+                "id": "646b6469-0e5c-4485-b781-183683b883e2",
+                "resourcePath": "sprites\\s_charGobBomb0Stand\\s_charGobBomb0Stand.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -14151,6 +14183,14 @@
             }
         },
         {
+            "Key": "ba10f5b5-4cc4-4a01-8580-f35889f213d5",
+            "Value": {
+                "id": "c04cfe6a-12a8-41aa-89ef-03c168ab5080",
+                "resourcePath": "scripts\\aiGobboBombSquadAngryUpdate\\aiGobboBombSquadAngryUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ba34647b-445f-481f-be2b-f3a195a0ada9",
             "Value": {
                 "id": "2d4e877a-618b-4022-b791-2fe35d2c98da",
@@ -14924,6 +14964,14 @@
                 "id": "586c8fde-bb33-473f-8e88-474acb576c33",
                 "resourcePath": "sprites\\sui_vendor_button\\sui_vendor_button.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c4e165a4-08d8-4599-99b3-c01167c93394",
+            "Value": {
+                "id": "8ec366ff-758d-4fb6-b2d0-5114b623367b",
+                "resourcePath": "objects\\o_chGobboBomb\\o_chGobboBomb.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -18743,6 +18791,14 @@
             }
         },
         {
+            "Key": "f5695278-83d6-4cbe-843c-389b3f58a67e",
+            "Value": {
+                "id": "0001b668-cd5a-4f24-809f-113b1dafb011",
+                "resourcePath": "scripts\\_characterGobboBombMoBombthrow0\\_characterGobboBombMoBombthrow0.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f56ee91a-c443-4ea5-a4fd-a4dc5b395514",
             "Value": {
                 "id": "9185aa2a-b2f7-4a83-946a-bb2cce56814f",
@@ -20330,8 +20386,10 @@
         "5d2092b0-22c7-43c8-a911-4a275a4061ad",
         "b4b2e5c7-d52a-4841-b8fc-2e5107fd05b9",
         "2bf651bd-5c8b-4331-b970-de3fafe15305",
+        "f5695278-83d6-4cbe-843c-389b3f58a67e",
         "5820995c-7b91-4eaa-bc65-e0af18e93f8f",
         "58ec443d-8b24-45fb-a55f-3475670dcbd1",
+        "ba10f5b5-4cc4-4a01-8580-f35889f213d5",
         "686d308c-8b8e-4654-a010-7e46faaf3e8d",
         "5a59fe95-2df5-41df-b46d-342203d6d542",
         "f77d68f2-0b9c-4bf1-807a-46f6a29b41f1",

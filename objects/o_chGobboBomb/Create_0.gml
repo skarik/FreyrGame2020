@@ -50,10 +50,10 @@ meleeAtk3Key = 0.65;
 meleeAtk3Script = _characterGobboAttack0;
 meleeAtk3Damage = 2;
 
-magicMove0Time = 2.0;
-magicMove0PreCast = 0.5;
-magicMove0Hit = 1.4;
-magicMove0Script = _characterGobboMageMoHeal0;
+magicMove0Time = 0.8;
+magicMove0PreCast = 0.1;
+magicMove0Hit = 0.4;
+magicMove0Script = _characterGobboBombMoBombthrow0;
 
 #endregion
 
@@ -65,15 +65,15 @@ magicMoveTarget = null;
 
 #region Animation
 
-kAnimStanding = s_charGobMag0Stand;
-kAnimWalking = s_charGobMag0Stand;
+kAnimStanding = s_charGobBomb0Stand;
+kAnimWalking = s_charGobBomb0Stand;
 kAnimRolling = sprite_index;
 kAnimAttack1 = s_charGobMag0Cast;
 kAnimStun = s_charGobMag0Stun;
 kAnimKOed = s_charGobMag0KOed;
 
 // Special anim used by gobbo AI
-kAnimSignal = s_charGobMag0Cast;
+kAnimSignal = s_charGobBomb0Stand;
 
 #endregion
 
@@ -84,11 +84,11 @@ stats.m_health = 16.0;
 stats.m_healthMax = stats.m_health;
 stats.m_healthPrev = stats.m_health;
 
-stats.m_stunMax = 3.0;
+stats.m_stunMax = 6.0;
 
 aiScriptableInit();
 kAiScriptDefaultStyle = kAiStyle_Custom;
 m_aiCustom_Script = aiGobboPatrolUpdate;
 aiGobboPatrolInit();
 m_aiGobbo_squadPosition = kAiGobboSquadPosition_Support;
-m_aiGobbo_angryOverride = aiGobboMageSquadAngryUpdate;
+m_aiGobbo_angryOverride = aiGobboBombSquadAngryUpdate;
