@@ -895,6 +895,14 @@
             }
         },
         {
+            "Key": "0dc847e4-6a82-413f-8208-93d7eef071fa",
+            "Value": {
+                "id": "81b78c58-fc45-480f-ba90-6638ab43ed5e",
+                "resourcePath": "sprites\\s_propGobbo\\s_propGobbo.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0de26542-6e58-48cf-8bbb-8f246363fa3b",
             "Value": {
                 "id": "2d1499ea-98f0-462c-9321-0c4b01bfec3f",
