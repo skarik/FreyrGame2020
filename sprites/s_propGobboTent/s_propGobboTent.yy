@@ -2,14 +2,14 @@
     "id": "0dc847e4-6a82-413f-8208-93d7eef071fa",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_propGobbo",
+    "name": "s_propGobboTent",
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 73,
-    "bbox_left": 18,
-    "bbox_right": 89,
-    "bbox_top": 51,
+    "bbox_bottom": 74,
+    "bbox_left": 16,
+    "bbox_right": 91,
+    "bbox_top": 54,
     "bboxmode": 2,
     "colkind": 1,
     "coltolerance": 0,
@@ -66,5 +66,5 @@
     "type": 0,
     "width": 108,
     "xorig": 53,
-    "yorig": 76
+    "yorig": 74
 }
