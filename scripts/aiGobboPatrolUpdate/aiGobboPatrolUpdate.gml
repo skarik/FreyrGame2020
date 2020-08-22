@@ -25,6 +25,11 @@ else if (m_aiCombat_enabled)
 	// Do non-combat behavior
 	else if (!m_aiCombat_angry && !m_aiCombat_alerted)
 	{
+		// Disable AI animation
+		if (moAnimationExternal == true && sprite_index != kAnimSignal)
+		{
+			moAnimationExternal = false;
+		}
 		// Patrolling behavior
 		if (patrol_length > 0)
 		{
@@ -130,6 +135,11 @@ else if (m_aiCombat_enabled)
 	// Do alerted behavior
 	else if (!m_aiCombat_angry && m_aiCombat_alerted)
 	{
+		// Disable AI animation
+		if (moAnimationExternal == true && sprite_index != kAnimSignal)
+		{
+			moAnimationExternal = false;
+		}
 		if (true)
 		{
 			if (m_aiNPC_alertTimer == 0.0)

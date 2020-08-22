@@ -2,22 +2,14 @@
 var l_meleeAtkTimerPrev = meleeAtkTimer;
 meleeAtkTimer += Time.deltaTime;
 
+// Force attack state on
+//isAttacking = true;
+
 // Do checks & motion
 _playerMoCommonAttackPreMove(0.0, false);
 
-// if before the hit time or after the key time, we can dash out of it
-/*if (meleeAtkTimer < meleeAtk0Hit || meleeAtkTimer > meleeAtk0Key)
-{
-	if (meleeDashQueued)
-	{
-		isAttacking = false;
-		meleeDashQueued = false;
-		meleeAtkQueued = false;
-		_playerInteractDoDash();
-	}
-}*/
 // If starting out, begin the particle system
-if (l_meleeAtkTimerPrev <= 0.0 && meleeAtkTimer >= 0.0)
+if (l_meleeAtkTimerPrev < 0.0 && meleeAtkTimer >= 0.0)
 {
 	magicMoveTarget = null;
 }
@@ -26,35 +18,47 @@ if (l_meleeAtkTimerPrev < magicMove0PreCast && meleeAtkTimer >= magicMove0PreCas
 {
 	// Choose a thing to heal at this point
 	magicMoveTarget = id;
+	
+	// Heal the dude we're hiding behind if his HP is lower
+	if (iexists(m_aiGobbo_angrystateTarget) && !m_aiGobbo_angrystateTarget.m_isDead
+		&& (stats.m_health / stats.m_healthMax) > 0.4
+		&& (m_aiGobbo_angrystateTarget.stats.m_health / m_aiGobbo_angrystateTarget.stats.m_healthMax) < (stats.m_health / stats.m_healthMax))
+	{
+		magicMoveTarget = m_aiGobbo_angrystateTarget;
+	}
+	
+	// Create the effect
+	var effect = instance_create_depth(x, y, depth - 100, o_ptcCircleHit_Outline);
+		effect.image_blend = c_white;
 }
 // if passing the hit point, do the damage
 if (l_meleeAtkTimerPrev < magicMove0Hit && meleeAtkTimer >= magicMove0Hit)
 {
-	// Heal!
-	/*var hitboxCenterX = x + lengthdir_x(20, meleeAtkDirection);
-	var hitboxCenterY = y + lengthdir_y(20, meleeAtkDirection);
-	damageHitbox(id,
-				 hitboxCenterX - 12, hitboxCenterY - 12,
-				 hitboxCenterX + 12, hitboxCenterY + 12,
-				 meleeAtk0Damage,
-				 kDamageTypePiercing);*/
 	// do heal at the hit point
 	if (iexists(magicMoveTarget))
-	{
-		magicMoveTarget.stats.m_health += 16;
+	{		
+		magicMoveTarget.m_isKOed = false;
+		magicMoveTarget.moScriptOverride = null;
+		magicMoveTarget.stats.m_health = max(16, magicMoveTarget.stats.m_health + 16);
 		magicMoveTarget.stats.m_stun += 2;
+		magicMoveTarget.m_isStunned = false;
+		
+		// Create the effect
+		var effect = instance_create_depth(magicMoveTarget.x, magicMoveTarget.y, magicMoveTarget.depth - 100, o_ptcCircleHit_Outline);
+			effect.image_blend = c_crystalblue;
 	}
 }
 
-// if past the length, end the attak
-if (meleeAtkTimer > magicMove0Time)
+// if past the length, or stunned, end the spell
+if (meleeAtkTimer > magicMove0Time || m_isStunned)
 {
 	meleeDashQueued = false;
 	meleeAtkQueued = false;
 	meleeAtkTimer = 0.0;
 	if (moScriptOverride == _characterGobboMageMoHeal0)
 	{
-		moScriptOverride = false;
+		moScriptOverride = null;
+		isAttacking = false;
 	}
 	else
 	{

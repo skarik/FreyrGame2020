@@ -8,6 +8,9 @@ dropItems(kDropSeparateChances,[
 	[o_pickupCons_HoneyAbsinthe, 0.25, 1],
 ]);
 
+// Stop anim override
+moAnimationExternal = false;
+
 // Can passthru when we die
 isPassthru = true;
 

@@ -83,8 +83,47 @@ if (m_aiGobbo_angrystateTimer > 1.0)
 	}
 }
 
-// Move to that position
-aipathMoveTo(m_aiGobbo_angrystatePosition[0], m_aiGobbo_angrystatePosition[1]);
+m_aiGobbo_angrystateActionTimer += Time.deltaTime;
+if (m_aiGobbo_angrystateCurrent == 0)
+{
+	// Move to that position
+	aipathMoveTo(m_aiGobbo_angrystatePosition[0], m_aiGobbo_angrystatePosition[1]);
+	
+	// After 3 seconds, check if should do a heal
+	if (m_aiGobbo_angrystateActionTimer > 3.0)
+	{
+		// something's hurt?
+		if ((iexists(m_aiGobbo_angrystateTarget) && m_aiGobbo_angrystateTarget.stats.m_health < m_aiGobbo_angrystateTarget.stats.m_healthMax * 0.8)
+			|| stats.m_health < stats.m_healthMax * 0.8)
+		{
+			// Set up the spell
+			moScriptOverride = magicMove0Script;
+			isAttacking = true;
+			isDashing = false;
+			meleeAtkTimer = 0.0;
+			meleeAtkCurrent = 0;
+			
+			// Go to waiting for spell to end
+			m_aiGobbo_angrystateCurrent = 1;
+		}
+		else
+		{
+			m_aiGobbo_angrystateActionTimer = 0.0;
+		}
+	}
+}
+else if (m_aiGobbo_angrystateCurrent == 1)
+{
+	// Run the heal
+	
+	// When it's done healing, leave
+	if (moScriptOverride != magicMove0Script)
+	{
+		// Go back to moving
+		m_aiGobbo_angrystateCurrent = 0;
+		m_aiGobbo_angrystateActionTimer = random_range(-1.0, 0.0);
+	}
+}
 
 
 #endregion

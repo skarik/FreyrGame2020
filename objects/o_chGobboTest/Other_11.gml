@@ -18,6 +18,7 @@ if (iexists(m_lastDamageSource)
 	if (!m_aiCombat_angry || !iexists(m_aiCombat_target))
 	{
 		m_aiCombat_target = m_lastDamageSource;
+		m_aiCombat_targetPosition = [m_lastDamageSource.x, m_lastDamageSource.y];
 	}
 }
 event_user(kEvent_AIOnAngry12);

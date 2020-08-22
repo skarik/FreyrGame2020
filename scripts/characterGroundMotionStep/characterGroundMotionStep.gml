@@ -7,8 +7,8 @@ if (moEnabled)
 	/*else if (isDashing)
 	{
 		_playerMotionDashing();
-	}
-	else */if (isAttacking)
+	}*/
+	else if (isAttacking)
 	{
 		switch (meleeAtkCurrent)
 		{

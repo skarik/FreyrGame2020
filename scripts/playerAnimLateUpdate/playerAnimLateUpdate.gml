@@ -116,9 +116,7 @@ if (!moAnimationPlayback)
 	}
 	else if (isAttacking)
 	{
-		//kAnimAttack1
 		animationSpeed = 0.0;
-		//animationIndex = floor((image_number / 4.0 - 0.01) * saturate(meleeAtkTimer));
 		// animation handled in movestate (dumbly)
 	}
 	else if (m_isPlayer && m_isTilling)

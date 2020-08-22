@@ -32,6 +32,7 @@ m_aiGobbo_patrolGuardpoint = null;
 
 // Angry state
 m_aiGobbo_angrystateTimer = 1.0;
+m_aiGobbo_angrystateActionTimer = 1.0;
 m_aiGobbo_angrystateCurrent = 0;
 m_aiGobbo_angrystatePosition = [0, 0];
 m_aiGobbo_angrystateTarget = null;
