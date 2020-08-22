@@ -3,6 +3,14 @@ var target_y = argument1;
 var velocity_x = argument2;
 var velocity_y = argument3;
 
+// 
+// Update constants
+var bClampToRoomSize = true;
+if (room == rm_infiniteDesertTest)
+{
+	bClampToRoomSize = false;
+}
+
 //
 // Update focuses:
 _camPlayerUpdateFocus();
@@ -60,8 +68,11 @@ final_x = clamp(final_x, follow_x - m_cam_leeway_x, follow_x + m_cam_leeway_x);
 final_y = clamp(final_y, follow_y - m_cam_leeway_y, follow_y + m_cam_leeway_y);
 
 // Clamp to the room size (needed here for look-ahead)
-final_x = clamp(final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
-final_y = clamp(final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
+if (bClampToRoomSize)
+{
+	final_x = clamp(final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
+	final_y = clamp(final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
+}
 
 // Override with focus
 if (iexists(m_currentFocus0))
@@ -90,8 +101,11 @@ post_final_x += m_cam_focus_offset_x;
 post_final_y += m_cam_focus_offset_y;
 
 // Clamp to the room size
-post_final_x = clamp(post_final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
-post_final_y = clamp(post_final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
+if (bClampToRoomSize)
+{
+	post_final_x = clamp(post_final_x, GameCamera.width / 2,  room_width  - GameCamera.width / 2);
+	post_final_y = clamp(post_final_y, GameCamera.height / 2, room_height - GameCamera.height / 2);
+}
 
 // Apply the rounded position
 GameCamera.x = round(post_final_x);

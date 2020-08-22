@@ -58,6 +58,11 @@
 #macro SEQI_FACING_UP -2
 #macro SEQI_FACING_DOWN 2
 
+#macro kCDirectionLeft -1
+#macro kCDirectionRight 1
+#macro kCDirectionUp -2
+#macro kCDirectionDown 2
+
 #macro SEQWAIT_INPUT 0
 #macro SEQWAIT_TIME 1
 #macro SEQWAIT_PLAYERDISTANCE 2

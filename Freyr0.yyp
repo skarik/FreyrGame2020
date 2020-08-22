@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "05d26ea6-b4b7-42a2-baaa-c7c8d2701af0",
+            "Value": {
+                "id": "b00b1f40-43d8-4c69-a310-ef57ac123e38",
+                "resourcePath": "views\\05d26ea6-b4b7-42a2-baaa-c7c8d2701af0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "05e147de-9301-4eed-b7b9-8d6149d39e95",
             "Value": {
                 "id": "c70be99c-bee2-495d-94d4-ff5e0d09299d",
@@ -628,6 +636,14 @@
                 "id": "d28950a0-d9a0-4a05-9e43-bf32e0f08e2c",
                 "resourcePath": "sprites\\s_propBarnacleRig\\s_propBarnacleRig.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "097052f4-74a1-41f9-998f-1a0f235ada8e",
+            "Value": {
+                "id": "804e435f-4f07-4415-8a16-6b802a97aa9e",
+                "resourcePath": "scripts\\abbox_create\\abbox_create.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3575,6 +3591,14 @@
             }
         },
         {
+            "Key": "2eafb61f-7e43-434d-aff4-2ac4419ca7c9",
+            "Value": {
+                "id": "14f161a6-1f1e-45bd-b9b7-4f0b22c65f22",
+                "resourcePath": "rooms\\rmPCG_desert0\\rmPCG_desert0.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "2ee1457e-1fdc-4761-9948-1b1d575f6958",
             "Value": {
                 "id": "c8e4b2fe-c1d9-4cad-bf9d-54381bb1dd4e",
@@ -4495,6 +4519,14 @@
             }
         },
         {
+            "Key": "3b15b54c-8023-4368-b7b2-dac77a80600f",
+            "Value": {
+                "id": "f68d5124-8b6c-4397-a5eb-fa81d6885515",
+                "resourcePath": "scripts\\abbox_bottom\\abbox_bottom.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3b52ae70-ca26-4a06-9386-cc811a3e5044",
             "Value": {
                 "id": "89deba3e-bc0e-452f-baef-f07c960b7cba",
@@ -4684,6 +4716,14 @@
                 "id": "a83e43c6-64ee-4539-90b5-3175481e670b",
                 "resourcePath": "views\\3d2c7cf8-43b4-454c-ade9-0c9799245acd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3d4ae685-563a-4fa0-a03e-d0a9a7ff12d0",
+            "Value": {
+                "id": "057bb58f-92b2-4469-af97-e10db7e1d06f",
+                "resourcePath": "objects\\o_randomDesertManager\\o_randomDesertManager.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5399,6 +5439,14 @@
             }
         },
         {
+            "Key": "4709b8fc-3d39-4c29-bc38-9f781829ad94",
+            "Value": {
+                "id": "d2aa12b8-b947-49d0-bd98-648ade5bbd18",
+                "resourcePath": "views\\4709b8fc-3d39-4c29-bc38-9f781829ad94.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "472c26d6-6fb6-4a44-98fb-2befaed06071",
             "Value": {
                 "id": "954166de-45cf-4e8b-a7d7-1ec70e3ccdfb",
@@ -5779,6 +5827,14 @@
             "Value": {
                 "id": "da060554-c052-408f-a7d5-b839392ee229",
                 "resourcePath": "scripts\\questDebugDisplayFlags\\questDebugDisplayFlags.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4b802096-294a-4468-bd68-ba6466c21124",
+            "Value": {
+                "id": "54092a4b-6203-40f3-a1bf-e0542953f620",
+                "resourcePath": "scripts\\procGenDesertAddRoom\\procGenDesertAddRoom.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6647,6 +6703,14 @@
             }
         },
         {
+            "Key": "5738e1dc-948d-415b-a709-b1e31b269f19",
+            "Value": {
+                "id": "e7940480-77a4-4f0f-aa45-157c0981df9e",
+                "resourcePath": "views\\5738e1dc-948d-415b-a709-b1e31b269f19.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "57a28fc7-8f76-4c0a-b910-8ec7025fdf43",
             "Value": {
                 "id": "57f88df4-f93f-4a98-aac5-4dae20c232c6",
@@ -7495,6 +7559,22 @@
             }
         },
         {
+            "Key": "641ab5af-af74-49e3-b7b2-a67eab205cb3",
+            "Value": {
+                "id": "f0429d3c-5e11-4b03-8750-73d08d50e175",
+                "resourcePath": "views\\641ab5af-af74-49e3-b7b2-a67eab205cb3.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "64284260-3219-4dad-a0c8-812db036446c",
+            "Value": {
+                "id": "6350361d-8d31-4f7f-adfa-4cefe3bedad7",
+                "resourcePath": "scripts\\abbox_contains\\abbox_contains.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "64643f07-8409-4ba0-bd44-cc4d4ec65078",
             "Value": {
                 "id": "e8da2817-6832-4173-9ae9-bc00003df1a8",
@@ -8076,6 +8156,14 @@
                 "id": "0ada2505-2963-4cc4-b2c2-520b7aa70ec6",
                 "resourcePath": "sprites\\sbg_cloudlayer0\\sbg_cloudlayer0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6bf6d0b6-b985-4997-bc00-bfb494c8c562",
+            "Value": {
+                "id": "93ac119d-34e2-4200-91b4-3095af035858",
+                "resourcePath": "views\\6bf6d0b6-b985-4997-bc00-bfb494c8c562.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -11591,6 +11679,14 @@
             }
         },
         {
+            "Key": "9a31f6c9-38bf-428f-b92e-fb80a406b5f7",
+            "Value": {
+                "id": "c740b626-d5be-42c5-aac5-9c9c5cf1cfac",
+                "resourcePath": "rooms\\rm_infiniteDesertTest\\rm_infiniteDesertTest.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "9a373227-a9dc-4993-9b94-157ac644dadb",
             "Value": {
                 "id": "3e82d124-8689-4325-8be6-83971d561045",
@@ -12015,6 +12111,14 @@
             }
         },
         {
+            "Key": "9f34665e-087a-450d-995b-fea8a5c59e69",
+            "Value": {
+                "id": "17869f62-b9e3-41bb-b04a-7b40228ba85a",
+                "resourcePath": "scripts\\abbox_right\\abbox_right.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9f528421-cf3a-4c53-82a3-94c42f4ca95c",
             "Value": {
                 "id": "d34e14ac-54f0-4d42-9b58-9369275b8a67",
@@ -12380,6 +12484,14 @@
                 "id": "8cca67d7-ad3d-4bc6-99cc-387d8655f65d",
                 "resourcePath": "scripts\\surface_create_from_surface_params\\surface_create_from_surface_params.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a4598b58-c24a-40c0-8c3d-f5794abdf851",
+            "Value": {
+                "id": "ceaf7373-c30c-4c1c-8a9d-1b01a173b2a9",
+                "resourcePath": "views\\a4598b58-c24a-40c0-8c3d-f5794abdf851.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -13239,6 +13351,14 @@
             }
         },
         {
+            "Key": "ae3a784d-a632-4859-9f60-b2d1353f3b54",
+            "Value": {
+                "id": "f2825d04-24f7-4e07-bfd2-4ddf027b0a63",
+                "resourcePath": "scripts\\procRoomGetInstances\\procRoomGetInstances.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ae3d865e-9647-4b6e-a11c-db7b952d10cb",
             "Value": {
                 "id": "8fb4e045-c962-4cc1-9b09-65af23cd34d0",
@@ -13847,6 +13967,14 @@
             }
         },
         {
+            "Key": "b5dbbcb0-3408-4732-b93a-7b45e4c24027",
+            "Value": {
+                "id": "f5c690c2-093e-4029-9d11-d91fd9b8bf57",
+                "resourcePath": "sprites\\ssy_system\\ssy_system.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b612461d-1e9a-42c2-81f4-916e6148abde",
             "Value": {
                 "id": "ced493d2-4aa6-4d8b-8a67-38373b4ac51d",
@@ -14359,6 +14487,14 @@
             }
         },
         {
+            "Key": "bcf04cd4-5bd5-4aea-9010-f85f327b6926",
+            "Value": {
+                "id": "76bed744-628a-4d15-98ad-c493eff0d3c5",
+                "resourcePath": "scripts\\abbox_collides\\abbox_collides.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bcf8f3e5-e6b1-42f3-90d9-0da9aebf631f",
             "Value": {
                 "id": "2f7c6ef2-1ca2-40c7-a74b-dc266fc4ab47",
@@ -14748,6 +14884,14 @@
                 "id": "94c21052-82e9-47bb-8bdc-8b20263e7626",
                 "resourcePath": "views\\c2228b00-5bf2-4661-9276-9e3e3989569a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c2305ac7-66e4-44cc-8ff1-19dbe827ac04",
+            "Value": {
+                "id": "0111cd30-14c2-46a3-8fba-b14b5fd9a27d",
+                "resourcePath": "scripts\\procRoomGetBBox\\procRoomGetBBox.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -15495,6 +15639,14 @@
             }
         },
         {
+            "Key": "c9b9bc82-b074-4d76-b534-baa9ab23f57c",
+            "Value": {
+                "id": "2e8175af-37b3-41a6-b529-8cf33c8df418",
+                "resourcePath": "views\\c9b9bc82-b074-4d76-b534-baa9ab23f57c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c9c429fc-c284-4d9d-b4be-0de362e9b50d",
             "Value": {
                 "id": "935dfe0b-5dc5-41d9-8a37-5aeb13f99495",
@@ -15796,6 +15948,14 @@
                 "id": "1ab99d7f-0b16-47bd-9e1f-1fba4c9c4cc8",
                 "resourcePath": "objects\\ob_ctsCg\\ob_ctsCg.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "cd8e414c-3b6d-45ee-8af7-0bb701dfaeb3",
+            "Value": {
+                "id": "947699c2-5202-47b4-b790-60a6e42c8a1e",
+                "resourcePath": "scripts\\procRoomGetTransitions1\\procRoomGetTransitions1.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -16175,6 +16335,14 @@
             }
         },
         {
+            "Key": "d2f15f01-28fd-4900-ba85-a0d137c9dfef",
+            "Value": {
+                "id": "3d4b36e4-88ad-454b-b293-d7aea3645748",
+                "resourcePath": "scripts\\abbox_center\\abbox_center.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d30087c7-ca29-450c-a311-38de5b8be130",
             "Value": {
                 "id": "87475764-ad7c-4b9d-ac64-9c1bb1bb9fec",
@@ -16292,6 +16460,14 @@
                 "id": "4545a954-bfe8-491e-8f29-0e6ca97221a1",
                 "resourcePath": "sprites\\s_charHeroSleepSnore\\s_charHeroSleepSnore.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d47e5f36-fe76-415a-8601-cf3da2646e14",
+            "Value": {
+                "id": "b860fc56-1b96-413b-92b7-5ccbd602a62a",
+                "resourcePath": "scripts\\abbox_encompassTo\\abbox_encompassTo.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -17660,6 +17836,14 @@
                 "id": "ada917e9-7fce-4ccc-af92-9dca0ab1c896",
                 "resourcePath": "sprites\\sui_inventory_bag_1\\sui_inventory_bag_1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e4944f1e-600e-444e-a817-44d328acb2fc",
+            "Value": {
+                "id": "56a57be5-c3d5-4819-b339-34f1d14bd7fe",
+                "resourcePath": "views\\e4944f1e-600e-444e-a817-44d328acb2fc.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -19463,6 +19647,14 @@
             }
         },
         {
+            "Key": "fb412a6a-5612-48c2-ad3f-a6f976af12a2",
+            "Value": {
+                "id": "6c78db7f-aa6c-4662-b683-dd94ba1f6e22",
+                "resourcePath": "scripts\\procRoomGetTransitions\\procRoomGetTransitions.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb5f3748-c354-4d36-9b20-6aae4f7a34f6",
             "Value": {
                 "id": "a73860ce-091d-4d12-ad92-80edb751560f",
@@ -20582,6 +20774,18 @@
         "bec3ceae-7c4f-4e88-9106-d1e1aca198c5",
         "713b0ae6-ce5f-4589-a961-872a16972175",
         "9dc44fca-759b-4851-a2ac-74f13b57f96c",
+        "fb412a6a-5612-48c2-ad3f-a6f976af12a2",
+        "cd8e414c-3b6d-45ee-8af7-0bb701dfaeb3",
+        "c2305ac7-66e4-44cc-8ff1-19dbe827ac04",
+        "ae3a784d-a632-4859-9f60-b2d1353f3b54",
+        "4b802096-294a-4468-bd68-ba6466c21124",
+        "097052f4-74a1-41f9-998f-1a0f235ada8e",
+        "64284260-3219-4dad-a0c8-812db036446c",
+        "d2f15f01-28fd-4900-ba85-a0d137c9dfef",
+        "d47e5f36-fe76-415a-8601-cf3da2646e14",
+        "9f34665e-087a-450d-995b-fea8a5c59e69",
+        "3b15b54c-8023-4368-b7b2-dac77a80600f",
+        "bcf04cd4-5bd5-4aea-9010-f85f327b6926",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""
