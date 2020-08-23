@@ -47,7 +47,6 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 		if (do_collision)
 		{
 			var collider = instance_create_depth(doodad.x, doodad.y, 0, ob_colliderDepth);
-				//collider.z = layerDepth;
 				collider.z = doodad.z;
 				collider.sprite_index = doodad.sprite_index;
 				collider.image_index = doodad.image_index;
