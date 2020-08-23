@@ -1,4 +1,4 @@
-///@function abbox_create(bbox, avec2 position)
+///@function abbox_contains(bbox, avec2 position)
 ///@param bbox {aBBox}
 ///@param position {aVec2}
 

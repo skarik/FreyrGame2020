@@ -134,4 +134,7 @@ if (Debug.visible)
 	draw_text(x - 16, y - 64, "fce:" + string(round(facingDirection)));
 	draw_text(x + 24, y - 64, "aim:" + string(round(aimingDirection)));
 	draw_text(x - 16, y - 72, "am2:" + string(round(aiming2Direction)));
+	
+	draw_text(x - 4, y + 16, "x: " + string(x));
+	draw_text(x - 4, y + 24, "y: " + string(y));
 }

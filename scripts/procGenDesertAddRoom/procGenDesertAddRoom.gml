@@ -11,6 +11,8 @@ nextBbox = abbox_create(positionNewRoom[0], positionNewRoom[1], nextBbox[2], nex
 
 // Copy the layers and send them over
 var nextLayers = [];
+var nextCollisionMaps = [];
+var nextInstances = [];
 
 layer_set_target_room(nextRoom);
 var all_layers = layer_get_all();
@@ -18,6 +20,7 @@ var layer_count = array_length_1d(all_layers);
 for (var i = 0; i < layer_count; ++i)
 {
 	var currentLayer = all_layers[i];
+	var layerName = layer_get_name(currentLayer);
 	
 	var tilemap = layer_tilemap_get_id(currentLayer);
 	if (layer_tilemap_exists(currentLayer, tilemap))
@@ -47,11 +50,21 @@ for (var i = 0; i < layer_count; ++i)
 		// Save the layer
 		nextLayers[array_length_1d(nextLayers)] = nextLayer;
 		
+		// Update tileset based on properties
+		layer_reset_target_room();
+		if (layerTileset == tilesetCollision)
+		{
+			nextCollisionMaps[array_length_1d(nextCollisionMaps)] = nextTilemap;
+			global.collidable_layers[array_length_1d(global.collidable_layers)] = nextTilemap;
+			layer_set_visible(nextLayer, false);
+		}
+		
+		// Go back to room-copy mode
 		layer_set_target_room(nextRoom);
 	}
 	else
 	{
-		var layerName = layer_get_name(currentLayer);
+		
 		// Depending on the layer name, we may need to do unique startup
 		
 		var elements = layer_get_all_elements(currentLayer);
@@ -75,5 +88,7 @@ var new_room = [nextRoom,
 				nextBbox,
 				false,
 				nextLayers,
-				[]];
+				nextInstances,
+				iRoomIndex,
+				nextCollisionMaps];
 ds_list_add(allRooms, new_room);

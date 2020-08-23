@@ -2,6 +2,8 @@
 
 initialized = false;
 
+firstFrame = true;
+
 // Only allow single
 if (instance_number(object_index) > 1)
 {

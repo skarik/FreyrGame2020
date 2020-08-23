@@ -70,28 +70,28 @@ for (var i = 0; i < layer_count; ++i)
 				
 				if (sprite_x < 16)
 				{
-					if (array_contains(transitions, kCDirectionLeft))
+					//if (!array_contains(transitions, kCDirectionLeft))
 					{
 						transitions[array_length_1d(transitions)] = kCDirectionLeft;
 					}
 				}
 				else if (sprite_x > abbox_right(room_bb) - 16)
 				{
-					if (array_contains(transitions, kCDirectionRight))
+					//if (!array_contains(transitions, kCDirectionRight))
 					{
 						transitions[array_length_1d(transitions)] = kCDirectionRight;
 					}
 				}
 				else if (sprite_y < 16)
 				{
-					if (array_contains(transitions, kCDirectionUp))
+					//if (!array_contains(transitions, kCDirectionUp))
 					{
 						transitions[array_length_1d(transitions)] = kCDirectionUp;
 					}
 				}
 				else if (sprite_y > abbox_bottom(room_bb) - 16)
 				{
-					if (array_contains(transitions, kCDirectionDown))
+					//if (!array_contains(transitions, kCDirectionDown))
 					{
 						transitions[array_length_1d(transitions)] = kCDirectionDown;
 					}
