@@ -37,6 +37,13 @@
 #macro kEvent_DoorOpen1 1
 #macro kEvent_DoorClose2 2
 
+#macro kEvent_UsableOnUse0 0
+#macro kEvent_UsableOnPickup1 1
+#macro kEvent_UsableOnPutdown2 2
+#macro kEvent_UsableOnThrown3 3
+#macro kEvent_UsableOnHitByYeetable4 4
+#macro kEvent_UsableOnThrownLanding6 6
+
 #macro kEvent_PathnodeOnPass1 1
 
 #macro kEvent_ScreenEffectOnGame0 0

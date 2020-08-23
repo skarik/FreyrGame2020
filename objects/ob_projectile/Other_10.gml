@@ -22,6 +22,25 @@ if (iexists(collision_character))
 	}
 }
 
+// Check against breakables:
+var collision_breakable = collision_rectangle(
+	x - 4, y - 4, x + 4, y + 4, ob_doodadBreakable, false, true);
+	
+if (iexists(collision_breakable))
+{
+	if (iexists(m_owner)) {
+		var projectile = id;
+		with (m_owner) {
+			damageTargetBreakable(collision_breakable, projectile.m_damage, projectile.m_damageType, true, true);
+		}
+	}
+	else {
+		damageTargetBreakable(collision_breakable, m_damage, m_damageType, true, true);
+	}
+	event_user(1);
+	exit;
+}
+
 // Check against the collider:
 //if (iexists(collision_rectangle(x - 4, y - 4, x + 4, y + 4, ob_collider, false, true)))
 if (collision3_point_meeting(x, y, z, true)

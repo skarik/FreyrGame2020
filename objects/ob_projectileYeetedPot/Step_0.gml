@@ -21,19 +21,33 @@ if (m_moving)
 	if (m_onGround)
 	{
 		effectOnGroundStep(x, y, point_direction(0, 0, xspeed, yspeed));
+		
+		if (avec2_sqrlength([xspeed, yspeed]) <= 0.0)
+		{
+			m_moving = false;
+		}
 	}
 }
 else
 {
-	/*var item = instance_create_depth(x, y, depth - 1, m_itemObject);
-		item.z = z;
-		item.z_height = z_height;
+	//var item = instance_create_depth(x, y, depth - 1, m_itemObject);
+	//	item.z = z;
+	//	item.z_height = z_height;
+	instance_activate_object(m_potInstance);
+	m_potInstance.x = x;
+	m_potInstance.y = y;
+	m_potInstance.z = z;
+	m_potInstance.z_height = z_height;
+	with (m_potInstance)
+	{
+		event_user(kEvent_UsableOnThrownLanding6);
+	}
 		
-	idelete(this);*/
+	idelete(this);
 }
 
 // Run down fuse timer. Explode at the end
-m_fuseTimer -= Time.deltaTime;
+/*m_fuseTimer -= Time.deltaTime;
 if (m_fuseTimer < 0.0)
 {
 	var effect = instance_create_depth(x, y, depth - 100, o_fxExplosionGobboBomb);
@@ -92,4 +106,4 @@ if (m_fuseTimer < 0.0)
 	ds_list_destroy(t_hitList);
 	
 	idelete(this);
-}
+}*/

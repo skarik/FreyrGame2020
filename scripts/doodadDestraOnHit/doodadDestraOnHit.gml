@@ -24,8 +24,11 @@ if (particle_type != null)
 	}
 }
 
-if (m_health <= 0.0)
+if (m_health <= 0.0 && !m_wasDestroyed)
 {
+	// Mark destroyed so we don't get into an infinite loop
+	m_wasDestroyed = true;
+	
 	// Create the drops on death
 	var drops = doodadDestraGenerateDrops();
 	if (drops != null)

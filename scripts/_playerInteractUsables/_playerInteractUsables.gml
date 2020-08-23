@@ -49,7 +49,7 @@ if (!iexists(currentHeldUsable) || !m_isHolding)
 			{
 				with (currentUsable)
 				{
-					event_user(0);
+					event_user(kEvent_UsableOnUse0);
 				}
 			}
 			else
@@ -58,7 +58,7 @@ if (!iexists(currentHeldUsable) || !m_isHolding)
 				m_isHolding = true;
 				with (currentUsable)
 				{
-					event_user(1);
+					event_user(kEvent_UsableOnPickup1);
 				}
 			}
 			
@@ -87,7 +87,9 @@ else
 		// Behavior for throwing/dropping
 		if (canMove && !isBusyInteracting && useButton.pressed)
 		{
-			if (!currentHeldUsable.m_canThrow)
+			if (!currentHeldUsable.m_canThrow
+				|| sqr(xspeed) + sqr(yspeed) <= 0.1
+				|| sqr(xAxis.value) + sqr(yAxis.value) <= 0.1)
 			{
 				currentHeldUsable.x = round(x + lengthdir_x(10, aimingDirection));
 				currentHeldUsable.y = round(y + lengthdir_y(10, aimingDirection));
@@ -95,15 +97,17 @@ else
 				currentHeldUsable.z_height = 0;
 				with (currentHeldUsable)
 				{
-					event_user(2);
+					event_user(kEvent_UsableOnPutdown2);
 				}
 			}
 			else
 			{
-				// TODO: Throw object
+				currentHeldUsable.x = round(x + lengthdir_x(8, aimingDirection));
+				currentHeldUsable.y = round(y + lengthdir_y(8, aimingDirection));
+				//currentHeldUsable.z_height = 0;
 				with (currentHeldUsable)
 				{
-					event_user(3);
+					event_user(kEvent_UsableOnThrown3);
 				}
 			}
 			// drop it

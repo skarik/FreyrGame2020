@@ -1,9 +1,6 @@
 /// @desc Draw with shadow
 
-if (!sprite_exists(sprite_index))
-	return;
-
-var dx, dy;
+/*var dx, dy;
 dx = round(x);
 dy = round(y);
 var shadow_pct = max(0.75, sprite_height / 32.0);
@@ -24,4 +21,6 @@ draw_sprite_ext(sprite_index, image_index,
 				image_xscale, image_yscale,
 				image_angle,
 				image_blend,
-				image_alpha);
+				image_alpha);*/
+				
+event_perform_object(m_potInstance.object_index, ev_draw, 0);

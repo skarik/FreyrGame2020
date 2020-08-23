@@ -1351,6 +1351,14 @@
             }
         },
         {
+            "Key": "133990ab-b00c-47fd-a20c-6c957692aad4",
+            "Value": {
+                "id": "0c920486-5f49-4db1-bf12-367566a67f69",
+                "resourcePath": "objects\\ob_projectileYeetedPot\\ob_projectileYeetedPot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "13451517-122d-495a-b84b-e3f5f7f1c599",
             "Value": {
                 "id": "446d6162-7659-405c-bb3d-7797813b8eb0",
@@ -6175,6 +6183,14 @@
             }
         },
         {
+            "Key": "50674dc6-ae40-46f9-82ac-cd682007b72b",
+            "Value": {
+                "id": "6765c8de-34fa-426b-a2ea-f3e076a5166f",
+                "resourcePath": "sprites\\s_propDesertBarrelSmol0\\s_propDesertBarrelSmol0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "506d3e53-6086-4325-8961-525da5702513",
             "Value": {
                 "id": "3c6c88a5-0a91-4fc9-923a-9c99c63fb933",
@@ -7588,6 +7604,14 @@
                 "id": "6350361d-8d31-4f7f-adfa-4cefe3bedad7",
                 "resourcePath": "scripts\\abbox_contains\\abbox_contains.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "643dfa94-44bc-4827-9484-451da0c9c791",
+            "Value": {
+                "id": "4f965028-02b8-48d0-9cf1-f2d782425713",
+                "resourcePath": "objects\\o_potThrowableExplosiveBarrel\\o_potThrowableExplosiveBarrel.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -9743,6 +9767,14 @@
             }
         },
         {
+            "Key": "816cb551-40c8-46c7-8fe1-690c53636087",
+            "Value": {
+                "id": "ae5cb32e-bfb9-420c-a951-35dba1ec6f2c",
+                "resourcePath": "sprites\\s_propDesertBarrelMeed1\\s_propDesertBarrelMeed1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "817cd1e5-b563-4d8d-a2c9-0fe83e94cfe8",
             "Value": {
                 "id": "f17190bb-0ac8-4c72-bb28-f0023299d5dd",
@@ -10188,6 +10220,14 @@
                 "id": "bb4b225e-de22-4f86-96e6-1c27505a27b4",
                 "resourcePath": "views\\8741f56a-64d5-42d3-a840-40ed428decea.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "876c3f58-ae51-4a71-869c-9263e4efe880",
+            "Value": {
+                "id": "0f6653a6-2353-4340-8a7d-4e0509b5d1d8",
+                "resourcePath": "scripts\\damageTargetBreakable\\damageTargetBreakable.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -11940,6 +11980,14 @@
                 "id": "91e1202f-78a0-4258-b7ee-996b85b79fbc",
                 "resourcePath": "sprites\\s_itemOldJournal\\s_itemOldJournal.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9d180e11-57f7-440f-bc7a-32021b9bf026",
+            "Value": {
+                "id": "8a07b793-42a5-41ed-8ae8-9829edee6f1e",
+                "resourcePath": "objects\\o_potThrowableBarrel\\o_potThrowableBarrel.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -17063,6 +17111,14 @@
             }
         },
         {
+            "Key": "dad50d7b-12f1-4672-9cf1-571463e970ff",
+            "Value": {
+                "id": "1c7e7c98-34f0-4ec0-ab7f-4250c4708f2a",
+                "resourcePath": "sprites\\s_propDesertBarrelSmol1\\s_propDesertBarrelSmol1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dae7e484-2889-4745-aad1-504a00474cf5",
             "Value": {
                 "id": "d82a5ed3-b497-43f6-b7e1-cef2b60a7b6f",
@@ -19007,6 +19063,14 @@
             }
         },
         {
+            "Key": "f3cf39f0-071b-48be-a1fd-eaa3d4f44460",
+            "Value": {
+                "id": "7b9e85ae-f181-4ecd-b782-08052b5c9873",
+                "resourcePath": "sprites\\s_propDesertBarrelMeed0\\s_propDesertBarrelMeed0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f3e4fe0e-659a-4112-81c2-d414ca067953",
             "Value": {
                 "id": "518530a0-dda9-42a4-ac0a-228e0792b3f2",
@@ -20618,6 +20682,7 @@
         "e2a546ce-ad19-4fd2-8c93-0948bf84d891",
         "d3270700-d484-400f-abee-692a7825e513",
         "a09f9ec6-3836-4a85-a47e-cc0d5fcf33a0",
+        "876c3f58-ae51-4a71-869c-9263e4efe880",
         "e02b8b61-3840-4665-8de5-7ec3350944cd",
         "33a16ba5-1540-47fa-b42f-f12adc454fba",
         "dc286b8b-27f9-4d4a-be5b-2dde37592d1a",
