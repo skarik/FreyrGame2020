@@ -96,13 +96,14 @@ surface_free(l_playerBuffer);
 // Draw the held item
 if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(inventory.belt))
 {
-	var balance_delta = [m_itemBalancePivot[0] - x, m_itemBalancePivot[1] - y];
+	var balance_delta = m_itemBalanceSpringOffset;
 	var held_item = inventory.belt[inventory.belt_selection];
-	if (held_item.onUse == generalYeetableOnUse)
+	if (held_item.onUse == generalYeetableOnUse
+		&& held_item.object_index != o_pickupJunk_Rock)
 	{
 		var item_sprite = object_get_sprite(held_item.object);
 		var balance_step_x = 0.23 * balance_delta[0] + 0.4 * (sin(Time.time) + sin(Time.time * 0.74));
-		var balance_step_y = (8 - balance_delta[1] * 0.1) - sqrt(abs(balance_step_x));
+		var balance_step_y = (8 - balance_delta[1] * 0.1) - sqr(abs(balance_step_x)) * 0.25;
 		for (var i = 0; i < held_item.count; ++i)
 		{
 			draw_sprite(item_sprite, 0,
