@@ -2,7 +2,7 @@
     "id": "f5b29495-05f6-4f8d-aabb-dcf94ae6b44f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_collectScallop1",
+    "name": "o_collectMedBush",
     "eventList": [
         {
             "id": "e2f8dbce-e95d-4f92-b7d0-88aa1080e0de",

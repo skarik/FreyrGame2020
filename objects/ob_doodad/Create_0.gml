@@ -8,7 +8,6 @@ index = null;
 
 depthInit();
 
-//alarm[0] = 5;
 m_alarmCulling = 5;
 
 drawbuf_set_reflection(false);

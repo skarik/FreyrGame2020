@@ -1,7 +1,3 @@
-depthUpdate();
-
-//event_user(0);
-
 if (m_alarmCulling-- <= 0)
 {
 	event_user(0);

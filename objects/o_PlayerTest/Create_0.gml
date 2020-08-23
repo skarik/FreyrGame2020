@@ -62,6 +62,9 @@ m_manaMax = 20;
 
 m_itemBalancePivot = [x, y];
 m_itemBalanceSpeed = [0, 0];
+m_itemBalanceSpringOffset = [0, 0];
+m_itemBalanceSpringOffsetPrevious = [0, 0];
+m_itemBalanceSpringTimestep = 0.0;
 
 m_perfectCounterTarget = null;
 m_perfectCounterFreezer = null; // Freeze time object

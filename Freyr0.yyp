@@ -7943,6 +7943,14 @@
             }
         },
         {
+            "Key": "68bdc00d-914c-491a-9cfc-eaf24c86550d",
+            "Value": {
+                "id": "ac2a0a17-a28a-445d-9f45-f39b3d1fc1b2",
+                "resourcePath": "scripts\\avec2_add\\avec2_add.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "68c38816-3a4b-49cd-b0f8-a5cad71d8cf9",
             "Value": {
                 "id": "2234d6a2-7417-49e1-a7f5-df64836e47d6",
@@ -10379,6 +10387,14 @@
             "Value": {
                 "id": "5eefc985-6edb-43fe-b280-5abecb9a7962",
                 "resourcePath": "scripts\\color_multiply\\color_multiply.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "89e7310c-6cd7-4d4b-9dfb-9ef78cd3d98d",
+            "Value": {
+                "id": "bf083407-53a0-459b-8c91-f6ff17256a15",
+                "resourcePath": "scripts\\avec2_sqrlength\\avec2_sqrlength.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -12971,6 +12987,14 @@
             "Value": {
                 "id": "f74f7148-99be-4dfe-8ce4-ae567de4040e",
                 "resourcePath": "sprites\\s_assetRRug0\\s_assetRRug0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a9f5ae78-0687-4e50-941b-f5158ab5be31",
+            "Value": {
+                "id": "adfaf80b-edb2-4542-b8dd-a34d3d0451ef",
+                "resourcePath": "sprites\\ssy_debug\\ssy_debug.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -17215,6 +17239,14 @@
             }
         },
         {
+            "Key": "dd55be10-bc67-46e2-a14c-79edbd6fa515",
+            "Value": {
+                "id": "8ffef62f-4dcd-4ec4-a8f6-c50faee461cd",
+                "resourcePath": "scripts\\avec2_multiply\\avec2_multiply.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dd5f65fb-7a09-48dc-8ec2-9aea30df00ff",
             "Value": {
                 "id": "80896b84-96f8-418f-9746-736caf268136",
@@ -19130,7 +19162,7 @@
             "Key": "f5b29495-05f6-4f8d-aabb-dcf94ae6b44f",
             "Value": {
                 "id": "06b1bd00-cf76-4646-8633-9c3cec3a49d5",
-                "resourcePath": "objects\\o_collectScallop1\\o_collectScallop1.yy",
+                "resourcePath": "objects\\o_collectMedBush\\o_collectMedBush.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -20297,8 +20329,11 @@
         "2b2bbc38-15f6-4ba5-9799-10db429349c0",
         "89e6f090-2e48-4530-8e2b-4fe17896008e",
         "ea01f43b-f383-4a27-bcea-a0e103dba76b",
+        "89e7310c-6cd7-4d4b-9dfb-9ef78cd3d98d",
+        "68bdc00d-914c-491a-9cfc-eaf24c86550d",
         "5b83a500-320a-4c22-87b8-1c4f0e26ddbc",
         "e50e7cad-ce0d-4738-b34a-c62b63765b8c",
+        "dd55be10-bc67-46e2-a14c-79edbd6fa515",
         "736c8de5-b118-4b85-8b1d-a10c8577c51c",
         "bc23ef90-0ac0-4990-9608-472c0f777d36",
         "2ac180ea-8c73-4039-ae7a-eb439d2ce402",
