@@ -11,7 +11,7 @@ var layer_count = array_length_1d(global.collidable_layers);
 for (var i = 0; i < layer_count; ++i)
 {
 	var tilemap = global.collidable_layers[i];
-	var tile = tilemap_get(tilemap, cel_x, cel_y);
+	var tile = tilemap_get(tilemap, cel_x + global.collidable_offset_x[i], cel_y + global.collidable_offset_y[i]);
 	var tile_id = tile & 0xFF;
 
 	if (tile_id == 2)

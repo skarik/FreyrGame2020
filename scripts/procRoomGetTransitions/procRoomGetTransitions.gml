@@ -7,46 +7,7 @@ var room_bb = procRoomGetBBox(argument0);
 var room_center = abbox_center(room_bb);
 
 layer_set_target_room(argument0);
-/*for (var iElement = 0; iElement < array_length_1d(objects); ++iElement)
-{
-	var object = objects[iElement];
-	
-	var object_obj_index = object[0];
-	var object_x = object[1];
-	var object_y = object[2];
-	
-	if (object_obj_index == ob_transitionArea)
-	{
-		if (object_x < 16)
-		{
-			if (array_contains(transitions, kCDirectionLeft))
-			{
-				transitions[array_length_1d(transitions)] = kCDirectionLeft;
-			}
-		}
-		else if (object_x > abbox_right(room_bb) - 16)
-		{
-			if (array_contains(transitions, kCDirectionRight))
-			{
-				transitions[array_length_1d(transitions)] = kCDirectionRight;
-			}
-		}
-		else if (object_y < 16)
-		{
-			if (array_contains(transitions, kCDirectionUp))
-			{
-				transitions[array_length_1d(transitions)] = kCDirectionUp;
-			}
-		}
-		else if (object_y > abbox_bottom(room_bb) - 16)
-		{
-			if (array_contains(transitions, kCDirectionDown))
-			{
-				transitions[array_length_1d(transitions)] = kCDirectionDown;
-			}
-		}
-	}
-}*/
+
 var all_layers = layer_get_all();
 var layer_count = array_length_1d(all_layers);
 for (var i = 0; i < layer_count; ++i)
@@ -65,8 +26,8 @@ for (var i = 0; i < layer_count; ++i)
 			//if (instance.object_index == ob_transitionArea)
 			if (sprite == sc_32x32c_blond)
 			{
-				var sprite_x = layer_sprite_get_x(sprite);
-				var sprite_y = layer_sprite_get_y(sprite);
+				var sprite_x = layer_sprite_get_x(element);
+				var sprite_y = layer_sprite_get_y(element);
 				
 				if (sprite_x < 16)
 				{

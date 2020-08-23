@@ -11,7 +11,7 @@ if (instance_number(object_index) > 1)
 	exit;
 }
 
-possibleRooms = [rmPCG_desert0];
+possibleRooms = [rmPCG_desert0, rmPCG_desert1, rmPCG_desert2];
 possibleRoomBbox = [];
 possibleRoomLink = [];
 

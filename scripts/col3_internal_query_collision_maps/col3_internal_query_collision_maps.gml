@@ -15,6 +15,8 @@ if (!global.collidable_layers_ready)
 		if (tileset == tilesetCollision)
 		{
 			global.collidable_layers[array_length_1d(global.collidable_layers)] = tilemap;
+			global.collidable_offset_x[array_length_1d(global.collidable_offset_x)] = 0;
+			global.collidable_offset_y[array_length_1d(global.collidable_offset_y)] = 0;
 		
 			debugOut("Found collision map \"" + layer_get_name(all_layers[i]) + "\"");
 		

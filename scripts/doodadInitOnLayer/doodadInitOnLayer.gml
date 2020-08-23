@@ -1,11 +1,16 @@
 var targetLayer = argument0;
 var shadowed = argument1;
+var bSaveList = argument2;
 
 var do_collision = string_pos("colli", layer_get_name(targetLayer)) != 0;
 var do_breakable = string_pos("break", layer_get_name(targetLayer)) != 0;
 var layerDepth = layer_get_depth(targetLayer);
 
 var doodad_type = do_breakable ? ob_doodadBreakable : (shadowed ? ob_doodad : ob_doodadNoShadow);
+
+var resultList = null;
+if (bSaveList)
+	resultList = [];
 
 var elements = layer_get_all_elements(targetLayer);
 for (var i = 0; i < array_length_1d(elements); ++i)
@@ -65,7 +70,13 @@ for (var i = 0; i < array_length_1d(elements); ++i)
 		// Do user-post info
 		with (doodad)
 			event_user(1);
+			
+		// Add doodad to result list
+		if (bSaveList)
+			resultList[array_length_1d(resultList)] = doodad;
 		
 		layer_sprite_destroy(element);
 	}
 }
+
+return resultList;

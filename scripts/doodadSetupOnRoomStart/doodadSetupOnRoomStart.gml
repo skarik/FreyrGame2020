@@ -7,7 +7,7 @@ for (var i = 0; i < array_length_1d(all_layers); ++i)
 	var layer_name = layer_get_name(current_layer);
 	if (string_pos("doodad", layer_name) != 0)
 	{
-		doodadInitOnLayer(current_layer, string_pos("shadow", layer_name) != 0);
+		doodadInitOnLayer(current_layer, string_pos("shadow", layer_name) != 0, false);
 	}
 }
 

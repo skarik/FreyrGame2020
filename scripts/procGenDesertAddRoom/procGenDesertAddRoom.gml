@@ -56,6 +56,8 @@ for (var i = 0; i < layer_count; ++i)
 		{
 			nextCollisionMaps[array_length_1d(nextCollisionMaps)] = nextTilemap;
 			global.collidable_layers[array_length_1d(global.collidable_layers)] = nextTilemap;
+			global.collidable_offset_x[array_length_1d(global.collidable_offset_x)] = -floor(positionNewRoom[0] / 16);
+			global.collidable_offset_y[array_length_1d(global.collidable_offset_y)] = -floor(positionNewRoom[1] / 16);
 			layer_set_visible(nextLayer, false);
 		}
 		
@@ -64,19 +66,74 @@ for (var i = 0; i < layer_count; ++i)
 	}
 	else
 	{
+		var layerDepth = layer_get_depth(currentLayer);
+		var layerElements = layer_get_all_elements(currentLayer);
+		var layerElementCount = array_length_1d(layerElements);
 		
-		// Depending on the layer name, we may need to do unique startup
+		// Create new layer, and duplicate all the sprite assets
+		layer_reset_target_room();
+		var nextLayer = layer_create(layerDepth, layerName);
+		layer_set_target_room(nextRoom);
 		
-		var elements = layer_get_all_elements(currentLayer);
-		
-		for (var iElement = 0; iElement < array_length_1d(elements); ++iElement)
+		for (var iElement = 0; iElement < layerElementCount; ++iElement)
 		{
-			var element = elements[iElement];
+			var element = layerElements[iElement];
+			
 			var elementType = layer_get_element_type(element);
 			if (elementType == layerelementtype_sprite)
 			{
+				var spriteSprite = layer_sprite_get_sprite(element);
+				var spriteIndex = layer_sprite_get_index(element);
+				var spriteX = layer_sprite_get_x(element);
+				var spriteY = layer_sprite_get_y(element);
+				var spriteXScale = layer_sprite_get_xscale(element);
+				var spriteYScale = layer_sprite_get_yscale(element);
+				var spriteAngle = layer_sprite_get_angle(element);
+				var spriteBlend = layer_sprite_get_blend(element);
+				var spriteAlpha = layer_sprite_get_alpha(element);
+				var spriteSpeed = layer_sprite_get_speed(element);
 				
+				if (spriteSprite != sc_32x32c_blond)
+				{
+					layer_reset_target_room();
+					
+					var nextSprite = layer_sprite_create(nextLayer,
+						spriteX + positionNewRoom[0],
+						spriteY + positionNewRoom[1],
+						spriteSprite);
+					layer_sprite_index(nextSprite, spriteIndex);
+					layer_sprite_speed(nextSprite, spriteSpeed);
+					layer_sprite_xscale(nextSprite, spriteXScale);
+					layer_sprite_yscale(nextSprite, spriteYScale);
+					layer_sprite_angle(nextSprite, spriteAngle);
+					layer_sprite_blend(nextSprite, spriteBlend);
+					layer_sprite_alpha(nextSprite, spriteAlpha);
+					
+					layer_set_target_room(nextRoom);
+				}
 			}
+		}
+		
+		// Depending on the layer name, we may need to do unique startup
+		if (string_pos("doodad", layerName) != 0)
+		{
+			// Go back to current room
+			layer_reset_target_room();
+			
+			// Create doodads on current layer
+			var listing = doodadInitOnLayer(nextLayer, string_pos("shadow", layerName) != 0, true);
+			for (var iinst = 0; iinst < array_length_1d(listing); ++iinst)
+			{
+				nextInstances[array_length_1d(nextInstances)] = listing[iinst];
+			}
+			
+			// Go back to room-copy mode
+			layer_set_target_room(nextRoom);
+		}
+		else
+		{
+			// Save the layer
+			nextLayers[array_length_1d(nextLayers)] = nextLayer;
 		}
 	}
 }

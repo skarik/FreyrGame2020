@@ -6,7 +6,7 @@ var screenBBox = abbox_create(GameCamera.view_x, GameCamera.view_y, GameCamera.w
 // Move the player far away on first frame
 if (firstFrame)
 {
-	pl.y = 10000;
+	pl.y = 5000;
 	firstFrame = false;
 	
 	exit;
@@ -87,7 +87,7 @@ if (!ds_list_empty(allRooms))
 		var roomCenter = abbox_center(roomBBox);
 		var roomCenterDelta = avec2_subtract(roomCenter, [GameCamera.x, GameCamera.y]);
 		var roomCenterDeltaLen = avec2_length(roomCenterDelta);
-		if (roomCenterDeltaLen > 2000)
+		if (roomCenterDeltaLen > 1000)
 			continue;
 		
 		// Choose one of the connections:

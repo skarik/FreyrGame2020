@@ -5367,6 +5367,14 @@
             }
         },
         {
+            "Key": "46752456-bd87-4f1e-aab2-5d7610787295",
+            "Value": {
+                "id": "0ea9df60-bc4d-4d1a-afe9-2ef99e2d27d6",
+                "resourcePath": "scripts\\array_remove_index\\array_remove_index.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4677c394-249a-4142-b5d0-79e21aa49737",
             "Value": {
                 "id": "e7fb4f47-6876-481f-a823-056ea18bd55f",
@@ -7356,6 +7364,14 @@
                 "id": "317ba4d8-1312-4894-91f2-a4f6ced478db",
                 "resourcePath": "views\\60b8ad34-1c92-4a41-ac8e-32b3423a5d72.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "60bfda23-dae8-4001-aedd-75bfb34e0351",
+            "Value": {
+                "id": "4bcb9241-ad17-4ee2-a714-d36e8d30bec5",
+                "resourcePath": "rooms\\rmPCG_desert1\\rmPCG_desert1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -11236,6 +11252,14 @@
                 "id": "b9efb2af-9d4b-4b17-a5a9-b1bed4981d28",
                 "resourcePath": "objects\\o_chBugLunarMoth\\o_chBugLunarMoth.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "953121ba-7b2b-4431-a912-8d9b2678544f",
+            "Value": {
+                "id": "c2fae3d6-c2ef-468a-a4f4-d328d8f7c9fb",
+                "resourcePath": "rooms\\rmPCG_desert2\\rmPCG_desert2.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -20804,6 +20828,7 @@
         "3b15b54c-8023-4368-b7b2-dac77a80600f",
         "bcf04cd4-5bd5-4aea-9010-f85f327b6926",
         "9fbb2647-434b-4627-aa52-ff52d21a285c",
+        "46752456-bd87-4f1e-aab2-5d7610787295",
         "c8b3cb2b-f402-4617-9554-2ce08a6e12ce"
     ],
     "tutorial": ""
