@@ -4,8 +4,9 @@
 event_inherited();
 
 dropItems(kDropSeparateChances,[
-	[o_pickupCons_ScorpStick, 0.33, 1],
-	[o_pickupCons_HoneyAbsinthe, 0.25, 1],
+	[o_pickupCons_ScorpStick, 1 / 5, 1],
+	[o_pickupCons_HoneyAbsinthe, 1 / 10, 1],
+	[o_pickupJunk_Spork, .25, 1],
 ]);
 
 // Stop anim override
