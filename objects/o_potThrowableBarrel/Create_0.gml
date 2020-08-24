@@ -15,3 +15,10 @@ kGroundFriction = 600;
 m_onGround = false;*/
 
 depthInit();
+
+// For the damage calculations
+m_isPlayer = false;
+m_team = 0;
+isBlocking = false;
+isDashing = false;
+isEthereal = false;
