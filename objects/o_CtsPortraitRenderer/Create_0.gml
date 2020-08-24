@@ -27,3 +27,9 @@ for (var i = 0; i < kPortraitIndex_Max; ++i)
 	preparams_alignment[i] = params_alignment[i];
 	preparams_facing[i] = params_facing[i];
 }
+
+state_background = null;
+state_background_alpha = 0.0;
+
+params_background = null;
+params_background_alpha = 0.0;

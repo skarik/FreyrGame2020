@@ -1,5 +1,16 @@
 /// @description Do portrait blends
 
+// background blend first
+if (state_background == null)
+{
+	state_background_alpha = 0.0;
+}
+if (params_background != null)
+{
+	state_background = params_background;
+}
+state_background_alpha = motion1d_to(state_background_alpha, params_background_alpha, Time.deltaTime * 4.0);
+
 for (var i = 0; i < kPortraitIndex_Max; ++i)
 {
 	// Skip invalid portrait states

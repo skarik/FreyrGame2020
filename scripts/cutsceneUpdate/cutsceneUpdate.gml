@@ -1010,11 +1010,11 @@ case SEQTYPE_PORTRAIT:
 	{
 		ctsPortraitShowImage(index, sprite, position, alignment, facing);
 	}
-	else if (action = kPortraitActionHide)
+	else if (action == kPortraitActionHide)
 	{
 		ctsPortraitShowImage(index, null, 0, 0, 0);
 	}
-	else if (action = kPortraitActionHideAll)
+	else if (action == kPortraitActionHideAll)
 	{
 		for (var i = 0; i < kPortraitIndex_Max; ++i)
 		{
@@ -1024,6 +1024,26 @@ case SEQTYPE_PORTRAIT:
 
 	// Debug out
 	debugOut("Doing portrait...");
+	
+	// We're done here. Onto the next event
+	cts_entry_current++;
+    cts_execute_state = 0;
+	break;
+case SEQTYPE_BACKGROUND:
+	var background = entry[?SEQI_TARGET];
+	var action = entry[?SEQI_PORTRAIT_ACTION];
+	
+	if (action == kPortraitActionShow)
+	{
+		ctsPortraitShowBackground(background);
+	}
+	else if (action == kPortraitActionHide || action === kPortraitActionHideAll)
+	{
+		ctsPortraitShowBackground(null);
+	}
+	
+	// Debug out
+	debugOut("Doing background...");
 	
 	// We're done here. Onto the next event
 	cts_entry_current++;

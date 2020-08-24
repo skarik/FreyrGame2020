@@ -203,6 +203,10 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_PORTRAIT;
 		}
+		else if (string_pos("background", line) == 1)
+		{
+			read_object_type = SEQTYPE_BACKGROUND;
+		}
 		else if (string_pos("giveitem", line) == 1)
 		{
 			read_object_type = SEQTYPE_GIVEITEM;
@@ -1135,6 +1139,42 @@ while (!file_text_eof(fp))
                 // Save the new map data
                 cts_entry[cts_entry_count] = new_map;
                 cts_entry_type[cts_entry_count] = SEQTYPE_PORTRAIT;
+                cts_entry_count++;
+			}
+			else if (read_object_type == SEQTYPE_BACKGROUND)
+			{
+				var action = read_object_map[?"action"];
+				if (is_undefined(action))
+					action = kPortraitActionShow;
+				else if (action == "show")
+					action = kPortraitActionShow;
+				else if (action == "hide")
+					action = kPortraitActionHide;
+				else if (action == "hideall")
+					action = kPortraitActionHideAll;
+				else if (action == "move")
+					action = kPortraitActionMove;
+				else
+					action = kPortraitActionShow;
+					
+				var background = read_object_map[?"background"];
+				if (is_undefined(background))
+					background = sui_logo2;
+				else if (background == "desert")
+					background = sui_cg00_nathan_bg;
+				else
+					background = sui_logo2;
+					
+				var new_map = ds_map_create();
+				new_map[?SEQI_PORTRAIT_ACTION] = action;
+				new_map[?SEQI_TARGET] = background;
+				
+				// Delete original map
+                ds_map_destroy(read_object_map);
+                
+                // Save the new map data
+                cts_entry[cts_entry_count] = new_map;
+                cts_entry_type[cts_entry_count] = SEQTYPE_BACKGROUND;
                 cts_entry_count++;
 			}
 			else if (read_object_type == SEQTYPE_GIVEITEM)

@@ -16983,6 +16983,14 @@
             }
         },
         {
+            "Key": "d8fa2e11-5530-4321-92d4-b291e67426d8",
+            "Value": {
+                "id": "bcc62405-d011-4756-9228-8e91e51ea373",
+                "resourcePath": "scripts\\ctsPortraitShowBackground\\ctsPortraitShowBackground.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d8fd5398-bad0-48d2-8441-c4c8fa607b0e",
             "Value": {
                 "id": "bdef6c68-0bee-42f9-94c8-ee05b3fafa93",
@@ -20454,6 +20462,7 @@
         "b636099e-54bb-48e8-9886-737371fa4f0e",
         "c2ddcb57-3609-49df-812d-68ab60ffef6e",
         "8274eef0-fa5b-4337-a768-54a90b5f7899",
+        "d8fa2e11-5530-4321-92d4-b291e67426d8",
         "d8ef8cd1-2290-46c4-a533-323e272d047b",
         "f61729f8-90e3-4206-ac33-cfa85c54d42f",
         "3b1024cd-23b4-4818-b232-abc9b27c9c57",

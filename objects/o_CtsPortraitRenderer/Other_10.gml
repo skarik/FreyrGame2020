@@ -5,6 +5,11 @@
 var dx = 0;
 var dy = 0;
 
+if (state_background != null && state_background_alpha > 0.0)
+{
+	draw_sprite_ext(state_background, 0, dx, dy, 1.0, 1.0, 0.0, c_white, state_background_alpha);
+}
+
 //for (var i = 0; i < kPortraitIndex_Max; ++i)
 for (var i = kPortraitIndex_Max - 1; i >= 0; --i)
 {
