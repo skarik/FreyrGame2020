@@ -23,6 +23,7 @@ if (!iexists(m_aiGobbo_squadLeader) || m_aiGobbo_squadLeader.m_isKOed || m_aiGob
 		for (var i = 0; i < array_length_1d(m_aiGobbo_squad); ++i)
 		{
 			if (iexists(m_aiGobbo_squad[i])
+				&& !m_aiGobbo_squad[i].m_isKOed
 				&& m_aiGobbo_squad[i].m_aiGobbo_squadPosition == kAiGobboSquadPosition_Attacker)
 			{
 				m_aiGobbo_squadLeader = m_aiGobbo_squad[i];

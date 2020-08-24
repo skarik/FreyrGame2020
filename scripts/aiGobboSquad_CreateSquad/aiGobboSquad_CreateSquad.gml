@@ -9,6 +9,12 @@ var squad_id = id;
 var kMaxJoinDistance = 1024;
 with (m_aiGobbo_baseObject)
 {
+	// Skip dead
+	if (m_isKOed)
+	{
+		continue;
+	}
+	
 	// Always add self
 	if (id == source_gobbo)
 	{
