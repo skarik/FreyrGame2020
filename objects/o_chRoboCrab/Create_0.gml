@@ -6,6 +6,7 @@ event_inherited();
 m_team = kTeamBandit;
 m_bloodType = kBloodWhite;
 m_dieInsteadOfKO = true;
+m_canKnockout = false;
 
 stats.m_health = 24.0;
 stats.m_healthMax = stats.m_health;

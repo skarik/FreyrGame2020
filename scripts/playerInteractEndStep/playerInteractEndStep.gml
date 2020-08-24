@@ -221,7 +221,9 @@ if (l_canMove && !isDashing && !isBlocking)
 		with (ob_character)
 		{
 			if (!m_isDead && !m_isKOed
+				&& m_canKnockout
 				&& !npcIsAngry(id)
+				&& m_team != kTeamNone
 				&& (m_team & (kTeamMonster|kTeamBandit))
 				&& damageCanHit(other, id))
 			{

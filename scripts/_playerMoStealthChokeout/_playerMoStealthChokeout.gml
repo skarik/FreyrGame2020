@@ -20,17 +20,24 @@ if (atkButton.value > 0.707
 		effectOnNpcHurt(m_attackKnockoutTarget);
 	}
 	
-	// Pull target close
-	var t_mask_width = sprite_get_width(sprite_exists(m_attackKnockoutTarget.mask_index) ? m_attackKnockoutTarget.mask_index : m_attackKnockoutTarget.sprite_index);
-	var t_result = motion2d_to([m_attackKnockoutTarget.x, m_attackKnockoutTarget.y],
-							   [x + lengthdir_x(t_mask_width * 0.5, facingDirection), y + lengthdir_y(t_mask_width * 0.5, facingDirection)],
-							   64.0 * Time.deltaTime);
-	m_attackKnockoutTarget.x = t_result[0];
-	m_attackKnockoutTarget.y = t_result[1];
-	m_attackKnockoutTarget.xspeed = 0;
-	m_attackKnockoutTarget.yspeed = 0;
-	m_attackKnockoutTarget.moEnabled = false;
-	m_attackKnockoutTarget.m_aiCombat_enabled = false;
+	if (m_canDragOnKnockout)
+	{
+		// Pull target close
+		var t_mask_width = sprite_get_width(sprite_exists(m_attackKnockoutTarget.mask_index) ? m_attackKnockoutTarget.mask_index : m_attackKnockoutTarget.sprite_index);
+		var t_result = motion2d_to([m_attackKnockoutTarget.x, m_attackKnockoutTarget.y],
+								   [x + lengthdir_x(t_mask_width * 0.5, facingDirection), y + lengthdir_y(t_mask_width * 0.5, facingDirection)],
+								   64.0 * Time.deltaTime);
+		m_attackKnockoutTarget.x = t_result[0];
+		m_attackKnockoutTarget.y = t_result[1];
+		m_attackKnockoutTarget.xspeed = 0;
+		m_attackKnockoutTarget.yspeed = 0;
+		m_attackKnockoutTarget.moEnabled = false;
+		m_attackKnockoutTarget.m_aiCombat_enabled = false;
+	}
+	else
+	{
+		// TODO: Move player to the target
+	}
 }
 else
 {

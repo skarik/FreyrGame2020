@@ -5,6 +5,8 @@ enemyInfoOnCharacterCreate();
 m_team = kTeamNone;
 m_bloodType = kBloodRed;
 m_dieInsteadOfKO = false;
+m_canKnockout = true;
+m_canDragOnKnockout = true;
 m_uiwantsHealthShown = false;
 m_uiwantsStaminaShown = false;
 m_standingHeight = 32;
