@@ -68,9 +68,9 @@ magicMoveTarget = null;
 kAnimStanding = s_charGobBomb0Stand;
 kAnimWalking = s_charGobBomb0Stand;
 kAnimRolling = sprite_index;
-kAnimAttack1 = s_charGobMag0Cast;
-kAnimStun = s_charGobMag0Stun;
-kAnimKOed = s_charGobMag0KOed;
+kAnimAttack1 = s_charGobBomb0Throw;
+kAnimStun = s_charGobBomb0Stun;
+kAnimKOed = s_charGobBomb0KOed;
 
 // Special anim used by gobbo AI
 kAnimSignal = s_charGobBomb0Stand;

@@ -1407,6 +1407,14 @@
             }
         },
         {
+            "Key": "13c07951-fe9f-4451-8571-34a4d91f2abb",
+            "Value": {
+                "id": "99e4ebe6-24ac-4c24-87cb-5e247e1cae28",
+                "resourcePath": "sprites\\s_charGobBomb0Stun\\s_charGobBomb0Stun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "13dbcb8e-e680-42f7-bf34-7db2b53a396c",
             "Value": {
                 "id": "07bee8b2-9140-42db-8f53-27bea65748b4",
@@ -4252,6 +4260,14 @@
                 "id": "6eb57abe-146a-40d2-a240-3b66e2df8477",
                 "resourcePath": "sounds\\snd_DoorTock0\\snd_DoorTock0.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "378bc02c-4010-495d-ada3-eda42f59d3a5",
+            "Value": {
+                "id": "c965ddf9-7e6d-42e9-96dc-625336d7e213",
+                "resourcePath": "sprites\\s_charGobBomb0Throw\\s_charGobBomb0Throw.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -18228,6 +18244,14 @@
                 "id": "ac6d5f19-dba8-4e27-944a-fc473084f50d",
                 "resourcePath": "scripts\\doodadSetupOnRoomStart\\doodadSetupOnRoomStart.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e7932174-43d8-4295-9685-9251a858d281",
+            "Value": {
+                "id": "db624b88-a4e5-47ba-a246-4eaaf4c658ba",
+                "resourcePath": "sprites\\s_charGobBomb0KOed\\s_charGobBomb0KOed.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
