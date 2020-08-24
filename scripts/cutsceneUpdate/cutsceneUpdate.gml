@@ -1037,7 +1037,7 @@ case SEQTYPE_BACKGROUND:
 	{
 		ctsPortraitShowBackground(background);
 	}
-	else if (action == kPortraitActionHide || action === kPortraitActionHideAll)
+	else if (action == kPortraitActionHide || action == kPortraitActionHideAll)
 	{
 		ctsPortraitShowBackground(null);
 	}
