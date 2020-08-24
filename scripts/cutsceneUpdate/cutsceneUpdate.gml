@@ -247,6 +247,11 @@ case SEQTYPE_LINES:
 				gabber.display_tail_override_y = tail_y;
 				gabber.display_tail_override_direction = tail_direction;
 			}
+			
+			if (target == o_PlayerImp)
+			{
+				gabber.display_blackbox_override = true;
+			}
 		}
             
 		// SILENT SKY SPECIFIC:

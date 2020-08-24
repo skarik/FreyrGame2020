@@ -6,7 +6,7 @@ if (is_undefined(target))
 	target = null;
 else if (target == "self")
 	target = self;
-else if (target == "imp")
+else if (target == "imp" || target == "libby" || target == "librarian")
 	target = o_PlayerImp;
 else if (target == "hero" || target == "player" || target == "idiot" || target == "cortez" || target == "pyrite" || target == "aurum")
 	target = o_PlayerTest;
