@@ -18,7 +18,7 @@ m_inventory = inventoryCreateOrLoad(null, 24);
 
 m_vendorPortrait = sui_tempPortraitBarOwner;
 
-// set up vendor inventory
+/*// set up vendor inventory
 var items = [o_pickupRes_Bolt, kCountPositiveInfinite,
 			o_pickupRes_Gear, kCountPositiveInfinite,
 			o_pickupCons_Meats, 2,
@@ -43,4 +43,4 @@ for (var i = 0; i < array_length_1d(items)/2; ++i)
 		pickupAddToArray(other.m_inventory.item);
 	}
 	idelete(pickup);
-}
+}*/

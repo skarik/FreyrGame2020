@@ -4287,6 +4287,14 @@
             }
         },
         {
+            "Key": "36c9589d-95f4-410b-bc62-4eb68eb803d2",
+            "Value": {
+                "id": "0a503720-86eb-4849-8bca-c49ca2829d35",
+                "resourcePath": "objects\\o_vendorBarOwner\\o_vendorBarOwner.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "36e542ee-3e15-4516-afa2-d30b86bafc13",
             "Value": {
                 "id": "67f60082-95aa-4640-8659-dd6201452932",
@@ -4876,6 +4884,14 @@
                 "id": "0f047895-c603-457c-af04-42d36aef323b",
                 "resourcePath": "views\\3dc47a51-fd6d-43de-a6e7-1348090a593a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3dc54a21-7b6d-4773-9b65-cec12840540a",
+            "Value": {
+                "id": "df0a6155-e73d-4698-ac07-7a429e04bfb8",
+                "resourcePath": "objects\\o_vendorBarHubby\\o_vendorBarHubby.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -13676,6 +13692,14 @@
                 "id": "c447211c-d536-4c8e-8405-a256800134f9",
                 "resourcePath": "scripts\\doodadDestraHealth\\doodadDestraHealth.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "af2ed018-e94f-4286-b98b-fe0f155846aa",
+            "Value": {
+                "id": "eb1c9a10-16cb-4278-b4e1-02766a49cdea",
+                "resourcePath": "views\\af2ed018-e94f-4286-b98b-fe0f155846aa.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
