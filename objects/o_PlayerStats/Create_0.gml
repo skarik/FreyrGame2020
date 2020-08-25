@@ -7,6 +7,8 @@ m_gender = kGenderMale;
 m_shirtless = false;
 
 {
+	debugOut("Randomly generating player stats");
+	
 	// Randomly generate gender for some variation
 	m_gender = choose(kGenderMale, kGenderFemale, kGenderNonbi);
 	if (m_gender == kGenderMale)
