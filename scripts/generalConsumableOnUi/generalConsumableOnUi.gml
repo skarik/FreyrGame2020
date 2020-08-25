@@ -124,6 +124,14 @@ if (_itemIsSelected
 			l_drawHealth = true;
 			l_healthValue = 6;
 			break;
+			
+			//THE BAR
+			
+		case o_pickupCons_EggScrapple:
+			l_drawHealth = true;
+			l_healthValue = 6;
+			break;
+			
 		
 			
 			// NATE'S SOUP SPECIAL
