@@ -94,14 +94,15 @@ else if (!forced_rebuild)
 				var c_link = buffer_read(buffer_nodegraph, buffer_u64);
 				var c_type = buffer_read(buffer_nodegraph, buffer_u32);
 				
-				if (!iexists(c_link))
+				var c_link_instance = instance_find(ob_aiNode, c_link);
+				if (!iexists(c_link_instance))
 				{
 					with (ob_aiNode)
 						m_valid = false; // Mark all nodes as invalid
 					return false;
 				}
 				
-				node_id.m_link[ilink] = instance_find(ob_aiNode, c_link);
+				node_id.m_link[ilink] = c_link_instance;
 				node_id.m_link_type[ilink] = c_type;
 			}
 			

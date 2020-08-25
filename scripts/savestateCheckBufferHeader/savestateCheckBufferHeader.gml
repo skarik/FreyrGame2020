@@ -33,12 +33,14 @@ if (header[0] == header_to_check[0]
 	&& header[2] == header_to_check[2]
 	&& header[3] == header_to_check[3])
 {
-	debugOut("Savefile: Found " + header_to_check_str + " chunk, version " + string(version));
+	if (debug_mode)
+		debugOut("Savefile: Found " + header_to_check_str + " chunk, version " + string(version));
 	return version;
 }
 else
 {
-	debugOut("Savefile: No " + header_to_check_str + " chunk");
+	if (debug_mode)
+		debugOut("Savefile: No " + header_to_check_str + " chunk");
 	buffer_seek(buffer, buffer_seek_start, off_preheader);
 	return 0;
 }
