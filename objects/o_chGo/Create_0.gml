@@ -40,5 +40,5 @@ kMoveAccelerationStop = 600;//500;
 kMoveAccelerationAir = 200;
 kMoveAccelerationAirStop = 10;
 
-//kAnimStanding = s_charViggoStand;
-//kAnimWalking = s_charNathanWalk;
+kAnimStanding	= s_charGoStand;
+//kAnimWalking	= s_charNathanWalk;

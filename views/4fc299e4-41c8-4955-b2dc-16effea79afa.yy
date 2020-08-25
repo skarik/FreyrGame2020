@@ -11,7 +11,8 @@
         "36783e6c-b220-4360-9756-4a0463341039",
         "bd77985e-c7c0-4120-802d-6b0fecfa5e11",
         "15e90213-a601-45dd-a88a-0bffb8249a8c",
-        "c2d1e3b8-a05d-476a-ba2d-ea97e62247aa"
+        "c2d1e3b8-a05d-476a-ba2d-ea97e62247aa",
+        "11d89332-d1a6-4dca-9b24-b3dcfa263e4b"
     ],
     "filterType": "GMSprite",
     "folderName": "notable",

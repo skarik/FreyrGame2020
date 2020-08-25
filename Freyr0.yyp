@@ -1215,6 +1215,14 @@
             }
         },
         {
+            "Key": "11d89332-d1a6-4dca-9b24-b3dcfa263e4b",
+            "Value": {
+                "id": "5f1d7570-019f-47ff-a8d8-f944b9665273",
+                "resourcePath": "sprites\\s_charGoStand\\s_charGoStand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "11e6c8cc-ac32-44a5-b442-4a9f5783cd2c",
             "Value": {
                 "id": "5fd5dbbe-b763-4d1f-ba3f-ca4afb4d95d3",
