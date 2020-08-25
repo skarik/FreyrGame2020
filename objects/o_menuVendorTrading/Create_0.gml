@@ -23,6 +23,9 @@ m_tradeenabled = false;
 m_tradebalance_visual = 0.0;
 m_tradebalance_visual_previous = 0.0;
 
+// sprites
+m_vendorPortraitSprite = null;
+
 // TODO: create structs instead
 var base_gs_struct = ds_map_create();
 base_gs_struct[?"hover"] = null;

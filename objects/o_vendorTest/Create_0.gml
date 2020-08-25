@@ -16,6 +16,8 @@ m_airFriction = 100;
 
 m_inventory = inventoryCreateOrLoad(null, 24);
 
+m_vendorPortrait = sui_tempPortraitBarOwner;
+
 // set up vendor inventory
 var items = [o_pickupRes_Bolt, kCountPositiveInfinite,
 			o_pickupRes_Gear, kCountPositiveInfinite,

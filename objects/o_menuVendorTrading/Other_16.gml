@@ -28,15 +28,18 @@ gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_one);
 
 // draw character sprites
 var l_player_portrait = cutsceneGetPortrait(o_PlayerTest, kPortraitExpressionNeutral);
-var l_trader_portrait = sui_portraitNathanNeutral;
+var l_trader_portrait = m_vendorPortraitSprite;
 draw_sprite_ext(l_player_portrait, 0,
 				(1.0 - sqr(saturate(1.0 - m_totalBlend))) * sprite_get_width(l_player_portrait) - 60, GameCamera.height,
 				-1.0, 1.0,
 				0.0, c_white, 1.0);
-draw_sprite_ext(l_trader_portrait, 0,
-				(1.0 - sqr(saturate(1.0 - m_totalBlend))) * -sprite_get_width(l_trader_portrait) + 60 + GameCamera.width, GameCamera.height,
-				+1.0, 1.0,
-				0.0, c_white, 1.0);
+if (sprite_exists(l_trader_portrait))
+{
+	draw_sprite_ext(l_trader_portrait, 0,
+					(1.0 - sqr(saturate(1.0 - m_totalBlend))) * -sprite_get_width(l_trader_portrait) + 60 + GameCamera.width, GameCamera.height,
+					+1.0, 1.0,
+					0.0, c_white, 1.0);
+}
 
 // draw the left & right panels
 

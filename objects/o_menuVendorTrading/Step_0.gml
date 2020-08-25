@@ -19,6 +19,12 @@ else
 	}
 }
 
+// Update sprites
+if (iexists(m_vendor))
+{
+	m_vendorPortraitSprite = m_vendor.m_vendorPortrait;
+}
+
 // Only do input if book is front & center
 if (m_player.m_currentVendor != null || m_totalBlend == 1.0)
 {

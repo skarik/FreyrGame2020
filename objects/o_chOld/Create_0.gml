@@ -28,5 +28,5 @@ kAiFollowHideDuringCombat = true; // Definitely hide during combat
 
 #endregion
 
-//kAnimStanding = s_charViggoStand;
-//kAnimWalking = s_charNathanWalk;
+kAnimStanding	= s_charOldStand;
+kAnimWalking	= s_charOldWalk;

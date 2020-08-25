@@ -12,3 +12,4 @@ global._audio_mapping = ds_map_create();
 audio_register_name(null);
 
 mt19937_init();
+random_set_seed(date_current_datetime());
