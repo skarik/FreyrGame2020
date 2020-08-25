@@ -1548,6 +1548,14 @@
                 "id": "a51de355-ddd3-4c6f-955e-2349a2ade32c",
                 "resourcePath": "objects\\o_doodadHider_MithraTavern\\o_doodadHider_MithraTavern.yy",
                 "resourceType": "GMObject"
+			}
+		},
+		{
+            "Key": "14df2bd5-fc38-45c3-a60e-36f0a1c4ef1f",
+            "Value": {
+                "id": "80ad210c-f5af-4954-a6b8-f021b9a10ee5",
+                "resourcePath": "sprites\\s_itemScrapple\\s_itemScrapple.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9735,6 +9743,14 @@
             }
         },
         {
+            "Key": "7ea42428-02f8-42c8-bab9-7c5611c5390b",
+            "Value": {
+                "id": "79da7150-ba71-4c8f-909b-d6aabed65412",
+                "resourcePath": "objects\\o_pickupItem_Scrapple\\o_pickupItem_Scrapple.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7ebff026-17bc-4e80-80f4-37b2b089bcd4",
             "Value": {
                 "id": "cd9a971b-e516-432b-8cf9-1945499e66a9",
@@ -15383,6 +15399,14 @@
             }
         },
         {
+            "Key": "c44bf8c2-c1ca-4cc4-8049-f839011c3b11",
+            "Value": {
+                "id": "da5045e2-ed75-41c9-8861-2f3e1f65e2cb",
+                "resourcePath": "sprites\\s_itemConsEggScrapple\\s_itemConsEggScrapple.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c457e9de-b6e0-4535-940e-d8f695c61fc8",
             "Value": {
                 "id": "72e0bd49-e86c-43d2-9bbc-c62b04454ebf",
@@ -18468,6 +18492,14 @@
                 "id": "db624b88-a4e5-47ba-a246-4eaaf4c658ba",
                 "resourcePath": "sprites\\s_charGobBomb0KOed\\s_charGobBomb0KOed.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e7962306-cf6e-45de-903c-f5afbff0816b",
+            "Value": {
+                "id": "4a6ef36f-6d01-4d42-9337-869f06430417",
+                "resourcePath": "objects\\o_pickupCons_EggScrapple\\o_pickupCons_EggScrapple.yy",
+                "resourceType": "GMObject"
             }
         },
         {

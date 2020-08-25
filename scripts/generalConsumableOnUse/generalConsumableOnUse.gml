@@ -85,6 +85,13 @@ switch (_itemType)
 		stats.m_health += 3;
 		_playerInteractItemDecrementBelt();
 		break;
+		
+	//THE BAR
+	
+	case o_pickupCons_EggScrapple:
+		stats.m_health += 6;
+		_playerInteractItemDecrementBelt();
+		break;
 	
 	//SOUP VENDOR
 	
