@@ -21,6 +21,8 @@ m_vendorPortrait = sui_tempPortraitBarOwner;
 // set up vendor inventory
 var items = [o_pickupRes_Bolt, kCountPositiveInfinite,
 			o_pickupRes_Gear, kCountPositiveInfinite,
+			o_pickupCons_EggScrapple, 10,
+			o_pickupItem_Scrapple, 3,
 			o_pickupCons_Meats, 2,
 			o_pickupCons_MedLeaf, 1,
 			o_pickupCons_SweetBun, 2,
