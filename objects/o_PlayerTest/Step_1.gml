@@ -109,8 +109,8 @@ else
 		m_willpushRegenTimer = 0.0;
 	}
 	
-	// regen willpush after 3 seconds
-	if (m_willpushRegenTimer > 3.0)
+	// regen willpush after 2 seconds
+	if (m_willpushRegenTimer > 2.0)
 		m_willpush += Time.deltaTime * m_willpushMax; // Regen it all in 1 second
 }
 // Defer willpush updates until later
