@@ -3,6 +3,9 @@
 
 
 //Josh, Aurum only event, can only trigger if player is AURUM
+// This actually only happens depending on selection during tower quest
+but for V SLICE its just to show it off. 
+
 
 goto_if_flag
 {
@@ -32,7 +35,7 @@ goto_if_flag
 spawnstate
 {
     spawn_ifunique go
-    position 302 1675
+    position 300 1670
 }
 
 
@@ -41,7 +44,7 @@ ai
     target go
     style cts
     command teleport
-    position 302 1675
+    position 300 1670
 }
 
 goto { target OnEnd }
@@ -80,6 +83,528 @@ screen
 }
 
 //BAR BCK eventually
+
+
+screen { 
+
+
+type ctsin; 
+
+}
+
+
+portrait
+{	// Go Portrait 
+	index 0
+	action show
+	position 1.0
+	align right
+	face left
+	character Go
+	expression neutral
+}
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.0
+	align left
+	face right
+	character player
+	expression neutral
+}
+
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Hey! Over here partner!
+	2 I can't believe you actually came...
+
+}
+
+portrait
+{	// Go Portrait 
+	index 0
+	action hide
+	position 1.0
+	align right
+	face left
+	character Go
+	expression neutral
+}
+
+portrait
+{	// Player portrait
+	index 1
+	action hide
+	position 0.0
+	align left
+	face right
+	character player
+	expression neutral
+}
+
+player { actions lock }
+
+//Keeps getting stuck V PLZ fix
+
+ai
+{
+	target go
+	style cts
+	command move
+	origin player 
+	position 4 0
+}
+
+portrait
+{	// Go Portrait 
+	index 0
+	action show
+	position 1.0
+	align right
+	face left
+	character Go
+	expression neutral
+}
+
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.0
+	align left
+	face right
+	character player
+	expression neutral
+}
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 I never turn down a free drink.
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Who said anything about free?
+}
+
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 My ass rescuing your big green ass.
+	2 I charge upfront fees for that kinda thing back home.
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Alright, alright, I do owe you for that.
+}
+
+
+// ai { command anim } for sitting needed 
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 Huh, normally put up more of a fight then that. 
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 And ruin this beautiful drink between friends?
+	2 Sweetheart I have manners. 
+}
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 Oh we're friends now are we? 
+
+}
+
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Is a harrowing adventure in a spooky ruin not enough for you? 
+}
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 Harrowing adventures are sort of my bread and butter. 
+	2 That whole thing was basically my average date night. 
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 The more you talk about yourself the more I want to know.
+}
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 Oh? So you’re talking to me because I’m interesting huh? 
+	2 Not because I'm a $q sweetheart?
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Don't get the wrong idea. Every one is'a sweetheart to me. I like variety. 
+	2 That tower might be the most exciting thing that has happened to me in awhile.
+	3 Can’t blame me for wanting to see if hanging around you might bring me more excitement. 
+	4 I take it you aren’t here because you feel the same way. 
+}
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 Well, I can’t say you aren’t interesting. The free drink is good, but not the actual reason I wanted to come.
+	2 I can get a free drink from just about anybody, I like $w variety$$ too. 
+
+}
+
+lines
+{
+	target libby
+	1 He cocks an eyebrow at you over his flagon. His eye examining you closely.
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 What’s the reason? If you’re here to find out more about this place.
+	2 Well, That sort of information might cost you. 
+}
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 Please. If I wanted that sort of information, I’d just ask the hot busty bartender. 
+	2 They seem far more likely to give me the information for free. 
+
+}
+
+lines
+{
+	target libby
+	1 You hesitate as you watch him from across the table. He is giving you his full attention. It isn't the sort you're use to.
+	2 He seems to be interested in what you have to say. 
+
+}
+
+lines
+{
+	target player
+	style portrait
+	object 1
+	1 $s I-I $$ don’t think I’ll tell you yet. Haven’t had enough to drink.
+
+}
+
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 You’re going to leave me out to dry like that?
+	2 Criminal, maybe we are more $walike$$ then I thought. 
+
+}
+
+/// This choice sets up a relationship path. Event 02 will give players another chance if they don't decide now. 
+
+
+choice
+{
+	target player
+	1 (Be Honest)
+	1goto HONEST
+	
+	2 (Be A Tsundere)
+	2goto TSUNDERE
+}
+
+#HONEST
+
+lines
+{
+
+	target player 
+	style portrait
+	object 1
+	1 Fine. I’ll tell you, but only if you tell me what I’m drinking first.
+
+}
+
+lines
+{
+	target libby
+	1 The swill you’re drinking is thick. You’ve always had a high tolerance for this kind of stuff, but it’s quite the drink. 
+}
+
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Red Ale. Made from the local grain and cactus around here.
+
+}
+
+lines
+{
+
+	target player 
+	style portrait
+	object 1
+	1 I’m drinking mashed up cactus?
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Basically, not much else around here to make alchohol from unless you know how to cultivate crops in abundance. 
+	2 Not many people around here have much of a green thumb.
+
+}
+
+lines
+{
+
+	target player 
+	style portrait
+	object 1
+	1 Huh, packs quite the aftertaste.
+	2 Yeah I noticed not many folks even seem to know what growing even is. 
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 You get used to it once it’s burned away all your taste buds.
+	2 Folks around here don't know a lot of things...
+
+}
+
+lines
+{
+	target libby
+	1 You down your flagon and quickly wave someone down to bring you another. Your eyes darting around the room before settling on the lizard man sitting across from you. 
+
+}
+
+lines
+{
+
+	target player 
+	style portrait
+	object 1
+	1 Alright, I’ll fess up.
+	2 Was kind of hoping this might lead to something a little more fun.
+	3 Drinking in an admittedly fancy tavern is a good start but...was hoping you might know where the fun is at. 
+
+}
+
+lines
+{
+	target libby
+	1 He’s examining you again and he isn’t being subtle about it. You can tell he's trying to find meaning between your words.
+
+}
+
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 What kind of fun did you have in mind?
+
+}
+
+
+lines
+{
+
+	target player 
+	style portrait
+	object 1
+	1 Usually by now I’m trying to swindle some rich fella out of his wallet, but no one seems to have money around here.
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Well you’ve got that much right.
+	2 This place isn’t really about that sort of thing. It’s all trade. Nothing like where I’m fr-
+
+}
+
+lines
+{
+	target libby
+	1 He deliberately cuts himself off taking a long drink before standing up. He then yanks you up to your feet by your waist using his tail. 
+
+}
+
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 Can you swim human?
+
+}
+
+
+lines
+{
+
+	target player 
+	style portrait
+	object 1
+	1 Like a fish. 
+}
+
+
+
+//Fade Black.
+//Fade In.
+	
+//Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis. It’s evening.
+// CG needed for this def I think
+// GO  is hiding behind the rock the PLAYER is standing on. Leaps out to tackle them into the water. (Underwear sprites) <CG>
+//DO I NEED A NEW script? 
+
+#TSUNDERE
+
+lines
+{
+
+	target player 
+	style portrait
+	object 1
+	1 Don’t know if you’ve earned it. How about a few more drinks and we’ll see?
+
+}
+
+lines
+{
+	target go
+	style portrait
+	facing player
+	object 0
+	1 I can live with that for now.
+
+}
+
+
+//Fade Black.
+//Fade In.
+
+//Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis.
+
+//PLAYER & GO end up passed out next to the Oasis. Next morning the player can leave, GO is still asleep.
+	
+
+portrait
+{	// Go Portrait 
+	index 0
+	action hide
+	position 1.0
+	align right
+	face left
+	character Go
+	expression neutral
+}
+
+portrait
+{	// Player portrait
+	index 1
+	action hide
+	position 0.0
+	align left
+	face right
+	character player
+	expression neutral
+}
+
+
+
 
 #OnEnd
 #ended
