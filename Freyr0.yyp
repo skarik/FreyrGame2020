@@ -9175,6 +9175,14 @@
             }
         },
         {
+            "Key": "75031e36-0681-4958-adb0-e3c58f10156b",
+            "Value": {
+                "id": "35d75a81-37be-4ea3-8c7d-c2ff447f1e17",
+                "resourcePath": "datafiles_yy\\cts\\14_goevents\\00_Event01.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "7523da81-30c2-41ab-880d-38935b14b2a5",
             "Value": {
                 "id": "94e95c27-748c-445f-b26f-20ffd63e4376",
@@ -18892,6 +18900,14 @@
                 "id": "169e180c-6b33-4b32-8aec-2894cf54c204",
                 "resourcePath": "sprites\\sui_bookLabels\\sui_bookLabels.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ebf528f7-64b5-4739-b919-638673886773",
+            "Value": {
+                "id": "dbf5a571-5be9-415e-8568-9ebe9e048723",
+                "resourcePath": "views\\ebf528f7-64b5-4739-b919-638673886773.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

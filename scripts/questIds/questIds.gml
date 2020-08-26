@@ -18,4 +18,4 @@
 #macro kQidFoolsTower			10
 
 #macro kQidNathanEvents			15
-#macro kQuidGoEvents			14
+#macro kQidGoEvents				14

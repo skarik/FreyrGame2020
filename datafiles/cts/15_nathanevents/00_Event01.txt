@@ -1,6 +1,8 @@
 #begin
 #Initialize
 
+
+//Josh, Cortez only event, can only trigger if player is CORTEZ
 goto_if_flag
 {
     target OnEnd
