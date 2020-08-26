@@ -16,7 +16,7 @@ m_airFriction = 100;
 
 m_inventory = inventoryCreateOrLoad(null, 24);
 
-m_vendorPortrait = sui_tempPortraitBarOwner;
+m_vendorPortrait = sui_tempPortraitBarHubby;
 
 // set up vendor inventory
 var items = [o_pickupRes_BoneShard, kCountPositiveInfinite,
@@ -29,8 +29,6 @@ var items = [o_pickupRes_BoneShard, kCountPositiveInfinite,
 			o_pickupCons_ScorpJuice, 2,
 			o_pickupCons_CactusJizz, 2,
 			o_pickupCons_CactusRed, 2];
-			
-			
 			
 // create the vendor inventory
 for (var i = 0; i < array_length_1d(items)/2; ++i)

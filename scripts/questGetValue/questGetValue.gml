@@ -1,3 +1,4 @@
+///@param quest_id
 var quest_id = argument0;
 
 with (kQuestManager)

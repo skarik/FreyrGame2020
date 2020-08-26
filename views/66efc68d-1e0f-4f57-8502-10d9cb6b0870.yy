@@ -23,7 +23,8 @@
         "58c7f40d-5548-4c23-ad9c-7295ad330b22",
         "cedf22aa-b9cf-4d41-af82-33b3241c6655",
         "3b654321-1ad0-452a-bdea-ede8a242204a",
-        "7d2de1ce-a068-4019-9bf8-fdb5c52c9334"
+        "7d2de1ce-a068-4019-9bf8-fdb5c52c9334",
+        "17c0c7e0-8854-4a76-bef5-a0dcb3fcbfa1"
     ],
     "filterType": "GMSprite",
     "folderName": "portraits",

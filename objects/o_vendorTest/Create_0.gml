@@ -14,8 +14,10 @@ m_airFriction = 100;
 
 #endregion
 
-m_inventory = inventoryCreateOrLoad(null, 24);
+m_hasCharacter = iexists(m_character);
+m_characterObjectIndex = m_hasCharacter ? m_character.object_index : null;
 
+m_inventory = inventoryCreateOrLoad(null, 24);
 m_vendorPortrait = sui_tempPortraitBarOwner;
 
 /*// set up vendor inventory

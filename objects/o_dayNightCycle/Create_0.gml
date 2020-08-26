@@ -17,3 +17,4 @@ m_hourPassed = false;
 m_timeRunning = true;
 
 if (!iexists(o_darkness)) inew(o_darkness);
+if (!iexists(o_clockScheduler)) inew(o_clockScheduler);
