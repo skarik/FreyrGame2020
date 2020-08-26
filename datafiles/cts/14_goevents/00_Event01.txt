@@ -541,9 +541,10 @@ lines
 }
 
 
-
 //Fade Black.
 //Fade In.
+
+
 	
 //Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis. It’s evening.
 // CG needed for this def I think
@@ -605,6 +606,14 @@ portrait
 
 
 
+goto_if_flag
+{
+    target OnEnd
+    flag GoEvents 
+    compare !=
+    value 0
+}
 
 #OnEnd
+
 #ended

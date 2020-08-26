@@ -647,7 +647,8 @@
         "52a3c759-76ce-41af-91a6-2a2e2af00bb9",
         "812de17f-8f44-4af1-92be-483c060e3604",
         "49ab01ab-7f22-4c52-a063-fbc504257b10",
-        "fe0166e0-d578-406d-960e-7749fda7af3d"
+        "fe0166e0-d578-406d-960e-7749fda7af3d",
+        "eff4cb41-98de-4a76-8432-5356bb8eb040"
     ],
     "IsDnD": false,
     "layers": [
@@ -2250,7 +2251,7 @@
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
             "name": "collisionLayer1",
             "id": "435c11a2-e5c1-4828-b393-0e84dd3312d4",
-            "depth": -7,
+            "depth": -8,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -2493,7 +2494,7 @@
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
             "name": "collisionLayer0",
             "id": "76a8978b-1b9d-44ca-94aa-fc0bf7949f0c",
-            "depth": -4,
+            "depth": -6,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -2731,6 +2732,53 @@
             "visible": false,
             "x": 0,
             "y": 0
+        },
+        {
+            "name": "Event_CTS",
+            "id": "d1e671fd-983a-4db0-ba7d-014458bfef43",
+            "depth": -4,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+                {
+                    "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+                    "name": "Go_EVENT01",
+                    "id": "5b5cdeaf-cc34-440f-8786-3c376a1c2a59",
+                    "depth": -2,
+                    "grid_x": 32,
+                    "grid_y": 32,
+                    "hierarchyFrozen": false,
+                    "hierarchyVisible": true,
+                    "inheritLayerDepth": false,
+                    "inheritLayerSettings": false,
+                    "inheritSubLayers": false,
+                    "inheritVisibility": false,
+                    "instances": [
+{"name": "Go_46595298","id": "eff4cb41-98de-4a76-8432-5356bb8eb040","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "Go_46595298","objId": "f0f37b3e-34f2-4e00-999f-2ec7c3805076","properties": [{"id": "05e5de57-eebd-4433-8fce-23aa48c20a23","modelName": "GMOverriddenProperty","objectId": "f0f37b3e-34f2-4e00-999f-2ec7c3805076","propertyId": "52815eb4-435d-47fa-9dfd-4e62bf2a2ac8","mvc": "1.0","value": "\"14_goevents/01_Event01.txt\""}],"rotation": 0,"scaleX": 1.8125,"scaleY": 0.6875,"mvc": "1.1","x": 2426.5,"y": 1403}
+                    ],
+                    "layers": [
+
+                    ],
+                    "m_parentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "modelName": "GMRInstanceLayer",
+                    "mvc": "1.0",
+                    "userdefined_depth": false,
+                    "visible": true
+                }
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
