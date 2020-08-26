@@ -9,16 +9,20 @@ event_inherited();
 #region Constants
 
 kMoveSpeed = 110;
-kMoveSpeedStunPercent = 0.05;
+kMoveSpeedStunPercent = 1.0;
+kMoveSpeedStunAirPercent = 1.0;
 kMoveSpeedWaterPercent = 0.50;
 kMoveSpeedBlockingPercent = 0.50;
 kMoveSpeedCarryingPercent = 0.50;
 kMoveSpeedDeathtarPercent = 0.25;
+
 /*
 kMoveAcceleration = 800;
 kMoveAccelerationStop = 500;
 kMoveAccelerationAir = 200;
 kMoveAccelerationAirStop = 10;
+kMoveAccelerationStunned = 30;
+kMoveAccelerationAirStunned = 15;
 
 kDashDistance = 48;
 kDashTime = 0.3;

@@ -224,7 +224,7 @@ else
 {
 	for (var i = 0; i < pl.m_willpush; ++i)
 	{
-		draw_sprite(sui_barsWillBip, 1, dx + 9 + 14 * i, dy + 19 + 3);
+		draw_sprite(sui_barsWillBip, 1, dx + 9 + 15 * i, dy + 19 + 3);
 	}
 }
 
@@ -233,6 +233,6 @@ draw_set_font(f_04b03);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_black);
-var l_willValue = ceil(pl.m_will / 60.0);//ceil(pl.stats.m_healthMax * health_percent);
+var l_willValue = max(0.0, ceil(pl.m_will / 60.0));//ceil(pl.stats.m_healthMax * health_percent);
 draw_text(dx + 85, dy + 19 + 3, string(floor(l_willValue / 10.0)));
 draw_text(dx + 92, dy + 19 + 3, string(floor(l_willValue % 10.0)));
