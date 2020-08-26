@@ -1,0 +1,85 @@
+#begin
+#Initialize
+
+
+//Josh, Aurum only event, can only trigger if player is AURUM
+
+goto_if_flag
+{
+    target OnEnd
+    flag IntroSequence
+    compare <
+    value 60
+}
+
+goto_if_flag
+{
+    target OnEnd
+    flag GoEvents
+    compare !=
+    value 0
+}
+
+goto_if_flag
+{
+    target OnEnd
+    flag GoEvents
+    compare !=
+    value 0
+}
+
+
+spawnstate
+{
+    spawn_ifunique go
+    position 302 1675
+}
+
+
+ai
+{
+    target go
+    style cts
+    command teleport
+    position 302 1675
+}
+
+goto { target OnEnd }
+
+#OnBegin
+
+
+goto_if_flag
+{
+    target OnEnd
+    flag IntroSequence
+    compare <
+    value 60
+}
+
+goto_if_flag
+{
+    target OnEnd
+    flag GoEvents
+    compare !=
+    value 0
+}
+
+goto_if_player
+{
+    target DialogueForAurum
+    as Aurum
+}
+
+#DialogueForAurum
+
+screen
+{
+    type fadein
+    rgb 0 0 0
+}
+
+//BAR BCK eventually
+
+#OnEnd
+#ended
