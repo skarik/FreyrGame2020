@@ -39,5 +39,19 @@ else if (character == o_chNathan)
 {
 	return sui_portraitNathanNeutral;
 }
-
+else if (character == o_chGo)
+{
+	var stats = instance_find(o_PlayerStats, 0);
+	if (expression == kPortraitExpressionNeutral)
+	{
+		if (stats.m_shirtless)
+		{
+			return sui_portraitGoNekkidNeutral;
+		}
+		else
+		{
+			return sui_portraitGoNeutral;
+		}
+	}
+}
 return sui_portraitRef;
