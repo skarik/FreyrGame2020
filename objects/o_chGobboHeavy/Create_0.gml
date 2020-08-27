@@ -72,6 +72,8 @@ kAnimKOed = sprite_index;
 // Special anim used by gobbo AI
 kAnimSignal = sprite_index;
 
+kAnimFightStomp = s_charGobHeavy0Jump;
+
 #endregion
 
 m_team = kTeamGobbo;
@@ -87,6 +89,10 @@ aiScriptableInit();
 kAiScriptDefaultStyle = kAiStyle_Custom;
 m_aiCustom_Script = aiGobboPatrolUpdate;
 aiGobboPatrolInit();
+m_aiGobbo_squadPosition = kAiGobboSquadPosition_Bruiser;
+m_aiGobbo_angryOverride = aiGobboHeavySquadAngryUpdate;
+
+// Queue up the angry state
 alarm[0] = 4;
 
 image_alpha = 0.0;

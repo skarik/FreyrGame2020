@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "02e03c49-7e44-454a-82d3-f76e7dd1b9eb",
+            "Value": {
+                "id": "cb964524-abfd-4131-9f3d-90b2deb9062b",
+                "resourcePath": "scripts\\aiGobboHeavySquadAngryUpdate\\aiGobboHeavySquadAngryUpdate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "02e4f5f8-2d6b-47e2-ba8a-2b1e0500df29",
             "Value": {
                 "id": "c737ab74-5608-42b3-b446-307761ede196",
@@ -10623,6 +10631,14 @@
             }
         },
         {
+            "Key": "899772f2-249d-4b11-aa7f-1f3e00cb211a",
+            "Value": {
+                "id": "ea54b85a-b77c-4e81-965e-da1da3f30964",
+                "resourcePath": "sprites\\s_charGobHeavy0Jump\\s_charGobHeavy0Jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "89abb2b8-ee3c-4032-8785-0b9153108439",
             "Value": {
                 "id": "1bc0460f-2232-44eb-a04c-44e8b007e783",
@@ -10900,6 +10916,14 @@
                 "id": "e0afde10-aab0-45df-ba4b-78608c28c1e2",
                 "resourcePath": "sprites\\s_assetCaveOpening0\\s_assetCaveOpening0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8cdc392d-2bdd-4dbb-b9f5-c4eb6cec546f",
+            "Value": {
+                "id": "a0e595fc-c232-482c-ac33-dca5960fd574",
+                "resourcePath": "scripts\\_characterGobboHeavyMoBeginFight0\\_characterGobboHeavyMoBeginFight0.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -11907,6 +11931,14 @@
             "Value": {
                 "id": "09bf2427-977d-4bf5-9220-adc9669109a6",
                 "resourcePath": "scripts\\string_rpos\\string_rpos.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "99369901-d376-44ea-9930-5a854320ab50",
+            "Value": {
+                "id": "e3982e33-3040-453b-bd47-ef083c548f53",
+                "resourcePath": "scripts\\aiGobboHeavyInit\\aiGobboHeavyInit.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -21192,13 +21224,16 @@
         "b4b2e5c7-d52a-4841-b8fc-2e5107fd05b9",
         "2bf651bd-5c8b-4331-b970-de3fafe15305",
         "f5695278-83d6-4cbe-843c-389b3f58a67e",
+        "8cdc392d-2bdd-4dbb-b9f5-c4eb6cec546f",
         "5820995c-7b91-4eaa-bc65-e0af18e93f8f",
-        "58ec443d-8b24-45fb-a55f-3475670dcbd1",
-        "ba10f5b5-4cc4-4a01-8580-f35889f213d5",
         "686d308c-8b8e-4654-a010-7e46faaf3e8d",
         "5a59fe95-2df5-41df-b46d-342203d6d542",
         "f77d68f2-0b9c-4bf1-807a-46f6a29b41f1",
         "243f5ac5-844d-4727-82ff-72c82f43e56c",
+        "58ec443d-8b24-45fb-a55f-3475670dcbd1",
+        "ba10f5b5-4cc4-4a01-8580-f35889f213d5",
+        "99369901-d376-44ea-9930-5a854320ab50",
+        "02e03c49-7e44-454a-82d3-f76e7dd1b9eb",
         "d7dc3a9b-9a3b-47d0-bb61-ffaf5cc6adc9",
         "bf881278-c148-47f4-ab9b-0d789f461976",
         "9a87ef17-5766-4230-9531-1648752f395a",

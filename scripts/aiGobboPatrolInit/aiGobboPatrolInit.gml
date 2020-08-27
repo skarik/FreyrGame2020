@@ -3,6 +3,7 @@ aiNPCGuardInit(); // Start with NPC guard common
 // Gobbo specific behaviors
 #macro kAiGobboSquadPosition_Attacker 0
 #macro kAiGobboSquadPosition_Support 1
+#macro kAiGobboSquadPosition_Bruiser 2
 
 m_aiGobbo_squadPosition = kAiGobboSquadPosition_Attacker;
 m_aiGobbo_angryOverride = null;

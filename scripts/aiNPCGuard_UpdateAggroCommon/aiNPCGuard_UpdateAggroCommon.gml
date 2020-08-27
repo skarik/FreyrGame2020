@@ -28,24 +28,57 @@ var t_nextTarget = null;
 			&& !t_possibleTarget.isHidden
 			&& !t_possibleTarget.m_isDead && !t_possibleTarget.m_isKOed
 			&& !aiPointInSafeArea(t_possibleTarget.x, t_possibleTarget.y)
-			&& aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
+			&& ((m_aiNPC_fastAggro && t_possibleTarget.m_isPlayer)
+			|| aicommonCanSee(t_possibleTarget.x, t_possibleTarget.y, t_possibleTarget.z,
 								facingDirection, m_aiCombat_noticeDistance,
 								(m_aiCombat_angry && t_possibleTarget == m_aiCombat_target) ? 360 : m_aiCombat_noticeAngle,
-								true))
+								true)))
 		{
 			t_nextTarget = t_possibleTarget; // we have a new best target yay
 		}
 	}
-		
+	
+	var bFastAggro = false;
+	if (m_aiNPC_fastAggro)
+	{
+		// Check if target is in the current aggro area
+		aiGAlertUpdateCurrent();
+		if (iexists(m_aialert_area))
+		{
+			var callee = id;
+			with (m_aiCombat_target)
+			{
+				if (position_meeting(x, y, callee.m_aialert_area))
+				{
+					bFastAggro = true;
+					break;
+				}
+			}
+		}
+		else
+		{
+			var callee = id;
+			with (m_aiCombat_target)
+			{
+				if (point_distance(x, y, callee.x, callee.y) < 200)
+				{
+					bFastAggro = true;
+					break;
+				}
+			}
+		}
+	}
+	
 	// Check if can see the target
 	if (iexists(m_aiCombat_target)
 		&& !m_aiCombat_target.isHidden
 		&& !m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed
 		&& !aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y)
-		&& aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
+		&& (bFastAggro 
+		|| aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
 							facingDirection, m_aiCombat_noticeDistance,
 							m_aiCombat_angry ? 360 : m_aiCombat_noticeAngle,
-							true))
+							true)))
 	{
 		m_aiCombat_targetVisible = true;
 		m_aiCombat_targetPosition = [m_aiCombat_target.x, m_aiCombat_target.y];

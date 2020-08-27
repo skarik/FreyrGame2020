@@ -140,7 +140,7 @@ else if (m_aiCombat_enabled)
 		{
 			moAnimationExternal = false;
 		}
-		if (true)
+		if (true || m_aiNPC_fastAggro)
 		{
 			if (m_aiNPC_alertTimer == 0.0)
 			{
@@ -157,7 +157,7 @@ else if (m_aiCombat_enabled)
 			aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], 360);
 			
 			// Investigate after time
-			if (m_aiNPC_alertTimer >= 2.0)
+			if (m_aiNPC_alertTimer >= 2.0 || m_aiNPC_fastAggro)
 			{
 				// If target visible at this point, then we aggro
 				if (m_aiCombat_targetVisible)

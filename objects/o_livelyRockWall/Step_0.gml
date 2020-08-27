@@ -40,7 +40,7 @@ if (m_fadeOut)
 }
 else
 {
-	m_currentHeight = min(16, m_currentHeight + Time.deltaTime * 64);
+	m_currentHeight = min(16, m_currentHeight + Time.deltaTime * 101);
 }
 
 depthUpdate();

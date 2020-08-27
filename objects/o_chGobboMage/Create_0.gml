@@ -92,3 +92,4 @@ m_aiCustom_Script = aiGobboPatrolUpdate;
 aiGobboPatrolInit();
 m_aiGobbo_squadPosition = kAiGobboSquadPosition_Support;
 m_aiGobbo_angryOverride = aiGobboMageSquadAngryUpdate;
+aiGobboHeavyInit();

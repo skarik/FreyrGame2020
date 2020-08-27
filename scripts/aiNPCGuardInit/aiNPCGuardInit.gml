@@ -37,3 +37,4 @@ m_aiNPC_alertState = kAiNPCAlertState_Notice;
 m_aiNPC_alertTimer = 0.0;
 m_aiNPC_alertFacing = 0.0;
 m_aiNPC_alertPosition = [0, 0];
+m_aiNPC_fastAggro = false;

@@ -134,10 +134,10 @@ else
 			aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], 360);
 			
 			// Investigate after time
-			if (m_aiNPC_alertTimer >= 2.0)
+			if (m_aiNPC_alertTimer >= 2.0 || m_aiNPC_fastAggro)
 			{
 				// If target visible at this point, then we aggro
-				if (m_aiCombat_targetVisible)
+				if (m_aiCombat_targetVisible || m_aiNPC_fastAggro)
 				{
 					// Create the ! emote
 					var emote_fx = inew(o_fxEmote);

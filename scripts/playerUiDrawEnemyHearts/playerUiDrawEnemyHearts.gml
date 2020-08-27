@@ -164,6 +164,9 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 		// Dont draw bips if stunned
 		if (t_enemy.m_isStunned)
 		{
+			var t_xoffset_old = t_xoffset;
+			t_xoffset = 18;
+			
 			// Draw stagger timer bar
 			var t_staggerPercent = saturate(t_enemy.m_stunTimer / t_enemy.stats.m_staggerTime);
 			draw_set_color(c_black);
@@ -173,9 +176,9 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 						   t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y + 5,
 						   false);
 			draw_set_color(c_gold);
-			draw_rectangle(t_enemy.x + d_offset_x - t_xoffset * t_staggerPercent,
+			draw_rectangle(t_enemy.x + d_offset_x - t_xoffset,
 						   t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y - 4,
-						   t_enemy.x + d_offset_x + t_xoffset * t_staggerPercent,
+						   t_enemy.x + d_offset_x - t_xoffset + 2.0 * t_xoffset * t_staggerPercent,
 						   t_enemy.y - t_enemy.z_height - t_enemy.m_standingHeight - t_yoffset + d_offset_y + 4,
 						   false);
 			
@@ -188,6 +191,8 @@ for (var i = 0; i < l_activeEnemyListSize; ++i)
 							  "STUNNED",
 							  c_gold,
 							  c_black, 1);
+			
+			t_xoffset = t_xoffset_old;
 			
 			// Skip drawing bips.
 			continue;
