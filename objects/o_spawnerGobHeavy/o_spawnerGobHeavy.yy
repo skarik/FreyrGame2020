@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_spawnerGobHeavy",
     "eventList": [
-        
+        {
+            "id": "2f655586-fa40-4114-806f-436f9233ebea",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 11,
+            "eventtype": 7,
+            "m_owner": "84af1fd6-28cf-4389-840f-de9fa99a55d5"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
@@ -40,7 +49,20 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "7c78b414-19df-4ee5-b8a9-3ef2bc1467b0",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "m_fastAggro",
+            "varType": 3
+        }
     ],
     "solid": false,
     "spriteId": "f86b989a-1583-41ff-b76c-81878f1e0370",
