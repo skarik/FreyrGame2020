@@ -5447,6 +5447,14 @@
             }
         },
         {
+            "Key": "45238dee-9f4d-41f9-888e-7899b06bdbb6",
+            "Value": {
+                "id": "aaad01cb-55aa-4f81-8cd3-fe6dc8248427",
+                "resourcePath": "datafiles_yy\\cts\\14_goevents\\01_Event01.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "45292425-451e-4992-882e-54c3a9a0d00a",
             "Value": {
                 "id": "f1b87540-83af-4124-a9dc-1ca04e10552e",

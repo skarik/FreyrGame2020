@@ -1,0 +1,622 @@
+#begin
+#Initialize
+
+
+
+goto_if_flag
+{
+    target OnEnd
+    flag IntroSequence 
+    compare <
+    value 60
+}
+
+goto_if_flag
+{
+    target OnEnd
+    flag GoEvents
+    compare !=
+    value 0
+}
+
+goto_if_flag
+{
+    target OnEnd
+    flag GoEvents
+    compare !=
+    value 0
+}
+
+
+spawnstate
+{
+    spawn_ifunique go
+    position 2162 1657
+}
+
+
+ai
+{
+    target go
+    style cts
+    command teleport
+    position 2162 1657
+}
+
+spawnstate
+{
+    spawn_ifunique player
+    position 2165 1657
+}
+
+
+ai
+{
+    target player
+    style cts
+    command teleport
+    position 2165 1657
+}
+
+goto { target OnEnd }
+
+#OnBegin
+
+
+//Show CG of fighting in water 
+
+lines
+{
+
+	target player 
+	object 0
+	1 You bloody cheater! I can’t see in the dark!
+
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 Seems like you might be at a disadvantage then. 
+
+
+}
+
+lines
+{
+
+	target player
+	object 0
+	1 On my planet attacking the disabled is a crime you scaly bastard!
+
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 Guess you’re gonna have to arrest me and then yourself.
+	2 We both are missing a few parts. 
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 That sounds like a lot of work.
+	2 To much in fact. 
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 You’re right, it does. So what’s your solution, then?
+	2 A punishment of some kind?
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Punishment? Oh, you’re that type, huh?
+
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 I hardly $wknow what you mean$$. I just think that you’re stalling.
+
+}
+
+//Aurum flips them over <same cg but Aurum on top>
+
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Oh, darn, caught gold handed. 
+
+
+}
+
+
+lines
+{
+
+	target libby
+	1 He smirks at you. His brow furrowing playfully. 
+	2 You can feel his tail snake around your leg and for a moment you think he’s going to toss you off.
+
+}
+
+lines
+{
+
+	target player 
+	object 0
+	1 That tail of yours is a real problem.
+	2 Would hate for you to have to lose it. 
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 I just use the gifts the Goddess gave me.
+
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Oh and what other $wgifts$$ do you have?  
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 Well. I can name several that would be useful in this situation. 
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Try me, scales. 
+}
+
+lines
+{
+
+	target libby
+	1 He leans up on his elbows as you look at each other. Despite all the flirting it seems your both aren’t sure how to proceed.
+	2 You wanted to kiss him, but you weren't really sure if the feeling was mutual. 
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 I'm usually pretty plastered by the time I get to this point.
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Same.
+
+}
+
+//BEAT
+//BEAT
+
+
+lines
+{
+
+	target libby
+	1 Taloned tipped fingers reach out to push a misbehaving hair off your forehead.
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 If you’re going to ask me if you can kiss me you really don’t have to ask. 
+
+}
+
+lines
+{
+
+	target libby
+	1 You blurt these words woud before you can give them any real thought. 
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 Who said I wanted to?
+
+
+}
+
+
+lines
+{
+
+	target libby
+	1 You both snort as you turn your heads to laugh. You find yourself cradled in the man’s lap as he sits up ; water up to your waists.
+
+}
+
+//Transition out of CG
+
+
+portrait
+{	// Go Portrait 
+	index 0
+	action show
+	position 1.0
+	align right
+	face left
+	character Go
+	expression nekkidneutral
+}
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.0
+	align left
+	face right
+	character player
+	expression nekkidneutral
+}
+
+
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 So about these Goddess given gifts of yours.... 
+
+}
+
+lines
+{
+
+	target libby
+	1 Your arms find purchase on his shoulders. Fingers trace the scales on the back of his neck with curiosity.
+	2 They are quite smooth and appear to reflect the moonlight.
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 Sure about this? I’m only half human.
+	2 People might talk. 
+
+
+}
+
+lines
+{
+
+	target player 
+	object 0
+	1 Sweetheart I’ve tangoed with things far more wild looking than you. 
+
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 Oh? Now that sounds like some interesting pillow talk. 
+	2 I must know more.
+
+
+}
+
+lines
+{
+
+	target player 
+	object 0
+	1 You’ve got pillows in that tent over there? Sounds fancy. Love to see ‘em.
+
+
+}
+
+lines
+{
+
+	target libby
+	1 He chuckles at you. You can tell he’s about to say something stupid. So you kiss him before he can. 
+	2 His talons scrap at your waist as you paw at each other. 
+	3 The situation seemes like its going to get a lot more interesting but-
+	
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 Dammit.
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Hm? What’s wrong? 
+	2 Is there where you tell me you're married? 
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 What? No. It’s just uh…
+}
+
+lines
+{
+
+	target libby
+	1 He lifts you off him and pulls you both up to stand.
+
+
+}
+
+lines
+{
+
+	target player 
+	object 0
+	1 Please tell me it’s cause you have to piss because I've been holding it for well over ten minutes.
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 Oh, thank Goddess. You too? 
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 That alcohol does not stay put does it?
+	2 Never had this happen before. 
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 I sort of forgot, was a little to preoccupied trying to keep you from breaking into the church.
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 I just wanted to scribble a dong on the Vicar's face! 
+	2 Listen you just go to that corner and I'll go over here. 
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 Like I said he doesn't live in the church.
+	2 This kind of ruins the mood doesn't it? 
+
+}
+
+
+lines
+{
+
+	target libby
+	1 You’re practically yelling across the oasis at each other, the awkwardness of the situation lost on both of you all the sudden. 
+
+}
+
+lines
+{
+
+	target player 
+	object 0
+	1 I could name a worse bodily function that puts a real downer on the $wmood$$.
+
+}
+
+lines
+{
+	target go
+	object 1
+	1 Goddess I remember those da-
+
+}
+
+lines
+{
+
+	target libby
+	1 He cuts himself off. It seems like he was about to say something pretty personal. 
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Don’t like talking about yourself much do you?
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 Could say the same for you.
+	2 You talk a lot, but don't really say anything. 
+
+}
+
+
+lines
+{
+
+	target libby
+	1 You both meet in the middle again, washing your hands in the water side by side.
+	2 Before standing with your arms crossed looking each other over. His tail swishes behind him like a riled up cat.
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Well I won’t judge yah for nothing. Can’t be anything you’ve done that’s worse than me. 
+
+}
+
+
+
+lines
+{
+	target go
+	object 1
+	1 Hm. Well. Maybe I’ll talk about it sometime, but for now…
+
+
+}
+
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Got any card games in that tent of yours?
+
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 Sure do.
+
+
+}
+
+
+lines
+{
+
+	target player 
+	object 0
+	1 Then how about a few rounds? See if it sparks the mood again.
+
+}
+
+
+lines
+{
+	target go
+	object 1
+	1 I would be crazy to say no to that. 
+
+}
+
+//Fade of them walking for the tent. 
+
+
+
+
+
+
+
+
+
+
+
+#OnEnd
+#ended
