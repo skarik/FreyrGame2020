@@ -16,17 +16,8 @@ goto_if_flag
     target OnEnd
     flag GoEvents
     compare !=
-    value 0
+    value 1
 }
-
-goto_if_flag
-{
-    target OnEnd
-    flag GoEvents
-    compare !=
-    value 0
-}
-
 
 spawnstate
 {

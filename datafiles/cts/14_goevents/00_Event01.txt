@@ -23,15 +23,6 @@ goto_if_flag
     value 0
 }
 
-goto_if_flag
-{
-    target OnEnd
-    flag GoEvents
-    compare !=
-    value 0
-}
-
-
 spawnstate
 {
     spawn_ifunique go
@@ -604,15 +595,12 @@ portrait
 	expression neutral
 }
 
-
-
-goto_if_flag
+flags
 {
-    target OnEnd
-    flag GoEvents 
-    compare !=
-    value 0
+	set GoEvents 1
 }
+
+signal { id GoTo rm_fools_march; }
 
 #OnEnd
 
