@@ -1,5 +1,7 @@
+///@function _characterGobboHeavyMoRockScatter0()
 var kMoveLength = 1.3;
 var kHitTime = 5/10 * kMoveLength;
+var kCastTime = 6/10 * kMoveLength;
 
 
 // Increment timer
@@ -38,6 +40,17 @@ if (prevMoveTimer < kHitTime && moveTimer >= kHitTime)
 				 hitboxCenterX + 12, hitboxCenterY + 12,
 				 meleeAtk0Damage,
 				 kDamageTypeBlunt);
+}
+
+// do the cast effect
+if (prevMoveTimer < kCastTime && moveTimer >= kCastTime)
+{
+	// spawn the attack bit in a line, of them
+	var hitboxCenterX = x + lengthdir_x(28, meleeAtkDirection);
+	var hitboxCenterY = y + lengthdir_y(28, meleeAtkDirection);
+	
+	instance_create_depth(hitboxCenterX, hitboxCenterY, 0, o_fxStoneSpike);
+	effectOnGroundHit(hitboxCenterX, hitboxCenterY);
 }
 
 // update animation

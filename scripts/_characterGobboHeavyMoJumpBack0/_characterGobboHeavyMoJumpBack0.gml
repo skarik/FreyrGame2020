@@ -27,6 +27,12 @@ z_height = 8.0 * sin(min(1.0, l_dashPercent / l_moveSpeedLandPoint) * pi);
 // Update Z
 _playerMotionCommonZUpdate();
 
+// Do effects
+if (prevMoveTimer < kLandingPoint && moveTimer >= kLandingPoint)
+{
+	effectOnGroundHit(x, y);
+}
+
 if (m_aiGobboHeavy_movetimer >= kMoveLength)
 {
 	moScriptOverride = null;

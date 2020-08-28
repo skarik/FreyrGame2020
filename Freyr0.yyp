@@ -13711,6 +13711,14 @@
             }
         },
         {
+            "Key": "ad866d00-4d5c-4ffd-a658-9875e11095a0",
+            "Value": {
+                "id": "ffb3e3af-178f-4436-8176-fb803cd0d0ed",
+                "resourcePath": "sprites\\s_effectStoneSpike\\s_effectStoneSpike.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ad8925a6-cbad-45b7-ab24-7edec2a5cb36",
             "Value": {
                 "id": "64b9be96-01e7-4cfd-8dcc-ae8c03f54e31",
@@ -16108,6 +16116,14 @@
                 "id": "b3cd345e-7ed1-40d2-b126-9939e9658ca3",
                 "resourcePath": "sprites\\sc_16x16c\\sc_16x16c.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c95611f6-1e6c-4620-8dda-dada82d2bde3",
+            "Value": {
+                "id": "15d76296-398b-4ee6-8df3-6b2fb0996742",
+                "resourcePath": "objects\\o_fxStoneSpike\\o_fxStoneSpike.yy",
+                "resourceType": "GMObject"
             }
         },
         {

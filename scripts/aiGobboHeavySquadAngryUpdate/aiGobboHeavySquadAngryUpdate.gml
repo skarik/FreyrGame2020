@@ -93,13 +93,36 @@ else if (m_aiGobboHeavy_state == kAiGobboHeavyState_Fight0)
 		}
 	}
 	
+	// Countdown all the delay timers
+	if (!isAttacking && !isDashing)
+	{
+		m_aiGobboHeavy_closeMeleeDelay -= Time.deltaTime;
+		m_aiGobboHeavy_farSpellDelay -= Time.deltaTime;
+	}
+	
 	// Do attacks on a timer, different timer if in melee range
 	if (moScriptOverride == null)
 	{
 		if (distanceToTarget < 40)
 		{
-			moScriptOverride = _characterGobboHeavyMoMelee0;
-			m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
+			if (m_aiGobboHeavy_closeMeleeDelay <= 0.0)
+			{
+				moScriptOverride = _characterGobboHeavyMoMelee0;
+				m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
+				m_aiGobboHeavy_closeMeleeDelay = 0.2; // Have a delay between attacks so there is some gameplay-breathing room
+			}
+		}
+		else if (distanceToTarget > 70)
+		{
+			if (m_aiGobboHeavy_farSpellDelay <= 0.0)
+			{
+				moScriptOverride = m_aiGobboHeavy_farMeleeSelector ? _characterGobboHeavyMoRockSpike0 : _characterGobboHeavyMoRockScatter0;
+				m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
+				m_aiGobboHeavy_farSpellDelay = 1.2; // Have a bigger delay between spell attacks so the player can react to them
+				
+				// Swap selector every time we begin a move.
+				m_aiGobboHeavy_farMeleeSelector = !m_aiGobboHeavy_farMeleeSelector;
+			}
 		}
 	}
 	
