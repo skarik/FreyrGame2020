@@ -9,7 +9,8 @@
         "133990ab-b00c-47fd-a20c-6c957692aad4",
         "7be0f790-798d-43a2-9cda-d4362d4c95fd",
         "61da62d4-c5a7-443b-bd8f-7b339f27cb59",
-        "59305019-67c2-4b8e-8dd4-21e182f98c16"
+        "59305019-67c2-4b8e-8dd4-21e182f98c16",
+        "d87f549d-485f-4cdf-becc-734aac835082"
     ],
     "filterType": "GMObject",
     "folderName": "Projectiles",

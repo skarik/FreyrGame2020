@@ -1,7 +1,8 @@
 ///@function _characterGobboHeavyMoRockScatter0()
-var kMoveLength = 1.3;
-var kHitTime = 5/10 * kMoveLength;
-var kCastTime = 6/10 * kMoveLength;
+var kMoveLength = 1.4;
+var kHitTime = 5/12 * kMoveLength;
+var kCastTime = 6/12 * kMoveLength;
+var kWhackTime = 9/12 * kMoveLength;
 
 
 // Increment timer
@@ -51,6 +52,34 @@ if (prevMoveTimer < kCastTime && moveTimer >= kCastTime)
 	
 	instance_create_depth(hitboxCenterX, hitboxCenterY, 0, o_fxStoneSpike);
 	effectOnGroundHit(hitboxCenterX, hitboxCenterY);
+}
+
+// whack the hovering stone
+if (prevMoveTimer < kWhackTime && moveTimer >= kWhackTime)
+{
+	// spawn the attack bit in a line, of them
+	var hitboxCenterX = x + lengthdir_x(23, meleeAtkDirection);
+	var hitboxCenterY = y + lengthdir_y(23, meleeAtkDirection);
+	
+	/*instance_create_depth(hitboxCenterX, hitboxCenterY, 0, o_fxStoneSpike);
+	effectOnGroundHit(hitboxCenterX, hitboxCenterY);*/
+	
+	// Create three projectiles going forward
+	for (var i = 0; i < 3; ++i)
+	{
+		var angleOffset = (i - 1) * 30;
+		
+		var projectile = instance_create_depth(hitboxCenterX, hitboxCenterY, depth, o_projectileRockScatter);
+			projectile.m_owner = id;
+			projectile.m_team = m_team;
+			projectile.xspeed = lengthdir_x(300, meleeAtkDirection + angleOffset);
+			projectile.yspeed = lengthdir_y(300, meleeAtkDirection + angleOffset);
+			projectile.z = z;
+			projectile.z_height = 24;
+			projectile.zspeed = -10;
+			projectile.zgravity = 300;
+	}
+	
 }
 
 // update animation

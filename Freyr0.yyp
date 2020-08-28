@@ -17359,6 +17359,14 @@
             }
         },
         {
+            "Key": "d87f549d-485f-4cdf-becc-734aac835082",
+            "Value": {
+                "id": "a4d18985-307d-40b0-a847-723ce1ee9e89",
+                "resourcePath": "objects\\o_projectileRockScatter\\o_projectileRockScatter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d88f21b0-7401-40e0-b812-6bdbd3e54224",
             "Value": {
                 "id": "db297799-5a07-42d0-93d0-7c1a0947a64b",
