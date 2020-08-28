@@ -1,3 +1,8 @@
+var kMoveLength = 1.1;
+var kStompTime = 5/10 * kMoveLength;
+var kWallTime = 6/10 * kMoveLength;
+
+
 // Increment timer
 var prevMoveTimer = m_aiGobboHeavy_movetimer;
 m_aiGobboHeavy_movetimer += Time.deltaTime;
@@ -8,12 +13,6 @@ isAttacking = true;
 
 // Do checks & motion
 _playerMoCommonAttackPreMove(0.0, false);
-
-// Do actual move:
-
-var kMoveLength = 1.1;
-var kStompTime = 5/10 * kMoveLength;
-var kWallTime = 6/10 * kMoveLength;
 
 // Do FX
 if (prevMoveTimer < kStompTime && moveTimer >= kStompTime)
@@ -50,7 +49,7 @@ if (prevMoveTimer < kWallTime && moveTimer >= kWallTime)
 
 // update animation
 sprite_index = kAnimFightStomp;
-animationIndex = image_number * saturate(moveTimer / kMoveLength);
+animationIndex = floor((image_number - 0.01) * saturate(moveTimer / kMoveLength));
 moAnimationPlayback = true;
 
 // End case

@@ -74,6 +74,47 @@ else if (m_aiGobboHeavy_state == kAiGobboHeavyState_BeginFight)
 else if (m_aiGobboHeavy_state == kAiGobboHeavyState_Fight0)
 {
 	// Do FIGHT!
+	
+	// We have three attacks:
+	// 1) Melee 
+	// 2) Ranged percing line
+	// 3) Ranged blocked scatter
+
+	var deltaFromTarget = avec2_subtract([x, y], m_aiCombat_targetPosition);
+	var distanceToTarget = avec2_length(deltaFromTarget);
+	var directionToTarget = avec2_divide(deltaFromTarget, distanceToTarget);
+	var targetPosition = avec2_add(m_aiCombat_targetPosition, avec2_multiply(directionToTarget, clamp(distanceToTarget, 16, 40)));
+	aimotionMoveTo(targetPosition[0], targetPosition[1], 1.0);
+	if (distanceToTarget > 16 && distanceToTarget < 40)
+	{
+		if (!isAttacking)
+		{
+			aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], 720);
+		}
+	}
+	
+	// Do attacks on a timer, different timer if in melee range
+	if (moScriptOverride == null)
+	{
+		if (distanceToTarget < 40)
+		{
+			moScriptOverride = _characterGobboHeavyMoMelee0;
+			m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
+		}
+	}
+	
+	// If player is attacking, possible dodge
+	if (moScriptOverride == _characterGobboHeavyMoMelee0)
+	{
+		if (iexists(m_aiCombat_target)
+			&& m_aiCombat_target.isAttacking
+			&& stats.m_stun > stats.m_stunMax * 0.7)
+		{
+			// Request a dodge backwards at this point
+			meleeDashQueued = true;
+		}
+	}
+	
 }
 
 #endregion

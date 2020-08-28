@@ -551,6 +551,14 @@
             }
         },
         {
+            "Key": "07d58325-7fbe-45aa-aff7-db19b7d5bab2",
+            "Value": {
+                "id": "ce76f66f-7cd8-459f-826b-5eb7467230fd",
+                "resourcePath": "scripts\\_characterGobboHeavyMoJumpBack0\\_characterGobboHeavyMoJumpBack0.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "07d7acdf-64cd-48e2-b83c-a6a7a0482c36",
             "Value": {
                 "id": "837099f8-d654-4a61-a497-423e07e6f781",
@@ -2475,6 +2483,14 @@
             "Value": {
                 "id": "a996c054-5fee-41a3-ac3c-5ba9ce5ac992",
                 "resourcePath": "scripts\\controlInit\\controlInit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1f4a4610-5871-437d-8e3d-fef5259ab5b3",
+            "Value": {
+                "id": "f71136f8-fa8b-4cea-ae1d-d463cf4829ea",
+                "resourcePath": "scripts\\damageStunApplyModifiers\\damageStunApplyModifiers.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8959,6 +8975,14 @@
             }
         },
         {
+            "Key": "7125924f-1fa6-4f09-9b91-20d69187d971",
+            "Value": {
+                "id": "11a50069-483e-4086-af78-bf94ad517393",
+                "resourcePath": "scripts\\_characterGobboHeavyMoRockScatter0\\_characterGobboHeavyMoRockScatter0.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7128f739-5b32-4178-93ef-182ab56400ae",
             "Value": {
                 "id": "482ea34a-b90b-4c64-a655-be121654dd75",
@@ -11519,6 +11543,14 @@
             }
         },
         {
+            "Key": "94a77672-2abd-4aae-af4b-5a9dfc773d44",
+            "Value": {
+                "id": "9c4e077c-999e-441e-8654-929f6ed9774f",
+                "resourcePath": "scripts\\_characterGobboHeavyMoRockSpike0\\_characterGobboHeavyMoRockSpike0.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "94bbb7ea-7015-4e3c-b1c7-c8e69d59c959",
             "Value": {
                 "id": "745631db-0f89-43dd-b011-90f75c70c56b",
@@ -12483,6 +12515,14 @@
             "Value": {
                 "id": "17869f62-b9e3-41bb-b04a-7b40228ba85a",
                 "resourcePath": "scripts\\abbox_right\\abbox_right.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9f4d0f9f-1f93-403c-a57e-52fcf5aecb1c",
+            "Value": {
+                "id": "41336581-7028-4f16-8e1a-84eaaad841e5",
+                "resourcePath": "scripts\\_characterGobboHeavyMoMelee0\\_characterGobboHeavyMoMelee0.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -21126,6 +21166,7 @@
         "876c3f58-ae51-4a71-869c-9263e4efe880",
         "e02b8b61-3840-4665-8de5-7ec3350944cd",
         "33a16ba5-1540-47fa-b42f-f12adc454fba",
+        "1f4a4610-5871-437d-8e3d-fef5259ab5b3",
         "dc286b8b-27f9-4d4a-be5b-2dde37592d1a",
         "4a9ce0c8-de85-4c6c-9f44-da24522badcd",
         "a6578fec-2b2d-474a-a91b-ccd674dce3f9",
@@ -21233,6 +21274,10 @@
         "2bf651bd-5c8b-4331-b970-de3fafe15305",
         "f5695278-83d6-4cbe-843c-389b3f58a67e",
         "8cdc392d-2bdd-4dbb-b9f5-c4eb6cec546f",
+        "9f4d0f9f-1f93-403c-a57e-52fcf5aecb1c",
+        "94a77672-2abd-4aae-af4b-5a9dfc773d44",
+        "7125924f-1fa6-4f09-9b91-20d69187d971",
+        "07d58325-7fbe-45aa-aff7-db19b7d5bab2",
         "5820995c-7b91-4eaa-bc65-e0af18e93f8f",
         "686d308c-8b8e-4654-a010-7e46faaf3e8d",
         "5a59fe95-2df5-41df-b46d-342203d6d542",

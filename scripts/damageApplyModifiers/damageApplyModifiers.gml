@@ -17,6 +17,12 @@ with (target)
 		if (is_character && !m_isStunned)
 		{
 			damage = ceil(damage * 0.5);
+			
+			// And less damage still if a heavy
+			if (m_isHeavyFighter)
+			{
+				damage = damage * 0.25;
+			}
 		}
 	}
 	
@@ -40,7 +46,14 @@ with (target)
 	{
 		if (type & kDamageTypeCounter)
 		{
-			damage = min(stats.m_healthMax, 60);
+			if (m_isHeavyFighter)
+			{	// Do heavy damage instead of the insta-kill
+				damage *= 2;
+			}
+			else
+			{
+				damage = min(stats.m_healthMax, 60);
+			}
 		}
 	}
 	

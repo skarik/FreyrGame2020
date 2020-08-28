@@ -11,6 +11,7 @@ var x1 = argument1; var y1 = argument2;
 var x2 = argument3; var y2 = argument4;
 var damage = argument5;
 var type = argument6;
+var stun = 1.0;
 
 // For debug purposes, draw the bounding box of the hitbox
 if (Debug.on)
@@ -81,6 +82,7 @@ with (ob_character)
     {
 		// Modify damage based on armor
 		var actualDamage = damageApplyModifiers(id, damage, type);
+		var actualStun = damageStunApplyModifiers(id, stun, type);
 		
 		// Save dealt damage
 		source.m_dealtDamage = true;
@@ -117,7 +119,7 @@ with (ob_character)
         //m_isStunned = true;
         //m_stunTimer = max(0, m_stunTimer) + (min(damage, 50) * 0.025) * 2.0;
 		if (!m_isStunned)
-			stats.m_stun += 1.0;
+			stats.m_stun += actualStun;
         // Add knockback
         var kickback = damage * 16 * kKickbackAmount;
         /*if ( abs(xspeed) < kickback || sign(xspeed) != sign(x - source.x) )

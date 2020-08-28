@@ -65,7 +65,7 @@ meleeAtk3Damage = 2;
 kAnimStanding = sprite_index;
 kAnimWalking = sprite_index;
 kAnimRolling = sprite_index;
-kAnimAttack1 = sprite_index;
+kAnimAttack1 = s_charGobbo0Atk1;
 kAnimStun = sprite_index;
 kAnimKOed = sprite_index;
 
@@ -78,8 +78,9 @@ kAnimFightStomp = s_charGobHeavy0Jump;
 
 m_team = kTeamGobbo;
 m_bloodType = kBloodRed;
+m_isHeavyFighter = true;
 
-stats.m_health = 64.0;
+stats.m_health = 8.0 * 9;
 stats.m_healthMax = stats.m_health;
 stats.m_healthPrev = stats.m_health;
 
