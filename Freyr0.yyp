@@ -12663,6 +12663,14 @@
             }
         },
         {
+            "Key": "a0be085a-ff95-40d0-9684-56fb624a0da5",
+            "Value": {
+                "id": "ab3da9ef-1d84-4ff9-ab22-d7c099aa0a40",
+                "resourcePath": "scripts\\dcmdParseTime\\dcmdParseTime.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a0c63a4d-a6db-4466-af43-02d0fa4ed3c3",
             "Value": {
                 "id": "cc7f3bc4-be4a-40e9-9706-c9fd4028a48b",
@@ -21019,6 +21027,7 @@
         "b861c07c-919c-47c7-8e5a-578300cb0d9e",
         "ffc2fc22-e7b9-4da8-9c00-1da6145c3d3c",
         "71a18cbc-a2c9-4a73-9702-a86dacdaab54",
+        "a0be085a-ff95-40d0-9684-56fb624a0da5",
         "fd6549fc-acef-4c74-b35d-3595bcffc749",
         "e78e571a-f675-4164-8163-776235d6ec09",
         "7ded160e-a77a-4c7b-a0e4-8ff4cb077829",
