@@ -9,11 +9,10 @@ if (doodad_type == ob_doodad)
 		case s_propDTree0: case s_propDBushes0: case s_propDGrass:
 		case s_propFlatGrass:
 		case s_propPuffFlower:
-		case s_propWildFlowers:
-		case s_propWildFlowers2:
+		case s_propWildFlowers: case s_propWildFlowers2:
 		case s_propWildPom:
-		case o_collectCoconut:
-		case o_collectPom:
+		case s_propBellFlower:
+		case s_propOrchardPom:
 		case s_BaoTree:
 		case s_propWildLemonTree:
 		case s_propSquatTree:

@@ -6959,6 +6959,14 @@
             }
         },
         {
+            "Key": "5797dcb1-f6d8-4bba-b558-c1058bc3002d",
+            "Value": {
+                "id": "ce00be4f-eb2b-4301-988c-2da836ef9952",
+                "resourcePath": "sprites\\s_propStickTorchShit\\s_propStickTorchShit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "57a28fc7-8f76-4c0a-b910-8ec7025fdf43",
             "Value": {
                 "id": "57f88df4-f93f-4a98-aac5-4dae20c232c6",
@@ -9179,6 +9187,14 @@
             "Value": {
                 "id": "2ec21b24-ef3f-48b2-bf80-832ff8dd9c30",
                 "resourcePath": "sprites\\s_tilesetCollision0\\s_tilesetCollision0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "74486176-b033-4e0d-9d6e-bfb34511a216",
+            "Value": {
+                "id": "1f09bd4f-ac4b-44fa-aae1-4a8365beeaed",
+                "resourcePath": "sprites\\s_propBellFlower_Emissive\\s_propBellFlower_Emissive.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -15980,6 +15996,14 @@
                 "id": "e6202d0a-cc5c-4539-8b52-f4f9fd4333f7",
                 "resourcePath": "objects\\ob_cts\\ob_cts.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c7c78fd0-503e-4297-b5cb-94e11aadd2f3",
+            "Value": {
+                "id": "6cb74468-ea81-4929-837f-4ca5c8d930f7",
+                "resourcePath": "sprites\\s_propBellFlower\\s_propBellFlower.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

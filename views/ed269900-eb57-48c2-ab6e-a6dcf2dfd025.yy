@@ -41,7 +41,9 @@
         "6e4a4e74-a0ba-4cba-a9af-e2f62db9d1ad",
         "364240c9-01d0-4b25-b520-4724b75ec426",
         "33025bfd-3707-4dad-b4d8-a17ab36ecd9a",
-        "0bd4041a-4c97-4b99-a9c0-20ed8371e025"
+        "0bd4041a-4c97-4b99-a9c0-20ed8371e025",
+        "c7c78fd0-503e-4297-b5cb-94e11aadd2f3",
+        "74486176-b033-4e0d-9d6e-bfb34511a216"
     ],
     "filterType": "GMSprite",
     "folderName": "nature",
