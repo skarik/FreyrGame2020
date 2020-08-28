@@ -88,6 +88,14 @@ switch (_itemType)
 		
 	//THE BAR
 	
+	case o_pickupCons_Sandcake:
+		stats.m_health += 10;
+		_playerInteractItemDecrementBelt();
+		break;
+	case o_pickupCons_Pomnut:
+		stats.m_health += 8;
+		_playerInteractItemDecrementBelt();
+		break;
 	case o_pickupCons_EggScrapple:
 		stats.m_health += 6;
 		_playerInteractItemDecrementBelt();

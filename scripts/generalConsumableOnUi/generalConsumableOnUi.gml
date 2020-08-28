@@ -127,6 +127,15 @@ if (_itemIsSelected
 			
 			//THE BAR
 			
+					
+		case o_pickupCons_Sandcake:
+			l_drawHealth = true;
+			l_healthValue = 10;
+			break;		
+		case o_pickupCons_Pomnut:
+			l_drawHealth = true;
+			l_healthValue = 8;
+			break;
 		case o_pickupCons_EggScrapple:
 			l_drawHealth = true;
 			l_healthValue = 6;

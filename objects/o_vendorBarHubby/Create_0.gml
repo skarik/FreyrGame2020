@@ -21,14 +21,13 @@ m_vendorPortrait = sui_tempPortraitBarHubby;
 // set up vendor inventory
 var items = [o_pickupRes_BoneShard, kCountPositiveInfinite,
 			o_pickupRes_VoidShard, kCountPositiveInfinite,
+			o_pickupSeed_Turnip, kCountPositiveInfinite,
+			o_pickupSeed_Cabbage,50,
+			o_pickupSeed_Potato, 50,
 			o_pickupCons_Meats, 2,
 			o_pickupCons_MedLeaf, 1,
 			o_pickupCons_SweetBun, 2,
-			o_pickupCons_ScorpStick, 2,
-			o_pickupCons_HoneyAbsinthe, 2,
-			o_pickupCons_ScorpJuice, 2,
-			o_pickupCons_CactusJizz, 2,
-			o_pickupCons_CactusRed, 2];
+			o_pickupCons_ScorpStick, 2,];
 			
 // create the vendor inventory
 for (var i = 0; i < array_length_1d(items)/2; ++i)

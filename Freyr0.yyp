@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "0a28f98b-a0cf-4844-b739-247f6a1a1036",
+            "Value": {
+                "id": "965be9f1-88b0-46a0-b793-e75e3fb3a63c",
+                "resourcePath": "objects\\o_pickupCons_Sandcake\\o_pickupCons_Sandcake.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a2a0992-c54d-4ac1-b5bf-8f24e6e2b4b3",
             "Value": {
                 "id": "5a4220c7-ffe4-423b-9d86-c0ff075ebd0f",
@@ -8055,6 +8063,14 @@
             }
         },
         {
+            "Key": "66e2e022-e54b-4c39-b768-230eff7ce4ea",
+            "Value": {
+                "id": "52ca347a-47fe-4b0e-9dd6-037e67dab4c1",
+                "resourcePath": "sprites\\s_itemConsPomNuts\\s_itemConsPomNuts.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "66efc68d-1e0f-4f57-8502-10d9cb6b0870",
             "Value": {
                 "id": "519d9709-e109-4b66-b967-4a3d05a37a37",
@@ -12347,6 +12363,14 @@
             "Value": {
                 "id": "0a0b3f72-5401-4455-a4a9-a860288378b7",
                 "resourcePath": "sprites\\s_propSignpost\\s_propSignpost.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9d7be04e-fd99-4957-bfdd-b9cfbf74d61a",
+            "Value": {
+                "id": "8d3f8d6e-b54c-468d-b803-22f87f4722f0",
+                "resourcePath": "sprites\\s_itemConsSandCakes\\s_itemConsSandCakes.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -16907,6 +16931,14 @@
             "Value": {
                 "id": "37f8dd6b-1cfc-4743-b5fc-7624699b7346",
                 "resourcePath": "objects\\o_livelyTriggerRelay\\o_livelyTriggerRelay.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d38a6173-569a-42b0-9014-895d781b9b0c",
+            "Value": {
+                "id": "a9f76998-60b5-4b05-8c21-76ab5e67f014",
+                "resourcePath": "objects\\o_pickupCons_Pomnut\\o_pickupCons_Pomnut.yy",
                 "resourceType": "GMObject"
             }
         },
