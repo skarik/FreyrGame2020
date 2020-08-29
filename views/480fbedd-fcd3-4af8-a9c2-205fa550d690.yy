@@ -11,7 +11,8 @@
         "1fbcfcc3-39c9-4fcc-a260-94c56424299c",
         "12300d86-985b-4fdd-b5b3-a41b0158c14e",
         "357de164-cdfa-4673-9b7f-66b65b7f9c69",
-        "2cb68f08-0b60-4d8b-a399-df9aa9ab8349"
+        "2cb68f08-0b60-4d8b-a399-df9aa9ab8349",
+        "bd6cf8bf-0b58-4441-ac9a-5adbce4cf6e2"
     ],
     "filterType": "GMScript",
     "folderName": "Debug",

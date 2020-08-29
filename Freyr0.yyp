@@ -4479,6 +4479,14 @@
             }
         },
         {
+            "Key": "386e5bc5-0ef0-430e-82b9-0a9363f0253b",
+            "Value": {
+                "id": "afd5e4dd-aa17-4c1c-af90-ce22ccba4e05",
+                "resourcePath": "rooms\\rm_live_blank\\rm_live_blank.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "38708fa9-8be1-4f7d-a800-5ce5229e9b1c",
             "Value": {
                 "id": "1a67b5d1-f03d-4a9f-b19d-1cba04113fd1",
@@ -6412,6 +6420,14 @@
                 "id": "f22c9f72-0810-4a50-9b35-f1e50af3f887",
                 "resourcePath": "sprites\\s_propStickTorch\\s_propStickTorch.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "503a0969-f765-4d56-a162-85c86d821d75",
+            "Value": {
+                "id": "ae03cebf-85f6-4773-9b03-373e12889b96",
+                "resourcePath": "objects\\o_live_blank\\o_live_blank.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -9644,6 +9660,14 @@
                 "id": "8b742dcd-e228-44b9-b80b-98ba93e54005",
                 "resourcePath": "sprites\\s_assetMithraLadder\\s_assetMithraLadder.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7a311dfd-8da9-440b-b1c0-1f0786fcf6bb",
+            "Value": {
+                "id": "787bc8b4-ab4d-4e23-85c3-8c7304d6823a",
+                "resourcePath": "scripts\\dcmdParseDoLive\\dcmdParseDoLive.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -15052,6 +15076,14 @@
                 "id": "c6d7df4b-d635-4f17-ac9a-a608984b4c3c",
                 "resourcePath": "datafiles_yy\\cts\\07_mithraescape\\meat_11_bottom.txt.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "bd6cf8bf-0b58-4441-ac9a-5adbce4cf6e2",
+            "Value": {
+                "id": "7f38bfad-bee4-4464-a6cf-d8f42f2c2d31",
+                "resourcePath": "scripts\\debugLiveOnRoomUpdate\\debugLiveOnRoomUpdate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -21084,7 +21116,9 @@
         "ffc2fc22-e7b9-4da8-9c00-1da6145c3d3c",
         "71a18cbc-a2c9-4a73-9702-a86dacdaab54",
         "a0be085a-ff95-40d0-9684-56fb624a0da5",
+        "7a311dfd-8da9-440b-b1c0-1f0786fcf6bb",
         "fd6549fc-acef-4c74-b35d-3595bcffc749",
+        "bd6cf8bf-0b58-4441-ac9a-5adbce4cf6e2",
         "e78e571a-f675-4164-8163-776235d6ec09",
         "7ded160e-a77a-4c7b-a0e4-8ff4cb077829",
         "8af2478d-469c-4985-90d4-4d73836ded44",
