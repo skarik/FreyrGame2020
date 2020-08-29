@@ -69,7 +69,11 @@ var t_nextTarget = null;
 		}
 	}
 	
-	var bInSafeArea = aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y);
+	var bInSafeArea = false;
+	if (iexists(m_aiCombat_target))
+	{
+		bInSafeArea = aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y);
+	}
 	
 	// Check if can see the target
 	if (iexists(m_aiCombat_target)

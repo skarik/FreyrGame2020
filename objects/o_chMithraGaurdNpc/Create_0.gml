@@ -3,6 +3,8 @@
 // Inherit the parent event
 event_inherited();
 
+m_isInteractable = false;
+
 var standing = [
 	s_charMithraGaurd0_Stand,
 	s_charMithraGaurd1_Stand,

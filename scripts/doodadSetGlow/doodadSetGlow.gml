@@ -81,3 +81,10 @@ else if (doodad.sprite_index == s_propContainer)
 		light.image_blend = c_dkgray;
 	}
 }
+else if (doodad.sprite_index == s_propCreepyLampStatue)
+{
+	with (doodad)
+	{
+		light = instance_create_depth(x, y - 11, 0, o_lightFireMedium);
+	}
+}

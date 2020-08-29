@@ -61,6 +61,7 @@ lines
 	facing player
 	1 I will bring you something to eat and drink in a bit!
 }
+wait { type time; wait 0.4s; }
 
 spawnstate
 {

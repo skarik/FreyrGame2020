@@ -6,6 +6,7 @@ if (m_owner != null && iexists(m_owner))
 	sprite_index = m_owner.mask_index;
 	x = m_owner.x;
 	y = m_owner.y;
+	m_usable = m_owner.m_isInteractable;
 }
 
 if (m_owner != null && !iexists(m_owner))

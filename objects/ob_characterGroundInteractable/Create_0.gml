@@ -23,6 +23,7 @@ m_team = kTeamGood;
 //m_name = "Random Idiot";
 //m_interactionFile = "talk00_nathan.txt";
 m_wasInteracted = false;
+m_isInteractable = true;
 
 #endregion
 

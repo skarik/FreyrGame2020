@@ -18,7 +18,10 @@ fader.sprite_index = s_effectWhite64;
 fader.image_xscale = 20;
 fader.image_yscale = 20;
 
+depthUpdate();
+
 faderUpper = instance_create_depth(x, y - sprite_yoffset + sprite_height / 2, round(-y * 0.8), o_fxScreenShield);
+faderUpper.depth = depth - 200;
 faderUpper.width = sprite_width / 2;
 faderUpper.height = sprite_height / 2;
 faderUpper.visible = true;

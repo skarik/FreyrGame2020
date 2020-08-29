@@ -31,7 +31,8 @@ if (m_aiScript_requestCommand == kAiRequestCommand_Teleport)
 	x = m_aiScript_requestPositionX;
 	y = m_aiScript_requestPositionY;
 	z = collision3_get_highest_position(x, y, z);
-	z_ready = false;
+	z_height = 0.0;
+	//z_ready = false;
 }
 else if (m_aiScript_requestCommand == kAiRequestCommand_Face)
 {
