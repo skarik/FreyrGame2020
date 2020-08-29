@@ -574,6 +574,9 @@ case SEQTYPE_GOTO_IF_FLAG:
 		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " <= " + string(flag_value));
 	}
 	
+	// Debug output
+	debugOut("Doing goto_if_flag...");
+	
 	if (target_pass != undefined && check_valid)
 	{
 		if (!cutsceneJumpToLabel(target_pass))
@@ -602,9 +605,6 @@ case SEQTYPE_GOTO_IF_FLAG:
 		cts_entry_current++;
 	    cts_execute_state = 0;
 	}
-	
-	// Debug output
-	debugOut("Doing goto_if_flag...");
 	break;
 case SEQTYPE_GOTO_IF_COMPANION:
 	var target_pass = entry[?SEQI_GOTO_TARGET_PASS];
@@ -644,6 +644,9 @@ case SEQTYPE_GOTO_IF_COMPANION:
 		}
 	}
 	
+	// Debug output
+	debugOut("Doing goto_if_companion...");
+	
 	if (target_pass != undefined && check_valid)
 	{
 		if (!cutsceneJumpToLabel(target_pass))
@@ -672,9 +675,6 @@ case SEQTYPE_GOTO_IF_COMPANION:
 		cts_entry_current++;
 	    cts_execute_state = 0;
 	}
-	
-	// Debug output
-	debugOut("Doing goto_if_companion...");
 	break;
 	
 case SEQTYPE_GOTO_IF_PLAYER:
@@ -690,6 +690,9 @@ case SEQTYPE_GOTO_IF_PLAYER:
 		check_valid = pl.pstats.m_gender == player_as;
 	}
 	
+	// Debug output
+	debugOut("Doing goto_if_player (" + string(pl.pstats.m_gender) + ")==" + string(player_as) + "...");
+	
 	if (target_pass != undefined && check_valid)
 	{
 		if (!cutsceneJumpToLabel(target_pass))
@@ -718,9 +721,6 @@ case SEQTYPE_GOTO_IF_PLAYER:
 		cts_entry_current++;
 	    cts_execute_state = 0;
 	}
-	
-	// Debug output
-	debugOut("Doing goto_if_player...");
 	break;
 	
 case SEQTYPE_GOTO_IF_TIME:
@@ -742,6 +742,9 @@ case SEQTYPE_GOTO_IF_TIME:
 		check_valid = timeofday > time_min || timeofday < time_max;
 	}
 	
+	// Debug output
+	debugOut("Doing goto_if_time...");
+	
 	if (target_pass != undefined && check_valid)
 	{
 		if (!cutsceneJumpToLabel(target_pass))
@@ -770,9 +773,6 @@ case SEQTYPE_GOTO_IF_TIME:
 		cts_entry_current++;
 	    cts_execute_state = 0;
 	}
-	
-	// Debug output
-	debugOut("Doing goto_if_time...");
 	break;
 	
 case SEQTYPE_PALETTE:

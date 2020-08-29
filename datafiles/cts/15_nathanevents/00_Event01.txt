@@ -4,25 +4,25 @@
 #InitializeChecks
 	goto_if_flag
 	{	// Has to be after escorting Old
-		target OnEnd
+		failtarget OnEnd
 		flag IntroSequence
 		compare >=
 		value 1000
 	}
 	goto_if_flag
-	{
-		target OnEnd
+	{	// First Nathan event
+		failtarget OnEnd
 		flag NathanEvents
-		compare !=
+		compare ==
 		value 0
 	}
 	goto_if_player 
-	{
+	{	// Can only trigger as Cortez
 		failtarget OnEnd
 		as Cortez
 	}
 	goto_if_time
-	{
+	{	// Can only run during day
 		failtarget OnEnd
 		range day
 	}
@@ -49,25 +49,25 @@
 #PreDialogueChecks
 	goto_if_flag
 	{	// Has to be after escorting Old
-		target OnEnd
+		failtarget OnEnd
 		flag IntroSequence
 		compare >=
 		value 1000
 	}
 	goto_if_flag
-	{
-		target OnEnd
+	{	// First Nathan event
+		failtarget OnEnd
 		flag NathanEvents
-		compare !=
+		compare ==
 		value 0
 	}
 	goto_if_player 
-	{
+	{	// Can only trigger as Cortez
 		failtarget OnEnd
 		as Cortez
 	}
 	goto_if_time
-	{
+	{	// Can only run during day
 		failtarget OnEnd
 		range day
 	}
@@ -81,13 +81,11 @@
 
 //edit the Old script to retrigger the nathan setup. 
 
-
-
-screen
+/*screen
 {
     type fadein
     rgb 0 0 0
-}
+}*/
 
 //Nathan TENT BK
 
@@ -103,18 +101,13 @@ lines
 {
 	target nathan
 	facing player
-	1 Hm?
-	2 $M He should learn to knock.
+	1 $qHm?
+	2 $M$qHe should learn to knock.$$
 }
 
 // slide in the portraits here:
 
-screen { 
-
-
-type ctsin; 
-
-}
+screen { type ctsin; }
 
 
 portrait
@@ -137,6 +130,11 @@ portrait
 	character player
 	expression neutral
 }
+background
+{
+	action show
+	background tent
+}
 
 lines
 {
@@ -153,7 +151,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 Me? Nah! I was just um...Coming in to take a nap. Still not not use to this weather.
+	1 Me? Nah! $pI was just um...coming in to take a nap. Still not not used to this weather.
 }
 
 lines
@@ -161,8 +159,8 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $MHe's lying. He wanted to see us.$$
-	2 Ehm. I never really notice. 
+	1 $q$MHe's lying. He wanted to see us.$$
+	2 Ehm. $pI never really notice. 
 
 }
 
@@ -171,7 +169,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 Right well, I can...$qI should go$$. You seem busy?
+	1 Right well, I can...$qI should go$$. You seem busy.
 }
 
 lines
@@ -179,7 +177,7 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $MTell him we want him to stay..$$
+	1 $q$MTell him we want him to stay..$$
 	2 $qYou can stay...$$ I don't mind. Really it's fine.
 
 }
@@ -196,15 +194,24 @@ choice
 }
 
 #STAY
+
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.1
+	align left
+	face right
+	character player
+	expression neutral
+}
+
 lines
 {
-
 	target player 
 	style portrait
 	object 1
-	1 Well I’m already here and woken you up. So be kind of rude just to leave now I guess.
-
-
+	1 Well, I’m already here and woken you up. So be kind of rude just to leave now I guess.
 }
 
 
@@ -213,8 +220,7 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 So it wasn't a nap you wanted was it? Something you want to talk about?
-
+	1 So it wasn't a nap you wanted, was it? $pSomething you want to talk about?
 }
 
 lines
@@ -223,7 +229,7 @@ lines
 	target player 
 	style portrait
 	object 1
-	1 $s A-Ah!$$ Well, maybe, maybe I'd just like to get to know the man who saved my life?
+	1 $sA-Ah!$$ Well, maybe, maybe I'd just like to get to know the man who saved my life?
 	2 Can't blame me for that right?
 
 
@@ -234,10 +240,10 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $MHe wants to know more about us...No one has ever..
+	1 $q$MHe wants to know more about us...no one has ever...
 	2 Well, what would you like to know?
-	3 $M$bJust like that?$$$M Not even gonna think about it first?
-	4 $q Just shut up.$$ 
+	3 $q$M$bJust like that?$$ $q$MNot even gonna think about it first?
+	4 $qJust shut up.$$ 
 
 }
 
@@ -258,7 +264,7 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $w$q O-oh$$. That is um. Well I..
+	1 $w$q O-oh$$. That is um. Well I...
 
 }
 
@@ -266,9 +272,8 @@ lines
 lines
 {
 	target libby
-	1 He looks at the ground as if the conversation that has been happening outloud is now all contained within his head. 
+	1 He looks at the ground as if the conversation that had been happening out loud $pis now all contained within his head. 
 	2 It takes him a minute to look up again.
-
 }
 
 
@@ -278,7 +283,7 @@ lines
 	style portrait
 	object 0
 	1 I'm sort of possessed.
-	2 $M RUDE.
+	2 $q$M$bRUDE.
 
 }
 
@@ -288,8 +293,8 @@ lines
 	target player 
 	style portrait
 	object 1
-	1 Possesed? Like? With a demon of some sort? 
-	2 I mean it's not like I haven't seen that happen before but..
+	1 Possesed? Like$p - with a demon of some sort? 
+	2 I mean it's not like I haven't seen that happen before -$p but...
 
 
 }
@@ -300,7 +305,7 @@ lines
 	style portrait
 	object 0
 	1 No, uh, nothing like that. It's really complicated.
-	2 $M It's not that complicated. He just doesn't like to talk about it. 
+	2 $q$MIt's not that complicated. He just doesn't like to talk about it. 
 
 }
 
@@ -310,7 +315,7 @@ lines
 	target player 
 	style portrait
 	object 1
-	1 So, then, what is he? $q What are you?$$
+	1 So$p, then$p, what is he? $qWhat are you?$$
 
 
 }
@@ -324,12 +329,21 @@ lines
 
 }
 
+portrait
+{	// Nathan portrait
+	index 0
+	action show
+	position 0.8
+	align right
+	face left
+	character nathan
+	expression sexy
+}
 
 lines
 {
 	target libby
-	1 He jerks to stand up like he’s being puppeted by invisible strings pushing his fingers through his hair and giving you a mighty grin.
-
+	1 He jerks to stand up, like he’s being puppeted by invisible strings, pushing his fingers through his hair and giving you a mighty grin.
 }
 
 
@@ -338,7 +352,7 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $M You may call me Motses darling.
+	1 $MYou may call me $bMotses$$, $hdarling.
 
 }
 
@@ -351,21 +365,31 @@ lines
 
 }
 
+portrait
+{	// Nathan portrait
+	index 0
+	action show
+	position 0.9
+	align right
+	face left
+	character nathan
+	expression questioning
+}
 
 lines
 {
 	target nathan
 	style portrait
 	object 0
-	1 Don't indulge him. He's a show off and a blowhard.
-	2 $M I am only $bone$$ of those things. 
+	1 Don't indulge him. He's a show off$p and a blowhard.
+	2 $q$M I am only $bone$$$q$M of those things. 
 
 }
 
 lines
 {
 	target libby
-	1 You can't help but laugh a little. Whatever was going on, you had to admit, the banter was kind of funny.
+	1 You can't help but laugh a little. Whatever was going on, you had to admit$p, the banter was kind of funny.
 }
 
 lines
@@ -374,8 +398,8 @@ lines
 	target player 
 	style portrait
 	object 1
-	1 So, if he isn't a demon and you aren't posessed. What is this? An a identity thing?
-	2 I knew someone like that back on Primo although it wasn't quite like this.
+	1 So, if he isn't a demon and you aren't posessed -$p what is this? An a identity thing?
+	2 I knew someone like that back on Primo, although it wasn't quite like this.
 
 }
 
@@ -385,9 +409,9 @@ lines
 	style portrait
 	object 0
 	1 You could sort of say that.
-	2 $M Only we're the same person.
-	3 No $qwe're not$$. You and I aren't anything a like. You're impulsive and way out of line.
-	4 $M Uhuh, thats all you, you can't keep pretending we're seperate people. 
+	2 $q$MOnly we're the same person.
+	3 No $qwe're $bnot$$$q. You and I aren't anything alike. You're impulsive and way out of line.
+	4 $q$MNuh uh, that's all you. You can't keep pretending we're seperate people. 
 
 }
 
@@ -397,6 +421,17 @@ lines
 	1 You smack your fist into the palm of your hand. You think you understand. 
 }
 
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.3
+	align left
+	face right
+	character player
+	expression neutral
+}
+
 lines
 {
 
@@ -404,9 +439,10 @@ lines
 	style portrait
 	object 1
 	1 Ah! I get it!
-	2 He's your subconcious. Well, I don't really know if thats right but..
-	3 Oh! or! You’re a demon sealed away in his body because you tried to destroy the planet. 
-	4 Thats usually how this sort of thing goes.
+	2 He's your subconcious. Well$p, I don't really know if that's right, but...
+	3 Oh!$p Or!$p You’re a demon sealed away in his body because you tried to destroy the planet. 
+	4 That's usually how this sort of thing goes.
+	// TODO: Need a smug portrait.
 }
 
 lines
@@ -414,9 +450,20 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $M This isn't an infernal book human. I'm not a demon. I AM him.
-	2 $s No you're not$$. Can you please go back to not talking to people. I liked it better when people thought I was crazy.
+	1 $MThis isn't an infernal $bbook$$ human. I'm not a demon. I AM him.
+	2 $sNo you're not$$. Can you please go back to not talking to people. I liked it better when people thought I was crazy.
 
+}
+
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.5
+	align left
+	face right
+	character player
+	expression neutral
 }
 
 lines
@@ -431,7 +478,7 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 W-what now? What is it?
+	1 W-what now?$p What is it?
 
 }
 
@@ -450,8 +497,8 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $M I am not a DEMON.
-	2 What this thing?
+	1 $q$MI am not a DEMON.
+	2 What, this thing?
 
 }
 
@@ -468,7 +515,7 @@ lines
 	style portrait
 	object 0
 	1 Birthmark. It’s supposed to be the sign of me being divine, but I’m not divine. I am inhibited by a ghastly curse.
-	2 $M For the last time. You're not cursed. We're the same person.
+	2 $q$MFor the last time. You're not cursed. We're the same person.
 
 }
 
@@ -477,7 +524,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 If you're the same person why do you two seem so different.
+	1 If you're the same person why do you two seem so different?
 
 }
 
@@ -486,9 +533,9 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $M We aren't. This is just who I am.
+	1 $MWe aren't. This is just who I am.
 	2 No it isn't, I am nothing like you. I am organized and collected.
-	3 I'm also $b much $$ more then that. 
+	3 I'm also $bmuch$$ more then that.
 
 }
 
@@ -505,8 +552,8 @@ lines
 lines
 {
 	target libby
-	1 You watch Nathan argue with himself for a moment before crossing your arms giving the situation a think. 
-	2 You’ve never heard of something like this before, but you can recall arguing with yourself outloud when making a stupid decision. 
+	1 You watch Nathan argue with himself for a moment before crossing your arms, giving the situation a think. 
+	2 You’ve never heard of something like this before, but you can recall arguing with yourself out loud when making a stupid decision. 
 	3 Maybe this was just more literal.
 
 }
@@ -517,7 +564,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 Motses was it? What do you see when you look at yourself? Do you see what I’m seeing?
+	1 $3Motses$0, was it? What do you see when you look at yourself? Do you see what I’m seeing?
 
 }
 
@@ -527,9 +574,9 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $M If you mean a tanned twink than yes. I didn’t choose to look like this. Dumbass decided this form drew less attention. 
+	1 $MIf you mean a tanned twink than yes. I didn’t choose to look like this. Dumbass decided this form drew less attention. 
 	2 That other form is obscene. I refuse to look like what you want.
-	3 $M You just don’t like expressing yourself so you chose the most boring form possible. Honestly, couldn't you have atleast kept the hair?
+	3 $MYou just don’t like expressing yourself, so you chose the most boring form possible. Honestly, couldn't you have atleast kept the hair?
 
 }
 
@@ -549,10 +596,8 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 Don’t listen to him. This is always what I’ve….looked like. This is what I ALWAYS look like.
-	2  I don’t want to talk about this anymore.
-
-
+	1 Don’t listen to him. This is always what I’ve...looked like. This is what I $balways$$ look like.
+	2 I don’t want to talk about this anymore.
 }
 
 
@@ -560,9 +605,7 @@ lines
 lines
 {
 	target libby
-	1 He turns away from you rubbing his arms virgorously like hes cold. You still want to know more but you don't want to push.
-
-
+	1 He turns away from you, rubbing his arms virgorously like he's cold. You still want to know more but you don't want to push.
 }
 
 lines
@@ -571,9 +614,8 @@ lines
 	style portrait
 	object 0
 	1 You can still take your nap. I'm just going to read.
-	2 $M Probably thinks we're a freak now.	
-	3 Whose fault is that?
-
+	2 $q$MProbably thinks we're a freak now.	
+	3 $qWhose fault is that?
 }
 
 lines
@@ -581,17 +623,14 @@ lines
 	target player
 	style portrait
 	object 1
-	1 I don’t think you’re a freak. This isn’t the strangest thing I’ve encountered by a long shot. 
-
-
+	1 I don’t think you’re a freak. This isn’t the strangest thing I’ve encountered -$p not by a long shot.
 }
 
 lines
 {
 	target libby
 	1 He doesn’t respond but you can tell the situation is making him incredibly uncomfortable. You decide maybe it’s something to bring up again some other time. 
-	2 The situation is definitely abnormal, but it's not really freaking you out any.
-
+	2 The situation is definitely abnormal, but it's not disturbing you.
 
 }
 
@@ -625,8 +664,7 @@ lines
 	target motses
 	style portrait
 	object 0
-	1 Perhaps a small one would do me some good. I’ve haven’t slept with someone nearby since I was…
-
+	1 Perhaps a small one would do me some good. I’ve haven’t slept with someone nearby since I was...
 
 }
 
@@ -651,11 +689,44 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 ….Deal.
+	1 ...$p.$pDeal.
 
 
 }
 
+screen
+{
+	type fadeout
+}
+
+portrait
+{
+	action hideall
+}
+background
+{
+	action hide
+}
+
+flags
+{
+	set NathanEvents 10
+}
+
+screen
+{
+	type fadein
+}
+screen
+{
+	type ctsout
+}
+
+player { actions unlock }
+
+goto { target OnEnd; }
+
+#DONTSTAY
 
 lines
 {
@@ -663,10 +734,31 @@ lines
 	style portrait
 	object 1
 	1 No, I don’t want to bother you. You look like you could use the sleep.
+}
 
+flags
+{
+	set NathanEvents 10
+}
+
+
+portrait
+{
+	action hideall
+}
+background
+{
+	action hide
+}
+
+screen
+{
+	type ctsout
 }
 
 player { actions unlock }
+
+
 //AND the player walks out of the tent. If they go back in he’ll be asleep and won’t respond this time. Will be muttering to ‘himself’ in diegetic dialogue. 
 
 // NATHAN	No, we can’t. I won’t.
@@ -674,12 +766,7 @@ player { actions unlock }
 // NATHAN	We’ll only scare him.
 // MOTSES	Nonsense. 
 
-
-
-
-#DONTSTAY
-
-
+goto { target OnEnd; }
 
 #OnEnd
 #ended

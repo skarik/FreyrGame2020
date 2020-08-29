@@ -7535,6 +7535,14 @@
             }
         },
         {
+            "Key": "5f4fac38-77e1-49db-9005-817b2a0bcf2d",
+            "Value": {
+                "id": "6667d71f-048a-4c3f-ae50-9ff190584de2",
+                "resourcePath": "objects\\o_CtsPortraitBackgroundRenderer\\o_CtsPortraitBackgroundRenderer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5f5fe4fe-d5e8-4ccf-a6ce-f425371ad9b5",
             "Value": {
                 "id": "e8a5a6d1-eb0b-4c39-a887-57499edeab26",

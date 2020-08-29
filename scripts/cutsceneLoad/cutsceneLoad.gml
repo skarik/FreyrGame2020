@@ -681,7 +681,10 @@ while (!file_text_eof(fp))
 					
 					if (is_undefined(player_as))
 						player_as = null;
-					else if (player_as == "cortez")
+					else
+						player_as = string_lower(player_as);
+						
+					if (player_as == "cortez")
 						player_as = kGenderMale;
 					else if (player_as == "aurum")
 						player_as = kGenderFemale;
@@ -1209,7 +1212,7 @@ while (!file_text_eof(fp))
 				var background = read_object_map[?"background"];
 				if (is_undefined(background))
 					background = sui_logo2;
-				else if (background == "desert")
+				else if (background == "tent")
 					background = sui_cg00_nathan_bg;
 				else
 					background = sui_logo2;

@@ -141,7 +141,7 @@ for (var i = 0; i < floor(current_display_count); ++i)
 		yoffset += l_display_font_height * 0.5;
 		
 		xoffset = round(xoffset);
-		yoffset = round(yoffset);
+		yoffset = round(yoffset) - 1;
 	}
 	
     // draw the text

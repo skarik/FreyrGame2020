@@ -6,7 +6,7 @@ m_head = 0;
 m_gender = kGenderMale;
 m_shirtless = false;
 
-{
+/*{
 	debugOut("Randomly generating player stats");
 	
 	// Randomly generate gender for some variation
@@ -20,7 +20,7 @@ m_shirtless = false;
 		
 	m_body = choose(0, 1, 2);
 	m_head = choose(0, 1, 2);
-}
+}*/
 
 m_party = array_create(3, null);
 

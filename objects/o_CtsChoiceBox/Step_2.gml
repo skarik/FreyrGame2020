@@ -26,3 +26,7 @@ else
     uiPosX = view_xview0 + view_wview0 - 64 - display_width;
     uiPosY = view_yview0 + 64;
 }
+
+// Move postions to screenspace
+uiPosX -= view_xview0;
+uiPosY -= view_yview0;
