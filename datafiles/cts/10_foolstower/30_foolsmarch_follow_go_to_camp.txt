@@ -1,0 +1,121 @@
+//osf/cutscene
+#begin 
+
+#FlagCheck
+	goto_if_flag
+	{
+		target OnEnd
+		flag FoolsTower
+		compare <
+		value 30
+	}
+	goto_if_flag
+	{
+		target OnEnd
+		flag FoolsTower
+		compare >=
+		value 40
+	}
+
+#OnBegin
+	spawnstate
+	{
+		spawn_ifunique go
+		position nearby
+	}
+	
+	ai
+	{
+		target go 
+		style cts
+		command move
+		position 2160 2880
+	}
+	companion
+	{
+		target go
+		party add
+	}
+	
+	wait
+	{
+		type ai
+		target go
+		aiaction arrive
+	}
+	
+	// wait for player to approach
+	wait
+	{
+		type playerdistance
+		target go
+		distance 100
+	}
+	
+	lines
+	{
+		target	go
+		//style diegetic
+		facing player
+		1 Let's hang low until the guards cool off.
+	}
+	
+	ai
+	{
+		target go 
+		style lead
+		command start
+		position 2140 1740
+	}
+	
+#OnSpawnChasers
+	// now, spawn the things for the guards chasing
+	
+	
+	wait
+	{
+		type ai
+		target go
+		aiaction arrive
+	}
+	
+#OnArrive
+	
+	// wait for player to approach
+	wait
+	{
+		type playerdistance
+		target go
+		distance 100
+	}
+	
+	// set flag NOW
+	flags
+	{
+		set FoolsTower 40
+	}
+	
+	// switch to follow mode with the player
+	ai
+	{
+		target go 
+		style cts
+		command start
+		position 2140 1740
+	}
+	companion
+	{
+		target go
+		party remove
+	}
+	
+	lines
+	{
+		target go
+		facing player
+		style diegetic
+		1 Should be safe now.
+	}
+
+#OnEnd
+#ended

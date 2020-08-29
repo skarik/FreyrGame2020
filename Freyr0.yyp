@@ -2711,6 +2711,14 @@
             }
         },
         {
+            "Key": "22b58df5-d571-4822-a982-26afd02d7595",
+            "Value": {
+                "id": "4bf1ec76-34df-4a52-afa2-5f0a18560dac",
+                "resourcePath": "datafiles_yy\\cts\\10_foolstower\\30_foolsmarch_follow_go_to_camp.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "22bede1b-f24e-4acf-af9d-7950c254bf8c",
             "Value": {
                 "id": "e6f1f618-fcdf-4b88-bac8-e2ef52e4707c",
@@ -8439,6 +8447,14 @@
             }
         },
         {
+            "Key": "6b28599f-3430-464e-a5a5-c683fea209a9",
+            "Value": {
+                "id": "ea683ab9-0547-40c7-b3c7-9ff324e4d680",
+                "resourcePath": "objects\\o_ctsMithraGaurdAggro\\o_ctsMithraGaurdAggro.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6b58fc67-9cb2-499b-8d5b-97e404eaf182",
             "Value": {
                 "id": "d43bcabe-1abd-4599-8765-e79070f0e0dd",
@@ -12404,6 +12420,14 @@
                 "id": "2d48a2ea-56fa-4cc6-976e-edcd4690ddfb",
                 "resourcePath": "sprites\\sbg_snowdustlayer1\\sbg_snowdustlayer1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9d3cf96c-81c2-400f-a8b2-d71263913c00",
+            "Value": {
+                "id": "d1834d6b-3d11-4801-b671-8cd6fcf0696d",
+                "resourcePath": "objects\\o_mus00_Mithra\\o_mus00_Mithra.yy",
+                "resourceType": "GMObject"
             }
         },
         {
