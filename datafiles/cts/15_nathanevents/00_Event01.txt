@@ -459,7 +459,7 @@ portrait
 {	// Player portrait
 	index 1
 	action show
-	position 0.5
+	position 0.2
 	align left
 	face right
 	character player
