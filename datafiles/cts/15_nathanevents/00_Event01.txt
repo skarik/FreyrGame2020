@@ -535,7 +535,7 @@ lines
 	object 0
 	1 $MWe aren't. This is just who I am.
 	2 No it isn't, I am nothing like you. I am organized and collected.
-	3 I'm also $bmuch$$ more then that.
+	3 I'm also $bmuch$$ more then $sthat$$.
 
 }
 
@@ -558,6 +558,16 @@ lines
 
 }
 
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.2
+	align left
+	face right
+	character player
+	expression neutral
+}
 
 lines
 {
@@ -574,9 +584,9 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 $MIf you mean a tanned twink than yes. I didn’t choose to look like this. Dumbass decided this form drew less attention. 
+	1 $MIf you mean a tanned twink, then yes. I didn’t choose to look like this. Dumbass decided this form drew less attention. 
 	2 That other form is obscene. I refuse to look like what you want.
-	3 $MYou just don’t like expressing yourself, so you chose the most boring form possible. Honestly, couldn't you have atleast kept the hair?
+	3 $q$MYou just don’t like expressing yourself, so you chose the most boring form possible. Honestly, couldn't you have atleast kept the hair?
 
 }
 
@@ -596,10 +606,31 @@ lines
 	target nathan
 	style portrait
 	object 0
-	1 Don’t listen to him. This is always what I’ve...looked like. This is what I $balways$$ look like.
+	1 Don’t listen to him. This is always what I've...looked like. This is what I $balways$$ look like.
 	2 I don’t want to talk about this anymore.
 }
 
+
+portrait
+{	// Player portrait
+	index 1
+	action show
+	position 0.0
+	align left
+	face right
+	character player
+	expression neutral
+}
+portrait
+{	// Nathan portrait
+	index 0
+	action show
+	position 1.0
+	align right
+	face left
+	character nathan
+	expression questioning
+}
 
 
 lines
@@ -607,6 +638,7 @@ lines
 	target libby
 	1 He turns away from you, rubbing his arms virgorously like he's cold. You still want to know more but you don't want to push.
 }
+
 
 lines
 {
@@ -623,7 +655,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 I don’t think you’re a freak. This isn’t the strangest thing I’ve encountered -$p not by a long shot.
+	1 Nah, you're not a freak. This isn't the strangest thing I've encountered -$p not by a long shot.
 }
 
 lines
