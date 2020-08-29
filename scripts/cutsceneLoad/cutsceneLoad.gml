@@ -163,6 +163,10 @@ while (!file_text_eof(fp))
 		{
 			read_object_type = SEQTYPE_GOTO_IF_PLAYER;
 		}
+		else if (string_pos("goto_if_time", line) == 1)
+		{
+			read_object_type = SEQTYPE_GOTO_IF_TIME;
+		}
 		else if (string_pos("goto", line) == 1)
 		{
 			read_object_type = SEQTYPE_GOTO;
@@ -603,11 +607,16 @@ while (!file_text_eof(fp))
 			else if (read_object_type == SEQTYPE_GOTO
 				|| read_object_type == SEQTYPE_GOTO_IF_COMPANION
 				|| read_object_type == SEQTYPE_GOTO_IF_FLAG
-				|| read_object_type == SEQTYPE_GOTO_IF_PLAYER)
+				|| read_object_type == SEQTYPE_GOTO_IF_PLAYER
+				|| read_object_type == SEQTYPE_GOTO_IF_TIME)
 			{
 				// Parse all values
-				var target = ds_map_find_value(read_object_map, "target");
-				if (is_undefined(target)) show_error("goto objects must have a 'target' field", true);
+				var target_pass = read_object_map[?"target"];
+				var target_fail = read_object_map[?"failtarget"];
+				if (is_undefined(target_pass) && is_undefined(target_fail))
+				{
+					show_error("goto objects must have a 'target' or 'failtarget' field", true);
+				}
 				
 				var quest_id = undefined;
 				var flag_value = undefined;
@@ -680,9 +689,43 @@ while (!file_text_eof(fp))
 						player_as = kGenderNonbi;
 				}
 				
+				var time_min = undefined;
+				var time_max = undefined;
+				if (read_object_type == SEQTYPE_GOTO_IF_TIME)
+				{
+					time_min = read_object_map[?"min"];
+					time_max = read_object_map[?"max"];
+					
+					var range = read_object_map[?"range"];
+					if (is_undefined(range))
+						range = "";
+					else if (range == "day")
+					{
+						if (is_undefined(time_min)) time_min = "0600";
+						if (is_undefined(time_max)) time_max = "1800";
+					}
+					else if (range == "night")
+					{
+						if (is_undefined(time_min)) time_min = "1800";
+						if (is_undefined(time_max)) time_max = "0600";
+					}
+					
+					if (is_undefined(time_min) || is_undefined(time_max))
+					{
+						show_error("goto_if_time requires both 'min' and 'max' to be set.", true);
+					}
+					
+					time_min = real(time_min) / 100;
+					time_min = floor(time_min) + frac(time_min) / 0.6;
+					
+					time_max = real(time_max) / 100;
+					time_max = floor(time_max) + frac(time_max) / 0.6;
+				}
+				
 				// Create the GOTO structure
 				var new_map = ds_map_create();
-				ds_map_add(new_map, SEQI_TARGET, target);
+				ds_map_add(new_map, SEQI_GOTO_TARGET_PASS, target_pass);
+				ds_map_add(new_map, SEQI_GOTO_TARGET_FAIL, target_fail);
 				
 				if (read_object_type == SEQTYPE_GOTO_IF_FLAG)
 				{
@@ -711,6 +754,12 @@ while (!file_text_eof(fp))
 				if (read_object_type == SEQTYPE_GOTO_IF_PLAYER)
 				{
 					ds_map_add(new_map, SEQI_GOTO_PLAYERTYPE, player_as);
+				}
+				
+				if (read_object_type == SEQTYPE_GOTO_IF_TIME)
+				{
+					new_map[?SEQI_GOTO_TIMEMINIMUM] = time_min;
+					new_map[?SEQI_GOTO_TIMEMAXIMUM] = time_max;
 				}
 				
 				// Delete original map

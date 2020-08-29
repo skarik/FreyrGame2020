@@ -1,66 +1,76 @@
+// Cortez only event, can only trigger if player is CORTEZ
+
 #begin
+#InitializeChecks
+	goto_if_flag
+	{	// Has to be after escorting Old
+		target OnEnd
+		flag IntroSequence
+		compare >=
+		value 1000
+	}
+	goto_if_flag
+	{
+		target OnEnd
+		flag NathanEvents
+		compare !=
+		value 0
+	}
+	goto_if_player 
+	{
+		failtarget OnEnd
+		as Cortez
+	}
+	goto_if_time
+	{
+		failtarget OnEnd
+		range day
+	}
+
 #Initialize
 
+	spawnstate
+	{
+		spawn_ifunique nathan
+		position 669 454
+	}
 
-//Josh, Cortez only event, can only trigger if player is CORTEZ
-goto_if_flag
-{
-    target OnEnd
-    flag IntroSequence
-    compare <
-    value 60
-}
+	ai
+	{
+		target nathan
+		style cts
+		command teleport
+		position 669 454
+	}
 
-goto_if_flag
-{
-    target OnEnd
-    flag NathanEvents
-    compare !=
-    value 0
-}
-
-
-spawnstate
-{
-    spawn_ifunique nathan
-    position 669 454
-}
-
-ai
-{
-    target nathan
-    style cts
-    command teleport
-    position 669 454
-}
-
-
-goto { target OnEnd }
+	goto { target OnEnd }
 
 #OnBegin
-
-
-goto_if_flag
-{
-    target OnEnd
-    flag IntroSequence
-    compare <
-    value 60
-}
-
-goto_if_flag
-{
-    target OnEnd
-    flag NathanEvents
-    compare !=
-    value 0
-}
-
-goto_if_player
-{
-    target DialogueForCortez
-    as Cortez
-}
+#PreDialogueChecks
+	goto_if_flag
+	{	// Has to be after escorting Old
+		target OnEnd
+		flag IntroSequence
+		compare >=
+		value 1000
+	}
+	goto_if_flag
+	{
+		target OnEnd
+		flag NathanEvents
+		compare !=
+		value 0
+	}
+	goto_if_player 
+	{
+		failtarget OnEnd
+		as Cortez
+	}
+	goto_if_time
+	{
+		failtarget OnEnd
+		range day
+	}
 
 #DialogueForCortez
 

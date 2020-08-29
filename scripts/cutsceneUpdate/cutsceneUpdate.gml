@@ -512,7 +512,7 @@ case SEQTYPE_MUSIC:
 	break;
 	
 case SEQTYPE_GOTO:
-	var target = entry[?SEQI_TARGET];
+	var target = entry[?SEQI_GOTO_TARGET_PASS];
 	if (target != undefined)
 	{
 		if (!cutsceneJumpToLabel(target))
@@ -535,7 +535,8 @@ case SEQTYPE_GOTO:
 	debugOut("Doing goto...");
 	break;
 case SEQTYPE_GOTO_IF_FLAG:
-	var target = entry[?SEQI_TARGET];
+	var target_pass = entry[?SEQI_GOTO_TARGET_PASS];
+	var target_fail = entry[?SEQI_GOTO_TARGET_FAIL];
 	var quest_id = entry[?SEQI_GOTO_FLAGID];
 	var flag_value = entry[?SEQI_GOTO_FLAGVALUE];
 	var flag_compare = entry[?SEQI_GOTO_FLAGCOMPARE];
@@ -573,12 +574,23 @@ case SEQTYPE_GOTO_IF_FLAG:
 		debugOut("Check flag[" + string(quest_id) + "] " + string(quest_value) + " <= " + string(flag_value));
 	}
 	
-	if (target != undefined && check_valid)
+	if (target_pass != undefined && check_valid)
 	{
-		if (!cutsceneJumpToLabel(target))
+		if (!cutsceneJumpToLabel(target_pass))
 		{
 			// Show error about this label
-			show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+			show_error("Could not find the label \"" + target_pass + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else if (target_fail != undefined && !check_valid)
+	{
+		if (!cutsceneJumpToLabel(target_fail))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target_fail + "\" in the sequence.", false);
 			// We're done here. Onto the next event
 			cts_entry_current++;
 		    cts_execute_state = 0;
@@ -595,7 +607,8 @@ case SEQTYPE_GOTO_IF_FLAG:
 	debugOut("Doing goto_if_flag...");
 	break;
 case SEQTYPE_GOTO_IF_COMPANION:
-	var target = entry[?SEQI_TARGET];
+	var target_pass = entry[?SEQI_GOTO_TARGET_PASS];
+	var target_fail = entry[?SEQI_GOTO_TARGET_FAIL];
 	var companions_with = entry[?SEQI_GOTO_COMPWITH];
 	var companions_notwith = entry[?SEQI_GOTO_COMPNOTWITH];
 	
@@ -631,12 +644,23 @@ case SEQTYPE_GOTO_IF_COMPANION:
 		}
 	}
 	
-	if (target != undefined && check_valid)
+	if (target_pass != undefined && check_valid)
 	{
-		if (!cutsceneJumpToLabel(target))
+		if (!cutsceneJumpToLabel(target_pass))
 		{
 			// Show error about this label
-			show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+			show_error("Could not find the label \"" + target_pass + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else if (target_fail != undefined && !check_valid)
+	{
+		if (!cutsceneJumpToLabel(target_fail))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target_fail + "\" in the sequence.", false);
 			// We're done here. Onto the next event
 			cts_entry_current++;
 		    cts_execute_state = 0;
@@ -652,8 +676,10 @@ case SEQTYPE_GOTO_IF_COMPANION:
 	// Debug output
 	debugOut("Doing goto_if_companion...");
 	break;
+	
 case SEQTYPE_GOTO_IF_PLAYER:
-	var target = entry[?SEQI_TARGET];
+	var target_pass = entry[?SEQI_GOTO_TARGET_PASS];
+	var target_fail = entry[?SEQI_GOTO_TARGET_FAIL];
 	var player_as = entry[?SEQI_GOTO_PLAYERTYPE];
 	
 	var check_valid = false;
@@ -664,12 +690,23 @@ case SEQTYPE_GOTO_IF_PLAYER:
 		check_valid = pl.pstats.m_gender == player_as;
 	}
 	
-	if (target != undefined && check_valid)
+	if (target_pass != undefined && check_valid)
 	{
-		if (!cutsceneJumpToLabel(target))
+		if (!cutsceneJumpToLabel(target_pass))
 		{
 			// Show error about this label
-			show_error("Could not find the label \"" + target + "\" in the sequence.", false);
+			show_error("Could not find the label \"" + target_pass + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else if (target_fail != undefined && !check_valid)
+	{
+		if (!cutsceneJumpToLabel(target_fail))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target_fail + "\" in the sequence.", false);
 			// We're done here. Onto the next event
 			cts_entry_current++;
 		    cts_execute_state = 0;
@@ -684,6 +721,58 @@ case SEQTYPE_GOTO_IF_PLAYER:
 	
 	// Debug output
 	debugOut("Doing goto_if_player...");
+	break;
+	
+case SEQTYPE_GOTO_IF_TIME:
+	var target_pass = entry[?SEQI_GOTO_TARGET_PASS];
+	var target_fail = entry[?SEQI_GOTO_TARGET_FAIL];
+	var time_min = entry[?SEQI_GOTO_TIMEMINIMUM];
+	var time_max = entry[?SEQI_GOTO_TIMEMAXIMUM];
+	
+	var check_valid = false;
+	
+	if (time_min < time_max)
+	{
+		var timeofday = timeofdayGetHour();
+		check_valid = timeofday > time_min && timeofday < time_max;
+	}
+	else
+	{
+		var timeofday = timeofdayGetHour();
+		check_valid = timeofday > time_min || timeofday < time_max;
+	}
+	
+	if (target_pass != undefined && check_valid)
+	{
+		if (!cutsceneJumpToLabel(target_pass))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target_pass + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else if (target_fail != undefined && !check_valid)
+	{
+		if (!cutsceneJumpToLabel(target_fail))
+		{
+			// Show error about this label
+			show_error("Could not find the label \"" + target_fail + "\" in the sequence.", false);
+			// We're done here. Onto the next event
+			cts_entry_current++;
+		    cts_execute_state = 0;
+		}
+	}
+	else
+	{
+		// We're done here. Onto the next event
+		cts_entry_current++;
+	    cts_execute_state = 0;
+	}
+	
+	// Debug output
+	debugOut("Doing goto_if_time...");
 	break;
 	
 case SEQTYPE_PALETTE:
