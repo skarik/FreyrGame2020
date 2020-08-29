@@ -69,11 +69,13 @@ var t_nextTarget = null;
 		}
 	}
 	
+	var bInSafeArea = aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y);
+	
 	// Check if can see the target
 	if (iexists(m_aiCombat_target)
 		&& !m_aiCombat_target.isHidden
 		&& !m_aiCombat_target.m_isDead && !m_aiCombat_target.m_isKOed
-		&& !aiPointInSafeArea(m_aiCombat_target.x, m_aiCombat_target.y)
+		&& !bInSafeArea
 		&& (bFastAggro 
 		|| aicommonCanSee(m_aiCombat_target.x, m_aiCombat_target.y, m_aiCombat_target.z,
 							facingDirection, m_aiCombat_noticeDistance,
@@ -91,11 +93,17 @@ var t_nextTarget = null;
 		m_aiCombat_targetVisible = false;
 		m_aiCombat_targetTrackingLossTime += Time.deltaTime;
 		
-		if (m_aiCombat_targetTrackingLossTime > 1.0) // Lost tracking for 1 second
+		if (m_aiCombat_targetTrackingLossTime > 1.0 // Lost tracking for 1 second
+			// Force fast deaggro when in a safe area
+			|| bInSafeArea)
 		{			
 			// Lost target, look for new target.
 			if (m_aiCombat_target != t_nextTarget
-				&& (iexists(t_nextTarget) || m_aiCombat_targetTrackingLossTime > 3.0)
+				&& (iexists(t_nextTarget)
+					|| m_aiCombat_targetTrackingLossTime > 3.0
+					// Force fast deaggro when in a safe area
+					|| bInSafeArea
+					)
 				)
 			{	// Switch anger target
 				m_aiCombat_target = t_nextTarget;
