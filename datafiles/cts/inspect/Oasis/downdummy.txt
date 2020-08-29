@@ -3,7 +3,7 @@
 	lines
 	{
 	1 This dummy looks like it's seen better days. 
-	2 Its modeled after a pompous looking fella.
+	2 It's modeled after a pompous looking fella.
 	}
 
 #ended

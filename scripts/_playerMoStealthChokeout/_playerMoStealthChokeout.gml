@@ -20,7 +20,7 @@ if (atkButton.value > 0.707
 		effectOnNpcHurt(m_attackKnockoutTarget);
 	}
 	
-	if (m_canDragOnKnockout)
+	if (m_attackKnockoutTarget.m_canDragOnKnockout)
 	{
 		// Pull target close
 		var t_mask_width = sprite_get_width(sprite_exists(m_attackKnockoutTarget.mask_index) ? m_attackKnockoutTarget.mask_index : m_attackKnockoutTarget.sprite_index);
@@ -64,9 +64,12 @@ else
 			m_attackKnockoutTarget.m_lastDamageSource = id;
 			with (m_attackKnockoutTarget)
 			{
-				if (!m_aiCombat_angry || !iexists(m_aiCombat_target))
+				if (m_hasCombatAi)
 				{
-					m_aiCombat_target = m_lastDamageSource;
+					if (!m_aiCombat_angry || !iexists(m_aiCombat_target))
+					{
+						m_aiCombat_target = m_lastDamageSource;
+					}
 				}
 				event_user(kEvent_AIOnAngry12);
 			}

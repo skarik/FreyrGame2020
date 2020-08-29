@@ -10,6 +10,7 @@ m_canDragOnKnockout = true;
 m_uiwantsHealthShown = false;
 m_uiwantsStaminaShown = false;
 m_standingHeight = 32;
+m_hasCombatAi = false;
 m_isHeavyFighter = false;
 
 m_lastDamage = 0;

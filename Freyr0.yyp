@@ -2695,6 +2695,14 @@
             }
         },
         {
+            "Key": "226dcd55-c778-4a8c-9e62-091e9824d629",
+            "Value": {
+                "id": "054ba605-b8a1-4069-9781-28925ca1fbcd",
+                "resourcePath": "objects\\o_chDummyFaceUpwards\\o_chDummyFaceUpwards.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "22921097-4ccf-43b6-93b1-e115e4d7554c",
             "Value": {
                 "id": "f88451e6-20c1-49e2-9c7d-3e864180e0df",
@@ -9431,6 +9439,14 @@
             }
         },
         {
+            "Key": "77b479d9-5f34-4568-b1e2-833994462d0b",
+            "Value": {
+                "id": "1eb96395-f889-48d8-9f99-ca9e5c491171",
+                "resourcePath": "objects\\o_chDummy\\o_chDummy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "77be568a-a1af-4274-b020-85e94e4fc028",
             "Value": {
                 "id": "fcd02fb9-d95b-4389-9de5-6658c576be09",
@@ -15515,6 +15531,14 @@
             "Value": {
                 "id": "4b85ffb3-4b39-4499-9b80-9cbf689f7b0b",
                 "resourcePath": "objects\\o_livelyFloatingLayerGroup\\o_livelyFloatingLayerGroup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c378d6cb-2746-4b03-a014-25bb24fc12c6",
+            "Value": {
+                "id": "b1c91b9c-b431-42b7-a52d-905c21a1698a",
+                "resourcePath": "objects\\o_chDummyStick\\o_chDummyStick.yy",
                 "resourceType": "GMObject"
             }
         },

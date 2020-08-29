@@ -29,7 +29,7 @@ for (var i = 0; i < l_enemyMapCount; ++i)
 			}
 		}
 		// Update the heart status
-		timers[2] = motion1d_to(timers[2], l_currentEnemy.stats.m_health, Time.deltaTime * 48.0);
+		timers[2] = motion1d_to(timers[2], (l_currentEnemy.m_isKOed || l_currentEnemy.m_isDead) ? 0.0 : l_currentEnemy.stats.m_health, Time.deltaTime * 48.0);
 		timers[3] = motion1d_to(timers[3], l_currentEnemy.m_isStunned ? l_currentEnemy.stats.m_stunMax : l_currentEnemy.stats.m_stun, Time.deltaTime * 8.0);
 	}
 	// Save back the status

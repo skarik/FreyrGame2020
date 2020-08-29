@@ -1,3 +1,5 @@
+m_hasCombatAi = true; // Mark character as having combat AI
+
 m_ai_disableAggression = false;
 
 m_aiCombat_enabled = true;
