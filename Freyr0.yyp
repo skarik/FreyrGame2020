@@ -3983,14 +3983,6 @@
             }
         },
         {
-            "Key": "32ac9705-6041-412c-bca3-7da6560d228b",
-            "Value": {
-                "id": "e48b1b69-6947-4eb5-81ac-d50569e19b55",
-                "resourcePath": "datafiles_yy\\music\\foolsmarch_beat.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "32e14ff8-2e38-4224-8487-36eaff49b589",
             "Value": {
                 "id": "5767895f-7d3b-4268-92fe-20f75dfcc659",
@@ -10396,6 +10388,14 @@
                 "id": "3ff33875-b4be-4d70-bd09-54b8bc1b1b87",
                 "resourcePath": "objects\\o_chOasisNpc\\o_chOasisNpc.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "849155f5-1818-4eee-8d90-69a8984a0495",
+            "Value": {
+                "id": "c6f941dd-a89e-48a1-8391-f98290d3ebd0",
+                "resourcePath": "datafiles_yy\\music\\foolsmarch_excite0.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

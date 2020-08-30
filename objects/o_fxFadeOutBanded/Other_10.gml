@@ -8,7 +8,7 @@ var cam_hview = GameCamera.height + 2;
 gpu_set_blendenable(true);
 
 pct = clamp(image_alpha * 4.0 - 0.0, 0.0, 1.0);
-draw_set_alpha(0.25);
+draw_set_alpha(0.4);
 gpu_set_blendmode(bm_normal);
 draw_set_color(image_blend);
 /*if (image_blend == c_black) {
