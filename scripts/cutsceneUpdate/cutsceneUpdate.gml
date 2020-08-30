@@ -294,7 +294,7 @@ case SEQTYPE_LINES:
     // No longer exists? We go to the enxt entry.
     //else if (!iexists(o_CtsTalkerBox) && !iexists(o_CtsGabberBox))
 	else if (  (!iexists(o_CtsTalkerBox) /*|| o_CtsTalkerBox.input_fadeout*/)
-			&& (!iexists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout))  )
+			&& (!iexists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout) || !ctsGabbersHaveFocus())  )
     {
         cts_entry_current++;
         cts_execute_state = 0;   
