@@ -1,12 +1,10 @@
 /// @description Update scheduled goals
 
-if (!m_scheduleActive)
+if (!m_scheduleActive || ctsIsActive())
 {
 	exit;
 }
 
-//if (!iexists(m_character))
-//{
 var scheduleCount = array_length_1d(m_schedule);
 
 if (scheduleCount == 0)

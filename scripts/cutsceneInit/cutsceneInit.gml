@@ -17,3 +17,7 @@ cts_actor_override_list_enabled = false;
 cts_actor_tracking_list = [];
 
 cts_lines_tracked_instance = null;
+
+
+// internal cutscene state. normally handled by an object but i'm lazy sometimes
+m_cts_start_position = [0, 0];

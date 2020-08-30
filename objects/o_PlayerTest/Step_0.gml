@@ -33,6 +33,7 @@ if (m_aiScript_requestCommand == kAiRequestCommand_Teleport)
 	z = collision3_get_highest_position(x, y, z);
 	z_height = 0.0;
 	//z_ready = false;
+	debugOut("Player teleported to (" + string(x) + ", " + string(y) + ")");
 }
 else if (m_aiScript_requestCommand == kAiRequestCommand_Face)
 {

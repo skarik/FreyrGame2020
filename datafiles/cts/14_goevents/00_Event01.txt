@@ -32,6 +32,12 @@
 		failtarget OnEnd
 		as Aurum
 	}
+	goto_if_time
+	{	
+		failtarget OnEnd
+		min 1300
+		max 2359
+	}
 
 spawnstate
 {
@@ -74,6 +80,12 @@ goto { target OnEnd }
 	{
 		failtarget OnEnd
 		as Aurum
+	}
+	goto_if_time
+	{	
+		failtarget OnEnd
+		min 1300
+		max 2359
 	}
 
 #DialogueForAurum
@@ -118,7 +130,12 @@ lines
 	object 0
 	1 Hey! Over here partner!
 	2 I can't believe you actually came...
+}
 
+screen
+{
+	type panoffset
+	position 0 -45
 }
 
 portrait
@@ -222,7 +239,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 Huh, normally put up more of a fight then that. 
+	1 Huh, normally put up more of a fight than that. 
 
 }
 
@@ -279,7 +296,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 Oh? So you’re talking to me because I’m interesting huh? 
+	1 Oh? So you’re talking to me because I’m interesting, huh? 
 	2 Not because I'm a $q sweetheart?
 
 }
@@ -302,15 +319,14 @@ lines
 	style portrait
 	object 1
 	1 Well, I can’t say you aren’t interesting. The free drink is good, but not the actual reason I wanted to come.
-	2 I can get a free drink from just about anybody, I like $w variety$$ too. 
+	2 I can get a free drink from just about anybody, I like $wvariety$$ too. 
 
 }
 
 lines
 {
 	target libby
-	1 He cocks an eyebrow at you over his flagon. His eye examining you closely.
-
+	1 He cocks an eyebrow at you over his flagon, his eye examining you closely.
 }
 
 lines
@@ -319,8 +335,8 @@ lines
 	style portrait
 	facing player
 	object 0
-	1 What’s the reason? If you’re here to find out more about this place.
-	2 Well, That sort of information might cost you. 
+	1 What’s the reason? If you’re here to find out more about this place...
+	2 ...Well, that sort of information might cost you. 
 }
 
 lines
@@ -347,7 +363,6 @@ lines
 	style portrait
 	object 1
 	1 $sI -$$$p I don’t think I’ll tell you yet. Haven’t had enough to drink.
-
 }
 
 
@@ -442,7 +457,7 @@ lines
 	facing player
 	object 0
 	1 You get used to the aftertaste once it’s burned away all your taste buds.
-	2 Also, folks around here don't know a lot of things...
+	2 $qAlso, folks around here don't know a lot of things...$$
 
 }
 
@@ -461,7 +476,7 @@ lines
 	object 1
 	1 Alright, I’ll fess up.
 	2 Was kind of hoping this might lead to something a little more fun.
-	3 Drinking in an admittedly fancy tavern is a good start but...$pwas hoping you might know where the fun is at. 
+	3 Drinking in an admittedly fancy tavern is a good start but..$p.was hoping you might know where the fun is at. 
 
 }
 
@@ -469,7 +484,6 @@ lines
 {
 	target libby
 	1 He’s examining you again and he isn’t being subtle about it. You can tell he's trying to find meaning between your words.
-
 }
 
 
@@ -508,7 +522,7 @@ lines
 lines
 {
 	target libby
-	1 He deliberately cuts himself off taking a long drink before standing up. He then yanks you up to your feet by your waist using his tail. 
+	1 He deliberately cuts himself off$p, taking a long drink before standing up.$p He then yanks you up to your feet -$p his tail around your waist.
 
 }
 
@@ -535,8 +549,6 @@ lines
 
 
 //Fade Black.
-//Fade In.
-
 screen { type fadeout; }
 portrait { action hideall; }
 
@@ -546,6 +558,7 @@ flags
 }
 
 signal { id GoTo rm_fools_march; }
+//Fade In after this?
 
 	
 //Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis. It’s evening.

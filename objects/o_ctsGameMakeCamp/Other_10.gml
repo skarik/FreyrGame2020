@@ -4,6 +4,7 @@ if (m_vfxUIGlitch > 0.0)
 {
 	// Draw the overlay
 	gpu_set_blendenable(true);
+	gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_one);
 	draw_set_alpha(m_vfxUIGlitch * 0.3);
 	draw_set_color(c_black);
 	draw_rectangle(0, 0, Screen.width, Screen.height, false);
@@ -49,4 +50,5 @@ if (m_vfxUIGlitch > 0.0)
 	
 	// Clean up
 	draw_set_alpha(1.0);
+	gpu_set_blendmode(bm_normal);
 }

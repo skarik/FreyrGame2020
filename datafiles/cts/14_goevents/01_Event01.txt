@@ -1,25 +1,24 @@
 #begin
 #Initialize
 
-
 	#InitializeCheckFlags
 	goto_if_flag
 	{
-		target DialogueForAurum
+		target Initialize_DialogueForAurum
 		flag GoEvents
 		compare ==
 		value 1
 	}
 	goto_if_flag
 	{
-		target DrunkMorning
+		target Initialize_DrunkMorning
 		flag GoEvents
 		compare ==
 		value 2
 	}
 	goto { target OnEnd; }
 
-#InitializeActors
+#Initialize_DialogueForAurum
 	spawnstate
 	{
 		spawn_ifunique go
@@ -35,14 +34,14 @@
 	//spawnstate
 	//{
 	//    spawn_ifunique player
-	//    position 2165 1657
+	//    position 2145 1657
 	//}
 	ai
 	{
 		target player
 		style cts
 		command teleport
-		position 2165 1657
+		position 2145 1657
 	}
 
 #DialogueForAurum
@@ -100,7 +99,7 @@ lines
 	target player 
 	object 0
 	1 That sounds like a lot of work.
-	2 To much in fact. 
+	2 Too much, in fact. 
 
 }
 
@@ -604,6 +603,31 @@ screen { type fadein; }
 goto { target OnEnd; }
 
 
+#Initialize_DrunkMorning
+	spawnstate
+	{
+		spawn_ifunique go
+		position 2162 1657
+	}
+	ai
+	{
+		target go
+		style cts
+		command teleport
+		position 2162 1657
+	}
+	//spawnstate
+	//{
+	//    spawn_ifunique player
+	//    position 2145 1657
+	//}
+	ai
+	{
+		target player
+		style cts
+		command teleport
+		position 2145 1657
+	}
 
 #DrunkMorning
 

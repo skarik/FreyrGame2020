@@ -22,6 +22,7 @@ draw_rectangle(cam_xview,cam_yview,cam_xview+cam_wview,cam_yview+cam_hview*pct,f
 
 pct = clamp(image_alpha * 4.0 - 1.0, 0.0, 1.0);
 gpu_set_blendmode(bm_normal);
+draw_set_alpha(0.6);
 /*if (image_blend == c_black) {
 	gpu_set_blendmode_ext(bm_zero, bm_src_colour);
 	draw_set_color(c_gray);
@@ -34,6 +35,7 @@ draw_rectangle(cam_xview,cam_yview,cam_xview+cam_wview,cam_yview+cam_hview*pct,f
 
 pct = clamp(image_alpha * 4.0 - 2.0, 0.0, 1.0);
 gpu_set_blendmode(bm_normal);
+draw_set_alpha(0.7);
 /*
 if (image_blend == c_black) {
 	gpu_set_blendmode_ext(bm_zero, bm_src_colour);

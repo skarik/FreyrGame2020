@@ -74,6 +74,8 @@
 
 #DialogueForCortez
 
+world { time stop; }
+
 // spawn the characters needed
 //Needs to be A common thing that happens with events like this. 
 //Like a fade in and out, or a starwars wipe. So people know when 
@@ -745,6 +747,12 @@ flags
 	set NathanEvents 10
 }
 
+// do waiting now
+world
+{	// wake up at 9 pm
+	waitfor 21.00
+}
+
 screen
 {
 	type fadein
@@ -755,6 +763,7 @@ screen
 }
 
 player { actions unlock }
+world { time stop; }
 
 goto { target OnEnd; }
 
@@ -789,7 +798,7 @@ screen
 }
 
 player { actions unlock }
-
+world { time stop; }
 
 //AND the player walks out of the tent. If they go back in he’ll be asleep and won’t respond this time. Will be muttering to ‘himself’ in diegetic dialogue. 
 

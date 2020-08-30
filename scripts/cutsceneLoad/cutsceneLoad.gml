@@ -480,17 +480,22 @@ while (!file_text_eof(fp))
 				var rgb = ds_map_find_value(read_object_map, "rgb");
 				var strength = ds_map_find_value(read_object_map, "strength");
 				var length = ds_map_find_value(read_object_map, "length");
+				var position = read_object_map[?"position"];
 				if (is_undefined(type)) type = "none";
 				if (is_undefined(rgb)) rgb = "0 0 0";
 				if (is_undefined(strength)) strength = "1";
 				if (is_undefined(length)) length = "1";
+				if (is_undefined(position)) position = "0 0";
 				
-				var rgb_list = string_split(rgb, " ", true);
+				var rgb_list = string_split(rgb, " \t\n", true);
+				var position_list = string_split(position, " \t\n", true);
 				
 				var new_map = ds_map_create();
                 ds_map_add(new_map, SEQI_SCREEN_R, real(rgb_list[0]));
                 ds_map_add(new_map, SEQI_SCREEN_G, real(rgb_list[1]));
 				ds_map_add(new_map, SEQI_SCREEN_B, real(rgb_list[2]));
+				ds_map_add(new_map, SEQI_SCREEN_X, real(position_list[0]));
+				ds_map_add(new_map, SEQI_SCREEN_Y, real(position_list[1]));
 				ds_map_add(new_map, SEQI_SCREEN_SHAKE, real(strength));
 				ds_map_add(new_map, SEQI_SCREEN_LENGTH, real(length));
                 if (type == "fadein")
@@ -505,6 +510,8 @@ while (!file_text_eof(fp))
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_CTSIN);
 				else if (type == "ctsout")
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_CTSOUT);
+				else if (type == "panoffset")
+					ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_PANOFFSET);
                 else
                     ds_map_add(new_map, SEQI_TYPE, SEQSCREEN_NONE);
 				

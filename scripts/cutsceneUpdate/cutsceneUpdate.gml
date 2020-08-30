@@ -3,6 +3,10 @@
 
 if (cutsceneIsDone())
 {
+	if (global._cutscene_main == id)
+	{
+		global._cutscene_main = null;
+	}
     return false;
 }
 
@@ -179,7 +183,6 @@ case SEQTYPE_LINES:
 		}
     
 		// Find target
-		//var target_inst = (style != kLinesStyle_Portrait) ? _cutsceneUpdateGetTarget(target, count) : 0;
 		var target_inst = _cutsceneUpdateGetTarget(target, count);
 	
 		// FREYR SPECIFIC:
@@ -214,7 +217,7 @@ case SEQTYPE_LINES:
 		}
 		else if (style == kLinesStyle_Portrait)
 		{
-			gabber = ctsMakeTalker(target_inst, count, "", line);
+			gabber = ctsMakeTalker(target, count, "", line);
 	        gabber.input_priority = !l_organic;
 	        gabber.input_disable = l_organic;
 	        gabber.input_autoclose = (ending == SEQEND_AUTO);
@@ -414,6 +417,16 @@ case SEQTYPE_SCREEN:
 			cts_entry_current++;
 			cts_execute_state = 0;   
 		}
+		else if (type == SEQSCREEN_PANOFFSET)
+		{
+			cts_execute_state = 1;
+			cts_execute_timer = 0;
+			
+			if (iexists(o_PlayerCamera))
+			{
+				m_cts_start_position = [o_PlayerCamera.m_cam_lookahead_x, o_PlayerCamera.m_cam_lookahead_y];
+			}
+		}
 		else
 		{
 			cts_execute_state = 1;
@@ -426,6 +439,8 @@ case SEQTYPE_SCREEN:
     else
 	{
 		var type = ds_map_find_value(entry, SEQI_TYPE);
+		var position_x = ds_map_find_value(entry, SEQI_SCREEN_X);
+		var position_y = ds_map_find_value(entry, SEQI_SCREEN_Y);
 		
 		if (type == SEQSCREEN_FADEIN)
 		{
@@ -447,6 +462,27 @@ case SEQTYPE_SCREEN:
 		{	// continue to next sequence
 			cts_entry_current++;
 			cts_execute_state = 0;   
+		}
+		else if (type == SEQSCREEN_PANOFFSET)
+		{
+			// take 0.5 seconds to pan, always
+			cts_execute_timer += Time.deltaTime * 2.0;
+			
+			// do the lerps
+			if (iexists(o_PlayerCamera))
+			{
+				var t_smooth = smoothstep(saturate(cts_execute_timer));
+				o_PlayerCamera.m_cam_lookahead_x = lerp(m_cts_start_position[0], position_x, t_smooth);
+				o_PlayerCamera.m_cam_lookahead_y = lerp(m_cts_start_position[1], position_y, t_smooth);
+			}
+			
+			if (cts_execute_timer >= 1.0)
+			{	// Fully blended, we're done
+				cts_execute_timer = 0;
+				
+				cts_entry_current++;
+				cts_execute_state = 0;
+			}
 		}
 		else
 		{
