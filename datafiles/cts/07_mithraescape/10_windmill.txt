@@ -4,6 +4,10 @@ goto { target OnEnd }
 
 #OnBegin
 
+// ensure we're in a cutscene still
+screen { type ctsin }
+player { actions lock }
+
 // set up needed npcs
 spawnstate
 {
@@ -72,13 +76,10 @@ spawnstate
 	delete samuel
 }
 
-player { actions unlock }
-world // TODO: do this properly
+world
 {
 	waitfor night
 }
-wait { type time; wait 6.0s; }
-player { actions lock }
 
 lines
 {

@@ -15,3 +15,5 @@ cts_actor_override_list = [];
 cts_actor_override_list_enabled = false;
 
 cts_actor_tracking_list = [];
+
+cts_lines_tracked_instance = null;

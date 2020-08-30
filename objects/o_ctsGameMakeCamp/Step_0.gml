@@ -1,9 +1,38 @@
 /// @description perform states
 
+// Update vfx
+if (m_vfxWorldFlashRequested)
+{
+	m_vfxWorldFlash = min(1.0, m_vfxWorldFlash + Time.deltaTime * 7.0);
+	if (m_vfxWorldFlash >= 1.0)
+	{
+		m_vfxWorldFlashRequested = false;
+	}
+}
+else
+{
+	m_vfxWorldFlash = max(0.0, m_vfxWorldFlash - Time.deltaTime * 5.0);
+}
+
+if (m_state == CtsCamp.S2FadeOut
+	|| m_state == CtsCamp.S3Blackness
+	|| m_state == CtsCamp.S4SleepTravel)
+{
+	m_vfxUIGlitch = min(1.0, m_vfxUIGlitch + Time.deltaTime * 2.0);
+}
+else
+{
+	m_vfxUIGlitch = max(0.0, m_vfxUIGlitch - Time.deltaTime * 3.0);
+}
+
+// Update states
 if (m_state == CtsCamp.S1BeginSleep)
 {
 	with (o_PlayerTest) controlZero(true);
 	with (o_PlayerTest) canMove = false;
+	
+	ctsShowBars();
+	m_vfxWorldFlashRequested = true;
 	
 	m_state = CtsCamp.S2FadeOut;
 }
@@ -85,9 +114,14 @@ else if (m_state == CtsCamp.S5FadeIn)
 	/*if (!iexists(o_fxFadeInBanded) || o_fxFadeInBanded.image_alpha <= 0.0)
 	{*/
 		with (o_PlayerTest) canMove = true;
+		if (iexists(o_PlayerHud))
+		{
+			m_inCutscene = m_hudWasInCutscene;
+		}
 		
+		m_vfxWorldFlashRequested = true;
 		//idelete(o_fxFadeInBanded);
-		idelete(this);
+		//idelete(this);
 		
 		m_state = CtsCamp.S6Cleanup;
 	//}
@@ -95,4 +129,8 @@ else if (m_state == CtsCamp.S5FadeIn)
 else if (m_state == CtsCamp.S6Cleanup)
 {
 	// Nothing
+	if (m_vfxWorldFlash <= 0.0 && m_vfxUIGlitch <= 0.0)
+	{
+		idelete(this);
+	}
 }

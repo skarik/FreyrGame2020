@@ -252,6 +252,8 @@ case SEQTYPE_LINES:
 			{
 				gabber.display_blackbox_override = true;
 			}
+			
+			cts_lines_tracked_instance = gabber;
 		}
             
 		// SILENT SKY SPECIFIC:
@@ -291,10 +293,17 @@ case SEQTYPE_LINES:
 		// Debug output
 		debugOut("Doing lines...");
     }
+	else if ((iexists(cts_lines_tracked_instance) && cts_lines_tracked_instance.input_fadeout)
+			|| (cts_lines_tracked_instance != null && !iexists(cts_lines_tracked_instance))  )
+	{
+		cts_lines_tracked_instance = null;
+		cts_entry_current++;
+        cts_execute_state = 0;   
+	}
     // No longer exists? We go to the enxt entry.
     //else if (!iexists(o_CtsTalkerBox) && !iexists(o_CtsGabberBox))
 	else if (  (!iexists(o_CtsTalkerBox) /*|| o_CtsTalkerBox.input_fadeout*/)
-			&& (!iexists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout) || !ctsGabbersHaveFocus())  )
+			&& (!iexists(o_CtsGabberBox) || (instance_number(o_CtsGabberBox) == 1 && o_CtsGabberBox.input_fadeout))  )
     {
         cts_entry_current++;
         cts_execute_state = 0;   
@@ -1057,30 +1066,52 @@ case SEQTYPE_WORLD:
 	var command = ds_map_find_value(entry, SEQI_WORLD_COMMAND);
 	var arg = ds_map_find_value(entry, SEQI_WORLD_CMD_ARG);
 	
-	if (command == SEQWORLD_TIME)
+	if (cts_execute_state == 0)
 	{
-		worldSetTimeRunning((arg != -1) ? arg : true);
-	}
-	else if (command = SEQWORLD_EVENT)
-	{
-		worldEventCreate(arg);
-	}
-	else if (command = SEQWORLD_WAITFOR)
-	{
-		var wait_time = arg - o_dayNightCycle.m_timeOfDay;
-		if (wait_time < 0.0)
+		if (command == SEQWORLD_TIME)
 		{
-			wait_time += 24.0;
+			worldSetTimeRunning((arg != -1) ? arg : true);
 		}
-		gameCampWait(wait_time);
+		else if (command = SEQWORLD_EVENT)
+		{
+			worldEventCreate(arg);
+		}
+		else if (command = SEQWORLD_WAITFOR)
+		{
+			var wait_time = arg - o_dayNightCycle.m_timeOfDay;
+			if (wait_time < 0.0)
+			{
+				wait_time += 24.0;
+			}
+			gameCampWait(wait_time);
+		}
+		
+		cts_execute_state++;
+		
+		// Debug out
+		debugOut("Doing world command [" + string(command) + "](" + string(arg) + ")");
 	}
-	
-	// Debug out
-	debugOut("Doing world command [" + string(command) + "](" + string(arg) + ")");
-	
-	// We're done here. Onto the next event
-	cts_entry_current++;
-    cts_execute_state = 0;
+	else if (cts_execute_state == 1)
+	{
+		if (command == SEQWORLD_WAITFOR)
+		{
+			// Wait for the "make camp" segment to completely finish
+			if (!iexists(o_ctsGameMakeCamp))
+			{
+				cts_execute_state++;
+			}
+		}
+		else
+		{
+			cts_execute_state++;
+		}
+	}
+	else if (cts_execute_state == 2)
+	{
+		// We're done here. Onto the next event
+		cts_entry_current++;
+		cts_execute_state = 0;
+	}
 	break;
 	
 case SEQTYPE_PORTRAIT:
