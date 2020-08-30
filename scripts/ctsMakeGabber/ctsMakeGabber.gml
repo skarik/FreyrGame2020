@@ -14,7 +14,8 @@ if (instance_number(o_CtsGabberBox) == 1)
 	// Is it the same person talking?
 	if (existing_gabber.input_actor != argument0
 		|| existing_gabber.input_name != argument1
-		|| existing_gabber.input_actor == o_PlayerImp)
+		|| (existing_gabber.input_actor == o_PlayerImp && argument0 == o_PlayerImp)
+		|| (existing_gabber.input_actor == o_PlayerImp && argument0 == null))
 	{
 		existing_gabber = null;
 	}

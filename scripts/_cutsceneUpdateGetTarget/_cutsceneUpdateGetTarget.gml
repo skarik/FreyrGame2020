@@ -51,4 +51,10 @@ if (iexists(target_inst) && object_get_base_parent(target_inst.object_index) == 
 	target_inst = target_inst.m_spawned_enemy;
 }
 
+// Default non-instance
+if (!iexists(target_inst))
+{
+	target_inst = object_target;
+}
+
 return target_inst;

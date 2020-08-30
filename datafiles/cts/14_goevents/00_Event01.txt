@@ -415,8 +415,7 @@ lines
 	style portrait
 	facing player
 	object 0
-	1 Red Ale. Made from the local grain and cactus around here.
-
+	1 Red ale. Made from the local grain and cactus around here.
 }
 
 lines
@@ -476,7 +475,7 @@ lines
 	object 1
 	1 Alright, I’ll fess up.
 	2 Was kind of hoping this might lead to something a little more fun.
-	3 Drinking in an admittedly fancy tavern is a good start but..$p.was hoping you might know where the fun is at. 
+	3 Drinking in an admittedly fancy tavern is a good start but...$pwas hoping you might know where the fun is at. 
 
 }
 
@@ -552,6 +551,22 @@ lines
 screen { type fadeout; }
 portrait { action hideall; }
 
+
+//Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis. It’s evening.
+// CG needed for this def I think
+world
+{	// wait until 0.30 AM
+	waitfor 0.30
+}
+lines
+{
+	target libby
+	1 The pair of you stumble around the small city, being drunk and disorderly like a pair of children.
+	2 Perhaps a bit too disorderly: at the end of it, you both flee to his small oasis in Fool's March.
+}
+
+wait { type time; time 0.4s; }
+
 flags
 {
 	set GoEvents 1
@@ -560,9 +575,6 @@ flags
 signal { id GoTo rm_fools_march; }
 //Fade In after this?
 
-	
-//Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis. It’s evening.
-// CG needed for this def I think
 // GO  is hiding behind the rock the PLAYER is standing on. Leaps out to tackle them into the water. (Underwear sprites) <CG>
 //DO I NEED A NEW script? 
 
@@ -594,6 +606,15 @@ portrait { action hideall; }
 
 //Fade Black.
 //Fade In.
+
+lines
+{
+	target libby
+	1 The pair of you wreck havoc around the small city, being drunk and disorderly like a pair of children.
+	2 Perhaps a bit too disorderly: at the end of it, you both flee outside the city, and prompty pass out.
+}
+
+wait { type time; time 0.4s; }
 
 //Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis.
 

@@ -425,6 +425,7 @@ case SEQTYPE_SCREEN:
 			if (iexists(o_PlayerCamera))
 			{
 				m_cts_start_position = [o_PlayerCamera.m_cam_lookahead_x, o_PlayerCamera.m_cam_lookahead_y];
+				m_cts_start_position2 = [o_PlayerCamera.m_cam_last_final_x, o_PlayerCamera.m_cam_last_final_y];
 			}
 		}
 		else
@@ -474,6 +475,8 @@ case SEQTYPE_SCREEN:
 				var t_smooth = smoothstep(saturate(cts_execute_timer));
 				o_PlayerCamera.m_cam_lookahead_x = lerp(m_cts_start_position[0], position_x, t_smooth);
 				o_PlayerCamera.m_cam_lookahead_y = lerp(m_cts_start_position[1], position_y, t_smooth);
+				o_PlayerCamera.m_cam_last_final_x = lerp(m_cts_start_position2[0], o_PlayerCamera.m_cam_last_target_x, t_smooth);
+				o_PlayerCamera.m_cam_last_final_y = lerp(m_cts_start_position2[1], o_PlayerCamera.m_cam_last_target_y, t_smooth);
 			}
 			
 			if (cts_execute_timer >= 1.0)

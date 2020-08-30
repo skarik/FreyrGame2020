@@ -81,6 +81,7 @@ if ( current_display_delay <= 0.0 )
 		// Stop outputting text if there's any sort of delay
 		if (current_display_delay > 0.0)
 		{
+			current_display_count = i + 1 + frac(current_display_count);
 			break;
 		}
     } // End for-loop (adding characters & parsing effects)

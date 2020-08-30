@@ -2,7 +2,7 @@
 
 event_inherited();
 
-depth = kUiDepthGabber + 2;
+depth = kUiDepthGabber + 5;
 m_background_renderer = inew(o_CtsPortraitBackgroundRenderer);
 
 #macro kPortraitIndex_Max 8

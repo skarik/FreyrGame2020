@@ -1,7 +1,7 @@
 /// @description Gabberbox : For In-world
 event_inherited();
 
-#macro kUiDepthGabber (kUiDepthHudBase - 5)
+#macro kUiDepthGabber (kUiDepthHudBase - 10)
 depth = kUiDepthGabber;
 
 input_actor = null;
