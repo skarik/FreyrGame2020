@@ -21,6 +21,8 @@ if (l_commandSplitCount >= 1)
 		return dcmdParseGiveItem(l_parserMode, l_commandSplit);
 	else if (l_commandSplit[0] == "time")
 		return dcmdParseTime(l_parserMode, l_commandSplit);
+	else if (l_commandSplit[0] == "gender")
+		return dcmdParseGender(l_parserMode, l_commandSplit);
 	else if (l_commandSplit[0] == "dolive")
 		return dcmdParseDoLive(l_parserMode, l_commandSplit);
 	

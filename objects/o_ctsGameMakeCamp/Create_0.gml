@@ -24,7 +24,8 @@ m_startTime = 0.0;
 m_runtime = 6.0; // time this runs
 
 // Rendering info
-depth = -9101;
+//depth = -9101;
+depth = kUiDepthHudBase - 15;
 m_vfxWorldFlashRequested = false;
 m_vfxWorldFlash = 0.0;
 m_vfxUIGlitch = 0.0;

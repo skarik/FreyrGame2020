@@ -2,59 +2,58 @@
 #Initialize
 
 
+	#InitializeCheckFlags
+	goto_if_flag
+	{
+		target DialogueForAurum
+		flag GoEvents
+		compare ==
+		value 1
+	}
+	goto_if_flag
+	{
+		target DrunkMorning
+		flag GoEvents
+		compare ==
+		value 2
+	}
+	goto { target OnEnd; }
 
-goto_if_flag
-{
-    target OnEnd
-    flag IntroSequence 
-    compare <
-    value 60
-}
+#InitializeActors
+	spawnstate
+	{
+		spawn_ifunique go
+		position 2162 1657
+	}
+	ai
+	{
+		target go
+		style cts
+		command teleport
+		position 2162 1657
+	}
+	//spawnstate
+	//{
+	//    spawn_ifunique player
+	//    position 2165 1657
+	//}
+	ai
+	{
+		target player
+		style cts
+		command teleport
+		position 2165 1657
+	}
 
-goto_if_flag
-{
-    target OnEnd
-    flag GoEvents
-    compare !=
-    value 1
-}
-
-spawnstate
-{
-    spawn_ifunique go
-    position 2162 1657
-}
-
-
-ai
-{
-    target go
-    style cts
-    command teleport
-    position 2162 1657
-}
-
-spawnstate
-{
-    spawn_ifunique player
-    position 2165 1657
-}
-
-
-ai
-{
-    target player
-    style cts
-    command teleport
-    position 2165 1657
-}
-
-goto { target OnEnd }
-
-#OnBegin
-
-
+#DialogueForAurum
 //Show CG of fighting in water 
+
+world
+{	// show up at 2 am lol
+	waitfor 2.00
+}
+world { time stop; }
+screen { type fadein; }
 
 lines
 {
@@ -530,8 +529,8 @@ lines
 {
 
 	target libby
-	1 You both meet in the middle again, washing your hands in the water side by side.
-	2 Before standing with your arms crossed looking each other over. His tail swishes behind him like a riled up cat.
+	1 You both meet in the middle again, washing your hands in the water, side by side.
+	2 You now stand face-to-face, with your arms crossed, looking each other over. His tail swishes behind him like an excited cat.
 
 }
 
@@ -551,9 +550,7 @@ lines
 {
 	target go
 	object 1
-	1 Hm. Well. Maybe I’ll talk about it sometime, but for now…
-
-
+	1 Hm. Well. Maybe I’ll talk about it sometime, but for now...
 }
 
 
@@ -564,8 +561,6 @@ lines
 	target player 
 	object 0
 	1 Got any card games in that tent of yours?
-
-
 }
 
 
@@ -574,8 +569,6 @@ lines
 	target go
 	object 1
 	1 Sure do.
-
-
 }
 
 
@@ -598,14 +591,29 @@ lines
 }
 
 //Fade of them walking for the tent. 
+screen { type fadeout; }
+
+world
+{	// wake up at 11 am lol
+	waitfor 11.00
+}
+
+world { time stop; }
+screen { type fadein; }
+
+goto { target OnEnd; }
 
 
 
+#DrunkMorning
 
+world { time start; }
+world
+{	// wake up at 6 am lol
+	waitfor 6.00
+}
 
-
-
-
+screen { type fadein; }
 
 
 

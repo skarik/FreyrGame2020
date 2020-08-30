@@ -1075,7 +1075,7 @@ while (!file_text_eof(fp))
 					if (waitfor == "night")
 						waitfor = 20.00;
 					else
-						waitfor = -1;
+						waitfor = real(waitfor);
 					
 					new_map[?SEQI_WORLD_COMMAND] = SEQWORLD_WAITFOR;
 					new_map[?SEQI_WORLD_CMD_ARG] = waitfor;

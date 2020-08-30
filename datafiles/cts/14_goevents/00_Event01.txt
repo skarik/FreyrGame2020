@@ -78,12 +78,6 @@ goto { target OnEnd }
 
 #DialogueForAurum
 
-screen
-{
-    type fadein
-    rgb 0 0 0
-}
-
 //BAR BCK eventually
 
 
@@ -91,6 +85,7 @@ screen {
 	type ctsin
 }
 
+world { time stop; }
 player { actions lock }
 
 portrait
@@ -542,6 +537,15 @@ lines
 //Fade Black.
 //Fade In.
 
+screen { type fadeout; }
+portrait { action hideall; }
+
+flags
+{
+	set GoEvents 1
+}
+
+signal { id GoTo rm_fools_march; }
 
 	
 //Flash in and out of scenes of them stumbling around Mithra causing a ruckus and ending back out in Fool’s March at Go’s Oasis. It’s evening.
@@ -572,6 +576,9 @@ lines
 }
 
 
+screen { type fadeout; }
+portrait { action hideall; }
+
 //Fade Black.
 //Fade In.
 
@@ -579,35 +586,14 @@ lines
 
 //PLAYER & GO end up passed out next to the Oasis. Next morning the player can leave, GO is still asleep.
 	
-
-portrait
-{	// Go Portrait 
-	index 0
-	action hide
-	position 1.0
-	align right
-	face left
-	character Go
-	expression neutral
-}
-
-portrait
-{	// Player portrait
-	index 1
-	action hide
-	position 0.0
-	align left
-	face right
-	character player
-	expression neutral
-}
-
 flags
 {
-	set GoEvents 1
+	set GoEvents 2
 }
 
 signal { id GoTo rm_fools_march; }
+
+
 
 #OnEnd
 
