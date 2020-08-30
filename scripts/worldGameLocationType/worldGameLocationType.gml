@@ -18,10 +18,17 @@ switch (room)
 	case rm_conventionIntro:
 	case rm_map_editor:
 	case rm_generative:
+	case rm_intro_primo_rig:
 		return kWorldLocationType_Invalid;
 	
 	case rm_oasis_north_cave:
+	case rm_fools_tower_entrance:
+	case rm_fools_tower:
+	case rm_fools_tower2:
 		return kWorldLocationType_IndoorsCave;
+	
+	case rm_mithra_church:
+		return kWorldLocationType_Indoors;
 	
 	default:
 		return kWorldLocationType_Outdoors;

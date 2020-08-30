@@ -85,6 +85,6 @@ else if (doodad.sprite_index == s_propCreepyLampStatue)
 {
 	with (doodad)
 	{
-		light = instance_create_depth(x, y - 11, 0, o_lightFireMedium);
+		light = instance_create_depth(x, y - 13, 0, o_lightFireMedium);
 	}
 }

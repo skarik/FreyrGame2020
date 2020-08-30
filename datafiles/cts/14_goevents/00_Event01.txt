@@ -1,69 +1,80 @@
 #begin
 #Initialize
 
-
-//Josh, Aurum only event, can only trigger if player is AURUM
+// Aurum only event, can only trigger if player is AURUM
 // This actually only happens depending on selection during tower quest
-but for V SLICE its just to show it off. 
+// but for V SLICE its just to show it off. 
 
-
-goto_if_flag
-{
-    target OnEnd
-    flag IntroSequence
-    compare <
-    value 60
-}
-
-goto_if_flag
-{
-    target OnEnd
-    flag GoEvents
-    compare !=
-    value 0
-}
+	#InitializeCheckFlags
+	goto_if_flag
+	{
+		failtarget OnEnd
+		flag IntroSequence
+		compare >=
+		value 1000
+	}
+	goto_if_flag
+	{
+		failtarget OnEnd
+		flag FoolsTower
+		compare >=
+		value 40
+	}
+	goto_if_flag
+	{
+		failtarget OnEnd
+		flag GoEvents
+		compare ==
+		value 0
+	}
+	goto_if_player
+	{
+		failtarget OnEnd
+		as Aurum
+	}
 
 spawnstate
 {
-    spawn_ifunique go
-    position 300 1670
+	spawn_ifunique go
+	position 300 1670
 }
-
-
 ai
 {
-    target go
-    style cts
-    command teleport
-    position 300 1670
+	target go
+	style cts
+	command teleport
+	position 300 1670
 }
-
 goto { target OnEnd }
 
 #OnBegin
-
-
-goto_if_flag
-{
-    target OnEnd
-    flag IntroSequence
-    compare <
-    value 60
-}
-
-goto_if_flag
-{
-    target OnEnd
-    flag GoEvents
-    compare !=
-    value 0
-}
-
-goto_if_player
-{
-    target DialogueForAurum
-    as Aurum
-}
+	#OnBeginCheckFlags
+	goto_if_flag
+	{
+		failtarget OnEnd
+		flag IntroSequence
+		compare >=
+		value 1000
+	}
+	goto_if_flag
+	{
+		failtarget OnEnd
+		flag FoolsTower
+		compare >=
+		value 40
+	}
+	goto_if_flag
+	{
+		failtarget OnEnd
+		flag GoEvents
+		compare ==
+		value 0
+	}
+	goto_if_player
+	{
+		failtarget OnEnd
+		as Aurum
+	}
 
 #DialogueForAurum
 
@@ -77,12 +88,10 @@ screen
 
 
 screen { 
-
-
-type ctsin; 
-
+	type ctsin
 }
 
+player { actions lock }
 
 portrait
 {	// Go Portrait 
@@ -139,8 +148,6 @@ portrait
 	expression neutral
 }
 
-player { actions lock }
-
 //Keeps getting stuck V PLZ fix
 
 ai
@@ -149,7 +156,7 @@ ai
 	style cts
 	command move
 	origin player 
-	position 4 0
+	position 18 0
 }
 
 portrait
@@ -231,7 +238,7 @@ lines
 	facing player
 	object 0
 	1 And ruin this beautiful drink between friends?
-	2 Sweetheart I have manners. 
+	2 Sweetheart -$p I have manners. 
 }
 
 lines
@@ -250,7 +257,7 @@ lines
 	style portrait
 	facing player
 	object 0
-	1 Is a harrowing adventure in a spooky ruin not enough for you? 
+	1 Is a harrowing adventure in a spooky ruin not enough for you?
 }
 
 lines
@@ -334,8 +341,8 @@ lines
 lines
 {
 	target libby
-	1 You hesitate as you watch him from across the table. He is giving you his full attention. It isn't the sort you're use to.
-	2 He seems to be interested in what you have to say. 
+	1 You hesitate as you watch him from across the table. He is giving you his full attention. It isn't the sort you're used to.
+	2 For once, someone seems to be interested in what you have to say. 
 
 }
 
@@ -344,7 +351,7 @@ lines
 	target player
 	style portrait
 	object 1
-	1 $s I-I $$ don’t think I’ll tell you yet. Haven’t had enough to drink.
+	1 $sI -$$$p I don’t think I’ll tell you yet. Haven’t had enough to drink.
 
 }
 
@@ -429,8 +436,8 @@ lines
 	target player 
 	style portrait
 	object 1
-	1 Huh, packs quite the aftertaste.
-	2 Yeah I noticed not many folks even seem to know what growing even is. 
+	1 $qHuh, packs quite the aftertaste.$$
+	2 Yeah, I noticed not many folks even seem to know what growing even is. 
 }
 
 lines
@@ -439,15 +446,15 @@ lines
 	style portrait
 	facing player
 	object 0
-	1 You get used to it once it’s burned away all your taste buds.
-	2 Folks around here don't know a lot of things...
+	1 You get used to the aftertaste once it’s burned away all your taste buds.
+	2 Also, folks around here don't know a lot of things...
 
 }
 
 lines
 {
 	target libby
-	1 You down your flagon and quickly wave someone down to bring you another. Your eyes darting around the room before settling on the lizard man sitting across from you. 
+	1 You down your flagon and quickly wave someone down to bring you another. Your eyes dart around the room before settling on the lizard man sitting across from you. 
 
 }
 
@@ -459,7 +466,7 @@ lines
 	object 1
 	1 Alright, I’ll fess up.
 	2 Was kind of hoping this might lead to something a little more fun.
-	3 Drinking in an admittedly fancy tavern is a good start but...was hoping you might know where the fun is at. 
+	3 Drinking in an admittedly fancy tavern is a good start but...$pwas hoping you might know where the fun is at. 
 
 }
 
@@ -499,7 +506,7 @@ lines
 	facing player
 	object 0
 	1 Well you’ve got that much right.
-	2 This place isn’t really about that sort of thing. It’s all trade. Nothing like where I’m fr-
+	2 This place isn’t really about that sort of thing.$p It’s all trade.$p Nothing like where I’m fr-
 
 }
 
@@ -517,7 +524,7 @@ lines
 	style portrait
 	facing player
 	object 0
-	1 Can you swim human?
+	1 Can you swim, human?
 
 }
 
