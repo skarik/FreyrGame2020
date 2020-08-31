@@ -3399,6 +3399,14 @@
             }
         },
         {
+            "Key": "2b24d914-8b28-4f28-a8dc-0f3c1f3bf8b1",
+            "Value": {
+                "id": "4171c140-6e70-4bee-9b48-4e1e681ee5d7",
+                "resourcePath": "sprites\\s_propMithraBuildingTavernGlow\\s_propMithraBuildingTavernGlow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2b2bbc38-15f6-4ba5-9799-10db429349c0",
             "Value": {
                 "id": "115aa5d8-4bc4-4a0d-beba-f209e6cdd332",
@@ -7300,6 +7308,14 @@
                 "id": "0bb5a42c-87fc-4e8d-8923-081fde279518",
                 "resourcePath": "scripts\\soundscapeGetByName\\soundscapeGetByName.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5be76c39-2bf0-46ff-ac55-83234aeb2632",
+            "Value": {
+                "id": "d441df98-ea0d-472a-b825-a93e6054ed50",
+                "resourcePath": "objects\\ob_ambientMithraOutside\\ob_ambientMithraOutside.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -13324,6 +13340,14 @@
                 "id": "fa31d847-0fae-4d8d-a99f-f28e4477c4d8",
                 "resourcePath": "views\\a6bfeac0-0af2-48d1-ad88-a3bc71da0026.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a6e481fb-d2b9-4c18-8301-3a667108ef4f",
+            "Value": {
+                "id": "29efd1dc-7191-4823-b6b6-b952fcd417a4",
+                "resourcePath": "sprites\\s_propMithraBuildingTavernEmissive\\s_propMithraBuildingTavernEmissive.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

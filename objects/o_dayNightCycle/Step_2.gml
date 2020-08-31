@@ -108,6 +108,7 @@ m_blendSunsetToDay = blend0;
 m_blendSunsetToNight = blend1;
 
 var kBlendValue = 1.0; // Switch between overlay (0.0) and madd2 (1.0). Overlay is in-palette. Madd2 changes the palette itself.
-m_overlayColor = merge_color(make_color_rgb(128, 128, 128), color0, 1.0 - kBlendValue);
-paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, kBlendValue));	// This affects te palette
+//m_overlayColor = merge_color(make_color_rgb(128, 128, 128), color0, 1.0 - kBlendValue);
+m_overlayColor = color0;
+//paletteSetMadd2(merge_color(make_color_rgb(128, 128, 128), color0, kBlendValue));	// This affects te palette
 m_ambientLight = ambient0;

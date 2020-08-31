@@ -33,6 +33,13 @@
 		style follow
 		command start
 	}
+
+	// fuck it. wide palette now.
+	palette
+	{
+		type wide
+	}
+	
 	goto { target OnEnd }
 
 #OnSeeGobbo

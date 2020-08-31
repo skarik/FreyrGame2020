@@ -1,7 +1,9 @@
-/// @description Update fading
+/// @description Update fading & nighttime sprite
 
 // Inherit the parent event
 event_inherited();
+
+image_index = timeofdayIsDaytime() ? 0 : 1;
 
 var fade_out;
 var pl = getPlayer();

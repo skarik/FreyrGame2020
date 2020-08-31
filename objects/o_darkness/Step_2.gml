@@ -39,6 +39,14 @@ else
 	bloom_mul = 0.5;
 	bloom_drop = 1.0;
 }
+		
+// update overlay color
+if (iexists(ob_ambientLighting))
+	paletteSetMadd2(ob_ambientLighting.m_overlayColor);
+else if (iexists(o_dayNightCycle))
+	paletteSetMadd2(o_dayNightCycle.m_overlayColor);
+else
+	paletteSetMadd2(c_gray);
 
 // draw lights
 if (surface_exists(m_darkness))

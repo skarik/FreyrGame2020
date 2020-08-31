@@ -27,3 +27,7 @@ faderUpper.height = sprite_height / 2;
 faderUpper.visible = true;
 faderUpper.image_alpha = 0.0;
 faderUpper.image_blend = c_black;
+
+emissive = instance_create_depth(x, y, 95, o_lightEmissiveDepth);
+emissive.target = id;
+emissive.sprite_index = s_propMithraBuildingTavernEmissive;
