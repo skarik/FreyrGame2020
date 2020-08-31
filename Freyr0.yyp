@@ -3783,6 +3783,14 @@
             }
         },
         {
+            "Key": "2edb7044-5e07-4fbc-870b-be4299e90008",
+            "Value": {
+                "id": "af8de44b-3a87-4e7f-88bb-96ad501b0f65",
+                "resourcePath": "sprites\\s_propMithraLightPole\\s_propMithraLightPole.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2ee1457e-1fdc-4761-9948-1b1d575f6958",
             "Value": {
                 "id": "c8e4b2fe-c1d9-4cad-bf9d-54381bb1dd4e",
@@ -4692,6 +4700,14 @@
                 "id": "bf554020-4a75-4d94-a9ec-c530571c5251",
                 "resourcePath": "datafiles_yy\\nodegraphs\\mithra.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "3a9722a7-8118-462b-b317-1b2170ae1a42",
+            "Value": {
+                "id": "4505bacf-06cb-42f4-b268-ca2a10d35f3c",
+                "resourcePath": "objects\\o_lightLampGentleMedium\\o_lightLampGentleMedium.yy",
+                "resourceType": "GMObject"
             }
         },
         {

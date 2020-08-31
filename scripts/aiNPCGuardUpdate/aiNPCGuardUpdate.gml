@@ -208,6 +208,8 @@ else
 			m_aiNPC_alertTimer = 0.0;
 		}
 		
+		m_aiNPC_timer += Time.deltaTime;
+		
 		// If lost track for 5 seconds, go back to not aggro
 		if (m_aiCombat_targetTrackingLossTime > kAiCombat_DeAggroTime)
 		{
@@ -232,12 +234,17 @@ else
 			_controlStructUpdate(xAxis, 0.0);
 			_controlStructUpdate(yAxis, 0.0);
 			
-			// TOOD: Proper attack. Right now it's insta-death which isn't good
-			if (m_aiCombat_targetVisible && iexists(m_aiCombat_target))
+			if (m_aiNPC_timer > 0.5)
 			{
-				if (m_aiCombat_target.stats.m_health > 0)
+				// TOOD: Proper attack. Right now it's insta-death which isn't good
+				if (m_aiCombat_targetVisible && iexists(m_aiCombat_target))
 				{
-					m_aiCombat_target.stats.m_health -= m_aiCombat_target.stats.m_healthMax;
+					if (m_aiCombat_target.stats.m_health > 0)
+					{
+						//m_aiCombat_target.stats.m_health -= m_aiCombat_target.stats.m_healthMax * 0.25;
+						damageTargetForced(m_aiCombat_target, m_aiCombat_target.stats.m_healthMax * 0.25, kDamageTypeBlunt, true, false);
+						m_aiNPC_timer = 0.0;
+					}
 				}
 			}
 		}

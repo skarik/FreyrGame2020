@@ -11,12 +11,15 @@ with (argument0)
 		if (enemyInfoLoadAction == kEnemyInfoLoadAction_Spawn)
 		{
 			var character = instance_create_depth(x, y, depth, m_characterToSpawn);
-			character.m_enemyinfo_id = id;
-			character.m_saveTracked = m_saveTracked; // Override save tracked state
+			if (iexists(character)) // Can fail if it's a follower being spawned
+			{
+				character.m_enemyinfo_id = id;
+				character.m_saveTracked = m_saveTracked; // Override save tracked state
 		
-			m_spawned_enemy = character;
+				m_spawned_enemy = character;
 			
-			event_user(1); // On character respawned
+				event_user(1); // On character respawned
+			}
 		}
 		else if (enemyInfoLoadAction == kEnemyInfoLoadAction_DontSpawn)
 		{

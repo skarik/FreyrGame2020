@@ -88,3 +88,10 @@ else if (doodad.sprite_index == s_propCreepyLampStatue)
 		light = instance_create_depth(x, y - 13, 0, o_lightFireMedium);
 	}
 }
+else if (doodad.sprite_index == s_propMithraLightPole)
+{
+	with (doodad)
+	{
+		light = instance_create_depth(x, y - 36, 0, o_lightLampGentleMedium);
+	}
+}
