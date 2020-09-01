@@ -6,7 +6,7 @@ kFallHeight = 280;
 
 // Create the waterfall portal
 {	// Todo: save this with the water
-	var doodad = instance_create_depth(x, y, 0, o_fxPortal);
+	var doodad = instance_create_depth(x, y, 0, o_fxRift);
 		doodad.z = 32;
 	//	doodad.z_height = y - (getPlayer().y - kFallHeight) + 16;
 		doodad.z_height = 536 - (637 - kFallHeight) + 16;

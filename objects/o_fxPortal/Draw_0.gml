@@ -21,7 +21,7 @@ var radius = 0.0;
 radius = 32.0;
 if (iexists(pl))
 {
-	radius *= 0.5 + saturate(1.0 - abs((y - z_height) - (pl.y - pl.z_height)) / 64.0);
+	radius *= 0.5 + saturate(1.0 - abs((y - z_height) - (pl.y - pl.z_height)) / 64.0) * saturate(pl.z_height - 64);
 }
 radius += (radius / 32.0) * sin(Time.time * 7.2) * 1.4;
 radius += sin(Time.time * 0.87) * 2.4;

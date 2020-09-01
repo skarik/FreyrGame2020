@@ -8199,6 +8199,14 @@
             }
         },
         {
+            "Key": "67537161-5a89-4d22-95a7-8290010fa980",
+            "Value": {
+                "id": "32eaff3f-92db-483d-9859-1fff6f39e817",
+                "resourcePath": "datafiles_yy\\nodegraphs\\oasis_overlook.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "67712a83-7611-4685-8807-481de235a880",
             "Value": {
                 "id": "329a83fb-d10b-4aed-9c08-be26aa801f22",
