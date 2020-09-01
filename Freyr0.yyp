@@ -6367,6 +6367,14 @@
             }
         },
         {
+            "Key": "4f0e7d3a-48e4-48b7-9882-5557a00865af",
+            "Value": {
+                "id": "4edb6c57-829f-4ed9-a6f2-04f2ce0be4f1",
+                "resourcePath": "sprites\\s_propSandstoneBoulder2\\s_propSandstoneBoulder2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4f1afbfd-f7c8-4542-b98c-6402971de160",
             "Value": {
                 "id": "3ab11aa1-38a5-4d50-ac32-deb6f4bf626e",
@@ -9628,6 +9636,14 @@
                 "id": "a575bb9d-2484-4a53-938b-dca96acbf68c",
                 "resourcePath": "sounds\\snd_windWeakLowlands\\snd_windWeakLowlands.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "797e6705-f793-4594-8525-329be1388285",
+            "Value": {
+                "id": "c829689f-6752-4a70-8db3-933dc3d74427",
+                "resourcePath": "objects\\o_lightGlowGrad\\o_lightGlowGrad.yy",
+                "resourceType": "GMObject"
             }
         },
         {
