@@ -24,7 +24,7 @@ for (var i = 0; i < array_length_1d(item_list); ++i)
 
 inew_unique(o_dayNightCycle);
 o_dayNightCycle.m_day += 3;
-o_dayNightCycle.m_timeOfDay = 1400;
+o_dayNightCycle.m_timeOfDay = 14;
 
 instance_create_depth(360, 800, 0, o_PlayerTest);
 
