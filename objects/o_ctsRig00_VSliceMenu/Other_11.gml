@@ -1,0 +1,3 @@
+/// @description Load game
+
+gameLoad();

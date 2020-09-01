@@ -6,6 +6,7 @@ if (m_menuFadeLevel >= 0.0)
 	if (controlAnyKey())
 	{
 		m_menuFade = true;
+		inew_unique(o_ctsRig00_VSliceMenu);
 	}
 }
 
@@ -14,9 +15,14 @@ if (!m_menuFade)
 {
 	m_menuFadeLevel = min(0.0, m_menuFadeLevel + Time.deltaTime * 0.5);
 }
+// Fade out only menu
+if (m_menuFade)
+{
+	m_menuOverlayOnlyFadeLevel = max(0.0, m_menuOverlayOnlyFadeLevel - Time.deltaTime * 0.5);
+}
 
 // Fade out
-if (m_menuFade)
+if (m_menuFullFade)
 {
 	yspeed -= 1000 * Time.deltaTime;
 	y += yspeed * Time.deltaTime;

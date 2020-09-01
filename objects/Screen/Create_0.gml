@@ -1,7 +1,7 @@
 /// @description Constants & render init
 
 #macro kScreenCorner_DrawDevelopmentInfo true
-#macro kScreenCorner_String "Development Build"
+#macro kScreenCorner_String "V-slice Candidate v.1"
 
 m_initialized = false;
 

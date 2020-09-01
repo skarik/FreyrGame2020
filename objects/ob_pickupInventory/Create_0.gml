@@ -17,3 +17,4 @@ m_userInfoString = "";
 
 // Used for system-size or effect items. Avoid use.
 m_count          = 1;
+m_allowOnBelt    = true;

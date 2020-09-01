@@ -11,8 +11,11 @@ var inventory = m_pickupTarget.inventory;
 
 //if (m_type != kItemPickupResource)
 {
-	var item;
-	item = pickupAddToArray(inventory.belt);
+	var item = null;
+	if (m_allowOnBelt)
+	{
+		item = pickupAddToArray(inventory.belt);
+	}
 	
 	// todo: add shit to bag
 	if (item == null)

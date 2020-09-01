@@ -1,3 +1,6 @@
+///@function questSetValue(quest_id, value)
+///@param quest_id
+///@param value {Integer}
 var quest_id = argument0;
 var quest_value = argument1;
 

@@ -495,14 +495,6 @@
             }
         },
         {
-            "Key": "06737b5c-a205-47a9-8d39-6402ddcc9b14",
-            "Value": {
-                "id": "792ecb05-786c-4913-b4cc-7ab253a132f6",
-                "resourcePath": "datafiles_yy\\audio\\oasis_5_str_stacc.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "067a1fc3-e934-4218-a74d-17bd60d5d14b",
             "Value": {
                 "id": "5654b326-33c6-4bc1-a3a0-ad40621dc3cb",
@@ -1823,14 +1815,6 @@
             }
         },
         {
-            "Key": "16e1c640-37b6-433d-a9e7-50fadaf98a5f",
-            "Value": {
-                "id": "395cec60-e7f1-447a-98a8-d0558d98727d",
-                "resourcePath": "datafiles_yy\\audio\\oasis_9_perc_bells.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "16ecaaa0-20d8-4a38-a19c-2e1ca4a7a82d",
             "Value": {
                 "id": "dadbbfee-1ee5-48e4-aad2-39cd6cca6cb1",
@@ -1844,14 +1828,6 @@
                 "id": "13707832-fb92-4ed3-bb18-0f70ba500d85",
                 "resourcePath": "sprites\\s_propWWoodPole0\\s_propWWoodPole0.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "1734abf2-bcab-48aa-816a-031f697fa87e",
-            "Value": {
-                "id": "e182a3df-8be1-4bde-b188-a5aec01dc318",
-                "resourcePath": "datafiles_yy\\audio\\oasis_10_piano_solo.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -2452,14 +2428,6 @@
                 "id": "7d99c080-04a1-41a9-a9ef-e3c41e319c47",
                 "resourcePath": "scripts\\cutsceneSetActorList\\cutsceneSetActorList.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "1e3806bc-5e67-4616-b1b9-a4ea3e04da4b",
-            "Value": {
-                "id": "c566ce0e-2d58-45b3-9581-2655831727fc",
-                "resourcePath": "datafiles_yy\\audio\\oasis_6_str_leg.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -5535,14 +5503,6 @@
             }
         },
         {
-            "Key": "44cb46bf-9ed2-4d25-89ff-dd7b5a668414",
-            "Value": {
-                "id": "f6957d08-6bd1-4da8-8a64-4c05fccba806",
-                "resourcePath": "datafiles_yy\\audio\\wei_NightLoop.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "44eac305-c01e-49bc-a2f8-022c9c9050a3",
             "Value": {
                 "id": "87986693-09d9-4a7a-b36d-1860eda951e7",
@@ -7023,14 +6983,6 @@
             }
         },
         {
-            "Key": "56b1e331-10a2-4f61-aeab-bfe22ea45773",
-            "Value": {
-                "id": "251fc5e5-c1b5-48da-8cc5-81bfe5233134",
-                "resourcePath": "datafiles_yy\\audio\\oasis_2_gt1.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "56c3a6b1-4a87-4f6c-a730-23bf57418e9d",
             "Value": {
                 "id": "9a17d954-96f6-4bcb-b18b-3e7e1f3ef064",
@@ -7431,14 +7383,6 @@
             }
         },
         {
-            "Key": "5c605b08-960b-4e2e-919b-291d03adbb8f",
-            "Value": {
-                "id": "a3a6fbc9-a6a9-4468-9a84-0102f16860c8",
-                "resourcePath": "datafiles_yy\\audio\\oasis_3_gt2_strum.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "5c62a2a0-65bd-4451-b4e0-04459700269b",
             "Value": {
                 "id": "673710b5-93d9-45b5-8cba-f23fcfde3aa9",
@@ -7735,14 +7679,6 @@
             }
         },
         {
-            "Key": "60995c43-0975-42fb-a2fa-11fb3de04635",
-            "Value": {
-                "id": "57e64b5b-f869-450a-b426-773a38b0213a",
-                "resourcePath": "datafiles_yy\\audio\\oasis_1_bass.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "60b8ad34-1c92-4a41-ac8e-32b3423a5d72",
             "Value": {
                 "id": "317ba4d8-1312-4894-91f2-a4f6ced478db",
@@ -7836,14 +7772,6 @@
                 "id": "7c19935d-f811-423c-b273-1f6b3d787b92",
                 "resourcePath": "objects\\o_waterTiledRenderPass\\o_waterTiledRenderPass.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "627ba1aa-b063-4959-adc4-82899f51b0a0",
-            "Value": {
-                "id": "7c669288-3d4d-40e5-90b7-470f720ed74b",
-                "resourcePath": "datafiles_yy\\audio\\oasis_8_perc_hard.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -8004,14 +7932,6 @@
                 "id": "6d1f31c5-5a90-4fa2-8f6d-868e3d06e23a",
                 "resourcePath": "sprites\\s_propDCactusMedium\\s_propDCactusMedium.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "64be5d0e-65ea-4655-acdb-5c825327c458",
-            "Value": {
-                "id": "7d4950c0-6dfa-4986-9092-dce890ca21e6",
-                "resourcePath": "datafiles_yy\\audio\\oasis_4_gt2_solo.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -8867,6 +8787,14 @@
             "Value": {
                 "id": "f7c1f35c-9ab6-4939-9303-4caa2599ce89",
                 "resourcePath": "objects\\o_lightRayFTowerEntrance\\o_lightRayFTowerEntrance.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6e7caf5b-f24e-4741-a33f-649d8de12952",
+            "Value": {
+                "id": "fd8b0e27-fdb0-44ed-9835-a0c5fe901c90",
+                "resourcePath": "objects\\o_ctsRig00_VSliceMenu\\o_ctsRig00_VSliceMenu.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -11628,14 +11556,6 @@
                 "id": "453b8841-e002-4ac1-8d74-c8a512130b13",
                 "resourcePath": "sprites\\s_potWater\\s_potWater.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "929a85ac-34d4-4dec-91c0-d7c7958e4ecc",
-            "Value": {
-                "id": "7f8c315c-41b1-457c-a43b-3138c5b8387f",
-                "resourcePath": "datafiles_yy\\audio\\oasis_11_piano_flute.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -14751,14 +14671,6 @@
             }
         },
         {
-            "Key": "b67bc780-aeaf-4e50-8efa-dcdd9f916e6a",
-            "Value": {
-                "id": "aa69bdf6-072d-4b95-9ef3-2b737a02a868",
-                "resourcePath": "datafiles_yy\\audio\\wei_DayLoop.ogg.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "b69879d8-1c33-401e-84be-fa54158eae4e",
             "Value": {
                 "id": "22969c06-2198-4703-9609-1721f853a3e0",
@@ -16964,14 +16876,6 @@
                 "id": "23091026-53c1-42d4-98f4-c0e492a9e4ea",
                 "resourcePath": "sprites\\s_itemResGear\\s_itemResGear.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "d10cb709-a394-4b11-96ce-fd1b9461f095",
-            "Value": {
-                "id": "1bd8713f-8a46-47e4-9536-eed975c88d28",
-                "resourcePath": "datafiles_yy\\audio\\wei_BattleDayLoop.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -19788,14 +19692,6 @@
                 "id": "8cfac14a-43ac-48cb-a314-2857c52490f1",
                 "resourcePath": "scripts\\characterGroundInteractEndStep\\characterGroundInteractEndStep.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "f2cf7467-134f-4b38-a74a-03fd0c5db5d0",
-            "Value": {
-                "id": "dca9420a-e686-4f64-b38a-94f5fcc788c5",
-                "resourcePath": "datafiles_yy\\audio\\oasis_7_perc_light.ogg.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {

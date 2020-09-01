@@ -1,4 +1,4 @@
-/// @description draw visuals
+/// @description Draw title info
 
 /*draw_set_color(c_white);
 draw_rectangle(0, 0, 640, 640, false);*/
@@ -7,22 +7,47 @@ draw_rectangle(0, 0, 640, 640, false);*/
 draw_sprite_ext(sui_logo2, 0, x, round(y + 24 + sin(current_time * 0.0015) * 9.4), 1.0, 1.0, 0.0, c_dkgray, 0.3);
 shader_reset();*/
 
-var t_alpha = saturate(1.0 - abs(m_menuFadeLevel));
+var t_alpha = saturate(1.0 - abs(m_menuFadeLevel)) * saturate(m_menuOverlayOnlyFadeLevel);
 
 // draw text
-draw_set_color(c_black);
 draw_set_alpha((sin(current_time * 0.0012) * 0.25 + 0.7) * t_alpha);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(global.font_arvo9);
-//draw_text(x, y + 25, "F R E E    D E M O\nG A M E     I N     D E V E L O P M E N T");
-draw_text_spaced(x, y - 30, "FREE DEMO", 4);
+draw_set_font(global.font_will14);
+draw_set_color(c_white);
+draw_text_spaced(x, y - 30 - 1, "FREYR", 4);
+draw_text_spaced(x, y - 30 + 1, "FREYR", 4);
+draw_text_spaced(x - 1, y - 30, "FREYR", 4);
+draw_text_spaced(x + 1, y - 30, "FREYR", 4);
+draw_set_color(c_black);
+draw_text_spaced(x, y - 30, "FREYR", 4);
+
+draw_set_font(global.font_arvo9Bold);
+draw_set_color(c_white);
+draw_text_spaced(x, y - 30 + 15 - 1, "PRESS ANYTHING", 4);
+draw_text_spaced(x, y - 30 + 15 + 1, "PRESS ANYTHING", 4);
+draw_text_spaced(x - 1, y - 30 + 15, "PRESS ANYTHING", 4);
+draw_text_spaced(x + 1, y - 30 + 15, "PRESS ANYTHING", 4);
+draw_set_color(c_black);
+draw_text_spaced(x, y - 30 + 15, "PRESS ANYTHING", 4);
+/*draw_set_font(global.font_arvo9Bold);
+draw_set_color(c_white);
+draw_text_spaced(x, y - 30 + 15 - 1, "GAME IN DEVELOPMENT", 4);
+draw_text_spaced(x, y - 30 + 15 + 1, "GAME IN DEVELOPMENT", 4);
+draw_text_spaced(x - 1, y - 30 + 15, "GAME IN DEVELOPMENT", 4);
+draw_text_spaced(x + 1, y - 30 + 15, "GAME IN DEVELOPMENT", 4);
+draw_set_color(c_black);
 draw_text_spaced(x, y - 30 + 15, "GAME IN DEVELOPMENT", 4);
-//draw_set_font(f_04b03);
-draw_set_font(global.font_arvo7);
-//draw_text(x, y + 100, "Press Any Button");
+
+draw_set_font(global.font_arvo9Bold);
+draw_set_color(c_white);
+draw_text_spaced(x, y + 8 - 1, "Press Anything", 4);
+draw_text_spaced(x, y + 8 + 1, "Press Anything", 4);
+draw_text_spaced(x - 1, y + 8, "Press Anything", 4);
+draw_text_spaced(x + 1, y + 8, "Press Anything", 4);
+draw_set_color(c_black);
 draw_text_spaced(x, y + 8, "Press Anything", 4);
-draw_set_alpha(1.0);
+draw_set_alpha(1.0);*/
 
 // draw the black overlay
 gpu_set_blendmode_ext(bm_dest_color, bm_zero);
