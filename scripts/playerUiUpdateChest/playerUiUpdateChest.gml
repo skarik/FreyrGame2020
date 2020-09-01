@@ -33,6 +33,9 @@ if (chest != null && iexists(chest))
 	for (var i = 0; i < chest_size; ++i)
 	{
 		var box_pos = m_chest_draw_rects[i];
+		if (!is_array(box_pos))
+			continue;
+		
 		var box_x = box_pos[0];
 		var box_y = box_pos[1];
 		
