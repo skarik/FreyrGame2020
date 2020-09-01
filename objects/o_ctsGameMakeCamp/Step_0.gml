@@ -116,7 +116,7 @@ else if (m_state == CtsCamp.S5FadeIn)
 		with (o_PlayerTest) canMove = true;
 		if (iexists(o_PlayerHud))
 		{
-			m_inCutscene = m_hudWasInCutscene;
+			o_PlayerHud.m_inCutscene = m_hudWasInCutscene;
 		}
 		
 		m_vfxWorldFlashRequested = true;
