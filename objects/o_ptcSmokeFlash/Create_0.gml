@@ -12,3 +12,6 @@ xspeed = 0;
 yspeed = 0;
 
 z_height = 0;
+
+emissive = instance_create_depth(x, y, depth, o_lightEmissiveDepth);
+emissive.target = id;

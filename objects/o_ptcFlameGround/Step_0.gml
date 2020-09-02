@@ -1,5 +1,10 @@
 /// @description Shrink and fade over time
 
+// animation
+animationIndex += Time.deltaTime * 15 * animationSpeed;
+image_index = animationIndex;
+
+// fade
 if (m_fadeTimer > 0.0)
 	m_fadeTimer -= Time.deltaTime;
 else

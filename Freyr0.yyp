@@ -3903,6 +3903,14 @@
             }
         },
         {
+            "Key": "308fb202-9147-4c6e-8d9a-254ffff18e10",
+            "Value": {
+                "id": "f67732cc-b7a9-4840-9e13-391146933862",
+                "resourcePath": "objects\\o_lightEmissive\\o_lightEmissive.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3090f06b-6860-4341-beb7-6f5167aa8710",
             "Value": {
                 "id": "bc1b5768-4eec-4ef4-afd1-c6adf17370e7",
@@ -9527,6 +9535,14 @@
             }
         },
         {
+            "Key": "77485661-bea6-4180-9d46-e890e387a258",
+            "Value": {
+                "id": "f695471f-316a-4157-abaa-8f5dfac7c214",
+                "resourcePath": "views\\77485661-bea6-4180-9d46-e890e387a258.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "77b479d9-5f34-4568-b1e2-833994462d0b",
             "Value": {
                 "id": "1eb96395-f889-48d8-9f99-ca9e5c491171",
@@ -10012,6 +10028,14 @@
                 "id": "cd9a971b-e516-432b-8cf9-1945499e66a9",
                 "resourcePath": "views\\7ebff026-17bc-4e80-80f4-37b2b089bcd4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7ecf7d2a-4fe4-439b-96c4-464f699af523",
+            "Value": {
+                "id": "869de65d-7118-43d1-8fe0-f3a3c18a2167",
+                "resourcePath": "objects\\o_lightAllglowFader\\o_lightAllglowFader.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -16819,6 +16843,14 @@
             "Value": {
                 "id": "2a87d327-ae5e-4ce0-b97c-a71beb256473",
                 "resourcePath": "objects\\o_livelyLogicWatcherAIZoneEndCombat\\o_livelyLogicWatcherAIZoneEndCombat.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "cffa49aa-b2e2-45f2-aa07-05c84877b7a2",
+            "Value": {
+                "id": "a8bba5b3-b3da-43d5-8fd1-5f6bcef9a282",
+                "resourcePath": "objects\\ob_lightAnimated\\ob_lightAnimated.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -35,4 +35,17 @@ repeat (2)
 var explo = instance_create_depth(x, y, depth - 104, o_ptcExplosion2);
 	explo.image_xscale = choose(1, -1);
 
+var dynalight = instance_create_depth(x, y, depth - 5, o_lightAllglowFader);
+	dynalight.m_radius = 200.0;
+	dynalight.m_radiusShrinkSpeed = 100.0;
+	dynalight.m_colorFadeSpeed = 2.0;
+	dynalight.image_blend = merge_color(c_gold, merge_color(c_red, c_white, 0.5), 0.5);
+	
+var dynalight2 = instance_create_depth(x, y, depth - 5, o_lightAllglowFader);
+	dynalight2.m_radius = 100.0;
+	dynalight2.m_radiusShrinkSpeed = 0.0;
+	dynalight2.m_colorFadeSpeed = 4.0;
+	dynalight2.image_blend = c_gold;
+
+
 idelete(this);

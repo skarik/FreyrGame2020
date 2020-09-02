@@ -1,5 +1,15 @@
 /// @description Rise over time
 
+// Update emissive
+if (iexists(emissive))
+{
+	emissive.mask = m_flash;
+	if (!m_flash)
+	{
+		idelete(emissive);
+	}
+}
+
 // Update flash
 m_flashTimer -= Time.deltaTime;
 if (m_flashTimer <= 0.0)
