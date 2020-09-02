@@ -1,7 +1,7 @@
 /// @description Shrink and fade over time
 
 // animation
-animationIndex += Time.deltaTime * 15 * animationSpeed;
+animationIndex += Time.deltaTime * 25 * animationSpeed;
 image_index = animationIndex;
 
 // fade

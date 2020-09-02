@@ -12,10 +12,12 @@ if (doodad.sprite_index == s_propStickTorch
 		if (sprite_index == s_propLantern0)
 		{
 			light = instance_create_depth(x + image_xscale * 29, y - 35, 0, o_lightFireMedium);
+			particles = instance_create_depth(x + image_xscale * 29, y - 35, depth - 20, o_fxTorchFlame);
 		}
 		else
 		{
 			light = instance_create_depth(x, y - sprite_yoffset + sprite_height * 0.1, 0, o_lightFireMedium);
+			particles = instance_create_depth(x, y - sprite_yoffset + sprite_height * 0.1, depth - 20, o_fxTorchFlame);
 		}
 	}
 }
@@ -86,6 +88,7 @@ else if (doodad.sprite_index == s_propCreepyLampStatue)
 	with (doodad)
 	{
 		light = instance_create_depth(x, y - 13, 0, o_lightFireMedium);
+		particles = instance_create_depth(x, y - 13, depth - 20, o_fxTorchFlame);
 	}
 }
 else if (doodad.sprite_index == s_propMithraLightPole)

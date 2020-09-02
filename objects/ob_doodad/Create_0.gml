@@ -2,6 +2,7 @@
 collider = null;
 light = null;
 emissive = null;
+particles = null;
 elevation = null;
 source_layer = null;
 index = null;

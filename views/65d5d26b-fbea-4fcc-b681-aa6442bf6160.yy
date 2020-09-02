@@ -9,7 +9,9 @@
         "6a77a66e-ef81-4f46-8e9e-418f6d4fada8",
         "1a178880-a69b-471f-922d-6397776a7116",
         "f4952676-0863-471f-8f37-602295392df4",
-        "81143c78-e7fc-4a7c-a79e-537523fa6026"
+        "81143c78-e7fc-4a7c-a79e-537523fa6026",
+        "57ec2f0c-23b6-4d80-b271-c43ae70d2f6f",
+        "b6084f45-3eb6-4c4f-9734-7c635ccb5efe"
     ],
     "filterType": "GMObject",
     "folderName": "Particle Spawners",

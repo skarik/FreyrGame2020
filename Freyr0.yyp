@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "013cabb4-9839-4271-bdcc-6e226e970aca",
+            "Value": {
+                "id": "dcf1d0af-6f75-4bc3-95b8-2391dbcd878a",
+                "resourcePath": "sprites\\ssy_effect\\ssy_effect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "01541d16-6bd8-4f12-8da4-65d0e9977a6b",
             "Value": {
                 "id": "47d4a4c5-9150-451e-9ed7-b164cc589701",
@@ -5991,6 +5999,14 @@
             }
         },
         {
+            "Key": "4a07f178-efcf-4066-952e-256423ab9a40",
+            "Value": {
+                "id": "443b351e-7c7f-48cd-8f03-270ecdabf06b",
+                "resourcePath": "objects\\o_ptcFlameZBit\\o_ptcFlameZBit.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4a0f0f7b-68ff-4551-9325-fc9373fdcc2c",
             "Value": {
                 "id": "77d72cb2-cefd-4ba0-8934-822a045d2edb",
@@ -7076,6 +7092,14 @@
                 "id": "1e300e17-7a50-4b40-9a1d-564d63b1d6fb",
                 "resourcePath": "views\\57a87495-542f-43f9-b9d8-fd744521bbf6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "57ec2f0c-23b6-4d80-b271-c43ae70d2f6f",
+            "Value": {
+                "id": "73107b11-ba5b-48ab-829e-401d7efe44fe",
+                "resourcePath": "objects\\o_fxCampfireFlame\\o_fxCampfireFlame.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -10839,6 +10863,14 @@
             }
         },
         {
+            "Key": "8978b708-4cc1-433e-b51f-c0f71e48f00b",
+            "Value": {
+                "id": "960ca3ef-12e3-4468-850f-2a4d277ffb6d",
+                "resourcePath": "sprites\\spt_smokez1\\spt_smokez1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8986e543-8706-4504-90b6-8d19c3335b48",
             "Value": {
                 "id": "ff5fca3f-c368-45d8-81c2-437242d1bd36",
@@ -13015,6 +13047,14 @@
             }
         },
         {
+            "Key": "a31ad648-af5b-47f4-9ff7-d97e858fd8c3",
+            "Value": {
+                "id": "d5dd193c-40a6-44eb-9bbb-5a37bfbf30f0",
+                "resourcePath": "objects\\o_ptcSmokeZBit\\o_ptcSmokeZBit.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a33c084e-b2eb-4d4d-ab0c-6ed87e9b95dd",
             "Value": {
                 "id": "ea9eeaf4-9fab-49b4-b769-dc28b4cc24d5",
@@ -14668,6 +14708,14 @@
                 "id": "f5c690c2-093e-4029-9d11-d91fd9b8bf57",
                 "resourcePath": "sprites\\ssy_system\\ssy_system.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b6084f45-3eb6-4c4f-9734-7c635ccb5efe",
+            "Value": {
+                "id": "7a862d20-a8c9-49c0-88e4-dce75d04fb26",
+                "resourcePath": "objects\\o_fxTorchFlame\\o_fxTorchFlame.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -20876,6 +20924,14 @@
                 "id": "c7687edb-2ff3-42ba-a6df-a2be0c4f621c",
                 "resourcePath": "scripts\\iflagsInitialize\\iflagsInitialize.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fe487657-dab8-4c97-96bc-417004a5cb4b",
+            "Value": {
+                "id": "b96d14d5-5b95-4021-93ae-af573f2d38a5",
+                "resourcePath": "sprites\\spt_flamez1\\spt_flamez1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
