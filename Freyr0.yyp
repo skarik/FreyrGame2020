@@ -4047,6 +4047,14 @@
             }
         },
         {
+            "Key": "3365b5b1-79ad-400e-99d5-2ef733905ce3",
+            "Value": {
+                "id": "2e7a1486-7c04-4266-b8ef-54cfbd679707",
+                "resourcePath": "objects\\o_lightRayOCave0\\o_lightRayOCave0.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "33a16ba5-1540-47fa-b42f-f12adc454fba",
             "Value": {
                 "id": "07bbde36-46a9-4e6e-8dd2-a7814d5f772c",
@@ -9071,6 +9079,14 @@
             }
         },
         {
+            "Key": "70f3b22c-ac03-42c5-919e-6e934504eb34",
+            "Value": {
+                "id": "37121566-cce7-413a-acb8-3cc58e1ac367",
+                "resourcePath": "sprites\\slt_ray_mithracavesLong\\slt_ray_mithracavesLong.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "711eb701-45ca-4fba-a519-6d5af29a0af5",
             "Value": {
                 "id": "e9a83518-0c9a-47bb-9009-d9630faaebac",
@@ -13267,6 +13283,14 @@
             "Value": {
                 "id": "33982131-aa7d-42c6-94cf-e58c5710a026",
                 "resourcePath": "sprites\\sui_cg00_nathan_char\\sui_cg00_nathan_char.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a5da94db-2a14-4c56-9b93-ff54cbbb54c0",
+            "Value": {
+                "id": "74f968bc-aa1d-4d54-95a5-50922c25510c",
+                "resourcePath": "sprites\\slt_ray_mithracaves\\slt_ray_mithracaves.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -19108,6 +19132,14 @@
                 "id": "4b9e6d7c-7539-444f-a7fe-cf638afc0ea4",
                 "resourcePath": "datafiles_yy\\cts\\inspect\\flm\\lockeddoors.txt.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "ea5b73b8-ebde-454e-afaf-b59302e602fa",
+            "Value": {
+                "id": "f02f5fae-9545-45b4-abef-6279183dc5a1",
+                "resourcePath": "objects\\o_lightRayOCave1\\o_lightRayOCave1.yy",
+                "resourceType": "GMObject"
             }
         },
         {

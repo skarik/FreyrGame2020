@@ -6,7 +6,9 @@
     "children": [
         "0d5707a8-b5fd-4515-bd6e-2445c48f97b7",
         "794549f3-56a7-4437-97e4-fd1c31177945",
-        "6e52d0b0-3d3e-4ae0-b54e-b4d6ba661b66"
+        "6e52d0b0-3d3e-4ae0-b54e-b4d6ba661b66",
+        "3365b5b1-79ad-400e-99d5-2ef733905ce3",
+        "ea5b73b8-ebde-454e-afaf-b59302e602fa"
     ],
     "filterType": "GMObject",
     "folderName": "Dynamic - Expensive",
