@@ -26,7 +26,8 @@ if (iexists(o_dayNightCycle))
 		m_bloomDropOffset = min(-0.17 + 0.17, m_bloomDropOffset + Time.deltaTime * 0.2);
 	else*/
 		//m_bloomDropOffset = max(-0.26 + 0.17, m_bloomDropOffset - Time.deltaTime * 0.2);
-	m_bloomDropOffset = -0.03;
+	//m_bloomDropOffset = -0.03;
+	m_bloomDropOffset = -0.19;
 
 	// Use indoor character lighting rules
 	m_ambientIndoors = true;

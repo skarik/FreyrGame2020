@@ -8799,6 +8799,14 @@
             }
         },
         {
+            "Key": "6e1b6bc6-8198-49e7-8dee-ece8d5e3c7fd",
+            "Value": {
+                "id": "7d23de41-e879-44a9-a84b-ccb84c43d336",
+                "resourcePath": "objects\\o_lightAllglowTiny\\o_lightAllglowTiny.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6e39471b-96a4-4a3f-a490-0565c4aa3fe3",
             "Value": {
                 "id": "cc7297f3-b72e-4831-b679-9a95e5da0778",
@@ -11076,6 +11084,14 @@
                 "id": "5fab7a23-02c6-4e03-8db2-9561fb925d1f",
                 "resourcePath": "views\\8b7a934a-28fe-4ae2-86ba-8ba21da3f0c4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8b7cad47-e8bf-4ede-b75f-9c0814beffd2",
+            "Value": {
+                "id": "0ba1aa73-9975-4537-ac4b-6f40ea138cf1",
+                "resourcePath": "objects\\o_lightRayChurchWindow\\o_lightRayChurchWindow.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -15039,6 +15055,14 @@
             }
         },
         {
+            "Key": "b9a2481d-a023-4dfb-92fe-c22996c06daa",
+            "Value": {
+                "id": "1b655695-cde0-465a-817d-bbc41f6b8b45",
+                "resourcePath": "objects\\o_lightAllglowChurchWindow\\o_lightAllglowChurchWindow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b9a3c0c7-5e0f-4655-b75a-8e6478d64aaa",
             "Value": {
                 "id": "4ee0ef45-5322-445a-9598-5d43887fc88c",
@@ -18447,6 +18471,14 @@
             }
         },
         {
+            "Key": "e19a1d84-70f6-4dc9-8fbd-37149e41c054",
+            "Value": {
+                "id": "804e7335-9911-4600-9973-830d9572c149",
+                "resourcePath": "sprites\\s_assetStainedGlass\\s_assetStainedGlass.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e1a419d9-7ac2-4324-ac8c-9195259dfe8f",
             "Value": {
                 "id": "2b1671b3-8b10-47f3-944e-53a08ed86dec",
@@ -18907,6 +18939,14 @@
             "Value": {
                 "id": "b21a0f1c-421e-4b21-9e38-c4cd97ad46b2",
                 "resourcePath": "sprites\\sui_inventory_bag_0\\sui_inventory_bag_0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e68082b0-0fc6-40a6-817e-d9b88d6de66b",
+            "Value": {
+                "id": "2bee9da4-9969-42fd-91bd-c34115797bd7",
+                "resourcePath": "sprites\\s_assetStainedGlassFlip\\s_assetStainedGlassFlip.yy",
                 "resourceType": "GMSprite"
             }
         },
