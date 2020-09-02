@@ -130,7 +130,8 @@ if (pl.pstats.m_pitem[kPitemVoidCapacitor] >= 1)
 // draw any flash overlay
 if (m_arm_flash > 0.0)
 {
-	shader_set(sh_colormaskAlphatest);
+	// TODO.
+	/*shader_set(sh_colormaskAlphatest);
 	draw_sprite_ext(sui_roboArm, arm_backing_index, dx, dy, 1.0, 1.0, 0.0, c_white, m_arm_flash);
 	
 	var flash_scale = 1.0 + 0.5 * (1.0 - m_arm_flash);
@@ -140,7 +141,7 @@ if (m_arm_flash > 0.0)
 					flash_scale,
 					flash_scale,
 					0.0, c_white, m_arm_flash * 0.5);
-	shader_reset();
+	shader_reset();*/
 }
 
 // draw the void cap coming in
