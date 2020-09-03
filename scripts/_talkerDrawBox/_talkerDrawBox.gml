@@ -38,11 +38,11 @@ draw_sprite_part_ext( suiChoiceBox, 2, 125-25,0,10,20, x-boxw*0.5,y+offYa-7, box
 draw_sprite_part_ext( suiChoiceBox, 2, 0,0,15,20, x-boxw*0.5-9,y+offYa-7, 1.0,1.0,c_white, offA ); // bottom left corner
 draw_sprite_part_ext( suiChoiceBox, 2, 250-15,0,15,20, x+boxw*0.5+10-15,y+offYa-7, 1.0,1.0,c_white, offA ); // bottom right corner
 
-if (iexists(input_actor))
+/*if (iexists(input_actor))
 {
 	//draw_sprite_part_ext( suiChoiceBox, 3, 125-25,0,10,20, x-boxw*0.5,y+offYa-7, boxw/10,1.0, c_white, offA ); // bottom border
 	draw_sprite_ext( suiChoiceBox, 3, x + clamp(input_actor.x - x - 19, -boxw * 0.5, boxw * 0.5), y + offYa - 7 + (18-5), 1.0, 1.0, 0.0, c_white, offA );
-}
+}*/
 
 // draw the name
 if (iexists(input_actor))
