@@ -18,7 +18,6 @@ parent = null;
 // System:
 m_sound = null;
 m_streamed = false;
-m_stream = null;
 m_emitter = audio_emitter_create();
 m_instance = null;
 

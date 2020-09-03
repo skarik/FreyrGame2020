@@ -18,3 +18,5 @@ audio_emitter_position(m_emitter, x, y, 0);
 
 m_instance = audio_play_sound_on(m_emitter, m_sound, loop, priority);
 
+//debugOut("Playing sound \"" + string(audio_get_name(m_sound)) + "\"");
+

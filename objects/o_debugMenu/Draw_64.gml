@@ -41,12 +41,28 @@ for (var i = 0; i < Debug.debug_line_count; ++i)
     draw_text( 60, 720-60 - (Debug.debug_line_count-i)*10, Debug.debug_line[i] );
 }
 
+// Draw the current audio
+{
+	draw_set_color(c_white);
+	draw_set_halign( fa_left );
+	draw_set_valign( fa_top );
+	
+	var audio_counts = instance_number(ob_audioPlayer);
+	for (var i = 0; i < audio_counts; ++i)
+	{
+		var audio = instance_find(ob_audioPlayer, i);
+		draw_text(500, 30 + 8 * i, audio_get_name(audio.m_sound));
+	}
+}
+//
+
+// draw the quest flags
+questDebugDisplayFlags();
+weatherDebugDisplay();
+
 // Draw the mouse position
 draw_set_color( c_white );
 draw_arrow( uiMouseX+16, uiMouseY+16, uiMouseX, uiMouseY, 16 );
 
 draw_set_alpha(1.0);
 
-// draw the quest flags
-questDebugDisplayFlags();
-weatherDebugDisplay();
