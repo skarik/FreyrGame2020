@@ -19535,6 +19535,14 @@
             }
         },
         {
+            "Key": "ee259e0a-3dfb-40b0-a36c-7375926ae863",
+            "Value": {
+                "id": "3c6db41b-45d2-4f10-a4f3-5596a41710bd",
+                "resourcePath": "sprites\\s_charGobHeavy0CastGround\\s_charGobHeavy0CastGround.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ee2ff821-7bd1-46ed-ae4e-3750f9d41f0e",
             "Value": {
                 "id": "a6f92dc1-eb0e-4c20-96a5-a367095bb4bf",

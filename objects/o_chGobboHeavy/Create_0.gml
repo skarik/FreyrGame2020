@@ -65,7 +65,7 @@ meleeAtk3Damage = 2;
 kAnimStanding = sprite_index;
 kAnimWalking = sprite_index;
 kAnimRolling = sprite_index;
-kAnimAttack1 = s_charGobbo0Atk1;
+kAnimAttack1 = s_charGobHeavy0CastGround;
 kAnimStun = sprite_index;
 kAnimKOed = sprite_index;
 
