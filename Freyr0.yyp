@@ -2439,6 +2439,14 @@
             }
         },
         {
+            "Key": "1e3ea924-d549-429d-a498-8850ade486a2",
+            "Value": {
+                "id": "72bc5a23-627d-48d0-907f-08fd816ff3a2",
+                "resourcePath": "objects\\o_floaterGameSaved\\o_floaterGameSaved.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1e4101e2-c15a-4f4a-8c6b-c4e9a52052a3",
             "Value": {
                 "id": "aa48d9c7-c5cf-482f-bf4c-ac1af359549d",

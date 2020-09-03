@@ -51,6 +51,7 @@ if (m_stateInteracting)
 				
 				// save game
 				gameSaveSpecific(kSaveFromCheckpointMinor);
+				instance_create_depth(x, y - 48, -10, o_floaterGameSaved);
 				
 				// play continue sound
 				var audio = faudio_create_stream("music/save/save_light.ogg");
@@ -77,6 +78,8 @@ if (m_stateInteracting)
 	
 				// save the checkpoint info
 				playerCheckpointSave(x, y + 16, room);
+				var fx = instance_create_depth(x, y - 48, -10, o_floaterGameSaved);
+				fx.image_alpha = -1.0 * 2.0;
 	
 				// save game
 				gameSaveSpecific(m_majorCheckpoint ? kSaveFromCheckpointMajor : kSaveFromCheckpointMinor);
@@ -102,6 +105,8 @@ if (m_stateInteracting)
 	
 				// save the checkpoint info
 				playerCheckpointSave(x, y + 16, room);
+				var fx = instance_create_depth(x, y - 48, -10, o_floaterGameSaved);
+				fx.image_alpha = -6.0 * 2.0;
 	
 				// save game
 				gameSaveSpecific(m_majorCheckpoint ? kSaveFromCheckpointMajor : kSaveFromCheckpointMinor);
