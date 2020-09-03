@@ -44,6 +44,8 @@ enum BookSelects {
 	RestFull		= 13,
 	RestFull_Confirm	= 14,
 	
+	QuitToMenu		= 15,
+	
 	Rune0	= 20,
 	Rune1	= 21,
 	Rune2	= 22,

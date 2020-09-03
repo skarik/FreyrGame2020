@@ -45,6 +45,13 @@ if (m_book_state = BookState.TopLevel)
 				m_top_hover = BookSelects.RestFull;
 			}
 			*/
+			
+			t_rect = m_hover_rects[BookSelects.QuitToMenu];
+			if (point_in_rectangle(cursor_x, cursor_y,
+								   t_rect[0], t_rect[1], t_rect[2], t_rect[3]))
+			{
+				m_top_hover = BookSelects.QuitToMenu;
+			}
 		}
 		// do rune checks
 	
@@ -76,6 +83,12 @@ if (m_book_state = BookState.TopLevel)
 			// Change the current option tab open.
 			m_sub_selection = null;
 			m_tri_selection = null;
+			
+			// Act on specific selections
+			if (m_top_selection == BookSelects.QuitToMenu)
+			{
+				gameReset();
+			}
 		}
 	}
 }
@@ -109,7 +122,7 @@ if (m_book_state == BookState.SelectionOptions)
 			{
 				m_sub_hover = BookSelects.RestShort_Duration;
 				m_tri_hover = (cursor_y < (t_rect[1] + t_rect[3]) * 0.5) ? -1 : +1;
-			}
+			}		
 		}
 		
 		// Perform directional controls

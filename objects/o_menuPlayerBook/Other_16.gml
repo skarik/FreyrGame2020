@@ -214,6 +214,44 @@ if (m_tab == BookTabs.Main)
 		*/
 	}
 	
+	// WAIT SECTION
+	{
+		draw_set_font(global.font_will14);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		draw_set_color(c_bookHeadingShadow);
+		draw_text_spaced(dx + kXOffsetCenterLeft, dy + 150 + 1, "SYSTEM", 2);
+		draw_set_color(c_bookHeading);
+		draw_text_spaced(dx + kXOffsetCenterLeft, dy + 150    , "SYSTEM", 2);
+		
+		var left = kXOffsetCenterLeft - 85;
+		var right = kXOffsetCenterLeft + 85;
+		var dy_rest0 = 170 + 18;
+
+		draw_set_font(global.font_arvo7);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		draw_text_spaced(dx + left + 6, dy + dy_rest0 - 18, "Game is not saved when quitting.", 2);
+		
+		if (m_top_hover == BookSelects.QuitToMenu || m_top_selection == BookSelects.QuitToMenu)
+		{
+			draw_set_color((m_top_selection == BookSelects.QuitToMenu) ? c_gold : c_white);
+			draw_set_alpha((m_top_selection == BookSelects.QuitToMenu) ? 1.0 : _playeruiBookAlphaPulse());
+			draw_rectangle(dx + left - 1, dy + dy_rest0 - 1, dx + right + 1, dy + dy_rest0 + 16 + 1, false);
+			draw_set_alpha(1.0);
+		}
+		draw_set_color(c_bookHeadingShadow);
+		draw_rectangle(dx + left, dy + dy_rest0, dx + right, dy + dy_rest0 + 16, false);
+		draw_set_color(c_black);
+		draw_set_font(global.font_arvo9);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		draw_text_spaced(dx + left + 6, dy + dy_rest0 + 1, "Return to menu.", 2);
+		draw_sprite_ext(sui_book2TapeCorner, 1, dx + left, dy + dy_rest0, 1, 1, 0, c_white, 1.0);
+		draw_sprite_ext(sui_book2TapeCorner, 0, dx + right + 1, dy + dy_rest0 + 16 + 1, 1, 1, 180, c_white, 1.0);
+		m_hover_rects[BookSelects.QuitToMenu] = [dx + left, dy + dy_rest0, dx + right, dy + dy_rest0 + 16];
+	}
+	
 	// RUNE SECTION
 	{
 		draw_set_font(global.font_will14);
