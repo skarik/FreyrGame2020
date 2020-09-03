@@ -8,3 +8,4 @@ m_sound.falloff_end = 200;
 m_sound.falloff_factor = 1.0;
 m_sound.falloff_model = kAudioFalloffModelLinear;
 m_sound.gain = 0.7;
+m_sound.channel = kSoundChannelMusic;

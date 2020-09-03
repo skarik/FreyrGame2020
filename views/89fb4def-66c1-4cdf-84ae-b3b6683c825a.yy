@@ -27,7 +27,12 @@
         "439d4f1e-c1e7-4123-aa94-2e237d18b174",
         "a2aa3c8c-03eb-4b34-bf8b-aa7abfb30bf5",
         "cb6defe5-6cc4-432a-af1e-4b8e20f6f0b5",
-        "49b985e4-f1b4-45af-9170-2164d84eabaf"
+        "49b985e4-f1b4-45af-9170-2164d84eabaf",
+        "f61f233d-ed6b-48aa-a1ec-c1dd9ef021c0",
+        "733f6edd-46c0-4c3c-9802-16015f36a50b",
+        "a694b4f2-5940-4d25-97dd-3e2b9d441e02",
+        "cf403813-d7a7-41f7-87aa-b64b74a5d119",
+        "078fb706-bfb3-43d5-97c6-7809ff15af5c"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "music",

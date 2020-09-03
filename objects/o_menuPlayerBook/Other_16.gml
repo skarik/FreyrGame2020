@@ -227,6 +227,7 @@ if (m_tab == BookTabs.Main)
 		var left = kXOffsetCenterLeft - 85;
 		var right = kXOffsetCenterLeft + 85;
 		var dy_rest0 = 170 + 18;
+		var dy_rest1 = dy_rest0 + 20;
 
 		draw_set_font(global.font_arvo7);
 		draw_set_halign(fa_left);
@@ -250,6 +251,24 @@ if (m_tab == BookTabs.Main)
 		draw_sprite_ext(sui_book2TapeCorner, 1, dx + left, dy + dy_rest0, 1, 1, 0, c_white, 1.0);
 		draw_sprite_ext(sui_book2TapeCorner, 0, dx + right + 1, dy + dy_rest0 + 16 + 1, 1, 1, 180, c_white, 1.0);
 		m_hover_rects[BookSelects.QuitToMenu] = [dx + left, dy + dy_rest0, dx + right, dy + dy_rest0 + 16];
+		
+		if (m_top_hover == BookSelects.QuitToDesktop || m_top_selection == BookSelects.QuitToDesktop)
+		{
+			draw_set_color((m_top_selection == BookSelects.QuitToDesktop) ? c_gold : c_white);
+			draw_set_alpha((m_top_selection == BookSelects.QuitToDesktop) ? 1.0 : _playeruiBookAlphaPulse());
+			draw_rectangle(dx + left - 1, dy + dy_rest1 - 1, dx + right + 1, dy + dy_rest1 + 16 + 1, false);
+			draw_set_alpha(1.0);
+		}
+		draw_set_color(c_bookHeadingShadow);
+		draw_rectangle(dx + left, dy + dy_rest1, dx + right, dy + dy_rest1 + 16, false);
+		draw_set_color(c_black);
+		draw_set_font(global.font_arvo9);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		draw_text_spaced(dx + left + 6, dy + dy_rest1 + 1, "Quit to desktop.", 2);
+		draw_sprite_ext(sui_book2TapeCorner, 1, dx + left, dy + dy_rest1, 1, 1, 0, c_white, 1.0);
+		draw_sprite_ext(sui_book2TapeCorner, 0, dx + right + 1, dy + dy_rest1 + 16 + 1, 1, 1, 180, c_white, 1.0);
+		m_hover_rects[BookSelects.QuitToDesktop] = [dx + left, dy + dy_rest1, dx + right, dy + dy_rest1 + 16];
 	}
 	
 	// RUNE SECTION

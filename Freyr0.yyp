@@ -543,6 +543,14 @@
             }
         },
         {
+            "Key": "078fb706-bfb3-43d5-97c6-7809ff15af5c",
+            "Value": {
+                "id": "00c05b22-05d8-4a7d-94b6-c99216873b44",
+                "resourcePath": "datafiles_yy\\music\\mithra_guards0.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "07c0f9e6-78c2-4628-a738-1eaa82026ff2",
             "Value": {
                 "id": "2adcf7a3-9409-489a-8f56-69213f71018e",
@@ -9271,6 +9279,14 @@
             }
         },
         {
+            "Key": "733f6edd-46c0-4c3c-9802-16015f36a50b",
+            "Value": {
+                "id": "c28d4b2d-54b0-4d80-9d65-05e365476d27",
+                "resourcePath": "datafiles_yy\\music\\mithra_base0.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "734768e6-452a-41ab-ab8c-15685e416e67",
             "Value": {
                 "id": "015d18c7-9053-4aaf-a069-7cecd608dca2",
@@ -10332,6 +10348,14 @@
                 "id": "7f7d1d37-57c2-4496-855c-8499e2be72a8",
                 "resourcePath": "views\\81e4406a-e4c7-424c-8c04-026f78ae53dc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "81ec3d11-a785-475a-83c3-ef888ec66b54",
+            "Value": {
+                "id": "bf7bfdd0-580f-4704-9176-c836e48a0db2",
+                "resourcePath": "objects\\o_wmus_mithraTavern\\o_wmus_mithraTavern.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -13420,6 +13444,14 @@
                 "id": "a557dfb6-0819-4c81-b852-70d36748fe1a",
                 "resourcePath": "scripts\\effectGetImpactSound\\effectGetImpactSound.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a694b4f2-5940-4d25-97dd-3e2b9d441e02",
+            "Value": {
+                "id": "14238f0e-2716-495e-8385-1c99e19912dc",
+                "resourcePath": "datafiles_yy\\music\\mithra_church.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -16903,6 +16935,14 @@
             }
         },
         {
+            "Key": "cf403813-d7a7-41f7-87aa-b64b74a5d119",
+            "Value": {
+                "id": "2695ca97-dcae-4b67-8db8-953217ded65c",
+                "resourcePath": "datafiles_yy\\music\\mithra_downtown.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "cf60c59a-1e98-444b-8aa3-afbe87fffb27",
             "Value": {
                 "id": "e4b3039c-da72-4ca9-a79c-ae203468c6ce",
@@ -20132,6 +20172,14 @@
                 "id": "62d9b5aa-1dc6-478b-90b8-7ee0b5aae42a",
                 "resourcePath": "views\\f61c1fd2-48df-4e54-a0d9-564f25e930b5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f61f233d-ed6b-48aa-a1ec-c1dd9ef021c0",
+            "Value": {
+                "id": "c1642fb4-99cc-400a-9e3a-9fe1e830adf6",
+                "resourcePath": "datafiles_yy\\music\\mithra_leaving0.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

@@ -52,6 +52,13 @@ if (m_book_state = BookState.TopLevel)
 			{
 				m_top_hover = BookSelects.QuitToMenu;
 			}
+			
+			t_rect = m_hover_rects[BookSelects.QuitToDesktop];
+			if (point_in_rectangle(cursor_x, cursor_y,
+								   t_rect[0], t_rect[1], t_rect[2], t_rect[3]))
+			{
+				m_top_hover = BookSelects.QuitToDesktop;
+			}
 		}
 		// do rune checks
 	
@@ -88,6 +95,10 @@ if (m_book_state = BookState.TopLevel)
 			if (m_top_selection == BookSelects.QuitToMenu)
 			{
 				gameReset();
+			}
+			else if (m_top_selection == BookSelects.QuitToDesktop)
+			{
+				game_end();
 			}
 		}
 	}

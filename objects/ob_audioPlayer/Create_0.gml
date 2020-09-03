@@ -11,6 +11,7 @@ falloff_model = kAudioFalloffModelExponential;
 
 gain = 1.0;
 pitch = 1.0;
+channel = kSoundChannelWorld;
 
 parent = null;
 
@@ -20,6 +21,7 @@ m_streamed = false;
 m_stream = null;
 m_emitter = audio_emitter_create();
 m_instance = null;
+
 
 alarm[0] = 1;  // Alarm to play sound
 alarm[1] = 20; // Alarm to check for destruction
