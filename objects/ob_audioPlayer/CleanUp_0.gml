@@ -1,5 +1,8 @@
 /// @description Cleanup
 
+audio_stop_sound(m_instance);
+audio_emitter_free(m_emitter);
+
 if (m_streamed)
 {
 	if (audio_is_playing(m_audio))
@@ -10,9 +13,4 @@ if (m_streamed)
 	{
 		audio_destroy_stream(m_stream);
 	}
-}
-else
-{
-	// todo: make audio manager.
-	audio_emitter_free(m_emitter);
 }
