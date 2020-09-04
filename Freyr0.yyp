@@ -5759,6 +5759,14 @@
             }
         },
         {
+            "Key": "470eff26-f2d2-42d5-98fc-353814174661",
+            "Value": {
+                "id": "d30b5a54-99c3-49ad-8675-caff87274217",
+                "resourcePath": "datafiles_yy\\audio\\ui\\book_close.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "472c26d6-6fb6-4a44-98fb-2befaed06071",
             "Value": {
                 "id": "954166de-45cf-4e8b-a7d7-1ec70e3ccdfb",
@@ -11655,6 +11663,14 @@
             }
         },
         {
+            "Key": "91f99a0c-0e7c-4539-b126-89425429acb1",
+            "Value": {
+                "id": "b1b1b660-088c-4c95-a013-c7dbeeef182e",
+                "resourcePath": "views\\91f99a0c-0e7c-4539-b126-89425429acb1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9230a407-943a-45bc-9c7c-691945716fba",
             "Value": {
                 "id": "e2bd7414-3cc2-483d-9e8d-398f09bd0ee7",
@@ -15467,6 +15483,14 @@
             "Value": {
                 "id": "f0cb1703-2ad2-4d4a-a380-b89e3a5b0c80",
                 "resourcePath": "datafiles_yy\\nodegraphs\\oasis_town.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "bf31aae5-9819-4422-8ed7-c71335a43f34",
+            "Value": {
+                "id": "5360c7ea-6e11-4cbb-a204-11c791c5bafa",
+                "resourcePath": "datafiles_yy\\audio\\ui\\book_open.wav.yy",
                 "resourceType": "GMIncludedFile"
             }
         },

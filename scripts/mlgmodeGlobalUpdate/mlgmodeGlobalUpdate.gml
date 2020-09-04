@@ -17,7 +17,7 @@ if (Settings.gameplay_mlg_farm_mode)
 			// Play hit sound, always
 			if (crop == kCropId_AllCrops)
 			{
-				faudio_play_sound(snd_mlgHitMarker, 100, false);
+				faudio_play_sound(snd_mlgHitMarker, 100, false, kSoundChannelUi);
 				var hitmarker = inew(o_ptcMlgHitMarker);
 				hitmarker.x = player.x + random_range(-8, +8);
 				hitmarker.y = player.y + random_range(-8, +8);
@@ -26,13 +26,13 @@ if (Settings.gameplay_mlg_farm_mode)
 			// Track penta's 
 			if (curr_value % 5 == 0)
 			{
-				faudio_play_sound(snd_mlgAirhorn, 100, false);
+				faudio_play_sound(snd_mlgAirhorn, 100, false, kSoundChannelUi);
 				effectScreenShake(5.0, 1.0, true);
 			}
 			// Track triples
 			else if (curr_value % 3 == 0)
 			{
-				faudio_play_sound(snd_mlgTriple, 100, false);
+				faudio_play_sound(snd_mlgTriple, 100, false, kSoundChannelUi);
 				effectScreenShake(3.0, 1.2, true);
 			}
 		}

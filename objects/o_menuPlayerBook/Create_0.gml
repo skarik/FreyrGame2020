@@ -3,6 +3,9 @@
 // Inherit the parent event (sets input priority to true to stop all motion)
 event_inherited();
 
+// Play audio on creation
+faudio_play_sound("audio/ui/book_open.wav", 50, false, kSoundChannelUi);
+
 controlInit();
 
 m_player = getPlayer();

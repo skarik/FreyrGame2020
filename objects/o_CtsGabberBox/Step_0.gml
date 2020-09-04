@@ -73,7 +73,7 @@ if ( current_display_delay <= 0.0 )
 		if ((floor(i) % 6) == 0 || current_display_delay > 0.0)
 		{
 			// Do audio playing
-			var audio = faudio_play_sound(snd_MsgBepType, 51, false);
+			var audio = faudio_play_sound(snd_MsgBepType, 51, false, kSoundChannelUi);
 			faudio_sound_set_gain(audio, random_range(0.3, 0.4) * 0.5);
 			faudio_sound_set_pitch(audio, choose(0.2, 0.2, 0.25, 0.25, 0.3) * 4.0);
 		}
@@ -116,7 +116,7 @@ if ( done_alpha > 0.5 && l_can_end )
 	        if (!input_fadeout)
 	        {
 	            input_fadeout = true;
-	            faudio_play_sound(snd_UiMsgBlip, 50, false);
+	            faudio_play_sound(snd_UiMsgBlip, 50, false, kSoundChannelUi);
 	        }
 	    }   
 	}

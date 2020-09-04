@@ -45,7 +45,11 @@ if (m_player.m_usingBook || m_totalBlend == 1.0)
 	{
 		if (m_book_state == BookState.TopLevel)
 		{
-			m_player.m_usingBook = false;
+			if (m_player.m_usingBook)
+			{
+				m_player.m_usingBook = false;
+				faudio_play_sound("audio/ui/book_close.wav", 50, false, kSoundChannelUi);
+			}
 		}
 	}
 	

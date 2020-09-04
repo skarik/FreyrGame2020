@@ -32,6 +32,7 @@ var read_dspinfo_instance = null;
 #macro kSoundChannelMusic 1
 #macro kSoundChannelKey 2
 #macro kSoundChannelSpeech 3
+#macro kSoundChannelUi 2
 
 #macro kSoundscapeSoundPositionBase 0
 #macro kSoundscapeSoundPositionRandom -1

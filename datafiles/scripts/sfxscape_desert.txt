@@ -63,6 +63,30 @@ desert.sandy
 {
 }
 
+desert.flatlands0
+{
+	// distant bird caws
+	playrandom
+	{
+		time		5.0, 9.0
+		volume		0.1, 0.3
+		pitch		0.9, 1.05
+		
+		attenuation	default
+		channel		world		
+	
+		position random far
+	
+		rndwave
+		{
+			wave	"audio/bg/echo_caw0.wav"
+			wave	"audio/bg/echo_caw1.wav"
+			wave	"audio/bg/echo_caw2.wav"
+			wave	"audio/bg/echo_caw3.wav"
+		}
+	}
+}
+
 desert.oasis_town
 {
 }
@@ -110,3 +134,39 @@ desert.oasis_farm
 		}
 	}
 }
+
+desert.oasis
+{
+	fadetime 2.0
+
+	// looping audio for the water
+	playlooping
+	{
+		volume		0.80
+		pitch		1.0
+		position	0
+		wave		snd_ambientWaterLapping
+	}
+	
+	// distant bird caws
+	playrandom
+	{
+		time		5.0, 9.0
+		volume		0.1, 0.3
+		pitch		0.9, 1.05
+		
+		attenuation	default
+		channel		world		
+	
+		position random far
+	
+		rndwave
+		{
+			wave	"audio/bg/echo_caw0.wav"
+			wave	"audio/bg/echo_caw1.wav"
+			wave	"audio/bg/echo_caw2.wav"
+			wave	"audio/bg/echo_caw3.wav"
+		}
+	}
+}
+

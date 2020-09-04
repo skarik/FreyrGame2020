@@ -28,12 +28,12 @@ if ( image_alpha >= 1.0 )
         if ( yAxis.value > 0.8 && yAxis.previous < 0.8 )
         {
             display_choice += 1;
-            faudio_play_sound(snd_UiMenuChange, 50, false);
+            faudio_play_sound(snd_UiMenuChange, 50, false, kSoundChannelUi);
         }
         else if ( yAxis.value < -0.8 && yAxis.previous > -0.8 )
         {
             display_choice -= 1;
-            faudio_play_sound(snd_UiMenuChange, 50, false);
+            faudio_play_sound(snd_UiMenuChange, 50, false, kSoundChannelUi);
         }
     }
     display_choice = clamp(display_choice, 0, input_choice_count-1);
@@ -44,7 +44,7 @@ if ( image_alpha >= 1.0 )
         if (!input_fadeout)
         {
             input_fadeout = true;
-            faudio_play_sound(snd_UiMsgBlip, 50, false);
+            faudio_play_sound(snd_UiMsgBlip, 50, false, kSoundChannelUi);
         }
     }  
 }

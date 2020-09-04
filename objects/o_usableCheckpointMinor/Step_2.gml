@@ -90,7 +90,7 @@ if (m_stateInteracting)
 				
 				// play sound
 				var audio = faudio_create_stream("music/save/save_loop.ogg");
-				var sound = faudio_play_sound(audio, 50, false); //sound_play_at(x, y, audio);
+				var sound = faudio_play_sound(audio, 50, false, kSoundChannelMusic); //sound_play_at(x, y, audio);
 					//sound.gain = 0.8;
 					
 				// heal player & give full will

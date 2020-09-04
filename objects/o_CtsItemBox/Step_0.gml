@@ -54,7 +54,7 @@ if ( current_display_delay <= 0.0 )
 		if (!is_space(string_char_at(input_name, i + 1)))
 		{
 			effectScreenShake(3.0, 0.05, false);
-			faudio_play_sound(snd_TypeHit, 10, false);
+			faudio_play_sound(snd_TypeHit, 10, false, kSoundChannelUi);
 		}
     }
 }
@@ -132,7 +132,7 @@ if ( done_alpha > 0.5 && l_can_end )
         if (!input_fadeout)
         {
             input_fadeout = true;
-            faudio_play_sound(snd_UiMsgBlip, 50, false);
+            faudio_play_sound(snd_UiMsgBlip, 50, false, kSoundChannelUi);
         }
     }   
 }

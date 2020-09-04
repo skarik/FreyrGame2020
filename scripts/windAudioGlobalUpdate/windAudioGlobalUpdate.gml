@@ -93,7 +93,7 @@ if (next_requested_id != m_windSoundMainId)
 			}
 		}
 		
-		m_windSoundMain = faudio_play_sound(next_requested_id, 50, true);
+		m_windSoundMain = faudio_play_sound(next_requested_id, 50, true, kSoundChannelWorld);
 		m_windSoundMainId = next_requested_id;
 		m_windSoundMainGain = 0.0;
 	}
