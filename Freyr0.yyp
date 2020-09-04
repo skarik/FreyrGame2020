@@ -7247,6 +7247,14 @@
             }
         },
         {
+            "Key": "59d0c1d4-f914-4d3e-8e88-1ca0e60ad4fd",
+            "Value": {
+                "id": "cb967177-79f0-4a9d-b00e-5a99cf8c85d7",
+                "resourcePath": "datafiles_yy\\audio\\ui\\book_pageturn.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "59d1f763-2eb5-4606-8f1d-677e64651de7",
             "Value": {
                 "id": "aa0aba55-56d6-4dd9-b511-b2a59c7a15f2",

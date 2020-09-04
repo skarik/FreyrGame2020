@@ -15,3 +15,6 @@ m_fadeinRequested = false;
 
 m_home = room;
 m_homeless = false;
+
+m_audioSound = [];
+m_audioIndexDeck = [];

@@ -152,6 +152,8 @@ if (l_canMove || m_usingInventory || m_usingBook || m_currentVendor != null)
 		
 		if (m_usingBook && !iexists(o_menuPlayerBook))
 			inew(o_menuPlayerBook);
+		else if (!m_usingBook)
+			faudio_play_sound("audio/ui/book_close.wav", 50, false, kSoundChannelUi);
 	}
 	if (itemsButton.pressed)
 	{

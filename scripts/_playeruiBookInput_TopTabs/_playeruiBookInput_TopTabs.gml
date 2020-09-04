@@ -42,6 +42,8 @@ if (o_PlayerTest.prevUiButton.pressed)
 	m_top_selection = null;
 	
 	m_anim_tab_flavor = 1.0; // Proc the animation hit
+	
+	faudio_play_sound("audio/ui/book_pageturn.wav", 50, false, kSoundChannelUi);
 }
 else if (o_PlayerTest.nextUiButton.pressed)
 {
@@ -50,6 +52,8 @@ else if (o_PlayerTest.nextUiButton.pressed)
 	m_top_selection = null;
 	
 	m_anim_tab_flavor = 1.0; // Proc the animation hit
+	
+	faudio_play_sound("audio/ui/book_pageturn.wav", 50, false, kSoundChannelUi);
 }
 
 // Do tab-selection
@@ -70,6 +74,8 @@ if (m_top_hover == BookSelects.TabMain
 			m_tri_selection = null;
 			
 			m_anim_tab_flavor = 1.0; // Proc the animation hit
+			
+			faudio_play_sound("audio/ui/book_pageturn.wav", 50, false, kSoundChannelUi);
 			return true;
 		}
 	}
