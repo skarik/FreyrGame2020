@@ -43,6 +43,7 @@ if (selectButton.pressed || actUiButton.pressed)
 {
 	if (m_menuHover != null)
 	{
-		event_user(m_menuHover);
+		var listingInfo = menuListing[m_menuHover];
+		event_user(listingInfo[kiVSliceAction]);
 	}
 }

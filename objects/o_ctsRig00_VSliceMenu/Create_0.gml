@@ -17,7 +17,7 @@ menuListing = [
 	["Character Event: Nathan", "Character event: Cortez stumbles into Nathan's tent. Walk into Nathan's tent to begin.", true, 6],
 	["Character Event: Go", "Character event: Aurum and Go hang out in Mithra. Walk left then up into the tavern to begin.", true, 7],
 	["WIP: Tower & Atmosphere", "Unfinished area, the Fool's Tower. Acts as the game's first dungeon.", true, 8],
-	["WIP: Tower & Atmosphere 2", "Unfinished area, the Fool's Tower. Acts as the game's first dungeon.", true, 11],
+	["WIP: Tower B", "Unfinished area, the Fool's Tower. Acts as the game's first dungeon.", true, 11],
 	//["WIP: Grapple Hook", "Use the grapple hook to traverse northwards to the next area.", true, 9],
 	["WIP: Snow Concept", "Initial tests with snow effects for winter in Freyr.", true, 10],
 ];

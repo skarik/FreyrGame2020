@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "02ce60a6-3443-480f-971f-6f529f1f26af",
+            "Value": {
+                "id": "3d9aa8c2-ca97-4d75-8244-75b7a5a276c0",
+                "resourcePath": "datafiles_yy\\palette0_0.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "02d2565b-b47a-4247-bc0c-f98273d3edec",
             "Value": {
                 "id": "437183f3-2c96-40b1-bff6-4382943fb0f1",
@@ -3159,6 +3167,14 @@
             }
         },
         {
+            "Key": "27d7b429-cca0-4cf7-83b7-247bec0d4744",
+            "Value": {
+                "id": "c44fa354-2ace-4d1e-8a0d-d7d76331be1b",
+                "resourcePath": "datafiles_yy\\palette1_0.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "27d7e956-3619-4000-81b2-2cc39b5b4b80",
             "Value": {
                 "id": "5ac33126-4ecf-4bb1-a939-c744a42a7170",
@@ -3196,6 +3212,14 @@
                 "id": "6c4c3a7c-6f65-4582-ae9e-91775cea42d1",
                 "resourcePath": "views\\283cca5a-b775-4074-be80-0247436e5788.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "288e5f6b-a0cd-41a7-9ff0-d1c78292bcc5",
+            "Value": {
+                "id": "44dfa170-399f-44ae-b5f8-e99d0e042eab",
+                "resourcePath": "datafiles_yy\\palette2_0.png.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -12463,6 +12487,14 @@
             }
         },
         {
+            "Key": "99daa431-90ed-4297-8ba5-b224b315bb52",
+            "Value": {
+                "id": "c9805a87-d09d-41d1-a92f-5110673ac8cd",
+                "resourcePath": "datafiles_yy\\palette2_1.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "99e29ebd-5c71-428e-9772-dd1bd1b7b1c6",
             "Value": {
                 "id": "28efc65c-1a7a-4e2f-aacc-f91d08583f41",
@@ -19943,6 +19975,14 @@
             }
         },
         {
+            "Key": "efa89e60-2ccc-4c8a-bd51-d1bfe6434cc1",
+            "Value": {
+                "id": "83ec4ecf-f284-46a3-97e6-9fb28e76169e",
+                "resourcePath": "datafiles_yy\\palette1_1.png.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "efb6d6ef-21d5-417a-84db-5a8d940d0f85",
             "Value": {
                 "id": "5c643064-bdd9-4b77-aa96-8e2a9e624e29",
@@ -20843,6 +20883,14 @@
             "Value": {
                 "id": "480ed075-80e0-4bdf-8aa5-47ffaa9f156c",
                 "resourcePath": "datafiles_yy\\cts\\inspect\\mithrachurch\\tinystatue.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "f9e3ec73-b4c9-4091-bcca-f5fb474f7d86",
+            "Value": {
+                "id": "3f8dcc64-5a73-4894-9865-b634a11be6ca",
+                "resourcePath": "datafiles_yy\\palette0_1.png.yy",
                 "resourceType": "GMIncludedFile"
             }
         },

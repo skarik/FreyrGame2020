@@ -2,7 +2,8 @@ if (singleton_this()) exit; // Make this object a singleton
 
 captureModeEnabled = false;
 recordModeEnabled = false;
-convention_mode = true; // turn on for convention demos
+convention_mode = false; // turn on for convention demos
+demo_mode = true;
 
 // Enable debug mode for now
 on = false;
@@ -14,7 +15,7 @@ debug_line[0] = "";
 debug_line_count = 0;
 
 // Debug mode restart all swatch:
-reset = convention_mode;// || debug_mode;
+reset = convention_mode || demo_mode;// || debug_mode;
 // Farm id
 farm_id = current_time;
 
@@ -28,7 +29,7 @@ var record_overlay = inew(o_debugRecordOverlay);
 gifWidth = 560;//Screen.width;// / Screen.pixelScale;
 gifHeight = 560;//Screen.height;// / Screen.pixelScale;
 
-if (convention_mode)
+if (convention_mode || demo_mode)
 {
 	window_set_fullscreen(true);
 }
