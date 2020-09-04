@@ -1495,6 +1495,14 @@
             }
         },
         {
+            "Key": "137067f1-bc3f-4c1d-ad17-aa1231262ed1",
+            "Value": {
+                "id": "bd711de7-c4f9-40ee-b33f-a26211b49668",
+                "resourcePath": "objects\\o_ptcChunkBarrel1\\o_ptcChunkBarrel1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "13939477-2e26-4bb4-a6e5-0d31551bc92f",
             "Value": {
                 "id": "c89f82cf-cd77-4584-8e6a-99d317f57300",
@@ -3060,6 +3068,14 @@
                 "id": "72d6655a-7f4b-4120-89bc-b6ac6fe28264",
                 "resourcePath": "sprites\\s_assetBoneCharm0\\s_assetBoneCharm0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "274516c0-656f-424e-be89-102c84ef99c7",
+            "Value": {
+                "id": "5d318ff2-542a-41e6-83a9-8832df5bd6da",
+                "resourcePath": "objects\\o_ptcChunkCactus\\o_ptcChunkCactus.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4695,6 +4711,14 @@
             }
         },
         {
+            "Key": "39c05dc7-5b6f-4cf5-adee-42b6c5280e30",
+            "Value": {
+                "id": "f673dfa2-3659-45ac-9af3-52e4880aed33",
+                "resourcePath": "views\\39c05dc7-5b6f-4cf5-adee-42b6c5280e30.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "39c9d75f-1004-444a-8648-e1c073cb1731",
             "Value": {
                 "id": "427a4eff-8349-4477-99fb-595adfeda6a1",
@@ -5255,6 +5279,14 @@
             }
         },
         {
+            "Key": "407ed347-f50c-4668-b46c-e7f315ccc831",
+            "Value": {
+                "id": "a64a39cb-6dc5-46f9-b40a-15fe73540909",
+                "resourcePath": "sprites\\spt_chunkCactus\\spt_chunkCactus.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "40905317-febc-4c2c-8002-b7846ac2fd37",
             "Value": {
                 "id": "7b9447e9-b26b-4375-873f-aff0909bc51b",
@@ -5732,6 +5764,14 @@
                 "id": "2f75a6c9-d996-4873-9404-37af1d8e793d",
                 "resourcePath": "sprites\\s_itemConsEggBun\\s_itemConsEggBun.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "46b352bd-afbe-4993-b32c-e3197e094f47",
+            "Value": {
+                "id": "ae90fd40-7d9a-4c31-bb33-5c74fbdaeda1",
+                "resourcePath": "objects\\o_ptcChunkCeramic\\o_ptcChunkCeramic.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7171,6 +7211,14 @@
             "Value": {
                 "id": "729984db-9bee-40e1-a8db-9d80f0970ee8",
                 "resourcePath": "sprites\\s_charFrogTarHop\\s_charFrogTarHop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5809934c-77ef-447c-9a33-402ec9fa0b54",
+            "Value": {
+                "id": "2bacefc1-0d81-4878-8d90-437f74dd0374",
+                "resourcePath": "sprites\\spt_chunkBarrel0\\spt_chunkBarrel0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8703,6 +8751,14 @@
             }
         },
         {
+            "Key": "6c77b81c-9041-4c67-91c0-3831bb06d6a0",
+            "Value": {
+                "id": "d35ab4b8-18a6-4a04-9378-094b7f213ac1",
+                "resourcePath": "objects\\o_ptcChunkWood\\o_ptcChunkWood.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6c8f2dec-a919-44ea-a428-8f4323146b83",
             "Value": {
                 "id": "e8ac300f-6186-424f-b1fd-f62144912099",
@@ -9043,6 +9099,14 @@
             "Value": {
                 "id": "c69b3ab5-96d8-44a0-94ed-483b3719fb2f",
                 "resourcePath": "sprites\\ssy_nodeAi\\ssy_nodeAi.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6f87bcc0-db93-4187-9e0a-056d07e9655a",
+            "Value": {
+                "id": "c615292b-dd40-4402-956e-ef8520048e25",
+                "resourcePath": "sprites\\spt_chunkCeramic\\spt_chunkCeramic.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10620,6 +10684,14 @@
                 "id": "3ff33875-b4be-4d70-bd09-54b8bc1b1b87",
                 "resourcePath": "objects\\o_chOasisNpc\\o_chOasisNpc.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "84898946-a8fd-4534-814b-64aa7a7e4731",
+            "Value": {
+                "id": "624e5fc0-12b0-4447-b49c-bb43854ae11f",
+                "resourcePath": "views\\84898946-a8fd-4534-814b-64aa7a7e4731.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -15447,6 +15519,14 @@
             }
         },
         {
+            "Key": "bd698229-0ec1-43e5-94d0-42ee6c2154ed",
+            "Value": {
+                "id": "f8028185-cb9c-4cdb-b7bf-75824ef71cc8",
+                "resourcePath": "sprites\\spt_chunkBarrel1\\spt_chunkBarrel1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd6cf8bf-0b58-4441-ac9a-5adbce4cf6e2",
             "Value": {
                 "id": "7f38bfad-bee4-4464-a6cf-d8f42f2c2d31",
@@ -16895,6 +16975,14 @@
             }
         },
         {
+            "Key": "ccf7c1a1-13a9-48c0-aa7f-fa2acd0478b0",
+            "Value": {
+                "id": "0c90ccbe-eaf2-436f-b27d-a22571dc982b",
+                "resourcePath": "sprites\\spt_chunkWood\\spt_chunkWood.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cd14e5e1-72b8-4cdf-b76f-2a0859b368f1",
             "Value": {
                 "id": "01e4e548-f877-4f5a-ad6e-3de2ad63e5be",
@@ -16980,6 +17068,14 @@
                 "id": "1c64c731-6eb2-4b8c-a700-cffbde1af6fa",
                 "resourcePath": "views\\cdaaf13e-b7b4-4f0c-bcc0-dacf61aa4a44.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "cdd910b5-6665-4e8d-b055-732f25230a81",
+            "Value": {
+                "id": "b7e8dfd2-15c4-4785-87f7-44c001626557",
+                "resourcePath": "objects\\o_ptcChunkBarrel0\\o_ptcChunkBarrel0.yy",
+                "resourceType": "GMObject"
             }
         },
         {
