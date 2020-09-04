@@ -34,4 +34,24 @@ if (bRunParticleSystem)
 										  o_ptcSmokeZBit);
 			flame.z = z;
 	}
+	
+	if (m_sound == null)
+	{
+		m_sound = sound_play_at(x, y, "audio/elements/fire_medium.wav");
+		m_sound.pitch = 1.0;
+		m_sound.gain = 0.3;
+		m_sound.falloff_start = 20;
+		m_sound.falloff_end = 220;
+		m_sound.falloff_factor = 2;
+		m_sound.loop = true;
+		m_sound.parent = id;
+	}
+}
+else
+{
+	if (m_sound != null)
+	{
+		idelete(m_sound);
+		m_sound = null;
+	}
 }

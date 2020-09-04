@@ -1223,6 +1223,14 @@
             }
         },
         {
+            "Key": "10dd25e9-61ed-4e6f-9093-8faf85299095",
+            "Value": {
+                "id": "0c78b785-33c8-4ef3-bde9-8bcaa271357a",
+                "resourcePath": "datafiles_yy\\audio\\bg\\sandy_gust0.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "10dd9307-de97-48ff-bb59-82ee0e2a8b1c",
             "Value": {
                 "id": "d071621d-240f-4c67-89fb-24f34f38e2c4",
@@ -6983,6 +6991,14 @@
             }
         },
         {
+            "Key": "56245468-e1de-42b4-8682-343dca445896",
+            "Value": {
+                "id": "ad8d07c6-d003-4f5b-a6eb-b004ce6150cc",
+                "resourcePath": "datafiles_yy\\audio\\ui\\book_select2.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "56318187-41fb-46c4-8b30-6c5bcc505e7a",
             "Value": {
                 "id": "da0958e1-cd2b-4060-90b4-1d501041d2ba",
@@ -7951,6 +7967,14 @@
             }
         },
         {
+            "Key": "63648369-8b22-43e4-8efc-a6692841709d",
+            "Value": {
+                "id": "498ad735-b51e-4814-858c-9273b48e1001",
+                "resourcePath": "datafiles_yy\\audio\\bg\\sandy_gust2.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "63a0707b-ad6c-4a7b-b11d-aca6ce769a5d",
             "Value": {
                 "id": "557f3afa-b931-4466-b12d-7815ed66a4a7",
@@ -8132,6 +8156,14 @@
                 "id": "1d1e57bb-4c4b-4262-a73c-8d898d84210e",
                 "resourcePath": "sprites\\s_projectileBombBig\\s_projectileBombBig.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "663c34e3-3ab1-43a8-8a29-2e383ea931cc",
+            "Value": {
+                "id": "a07076e7-2cc6-49e3-aa0f-cdb74cca4b07",
+                "resourcePath": "datafiles_yy\\audio\\bg\\sandy_gust1.wav.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -12583,6 +12615,14 @@
             }
         },
         {
+            "Key": "9cdef795-35ec-4903-87a2-859b22324c0a",
+            "Value": {
+                "id": "039322e5-eae9-44a9-9e77-9ec6ed2a70dd",
+                "resourcePath": "datafiles_yy\\audio\\ui\\book_select.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "9cf2c4dc-0e9f-4276-b5d5-2ff206e805f3",
             "Value": {
                 "id": "68ea5c42-2374-45d5-a853-37c0a41bca78",
@@ -13020,6 +13060,14 @@
                 "id": "6a2a1d9b-814e-4f44-96cf-1bad391a194d",
                 "resourcePath": "views\\a132f4b6-7757-4f45-861d-35d3299eccb4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a15bd346-ee4d-4741-bca2-7379c2a38fc8",
+            "Value": {
+                "id": "13a5e94f-2fde-499d-ac2f-3aa3702d479f",
+                "resourcePath": "datafiles_yy\\audio\\bg\\sandy_gust3.wav.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -17972,6 +18020,14 @@
                 "id": "6bc1a46f-f2e9-4b4e-8ee6-188ae1cbb05c",
                 "resourcePath": "objects\\o_pickupSeed_Potato\\o_pickupSeed_Potato.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "da7976a3-2e3c-4d0a-bdb3-1e76c7d5193a",
+            "Value": {
+                "id": "d8e6400e-8457-4ac4-a541-a996078dd844",
+                "resourcePath": "datafiles_yy\\audio\\bg\\talking_test_0.wav.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

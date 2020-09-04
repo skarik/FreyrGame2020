@@ -91,6 +91,8 @@ if (m_book_state = BookState.TopLevel)
 			m_sub_selection = null;
 			m_tri_selection = null;
 			
+			faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+			
 			// Act on specific selections
 			if (m_top_selection == BookSelects.QuitToMenu)
 			{
@@ -167,6 +169,11 @@ if (m_book_state == BookState.SelectionOptions)
 				{
 					m_option_current_waittime += 1;
 				}
+				
+				if (m_option_current_waittime < 1 || m_option_current_waittime > 8)
+					faudio_play_sound(snd_MsgBepType, 50, false, kSoundChannelUi);
+				else
+					faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
 			}
 			
 			if (m_sub_hover == BookSelects.RestShort_Confirm)
@@ -175,6 +182,8 @@ if (m_book_state == BookState.SelectionOptions)
 				m_player.m_usingBook = false;
 				// Actually wait.
 				gameCampWait(m_option_current_waittime);
+				
+				faudio_play_sound("audio/ui/book_select.wav", 50, false, kSoundChannelUi);
 			}
 		}
 		
@@ -184,11 +193,21 @@ if (m_book_state == BookState.SelectionOptions)
 			{
 				// Decrement duration
 				m_option_current_waittime -= 1;
+				
+				if (m_option_current_waittime < 1 || m_option_current_waittime > 8)
+					faudio_play_sound(snd_MsgBepType, 50, false, kSoundChannelUi);
+				else
+					faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
 			}
 			if (o_PlayerTest.yAxis.previous > -0.707 && o_PlayerTest.yAxis.value < -0.707)
 			{
 				// Increment duration
 				m_option_current_waittime += 1;
+				
+				if (m_option_current_waittime < 1 || m_option_current_waittime > 8)
+					faudio_play_sound(snd_MsgBepType, 50, false, kSoundChannelUi);
+				else
+					faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
 			}
 		}
 		

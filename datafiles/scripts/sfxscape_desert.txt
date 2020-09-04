@@ -61,6 +61,48 @@ desert.example
 
 desert.sandy
 {
+	fadetime 2.0
+	
+	// random sand pushing
+	playrandom
+	{
+		time		1.0, 7.0
+		volume		0.05, 0.2
+		pitch		0.9, 1.3
+		
+		attenuation	default
+		channel		world		
+	
+		position random
+	
+		rndwave
+		{
+			wave	"audio/bg/sandy_gust0.wav"
+			wave	"audio/bg/sandy_gust1.wav"
+			wave	"audio/bg/sandy_gust2.wav"
+			wave	"audio/bg/sandy_gust3.wav"
+		}
+	}
+
+	// random rustles
+	playrandom
+	{
+		time		2.0, 11.0
+		volume		0.03, 0.05
+		pitch		1.0, 1.3
+		
+		attenuation	default
+		channel		world		
+	
+		position random far
+	
+		rndwave
+		{
+			wave	"audio/bg/leaves_rustle2.wav"
+			wave	"audio/bg/leaves_rustle1.wav"
+			wave	"audio/bg/leaves_rustle0.wav"
+		}
+	}
 }
 
 desert.flatlands0
@@ -227,6 +269,55 @@ desert.mithra_docks
 		pitch		1.05
 		position	2
 		wave		"audio/bg/water_mithra_loop.wav"
+	}
+	
+	// distant bird caws
+	playrandom
+	{
+		time		5.0, 25.0
+		volume		0.05, 0.1
+		pitch		0.9, 1.05
+		
+		attenuation	default
+		channel		world		
+	
+		position random far
+	
+		rndwave
+		{
+			wave	"audio/bg/echo_caw0.wav"
+			wave	"audio/bg/echo_caw1.wav"
+			wave	"audio/bg/echo_caw2.wav"
+			wave	"audio/bg/echo_caw3.wav"
+		}
+	}
+}
+
+desert.mithra_downtown
+{
+	fadetime 2.0
+
+	// looping audio for the water
+	playlooping
+	{
+		volume		0.24
+		pitch		1.00
+		position	0
+		wave		"audio/bg/water_mithra_loop.wav"
+	}
+	playlooping
+	{
+		volume		0.24
+		pitch		0.95
+		position	1
+		wave		"audio/bg/water_mithra_loop.wav"
+	}
+	playlooping
+	{
+		volume		0.04
+		pitch		1.00
+		position	2
+		wave		"audio/bg/talking_test_0.wav"
 	}
 	
 	// distant bird caws

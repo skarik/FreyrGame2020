@@ -1,8 +1,25 @@
 /// @description faudio_create_stream(filename)
 /// @param filename
 
+if (!iexists(AudioStreams))
+{
+	inew(AudioStreams);
+}
+
 var filename = argument0;
 var result_sound = null;
+
+// Find the existing audio in the AudioStreams
+var music_count = array_length_1d(AudioStreams.music);
+for (var i = 0; i < music_count; ++i)
+{
+	if (AudioStreams.music_filename[i] == filename)
+	{
+		return AudioStreams.music[i];
+	}
+}
+
+// We're here? Time to load:
 
 if (!file_exists(filename))
 {
@@ -68,7 +85,15 @@ else
 
 debugOut("Loaded audio '" + filename + "'");
 
-return result_sound;
+//return result_sound;
+
+// Add the new audio streams
+AudioStreams.music[music_count] = result_sound;
+AudioStreams.music_filename[music_count] = filename;
+AudioStreams.music_creation_time[music_count] = Time.time;
+
+// Return newly loaded music track
+return AudioStreams.music[music_count];
 
 // TODO: handle sound reuse and manage memory properly.
 // This is somewhat done on Silent Sky's side, so sync there.
