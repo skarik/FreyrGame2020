@@ -1,3 +1,3 @@
 /// @description Stop audio
 
-//idelete(m_sound);
+idelete(m_sound);
