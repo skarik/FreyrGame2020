@@ -85,8 +85,6 @@ else
 
 debugOut("Loaded audio '" + filename + "'");
 
-//return result_sound;
-
 // Add the new audio streams
 AudioStreams.music[music_count] = result_sound;
 AudioStreams.music_filename[music_count] = filename;
@@ -94,6 +92,3 @@ AudioStreams.music_creation_time[music_count] = Time.time;
 
 // Return newly loaded music track
 return AudioStreams.music[music_count];
-
-// TODO: handle sound reuse and manage memory properly.
-// This is somewhat done on Silent Sky's side, so sync there.

@@ -8951,6 +8951,14 @@
             }
         },
         {
+            "Key": "6eede0bb-0b86-47e2-aec3-429b3771e951",
+            "Value": {
+                "id": "8cc978d1-4169-4f10-a0d6-d14305697faa",
+                "resourcePath": "datafiles_yy\\audio\\phys\\explo6.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "6efb3fd4-75de-47ac-9f87-0fa79361f997",
             "Value": {
                 "id": "7a9409b9-5d58-437a-a64d-708c897e921c",
@@ -18431,6 +18439,14 @@
             }
         },
         {
+            "Key": "df7d75cc-7074-4456-abe1-5685def5bd3d",
+            "Value": {
+                "id": "9edb3540-6a84-4f89-af33-e88e3c0d8030",
+                "resourcePath": "views\\df7d75cc-7074-4456-abe1-5685def5bd3d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "df7f10a9-204b-4597-903d-1dc7ff3b123a",
             "Value": {
                 "id": "0048cfd6-74c8-4b26-a9d8-5babff9d264f",
@@ -18556,6 +18572,14 @@
                 "id": "aa8df61d-85c0-4d8d-99e9-3b92908bb37f",
                 "resourcePath": "objects\\o_pickupTool_Grapple\\o_pickupTool_Grapple.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e0a4e21d-2c66-4b40-a692-c1aeee372e10",
+            "Value": {
+                "id": "f1894845-7966-413d-a63e-b7974b490b75",
+                "resourcePath": "views\\e0a4e21d-2c66-4b40-a692-c1aeee372e10.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

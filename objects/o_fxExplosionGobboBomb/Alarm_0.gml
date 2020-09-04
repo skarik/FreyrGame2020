@@ -47,5 +47,11 @@ var dynalight2 = instance_create_depth(x, y, depth - 5, o_lightAllglowFader);
 	dynalight2.m_colorFadeSpeed = 4.0;
 	dynalight2.image_blend = c_gold;
 
+var sound_hit = sound_play_at(x, y, "audio/phys/explo6.wav");
+	sound_hit.pitch = random_range(0.95, 1.1) * 1.6;
+	sound_hit.gain = 1.0;
+	sound_hit.falloff_start = 70;
+	sound_hit.falloff_end = 1000;
+	sound_hit.falloff_factor = 1;
 
 idelete(this);
