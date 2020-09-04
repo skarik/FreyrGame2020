@@ -2519,6 +2519,14 @@
             }
         },
         {
+            "Key": "1f5b42fe-6d81-4bdc-9037-963737b20de2",
+            "Value": {
+                "id": "43fa6282-9afb-458c-82d6-5f1cfe3c6847",
+                "resourcePath": "datafiles_yy\\audio\\bg\\leaves_rustle2.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "1f5d13ed-7f3b-4f6d-ab92-41ed29d9a9d2",
             "Value": {
                 "id": "2e7998bd-0b82-44c6-9649-c835e95fba8a",
@@ -4156,6 +4164,14 @@
                 "id": "dd885aec-6245-4f3d-b447-65a5ec745118",
                 "resourcePath": "views\\33f19330-36a7-453d-84c9-5b3430170e40.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3416760c-6a91-4ed0-977f-4488af657770",
+            "Value": {
+                "id": "3527d83d-41ca-477b-b89d-6e37c6d9c3c3",
+                "resourcePath": "datafiles_yy\\audio\\bg\\leaves_rustle0.wav.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -6412,6 +6428,14 @@
                 "id": "98949002-7d9f-4716-840f-1d0a45d34f02",
                 "resourcePath": "objects\\o_CtsKeyPoint\\o_CtsKeyPoint.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4ef3ea42-a410-43f3-8d48-05d71f641da6",
+            "Value": {
+                "id": "d72c470d-fed4-40e9-8bc7-588e3f490f86",
+                "resourcePath": "datafiles_yy\\audio\\elements\\fire_medium.wav.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -13607,6 +13631,14 @@
             }
         },
         {
+            "Key": "a8266662-2e10-4188-b3bf-6ef680590699",
+            "Value": {
+                "id": "fbe73c0b-4142-4de1-bad0-1470726b702e",
+                "resourcePath": "datafiles_yy\\audio\\bg\\water_mithra_loop.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "a82eeabf-52ea-41d8-a167-3bfa5ec90e18",
             "Value": {
                 "id": "153ca357-f063-493b-8f41-4fe382bd40c9",
@@ -15263,6 +15295,14 @@
             }
         },
         {
+            "Key": "bc0dbde6-8a8c-4548-ae5f-91c1c28e8ccf",
+            "Value": {
+                "id": "17f98724-a763-4263-812e-67299dbb976c",
+                "resourcePath": "datafiles_yy\\audio\\bg\\leaves_rustle_loop.wav.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "bc1219a6-101a-4af8-8700-a6b5b01af9ce",
             "Value": {
                 "id": "e2199132-3152-4fcc-a990-80c48228d854",
@@ -16564,6 +16604,14 @@
                 "id": "56ba0bfa-c2a1-4a1f-b8dc-15b242a42c08",
                 "resourcePath": "sprites\\ssy_light192\\ssy_light192.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c9e2d0af-dbcd-47ab-aefc-31bfc9860454",
+            "Value": {
+                "id": "92fec423-f7e4-4372-991a-a4980a52f8ac",
+                "resourcePath": "views\\c9e2d0af-dbcd-47ab-aefc-31bfc9860454.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -20172,6 +20220,14 @@
                 "id": "06b1bd00-cf76-4646-8633-9c3cec3a49d5",
                 "resourcePath": "objects\\o_collectMedBush\\o_collectMedBush.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f5cbbc9f-1909-424f-9ed4-259b0f1471be",
+            "Value": {
+                "id": "d2794881-e2cd-48d5-a893-f4ffe409e604",
+                "resourcePath": "datafiles_yy\\audio\\bg\\leaves_rustle1.wav.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

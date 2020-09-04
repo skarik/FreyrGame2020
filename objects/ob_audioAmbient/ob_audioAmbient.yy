@@ -54,7 +54,7 @@
             "resourceFilter": 4,
             "value": "null",
             "varName": "m_sound",
-            "varType": 5
+            "varType": 4
         },
         {
             "id": "49fffc87-8068-4a1a-b52d-dd154d96320e",

@@ -7,6 +7,11 @@ var at_x = argument0;
 var at_y = argument1;
 var sound_to_play = argument2;
 
+if (is_string(sound_to_play))
+{
+	sound_to_play = faudio_create_stream(sound_to_play);
+}
+
 //if (sound_to_play != null && audio_exists(sound_to_play))
 if (sound_to_play != null)
 {
