@@ -19,5 +19,9 @@ if (cutsceneUpdate())
 				}
 			}
 		}
+		else if (string_pos("ShowCredits", signalString) != 0)
+		{
+			inew_unique(o_ctsThankYouForPlaying);
+		}
 	}
 }

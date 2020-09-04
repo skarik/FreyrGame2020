@@ -13,7 +13,8 @@
         "39c9d75f-1004-444a-8648-e1c073cb1731",
         "cdaaf13e-b7b4-4f0c-bcc0-dacf61aa4a44",
         "386a5664-280f-4731-ba74-26e6e493275b",
-        "deefc566-c5c8-456f-a243-c0808db4ec00"
+        "deefc566-c5c8-456f-a243-c0808db4ec00",
+        "2930d940-080c-467a-80a1-fbedae075ab0"
     ],
     "filterType": "GMObject",
     "folderName": "Scripting",

@@ -116,6 +116,11 @@
 		style diegetic
 		1 Should be safe now.
 	}
+	
+	signal
+	{
+		id ShowCredits
+	}
 
 #OnEnd
 #ended

@@ -3231,6 +3231,14 @@
             }
         },
         {
+            "Key": "2930d940-080c-467a-80a1-fbedae075ab0",
+            "Value": {
+                "id": "f6c4a691-d799-47d6-9ebf-3bbb6ec1480f",
+                "resourcePath": "objects\\o_ctsThankYouForPlaying\\o_ctsThankYouForPlaying.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "293afe3d-3d71-42ab-9d93-9664f0687a00",
             "Value": {
                 "id": "29d202a7-9e1d-4de8-9473-b7fdc8830cc7",
