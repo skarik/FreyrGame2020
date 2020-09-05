@@ -23,5 +23,7 @@ m_instance = null;
 
 
 alarm[0] = 1;  // Alarm to play sound
-alarm[1] = 20; // Alarm to check for destruction
+//alarm[1] = 20; // Alarm to check for destruction
 
+m_despawnTimerEnabled = false;
+m_despawnTimer = 0.0;

@@ -14,3 +14,14 @@ else if (channel == kSoundChannelMusic)
 	audio_emitter_gain(m_emitter, gain * Settings.audio_music_volume * Settings.audio_total_volume);
 else if (channel == kSoundChannelSpeech)
 	audio_emitter_gain(m_emitter, gain * Settings.audio_speech_volume * Settings.audio_total_volume);
+	
+// update destroy timer
+if (m_despawnTimerEnabled)
+{
+	if (m_despawnTimer <= 0.0)
+	{
+		idelete(this);
+		exit;
+	}
+	m_despawnTimer -= Time.deltaTime;
+}

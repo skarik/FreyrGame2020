@@ -120,6 +120,10 @@ if (!isClimaxing && m_wasClimaxing)
 var ducking = 0.0;
 with (o_wmus_crescentTower)
 {
+	if (!iexists(m_sound))
+	{	// This should never happen
+		break;
+	}
 	var pl_dist = point_distance(x, y, pl.x, pl.y);
 	var gradient = saturate((pl_dist - m_sound.falloff_start) / (m_sound.falloff_end - m_sound.falloff_start));
 	gradient = power(gradient, m_sound.falloff_factor * 2.0);

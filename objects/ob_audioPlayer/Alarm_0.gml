@@ -20,3 +20,9 @@ m_instance = audio_play_sound_on(m_emitter, m_sound, loop, priority);
 
 //debugOut("Playing sound \"" + string(audio_get_name(m_sound)) + "\"");
 
+if (!loop)
+{
+	m_despawnTimerEnabled = true;
+	m_despawnTimer = audio_sound_length(m_sound) + 1.0;
+}
+
