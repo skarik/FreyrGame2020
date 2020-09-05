@@ -2031,6 +2031,14 @@
             }
         },
         {
+            "Key": "197b2103-e967-4cff-bd60-edc40fb96b77",
+            "Value": {
+                "id": "96e26464-23cc-44a2-9b87-1a990f77f8fc",
+                "resourcePath": "datafiles_yy\\music\\farm\\farm_arrive_g2.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "197f8437-e363-4895-9dde-8f6bc4511e8a",
             "Value": {
                 "id": "556f3cd7-720e-4053-9cae-931bff193bd6",
@@ -3983,6 +3991,14 @@
             }
         },
         {
+            "Key": "30866246-c6c0-4773-a4cf-88eb1d70de3f",
+            "Value": {
+                "id": "a1864735-2d01-4ac7-9cb0-6ee8174a677f",
+                "resourcePath": "views\\30866246-c6c0-4773-a4cf-88eb1d70de3f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3089b2e7-7f16-4a59-8491-e7e028204760",
             "Value": {
                 "id": "493f5939-b0eb-4b34-9ce9-c900b5295118",
@@ -4252,6 +4268,14 @@
                 "id": "b19784db-3bd7-4e18-b5da-9262749c1ab6",
                 "resourcePath": "scripts\\tarotStavesAce\\tarotStavesAce.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "346ea4e3-f415-4b1a-83e1-eaf5e52122ff",
+            "Value": {
+                "id": "520aaf8c-fe41-4603-a02f-9ed42186b6d6",
+                "resourcePath": "datafiles_yy\\music\\farm\\farm_arrive_p1.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -9471,6 +9495,14 @@
             }
         },
         {
+            "Key": "7375e7af-e7b8-4dba-b84e-6345e08b83cf",
+            "Value": {
+                "id": "13ab5f73-db88-4ee6-b95c-8eb096e0fce6",
+                "resourcePath": "datafiles_yy\\music\\farm\\farm_arrive_g0.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "73878bf9-2d69-4b43-9ca3-d7e86c30404e",
             "Value": {
                 "id": "e08d7325-0a18-4814-8358-135327bf2d7a",
@@ -10423,6 +10455,14 @@
             }
         },
         {
+            "Key": "816ced02-4e12-4836-93d4-0cd71fec0615",
+            "Value": {
+                "id": "077b4f94-fb3b-41c2-afed-2a10247db98b",
+                "resourcePath": "objects\\o_mus00_MithraMusicManager\\o_mus00_MithraMusicManager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "817cd1e5-b563-4d8d-a2c9-0fe83e94cfe8",
             "Value": {
                 "id": "f17190bb-0ac8-4c72-bb28-f0023299d5dd",
@@ -11111,6 +11151,14 @@
             }
         },
         {
+            "Key": "89cd436a-5ba1-4107-baa2-c79df3b25b89",
+            "Value": {
+                "id": "525c5695-6c50-422a-bd50-0b71d41c1c24",
+                "resourcePath": "datafiles_yy\\music\\farm\\farm_night0.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "89e6f090-2e48-4530-8e2b-4fe17896008e",
             "Value": {
                 "id": "5eefc985-6edb-43fe-b280-5abecb9a7962",
@@ -11627,6 +11675,14 @@
             "Value": {
                 "id": "9e5d21f1-1877-4397-83bd-a4b38b93dd73",
                 "resourcePath": "datafiles_yy\\GMLive\\gcmt-dll.dll.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "8f799895-9daf-40f2-b640-e9aeee34779e",
+            "Value": {
+                "id": "1e577f0d-d610-4e29-8c39-56eb327004d7",
+                "resourcePath": "datafiles_yy\\music\\farm\\farm_arrive_p0.ogg.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -13292,6 +13348,14 @@
                 "id": "ea9eeaf4-9fab-49b4-b769-dc28b4cc24d5",
                 "resourcePath": "sprites\\s_charHeroStand\\s_charHeroStand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a3464567-577f-4507-8c03-4c38d701e57d",
+            "Value": {
+                "id": "4d99cef8-40d5-4c89-9eff-caeb725de00d",
+                "resourcePath": "datafiles_yy\\music\\farm\\farm_arrive_g1.ogg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -16327,6 +16391,14 @@
             }
         },
         {
+            "Key": "c634c405-788a-4abb-950b-649fc7f5c733",
+            "Value": {
+                "id": "09c313c5-3934-4df1-9d52-a76b3caa0b07",
+                "resourcePath": "datafiles_yy\\music\\farm\\farm_arrive_p2.ogg.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "c635cd5a-5f94-47f7-ab53-1bbcb02bcb32",
             "Value": {
                 "id": "e7ccd2ab-f656-4005-a2ca-db7e48072bf1",
@@ -17860,6 +17932,14 @@
                 "id": "44c454ba-b4b6-4d2b-9d59-3df2a6bfc09c",
                 "resourcePath": "objects\\o_pickupCons_StuffedMush\\o_pickupCons_StuffedMush.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d832a5b2-1247-49f2-b77e-d7c21eafe9ef",
+            "Value": {
+                "id": "cc11dbaf-3719-4f9b-8be4-bd29522da41b",
+                "resourcePath": "datafiles_yy\\READ_ME_FIRST.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

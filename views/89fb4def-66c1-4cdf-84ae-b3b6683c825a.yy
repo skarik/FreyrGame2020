@@ -32,7 +32,8 @@
         "733f6edd-46c0-4c3c-9802-16015f36a50b",
         "a694b4f2-5940-4d25-97dd-3e2b9d441e02",
         "cf403813-d7a7-41f7-87aa-b64b74a5d119",
-        "078fb706-bfb3-43d5-97c6-7809ff15af5c"
+        "078fb706-bfb3-43d5-97c6-7809ff15af5c",
+        "30866246-c6c0-4773-a4cf-88eb1d70de3f"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "music",

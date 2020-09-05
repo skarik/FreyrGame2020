@@ -21,27 +21,27 @@ if (!all_update_begin_death && all_update_cooldown_cdtimer <= 0.0)
 		var l_hourOfDay = round(timeofdayGetHour());
 		if (l_hourOfDay == 12)
 		{	// cue daytime track
-			music_play_request_medium = "audio/music/farm_day_med_1.ogg";
+			//music_play_request_medium = "audio/music/farm_day_med_1.ogg";
 		}
 		else if (l_hourOfDay == 12 + 8)
 		{	// cue nighttime track
-			music_play_request_medium = "audio/music/farm_night_med_1.ogg";
+			//music_play_request_medium = "audio/music/farm_night_med_1.ogg";
+			music_play_request_medium = "music/farm/farm_night0.ogg";
 		}
 		else if (l_hourOfDay == 24 || l_hourOfDay == 0)
 		{	// cue warning track
 			if (player.m_will < player.m_willMax * 0.1)
 			{
-				music_play_request_short = "audio/music/farm_piano_short_8.ogg";
+				//music_play_request_short = "audio/music/farm_piano_short_8.ogg";
 			}
 		}
 		// select a random track (for now)
 		else if (random(1.0) < 0.5 && !is_string(music_play_request_short))
 		{
-			music_play_request_short = choose("audio/music/farm_piano_short_2.ogg",
-											  "audio/music/farm_piano_short_3.ogg",
-											  "audio/music/farm_piano_short_4.ogg",
-											  "audio/music/farm_piano_short_5.ogg",
-											  "audio/music/farm_piano_short_6.ogg");
+			music_play_request_short = choose("music/farm/farm_arrive_p1.ogg",
+											  "music/farm/farm_arrive_p2.ogg",
+											  "music/farm/farm_arrive_g1.ogg",
+											  "music/farm/farm_arrive_g2.ogg");
 		}
 	}
 	
