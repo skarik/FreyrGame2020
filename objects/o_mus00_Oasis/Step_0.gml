@@ -11,8 +11,12 @@ for (var i = 0; i < array_length_1d(m_trackVolume); ++i)
 {
 	m_trackVolume[i] = 0.0;
 }
-	
-if (room == rm_oasis_town)
+
+if (room == rm_oasis_farm)
+{
+	// Nothing.
+}
+else if (room == rm_oasis_town)
 {
 	if (iexists(o_doodadTentChonkHider) && o_doodadTentChonkHider.image_alpha < 0.1)
 	{
