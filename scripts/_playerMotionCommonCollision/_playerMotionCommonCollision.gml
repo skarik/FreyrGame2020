@@ -74,13 +74,13 @@ if (moCanMoveUnstuck)
 }
 
 // Do BETTER unstuck motion (but for characters only)
-if (kKickbackAmount > 0.0)
+if (kKickbackAmount > 0.0 && !isPassthru)
 {
 	if (point_on_camera(x, y))
 	{
 		// Get collision with other characters
 		var colliding_character = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, ob_characterGround, false, true);
-		if (iexists(colliding_character))
+		if (iexists(colliding_character) && !colliding_character.isPassthru)
 		{
 			// See if can move 1 pixel out of the character
 			var unstuck_direction = point_direction(colliding_character.x, colliding_character.y, x, y);

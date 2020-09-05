@@ -21,7 +21,7 @@ if (m_fadeOut)
 
 // update all track volumes
 var volume_scalar = Settings.audio_music_volume * Settings.audio_total_volume;
-var delta_step = kTrackFadeSpeed * Time.deltaTime * volume_scalar;
+var delta_step = kTrackFadeSpeed * Time.unscaledDeltaTime * volume_scalar;
 for (var i = 0; i < m_trackCount; ++i)
 {
 	// create delta to target track

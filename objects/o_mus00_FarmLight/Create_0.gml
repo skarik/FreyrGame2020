@@ -1,6 +1,6 @@
 /// @description Special music player...
 
-fmusic_fade_all();
+//fmusic_fade_all();
 
 all_update_cooldown_cdtimer = 2.0;
 all_update_begin_death = false;
