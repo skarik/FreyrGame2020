@@ -11,13 +11,13 @@ var result_sound = null;
 
 // Find the existing audio in the AudioStreams
 var music_count = array_length_1d(AudioStreams.music);
-for (var i = 0; i < music_count; ++i)
+/*for (var i = 0; i < music_count; ++i)
 {
 	if (AudioStreams.music_filename[i] == filename)
 	{
 		return AudioStreams.music[i];
 	}
-}
+}*/
 
 // We're here? Time to load:
 
