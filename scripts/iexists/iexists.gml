@@ -1,2 +1,6 @@
 /// iexists(object_to_check)
-return instance_exists(argument0);
+function iexists(argument0) {
+	return instance_exists(argument0);
+
+
+}

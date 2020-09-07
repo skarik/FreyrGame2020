@@ -2,7 +2,11 @@
 /// @desc Sets the value of the given control structure.
 /// @param control {object}
 /// @param newValue {real}
-var control = argument0;
-var newValue = argument1;
+function inputSet(argument0, argument1) {
+	var control = argument0;
+	var newValue = argument1;
 
-_controlStructUpdate(control, newValue);
+	_controlStructUpdate(control, newValue);
+
+
+}

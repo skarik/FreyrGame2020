@@ -1,3 +1,4 @@
+function damageTypes() {
 #macro kDamageTypeBlunt		0x0001
 #macro kDamageTypeUnarmed	0x0002
 #macro kDamageTypePiercing	0x0004
@@ -10,3 +11,6 @@
 #macro kDamageTypeMagic		0x1000
 #macro kDamageTypeMagicVoid	(0x1000 | 0x2000)
 #macro kDamageTypeCounter	0x4000
+
+
+}

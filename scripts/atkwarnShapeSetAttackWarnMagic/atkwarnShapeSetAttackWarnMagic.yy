@@ -1,8 +1,12 @@
 {
-    "id": "c15e8f86-8b64-46fc-a2d9-a6a0b027190b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "atkwarnShapeSetAttackWarnMagic",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Warn Overlay Choreograph",
+    "path": "folders/Scripts/Game/AI & NPCs/Warn Overlay Choreograph.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "atkwarnShapeSetAttackWarnMagic",
+  "tags": [],
+  "resourceType": "GMScript",
 }

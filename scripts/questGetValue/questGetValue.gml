@@ -1,9 +1,13 @@
 ///@param quest_id
-var quest_id = argument0;
+function questGetValue(argument0) {
+	var quest_id = argument0;
 
-with (kQuestManager)
-{
-	return quest_state[quest_id];
+	with (kQuestManager)
+	{
+		return quest_state[quest_id];
+	}
+
+	return -1;
+
+
 }
-
-return -1;

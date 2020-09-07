@@ -1,8 +1,12 @@
 {
-    "id": "bec3ceae-7c4f-4e88-9106-d1e1aca198c5",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "checkpointTeleportTo",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Scropts",
+    "path": "folders/Scripts/Game/Scropts.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "checkpointTeleportTo",
+  "tags": [],
+  "resourceType": "GMScript",
 }

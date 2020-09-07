@@ -1,8 +1,12 @@
 {
-    "id": "9b5ebd36-5e2f-4833-94e3-375a22376bdc",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "itemEntryCopy",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory System",
+    "path": "folders/Scripts/Game/Inventory System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "itemEntryCopy",
+  "tags": [],
+  "resourceType": "GMScript",
 }

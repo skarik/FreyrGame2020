@@ -1,3 +1,4 @@
+function utilConstants() {
 #macro null noone
 #macro this self
 
@@ -56,3 +57,6 @@
 #macro kCompareOpGreaterEqual 3
 #macro kCompareOpLessEqual 4
 #macro kCompareOpNotEqual 5
+
+
+}

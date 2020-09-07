@@ -1,8 +1,12 @@
 {
-    "id": "067a1fc3-e934-4218-a74d-17bd60d5d14b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "room_register_name",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Rooms",
+    "path": "folders/Scripts/Core 2/Rooms.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "room_register_name",
+  "tags": [],
+  "resourceType": "GMScript",
 }

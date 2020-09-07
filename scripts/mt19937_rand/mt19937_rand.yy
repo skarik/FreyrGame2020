@@ -1,8 +1,12 @@
 {
-    "id": "a6bad8e1-8cbb-4e0c-8c11-ab0dc53ee8c2",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "mt19937_rand",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Random",
+    "path": "folders/Scripts/Core/Random.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "mt19937_rand",
+  "tags": [],
+  "resourceType": "GMScript",
 }

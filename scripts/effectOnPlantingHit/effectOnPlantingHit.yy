@@ -1,8 +1,12 @@
 {
-    "id": "da9036ca-910d-4a03-b7ac-2cad3f3c3749",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "effectOnPlantingHit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effect",
+    "path": "folders/Scripts/Game/Effect.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "effectOnPlantingHit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

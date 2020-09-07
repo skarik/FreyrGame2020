@@ -1,8 +1,12 @@
 {
-    "id": "1ef96f9f-6861-4905-b4d6-1787c8ff66fe",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "tarotSwordsAce",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Tarot",
+    "path": "folders/Scripts/Game/Tarot.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "tarotSwordsAce",
+  "tags": [],
+  "resourceType": "GMScript",
 }

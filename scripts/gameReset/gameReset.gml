@@ -1,4 +1,8 @@
-audio_stop_all();
+function gameReset() {
+	audio_stop_all();
 
 
-game_restart();
+	game_restart();
+
+
+}

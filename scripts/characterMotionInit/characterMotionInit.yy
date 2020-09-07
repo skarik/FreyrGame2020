@@ -1,8 +1,12 @@
 {
-    "id": "bca44c75-2ce1-44e6-b49c-5dc8c8d119cf",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "characterMotionInit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Character",
+    "path": "folders/Scripts/Game/Character.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "characterMotionInit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

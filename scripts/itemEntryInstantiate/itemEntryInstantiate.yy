@@ -1,8 +1,12 @@
 {
-    "id": "7944eb20-cd40-46d8-a11b-b9c8f9736416",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "itemEntryInstantiate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory System",
+    "path": "folders/Scripts/Game/Inventory System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "itemEntryInstantiate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

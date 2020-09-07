@@ -1,20 +1,24 @@
 /// @function playerRevealHazard(hazard)
 /// @param hazard {Enum, kHazard}
+function playerRevealHazard(argument0) {
 
-var hazard = argument0;
-var tx = x;
-var ty = y;
+	var hazard = argument0;
+	var tx = x;
+	var ty = y;
 
-if (point_on_camera(tx, ty))
-{
-	var pl = getPlayer();
-	if (iexists(pl))
+	if (point_on_camera(tx, ty))
 	{
-		if (!pl.pstats.m_hazards[hazard])
+		var pl = getPlayer();
+		if (iexists(pl))
 		{
-			pl.pstats.m_hazards[hazard] = 1;
-			// Create the UI graphic
-			inew(o_uiNewMagicHazard);
+			if (!pl.pstats.m_hazards[hazard])
+			{
+				pl.pstats.m_hazards[hazard] = 1;
+				// Create the UI graphic
+				inew(o_uiNewMagicHazard);
+			}
 		}
 	}
+
+
 }

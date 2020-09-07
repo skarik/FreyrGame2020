@@ -1,15 +1,19 @@
-with (o_PlayerTest)
-{
-	m_isKOed = false;
-	x = xstart;
-	y = ystart;
-	
-	if (room != rm_oasis_farm)
+function gameDeathSoftReset() {
+	with (o_PlayerTest)
 	{
-		room_goto(rm_oasis_farm);
-	}
+		m_isKOed = false;
+		x = xstart;
+		y = ystart;
 	
-	stats.m_health = ceil(stats.m_healthMax * 0.4);
-}
+		if (room != rm_oasis_farm)
+		{
+			room_goto(rm_oasis_farm);
+		}
+	
+		stats.m_health = ceil(stats.m_healthMax * 0.4);
+	}
 
-gameRespawnEnemies(kRespawnEnemeiesAll);
+	gameRespawnEnemies(kRespawnEnemeiesAll);
+
+
+}

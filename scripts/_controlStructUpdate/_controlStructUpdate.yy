@@ -1,8 +1,12 @@
 {
-    "id": "ec3bc1c4-2bf8-4cb2-9783-c228bed86cbe",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_controlStructUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Control",
+    "path": "folders/Scripts/Core 2/Control.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_controlStructUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

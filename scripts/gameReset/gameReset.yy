@@ -1,8 +1,12 @@
 {
-    "id": "7ab7077c-9f04-49fe-a3c8-8b880eef6ddc",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "gameReset",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Save State",
+    "path": "folders/Scripts/Game/Save State.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "gameReset",
+  "tags": [],
+  "resourceType": "GMScript",
 }

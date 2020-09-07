@@ -4,9 +4,13 @@
 /// @param new_y
 /// @param new_z
 /// @param z_offset
+function platform3_set_xyzh(argument0, argument1, argument2, argument3, argument4) {
 
-var platform = argument0;
-platform.x_requested = argument1;
-platform.y_requested = argument2;
-platform.y_requestedOffset = -argument4;
-platform.z_requested = argument3 + argument4;
+	var platform = argument0;
+	platform.x_requested = argument1;
+	platform.y_requested = argument2;
+	platform.y_requestedOffset = -argument4;
+	platform.z_requested = argument3 + argument4;
+
+
+}

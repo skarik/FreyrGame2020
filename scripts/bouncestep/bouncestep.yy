@@ -1,8 +1,12 @@
 {
-    "id": "11255813-b9c4-4e61-80ef-aa0e213360d9",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "bouncestep",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Parametric",
+    "path": "folders/Scripts/Core/Parametric.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "bouncestep",
+  "tags": [],
+  "resourceType": "GMScript",
 }

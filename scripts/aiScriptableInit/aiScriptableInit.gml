@@ -1,3 +1,4 @@
+function aiScriptableInit() {
 #region Scriptable States
 
 #macro kAiStyle_Default 0
@@ -15,35 +16,38 @@
 #macro kAiRequestCommand_FollowPath 6
 #macro kAiRequestCommand_Jump 7
 
-m_aiScript_style = kAiStyle_Default;
-kAiScriptDefaultStyle = kAiStyle_Default;
+	m_aiScript_style = kAiStyle_Default;
+	kAiScriptDefaultStyle = kAiStyle_Default;
 
-m_aiScript_requestStyle = null;
-m_aiScript_requestCommand = null;
-m_aiScript_requestPositionX = 0;
-m_aiScript_requestPositionY = 0;
-m_aiScript_requestAnimation = null;
-m_aiScript_requestAnimationLoop = false;
-m_aiScript_requestSpeed = 0;
-m_aiScript_requestPathnode = null;
+	m_aiScript_requestStyle = null;
+	m_aiScript_requestCommand = null;
+	m_aiScript_requestPositionX = 0;
+	m_aiScript_requestPositionY = 0;
+	m_aiScript_requestAnimation = null;
+	m_aiScript_requestAnimationLoop = false;
+	m_aiScript_requestSpeed = 0;
+	m_aiScript_requestPathnode = null;
 
-m_aiScript_wallTimer = 0.0;
-m_aiScript_wallBashCount = 0;
+	m_aiScript_wallTimer = 0.0;
+	m_aiScript_wallBashCount = 0;
 
-m_aiScript_pathTimer = 0.0;
+	m_aiScript_pathTimer = 0.0;
 
-m_aiScript_jumpTimer = 0.0;
-m_aiScript_jumpDistance = 0.0;
-m_aiScript_jumpStartX = 0;
-m_aiScript_jumpStartY = 0;
-m_aiScript_jumpStartZ = 0;
-m_aiScript_jumpTargetZ = 0;
+	m_aiScript_jumpTimer = 0.0;
+	m_aiScript_jumpDistance = 0.0;
+	m_aiScript_jumpStartX = 0;
+	m_aiScript_jumpStartY = 0;
+	m_aiScript_jumpStartZ = 0;
+	m_aiScript_jumpTargetZ = 0;
 
-aipathInit();
+	aipathInit();
 
-aiFollowerInit();
-aiLeaderInit();
-aiCustomInit();
-aicommonCombatInit();
+	aiFollowerInit();
+	aiLeaderInit();
+	aiCustomInit();
+	aicommonCombatInit();
 
 #endregion
+
+
+}

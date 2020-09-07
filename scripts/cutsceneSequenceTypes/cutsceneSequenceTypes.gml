@@ -1,3 +1,4 @@
+function cutsceneSequenceTypes() {
 #macro SEQTYPE_NULL -1
 #macro SEQTYPE_LABEL -2
 #macro SEQTYPE_LINES 0
@@ -159,3 +160,6 @@
 #macro kCtsPlayerActions_None 0
 #macro kCtsPlayerActions_Lock 1
 #macro kCtsPlayerActions_Unlock 2
+
+
+}

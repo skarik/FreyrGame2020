@@ -1,4 +1,9 @@
 /// @description Cutscene_SetOrganicness(organic)
 /// @param organic
-cts_organic = argument0;
+function cutsceneSetOrganicness(argument0) {
+	cts_organic = argument0;
 
+
+
+
+}

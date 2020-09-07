@@ -1,8 +1,12 @@
 {
-    "id": "cade3276-399e-4d03-bb99-2d8be4e48db2",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "questSave",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player_Game",
+    "path": "folders/Scripts/Game/Save State/Player_Game.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "questSave",
+  "tags": [],
+  "resourceType": "GMScript",
 }

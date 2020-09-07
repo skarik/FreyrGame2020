@@ -82,7 +82,7 @@ if (Settings.startup_overrideSave)
 	else
 		room_goto_next();
 }
-// or try to load a game
+// or t_try to load a game
 else if (Debug.reset || !gameLoad())
 {
     // If not, we just continue normally.

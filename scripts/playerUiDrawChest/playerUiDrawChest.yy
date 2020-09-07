@@ -1,8 +1,12 @@
 {
-    "id": "cd38e36f-ab3b-40bf-baf8-f44a24a8fd3e",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiDrawChest",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Draw",
+    "path": "folders/Scripts/Game/Player UI/Draw.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiDrawChest",
+  "tags": [],
+  "resourceType": "GMScript",
 }

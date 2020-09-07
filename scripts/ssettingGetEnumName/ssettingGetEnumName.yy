@@ -1,8 +1,12 @@
 {
-    "id": "81191bcf-b49f-42bc-9b97-57d1ec5152ab",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ssettingGetEnumName",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Single Settings",
+    "path": "folders/Scripts/Core 2/Settings/Single Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ssettingGetEnumName",
+  "tags": [],
+  "resourceType": "GMScript",
 }

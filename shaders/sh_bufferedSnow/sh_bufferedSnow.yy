@@ -1,7 +1,11 @@
 {
-    "id": "369c5362-00da-46d4-b7e1-c607a8309b69",
-    "modelName": "GMShader",
-    "mvc": "1.0",
-    "name": "sh_bufferedSnow",
-    "type": 1
+  "type": 1,
+  "parent": {
+    "name": "Water",
+    "path": "folders/Shaders/Water.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sh_bufferedSnow",
+  "tags": [],
+  "resourceType": "GMShader",
 }

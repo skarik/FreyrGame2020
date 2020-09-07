@@ -1,8 +1,12 @@
 {
-    "id": "d9d5e8c4-e39b-40c7-9c66-f36e484da273",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "col3_internal_tilemap_get_elevation",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Internal",
+    "path": "folders/Scripts/Game/Collision 3/Internal.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "col3_internal_tilemap_get_elevation",
+  "tags": [],
+  "resourceType": "GMScript",
 }

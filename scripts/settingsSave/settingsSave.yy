@@ -1,8 +1,12 @@
 {
-    "id": "800f1941-4573-4ebe-a05a-8626fdc2945a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "settingsSave",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Settings",
+    "path": "folders/Scripts/Core 2/Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "settingsSave",
+  "tags": [],
+  "resourceType": "GMScript",
 }

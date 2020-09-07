@@ -1,3 +1,8 @@
-//todo
+function cutsceneFree() {
+	//todo
 
-cutsceneEndEarly();
+	cutsceneEndEarly();
+
+
+
+}

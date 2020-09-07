@@ -1,8 +1,12 @@
 {
-    "id": "53f46fab-0df0-4fe4-8f2b-fbc76eb39bbd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_playeruiVendorDrawItemBox",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Vendor",
+    "path": "folders/Scripts/Game/Player UI/Vendor.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_playeruiVendorDrawItemBox",
+  "tags": [],
+  "resourceType": "GMScript",
 }

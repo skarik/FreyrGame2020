@@ -1,8 +1,12 @@
 {
-    "id": "2792d87a-c6f4-4382-9337-00616843bddb",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_cropWasWet",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Crop",
+    "path": "folders/Scripts/Game/Crop.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_cropWasWet",
+  "tags": [],
+  "resourceType": "GMScript",
 }

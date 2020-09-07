@@ -1,19 +1,23 @@
 ///@function array_remove_value(array, value)
 ///@param array
 ///@param value
+function array_remove_value(argument0, argument1) {
 
-var array = argument0;
-var value = argument1;
+	var array = argument0;
+	var value = argument1;
 
-var new_array = [];
-var new_array_index = 0;
-for (var i = 0; i < array_length_1d(array); ++i)
-{
-	if (array[i] != value)
+	var new_array = [];
+	var new_array_index = 0;
+	for (var i = 0; i < array_length_1d(array); ++i)
 	{
-		new_array[new_array_index] = array[i];
-		new_array_index++;
+		if (array[i] != value)
+		{
+			new_array[new_array_index] = array[i];
+			new_array_index++;
+		}
 	}
-}
 
-return new_array;
+	return new_array;
+
+
+}

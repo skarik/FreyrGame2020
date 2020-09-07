@@ -1,8 +1,12 @@
 {
-    "id": "b1666fee-590c-4810-8228-d269ed4149c6",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "gameTimescaleSet",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "World Events",
+    "path": "folders/Scripts/Game/World/World Events.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "gameTimescaleSet",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "63bd0c36-5020-42d8-a583-bea5b0450ad6",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiDrawVendor",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Draw",
+    "path": "folders/Scripts/Game/Player UI/Draw.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiDrawVendor",
+  "tags": [],
+  "resourceType": "GMScript",
 }

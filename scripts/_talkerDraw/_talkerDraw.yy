@@ -1,8 +1,12 @@
 {
-    "id": "d6824d33-df14-4367-af99-f935bbbd2d42",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_talkerDraw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Backend",
+    "path": "folders/Scripts/Common/Cutscene/Events/Backend.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_talkerDraw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "2ae6bcdf-e526-4cc0-b441-22f82ff6ccaf",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "array_concat",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Array",
+    "path": "folders/Scripts/Core/Array.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "array_concat",
+  "tags": [],
+  "resourceType": "GMScript",
 }

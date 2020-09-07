@@ -1,5 +1,9 @@
-with (o_PlayerCamera)
-{
-	m_cam_focus_offset_x = argument0;
-	m_cam_focus_offset_y = argument1;
+function camPlayerSetCenterOffset(argument0, argument1) {
+	with (o_PlayerCamera)
+	{
+		m_cam_focus_offset_x = argument0;
+		m_cam_focus_offset_y = argument1;
+	}
+
+
 }

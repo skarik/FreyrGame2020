@@ -1,5 +1,10 @@
 /// @description  is_space(char)
 /// @param char
-var o = ord(argument0);
-return (o > 8) && (o < 14) || (o == 32);
+function is_space(argument0) {
+	var o = ord(argument0);
+	return (o > 8) && (o < 14) || (o == 32);
 
+
+
+
+}

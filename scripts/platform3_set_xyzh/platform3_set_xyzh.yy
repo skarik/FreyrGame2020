@@ -1,8 +1,12 @@
 {
-    "id": "a410b08e-56e9-483b-b762-96941d81aabc",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "platform3_set_xyzh",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Collision 3",
+    "path": "folders/Scripts/Game/Collision 3.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "platform3_set_xyzh",
+  "tags": [],
+  "resourceType": "GMScript",
 }

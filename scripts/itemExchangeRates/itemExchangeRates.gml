@@ -1,3 +1,4 @@
+function itemExchangeRates() {
 #macro kResourceExchangeTurnipToBolts			2
 #macro kResourceExchangeTurnipToGears			1
 #macro kResourceExchangeTurnipToBoneShards		3
@@ -9,3 +10,6 @@
 #macro kResourceExchangeVoidShardToGears		20
 #macro kResourceExchangeVoidShardToBolts		40
 #macro kResourceExchangeVoidShardToBoneShards	60
+
+
+}

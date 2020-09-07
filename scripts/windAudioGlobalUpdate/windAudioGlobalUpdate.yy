@@ -1,8 +1,12 @@
 {
-    "id": "669d55fa-f245-4b7c-90d0-cba6437d3364",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "windAudioGlobalUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "World",
+    "path": "folders/Scripts/Game/World.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "windAudioGlobalUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

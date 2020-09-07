@@ -1,8 +1,12 @@
 {
-    "id": "243f5ac5-844d-4727-82ff-72c82f43e56c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aiGobboSquad_OnNewSquad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Gobbo Squad",
+    "path": "folders/Scripts/Game/AI & NPCs/Gobbo Squad.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aiGobboSquad_OnNewSquad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

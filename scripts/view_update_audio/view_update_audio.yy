@@ -1,8 +1,12 @@
 {
-    "id": "20811fc6-9fd0-4fb4-8ebc-ab2d9d17a209",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "view_update_audio",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Audio",
+    "path": "folders/Scripts/Common/Audio.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "view_update_audio",
+  "tags": [],
+  "resourceType": "GMScript",
 }

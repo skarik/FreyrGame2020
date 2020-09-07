@@ -1,8 +1,12 @@
 {
-    "id": "3b1024cd-23b4-4818-b232-abc9b27c9c57",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_gabberDraw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Backend",
+    "path": "folders/Scripts/Common/Cutscene/Events/Backend.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_gabberDraw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

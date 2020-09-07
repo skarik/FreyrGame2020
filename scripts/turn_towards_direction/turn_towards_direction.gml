@@ -5,8 +5,12 @@
 /// @param rate {Real} maximum turning rate (degrees)
 ///
 /// GMLscripts.com/license
-{
-	var dir = argument0;
-    dir += median(-argument2, argument2, angle_difference(argument1, dir));
-    return dir;
+function turn_towards_direction(argument0, argument1, argument2) {
+	{
+		var dir = argument0;
+	    dir += median(-argument2, argument2, angle_difference(argument1, dir));
+	    return dir;
+	}
+
+
 }

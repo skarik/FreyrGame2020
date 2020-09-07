@@ -1,8 +1,12 @@
 {
-    "id": "3a505045-ca98-4243-93da-92d468454e4b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "object_get_base_parent",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Instances",
+    "path": "folders/Scripts/Core 2/Instances.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "object_get_base_parent",
+  "tags": [],
+  "resourceType": "GMScript",
 }

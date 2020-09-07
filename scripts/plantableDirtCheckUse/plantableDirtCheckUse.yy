@@ -1,8 +1,12 @@
 {
-    "id": "56a84241-7e72-4cfe-8345-7b8986e62560",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "plantableDirtCheckUse",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Items",
+    "path": "folders/Scripts/Game/Items.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "plantableDirtCheckUse",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "1d0b2088-de85-454b-92b6-faaab5876ccc",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "vtileGetMaterial",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effect",
+    "path": "folders/Scripts/Game/Effect.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "vtileGetMaterial",
+  "tags": [],
+  "resourceType": "GMScript",
 }

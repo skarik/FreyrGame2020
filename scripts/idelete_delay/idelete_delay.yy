@@ -1,8 +1,12 @@
 {
-    "id": "24ac4ceb-2490-41d2-9219-f66823e9271c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "idelete_delay",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Instances",
+    "path": "folders/Scripts/Core 2/Instances.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "idelete_delay",
+  "tags": [],
+  "resourceType": "GMScript",
 }

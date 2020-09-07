@@ -1,8 +1,12 @@
 {
-    "id": "0836323c-b82e-42b7-9d9c-d8488475df03",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ssettingGetType",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Single Settings",
+    "path": "folders/Scripts/Core 2/Settings/Single Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ssettingGetType",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,10 +1,14 @@
-if (global._cutscene_main != null)
-{
-	var bIsDone = true;
-	with (global._cutscene_main)
+function ctsIsActive() {
+	if (global._cutscene_main != null)
 	{
-		bIsDone = cutsceneIsDone();
+		var bIsDone = true;
+		with (global._cutscene_main)
+		{
+			bIsDone = cutsceneIsDone();
+		}
+		return !bIsDone;
 	}
-	return !bIsDone;
+	return false;
+
+
 }
-return false;

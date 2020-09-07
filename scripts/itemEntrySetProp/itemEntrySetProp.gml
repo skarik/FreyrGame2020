@@ -11,15 +11,19 @@
 /// @param tradeItem
 /// @param userInfo
 /// @param userInfoString
-var item = argument0;
-	item.object		= argument1;
-	item.count		= argument2;
-	item.name		= argument3;
-	item.checkUse	= argument4;
-	item.onUse		= argument5;
-	item.onDeplete	= argument6;
-	item.onUi		= argument7;
-	item.type		= argument8;
-	item.tradeItem	= argument9;
-	item.userInfo	= argument10;
-	item.userInfoS	= argument11;
+function itemEntrySetProp(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9, argument10, argument11) {
+	var item = argument0;
+		item.object		= argument1;
+		item.count		= argument2;
+		item.name		= argument3;
+		item.checkUse	= argument4;
+		item.onUse		= argument5;
+		item.onDeplete	= argument6;
+		item.onUi		= argument7;
+		item.type		= argument8;
+		item.tradeItem	= argument9;
+		item.userInfo	= argument10;
+		item.userInfoS	= argument11;
+
+
+}

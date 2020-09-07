@@ -1,10 +1,14 @@
-var pl = getPlayer();
-if (iexists(pl))
-{
-	if (pl.m_isKOed)
+function worldShouldTick() {
+	var pl = getPlayer();
+	if (iexists(pl))
 	{
-		return false;
+		if (pl.m_isKOed)
+		{
+			return false;
+		}
 	}
-}
 
-return true;
+	return true;
+
+
+}

@@ -1,8 +1,12 @@
 {
-    "id": "afaa5218-be90-4f98-9dea-631e67417cec",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_cropSetWateredToday",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Crop",
+    "path": "folders/Scripts/Game/Crop.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_cropSetWateredToday",
+  "tags": [],
+  "resourceType": "GMScript",
 }

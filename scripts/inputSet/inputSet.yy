@@ -1,8 +1,12 @@
 {
-    "id": "fcf2c270-213a-45c5-badb-410658da8898",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "inputSet",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Control",
+    "path": "folders/Scripts/Core 2/Control.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "inputSet",
+  "tags": [],
+  "resourceType": "GMScript",
 }

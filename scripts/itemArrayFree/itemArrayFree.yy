@@ -1,8 +1,12 @@
 {
-    "id": "edc96e42-7c65-4836-9e72-5094e7d73d9b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "itemArrayFree",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory System",
+    "path": "folders/Scripts/Game/Inventory System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "itemArrayFree",
+  "tags": [],
+  "resourceType": "GMScript",
 }

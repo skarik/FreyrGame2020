@@ -3,25 +3,29 @@
 /// @param filename
 /// @param streamed
 /// @param looped
+function faudio_play2_file(argument0, argument1, argument2) {
 
-var filename = argument0;
-var streamed = argument1;
-var looped = argument2;
+	var filename = argument0;
+	var streamed = argument1;
+	var looped = argument2;
 
-if (!file_exists(filename))
-{
-	show_error("Could not find the audio '" + filename + "' for open.", true);
-    return null;
+	if (!file_exists(filename))
+	{
+		show_error("Could not find the audio '" + filename + "' for open.", true);
+	    return null;
+	}
+
+	var audio_player = inew(ob_audioPlayer2);
+
+	if (streamed)
+	{
+		audio_player.m_streamed = streamed;
+		audio_player.m_stream = audio_create_stream(filename);
+		audio_player.m_audio = 	audio_play_sound(audio_player.m_stream, 100, looped);
+		audio_sound_gain(audio_player.m_audio, Settings.audio_sfx_volume * Settings.audio_total_volume, 0.0);
+	}
+
+	return audio_player;
+
+
 }
-
-var audio_player = inew(ob_audioPlayer2);
-
-if (streamed)
-{
-	audio_player.m_streamed = streamed;
-	audio_player.m_stream = audio_create_stream(filename);
-	audio_player.m_audio = 	audio_play_sound(audio_player.m_stream, 100, looped);
-	audio_sound_gain(audio_player.m_audio, Settings.audio_sfx_volume * Settings.audio_total_volume, 0.0);
-}
-
-return audio_player;

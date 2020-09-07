@@ -1,114 +1,86 @@
 {
-    "id": "d744c24c-1ba7-4a8c-aaa0-5d7d4d2ec771",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "s_assetRailroadParts0V",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 68,
-    "bbox_left": 0,
-    "bbox_right": 39,
-    "bbox_top": 0,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "1a8b5c93-db42-489a-84b6-b0d90e6c71b8",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "d744c24c-1ba7-4a8c-aaa0-5d7d4d2ec771",
-            "compositeImage": {
-                "id": "52f58145-633d-4a77-a85b-288527d7f7a3",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "1a8b5c93-db42-489a-84b6-b0d90e6c71b8",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "960c2fb0-db62-4ed8-a44d-f0948a370f12",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "1a8b5c93-db42-489a-84b6-b0d90e6c71b8",
-                    "LayerId": "cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f"
-                }
-            ]
-        },
-        {
-            "id": "9174378e-03d4-4391-a797-13e61ea3f2ec",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "d744c24c-1ba7-4a8c-aaa0-5d7d4d2ec771",
-            "compositeImage": {
-                "id": "415eeeea-5717-4ae4-a154-8071791d559c",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "9174378e-03d4-4391-a797-13e61ea3f2ec",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "b788c202-f72c-48fe-89e5-4928209022a8",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "9174378e-03d4-4391-a797-13e61ea3f2ec",
-                    "LayerId": "cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f"
-                }
-            ]
-        },
-        {
-            "id": "4576005d-d0f1-4b65-991a-3aef7c97a1a6",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "d744c24c-1ba7-4a8c-aaa0-5d7d4d2ec771",
-            "compositeImage": {
-                "id": "a00ee72a-5a84-4dfd-9292-815d819eb2f5",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "4576005d-d0f1-4b65-991a-3aef7c97a1a6",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "f3e73959-abc5-4a5e-8ca4-3b84eb047664",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "4576005d-d0f1-4b65-991a-3aef7c97a1a6",
-                    "LayerId": "cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 69,
-    "layers": [
-        {
-            "id": "cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "d744c24c-1ba7-4a8c-aaa0-5d7d4d2ec771",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 4,
-    "originLocked": false,
-    "playbackSpeed": 0,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 0,
+  "bbox_right": 39,
+  "bbox_top": 0,
+  "bbox_bottom": 68,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 40,
+  "height": 69,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"1a8b5c93-db42-489a-84b6-b0d90e6c71b8","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1a8b5c93-db42-489a-84b6-b0d90e6c71b8","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"LayerId":{"name":"cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_assetRailroadParts0V","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","name":"1a8b5c93-db42-489a-84b6-b0d90e6c71b8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9174378e-03d4-4391-a797-13e61ea3f2ec","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9174378e-03d4-4391-a797-13e61ea3f2ec","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"LayerId":{"name":"cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_assetRailroadParts0V","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","name":"9174378e-03d4-4391-a797-13e61ea3f2ec","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4576005d-d0f1-4b65-991a-3aef7c97a1a6","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4576005d-d0f1-4b65-991a-3aef7c97a1a6","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"LayerId":{"name":"cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_assetRailroadParts0V","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","name":"4576005d-d0f1-4b65-991a-3aef7c97a1a6","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"s_assetRailroadParts0V","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
-    "type": 0,
-    "width": 40,
-    "xorig": 20,
-    "yorig": 34
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 3.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"dbfa49d2-583c-406c-b36e-064d9fd9651f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1a8b5c93-db42-489a-84b6-b0d90e6c71b8","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3f6347f6-750a-4400-82eb-6c400a44f711","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9174378e-03d4-4391-a797-13e61ea3f2ec","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7bdd43c0-a9c3-495a-9b25-e42e7a2ebbdd","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4576005d-d0f1-4b65-991a-3aef7c97a1a6","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 20,
+    "yorigin": 34,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"s_assetRailroadParts0V","path":"sprites/s_assetRailroadParts0V/s_assetRailroadParts0V.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cb5df0b7-407c-4d71-a2ea-cc5fc2fc765f","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "desert and ruins",
+    "path": "folders/Sprites/objects/desert and ruins.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "s_assetRailroadParts0V",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

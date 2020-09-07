@@ -1,3 +1,4 @@
+function questIds() {
 #macro kQuestNumber		1024
 #macro kQuestManager	o_PlayerQuest
 
@@ -19,3 +20,7 @@
 
 #macro kQidNathanEvents			15
 #macro kQidGoEvents				14
+
+
+
+}

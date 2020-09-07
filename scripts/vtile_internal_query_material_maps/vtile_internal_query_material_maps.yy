@@ -1,8 +1,12 @@
 {
-    "id": "5e6feca7-f07a-4be7-947b-a1cc6b63d632",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "vtile_internal_query_material_maps",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Internal",
+    "path": "folders/Scripts/Game/Collision 3/Internal.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "vtile_internal_query_material_maps",
+  "tags": [],
+  "resourceType": "GMScript",
 }

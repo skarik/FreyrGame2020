@@ -1,8 +1,12 @@
 {
-    "id": "08b30e07-226e-4518-b4c8-754025ce15af",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "quintInOut",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Parametric",
+    "path": "folders/Scripts/Core/Parametric.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "quintInOut",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "fb5f3748-c354-4d36-9b20-6aae4f7a34f6",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "gameSaveSpecific",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "World Events",
+    "path": "folders/Scripts/Game/World/World Events.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "gameSaveSpecific",
+  "tags": [],
+  "resourceType": "GMScript",
 }

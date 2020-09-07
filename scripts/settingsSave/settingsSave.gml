@@ -1,4 +1,8 @@
+function settingsSave() {
 
-settingsControlSave();
-settingsAudioSave();
-settingsGameplaySave();
+	settingsControlSave();
+	settingsAudioSave();
+	settingsGameplaySave();
+
+
+}

@@ -1,8 +1,12 @@
 {
-    "id": "7229edad-faf5-4390-9388-9c4d8f5c4787",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "controlAnyKey",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Control",
+    "path": "folders/Scripts/Core 2/Control.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "controlAnyKey",
+  "tags": [],
+  "resourceType": "GMScript",
 }

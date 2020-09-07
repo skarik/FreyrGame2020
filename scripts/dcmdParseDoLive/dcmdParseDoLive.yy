@@ -1,8 +1,12 @@
 {
-    "id": "7a311dfd-8da9-440b-b1c0-1f0786fcf6bb",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "dcmdParseDoLive",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Cmd",
+    "path": "folders/Scripts/Common/Debug/Cmd.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "dcmdParseDoLive",
+  "tags": [],
+  "resourceType": "GMScript",
 }

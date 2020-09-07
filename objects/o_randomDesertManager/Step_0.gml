@@ -75,7 +75,7 @@ for (var i = 0; i < ds_list_size(allRooms); ++i)
 	}
 }
 
-// try to generate anything out of screen view but not too far away
+// t_try to generate anything out of screen view but not too far away
 if (!ds_list_empty(allRooms))
 {
 	for (var i = 0; i < ds_list_size(allRooms); ++i)

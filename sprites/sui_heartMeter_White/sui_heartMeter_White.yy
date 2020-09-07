@@ -1,180 +1,98 @@
 {
-    "id": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "sui_heartMeter_White",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 8,
-    "bbox_left": 0,
-    "bbox_right": 12,
-    "bbox_top": 0,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "1607aa95-6568-4841-8b4f-4808e4a09309",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-            "compositeImage": {
-                "id": "2a9c46a3-246d-4ced-ad34-706d048b2c76",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "1607aa95-6568-4841-8b4f-4808e4a09309",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "0b6811d2-c560-41b3-a28e-ebbe1b05792d",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "1607aa95-6568-4841-8b4f-4808e4a09309",
-                    "LayerId": "9c04e4ab-3e90-4894-a329-82ae448141e3"
-                }
-            ]
-        },
-        {
-            "id": "622d6164-747f-41ce-85da-1d4f8e045bd7",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-            "compositeImage": {
-                "id": "8ecf9d4e-bdde-44ec-bd75-a01556632489",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "622d6164-747f-41ce-85da-1d4f8e045bd7",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "727ffbde-a02c-4e77-875d-96c2dc4dd697",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "622d6164-747f-41ce-85da-1d4f8e045bd7",
-                    "LayerId": "9c04e4ab-3e90-4894-a329-82ae448141e3"
-                }
-            ]
-        },
-        {
-            "id": "3c30dc27-3045-4458-95f6-0453d461520c",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-            "compositeImage": {
-                "id": "ca51d468-1443-49bb-a1ae-31211884f4ef",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "3c30dc27-3045-4458-95f6-0453d461520c",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "14d136d1-d88c-4b43-90b9-d673b6aff6cf",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "3c30dc27-3045-4458-95f6-0453d461520c",
-                    "LayerId": "9c04e4ab-3e90-4894-a329-82ae448141e3"
-                }
-            ]
-        },
-        {
-            "id": "e159ecca-3736-4bbf-acb7-7c86f6f28fe9",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-            "compositeImage": {
-                "id": "d6a8902a-79b8-4164-8149-1d672bf16912",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "e159ecca-3736-4bbf-acb7-7c86f6f28fe9",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "603420ae-8b38-4344-9be2-d7859bd29720",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "e159ecca-3736-4bbf-acb7-7c86f6f28fe9",
-                    "LayerId": "9c04e4ab-3e90-4894-a329-82ae448141e3"
-                }
-            ]
-        },
-        {
-            "id": "5af19b26-4883-4523-986e-60db4195809d",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-            "compositeImage": {
-                "id": "257a1c7b-1e45-4c78-a2c6-5d31ae548408",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "5af19b26-4883-4523-986e-60db4195809d",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "cf05e797-0ac8-486f-885c-9e902edb0c0a",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "5af19b26-4883-4523-986e-60db4195809d",
-                    "LayerId": "9c04e4ab-3e90-4894-a329-82ae448141e3"
-                }
-            ]
-        },
-        {
-            "id": "acbe19c8-4315-4322-9839-0c3a86b45044",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-            "compositeImage": {
-                "id": "8d0a10b8-0f23-433f-8a88-accb3a93ebf1",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "acbe19c8-4315-4322-9839-0c3a86b45044",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "4d7111f3-52fd-4c0f-a274-e436010086f5",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "acbe19c8-4315-4322-9839-0c3a86b45044",
-                    "LayerId": "9c04e4ab-3e90-4894-a329-82ae448141e3"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 9,
-    "layers": [
-        {
-            "id": "9c04e4ab-3e90-4894-a329-82ae448141e3",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "a6a3027f-8f98-4e0a-a8e4-79512c1aaf5c",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 4,
-    "originLocked": false,
-    "playbackSpeed": 15,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 0,
+  "bbox_right": 12,
+  "bbox_top": 0,
+  "bbox_bottom": 8,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 13,
+  "height": 9,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"1607aa95-6568-4841-8b4f-4808e4a09309","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1607aa95-6568-4841-8b4f-4808e4a09309","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":{"name":"9c04e4ab-3e90-4894-a329-82ae448141e3","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"1607aa95-6568-4841-8b4f-4808e4a09309","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"622d6164-747f-41ce-85da-1d4f8e045bd7","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"622d6164-747f-41ce-85da-1d4f8e045bd7","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":{"name":"9c04e4ab-3e90-4894-a329-82ae448141e3","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"622d6164-747f-41ce-85da-1d4f8e045bd7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3c30dc27-3045-4458-95f6-0453d461520c","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3c30dc27-3045-4458-95f6-0453d461520c","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":{"name":"9c04e4ab-3e90-4894-a329-82ae448141e3","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"3c30dc27-3045-4458-95f6-0453d461520c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e159ecca-3736-4bbf-acb7-7c86f6f28fe9","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e159ecca-3736-4bbf-acb7-7c86f6f28fe9","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":{"name":"9c04e4ab-3e90-4894-a329-82ae448141e3","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"e159ecca-3736-4bbf-acb7-7c86f6f28fe9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5af19b26-4883-4523-986e-60db4195809d","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5af19b26-4883-4523-986e-60db4195809d","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":{"name":"9c04e4ab-3e90-4894-a329-82ae448141e3","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"5af19b26-4883-4523-986e-60db4195809d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"acbe19c8-4315-4322-9839-0c3a86b45044","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"acbe19c8-4315-4322-9839-0c3a86b45044","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"LayerId":{"name":"9c04e4ab-3e90-4894-a329-82ae448141e3","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","name":"acbe19c8-4315-4322-9839-0c3a86b45044","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
-    "type": 0,
-    "width": 13,
-    "xorig": 6,
-    "yorig": 4
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 6.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"21a0d47e-380f-4ab2-8513-ecbb5fa36909","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1607aa95-6568-4841-8b4f-4808e4a09309","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dcee13d3-cefd-4153-99c8-7540707bda57","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"622d6164-747f-41ce-85da-1d4f8e045bd7","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9d49c7b7-8ba6-4267-bb27-7e7dedab8716","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c30dc27-3045-4458-95f6-0453d461520c","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cfd6b05f-e330-4ff6-9ded-9a81cf58f8e5","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e159ecca-3736-4bbf-acb7-7c86f6f28fe9","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7e4efe3f-e2e3-4f96-9e81-e9bbabab2352","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5af19b26-4883-4523-986e-60db4195809d","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2efecbb6-e875-4857-9645-032d3cdd4d10","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acbe19c8-4315-4322-9839-0c3a86b45044","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 6,
+    "yorigin": 4,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"sui_heartMeter_White","path":"sprites/sui_heartMeter_White/sui_heartMeter_White.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9c04e4ab-3e90-4894-a329-82ae448141e3","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "frontend and inventory",
+    "path": "folders/Sprites/ui/frontend and inventory.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sui_heartMeter_White",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

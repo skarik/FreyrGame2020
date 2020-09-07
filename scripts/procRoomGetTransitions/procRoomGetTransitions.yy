@@ -1,8 +1,12 @@
 {
-    "id": "fb412a6a-5612-48c2-ad3f-a6f976af12a2",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "procRoomGetTransitions",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Procgen Desert",
+    "path": "folders/Scripts/R & D/Procgen Desert.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "procRoomGetTransitions",
+  "tags": [],
+  "resourceType": "GMScript",
 }

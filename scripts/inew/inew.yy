@@ -1,8 +1,12 @@
 {
-    "id": "8ae87ec2-c497-411e-8b0e-f9e3e3481cfb",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "inew",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Shorthand",
+    "path": "folders/Scripts/Core/Shorthand.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "inew",
+  "tags": [],
+  "resourceType": "GMScript",
 }

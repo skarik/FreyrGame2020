@@ -1,15 +1,19 @@
-// @description returns true when grapple can be used
+function grappleCheckUse(argument0) {
+	// @description returns true when grapple can be used
 
-var _itemType = argument0;
+	var _itemType = argument0;
 
-if (moScriptOverride != null)
-{
-	return false;
+	if (moScriptOverride != null)
+	{
+		return false;
+	}
+
+	if (isDashing || isAttacking)
+	{
+		return false;
+	}
+
+	return true;
+
+
 }
-
-if (isDashing || isAttacking)
-{
-	return false;
-}
-
-return true;

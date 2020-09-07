@@ -1,8 +1,12 @@
 {
-    "id": "2d857c2a-dadc-4a2f-a340-e245629448be",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "cutsceneBackendLoad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Sequencer",
+    "path": "folders/Scripts/Common/Cutscene/Sequencer.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "cutsceneBackendLoad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

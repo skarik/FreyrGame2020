@@ -1,8 +1,12 @@
 {
-    "id": "af29fa42-90c0-487e-a646-19a5084a1e08",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "doodadDestraHealth",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Doodad Specifics",
+    "path": "folders/Scripts/Common/Doodad/Doodad Specifics.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "doodadDestraHealth",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "adac0ba3-c745-4d9c-86a3-d877f7634050",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "powerLogic_LatchOutput",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lively",
+    "path": "folders/Scripts/Game/World/Lively.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "powerLogic_LatchOutput",
+  "tags": [],
+  "resourceType": "GMScript",
 }

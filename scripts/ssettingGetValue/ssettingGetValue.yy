@@ -1,8 +1,12 @@
 {
-    "id": "e45e3107-fe87-41c1-91e7-eeec52133235",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ssettingGetValue",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Single Settings",
+    "path": "folders/Scripts/Core 2/Settings/Single Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ssettingGetValue",
+  "tags": [],
+  "resourceType": "GMScript",
 }

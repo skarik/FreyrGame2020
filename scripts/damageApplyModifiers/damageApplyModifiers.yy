@@ -1,8 +1,12 @@
 {
-    "id": "33a16ba5-1540-47fa-b42f-f12adc454fba",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "damageApplyModifiers",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Damage",
+    "path": "folders/Scripts/Game/Damage.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "damageApplyModifiers",
+  "tags": [],
+  "resourceType": "GMScript",
 }

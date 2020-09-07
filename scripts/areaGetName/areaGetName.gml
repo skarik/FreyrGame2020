@@ -1,15 +1,19 @@
-var area = argument0;
+function areaGetName(argument0) {
+	var area = argument0;
 
-switch (area)
-{
-	case kAreaOasis:
-		return "Oasis";
+	switch (area)
+	{
+		case kAreaOasis:
+			return "Oasis";
 		
-	case kAreaFoolsMarch:
-		return "Fool's March";
+		case kAreaFoolsMarch:
+			return "Fool's March";
 		
-	case kAreaLibrary:
-		return "???";
+		case kAreaLibrary:
+			return "???";
+	}
+
+	return "";
+
+
 }
-
-return "";

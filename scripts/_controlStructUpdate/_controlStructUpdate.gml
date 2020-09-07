@@ -2,14 +2,19 @@
 /// @desc This function should not be called directly.
 /// @param control {object}
 /// @param newValue {real}
-var control = argument0;
-var newValue = argument1;
+function _controlStructUpdate(argument0, argument1) {
+	var control = argument0;
+	var newValue = argument1;
 
-control.previous = control.value;
-control.value = newValue;
+	control.previous = control.value;
+	control.value = newValue;
 
-var wasDown = control.down;
-control.down = abs(control.value) > 0.707;
+	var wasDown = control.down;
+	control.down = abs(control.value) > 0.707;
 
-control.released = wasDown && !control.down;
-control.pressed = !wasDown && control.down;
+	control.released = wasDown && !control.down;
+	control.pressed = !wasDown && control.down;
+
+
+
+}

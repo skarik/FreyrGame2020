@@ -1,8 +1,12 @@
 {
-    "id": "1d4a92ab-4f35-4c0e-968e-8e9e6e399019",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "mlgmodeGlobalUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Jokes",
+    "path": "folders/Scripts/Game/World/Jokes.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "mlgmodeGlobalUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "9c5decd7-9806-4ee1-9d21-be738627e67b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "farmClearObjects",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Save State",
+    "path": "folders/Scripts/Game/Save State.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "farmClearObjects",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "41abc523-b098-46b0-9b93-936ca2dc753c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "atkwarnShapeGetVertices",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Warn Overlay Choreograph",
+    "path": "folders/Scripts/Game/AI & NPCs/Warn Overlay Choreograph.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "atkwarnShapeGetVertices",
+  "tags": [],
+  "resourceType": "GMScript",
 }

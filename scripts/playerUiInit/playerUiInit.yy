@@ -1,8 +1,12 @@
 {
-    "id": "7af7373b-ec41-4459-86d1-d9db63b98ac0",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiInit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player UI",
+    "path": "folders/Scripts/Game/Player UI.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiInit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

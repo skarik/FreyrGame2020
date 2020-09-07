@@ -1,8 +1,12 @@
 {
-    "id": "9d2d2eb4-e35b-42c0-832a-3a24f22002a9",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aiscriptRequestFace",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "AI & NPCs",
+    "path": "folders/Scripts/Game/AI & NPCs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aiscriptRequestFace",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "6f927dcc-8fe5-492f-a775-744aa8fb66db",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "areaConstants",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Areas",
+    "path": "folders/Scripts/Game/World/Areas.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "areaConstants",
+  "tags": [],
+  "resourceType": "GMScript",
 }

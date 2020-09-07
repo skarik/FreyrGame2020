@@ -1,68 +1,72 @@
-var _itemType = argument0;
+function plantableWaterCheckUse(argument0) {
+	var _itemType = argument0;
 
-/*_playerInteractPlantables(true);
-return m_plantable;*/
+	/*_playerInteractPlantables(true);
+	return m_plantable;*/
 
-var l_canMove = argument0;
-var gridSize = 16;
+	var l_canMove = argument0;
+	var gridSize = 16;
 
-m_plantable = false;
+	m_plantable = false;
 
-if (!m_isPlanting)
-{
-	if (!m_isTilling && canMove && !isBusyInteracting
-	    && l_canMove && !isBlocking /*&& !iexists(currentUsable)*/ && !iexists(currentHeldUsable) /*&& !iexists(currentCrop)*/ && !m_isHolding)
+	if (!m_isPlanting)
 	{
-		// Find the piece of land to till:
-		var tillPosition = _playerInteract_GetAimPosition(1, 2.0, 28.0, 16.0 * 0.5 + 1.0);
-		var tillX = tillPosition[0];
-		var tillY = tillPosition[1];
-		tillX = round((tillX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
-		tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
-
-		m_plant_dirt = null;//collision_point(tillX, tillY, o_fieldSquare, false, true);
-		/*if (iexists(m_plant_dirt))
+		if (!m_isTilling && canMove && !isBusyInteracting
+		    && l_canMove && !isBlocking /*&& !iexists(currentUsable)*/ && !iexists(currentHeldUsable) /*&& !iexists(currentCrop)*/ && !m_isHolding)
 		{
-			m_plant_x = tillX;
-			m_plant_y = tillY;
-		
-			// make sure not tilled or planted
-			if (m_plant_dirt.tilled && !m_plant_dirt.planted)
+			// Find the piece of land to till:
+			var tillPosition = _playerInteract_GetAimPosition(1, 2.0, 28.0, 16.0 * 0.5 + 1.0);
+			var tillX = tillPosition[0];
+			var tillY = tillPosition[1];
+			tillX = round((tillX - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
+			tillY = round((tillY - gridSize / 2) / gridSize) * gridSize + gridSize / 2;
+
+			m_plant_dirt = null;//collision_point(tillX, tillY, o_fieldSquare, false, true);
+			/*if (iexists(m_plant_dirt))
 			{
+				m_plant_x = tillX;
+				m_plant_y = tillY;
+		
+				// make sure not tilled or planted
+				if (m_plant_dirt.tilled && !m_plant_dirt.planted)
+				{
+					m_plantable = true;
+				}
+			}*/
+		
+			//m_plant_water = collision_point(tillX, tillY, ob_areaWater, false, true);
+			var m_plant_water = areaPointInWater(tillX, tillY, z + 4);
+			if (m_plant_water)
+			{
+				m_plant_x = tillX;
+				m_plant_y = tillY;
+			
 				m_plantable = true;
 			}
-		}*/
-		
-		//m_plant_water = collision_point(tillX, tillY, ob_areaWater, false, true);
-		var m_plant_water = areaPointInWater(tillX, tillY, z + 4);
-		if (m_plant_water)
-		{
-			m_plant_x = tillX;
-			m_plant_y = tillY;
-			
-			m_plantable = true;
 		}
 	}
-}
-/*else
-{ // Perform the planting animation logic
-	if (m_plant_timer < 1.0)
-	{
-		var previous_timer = m_plant_timer;
-	
-		m_plant_timer += Time.deltaTime / m_plant_time;
-	
-		// Do visuals
-		if (previous_timer < 2.5/7 && m_till_timer >= 2.5/7)
+	/*else
+	{ // Perform the planting animation logic
+		if (m_plant_timer < 1.0)
 		{
-			effectOnPlantingHit(m_plant_x, m_plant_y);
+			var previous_timer = m_plant_timer;
+	
+			m_plant_timer += Time.deltaTime / m_plant_time;
+	
+			// Do visuals
+			if (previous_timer < 2.5/7 && m_till_timer >= 2.5/7)
+			{
+				effectOnPlantingHit(m_plant_x, m_plant_y);
+			}
 		}
-	}
-	else
-	{
-		m_plant_timer = 0.0;
-		m_isPlanting = false;
-	}	
-}*/
+		else
+		{
+			m_plant_timer = 0.0;
+			m_isPlanting = false;
+		}	
+	}*/
 
-return m_plantable;
+	return m_plantable;
+
+
+}

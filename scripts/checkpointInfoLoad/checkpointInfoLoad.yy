@@ -1,8 +1,12 @@
 {
-    "id": "93ad6df2-c7a4-4854-890a-f9ac66634ba5",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "checkpointInfoLoad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Checkpoint Info",
+    "path": "folders/Scripts/Game/Save State/Player_Game/Checkpoint Info.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "checkpointInfoLoad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "14cc191f-2a15-44a5-9562-3120beda5f09",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_playerMoAttack1",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Movetypes",
+    "path": "folders/Scripts/Game/Player/Movetypes.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_playerMoAttack1",
+  "tags": [],
+  "resourceType": "GMScript",
 }

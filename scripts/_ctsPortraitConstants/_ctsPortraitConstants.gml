@@ -1,3 +1,4 @@
+function _ctsPortraitConstants() {
 #macro kPortraitActionShow 0
 #macro kPortraitActionHide 1
 #macro kPortraitActionMove 2
@@ -9,3 +10,6 @@
 
 #macro kPortraitExpressionNeutral 0
 #macro kPortraitExpressionQuestioning 1
+
+
+}

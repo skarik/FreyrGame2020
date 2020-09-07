@@ -1,8 +1,12 @@
 {
-    "id": "f8414e01-0c47-4dd6-8944-d1f1950d0af7",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "characterBloodTypes",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Character",
+    "path": "folders/Scripts/Game/Character.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "characterBloodTypes",
+  "tags": [],
+  "resourceType": "GMScript",
 }

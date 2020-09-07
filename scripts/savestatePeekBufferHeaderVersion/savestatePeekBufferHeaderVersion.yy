@@ -1,8 +1,12 @@
 {
-    "id": "b93d2161-18c4-48bb-b97b-321249e8326a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "savestatePeekBufferHeaderVersion",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Common",
+    "path": "folders/Scripts/Game/Save State/Common.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "savestatePeekBufferHeaderVersion",
+  "tags": [],
+  "resourceType": "GMScript",
 }

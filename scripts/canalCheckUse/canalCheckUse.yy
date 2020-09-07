@@ -1,8 +1,12 @@
 {
-    "id": "4d409182-c3d1-45d1-8ede-72161fbb8f69",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "canalCheckUse",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Items",
+    "path": "folders/Scripts/Game/Items.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "canalCheckUse",
+  "tags": [],
+  "resourceType": "GMScript",
 }

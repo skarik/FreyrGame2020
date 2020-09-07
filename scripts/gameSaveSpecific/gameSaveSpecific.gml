@@ -1,14 +1,19 @@
 /// @function gameSaveSpecific(from)
 /// @param from {kSaveFrom}
+function gameSaveSpecific(argument0) {
 
 #macro kSaveFromBook 0
 #macro kSaveFromCheckpointMinor 1
 #macro kSaveFromCheckpointMajor 2
 
-var save_from = argument0;
+	var save_from = argument0;
 
-// TODO
+	// TODO
 
-gameSave();
+	gameSave();
 
-// if from book, do not mark as things need to respawn
+	// if from book, do not mark as things need to respawn
+
+
+
+}

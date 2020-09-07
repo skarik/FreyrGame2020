@@ -1,8 +1,12 @@
 {
-    "id": "82a25c99-b317-4e27-a4d8-f065eb3bee7d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiUpdateFarmOverlay",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Update",
+    "path": "folders/Scripts/Game/Player UI/Update.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiUpdateFarmOverlay",
+  "tags": [],
+  "resourceType": "GMScript",
 }

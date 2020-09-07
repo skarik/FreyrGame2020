@@ -1,10 +1,14 @@
-// Apply gravity
-zspeed -= zgravity * Time.deltaTime;
+function particleZMotionUpdate() {
+	// Apply gravity
+	zspeed -= zgravity * Time.deltaTime;
 
-// Apply motion
-x += xspeed * Time.deltaTime;
-y += yspeed * Time.deltaTime;
-z_height += zspeed * Time.deltaTime;
+	// Apply motion
+	x += xspeed * Time.deltaTime;
+	y += yspeed * Time.deltaTime;
+	z_height += zspeed * Time.deltaTime;
 
 
-depthUpdate();
+	depthUpdate();
+
+
+}

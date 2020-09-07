@@ -1,92 +1,82 @@
 {
-    "id": "d5320e8c-1f40-4761-8ae8-b3c96a5109a1",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "sui_astrolabeTimeOfDay",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 48,
-    "bbox_left": 1,
-    "bbox_right": 48,
-    "bbox_top": 1,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "796d5aad-4cca-4406-8e6c-b41735267f11",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "d5320e8c-1f40-4761-8ae8-b3c96a5109a1",
-            "compositeImage": {
-                "id": "638498cb-1df2-4bd5-9af8-3de459ae6bb2",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "796d5aad-4cca-4406-8e6c-b41735267f11",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "e0161bf2-db29-4b73-8bb8-ea0056890c74",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "796d5aad-4cca-4406-8e6c-b41735267f11",
-                    "LayerId": "b59b7155-79ef-4841-ae8c-34f6aea2f785"
-                }
-            ]
-        },
-        {
-            "id": "b0a30bfb-424b-47bd-ace7-a2b25b5e4ddf",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "d5320e8c-1f40-4761-8ae8-b3c96a5109a1",
-            "compositeImage": {
-                "id": "be606cd5-0211-4a33-8532-45d14c9d106b",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "b0a30bfb-424b-47bd-ace7-a2b25b5e4ddf",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "ce34d221-b138-4ad6-8d6b-4a017cc1ccc5",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "b0a30bfb-424b-47bd-ace7-a2b25b5e4ddf",
-                    "LayerId": "b59b7155-79ef-4841-ae8c-34f6aea2f785"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 50,
-    "layers": [
-        {
-            "id": "b59b7155-79ef-4841-ae8c-34f6aea2f785",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "d5320e8c-1f40-4761-8ae8-b3c96a5109a1",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 4,
-    "originLocked": false,
-    "playbackSpeed": 15,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 1,
+  "bbox_right": 48,
+  "bbox_top": 1,
+  "bbox_bottom": 48,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 50,
+  "height": 50,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"796d5aad-4cca-4406-8e6c-b41735267f11","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"796d5aad-4cca-4406-8e6c-b41735267f11","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"LayerId":{"name":"b59b7155-79ef-4841-ae8c-34f6aea2f785","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_astrolabeTimeOfDay","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"resourceVersion":"1.0","name":"796d5aad-4cca-4406-8e6c-b41735267f11","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b0a30bfb-424b-47bd-ace7-a2b25b5e4ddf","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b0a30bfb-424b-47bd-ace7-a2b25b5e4ddf","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"LayerId":{"name":"b59b7155-79ef-4841-ae8c-34f6aea2f785","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sui_astrolabeTimeOfDay","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"resourceVersion":"1.0","name":"b0a30bfb-424b-47bd-ace7-a2b25b5e4ddf","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"sui_astrolabeTimeOfDay","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
-    "type": 0,
-    "width": 50,
-    "xorig": 25,
-    "yorig": 25
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 2.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e9b106fa-ecbf-4f21-93ee-6a18f8f90285","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"796d5aad-4cca-4406-8e6c-b41735267f11","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a0c80521-60f6-4885-adf2-7b02ccdf5932","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b0a30bfb-424b-47bd-ace7-a2b25b5e4ddf","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 25,
+    "yorigin": 25,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"sui_astrolabeTimeOfDay","path":"sprites/sui_astrolabeTimeOfDay/sui_astrolabeTimeOfDay.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b59b7155-79ef-4841-ae8c-34f6aea2f785","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "astrolabe",
+    "path": "folders/Sprites/ui/astrolabe.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sui_astrolabeTimeOfDay",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

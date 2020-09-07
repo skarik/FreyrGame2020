@@ -1,8 +1,12 @@
 {
-    "id": "87bcfde3-7586-4e27-8a6d-d6642f1cf9ee",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "instance_get_left",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Instances",
+    "path": "folders/Scripts/Core 2/Instances.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "instance_get_left",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "720b1eb5-237e-41ef-a3a5-847e75fe92e1",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "controlSettingSet",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Control Settings",
+    "path": "folders/Scripts/Core 2/Settings/Control Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "controlSettingSet",
+  "tags": [],
+  "resourceType": "GMScript",
 }

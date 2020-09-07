@@ -1,8 +1,12 @@
 {
-    "id": "89aea96b-7f6a-4a2e-b53b-556d58993f74",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "draw_9slice_flex3",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Drawing",
+    "path": "folders/Scripts/Core 2/Drawing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "draw_9slice_flex3",
+  "tags": [],
+  "resourceType": "GMScript",
 }

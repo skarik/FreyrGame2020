@@ -4,18 +4,22 @@
 /// @param speed
 /// @param looped
 /// @param end_on_finish
+function cutscenePlayerPlayAnimation(argument0, argument1, argument2, argument3, argument4) {
 
-var pl = argument0;
-var animation_sprite = argument1;
-var animation_speed = argument2;
-var animation_looped = argument3;
-var animation_killdone = argument4;
+	var pl = argument0;
+	var animation_sprite = argument1;
+	var animation_speed = argument2;
+	var animation_looped = argument3;
+	var animation_killdone = argument4;
 
-// Set up the animation
-pl.moAnimationPlayback = true;
-pl.moAnimationPlaybackLooped = animation_looped;
-pl.animationSpeed = animation_speed;
-pl.moAnimationPlaybackEndOnFinish = animation_killdone;
-pl.animationIndex = 0.0;
-pl.image_index = 0.0;
-pl.sprite_index = animation_sprite;
+	// Set up the animation
+	pl.moAnimationPlayback = true;
+	pl.moAnimationPlaybackLooped = animation_looped;
+	pl.animationSpeed = animation_speed;
+	pl.moAnimationPlaybackEndOnFinish = animation_killdone;
+	pl.animationIndex = 0.0;
+	pl.image_index = 0.0;
+	pl.sprite_index = animation_sprite;
+
+
+}

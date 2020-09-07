@@ -1,8 +1,12 @@
 {
-    "id": "ff433783-eea7-4202-b637-d84f970a1b7b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "duiGetAlphaGlobal",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "UI",
+    "path": "folders/Scripts/Common/Debug/UI.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "duiGetAlphaGlobal",
+  "tags": [],
+  "resourceType": "GMScript",
 }

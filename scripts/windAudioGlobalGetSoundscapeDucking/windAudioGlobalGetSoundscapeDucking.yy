@@ -1,8 +1,12 @@
 {
-    "id": "bdc73301-ca23-4bf4-be12-324839c1c56d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "windAudioGlobalGetSoundscapeDucking",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "World",
+    "path": "folders/Scripts/Game/World.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "windAudioGlobalGetSoundscapeDucking",
+  "tags": [],
+  "resourceType": "GMScript",
 }

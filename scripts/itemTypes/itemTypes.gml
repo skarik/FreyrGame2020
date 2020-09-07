@@ -1,3 +1,4 @@
+function itemTypes() {
 #region Item Types
 #macro kItemPickupNormal 0
 #macro kItemPickupSeed 1
@@ -22,3 +23,6 @@
 #macro kBoxCropRewards "cropmunny#yolo"
 #macro kBoxCropSending "cropgiven#swag"
 #endregion
+
+
+}

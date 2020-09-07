@@ -1,8 +1,12 @@
 {
-    "id": "8e8cbe4a-e58c-4412-aabc-08bfd9302147",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "itemEntryDecrement",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory System",
+    "path": "folders/Scripts/Game/Inventory System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "itemEntryDecrement",
+  "tags": [],
+  "resourceType": "GMScript",
 }

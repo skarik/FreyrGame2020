@@ -1,7 +1,11 @@
 {
-    "id": "15ec259b-7feb-4938-9ad1-3dd5ca32254f",
-    "modelName": "GMShader",
-    "mvc": "1.0",
-    "name": "sh_reference",
-    "type": 1
+  "type": 1,
+  "parent": {
+    "name": "Shaders",
+    "path": "folders/Shaders.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sh_reference",
+  "tags": [],
+  "resourceType": "GMShader",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "f5d1d1bb-5234-4f01-a85c-3f2349499bde",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiControlSelectFromArray",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Control Util",
+    "path": "folders/Scripts/Game/Player UI/Control Util.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiControlSelectFromArray",
+  "tags": [],
+  "resourceType": "GMScript",
 }

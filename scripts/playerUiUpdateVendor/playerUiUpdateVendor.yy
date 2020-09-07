@@ -1,8 +1,12 @@
 {
-    "id": "d2689e1b-5248-4fd3-a020-defc94c75117",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiUpdateVendor",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Update",
+    "path": "folders/Scripts/Game/Player UI/Update.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiUpdateVendor",
+  "tags": [],
+  "resourceType": "GMScript",
 }

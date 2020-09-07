@@ -1,8 +1,12 @@
 {
-    "id": "ce61aa0f-9653-4c85-a4b9-b2b8288d2283",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "fmusic_play_introtrack",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Music",
+    "path": "folders/Scripts/Common/Audio/Music.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "fmusic_play_introtrack",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,67 +1,46 @@
 {
-    "id": "fbd8da4d-a836-45b2-8ed5-51c84abf2347",
-    "modelName": "GMObject",
-    "mvc": "1.0",
-    "name": "o_livelyPoweredSapper",
-    "eventList": [
-        
-    ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": [
-        {
-            "id": "abd6a514-f80d-4d4d-b1bb-adfd770760ff",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
-            "propertyId": "98886493-7ab0-45d7-8bef-a55a309e2e8a",
-            "value": "powerLogic_SapperSupply"
-        }
-    ],
-    "parentObjectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
-    "persistent": false,
-    "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
-    "physicsFriction": 0.2,
-    "physicsGroup": 0,
-    "physicsKinematic": false,
-    "physicsLinearDamping": 0.1,
-    "physicsObject": false,
-    "physicsRestitution": 0.1,
-    "physicsSensor": false,
-    "physicsShape": 1,
-    "physicsShapePoints": null,
-    "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "98367c97-9d09-4ba5-a53a-238c100d2e80",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 256,
-            "value": "null",
-            "varName": "m_powerSapper",
-            "varType": 5
-        },
-        {
-            "id": "1aa03653-50a6-476c-9792-c5443af89725",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 256,
-            "value": "null",
-            "varName": "m_powerAlternateTarget",
-            "varType": 5
-        }
-    ],
-    "solid": false,
-    "spriteId": "fea9def3-2c6e-4670-b6c4-18a6045b35af",
-    "visible": false
+  "spriteId": {
+    "name": "ssy_power",
+    "path": "sprites/ssy_power/ssy_power.yy",
+  },
+  "solid": false,
+  "visible": false,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "ob_livelyPowered",
+    "path": "objects/ob_livelyPowered/ob_livelyPowered.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [],
+  "properties": [
+    {"varType":5,"value":"null","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
+        "GMObject",
+      ],"resourceVersion":"1.0","name":"m_powerSapper","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"null","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
+        "GMObject",
+      ],"resourceVersion":"1.0","name":"m_powerAlternateTarget","tags":[],"resourceType":"GMObjectProperty",},
+  ],
+  "overriddenProperties": [
+    {"propertyId":{"name":"m_powerSupplyCallback","path":"objects/ob_livelyPowered/ob_livelyPowered.yy",},"objectId":{"name":"ob_livelyPowered","path":"objects/ob_livelyPowered/ob_livelyPowered.yy",},"value":"powerLogic_SapperSupply","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Logic & Flow",
+    "path": "folders/Objects/Gameplay/Lively/Logic & Flow.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "o_livelyPoweredSapper",
+  "tags": [],
+  "resourceType": "GMObject",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "55ee7344-8e73-4b3a-826b-64364eedaadd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "effectOnTillDigHit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effect",
+    "path": "folders/Scripts/Game/Effect.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "effectOnTillDigHit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

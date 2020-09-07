@@ -1,8 +1,12 @@
 {
-    "id": "a004bbc5-63d0-4ee3-8e7e-e4cb7a6bb2b2",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiDrawFarmOverlay",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Draw",
+    "path": "folders/Scripts/Game/Player UI/Draw.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiDrawFarmOverlay",
+  "tags": [],
+  "resourceType": "GMScript",
 }

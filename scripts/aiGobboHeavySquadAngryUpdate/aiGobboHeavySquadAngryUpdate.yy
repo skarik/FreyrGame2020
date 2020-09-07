@@ -1,8 +1,12 @@
 {
-    "id": "02e03c49-7e44-454a-82d3-f76e7dd1b9eb",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aiGobboHeavySquadAngryUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Gobbo Squad",
+    "path": "folders/Scripts/Game/AI & NPCs/Gobbo Squad.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aiGobboHeavySquadAngryUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

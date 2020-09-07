@@ -1,5 +1,9 @@
-if (iexists(o_dayNightCycle))
-{
-	return o_dayNightCycle.m_day;
+function timeofdayGetDay() {
+	if (iexists(o_dayNightCycle))
+	{
+		return o_dayNightCycle.m_day;
+	}
+	return 1.00;
+
+
 }
-return 1.00;

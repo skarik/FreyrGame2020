@@ -1,8 +1,12 @@
 {
-    "id": "e091b8de-caec-43f3-b1ea-4c956335e144",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "livelySetupFloaters",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lively",
+    "path": "folders/Scripts/Game/World/Lively.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "livelySetupFloaters",
+  "tags": [],
+  "resourceType": "GMScript",
 }

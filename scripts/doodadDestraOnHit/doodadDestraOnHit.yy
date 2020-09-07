@@ -1,8 +1,12 @@
 {
-    "id": "7d6c5bc4-8cdb-46aa-b136-4416fd72c974",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "doodadDestraOnHit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Doodad Specifics",
+    "path": "folders/Scripts/Common/Doodad/Doodad Specifics.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "doodadDestraOnHit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

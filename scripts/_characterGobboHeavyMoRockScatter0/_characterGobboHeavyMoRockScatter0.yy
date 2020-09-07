@@ -1,8 +1,12 @@
 {
-    "id": "7125924f-1fa6-4f09-9b91-20d69187d971",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_characterGobboHeavyMoRockScatter0",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Gobbo Movetypes",
+    "path": "folders/Scripts/Game/AI & NPCs/Gobbo Movetypes.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_characterGobboHeavyMoRockScatter0",
+  "tags": [],
+  "resourceType": "GMScript",
 }

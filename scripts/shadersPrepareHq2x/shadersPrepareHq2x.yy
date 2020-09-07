@@ -1,8 +1,12 @@
 {
-    "id": "c9a3e6f0-301c-4fc0-904c-6c412acaebce",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "shadersPrepareHq2x",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effect",
+    "path": "folders/Scripts/Game/Effect.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "shadersPrepareHq2x",
+  "tags": [],
+  "resourceType": "GMScript",
 }

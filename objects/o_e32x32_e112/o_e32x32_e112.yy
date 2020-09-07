@@ -1,40 +1,39 @@
 {
-    "id": "a19ee34f-274e-4847-bf93-b20f4214d6d4",
-    "modelName": "GMObject",
-    "mvc": "1.0",
-    "name": "o_e32x32_e112",
-    "eventList": [
-        
-    ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": [
-        {
-            "id": "71dd0075-4189-4893-bff1-94e5277d59ed",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "23d9fb0d-2299-4a7a-9745-9426e766134a",
-            "propertyId": "5041f0da-ab70-4f26-af31-6bd536617937",
-            "value": "112"
-        }
-    ],
-    "parentObjectId": "23d9fb0d-2299-4a7a-9745-9426e766134a",
-    "persistent": false,
-    "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
-    "physicsFriction": 0.2,
-    "physicsGroup": 0,
-    "physicsKinematic": false,
-    "physicsLinearDamping": 0.1,
-    "physicsObject": false,
-    "physicsRestitution": 0.1,
-    "physicsSensor": false,
-    "physicsShape": 1,
-    "physicsShapePoints": null,
-    "physicsStartAwake": true,
-    "properties": [
-        
-    ],
-    "solid": false,
-    "spriteId": "59aa5008-57b3-4cc7-a370-5d0632a041f6",
-    "visible": false
+  "spriteId": {
+    "name": "sce7_32x32",
+    "path": "sprites/sce7_32x32/sce7_32x32.yy",
+  },
+  "solid": false,
+  "visible": false,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "ob_elevationArea",
+    "path": "objects/ob_elevationArea/ob_elevationArea.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [],
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"z","path":"objects/ob_elevationArea/ob_elevationArea.yy",},"objectId":{"name":"ob_elevationArea","path":"objects/ob_elevationArea/ob_elevationArea.yy",},"value":"112","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Elevation",
+    "path": "folders/Objects/Collision3/Elevation.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "o_e32x32_e112",
+  "tags": [],
+  "resourceType": "GMObject",
 }

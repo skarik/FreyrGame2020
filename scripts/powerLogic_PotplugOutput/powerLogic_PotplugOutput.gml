@@ -1,10 +1,14 @@
-//return m_powerInput; // Directly route input to the output
+function powerLogic_PotplugOutput() {
+	//return m_powerInput; // Directly route input to the output
 
-if (iexists(m_pot))
-{
-	return m_powerInput;
-}
-else
-{
-	return 0.0;
+	if (iexists(m_pot))
+	{
+		return m_powerInput;
+	}
+	else
+	{
+		return 0.0;
+	}
+
+
 }

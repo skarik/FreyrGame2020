@@ -1,8 +1,12 @@
 {
-    "id": "34b226af-3695-4967-b066-13f924135d97",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "farmReconstructLoadState",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Save State",
+    "path": "folders/Scripts/Game/Save State.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "farmReconstructLoadState",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "87c9d094-b9d6-4da9-9bc6-e115e94bfe1c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_paletteLoad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effects",
+    "path": "folders/Scripts/Core 2/Effects.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_paletteLoad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,32 +1,36 @@
-// update cutscene blend
-if (m_inCutscene)
-	m_inCutsceneBlend += Time.unscaledDeltaTime * 0.8;
-else
-	m_inCutsceneBlend -= Time.unscaledDeltaTime * 0.8;
-m_inCutsceneBlend = saturate(m_inCutsceneBlend);
+function playerUiUpdate() {
+	// update cutscene blend
+	if (m_inCutscene)
+		m_inCutsceneBlend += Time.unscaledDeltaTime * 0.8;
+	else
+		m_inCutsceneBlend -= Time.unscaledDeltaTime * 0.8;
+	m_inCutsceneBlend = saturate(m_inCutsceneBlend);
 
-if (m_inCutsceneBlend < 1.0)
-{
-	playerUiUpdateArm();
+	if (m_inCutsceneBlend < 1.0)
+	{
+		playerUiUpdateArm();
 	
-	playerUiUpdateBook();
-	playerUiUpdateInventory();
-	playerUiUpdateBag();
-	playerUiUpdateChest();
-	playerUiUpdateVendor();
+		playerUiUpdateBook();
+		playerUiUpdateInventory();
+		playerUiUpdateBag();
+		playerUiUpdateChest();
+		playerUiUpdateVendor();
 
-	playerUiUpdateInventoryManagement();
+		playerUiUpdateInventoryManagement();
 	
-	playerUiUpdateFarmOverlay();
-}
+		playerUiUpdateFarmOverlay();
+	}
 
-// edge blend
-if (getPlayer().isHidden)
-{
-	m_hiddenEdgeBlend += Time.deltaTime;
+	// edge blend
+	if (getPlayer().isHidden)
+	{
+		m_hiddenEdgeBlend += Time.deltaTime;
+	}
+	else
+	{
+		m_hiddenEdgeBlend -= Time.deltaTime;
+	}
+	m_hiddenEdgeBlend = saturate(m_hiddenEdgeBlend);
+
+
 }
-else
-{
-	m_hiddenEdgeBlend -= Time.deltaTime;
-}
-m_hiddenEdgeBlend = saturate(m_hiddenEdgeBlend);

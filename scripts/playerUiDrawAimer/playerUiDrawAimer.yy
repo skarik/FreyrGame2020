@@ -1,8 +1,12 @@
 {
-    "id": "9ebc8a93-8e02-40cb-a94e-afe252bd35df",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiDrawAimer",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Draw",
+    "path": "folders/Scripts/Game/Player UI/Draw.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiDrawAimer",
+  "tags": [],
+  "resourceType": "GMScript",
 }

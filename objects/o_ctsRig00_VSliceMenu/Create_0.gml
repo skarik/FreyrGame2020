@@ -13,7 +13,7 @@ menuListing = [
 	["Get Farming", "Skip everything and just get to the farming, starting out with various seeds.", true, 2],
 	["Combat/Stealth Event", "Escorting the trader across Fool's March, fighting gobbos along the way - or sneak through the desert instead, avoiding conflict.", true, 3],
 	["Stealth Event", "Escape from the town of Mithra at night, escaping gaurds on that way.", true, 4],
-	["Vendor Demo", "Places you next to a vendor with a good amount of items, to try out some trading. Head inside the tavern to the left for a second vendor.", true, 5],
+	["Vendor Demo", "Places you next to a vendor with a good amount of items, to t_try out some trading. Head inside the tavern to the left for a second vendor.", true, 5],
 	["Character Event: Nathan", "Character event: Cortez stumbles into Nathan's tent. Walk into Nathan's tent to begin.", true, 6],
 	["Character Event: Go", "Character event: Aurum and Go hang out in Mithra. Walk left then up into the tavern to begin.", true, 7],
 	["WIP: Tower & Atmosphere", "Unfinished area, the Fool's Tower. Acts as the game's first dungeon.", true, 8],

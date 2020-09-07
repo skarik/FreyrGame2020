@@ -1,8 +1,12 @@
 {
-    "id": "f07b9a4f-9b3e-48db-8496-977e1ba8deba",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ctsShowBars",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Events",
+    "path": "folders/Scripts/Common/Cutscene/Events.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ctsShowBars",
+  "tags": [],
+  "resourceType": "GMScript",
 }

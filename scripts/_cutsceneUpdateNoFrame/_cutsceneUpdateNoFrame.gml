@@ -1,1 +1,5 @@
-return cutsceneUpdate();
+function _cutsceneUpdateNoFrame() {
+	return cutsceneUpdate();
+
+
+}

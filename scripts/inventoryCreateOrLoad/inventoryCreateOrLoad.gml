@@ -1,40 +1,44 @@
 /// @description inventoryCreateOrLoad(name, size)
 /// @param name : Can be null
 /// @param size : requests size of inventory 
+function inventoryCreateOrLoad(argument0, argument1) {
 
-var l_name = argument0;
-var l_size = argument1;
-var l_inventory = null;
+	var l_name = argument0;
+	var l_size = argument1;
+	var l_inventory = null;
 
-// If the name is not null...
-if (l_name != null)
-{
-	// Search through all the currently existing inventories
-	with (ob_inventoryChest)
+	// If the name is not null...
+	if (l_name != null)
 	{
-		if (name == l_name) // Does the name match? if So, continue
+		// Search through all the currently existing inventories
+		with (ob_inventoryChest)
 		{
-			l_inventory = this;
-			break;
+			if (name == l_name) // Does the name match? if So, continue
+			{
+				l_inventory = this;
+				break;
+			}
 		}
 	}
-}
 
-// TODO: If iventory doesnt exist, load from the disk
-if (l_inventory == null && l_name != null)
-{
-	// Load from disk
-}
+	// TODO: If iventory doesnt exist, load from the disk
+	if (l_inventory == null && l_name != null)
+	{
+		// Load from disk
+	}
 
-// Create a new inventory if it doesn't exist
-if (l_inventory == null)
-{
-	l_inventory = inew(ob_inventoryChest);
-	l_inventory.persistent = true;
-	l_inventory.name = (l_name == null) ? "" : l_name;
+	// Create a new inventory if it doesn't exist
+	if (l_inventory == null)
+	{
+		l_inventory = inew(ob_inventoryChest);
+		l_inventory.persistent = true;
+		l_inventory.name = (l_name == null) ? "" : l_name;
 	
-	l_inventory.item_count = l_size;
-	l_inventory.item = itemArrayCreate(l_size);
-}
+		l_inventory.item_count = l_size;
+		l_inventory.item = itemArrayCreate(l_size);
+	}
 
-return l_inventory;
+	return l_inventory;
+
+
+}

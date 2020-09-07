@@ -1,8 +1,12 @@
 {
-    "id": "ee3951e3-ca9f-4469-893d-f56829fde10d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aimotionMoveAt",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Motion",
+    "path": "folders/Scripts/Game/AI & NPCs/Motion.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aimotionMoveAt",
+  "tags": [],
+  "resourceType": "GMScript",
 }

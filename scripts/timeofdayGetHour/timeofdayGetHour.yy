@@ -1,8 +1,12 @@
 {
-    "id": "59ff4b5e-3d47-431f-85d8-541eb30cf16f",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "timeofdayGetHour",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Time of Day (World)",
+    "path": "folders/Scripts/Game/World/Time of Day (World).yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "timeofdayGetHour",
+  "tags": [],
+  "resourceType": "GMScript",
 }

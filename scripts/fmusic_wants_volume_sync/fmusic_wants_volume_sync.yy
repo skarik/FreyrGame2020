@@ -1,8 +1,12 @@
 {
-    "id": "e01d801b-b063-470f-a3b0-6818d4eb02f0",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "fmusic_wants_volume_sync",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Music",
+    "path": "folders/Scripts/Common/Audio/Music.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "fmusic_wants_volume_sync",
+  "tags": [],
+  "resourceType": "GMScript",
 }

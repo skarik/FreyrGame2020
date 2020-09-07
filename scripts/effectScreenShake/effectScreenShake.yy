@@ -1,8 +1,12 @@
 {
-    "id": "7632ab9a-8959-4b3f-b589-4ec1796f2885",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "effectScreenShake",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effects",
+    "path": "folders/Scripts/Core 2/Effects.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "effectScreenShake",
+  "tags": [],
+  "resourceType": "GMScript",
 }

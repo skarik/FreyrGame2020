@@ -1,8 +1,12 @@
 {
-    "id": "5f09bb3a-8b83-4902-9fa7-72f9320d0521",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerRemovePitem",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player",
+    "path": "folders/Scripts/Game/Player.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerRemovePitem",
+  "tags": [],
+  "resourceType": "GMScript",
 }

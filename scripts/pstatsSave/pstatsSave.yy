@@ -1,8 +1,12 @@
 {
-    "id": "44210755-a07e-403a-9785-7479ac4f1481",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "pstatsSave",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player_Game",
+    "path": "folders/Scripts/Game/Save State/Player_Game.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "pstatsSave",
+  "tags": [],
+  "resourceType": "GMScript",
 }

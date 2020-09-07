@@ -1,53 +1,52 @@
 {
-    "id": "4dfa92c7-9801-43cf-8847-4590149f8f53",
-    "modelName": "GMObject",
-    "mvc": "1.0",
-    "name": "o_livelyPoweredRisingEdgeTrigger",
-    "eventList": [
-        
-    ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": [
-        {
-            "id": "905508af-2015-401c-b27d-fabd1b82f74e",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
-            "propertyId": "66b4d9da-dfce-42d8-9c9d-0d1c101a051d",
-            "value": "powerLogic_RisingEdgeOutput"
-        }
-    ],
-    "parentObjectId": "34b55b1d-ecc4-4f18-8a95-bb6bd5ca7cb7",
-    "persistent": false,
-    "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
-    "physicsFriction": 0.2,
-    "physicsGroup": 0,
-    "physicsKinematic": false,
-    "physicsLinearDamping": 0.1,
-    "physicsObject": false,
-    "physicsRestitution": 0.1,
-    "physicsSensor": false,
-    "physicsShape": 1,
-    "physicsShapePoints": null,
-    "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "7d93661f-de4c-4b4d-b2ac-ff86dd68dfde",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "m_powerInputPrevious",
-            "varType": 0
-        }
-    ],
-    "solid": false,
-    "spriteId": "fea9def3-2c6e-4670-b6c4-18a6045b35af",
-    "visible": false
+  "spriteId": {
+    "name": "ssy_power",
+    "path": "sprites/ssy_power/ssy_power.yy",
+  },
+  "solid": false,
+  "visible": false,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "ob_livelyPowered",
+    "path": "objects/ob_livelyPowered/ob_livelyPowered.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [],
+  "properties": [
+    {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
+        "GMTileSet",
+        "GMSprite",
+        "GMSound",
+        "GMPath",
+        "GMScript",
+        "GMShader",
+        "GMFont",
+        "GMTimeLine",
+        "GMObject",
+        "GMRoom",
+      ],"resourceVersion":"1.0","name":"m_powerInputPrevious","tags":[],"resourceType":"GMObjectProperty",},
+  ],
+  "overriddenProperties": [
+    {"propertyId":{"name":"m_powerCallback","path":"objects/ob_livelyPowered/ob_livelyPowered.yy",},"objectId":{"name":"ob_livelyPowered","path":"objects/ob_livelyPowered/ob_livelyPowered.yy",},"value":"powerLogic_RisingEdgeOutput","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Logic & Flow",
+    "path": "folders/Objects/Gameplay/Lively/Logic & Flow.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "o_livelyPoweredRisingEdgeTrigger",
+  "tags": [],
+  "resourceType": "GMObject",
 }

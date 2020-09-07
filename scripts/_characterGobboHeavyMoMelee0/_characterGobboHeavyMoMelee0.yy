@@ -1,8 +1,12 @@
 {
-    "id": "9f4d0f9f-1f93-403c-a57e-52fcf5aecb1c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_characterGobboHeavyMoMelee0",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Gobbo Movetypes",
+    "path": "folders/Scripts/Game/AI & NPCs/Gobbo Movetypes.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_characterGobboHeavyMoMelee0",
+  "tags": [],
+  "resourceType": "GMScript",
 }

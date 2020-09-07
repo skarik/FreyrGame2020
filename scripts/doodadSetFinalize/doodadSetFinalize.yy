@@ -1,8 +1,12 @@
 {
-    "id": "e2ea93d9-2bd9-4968-b51b-8faabff9495a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "doodadSetFinalize",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Doodad Specifics",
+    "path": "folders/Scripts/Common/Doodad/Doodad Specifics.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "doodadSetFinalize",
+  "tags": [],
+  "resourceType": "GMScript",
 }

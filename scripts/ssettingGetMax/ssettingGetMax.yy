@@ -1,8 +1,12 @@
 {
-    "id": "e4b5da08-ed0c-486f-b227-511ba3588fff",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ssettingGetMax",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Single Settings",
+    "path": "folders/Scripts/Core 2/Settings/Single Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ssettingGetMax",
+  "tags": [],
+  "resourceType": "GMScript",
 }

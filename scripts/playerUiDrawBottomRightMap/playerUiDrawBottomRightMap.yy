@@ -1,8 +1,12 @@
 {
-    "id": "48e98b0e-b39a-4e78-9bc4-ba4e8c11d9d8",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "playerUiDrawBottomRightMap",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Draw",
+    "path": "folders/Scripts/Game/Player UI/Draw.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "playerUiDrawBottomRightMap",
+  "tags": [],
+  "resourceType": "GMScript",
 }

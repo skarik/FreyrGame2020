@@ -1,8 +1,12 @@
 {
-    "id": "56cfa5d9-1bcb-4981-a72f-af26125ed925",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "enemyInfoOnCharacterKnockout",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Enemy Info Callbacks",
+    "path": "folders/Scripts/Game/Save State/Player_Game/Enemy Info Callbacks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "enemyInfoOnCharacterKnockout",
+  "tags": [],
+  "resourceType": "GMScript",
 }

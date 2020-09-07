@@ -1,143 +1,147 @@
+function aiGobboHeavySquadAngryUpdate() {
 #region Follows Commands, but with mostly passthru.
 
-if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_Hover)
-{
-	/*var dist_sqr = sqr(x - m_aiGobbo_squadStateTargetPosition[0]) + sqr(y - m_aiGobbo_squadStateTargetPosition[1]);
-	if (dist_sqr > 4)
+	if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_Hover)
 	{
-		aipathMoveTo(m_aiGobbo_squadStateTargetPosition[0], m_aiGobbo_squadStateTargetPosition[1]);
-	}
-	else
-	{
-		_controlStructUpdate(xAxis, 0.0);
-		_controlStructUpdate(yAxis, 0.0);
-	}
-	aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], -1);*/
+		/*var dist_sqr = sqr(x - m_aiGobbo_squadStateTargetPosition[0]) + sqr(y - m_aiGobbo_squadStateTargetPosition[1]);
+		if (dist_sqr > 4)
+		{
+			aipathMoveTo(m_aiGobbo_squadStateTargetPosition[0], m_aiGobbo_squadStateTargetPosition[1]);
+		}
+		else
+		{
+			_controlStructUpdate(xAxis, 0.0);
+			_controlStructUpdate(yAxis, 0.0);
+		}
+		aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], -1);*/
 	
-	// Stop any signalling when walking
-	moAnimationExternal = false;
-}
-else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_Hesitate)
-{
-	/*_controlStructUpdate(xAxis, 0.0);
-	_controlStructUpdate(yAxis, 0.0);
-	_controlStructUpdate(atkButton, 0.0);*/
-}
-// Perform attack
-else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHesitate
-		|| m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHover)
-{
-	if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHesitate)
-	{
-		m_aiGobbo_squadStateCase = kAiGobboSquadStateCase_Hesitate;
+		// Stop any signalling when walking
+		moAnimationExternal = false;
 	}
-	else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHover)
+	else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_Hesitate)
 	{
-		m_aiGobbo_squadStateCase = kAiGobboSquadStateCase_Hover;
+		/*_controlStructUpdate(xAxis, 0.0);
+		_controlStructUpdate(yAxis, 0.0);
+		_controlStructUpdate(atkButton, 0.0);*/
 	}
-}
+	// Perform attack
+	else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHesitate
+			|| m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHover)
+	{
+		if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHesitate)
+		{
+			m_aiGobbo_squadStateCase = kAiGobboSquadStateCase_Hesitate;
+		}
+		else if (m_aiGobbo_squadStateCase == kAiGobboSquadStateCase_AttackToHover)
+		{
+			m_aiGobbo_squadStateCase = kAiGobboSquadStateCase_Hover;
+		}
+	}
 
 #endregion
 
 #region High level AI
 
-if (m_aiGobboHeavy_state == kAiGobboHeavyState_NotAngry)
-{
-	// Not angry, but we're here. It's time to begin the fight properly.
-	if (array_length_1d(m_colliders) == 0)
+	if (m_aiGobboHeavy_state == kAiGobboHeavyState_NotAngry)
 	{
-		m_aiGobboHeavy_state = kAiGobboHeavyState_BeginFight;
-		m_aiGobboHeavy_statetimer = 0.0;
+		// Not angry, but we're here. It's time to begin the fight properly.
+		if (array_length_1d(m_colliders) == 0)
+		{
+			m_aiGobboHeavy_state = kAiGobboHeavyState_BeginFight;
+			m_aiGobboHeavy_statetimer = 0.0;
+		}
+		else
+		{
+			// Skip to the fight if the stones already are placed down
+			m_aiGobboHeavy_state = kAiGobboHeavyState_Fight0;
+			m_aiGobboHeavy_statetimer = 0.0;
+		}
 	}
-	else
+	else if (m_aiGobboHeavy_state == kAiGobboHeavyState_BeginFight)
 	{
-		// Skip to the fight if the stones already are placed down
-		m_aiGobboHeavy_state = kAiGobboHeavyState_Fight0;
-		m_aiGobboHeavy_statetimer = 0.0;
+		// If timer is at 0, then we begin the animation that starts the fight
+		if (m_aiGobboHeavy_statetimer <= 0.0)
+		{
+			moScriptOverride = _characterGobboHeavyMoBeginFight0;
+			m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
+			m_aiGobboHeavy_statetimer = 1.0; // Out of first substate
+		}
+		else if (moScriptOverride != _characterGobboHeavyMoBeginFight0)
+		{
+			// Move to the other ai state
+			m_aiGobboHeavy_state = kAiGobboHeavyState_Fight0;
+		}
 	}
-}
-else if (m_aiGobboHeavy_state == kAiGobboHeavyState_BeginFight)
-{
-	// If timer is at 0, then we begin the animation that starts the fight
-	if (m_aiGobboHeavy_statetimer <= 0.0)
+	else if (m_aiGobboHeavy_state == kAiGobboHeavyState_Fight0)
 	{
-		moScriptOverride = _characterGobboHeavyMoBeginFight0;
-		m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
-		m_aiGobboHeavy_statetimer = 1.0; // Out of first substate
-	}
-	else if (moScriptOverride != _characterGobboHeavyMoBeginFight0)
-	{
-		// Move to the other ai state
-		m_aiGobboHeavy_state = kAiGobboHeavyState_Fight0;
-	}
-}
-else if (m_aiGobboHeavy_state == kAiGobboHeavyState_Fight0)
-{
-	// Do FIGHT!
+		// Do FIGHT!
 	
-	// We have three attacks:
-	// 1) Melee 
-	// 2) Ranged percing line
-	// 3) Ranged blocked scatter
+		// We have three attacks:
+		// 1) Melee 
+		// 2) Ranged percing line
+		// 3) Ranged blocked scatter
 
-	var deltaFromTarget = avec2_subtract([x, y], m_aiCombat_targetPosition);
-	var distanceToTarget = avec2_length(deltaFromTarget);
-	var directionToTarget = avec2_divide(deltaFromTarget, distanceToTarget);
-	var targetPosition = avec2_add(m_aiCombat_targetPosition, avec2_multiply(directionToTarget, clamp(distanceToTarget, 16, 40)));
-	aimotionMoveTo(targetPosition[0], targetPosition[1], 1.0);
-	if (distanceToTarget > 16 && distanceToTarget < 40)
-	{
-		if (!isAttacking)
+		var deltaFromTarget = avec2_subtract([x, y], m_aiCombat_targetPosition);
+		var distanceToTarget = avec2_length(deltaFromTarget);
+		var directionToTarget = avec2_divide(deltaFromTarget, distanceToTarget);
+		var targetPosition = avec2_add(m_aiCombat_targetPosition, avec2_multiply(directionToTarget, clamp(distanceToTarget, 16, 40)));
+		aimotionMoveTo(targetPosition[0], targetPosition[1], 1.0);
+		if (distanceToTarget > 16 && distanceToTarget < 40)
 		{
-			aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], 720);
-		}
-	}
-	
-	// Countdown all the delay timers
-	if (!isAttacking && !isDashing)
-	{
-		m_aiGobboHeavy_closeMeleeDelay -= Time.deltaTime;
-		m_aiGobboHeavy_farSpellDelay -= Time.deltaTime;
-	}
-	
-	// Do attacks on a timer, different timer if in melee range
-	if (moScriptOverride == null)
-	{
-		if (distanceToTarget < 40)
-		{
-			if (m_aiGobboHeavy_closeMeleeDelay <= 0.0)
+			if (!isAttacking)
 			{
-				moScriptOverride = _characterGobboHeavyMoMelee0;
-				m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
-				m_aiGobboHeavy_closeMeleeDelay = 0.2; // Have a delay between attacks so there is some gameplay-breathing room
+				aimotionFaceAt(m_aiCombat_targetPosition[0], m_aiCombat_targetPosition[1], 720);
 			}
 		}
-		else if (distanceToTarget > 70)
+	
+		// Countdown all the delay timers
+		if (!isAttacking && !isDashing)
 		{
-			if (m_aiGobboHeavy_farSpellDelay <= 0.0)
+			m_aiGobboHeavy_closeMeleeDelay -= Time.deltaTime;
+			m_aiGobboHeavy_farSpellDelay -= Time.deltaTime;
+		}
+	
+		// Do attacks on a timer, different timer if in melee range
+		if (moScriptOverride == null)
+		{
+			if (distanceToTarget < 40)
 			{
-				moScriptOverride = m_aiGobboHeavy_farMeleeSelector ? _characterGobboHeavyMoRockSpike0 : _characterGobboHeavyMoRockScatter0;
-				m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
-				m_aiGobboHeavy_farSpellDelay = 1.2; // Have a bigger delay between spell attacks so the player can react to them
+				if (m_aiGobboHeavy_closeMeleeDelay <= 0.0)
+				{
+					moScriptOverride = _characterGobboHeavyMoMelee0;
+					m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
+					m_aiGobboHeavy_closeMeleeDelay = 0.2; // Have a delay between attacks so there is some gameplay-breathing room
+				}
+			}
+			else if (distanceToTarget > 70)
+			{
+				if (m_aiGobboHeavy_farSpellDelay <= 0.0)
+				{
+					moScriptOverride = m_aiGobboHeavy_farMeleeSelector ? _characterGobboHeavyMoRockSpike0 : _characterGobboHeavyMoRockScatter0;
+					m_aiGobboHeavy_movetimer = 0.0; // Reset its timer
+					m_aiGobboHeavy_farSpellDelay = 1.2; // Have a bigger delay between spell attacks so the player can react to them
 				
-				// Swap selector every time we begin a move.
-				m_aiGobboHeavy_farMeleeSelector = !m_aiGobboHeavy_farMeleeSelector;
+					// Swap selector every time we begin a move.
+					m_aiGobboHeavy_farMeleeSelector = !m_aiGobboHeavy_farMeleeSelector;
+				}
 			}
 		}
-	}
 	
-	// If player is attacking, possible dodge
-	if (moScriptOverride == _characterGobboHeavyMoMelee0)
-	{
-		if (iexists(m_aiCombat_target)
-			&& m_aiCombat_target.isAttacking
-			&& stats.m_stun > stats.m_stunMax * 0.7)
+		// If player is attacking, possible dodge
+		if (moScriptOverride == _characterGobboHeavyMoMelee0)
 		{
-			// Request a dodge backwards at this point
-			meleeDashQueued = true;
+			if (iexists(m_aiCombat_target)
+				&& m_aiCombat_target.isAttacking
+				&& stats.m_stun > stats.m_stunMax * 0.7)
+			{
+				// Request a dodge backwards at this point
+				meleeDashQueued = true;
+			}
 		}
-	}
 	
-}
+	}
 
 #endregion
+
+
+}

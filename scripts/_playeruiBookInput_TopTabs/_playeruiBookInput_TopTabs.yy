@@ -1,8 +1,12 @@
 {
-    "id": "a82eeabf-52ea-41d8-a167-3bfa5ec90e18",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_playeruiBookInput_TopTabs",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Book",
+    "path": "folders/Scripts/Game/Player UI/Book.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_playeruiBookInput_TopTabs",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "61e1be0a-d34b-455d-97fb-812328e39b21",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "controlParseAndPoll",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Control",
+    "path": "folders/Scripts/Core 2/Control.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "controlParseAndPoll",
+  "tags": [],
+  "resourceType": "GMScript",
 }

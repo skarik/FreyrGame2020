@@ -1,8 +1,12 @@
 {
-    "id": "2f9fcc34-4687-4a1e-94c2-87a24e469ede",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "getPlayer",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Query",
+    "path": "folders/Scripts/Game/Player/Query.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "getPlayer",
+  "tags": [],
+  "resourceType": "GMScript",
 }

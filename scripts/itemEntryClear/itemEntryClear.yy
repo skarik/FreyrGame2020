@@ -1,8 +1,12 @@
 {
-    "id": "c9fbd701-14a5-4304-8b79-784575659840",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "itemEntryClear",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory System",
+    "path": "folders/Scripts/Game/Inventory System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "itemEntryClear",
+  "tags": [],
+  "resourceType": "GMScript",
 }

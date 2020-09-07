@@ -1,3 +1,7 @@
+function _talkerDraw() {
 
-_talkerDrawBox();
-_gabberDrawText();
+	_talkerDrawBox();
+	_gabberDrawText();
+
+
+}

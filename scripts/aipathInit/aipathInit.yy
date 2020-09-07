@@ -1,8 +1,12 @@
 {
-    "id": "98ebd511-0620-4f69-8466-c27cb5a75f7d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aipathInit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Path Finding + Nodes",
+    "path": "folders/Scripts/Game/AI & NPCs/Path Finding + Nodes.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aipathInit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

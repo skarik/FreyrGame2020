@@ -1,54 +1,59 @@
-var l_canMove = argument0;
+function _playerInteractBuildables(argument0) {
+	var l_canMove = argument0;
 
-currentBuildable = false;
+	currentBuildable = false;
 
-if (!m_isTilling && l_canMove
-	&& room == rm_oasis_farm)
-{
-	// Find the piece of land to till:
-	var buildX = aimingStartX + lengthdir_x(12, facingDirection);
-	var buildY = aimingStartY + lengthdir_y(12, facingDirection) + 5;
-	var gridSize = 16;
-	buildX = round((buildX - gridSize / 2) / gridSize) * gridSize;
-	buildY = round((buildY - gridSize / 2) / gridSize) * gridSize;
-	
-	// Begin the check...
-	var freeSpot = false;
-	
-	// Check the four corners of the buildable area for water
-	if (!iexists(collision_point(buildX + 1, buildY + 1, ob_areaWater, true, true))
-		|| !iexists(collision_point(buildX + 14, buildY + 1, ob_areaWater, true, true))
-		|| !iexists(collision_point(buildX + 1, buildY + 14, ob_areaWater, true, true))
-		|| !iexists(collision_point(buildX + 14, buildY + 14, ob_areaWater, true, true)))
+	if (!m_isTilling && l_canMove
+		&& room == rm_oasis_farm)
 	{
-		// Check the entire area for colliders
-		if (!iexists(collision_rectangle(buildX + 1, buildY + 1, buildX + 14, buildY + 14, ob_collider, false, true)))
+		// Find the piece of land to till:
+		var buildX = aimingStartX + lengthdir_x(12, facingDirection);
+		var buildY = aimingStartY + lengthdir_y(12, facingDirection) + 5;
+		var gridSize = 16;
+		buildX = round((buildX - gridSize / 2) / gridSize) * gridSize;
+		buildY = round((buildY - gridSize / 2) / gridSize) * gridSize;
+	
+		// Begin the check...
+		var freeSpot = false;
+	
+		// Check the four corners of the buildable area for water
+		if (!iexists(collision_point(buildX + 1, buildY + 1, ob_areaWater, true, true))
+			|| !iexists(collision_point(buildX + 14, buildY + 1, ob_areaWater, true, true))
+			|| !iexists(collision_point(buildX + 1, buildY + 14, ob_areaWater, true, true))
+			|| !iexists(collision_point(buildX + 14, buildY + 14, ob_areaWater, true, true)))
 		{
-			freeSpot = true;
-		}
-	}
-	
-	// If free of collisions, mark it as buildable!
-	if (freeSpot)
-	{
-		currentBuildable = true;
-		currentBuildableX = buildX;
-		currentBuildableY = buildY;
-	}
-	
-	// Now we build if we press the button
-	if (currentBuildable)
-	{
-		if (itemUseButton.pressed)
-		{
-			// Check for existing canal
-			if (!iexists(collision_rectangle(currentBuildableX + 1, currentBuildableY + 1, currentBuildableX + 14, currentBuildableY + 14, o_miniCanalWater, false, true)))
+			// Check the entire area for colliders
+			if (!iexists(collision_rectangle(buildX + 1, buildY + 1, buildX + 14, buildY + 14, ob_collider, false, true)))
 			{
-				// delete any land
-				idelete(collision_point(currentBuildableX + 8, currentBuildableY + 8, o_fieldSquare, false, true));
-				// create canal
-				instance_create_depth(currentBuildableX, currentBuildableY, 11, o_miniCanalWater);
+				freeSpot = true;
+			}
+		}
+	
+		// If free of collisions, mark it as buildable!
+		if (freeSpot)
+		{
+			currentBuildable = true;
+			currentBuildableX = buildX;
+			currentBuildableY = buildY;
+		}
+	
+		// Now we build if we press the button
+		if (currentBuildable)
+		{
+			if (itemUseButton.pressed)
+			{
+				// Check for existing canal
+				if (!iexists(collision_rectangle(currentBuildableX + 1, currentBuildableY + 1, currentBuildableX + 14, currentBuildableY + 14, o_miniCanalWater, false, true)))
+				{
+					// delete any land
+					idelete(collision_point(currentBuildableX + 8, currentBuildableY + 8, o_fieldSquare, false, true));
+					// create canal
+					instance_create_depth(currentBuildableX, currentBuildableY, 11, o_miniCanalWater);
+				}
 			}
 		}
 	}
+
+
+
 }

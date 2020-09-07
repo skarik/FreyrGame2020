@@ -1,8 +1,12 @@
 {
-    "id": "cbbe2b06-cebf-4475-988b-22d57c91cbb7",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "inventoryLoad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player_Game",
+    "path": "folders/Scripts/Game/Save State/Player_Game.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "inventoryLoad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

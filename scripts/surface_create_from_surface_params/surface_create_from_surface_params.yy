@@ -1,8 +1,12 @@
 {
-    "id": "a43e9040-6d5a-4ddc-bc6c-55f55daab1a5",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "surface_create_from_surface_params",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Drawing",
+    "path": "folders/Scripts/Core 2/Drawing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "surface_create_from_surface_params",
+  "tags": [],
+  "resourceType": "GMScript",
 }

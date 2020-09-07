@@ -1,8 +1,12 @@
 {
-    "id": "2fa50d19-8a8a-4cdf-9f7a-7e95be0ae925",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "checkpointOpenTeleportMenu",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Scropts",
+    "path": "folders/Scripts/Game/Scropts.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "checkpointOpenTeleportMenu",
+  "tags": [],
+  "resourceType": "GMScript",
 }

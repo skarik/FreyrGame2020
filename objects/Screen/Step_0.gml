@@ -1,4 +1,4 @@
-/// @description Screenshot 
+/// @description Screenshot & fullscreen toggle
 
 var screenshot_requested = false;
 if (keyboard_check_pressed(vk_f5))
@@ -36,3 +36,9 @@ if ((screenshot_requested || screenshot_auto_enabled) && surface_exists(t_captur
     }
 }
 
+// Fullscren toggle
+if (keyboard_check_direct(vk_lalt) && keyboard_check_pressed(vk_enter))
+{
+	window_set_fullscreen(!window_get_fullscreen());
+	WindowOnResize();
+}

@@ -1,8 +1,12 @@
 {
-    "id": "66dbb33e-be2d-44c6-acd9-1a8c4dd347cc",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "smoothstep",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Parametric",
+    "path": "folders/Scripts/Core/Parametric.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "smoothstep",
+  "tags": [],
+  "resourceType": "GMScript",
 }

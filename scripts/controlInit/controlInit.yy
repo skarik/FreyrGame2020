@@ -1,8 +1,12 @@
 {
-    "id": "1f20d603-f71a-4e3c-ae4a-bdadee2369b0",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "controlInit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Control",
+    "path": "folders/Scripts/Core 2/Control.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "controlInit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

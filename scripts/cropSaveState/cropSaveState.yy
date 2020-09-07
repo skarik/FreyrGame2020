@@ -1,8 +1,12 @@
 {
-    "id": "b9d6ab6a-64f9-40fc-b49c-2a81164ea5fd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "cropSaveState",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Farm",
+    "path": "folders/Scripts/Game/Save State/Farm.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "cropSaveState",
+  "tags": [],
+  "resourceType": "GMScript",
 }

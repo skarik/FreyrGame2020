@@ -1,8 +1,12 @@
-enemyInfoClearLiveList();
-gameRespawnEnemies(kRespawnEnemeiesMinor);
-gameCampUntilMorning();
+function gameCampCheckpointLongRest() {
+	enemyInfoClearLiveList();
+	gameRespawnEnemies(kRespawnEnemeiesMinor);
+	gameCampUntilMorning();
 
-with (getPlayer())
-{
-	pstats.m_times_rested += 1;
+	with (getPlayer())
+	{
+		pstats.m_times_rested += 1;
+	}
+
+
 }

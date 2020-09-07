@@ -1,8 +1,12 @@
 {
-    "id": "174a3e3d-99b8-4cf2-adfc-6d27821eff37",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "gameRespawnEnemies",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "World Events",
+    "path": "folders/Scripts/Game/World/World Events.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "gameRespawnEnemies",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "4b13ed0d-425c-4d8d-8b75-588742a3e035",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "gameLoad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Save State",
+    "path": "folders/Scripts/Game/Save State.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "gameLoad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

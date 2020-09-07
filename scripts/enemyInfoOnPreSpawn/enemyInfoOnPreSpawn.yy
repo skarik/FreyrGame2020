@@ -1,8 +1,12 @@
 {
-    "id": "2f541bd4-cda9-4553-88fd-049e933f9c41",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "enemyInfoOnPreSpawn",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Enemy Info Callbacks",
+    "path": "folders/Scripts/Game/Save State/Player_Game/Enemy Info Callbacks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "enemyInfoOnPreSpawn",
+  "tags": [],
+  "resourceType": "GMScript",
 }

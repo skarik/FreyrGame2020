@@ -1,8 +1,12 @@
 {
-    "id": "b06eb26e-dc8f-41fb-851d-18a9a0c660c1",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "turn_towards_direction",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Core 2",
+    "path": "folders/Scripts/Core 2.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "turn_towards_direction",
+  "tags": [],
+  "resourceType": "GMScript",
 }

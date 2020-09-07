@@ -1,8 +1,12 @@
 {
-    "id": "a2179a3c-014f-4181-a0b4-c40cd6f8958b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_playerUiGeneralInventoryInputs",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Update",
+    "path": "folders/Scripts/Game/Player UI/Update.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_playerUiGeneralInventoryInputs",
+  "tags": [],
+  "resourceType": "GMScript",
 }

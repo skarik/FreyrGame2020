@@ -2,56 +2,60 @@
 /// @param character_object
 /// @param expression
 /// @return sprite_index
-var character = argument0;
-var expression = argument1;
+function cutsceneGetPortrait(argument0, argument1) {
+	var character = argument0;
+	var expression = argument1;
 
-if (character == o_PlayerTest && iexists(o_PlayerStats))
-{
-	var stats = instance_find(o_PlayerStats, 0);
-	if (expression == kPortraitExpressionQuestioning)
+	if (character == o_PlayerTest && iexists(o_PlayerStats))
 	{
-		if (stats.m_shirtless) {
-			if (stats.m_gender == kGenderFemale) return sui_portraitPlayerAnekkidQuestioning;
-			if (stats.m_gender == kGenderMale) return sui_portraitPlayerCnekkidQuestioning;
-			if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPnekkidQuestioning;
-		}
-		else {
-			if (stats.m_gender == kGenderFemale) return sui_portraitPlayerAQuestioning;
-			if (stats.m_gender == kGenderMale) return sui_portraitPlayerCQuestioning;
-			if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPQuestioning;
-		}
-	}
-	else if (expression == kPortraitExpressionNeutral)
-	{
-		if (stats.m_shirtless) {
-			if (stats.m_gender == kGenderFemale) return sui_portraitPlayerAnekkidNeutral;
-			if (stats.m_gender == kGenderMale) return sui_portraitPlayerCnekkidNeutral;
-			if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPnekkidNeutral;
-		}
-		else {
-			if (stats.m_gender == kGenderFemale) return sui_portraitPlayerANeutral;
-			if (stats.m_gender == kGenderMale) return sui_portraitPlayerCNeutral;
-			if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPNeutral;
-		}
-	}
-}
-else if (character == o_chNathan)
-{
-	return sui_portraitNathanNeutral;
-}
-else if (character == o_chGo)
-{
-	var stats = instance_find(o_PlayerStats, 0);
-	if (expression == kPortraitExpressionNeutral)
-	{
-		if (stats.m_shirtless)
+		var stats = instance_find(o_PlayerStats, 0);
+		if (expression == kPortraitExpressionQuestioning)
 		{
-			return sui_portraitGoNekkidNeutral;
+			if (stats.m_shirtless) {
+				if (stats.m_gender == kGenderFemale) return sui_portraitPlayerAnekkidQuestioning;
+				if (stats.m_gender == kGenderMale) return sui_portraitPlayerCnekkidQuestioning;
+				if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPnekkidQuestioning;
+			}
+			else {
+				if (stats.m_gender == kGenderFemale) return sui_portraitPlayerAQuestioning;
+				if (stats.m_gender == kGenderMale) return sui_portraitPlayerCQuestioning;
+				if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPQuestioning;
+			}
 		}
-		else
+		else if (expression == kPortraitExpressionNeutral)
 		{
-			return sui_portraitGoNeutral;
+			if (stats.m_shirtless) {
+				if (stats.m_gender == kGenderFemale) return sui_portraitPlayerAnekkidNeutral;
+				if (stats.m_gender == kGenderMale) return sui_portraitPlayerCnekkidNeutral;
+				if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPnekkidNeutral;
+			}
+			else {
+				if (stats.m_gender == kGenderFemale) return sui_portraitPlayerANeutral;
+				if (stats.m_gender == kGenderMale) return sui_portraitPlayerCNeutral;
+				if (stats.m_gender == kGenderNonbi) return sui_portraitPlayerPNeutral;
+			}
 		}
 	}
+	else if (character == o_chNathan)
+	{
+		return sui_portraitNathanNeutral;
+	}
+	else if (character == o_chGo)
+	{
+		var stats = instance_find(o_PlayerStats, 0);
+		if (expression == kPortraitExpressionNeutral)
+		{
+			if (stats.m_shirtless)
+			{
+				return sui_portraitGoNekkidNeutral;
+			}
+			else
+			{
+				return sui_portraitGoNeutral;
+			}
+		}
+	}
+	return sui_portraitRef;
+
+
 }
-return sui_portraitRef;

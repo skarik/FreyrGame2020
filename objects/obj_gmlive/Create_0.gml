@@ -5,8 +5,8 @@ if (instance_number(obj_gmlive) > 1) {
 }
 #macro live_enabled 1
 
-live_blank_object = o_live_blank;
-live_blank_room = rm_live_blank;
+//live_blank_object = o_live_blank;
+//live_blank_room = rm_live_blank;
 
 // a workaround for a GM bug where extension doesn't initialize in debug mode:
 if (!variable_global_exists("g_live_log_script")) live_preinit();

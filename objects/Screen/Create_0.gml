@@ -56,3 +56,18 @@ record_shot_count = 0;
 record_shot[0] = 0;
 
 m_initialized = true;
+
+// Local functions
+
+///@desc Fixes window sizes
+WindowOnResize = function()
+{
+	if (window_get_fullscreen())
+	{
+		// Nothing.
+	}
+	else
+	{
+		window_set_size(Screen.width, Screen.height);
+	}
+};

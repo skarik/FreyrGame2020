@@ -1,8 +1,12 @@
 {
-    "id": "699cb8c4-8f26-42ac-9744-477d99a3e328",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "generalConsumableOnUi",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Items",
+    "path": "folders/Scripts/Game/Items.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "generalConsumableOnUi",
+  "tags": [],
+  "resourceType": "GMScript",
 }

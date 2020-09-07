@@ -1,3 +1,7 @@
+function _gabberDraw() {
 
-_gabberDrawBox();
-_gabberDrawText();
+	_gabberDrawBox();
+	_gabberDrawText();
+
+
+}

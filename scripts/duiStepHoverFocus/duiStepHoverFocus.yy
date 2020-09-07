@@ -1,8 +1,12 @@
 {
-    "id": "db581aac-0bb5-46e8-98bd-45aeeca3ba49",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "duiStepHoverFocus",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "UI",
+    "path": "folders/Scripts/Common/Debug/UI.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "duiStepHoverFocus",
+  "tags": [],
+  "resourceType": "GMScript",
 }

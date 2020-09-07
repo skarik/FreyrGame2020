@@ -1,8 +1,12 @@
 {
-    "id": "63118223-c896-4070-8a1a-1948f4083c96",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "draw_pie",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Drawing",
+    "path": "folders/Scripts/Core 2/Drawing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "draw_pie",
+  "tags": [],
+  "resourceType": "GMScript",
 }

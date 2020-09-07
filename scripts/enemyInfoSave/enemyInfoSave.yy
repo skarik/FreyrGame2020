@@ -1,8 +1,12 @@
 {
-    "id": "519c97e3-ccfb-4cf9-94d1-523e15ef65fd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "enemyInfoSave",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player_Game",
+    "path": "folders/Scripts/Game/Save State/Player_Game.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "enemyInfoSave",
+  "tags": [],
+  "resourceType": "GMScript",
 }

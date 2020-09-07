@@ -1,8 +1,12 @@
 {
-    "id": "15e8193e-d61e-4d1d-914f-1d21648090ee",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "enemySpawnerCheckAndRespawn",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player_Game",
+    "path": "folders/Scripts/Game/Save State/Player_Game.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "enemySpawnerCheckAndRespawn",
+  "tags": [],
+  "resourceType": "GMScript",
 }

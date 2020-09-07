@@ -1,12 +1,16 @@
-var buffer = argument0;
-var pl = getPlayer();
+function pstatsLoad(argument0) {
+	var buffer = argument0;
+	var pl = getPlayer();
 
-if (!savestateCheckBufferHeader(buffer, kSavestateHeader_PlayerStats))
-{
-	return;
-}
+	if (!savestateCheckBufferHeader(buffer, kSavestateHeader_PlayerStats))
+	{
+		return;
+	}
 
-with (pl.pstats)
-{
+	with (pl.pstats)
+	{
 	
+	}
+
+
 }

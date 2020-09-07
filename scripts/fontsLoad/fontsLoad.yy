@@ -1,8 +1,12 @@
 {
-    "id": "a63d3702-e5e8-46b4-bb8a-d83d33a39bd3",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "fontsLoad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Game",
+    "path": "folders/Scripts/Game.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "fontsLoad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

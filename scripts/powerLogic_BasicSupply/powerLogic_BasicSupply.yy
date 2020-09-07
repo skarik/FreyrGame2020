@@ -1,8 +1,12 @@
 {
-    "id": "a07dcf9a-800d-437e-abea-7a3eeb76f1e7",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "powerLogic_BasicSupply",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lively",
+    "path": "folders/Scripts/Game/World/Lively.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "powerLogic_BasicSupply",
+  "tags": [],
+  "resourceType": "GMScript",
 }

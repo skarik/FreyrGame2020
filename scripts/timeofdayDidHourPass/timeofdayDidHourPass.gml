@@ -1,5 +1,9 @@
-if (iexists(o_dayNightCycle))
-{
-	return o_dayNightCycle.m_hourPassed;
+function timeofdayDidHourPass() {
+	if (iexists(o_dayNightCycle))
+	{
+		return o_dayNightCycle.m_hourPassed;
+	}
+	return false;
+
+
 }
-return false;

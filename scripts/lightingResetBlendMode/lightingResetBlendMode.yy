@@ -1,8 +1,12 @@
 {
-    "id": "1289cc7c-29a9-48e1-9226-92171a1aebda",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "lightingResetBlendMode",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Dynamic Lighting",
+    "path": "folders/Scripts/Game/Dynamic Lighting.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "lightingResetBlendMode",
+  "tags": [],
+  "resourceType": "GMScript",
 }

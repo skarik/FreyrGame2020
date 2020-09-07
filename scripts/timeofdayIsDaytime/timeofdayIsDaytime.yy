@@ -1,8 +1,12 @@
 {
-    "id": "a95333bf-91b2-47d4-9131-b00bff960d13",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "timeofdayIsDaytime",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Time of Day (World)",
+    "path": "folders/Scripts/Game/World/Time of Day (World).yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "timeofdayIsDaytime",
+  "tags": [],
+  "resourceType": "GMScript",
 }

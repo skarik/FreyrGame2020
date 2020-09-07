@@ -1,8 +1,12 @@
 {
-    "id": "81bb5700-23d8-41f4-8d57-7d5443c071e5",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "vendorKickItemsBackTo",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Vendor",
+    "path": "folders/Scripts/Game/Player UI/Vendor.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "vendorKickItemsBackTo",
+  "tags": [],
+  "resourceType": "GMScript",
 }

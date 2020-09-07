@@ -1,8 +1,12 @@
 {
-    "id": "a15ddcac-5ec9-4ecb-a2fd-26120efc8357",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "powerLogicGlobalUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lively",
+    "path": "folders/Scripts/Game/World/Lively.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "powerLogicGlobalUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "89eb7bb2-2d9c-4c78-8b27-bac3ed7ac614",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "motion2d_to",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Core 2",
+    "path": "folders/Scripts/Core 2.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "motion2d_to",
+  "tags": [],
+  "resourceType": "GMScript",
 }

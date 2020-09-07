@@ -1,16 +1,20 @@
-var itemArray = argument0;
-var itemArrayLength = array_length_1d(itemArray);
+function itemArrayVerify(argument0) {
+	var itemArray = argument0;
+	var itemArrayLength = array_length_1d(itemArray);
 
-for (var i = 0; i < itemArrayLength; ++i)
-{
-	for (var isub = 0; isub < itemArrayLength; ++isub)
+	for (var i = 0; i < itemArrayLength; ++i)
 	{
-		if (i == isub)
-			continue;
-			
-		if (itemArray[i] == itemArray[isub])
+		for (var isub = 0; isub < itemArrayLength; ++isub)
 		{
-			show_error("Invalid inventory entry. Duplicated entries.", false);	
+			if (i == isub)
+				continue;
+			
+			if (itemArray[i] == itemArray[isub])
+			{
+				show_error("Invalid inventory entry. Duplicated entries.", false);	
+			}
 		}
 	}
+
+
 }

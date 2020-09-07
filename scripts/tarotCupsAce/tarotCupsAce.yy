@@ -1,8 +1,12 @@
 {
-    "id": "47bbbf36-54a1-4f98-9f36-2417c633b589",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "tarotCupsAce",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Tarot",
+    "path": "folders/Scripts/Game/Tarot.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "tarotCupsAce",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,1 +1,5 @@
-return true;
+function nullScript() {
+	return true;
+
+
+}

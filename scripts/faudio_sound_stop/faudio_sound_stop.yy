@@ -1,8 +1,12 @@
 {
-    "id": "eda4f3e8-7cf0-408d-81f4-590d1bd21623",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "faudio_sound_stop",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Audio",
+    "path": "folders/Scripts/Common/Audio.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "faudio_sound_stop",
+  "tags": [],
+  "resourceType": "GMScript",
 }

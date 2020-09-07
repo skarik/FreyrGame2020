@@ -1,3 +1,7 @@
-idelete(o_fieldSquare);
-idelete(ob_crop);
-idelete(o_potWater);
+function farmClearObjects() {
+	idelete(o_fieldSquare);
+	idelete(ob_crop);
+	idelete(o_potWater);
+
+
+}

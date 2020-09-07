@@ -1,8 +1,12 @@
 {
-    "id": "50bfb340-09ed-40e9-bbd4-52341627a152",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_characterGroundMotionNormal",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Character",
+    "path": "folders/Scripts/Game/Character.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_characterGroundMotionNormal",
+  "tags": [],
+  "resourceType": "GMScript",
 }

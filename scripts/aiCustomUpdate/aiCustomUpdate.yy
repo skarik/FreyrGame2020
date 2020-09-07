@@ -1,8 +1,12 @@
 {
-    "id": "d1e0a267-1ead-40fa-9da9-fc72a1a3d22c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aiCustomUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Follower + Leader",
+    "path": "folders/Scripts/Game/AI & NPCs/Follower + Leader.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aiCustomUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

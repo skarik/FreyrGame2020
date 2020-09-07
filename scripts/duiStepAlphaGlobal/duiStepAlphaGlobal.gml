@@ -1,1 +1,5 @@
-alpha = duiGetAlphaGlobal();
+function duiStepAlphaGlobal() {
+	alpha = duiGetAlphaGlobal();
+
+
+}

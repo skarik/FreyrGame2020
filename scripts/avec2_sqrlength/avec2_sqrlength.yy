@@ -1,8 +1,12 @@
 {
-    "id": "89e7310c-6cd7-4d4b-9dfb-9ef78cd3d98d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "avec2_sqrlength",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Vector Math",
+    "path": "folders/Scripts/Core 2/Vector Math.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "avec2_sqrlength",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,4 +1,9 @@
+function _choiceDraw() {
 
-_choiceDrawBox();
-_choiceDrawText();
+	_choiceDrawBox();
+	_choiceDrawText();
 
+
+
+
+}

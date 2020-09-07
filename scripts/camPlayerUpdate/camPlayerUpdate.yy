@@ -1,8 +1,12 @@
 {
-    "id": "6f042160-b044-4b9f-9932-19a0705ab9f6",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "camPlayerUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player Camera",
+    "path": "folders/Scripts/Game/Player Camera.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "camPlayerUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

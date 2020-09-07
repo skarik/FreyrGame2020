@@ -2,34 +2,38 @@
 /// @desc Add the given NPC to the player party
 /// @param member {Object} Character to add.
 /// @returns {Boolean} True if added, false if failed to add.
+function playerPartyAdd(argument0) {
 
-var partyMember = argument0;
-partyMember = partyMember.id;
+	var partyMember = argument0;
+	partyMember = partyMember.id;
 
-var pl = getPlayer();
-if (!iexists(pl)) return false;
-var pstats = pl.pstats;
-if (!iexists(pstats)) return false;
+	var pl = getPlayer();
+	if (!iexists(pl)) return false;
+	var pstats = pl.pstats;
+	if (!iexists(pstats)) return false;
 
-// is member already in party?
-for (var i = 0; i < 3; ++i)
-{
-	if (pstats.m_party[i] == partyMember)
+	// is member already in party?
+	for (var i = 0; i < 3; ++i)
 	{
-		// already in party, done
-		return true;
+		if (pstats.m_party[i] == partyMember)
+		{
+			// already in party, done
+			return true;
+		}
 	}
-}
 
-// find first empty slot
-for (var i = 0; i < 3; ++i)
-{
-	if (pstats.m_party[i] == null)
+	// find first empty slot
+	for (var i = 0; i < 3; ++i)
 	{
-		pstats.m_party[i] = partyMember;
-		return true;
+		if (pstats.m_party[i] == null)
+		{
+			pstats.m_party[i] = partyMember;
+			return true;
+		}
 	}
-}
 
-// no empty slots, bad state
-return false;
+	// no empty slots, bad state
+	return false;
+
+
+}

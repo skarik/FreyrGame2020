@@ -1,8 +1,12 @@
 {
-    "id": "f09daa26-81cc-4091-a47c-47af0ff9d283",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aiNPCGuardUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Basic NPC AI",
+    "path": "folders/Scripts/Game/AI & NPCs/Basic NPC AI.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aiNPCGuardUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

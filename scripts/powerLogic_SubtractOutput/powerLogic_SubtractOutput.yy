@@ -1,8 +1,12 @@
 {
-    "id": "290bc6be-7c38-4767-bcb4-9f607984bf5a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "powerLogic_SubtractOutput",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lively",
+    "path": "folders/Scripts/Game/World/Lively.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "powerLogic_SubtractOutput",
+  "tags": [],
+  "resourceType": "GMScript",
 }

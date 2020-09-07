@@ -1,8 +1,12 @@
 {
-    "id": "0ec11171-9b23-4486-9242-13fd1469fb68",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_cropGetGrowValue",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Crop",
+    "path": "folders/Scripts/Game/Crop.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_cropGetGrowValue",
+  "tags": [],
+  "resourceType": "GMScript",
 }

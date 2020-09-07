@@ -1,8 +1,12 @@
 {
-    "id": "f20de884-5989-4164-a71b-f1af26db57d0",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "effectOnGroundStep",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effect",
+    "path": "folders/Scripts/Game/Effect.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "effectOnGroundStep",
+  "tags": [],
+  "resourceType": "GMScript",
 }

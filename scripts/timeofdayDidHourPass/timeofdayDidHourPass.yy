@@ -1,8 +1,12 @@
 {
-    "id": "9903ade6-b2d3-4494-8842-dcd051c227e3",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "timeofdayDidHourPass",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Time of Day (World)",
+    "path": "folders/Scripts/Game/World/Time of Day (World).yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "timeofdayDidHourPass",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "bedaf159-41c7-45a6-a691-93e5f0b8854b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ssettingGetMin",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Single Settings",
+    "path": "folders/Scripts/Core 2/Settings/Single Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ssettingGetMin",
+  "tags": [],
+  "resourceType": "GMScript",
 }

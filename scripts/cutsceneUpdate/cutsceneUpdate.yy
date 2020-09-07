@@ -1,8 +1,12 @@
 {
-    "id": "f8666643-f4f5-49d3-a82c-a11aceac9895",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "cutsceneUpdate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Sequencer",
+    "path": "folders/Scripts/Common/Cutscene/Sequencer.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "cutsceneUpdate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

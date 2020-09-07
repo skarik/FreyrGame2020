@@ -1,8 +1,12 @@
 {
-    "id": "b5d4f76c-5464-44da-ad96-7ac31a7a5cdf",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "drawControl",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Game",
+    "path": "folders/Scripts/Game.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "drawControl",
+  "tags": [],
+  "resourceType": "GMScript",
 }

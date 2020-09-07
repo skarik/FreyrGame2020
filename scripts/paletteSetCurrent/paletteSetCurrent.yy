@@ -1,8 +1,12 @@
 {
-    "id": "011e5258-b79c-4f79-9eca-3e88a7045cad",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "paletteSetCurrent",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Effects",
+    "path": "folders/Scripts/Core 2/Effects.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "paletteSetCurrent",
+  "tags": [],
+  "resourceType": "GMScript",
 }

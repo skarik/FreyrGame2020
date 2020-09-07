@@ -1,8 +1,12 @@
 {
-    "id": "1dcd64d2-4b18-4872-8659-8dccbb978594",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "particleZDraw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Particle",
+    "path": "folders/Scripts/Game/Particle.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "particleZDraw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

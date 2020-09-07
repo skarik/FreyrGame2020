@@ -1,8 +1,12 @@
 {
-    "id": "582bfcb1-4dac-416a-b016-45f5fb87cdfd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "col3_internal_tilemap_get_transition",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Internal",
+    "path": "folders/Scripts/Game/Collision 3/Internal.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "col3_internal_tilemap_get_transition",
+  "tags": [],
+  "resourceType": "GMScript",
 }

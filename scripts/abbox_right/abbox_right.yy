@@ -1,8 +1,12 @@
 {
-    "id": "9f34665e-087a-450d-995b-fea8a5c59e69",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "abbox_right",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Math",
+    "path": "folders/Scripts/R & D/Math.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "abbox_right",
+  "tags": [],
+  "resourceType": "GMScript",
 }

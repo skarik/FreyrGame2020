@@ -1,8 +1,12 @@
 {
-    "id": "484bb4f7-d043-4989-9448-811523a329bd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "cutscenePlayerPlayAnimation",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Cutscene",
+    "path": "folders/Scripts/Game/Cutscene.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "cutscenePlayerPlayAnimation",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "a0c63a4d-a6db-4466-af43-02d0fa4ed3c3",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_choiceBoxHeight",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Backend",
+    "path": "folders/Scripts/Common/Cutscene/Events/Backend.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_choiceBoxHeight",
+  "tags": [],
+  "resourceType": "GMScript",
 }

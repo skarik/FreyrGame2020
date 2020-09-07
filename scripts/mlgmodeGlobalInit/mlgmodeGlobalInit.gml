@@ -1,2 +1,6 @@
+function mlgmodeGlobalInit() {
 
-mlg_harvestCropsPrevious = ds_map_create();
+	mlg_harvestCropsPrevious = ds_map_create();
+
+
+}

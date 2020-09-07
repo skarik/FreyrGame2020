@@ -1,8 +1,12 @@
 {
-    "id": "366cbf9a-71f3-46b4-b0ba-a00314fd1cd2",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "enemyInfoClearLiveList",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Enemy Info Callbacks",
+    "path": "folders/Scripts/Game/Save State/Player_Game/Enemy Info Callbacks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "enemyInfoClearLiveList",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,3 +1,7 @@
 /// @description itemEntryFree(entry)
 /// @param entry completely deletes this item
-idelete(argument0);
+function itemEntryFree(argument0) {
+	idelete(argument0);
+
+
+}

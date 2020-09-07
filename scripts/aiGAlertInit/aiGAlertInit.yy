@@ -1,8 +1,12 @@
 {
-    "id": "4eaae182-0328-4746-bdd8-863491d10674",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "aiGAlertInit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Areas",
+    "path": "folders/Scripts/Game/AI & NPCs/Areas.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "aiGAlertInit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

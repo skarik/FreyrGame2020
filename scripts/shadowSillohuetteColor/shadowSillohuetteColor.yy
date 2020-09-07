@@ -1,8 +1,12 @@
 {
-    "id": "b0c3ec87-1503-4086-bf71-d238cb885fb4",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "shadowSillohuetteColor",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lighting Color",
+    "path": "folders/Scripts/Game/World/Lighting Color.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "shadowSillohuetteColor",
+  "tags": [],
+  "resourceType": "GMScript",
 }
