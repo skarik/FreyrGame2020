@@ -51,7 +51,7 @@
         "GMObject",
         "GMRoom",
       ],"resourceVersion":"1.0","name":"m_interactionFile","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":4,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
+    {"varType":4,"value":"null","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",

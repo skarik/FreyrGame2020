@@ -1,4 +1,4 @@
-/// @description Inentory
+/// @description Inventory
 
 // Inherit the parent event
 event_inherited();

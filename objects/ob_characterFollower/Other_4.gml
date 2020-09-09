@@ -1,3 +1,6 @@
 /// @description save persistent objects
 
-m_interactionObject.persistent = persistent;
+if (iexists(m_interactionObject))
+{
+	m_interactionObject.persistent = persistent;
+}

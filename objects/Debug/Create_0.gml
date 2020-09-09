@@ -3,7 +3,7 @@ if (singleton_this()) exit; // Make this object a singleton
 captureModeEnabled = false;
 recordModeEnabled = false;
 convention_mode = false; // turn on for convention demos
-demo_mode = true;
+demo_mode = false;
 
 // Enable debug mode for now
 on = false;
