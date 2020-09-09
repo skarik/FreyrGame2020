@@ -1,7 +1,8 @@
-/// @description cutsceneUpdate()
-function cutsceneUpdate() {
-	// Returns true if the cutscene is not being paused, false if it needs script input.
-
+/// @function cutsceneUpdate()
+/// @desc Returns true if the cutscene is not being paused, false if it needs script input.
+function cutsceneUpdate()
+{
+	// Update the current cutscene handle in use.
 	if (cutsceneIsDone())
 	{
 		if (global._cutscene_main == id)
@@ -10,9 +11,9 @@ function cutsceneUpdate() {
 		}
 	    return false;
 	}
-
 	global._cutscene_main = this;
 
+	// Get current entry...
 	var entry_type = cts_entry_type[cts_entry_current];
 	var entry = cts_entry[cts_entry_current];
 

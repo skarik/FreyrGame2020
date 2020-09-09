@@ -1,6 +1,6 @@
 function utilConstants() {
 #macro null noone
-#macro this self
+#macro this id
 
 #macro c_electricity make_color_rgb(100,255,255)
 #macro c_ltblue make_color_rgb(70,90,255)
