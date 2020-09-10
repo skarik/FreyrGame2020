@@ -30,6 +30,7 @@
     {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_livelyTriggeredDoor_Woodgate","path":"objects/o_livelyTriggeredDoor_Woodgate/o_livelyTriggeredDoor_Woodgate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_livelyTriggeredDoor_Woodgate","path":"objects/o_livelyTriggeredDoor_Woodgate/o_livelyTriggeredDoor_Woodgate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":12,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_livelyTriggeredDoor_Woodgate","path":"objects/o_livelyTriggeredDoor_Woodgate/o_livelyTriggeredDoor_Woodgate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":5,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_livelyTriggeredDoor_Woodgate","path":"objects/o_livelyTriggeredDoor_Woodgate/o_livelyTriggeredDoor_Woodgate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":3,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[

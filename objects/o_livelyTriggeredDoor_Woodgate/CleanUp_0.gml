@@ -1,4 +1,3 @@
-/// @description Delete associated objects
+/// @description Free used buffers
 
-instance_activate_object(m_collider);
-idelete(m_collider);
+surface_free_if_exists(target_buffer);
