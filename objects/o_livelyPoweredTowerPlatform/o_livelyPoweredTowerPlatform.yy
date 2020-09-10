@@ -25,11 +25,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":5,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":15,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"parent":{"name":"o_livelyPoweredTowerPlatform","path":"objects/o_livelyPoweredTowerPlatform/o_livelyPoweredTowerPlatform.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":0,"value":"32.0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[

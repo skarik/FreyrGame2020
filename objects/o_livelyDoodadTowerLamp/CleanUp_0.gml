@@ -1,3 +1,1 @@
-/// @description Delete emissive
-
-idelete(emissive);
+/// @description TODO
