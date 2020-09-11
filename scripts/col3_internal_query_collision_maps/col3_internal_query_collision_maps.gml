@@ -1,6 +1,7 @@
 /// @desc DO_NOT_CALL
 /// This function should not be called directly.
-function col3_internal_query_collision_maps() {
+function col3_internal_query_collision_maps()
+{
 	if (!global.collidable_layers_ready)
 	{
 		var all_layers = layer_get_all();
@@ -27,7 +28,4 @@ function col3_internal_query_collision_maps() {
 	
 		global.collidable_layers_ready = true;
 	}
-
-
-
 }

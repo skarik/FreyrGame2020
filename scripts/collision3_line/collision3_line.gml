@@ -17,8 +17,12 @@ function collision3_line(argument0, argument1, argument2, argument3, argument4, 
 #region Rasterizer-Based collision checking
 
 	col3_internal_query_collision_maps();
+	
+	var l_collidable_layers = global.collidable_layers;
+	var l_collidable_offset_x = global.collidable_offset_x;
+	var l_collidable_offset_y = global.collidable_offset_y;
 
-	var t_collidableLayerCount = array_length_1d(global.collidable_layers);
+	var t_collidableLayerCount = array_length_1d(l_collidable_layers);
 	if (t_collidableLayerCount > 0)
 	{
 		var dx = check_x2 - check_x1;
@@ -43,8 +47,8 @@ function collision3_line(argument0, argument1, argument2, argument3, argument4, 
 
 			for (var i = 0; i < t_collidableLayerCount; ++i)
 			{
-				var tilemap = global.collidable_layers[i];
-				var tile = tilemap_get(tilemap, cel_x, cel_y);
+				var tilemap = l_collidable_layers[i];
+				var tile = tilemap_get(tilemap, cel_x, cel_y); // TODO: Apply offset
 				var tile_id = tile & 0xFF;
 				var tile_elevation;
 			

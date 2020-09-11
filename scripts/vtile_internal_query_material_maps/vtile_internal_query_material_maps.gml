@@ -1,6 +1,7 @@
 /// @desc DO_NOT_CALL
 /// This function should not be called directly.
-function vtile_internal_query_material_maps() {
+function vtile_internal_query_material_maps()
+{
 	if (!global.material_layers_ready)
 	{
 		var all_layers = layer_get_all();
