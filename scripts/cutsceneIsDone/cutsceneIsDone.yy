@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Sequencer",
-    "path": "folders/Scripts/Common/Cutscene/Sequencer.yy",
+    "path": "folders/Scripts/Engine/Cutscene/Sequencer.yy",
   },
   "resourceVersion": "1.0",
   "name": "cutsceneIsDone",

@@ -1,5 +1,5 @@
-function inventoryLoad(argument0) {
-	var buffer = argument0;
+function inventoryLoad(buffer)
+{
 	var pl = getPlayer();
 
 	if (!savestateCheckBufferHeader(buffer, kSavestateHeader_Inventory))
@@ -34,6 +34,4 @@ function inventoryLoad(argument0) {
 			itemEntryLoad(buffer, bag[i]);
 		}
 	}
-
-
 }

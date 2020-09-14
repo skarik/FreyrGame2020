@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Soundsscapes",
-    "path": "folders/Scripts/Common/Audio/Soundsscapes.yy",
+    "path": "folders/Scripts/Engine/Audio/Soundsscapes.yy",
   },
   "resourceVersion": "1.0",
   "name": "soundscapeGetByName",

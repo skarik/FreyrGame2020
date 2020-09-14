@@ -1,5 +1,5 @@
-function inventorySave(argument0) {
-	var buffer = argument0;
+function inventorySave(buffer)
+{
 	var pl = getPlayer();
 
 	savestateWriteBufferHeader(buffer, kSavestateHeader_Inventory, kSavestateVersion);

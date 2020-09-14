@@ -1,7 +1,5 @@
-function itemEntrySave(argument0, argument1) {
-	var buffer = argument0;
-	var item = argument1;
-
+function itemEntrySave(buffer, item)
+{
 	if (item.object != null)
 	{
 		buffer_write(buffer, buffer_u8, true);
@@ -22,6 +20,4 @@ function itemEntrySave(argument0, argument1) {
 	{
 		buffer_write(buffer, buffer_u8, false);
 	}
-
-
 }

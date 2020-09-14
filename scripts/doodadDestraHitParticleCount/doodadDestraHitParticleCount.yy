@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Doodad Specifics",
-    "path": "folders/Scripts/Common/Doodad/Doodad Specifics.yy",
+    "path": "folders/Scripts/Engine/Doodad/Doodad Specifics.yy",
   },
   "resourceVersion": "1.0",
   "name": "doodadDestraHitParticleCount",

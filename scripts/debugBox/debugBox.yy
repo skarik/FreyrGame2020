@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Debug",
-    "path": "folders/Scripts/Common/Debug.yy",
+    "path": "folders/Scripts/Engine/Debug.yy",
   },
   "resourceVersion": "1.0",
   "name": "debugBox",

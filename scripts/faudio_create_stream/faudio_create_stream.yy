@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Audio",
-    "path": "folders/Scripts/Common/Audio.yy",
+    "path": "folders/Scripts/Engine/Audio.yy",
   },
   "resourceVersion": "1.0",
   "name": "faudio_create_stream",

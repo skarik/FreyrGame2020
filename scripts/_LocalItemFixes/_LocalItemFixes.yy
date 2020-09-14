@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Instances",
-    "path": "folders/Scripts/Core Extended/Instances.yy",
+    "name": "Inventory System",
+    "path": "folders/Scripts/Game/Inventory System.yy",
   },
   "resourceVersion": "1.0",
-  "name": "instance_nearest_nth",
+  "name": "_LocalItemFixes",
   "tags": [],
   "resourceType": "GMScript",
 }

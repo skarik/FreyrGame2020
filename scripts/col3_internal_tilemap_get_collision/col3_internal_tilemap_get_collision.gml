@@ -24,6 +24,4 @@ function col3_internal_tilemap_get_collision(argument0, argument1)
 			return true;
 	}
 	return false;
-
-
 }

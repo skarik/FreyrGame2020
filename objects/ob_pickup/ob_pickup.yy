@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Pickups",
-    "path": "folders/Objects/Gameplay/Pickups.yy",
+    "name": "Backend",
+    "path": "folders/Objects/Gameplay/Pickups/Backend.yy",
   },
   "resourceVersion": "1.0",
   "name": "ob_pickup",

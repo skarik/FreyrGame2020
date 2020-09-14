@@ -1,7 +1,5 @@
-function itemEntryLoad(argument0, argument1) {
-	var buffer = argument0;
-	var item = argument1;
-
+function itemEntryLoad(buffer, item)
+{
 	var valid = buffer_read(buffer, buffer_u8);
 	if (valid)
 	{
@@ -18,11 +16,19 @@ function itemEntryLoad(argument0, argument1) {
 		item.tradeItem[1] = buffer_read(buffer, buffer_s32);
 		item.userInfo  = buffer_read(buffer, buffer_s32);
 		item.userInfoS = buffer_read(buffer, buffer_string);
+		
+		// Now do fixes
+		var item_info_table = itemfixGenerateStruct(item.object);
+		{
+			item.checkUse = item_info_table.checkUseScript;
+			item.onUse = item_info_table.onUseScript;
+			item.onDeplete = item_info_table.onDepleteScript;
+			item.onUi = item_info_table.onUiScript;
+		}
+		delete item_info_table;
 	}
 	else
 	{
 		item.object   = null;
 	}
-
-
 }

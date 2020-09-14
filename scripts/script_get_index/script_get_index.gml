@@ -1,7 +1,7 @@
 /// @description  script_get_index(name)
 /// @param name string
-function script_get_index(argument0) {
-
+function script_get_index(argument0)
+{
 	var name = argument0;
 	var value = ds_map_find_value(global._script_mapping, name);
 	if (!is_undefined(value))
@@ -22,8 +22,5 @@ function script_get_index(argument0) {
 			}
 		}
 	}
-
 	return null;
-
-
 }

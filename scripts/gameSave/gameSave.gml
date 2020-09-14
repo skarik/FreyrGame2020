@@ -8,7 +8,7 @@ function gameSave() {
 #macro kSavestateHeader_InstFlags	"IFLG"
 #macro kSavestateHeader_EnemyInfo	"EMI"
 #macro kSavestateHeader_Checkpoints	"CHKS"
-#macro kSavestateVersion			0x00000004
+#macro kSavestateVersion			0x00000005
 
 	// Save any farms before the player
 	with (o_farmAreaManager)

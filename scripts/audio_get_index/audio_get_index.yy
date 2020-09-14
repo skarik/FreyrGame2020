@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Scripts/Core 2/Sounds.yy",
+    "path": "folders/Scripts/Core Extended/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "audio_get_index",

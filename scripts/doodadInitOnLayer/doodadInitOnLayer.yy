@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Doodad",
-    "path": "folders/Scripts/Common/Doodad.yy",
+    "path": "folders/Scripts/Engine/Doodad.yy",
   },
   "resourceVersion": "1.0",
   "name": "doodadInitOnLayer",

@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Update",
-    "path": "folders/Scripts/Common/Cutscene/Sequencer/Update.yy",
+    "path": "folders/Scripts/Engine/Cutscene/Sequencer/Update.yy",
   },
   "resourceVersion": "1.0",
   "name": "_cutsceneUpdateNoFrame",

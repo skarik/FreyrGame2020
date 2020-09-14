@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Settings",
-    "path": "folders/Scripts/Core 2/Settings.yy",
+    "path": "folders/Scripts/Core Extended/Settings.yy",
   },
   "resourceVersion": "1.0",
   "name": "settingsSave",
