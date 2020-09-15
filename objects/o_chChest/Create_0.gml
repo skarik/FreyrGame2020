@@ -5,7 +5,7 @@ event_inherited();
 
 moCanMoveUnstuck = false;
 m_bloodType = kBloodMetal;
-kKickbackAmount = 0.5;
+kKickbackAmount = 0.0;
 m_canKnockout = false;
 
 image_speed = 0.0;
