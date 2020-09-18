@@ -62,7 +62,7 @@ function effectOnGroundHit(argument0, argument1) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physLandSand1, snd_physLandSand1)
+			choose("audio/phys/land_sand1.wav", "audio/phys/land_sand1.wav")
 			);
 		sound_hit.pitch = random_range(0.9, 1.0);
 		sound_hit.gain = 1.1;
@@ -89,7 +89,7 @@ function effectOnGroundHit(argument0, argument1) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepDirt1, snd_physStepDirt2)
+			choose("audio/phys/step_dirt1.wav", "audio/phys/step_dirt2.wav")
 			);
 		sound_hit.pitch = random_range(0.7, 0.8);
 		sound_hit.gain = 1.0;
@@ -113,7 +113,7 @@ function effectOnGroundHit(argument0, argument1) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physLandWater1, snd_physLandWater1)
+			choose("audio/phys/land_water1.wav", "audio/phys/land_water1.wav")
 			);
 		sound_hit.pitch = random_range(0.9, 1.1);
 		sound_hit.gain = 0.8;
@@ -128,7 +128,7 @@ function effectOnGroundHit(argument0, argument1) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
+			choose("audio/phys/step_grass1.wav", "audio/phys/step_grass2.wav", "audio/phys/step_grass3.wav")
 			);
 		sound_hit.pitch = random_range(0.95, 1.0);
 		sound_hit.gain = 1.1;
@@ -143,7 +143,7 @@ function effectOnGroundHit(argument0, argument1) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepWood1, snd_physStepWood2)
+			choose("audio/phys/step_wood1.wav", "audio/phys/step_wood2.wav")
 			);
 		sound_hit.pitch = random_range(0.9, 1.0) * 0.9;
 		sound_hit.gain = 1.7;

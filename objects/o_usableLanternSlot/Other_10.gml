@@ -13,7 +13,7 @@ if (m_usable && iexists(m_user) && m_user.id == o_PlayerTest.id)
 			m_lanternProp.m_canPickUp = false;
 			
 			if (!iexists(m_gearTockSfx))
-				m_gearTockSfx = sound_play_at(x, y, snd_DoorTock0);
+				m_gearTockSfx = sound_play_at(x, y, "audio/door/tock0.wav");
 			m_gearTockSfx.loop = true;
 			m_gearTockSfx.pitch = 0.66;
 		}

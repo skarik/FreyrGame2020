@@ -42,8 +42,7 @@ function effectOnTillDigHit(argument0, argument1) {
 	sound_hit = sound_play_at(
 		random_range(x - 4, x + 4),
 		random_range(y - 4, y + 4),
-		//choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
-		snd_physDig1
+		"audio/phys/dig1.wav"
 		);
 	//sound_hit.pitch = random_range(0.75, 0.90) * 0.9;
 	sound_hit.pitch = random_range(0.95, 1.1);

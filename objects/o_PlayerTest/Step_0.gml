@@ -21,7 +21,13 @@ with (camera)
 		pl.xspeed,
 		pl.yspeed);
 }
-view_update_audio();
+//view_update_audio();
+faudioListenerSetPosition(Audio.mainListener, x, y, 0);
+faudioListenerSetVelocity(Audio.mainListener, xspeed * 0.01, yspeed * 0.01, 0);
+faudioListenerSetOrientation(
+	Audio.mainListener,
+	0, 0, 1,
+	0, -1, 0);
 
 
 // HACK: apply certain cutscene commands

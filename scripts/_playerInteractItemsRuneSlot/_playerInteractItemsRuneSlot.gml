@@ -10,7 +10,7 @@ function _playerInteractItemsRuneSlot(argument0) {
 			}
 			else
 			{
-				audio_play_sound(snd_UIOnUse, 0, false);
+				sound_play("audio/ui/use.wav");
 			}
 		}
 	}

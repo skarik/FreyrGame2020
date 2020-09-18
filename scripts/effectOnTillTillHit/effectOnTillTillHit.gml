@@ -39,8 +39,7 @@ function effectOnTillTillHit(argument0, argument1) {
 	sound_hit = sound_play_at(
 		random_range(x - 4, x + 4),
 		random_range(y - 4, y + 4),
-		//choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
-		snd_physDig3
+		"audio/phys/dig3.wav"
 		);
 	//sound_hit.pitch = random_range(0.50, 0.60) * 0.9;
 	sound_hit.pitch = random_range(0.95, 1.1);

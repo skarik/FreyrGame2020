@@ -18,7 +18,7 @@ if (m_fadestate == 0)
 		var sound = null;
 		
 		if (image_index == 1)
-			sound = sound_play_at(x, y, snd_npcNotice);
+			sound = sound_play_at(x, y, "audio/npc/notice.wav");
 			
 		if (sound != null)
 		{

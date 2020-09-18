@@ -74,7 +74,7 @@ function _playeruiBookInputOptions() {
 					m_sub_selection = null;
 					m_tri_selection = null;
 				
-					faudio_play_sound("audio/ui/book_select.wav", 50, false, kSoundChannelUi);
+					sound_play_channel("audio/ui/book_select.wav", kSoundChannelUi);
 				}
 			}
 		}
@@ -234,7 +234,7 @@ function _playeruiBookInputOptions() {
 							float_value = clamp(float_value, float_min, float_max);
 							
 							ssettingSetValue(l_current_option[3], float_value);
-							faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+							sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 						}
 						else if (o_PlayerTest.xAxis.value > kControlChoice_Margin
 								&& o_PlayerTest.xAxis.previous < kControlChoice_Margin)
@@ -243,7 +243,7 @@ function _playeruiBookInputOptions() {
 							float_value = clamp(float_value, float_min, float_max);
 							
 							ssettingSetValue(l_current_option[3], float_value);
-							faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+							sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 						}
 						else if (o_PlayerTest.xAxis.value < -kControlChoice_Margin
 								&& o_PlayerTest.xAxis.previous > -kControlChoice_Margin)
@@ -252,7 +252,7 @@ function _playeruiBookInputOptions() {
 							float_value = clamp(float_value, float_min, float_max);
 							
 							ssettingSetValue(l_current_option[3], float_value);
-							faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+							sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 						}
 					} break;
 				
@@ -274,7 +274,7 @@ function _playeruiBookInputOptions() {
 							enum_value = clamp(enum_value, enum_min, enum_max);
 							
 							ssettingSetValue(l_current_option[3], enum_value);
-							faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+							sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 						}
 						else if (o_PlayerTest.xAxis.value > kControlChoice_Margin
 								&& o_PlayerTest.xAxis.previous < kControlChoice_Margin)
@@ -283,7 +283,7 @@ function _playeruiBookInputOptions() {
 							enum_value = clamp(enum_value, enum_min, enum_max);
 							
 							ssettingSetValue(l_current_option[3], enum_value);
-							faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+							sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 						}
 						else if (o_PlayerTest.xAxis.value < -kControlChoice_Margin
 								&& o_PlayerTest.xAxis.previous > -kControlChoice_Margin)
@@ -292,7 +292,7 @@ function _playeruiBookInputOptions() {
 							enum_value = clamp(enum_value, enum_min, enum_max);
 							
 							ssettingSetValue(l_current_option[3], enum_value);
-							faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+							sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 						}
 					} break;
 				
@@ -301,7 +301,7 @@ function _playeruiBookInputOptions() {
 						if (o_PlayerTest.selectButton.pressed)
 						{
 							ssettingSetValue(l_current_option[3], !ssettingGetValue(l_current_option[3]));
-							faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+							sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 						}
 					} break;
 				}

@@ -23,12 +23,13 @@ function fmusic_start(argument0) {
 	// Update which is longest track, for synchro master
 	with (music_player) event_user(1);
 
-	/*
+	
 	for (var i = 0; i < music_player.m_trackCount; ++i)
 	{
-		audio_resume_sound(music_player.m_track[i]);
+		//audio_resume_sound(music_player.m_track[i]);
+		faudioSourcePlay(music_player.m_track[i], false);
 	}
-	*/
+	
 	return music_player;
 
 

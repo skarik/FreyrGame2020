@@ -52,9 +52,9 @@ if (!all_update_begin_death && all_update_cooldown_cdtimer <= 0.0)
 	{
 		// If playing a medium or longer song, kill any short audio requests
 		// so we don't have odd things stacked & playing up at the end.
-		if (music_current != null && iexists(music_current) && audio_is_playing(music_current.m_audio))
+		if (music_current != null && iexists(music_current) && faudioSourceIsPlaying(music_current.m_source))
 		{
-			if (audio_sound_length(music_current.m_stream) > 45.0)
+			if (faudioSourceGetSoundLength(music_current.m_source) > 45.0)
 			{
 				music_play_request_short = null;
 			}
@@ -64,7 +64,7 @@ if (!all_update_begin_death && all_update_cooldown_cdtimer <= 0.0)
 	// 
 	// Begin playing music on triggers
 
-	if (music_current == null || !iexists(music_current) || !audio_is_playing(music_current.m_audio))
+	if (music_current == null || !iexists(music_current) || !faudioSourceIsPlaying(music_current.m_source))
 	{
 		music_play_cdtimer -= Time.deltaTime;
 		if (music_play_cdtimer < 0)
@@ -72,14 +72,14 @@ if (!all_update_begin_death && all_update_cooldown_cdtimer <= 0.0)
 			// Do we have something to play?
 			if (is_string(music_play_request_short))
 			{
-				music_current = faudio_play2_file(music_play_request_short, true, false);
+				music_current = sound_play_channel(music_play_request_short, kSoundChannelMusic);
 				music_play_request_short = null;
 				music_play_cdtimer = 1.0;
 				debugOut("Playing short farm track");
 			}
 			else if (is_string(music_play_request_medium))
 			{
-				music_current = faudio_play2_file(music_play_request_medium, true, false);
+				music_current = sound_play_channel(music_play_request_medium, kSoundChannelMusic);
 				music_play_request_medium = null;
 				music_play_cdtimer = 2.0;
 				debugOut("Playing medium farm track");
@@ -94,18 +94,20 @@ if (music_current != null && iexists(music_current))
 	if (!all_update_begin_death)
 	{
 		// Set normal volume
-		if (audio_is_playing(music_current.m_audio))
+		/*if (audio_is_playing(music_current.m_audio))
 		{
 			audio_sound_gain(music_current.m_audio, 1.4 * Settings.audio_music_volume * Settings.audio_total_volume, 0.0);
-		}
+		}*/
+		music_current.gain = 1.4;
 	}
 	else
 	{
 		// If death marked, fade out
-		if (audio_is_playing(music_current.m_audio))
+		/*if (audio_is_playing(music_current.m_audio))
 		{
 			audio_sound_gain(music_current.m_audio, 1.4 * Settings.audio_music_volume * Settings.audio_total_volume * saturate(1.0 - all_update_death_blend), 0.0);
-		}
+		}*/
+		music_current.gain = 1.4 * saturate(1.0 - all_update_death_blend);
 	}
 }
 

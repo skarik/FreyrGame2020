@@ -18,7 +18,9 @@ function mlgmodeGlobalUpdate() {
 				// Play hit sound, always
 				if (crop == kCropId_AllCrops)
 				{
-					faudio_play_sound(snd_mlgHitMarker, 100, false, kSoundChannelUi);
+					var sound = sound_play_at(0, 0, "audio/sfx/mlg_hitmarker.wav");
+					sound.channel = kSoundChannelUi;
+					sound.spatial = kAudioSpatial2D;
 					var hitmarker = inew(o_ptcMlgHitMarker);
 					hitmarker.x = player.x + random_range(-8, +8);
 					hitmarker.y = player.y + random_range(-8, +8);
@@ -27,13 +29,17 @@ function mlgmodeGlobalUpdate() {
 				// Track penta's 
 				if (curr_value % 5 == 0)
 				{
-					faudio_play_sound(snd_mlgAirhorn, 100, false, kSoundChannelUi);
+					var sound = sound_play_at(0, 0, "audio/sfx/mlg_airhorn.wav");
+					sound.channel = kSoundChannelUi;
+					sound.spatial = kAudioSpatial2D;
 					effectScreenShake(5.0, 1.0, true);
 				}
 				// Track triples
 				else if (curr_value % 3 == 0)
 				{
-					faudio_play_sound(snd_mlgTriple, 100, false, kSoundChannelUi);
+					var sound = sound_play_at(0, 0, "audio/sfx/mlg_triple.wav");
+					sound.channel = kSoundChannelUi;
+					sound.spatial = kAudioSpatial2D;
 					effectScreenShake(3.0, 1.2, true);
 				}
 			}

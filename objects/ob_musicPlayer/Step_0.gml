@@ -32,7 +32,8 @@ for (var i = 0; i < m_trackCount; ++i)
 	if (abs(delta) > 0)
 	{
 		m_trackCurrentVolume[i] += delta;
-		audio_sound_gain(m_track[i], m_trackCurrentVolume[i], 0.0);
+		//audio_sound_gain(m_track[i], m_trackCurrentVolume[i], 0.0);
+		faudioSourceSetGain(m_track[i], m_trackCurrentVolume[i]);
 	}
 }
 

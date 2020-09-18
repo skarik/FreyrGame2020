@@ -12,7 +12,7 @@ function doodadDestraOnDestroy() {
 	
 		// Sound for the hit
 		// TODO: different sounds for different sprites
-		var audio = sound_play_at(x, y, snd_physKeyBreak0);
+		var audio = sound_play_at(x, y, "audio/phys/key_break0");
 		audio.pitch = random_range(1.1, 1.2);
 		audio.gain = 0.8 / max(1.0, audio.pitch);
 		audio.falloff_start = 20;

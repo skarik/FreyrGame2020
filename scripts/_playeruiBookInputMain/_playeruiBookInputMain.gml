@@ -92,7 +92,7 @@ function _playeruiBookInputMain() {
 				m_sub_selection = null;
 				m_tri_selection = null;
 			
-				faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+				sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 			
 				// Act on specific selections
 				if (m_top_selection == BookSelects.QuitToMenu)
@@ -172,9 +172,9 @@ function _playeruiBookInputMain() {
 					}
 				
 					if (m_option_current_waittime < 1 || m_option_current_waittime > 8)
-						faudio_play_sound(snd_MsgBepType, 50, false, kSoundChannelUi);
+						sound_play_channel("audio/ui/message_bep_type.wav", kSoundChannelUi);
 					else
-						faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+						sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 				}
 			
 				if (m_sub_hover == BookSelects.RestShort_Confirm)
@@ -184,7 +184,7 @@ function _playeruiBookInputMain() {
 					// Actually wait.
 					gameCampWait(m_option_current_waittime);
 				
-					faudio_play_sound("audio/ui/book_select.wav", 50, false, kSoundChannelUi);
+					sound_play_channel("audio/ui/book_select.wav", kSoundChannelUi);
 				}
 			}
 		
@@ -196,9 +196,9 @@ function _playeruiBookInputMain() {
 					m_option_current_waittime -= 1;
 				
 					if (m_option_current_waittime < 1 || m_option_current_waittime > 8)
-						faudio_play_sound(snd_MsgBepType, 50, false, kSoundChannelUi);
+						sound_play_channel("audio/ui/message_bep_type.wav", kSoundChannelUi);
 					else
-						faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+						sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 				}
 				if (o_PlayerTest.yAxis.previous > -0.707 && o_PlayerTest.yAxis.value < -0.707)
 				{
@@ -206,9 +206,9 @@ function _playeruiBookInputMain() {
 					m_option_current_waittime += 1;
 				
 					if (m_option_current_waittime < 1 || m_option_current_waittime > 8)
-						faudio_play_sound(snd_MsgBepType, 50, false, kSoundChannelUi);
+						sound_play_channel("audio/ui/message_bep_type.wav", kSoundChannelUi);
 					else
-						faudio_play_sound("audio/ui/book_select2.wav", 50, false, kSoundChannelUi);
+						sound_play_channel("audio/ui/book_select2.wav", kSoundChannelUi);
 				}
 			}
 		

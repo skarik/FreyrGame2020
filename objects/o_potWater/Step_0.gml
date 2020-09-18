@@ -36,7 +36,7 @@ if (charges > 0)
 			
 			var audio;
 			// Make water sound
-			audio = sound_play_at(x, y, snd_npcWaterBlock);
+			audio = sound_play_at(x, y, "audio/npc/water_block.wav");
 			audio.pitch = random_range(1.00, 1.30);
 			audio.gain = random_range(0.2, 0.3);
 			audio.falloff_start = 20;
@@ -44,7 +44,7 @@ if (charges > 0)
 			audio.falloff_factor = 1;
 			audio.parent = id;
 			// Make water sound
-			audio = sound_play_at(x, y, snd_physStepWater1);
+			audio = sound_play_at(x, y, "audio/phys/step_water1.wav");
 			audio.pitch = random_range(1.20, 1.40);
 			audio.gain = random_range(0.6, 0.7);
 			audio.falloff_start = 20;
@@ -65,7 +65,7 @@ if (inWater)
 		charges = kMaxCharges;
 		
 		// Make water sound
-		audio = sound_play_at(x, y, snd_FillWaterJug);
+		audio = sound_play_at(x, y, "audio/item/waterjug_fill.wav");
 		audio.pitch = random_range(0.9, 1.10);
 		audio.gain = random_range(0.6, 0.7);
 		audio.falloff_start = 30;

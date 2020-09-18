@@ -6,11 +6,7 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 	var soundinfo = m_definition.sounds[i];
 	if (soundinfo.type == kSoundscapeSoundTypeLooping)
 	{
-		var audioHandle = audio_get_index(soundinfo.wavelist[0]);
-		if (audioHandle == null)
-		{
-			audioHandle = faudio_create_stream(soundinfo.wavelist[0]);
-		}
+		var audioHandle = soundinfo.wavelist[0];
 		
 		// Query playing position
 		var soundpos = [0, 0];

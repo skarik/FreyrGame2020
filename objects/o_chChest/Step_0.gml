@@ -15,7 +15,7 @@ image_index = animationIndex;
 // Make sound
 if (animationIndexPrev < 1.0 && animationIndex >= 1.0)
 {
-	var audio = sound_play_at(x, y, snd_ChestOpen0);
+	var audio = sound_play_at(x, y, "audio/item/chest_open0.wav");
 	audio.pitch = random_range(0.95, 1.2);
 	audio.gain = random_range(0.7, 0.9) * 0.4;
 	audio.falloff_start = 20;
@@ -26,7 +26,7 @@ if (animationIndexPrev < 1.0 && animationIndex >= 1.0)
 // Make more sound
 if (animationIndexPrev < 1.0 && animationIndex >= 1.0)
 {
-	var audio = sound_play_at(x, y, snd_ChestOpen1);
+	var audio = sound_play_at(x, y, "audio/item/chest_open1.wav");
 	audio.pitch = 1.0;
 	audio.gain = 0.8;
 	audio.falloff_start = 20;
@@ -66,7 +66,7 @@ if (!m_empty
 	}
 	
 	// Make even more sound
-	var audio = sound_play_at(x, y, snd_ChestOpen2);
+	var audio = sound_play_at(x, y, "audio/item/chest_open2.wav");
 	audio.pitch = random_range(0.90, 1.00);
 	audio.gain = random_range(0.7, 0.9) * 0.9;
 	audio.falloff_start = 20;

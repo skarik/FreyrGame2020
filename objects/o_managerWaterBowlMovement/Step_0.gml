@@ -140,8 +140,8 @@ for (var i_bowl = 0; i_bowl < bowl_count; ++i_bowl)
 			current_projection = max(0.0, current_bowl.xspeed * dx_u + current_bowl.yspeed * dy_u);
 			target_projection = max(0.0, target_bowl.xspeed * -dx_u + target_bowl.yspeed * -dy_u);
 			
-			current_projection /= sqrt(sqr(current_bowl.xspeed) + sqr(current_bowl.yspeed));
-			target_projection /= sqrt(sqr(target_bowl.xspeed) + sqr(target_bowl.yspeed));
+			current_projection /= sqrt(max(0.0001, sqr(current_bowl.xspeed) + sqr(current_bowl.yspeed)));
+			target_projection /= sqrt(max(0.0001, sqr(target_bowl.xspeed) + sqr(target_bowl.yspeed)));
 			
 			current_bowl.xspeed += target_projection * target_bowl.xspeed * (1.0 - restitution);
 			current_bowl.yspeed += target_projection * target_bowl.yspeed * (1.0 - restitution);
@@ -178,7 +178,7 @@ for (var i_bowl = 0; i_bowl < bowl_count; ++i_bowl)
 				sound_hit = sound_play_at(
 					random_range(current_bowl.x - 4, current_bowl.x + 4),
 					random_range(current_bowl.y - 4, current_bowl.y + 4),
-					choose(snd_physHitBowl1, snd_physHitBowl2, snd_physHitBowl3)
+					choose("audio/phys/hit_bowl1.wav", "audio/phys/hit_bowl2.wav", "audio/phys/hit_bowl3.wav")
 					);
 				sound_hit.pitch = choose(0.5, 1.0, 1.33);//random_range(0.6, 2.1);
 				sound_hit.gain = 0.1 / max(1.0, sound_hit.pitch);

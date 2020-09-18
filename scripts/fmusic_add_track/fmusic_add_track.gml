@@ -1,8 +1,8 @@
 /// @description fmusic_add_track(music_instance, filename)
 /// @param music_instance
 /// @param filename
-function fmusic_add_track(argument0, argument1) {
-
+function fmusic_add_track(argument0, argument1)
+{
 	var music_player = argument0;
 	var filename = argument1;
 
@@ -21,10 +21,11 @@ function fmusic_add_track(argument0, argument1) {
 	//audio_play_in_sync_group(music_player.m_syncGroup, music_player.m_track[music_player.m_trackCount]);
 
 	// Create the stream (TODO: cache music)
-	music_player.m_trackStream[music_player.m_trackCount] = faudio_create_stream(filename);
-	music_player.m_track[music_player.m_trackCount] = audio_play_sound(music_player.m_trackStream[music_player.m_trackCount], 100, true);
-	audio_sound_gain(music_player.m_track[music_player.m_trackCount], 0.0, 0);
-	//audio_pause_sound(music_player.m_track[music_player.m_trackCount]);
+	music_player.m_trackStream[music_player.m_trackCount] = faudioBufferLoad(filename);
+	music_player.m_track[music_player.m_trackCount] = faudioSourceCreate(music_player.m_trackStream[music_player.m_trackCount]);
+	faudioSourceSetLooped(music_player.m_track[music_player.m_trackCount], true);
+	faudioSourceSetSpatial(music_player.m_track[music_player.m_trackCount], kAudioSpatial2D);
+	faudioSourceSetGain(music_player.m_track[music_player.m_trackCount], 0.0);
 
 	// Set up initial volume
 	music_player.m_trackVolume[music_player.m_trackCount] = 0.0;

@@ -32,14 +32,12 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 			ds_list_delete(m_audioIndexDeck[i], cardIndex);
 
 			// Load the sound			
-			var audioHandle = audio_get_index(soundinfo.wavelist[audioIndex]);
-			if (audioHandle == null)
-			{
-				audioHandle = faudio_create_stream(soundinfo.wavelist[audioIndex]);
-			}
+			var audioHandle = soundinfo.wavelist[audioIndex];
 			
 			// Set new cooldown
-			m_audioCooldown[i] = faudio_sound_get_length(audioHandle) + random_range(soundinfo.time_min, soundinfo.time_max);
+			//m_audioCooldown[i] = faudio_sound_get_length(audioHandle) + random_range(soundinfo.time_min, soundinfo.time_max);
+			// TODO: Fix this:
+			m_audioCooldown[i] = 5.0 + random_range(soundinfo.time_min, soundinfo.time_max);
 			
 			// Select a position
 			var soundpos = [0, 0];

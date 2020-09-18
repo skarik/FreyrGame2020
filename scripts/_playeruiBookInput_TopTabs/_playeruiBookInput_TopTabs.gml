@@ -44,7 +44,7 @@ function _playeruiBookInput_TopTabs() {
 	
 		m_anim_tab_flavor = 1.0; // Proc the animation hit
 	
-		faudio_play_sound("audio/ui/book_pageturn.wav", 50, false, kSoundChannelUi);
+		sound_play_channel("audio/ui/book_pageturn.wav", kSoundChannelUi);
 	}
 	else if (o_PlayerTest.nextUiButton.pressed)
 	{
@@ -54,7 +54,7 @@ function _playeruiBookInput_TopTabs() {
 	
 		m_anim_tab_flavor = 1.0; // Proc the animation hit
 	
-		faudio_play_sound("audio/ui/book_pageturn.wav", 50, false, kSoundChannelUi);
+		sound_play_channel("audio/ui/book_pageturn.wav", kSoundChannelUi);
 	}
 
 	// Do tab-selection
@@ -76,7 +76,7 @@ function _playeruiBookInput_TopTabs() {
 			
 				m_anim_tab_flavor = 1.0; // Proc the animation hit
 			
-				faudio_play_sound("audio/ui/book_pageturn.wav", 50, false, kSoundChannelUi);
+				sound_play_channel("audio/ui/book_pageturn.wav", kSoundChannelUi);
 				return true;
 			}
 		}

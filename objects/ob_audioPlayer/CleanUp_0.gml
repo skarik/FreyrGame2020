@@ -1,7 +1,10 @@
 /// @description Cleanup
 
-audio_stop_sound(m_instance);
-audio_emitter_free(m_emitter);
+//audio_stop_sound(m_instance);
+//audio_emitter_free(m_emitter);
+
+faudioSourceDestroy(m_source);
+faudioBufferFree(m_buffer);
 
 //debugOut("Stopping sound \"" + string(audio_get_name(m_sound)) + "\"");
 

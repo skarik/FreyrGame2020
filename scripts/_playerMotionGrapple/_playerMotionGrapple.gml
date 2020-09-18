@@ -49,7 +49,7 @@ function _playerMotionGrapple() {
 			moGrapple_timerSpeed = 400.0 / point_distance(x, y, moGrapple_hookTargetX, moGrapple_hookTargetY);
 		
 			// Do the classic withstand sound effect
-			var audio = sound_play_at(moGrapple_startX, moGrapple_startY, snd_GrappleImpact);
+			var audio = sound_play_at(moGrapple_startX, moGrapple_startY, "audio/item/grapple_impact.wav");
 				audio.pitch = 1.05;
 				audio.gain = 0.8;
 		

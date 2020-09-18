@@ -26,7 +26,7 @@ function _playerMoAttack2() {
 		playerOnDealingDamage();
 	
 		// Sound for the attack
-		var audio = sound_play_at(x, y, snd_npcWindstep);
+		var audio = sound_play_at(x, y, "audio/npc/windstep.wav");
 		audio.pitch = random_range(0.8, 0.9);
 		audio.gain = 0.7 / max(1.0, audio.pitch);
 		audio.falloff_start = 20;

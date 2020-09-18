@@ -70,7 +70,7 @@ function _playerUiGeneralInventoryInputs(argument0, argument1, argument2) {
 		// Bad case, cannot do thing, spit annoying sound
 		else
 		{
-			audio_play_sound(snd_UIOnUse, 0, false);
+			sound_play("audio/ui/use.wav");
 		}
 	}
 	// If any item is secondary-actioned:
@@ -133,7 +133,7 @@ function _playerUiGeneralInventoryInputs(argument0, argument1, argument2) {
 		// Bad case, cannot do thing, spit annoying sound
 		else
 		{
-			audio_play_sound(snd_UIOnUse, 0, false);
+			sound_play("audio/ui/use.wav");
 		}
 	}
 	

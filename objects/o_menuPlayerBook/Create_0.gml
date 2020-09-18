@@ -4,7 +4,7 @@
 event_inherited();
 
 // Play audio on creation
-faudio_play_sound("audio/ui/book_open.wav", 50, false, kSoundChannelUi);
+sound_play_channel("audio/ui/book_open.wav", kSoundChannelUi);
 
 controlInit();
 

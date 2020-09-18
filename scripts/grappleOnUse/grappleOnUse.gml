@@ -17,7 +17,7 @@ function grappleOnUse(argument0) {
 	moGrapple_pauseTimer = 0.0; // Every grapple needs an impact timer in its life. Trust me. I know grapples.
 
 	// Play audio
-	var audio = sound_play_at(x, y, snd_GrappleFire);
+	var audio = sound_play_at(x, y, "audio/item/grapple_fire.wav");
 		audio.pitch = 0.8;
 		audio.gain = 0.6;
 

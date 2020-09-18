@@ -48,7 +48,7 @@ if (m_player.m_usingBook || m_totalBlend == 1.0)
 			if (m_player.m_usingBook)
 			{
 				m_player.m_usingBook = false;
-				faudio_play_sound("audio/ui/book_close.wav", 50, false, kSoundChannelUi);
+				sound_play_channel("audio/ui/book_close.wav", kSoundChannelUi);
 			}
 		}
 	}

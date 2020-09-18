@@ -31,7 +31,7 @@ if (iexists(m_tookDamageSource))
 }
 
 // Do sound
-sound = sound_play_at(x, y, snd_npcGobboKO);
+sound = sound_play_at(x, y, "audio/npc/gobbo_ko.wav");
 sound.pitch = random_range(0.95, 1.1) * 0.8;
 sound.gain = random_range(0.7, 0.9) * 0.5;
 sound.falloff_start = 20;

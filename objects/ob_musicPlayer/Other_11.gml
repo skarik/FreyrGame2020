@@ -6,7 +6,7 @@ var l_longest_length = -0.0;
 if (m_trackMasterId != null)
 {
 	var l_longest_index = m_trackMasterId;
-	var l_longest_length = audio_sound_length(m_trackStream[m_trackMasterId]);
+	var l_longest_length = faudioSourceGetSoundLength(m_track[m_trackMasterId]);
 	
 	// If leading track is an intro, mark missing track:
 	if (m_trackIntroToLoop[m_trackMasterId] != null)
@@ -23,7 +23,7 @@ for (var i = 0; i < m_trackCount; ++i)
 	// Skip intro tracks
 	if (m_trackIntroToLoop[i] != null) continue;
 	
-	var l_length = audio_sound_length(m_trackStream[i]);
+	var l_length = faudioSourceGetSoundLength(m_track[i]);
 	if (l_length > l_longest_length)
 	{
 		l_longest_index = i;

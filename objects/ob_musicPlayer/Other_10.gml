@@ -10,11 +10,11 @@ if (m_trackMasterId == null)
 if (m_trackIntroToLoop[m_trackMasterId] != null)
 {
 	// Grab time & length with intro:
-	var current_lead_time_intro = audio_sound_get_track_position(m_track[m_trackMasterId]);
-	var current_lead_length_intro = audio_sound_length(m_trackStream[m_trackMasterId]);
+	var current_lead_time_intro = faudioSourceGetPlaybackTime(m_track[m_trackMasterId]);
+	var current_lead_length_intro = faudioSourceGetSoundLength(m_track[m_trackMasterId]);
 	
 	// Grab time & length of the looped variant (we subtract length of intro)
-	var current_lead_length = audio_sound_length(m_trackStream[m_trackIntroToLoop[m_trackMasterId]]);
+	var current_lead_length = faudioSourceGetSoundLength(m_track[m_trackIntroToLoop[m_trackMasterId]]);
 	var intro_length = current_lead_length_intro - current_lead_length;
 	var current_lead_time = current_lead_time_intro - intro_length;
 	
@@ -35,8 +35,8 @@ if (m_trackIntroToLoop[m_trackMasterId] != null)
 			// Skip syncing intro tracks
 			if (m_trackIntroToLoop[i] != null) continue;
 			
-			var track_position = audio_sound_get_track_position(m_track[i]);
-			var track_length = audio_sound_length(m_track[i]);
+			var track_position = faudioSourceGetPlaybackTime(m_track[i]);
+			var track_length = faudioSourceGetSoundLength(m_track[i]);
 			
 			// Check if it's a perfect fit
 			if ((current_lead_length % track_length) < kSynchroFitLeeway)
@@ -46,7 +46,7 @@ if (m_trackIntroToLoop[m_trackMasterId] != null)
 				// Sync if too far
 				if (abs(track_position - new_track_position) > kSynchroResyncLeeway)
 				{
-					audio_sound_set_track_position(m_track[i], new_track_position);
+					faudioSourceSetPlaybackTime(m_track[i], new_track_position);
 				}
 			}
 			// Not a perfect fit. Need to do more complicated maths to sync.
@@ -74,8 +74,8 @@ if (m_trackIntroToLoop[m_trackMasterId] != null)
 // Normal synchro:
 else
 {
-	var current_lead_time = audio_sound_get_track_position(m_track[m_trackMasterId]);
-	var current_lead_length = audio_sound_length(m_trackStream[m_trackMasterId]);
+	var current_lead_time = faudioSourceGetPlaybackTime(m_track[m_trackMasterId]);
+	var current_lead_length = faudioSourceGetSoundLength(m_track[m_trackMasterId]);
 	for (var i = 0; i < m_trackCount; ++i)
 	{
 		// Skip setting the master track in charge of sync
@@ -83,8 +83,8 @@ else
 		// Skip syncing intro tracks
 		if (m_trackIntroToLoop[i] != null) continue;
 			
-		var track_position = audio_sound_get_track_position(m_track[i]);
-		var track_length = audio_sound_length(m_track[i]);
+		var track_position = faudioSourceGetPlaybackTime(m_track[i]);
+		var track_length = faudioSourceGetSoundLength(m_track[i]);
 			
 		// Check if it's a perfect fit
 		if ((current_lead_length % track_length) < kSynchroFitLeeway)
@@ -94,7 +94,7 @@ else
 			// Sync if too far
 			if (abs(track_position - new_track_position) > kSynchroResyncLeeway)
 			{
-				audio_sound_set_track_position(m_track[i], new_track_position);
+				faudioSourceSetPlaybackTime(m_track[i], new_track_position);
 			}
 		}
 		// Not a perfect fit. Need to do more complicated maths to sync.

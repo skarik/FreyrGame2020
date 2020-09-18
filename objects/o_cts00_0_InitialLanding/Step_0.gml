@@ -45,7 +45,7 @@ if (cutsceneHasSignal())
 		pl.moEnabled = false;
 		
 		// Play the fall audio
-		sound_play_at(pl.x, pl.y, snd_Cts00Falling);
+		sound_play_at(pl.x, pl.y, "audio/cts/00_falling.wav");
 	}
 	else if (signal_id == "nathan_jump")
 	{
@@ -127,7 +127,7 @@ if (!cutsceneUpdate())
 					}
 				}
 				
-				sound_play_at(pl.x, pl.y, snd_Cts00Splash);
+				sound_play_at(pl.x, pl.y, "audio/cts/00_splash.wav");
 				
 				// End the wait
 				cutsceneWaitEnd();

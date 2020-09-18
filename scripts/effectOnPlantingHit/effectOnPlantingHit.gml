@@ -50,7 +50,7 @@ function effectOnPlantingHit(argument0, argument1) {
 	sound_hit = sound_play_at(
 		random_range(x - 4, x + 4),
 		random_range(y - 4, y + 4),
-		choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
+		choose("audio/phys/step_grass1.wav", "audio/phys/step_grass2.wav", "audio/phys/step_grass3.wav")
 		);
 	sound_hit.pitch = random_range(0.75, 0.90) * 0.9;
 	sound_hit.gain = random_range(0.7, 0.9) * 0.6;

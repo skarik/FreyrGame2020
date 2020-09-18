@@ -1,4 +1,5 @@
-function windAudioGlobalUpdate() {
+function windAudioGlobalUpdate()
+{
 	var current_wind = weatherGetWind();
 	var current_location_type = worldGameLocationType();
 
@@ -30,11 +31,11 @@ function windAudioGlobalUpdate() {
 	//
 	// Select audio to play
 
-	var next_requested_id = null;
+	var next_requested_id = "";
 
 	if (current_location_type & kWorldLocationType_Bitmask_Cave)
 	{
-		next_requested_id = snd_windCave;
+		next_requested_id = "audio/bg/wind_cave.wav";
 		m_windTargetVolume = saturate(sqrt(m_windMagnitude) / 30 - 0.25);
 	}
 	else
@@ -42,19 +43,19 @@ function windAudioGlobalUpdate() {
 		if (m_windMagnitude < 200)
 		{
 			// select smol
-			next_requested_id = snd_windWeakLowlands;
+			next_requested_id = "audio/bg/wind_weakLowlands.wav";
 			m_windTargetVolume = saturate(sqrt(m_windMagnitude) / 30 - 0.25);
 		}
 		else if (m_windMagnitude < 400)
 		{
 			// select med
-			next_requested_id = snd_windMedium;
+			next_requested_id = "audio/bg/wind_medium.wav";
 			m_windTargetVolume = saturate(m_windMagnitude / 360 - 0.125);
 		}
 		else
 		{
 			// big
-			next_requested_id = snd_windStrong;
+			next_requested_id = "audio/bg/wind_strong.wav";
 			m_windTargetVolume = saturate(m_windMagnitude / 580  - 0.125);
 		}
 	}
@@ -94,7 +95,11 @@ function windAudioGlobalUpdate() {
 				}
 			}
 		
-			m_windSoundMain = faudio_play_sound(next_requested_id, 50, true, kSoundChannelWorld);
+			var buffer = faudioBufferLoad(next_requested_id);
+			m_windSoundMain = faudioSourceCreate(buffer);
+			faudioSourceSetLooped(m_windSoundMain, true);
+			faudioSourceSetChannel(m_windSoundMain, kFAMixChannelBackground);
+			faudioSourceSetSpatial(m_windSoundMain, 0.0);
 			m_windSoundMainId = next_requested_id;
 			m_windSoundMainGain = 0.0;
 		}
@@ -109,7 +114,8 @@ function windAudioGlobalUpdate() {
 		var gain_delta_timed = sign(gain_delta) * min(abs(gain_delta), m_windVolumeTransitionSpeed * Time.deltaTime);
 	
 		m_windSoundMainGain += gain_delta_timed;
-		faudio_sound_set_gain(m_windSoundMain, m_windSoundMainGain);
+		//faudio_sound_set_gain(m_windSoundMain, m_windSoundMainGain);
+		faudioSourceSetGain(m_windSoundMain, m_windSoundMainGain);
 	}
 
 	//
@@ -120,15 +126,15 @@ function windAudioGlobalUpdate() {
 		m_windSoundFadeoutGain -= Time.deltaTime * m_windVolumeTransitionSpeed;
 		if (m_windSoundFadeoutGain > 0.0)
 		{
-			faudio_sound_set_gain(m_windSoundFadeout, m_windSoundFadeoutGain);
+			//faudio_sound_set_gain(m_windSoundFadeout, m_windSoundFadeoutGain);
+			faudioSourceSetGain(m_windSoundFadeout, m_windSoundFadeoutGain);
 		}
 		else
 		{
-			faudio_sound_stop(m_windSoundFadeout);
+			//faudio_sound_stop(m_windSoundFadeout);
+			faudioSourceDestroy(m_windSoundFadeout);
 			m_windSoundFadeout = null;
 			m_windSoundFadeoutId = null;
 		}
 	}
-
-
 }

@@ -7,6 +7,7 @@ inew(Time);
 inew(Debug);
 inew(Settings);
 inew(Game);
+inew(Audio);
 
 if (Debug.enable_gmlive)
 	inew(obj_gmlive);

@@ -4,9 +4,9 @@ function effectGetImpactSound(argument0, argument1, argument2) {
 	var attacker = argument2;
 
 	if (damagetype & kDamageTypePiercing)
-		return snd_physKeyHitLight1;
+		return "audio/phys/key_hit_light1.wav";
 
-	return snd_physKeyHitLight0;
+	return "audio/phys/key_hit_light0.wav";
 
 
 }

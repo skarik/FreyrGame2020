@@ -69,7 +69,7 @@ function effectOnGroundStep(argument0, argument1, argument2) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepSand1, snd_physStepSand2, snd_physStepSand3)
+			choose("audio/phys/step_sand1.wav", "audio/phys/step_sand2.wav", "audio/phys/step_sand3.wav")
 			);
 		sound_hit.pitch = random_range(0.9, 1.1);
 		sound_hit.gain = 0.84;
@@ -102,7 +102,7 @@ function effectOnGroundStep(argument0, argument1, argument2) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepDirt1, snd_physStepDirt2)
+			choose("audio/phys/step_dirt1.wav", "audio/phys/step_dirt2.wav")
 			);
 		sound_hit.pitch = random_range(0.7, 0.8);
 		sound_hit.gain = random_range(0.8, 0.9) * 0.4;
@@ -129,7 +129,7 @@ function effectOnGroundStep(argument0, argument1, argument2) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepStone1, snd_physStepStone2, snd_physStepStone3)
+			choose("audio/phys/step_stone1.wav", "audio/phys/step_stone2.wav", "audio/phys/step_stone3.wav")
 			);
 		sound_hit.pitch = random_range(0.7, 0.8);
 		sound_hit.gain = 0.7;
@@ -155,7 +155,7 @@ function effectOnGroundStep(argument0, argument1, argument2) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepWater1, snd_physStepWater2)
+			choose("audio/phys/step_water1.wav", "audio/phys/step_water2.wav")
 			);
 		sound_hit.pitch = random_range(0.9, 1.1);
 		sound_hit.gain = 0.8;
@@ -170,7 +170,7 @@ function effectOnGroundStep(argument0, argument1, argument2) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepGrass1, snd_physStepGrass2, snd_physStepGrass3)
+			choose("audio/phys/step_grass1.wav", "audio/phys/step_grass2.wav", "audio/phys/step_grass3.wav")
 			);
 		sound_hit.pitch = random_range(0.95, 1.2);
 		sound_hit.gain = random_range(0.7, 0.9) * 0.4;
@@ -185,7 +185,7 @@ function effectOnGroundStep(argument0, argument1, argument2) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepMetal1, snd_physStepMetal2, snd_physStepMetal3)
+			choose("audio/phys/step_metal1.wav", "audio/phys/step_metal2.wav", "audio/phys/step_metal3.wav")
 			);
 		sound_hit.pitch = random_range(0.95, 1.2);
 		sound_hit.gain = random_range(0.7, 0.9) * 0.6;
@@ -200,7 +200,7 @@ function effectOnGroundStep(argument0, argument1, argument2) {
 		sound_hit = sound_play_at(
 			random_range(x - 4, x + 4),
 			random_range(y - 4, y + 4),
-			choose(snd_physStepWood1, snd_physStepWood2)
+			choose("audio/phys/step_wood1.wav", "audio/phys/step_wood2.wav")
 			);
 		sound_hit.pitch = random_range(0.9, 1.0);
 		sound_hit.gain = random_range(0.7, 0.9) * 1.4;

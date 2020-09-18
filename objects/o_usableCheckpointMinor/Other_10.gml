@@ -17,8 +17,9 @@ if (m_usable && iexists(m_user) && m_user.id == pl.id)
 	}
 	
 	// play sound
-	var audio = faudio_create_stream("music/save/save_start.ogg");
-	var sound = sound_play_at(x, y, audio);
+	var sound = sound_play_at(x, y, "music/save/save_start.ogg");
+		sound.spatial = 0.5;
+		sound.channel = kSoundChannelMusic;
 		sound.gain = 0.8;
 	
 	if (!ctsGabbersHaveFocus())

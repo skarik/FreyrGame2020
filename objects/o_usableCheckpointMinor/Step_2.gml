@@ -27,8 +27,9 @@ if (m_stateWaitingForEndOfCamp)
 	{
 		m_stateWaitingForEndOfCamp = false;
 		// play sound
-		var audio = faudio_create_stream("music/save/save_heavy.ogg");
-		var sound = sound_play_at(x, y, audio);
+		var sound = sound_play_at(x, y, "music/save/save_heavy.ogg");
+			sound.spatial = 0.5;
+			sound.channel = kSoundChannelMusic;
 			sound.gain = 0.8;
 	}
 }
@@ -54,8 +55,9 @@ if (m_stateInteracting)
 				instance_create_depth(x, y - 48, -10, o_floaterGameSaved);
 				
 				// play continue sound
-				var audio = faudio_create_stream("music/save/save_light.ogg");
-				var sound = sound_play_at(x, y, audio);
+				var sound = sound_play_at(x, y, "music/save/save_light.ogg");
+					sound.spatial = 0.5;
+					sound.channel = kSoundChannelMusic;
 					sound.gain = 0.8;
 			}
 			else if (choice == 1)
@@ -63,8 +65,9 @@ if (m_stateInteracting)
 				m_stateInteracting = false;
 				
 				// play sound
-				var audio = faudio_create_stream("music/save/save_heavy.ogg");
-				var sound = sound_play_at(x, y, audio);
+				var sound = sound_play_at(x, y, "music/save/save_heavy.ogg");
+					sound.spatial = 0.5;
+					sound.channel = kSoundChannelMusic;
 					sound.gain = 0.8;
 					
 				// heal player
@@ -89,9 +92,7 @@ if (m_stateInteracting)
 				m_stateInteracting = false;
 				
 				// play sound
-				var audio = faudio_create_stream("music/save/save_loop.ogg");
-				var sound = faudio_play_sound(audio, 50, false, kSoundChannelMusic); //sound_play_at(x, y, audio);
-					//sound.gain = 0.8;
+				var sound = sound_play_channel("music/save/save_loop.ogg", kSoundChannelMusic);
 					
 				// heal player & give full will
 				pl.stats.m_health = pl.stats.m_healthMax;

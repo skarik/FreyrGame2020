@@ -505,7 +505,8 @@ function cutsceneUpdate()
 	
 		if (file != "none")
 		{
-			faudio_play2_file(file, streamed, looped);
+			var sound = sound_play(file);
+			sound.loop = looped;
 		}
 		if (stop != "none")
 		{
