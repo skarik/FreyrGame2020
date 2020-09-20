@@ -20,7 +20,6 @@ function fmusic_add_track(argument0, argument1)
 	//music_player.m_track[music_player.m_trackCount] = audio_create_stream(filename);
 	//audio_play_in_sync_group(music_player.m_syncGroup, music_player.m_track[music_player.m_trackCount]);
 
-	// Create the stream (TODO: cache music)
 	music_player.m_trackStream[music_player.m_trackCount] = faudioBufferLoad(filename);
 	music_player.m_track[music_player.m_trackCount] = faudioSourceCreate(music_player.m_trackStream[music_player.m_trackCount]);
 	faudioSourceSetLooped(music_player.m_track[music_player.m_trackCount], true);

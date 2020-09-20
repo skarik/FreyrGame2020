@@ -35,9 +35,9 @@ for (var i = 0; i < array_length_1d(m_definition.sounds); ++i)
 			var audioHandle = soundinfo.wavelist[audioIndex];
 			
 			// Set new cooldown
-			//m_audioCooldown[i] = faudio_sound_get_length(audioHandle) + random_range(soundinfo.time_min, soundinfo.time_max);
-			// TODO: Fix this:
-			m_audioCooldown[i] = 5.0 + random_range(soundinfo.time_min, soundinfo.time_max);
+			var buffer = faudioBufferLoad(audioHandle);
+			m_audioCooldown[i] = faudioBufferGetLength(buffer) + random_range(soundinfo.time_min, soundinfo.time_max);
+			faudioBufferFree(buffer); // Doesn't actually free the buffer. It gets immediately reused by sound_play_at() below.
 			
 			// Select a position
 			var soundpos = [0, 0];
