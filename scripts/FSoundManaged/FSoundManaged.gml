@@ -60,7 +60,7 @@ function sound_update_params(sound)
 		audio_emitter_pitch(m_emitter, pitch);
 		audio_emitter_gain(m_emitter, gain * Settings.audio_sfx_volume * Settings.audio_total_volume);
 		audio_emitter_position(m_emitter, x, y, 0);*/
-		if (m_source != null)
+		if (m_source != nullptr)
 		{
 			faudioSourceSetFalloff(m_source, falloff_start, falloff_end);
 			faudioSourceSetPitch(m_source, pitch);
