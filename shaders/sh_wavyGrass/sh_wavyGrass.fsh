@@ -32,5 +32,7 @@ void main()
 	coord_offset.x = grass_angle / 90.0 * 0.002 * v_vColour.a;*/
 	
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
+	if (gl_FragColor.a < 0.5)
+		discard;
 	//gl_FragColor.rgb *= grass_color;
 }

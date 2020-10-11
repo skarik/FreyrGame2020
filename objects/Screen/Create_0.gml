@@ -1,7 +1,7 @@
 /// @description Constants & render init
 
 #macro kScreenCorner_DrawDevelopmentInfo true
-#macro kScreenCorner_String "V-slice Candidate v.4.1"
+#macro kScreenCorner_String "V-slice Candidate v.5.A"
 
 m_initialized = false;
 
@@ -21,6 +21,9 @@ window_set_cursor(cr_none);
 // Disable automatic app-surface drawing.
 application_surface_enable(false);
 application_surface_draw_enable(false);
+
+// Force depth buffer on
+surface_depth_disable(false);
 
 // Declare surfaces
 m_outputSurface = null;

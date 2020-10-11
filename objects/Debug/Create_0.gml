@@ -33,3 +33,5 @@ if (convention_mode || demo_mode)
 {
 	window_set_fullscreen(true);
 }
+
+show_debug_overlay(true);

@@ -51,7 +51,8 @@ for (var i = 0; i < Debug.debug_line_count; ++i)
 	for (var i = 0; i < audio_counts; ++i)
 	{
 		var audio = instance_find(ob_audioPlayer, i);
-		draw_text(500, 30 + 8 * i, audio_get_name(audio.m_sound));
+		//draw_text(500, 30 + 8 * i, audio_get_name(audio.m_sound));
+		draw_text(500, 30 + 8 * i, string(audio.m_sound));
 	}
 }
 //

@@ -23,6 +23,11 @@ for (var i = 0; i < m_plankCount; ++i)
 	m_planks[i].sprite_index = sprite_index;
 	m_planks[i].image_index = floor(random(sprite_get_number(sprite_index) - 0.01));
 	m_planks[i].visible = true;
+	with (m_planks[i])
+	{
+		depthInit();
+		depthSetWorldDrawFunction(depthWorldDrawNone);
+	}
 }
 
 // Create elevation zones

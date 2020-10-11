@@ -56,6 +56,8 @@ void main()
 	l_texCoord.y = clamp(l_texCoord.y, u_spriteCoords.y, u_spriteCoords.w);
 	
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, l_texCoord );
+	if (gl_FragColor.a < 0.5)
+		discard;
 	
 	//gl_FragColor.rgb = vec3(v_vTexcoord.xy, 0.0);
 }

@@ -1,3 +1,8 @@
+function depthWorldDrawNone() {}
+function depthShadowPredrawNone() {}
+function depthShadowDrawNone() {}
+
+
 function depthWorldDrawSelf()
 {
 	var dx, dy;
@@ -10,8 +15,6 @@ function depthWorldDrawSelf()
 					image_blend,
 					image_alpha);
 }
-function depthShadowPredrawNone() {}
-function depthShadowDrawNone() {}
 
 
 function depthShadowPredrawCircle10()

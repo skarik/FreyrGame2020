@@ -12,7 +12,12 @@ function doodadSetShadow(argument0) {
 		
 		case s_propViggoTrainCar_Tree:
 		case s_propViggoTrainCar_Flowers:
-			doodad.shadow_enabled = false;
+			//doodad.shadow_enabled = false;
+			with (doodad)
+			{
+				depthSetShadowPredrawFunction(depthShadowPredrawNone);
+				depthSetShadowDrawFunction(depthShadowDrawNone);
+			}
 			break;
 	}
 

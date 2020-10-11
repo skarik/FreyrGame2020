@@ -1,5 +1,7 @@
 /// @description Set up buffers needed
 
+if (!visible) exit;
+
 target_buffer = surface_create(target_size[0], target_size[1]);
 surface_set_target(target_buffer);
 draw_clear_alpha(c_black, 0.0);

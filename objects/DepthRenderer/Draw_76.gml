@@ -38,7 +38,24 @@ ds_list_clear(m_renderQueue);
 		{
 			if (object.visible)
 			{	// If object is visible, add it to the render queue.
-				ds_priority_add(render_sorted, object, object.m_depthState.depth);
+				var object_priority = object.m_depthState.depth;
+				if (object.m_depthState.worldDraw == depthWorldDrawSelf)
+				{
+					object_priority -= 0;
+				}
+				else if (object.m_depthState.worldDraw == depthWorldDraw_Particle1)
+				{
+					object_priority -= 10000;
+				}
+				else if (object.m_depthState.worldDraw == depthWorldDraw_DoodadTreeWiggle)
+				{
+					object_priority -= 20000;
+				}
+				else
+				{
+					object_priority -= 30000;
+				}
+				ds_priority_add(render_sorted, object, object_priority);
 			}
 		}
 		else
