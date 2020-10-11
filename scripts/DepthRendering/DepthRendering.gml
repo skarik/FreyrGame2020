@@ -17,6 +17,20 @@ function depthWorldDrawSelf()
 }
 
 
+function depthWorldDrawSelfNoHeight()
+{
+	var dx, dy;
+	dx = round(x);
+	dy = round(y);
+	draw_sprite_ext(sprite_index, image_index,
+					dx, dy,
+					image_xscale, image_yscale,
+					image_angle,
+					image_blend,
+					image_alpha);
+}
+
+
 function depthShadowPredrawCircle10()
 {
 	m_shadowDrawPercent = max(0.75, sprite_height / 32.0);
@@ -54,17 +68,7 @@ function depthShadowDrawPropShadow()
 	var shadowOffset = ceil(height / 64.0);
 	var shadowClip = ceil(height / 4.0);
 	
-	// Draw Shadow A
-	draw_sprite_part_ext(
-		sprite_index, image_index,
-		0, height - shadowClip,
-		sprite_get_width(sprite_index), shadowClip,
-		x - sprite_xoffset, y + shadowOffset - sprite_yoffset + (height - shadowClip),
-		image_xscale, image_yscale,
-		shadowOcclusionColor(),
-		image_alpha);
-	
-	// Draw Shadow B
+	// Draw Shadow Light Occlusion
 	draw_sprite_part_ext(
 		sprite_index, image_index,
 		0, 0,
@@ -72,5 +76,15 @@ function depthShadowDrawPropShadow()
 		x - sprite_xoffset, y - sprite_yoffset + sprite_yoffset + height * 0.5,
 		image_xscale, -image_yscale * 0.5,
 		shadowSillohuetteColor(),
+		image_alpha);
+		
+	// Draw Shadow Edge Occlusion
+	draw_sprite_part_ext(
+		sprite_index, image_index,
+		0, height - shadowClip,
+		sprite_get_width(sprite_index), shadowClip,
+		x - sprite_xoffset, y + shadowOffset - sprite_yoffset + (height - shadowClip),
+		image_xscale, image_yscale,
+		shadowOcclusionColor(),
 		image_alpha);
 }

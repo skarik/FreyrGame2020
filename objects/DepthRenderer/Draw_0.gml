@@ -77,8 +77,8 @@ var renderQueueSize = ds_list_size(m_renderQueue);
 	matrix_set(matrix_projection, mat_projection_previous);
 }
 
-//var shadow_surface = surface_create(GameCamera.width, GameCamera.height);
-//surface_set_target(shadow_surface);
+var shadow_surface = surface_create(GameCamera.width, GameCamera.height);
+surface_set_target(shadow_surface);
 {
 	// Save old matrix stack
 	var mat_world_previous = matrix_get(matrix_world);
@@ -86,21 +86,22 @@ var renderQueueSize = ds_list_size(m_renderQueue);
 	var mat_projection_previous = matrix_get(matrix_projection);
 	
 	// Offset the camera
-	///var mat_offset = matrix_build(-GameCamera.view_x, -GameCamera.view_y, 0, 0,0,0, 1,1,1);
-	var mat_offset = matrix_build_identity();
+	var mat_offset = matrix_build(-GameCamera.view_x, -GameCamera.view_y, 0, 0,0,0, 1,1,1);
+	//var mat_offset = matrix_build_identity();
 	var mat_offset_world = matrix_multiply(mat_world_previous, mat_offset);
 	matrix_set(matrix_world, mat_offset_world);
 	
 	// Clear the shadow surface
-	/*gpu_set_alphatestenable(false);
+	gpu_set_alphatestenable(false);
 	gpu_set_blendenable(false);
 	gpu_set_zwriteenable(false);
 	gpu_set_ztestenable(false);
-	draw_clear_alpha(c_white, 0.0);*/
+	draw_clear_alpha(c_white, 0.0);
 	
 	gpu_set_alphatestenable(false);
 	gpu_set_blendenable(true);
-	gpu_set_blendmode_ext(bm_dest_color, bm_zero);
+	//gpu_set_blendmode_ext(bm_dest_color, bm_zero);
+	gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_one); // Alpha blended, dont save alpha
 	shader_set(sh_colormaskAlphatest);
 	
 	gpu_set_zwriteenable(false);
@@ -131,15 +132,22 @@ var renderQueueSize = ds_list_size(m_renderQueue);
 	gpu_set_zwriteenable(false);
 	gpu_set_ztestenable(false);
 }
-//surface_reset_target();
+surface_reset_target();
 
 // Draw shadows on top of the depth layer???
-/*gpu_set_blendmode_ext_sepalpha(bm_dest_color, bm_zero, bm_zero, bm_one);
+gpu_set_alphatestenable(false);
+gpu_set_blendenable(true);
+gpu_set_blendmode_ext_sepalpha(bm_dest_color, bm_zero, bm_zero, bm_one);
+gpu_set_zwriteenable(false);
+gpu_set_ztestenable(true);
+gpu_set_zfunc(cmpfunc_lessequal);
 draw_surface(shadow_surface, GameCamera.view_x, GameCamera.view_y);
 
 // Done with surface
-surface_free(shadow_surface);*/
+surface_free(shadow_surface);
 
 // Done
 gpu_set_blendmode(bm_normal);
 gpu_set_alphatestenable(true);
+gpu_set_zwriteenable(true);
+gpu_set_ztestenable(false);

@@ -24,6 +24,7 @@
     {"isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,"parent":{"name":"ob_doodadWindmillSpinner","path":"objects/ob_doodadWindmillSpinner/ob_doodadWindmillSpinner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"ob_doodadWindmillSpinner","path":"objects/ob_doodadWindmillSpinner/ob_doodadWindmillSpinner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"ob_doodadWindmillSpinner","path":"objects/ob_doodadWindmillSpinner/ob_doodadWindmillSpinner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"ob_doodadWindmillSpinner","path":"objects/ob_doodadWindmillSpinner/ob_doodadWindmillSpinner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
