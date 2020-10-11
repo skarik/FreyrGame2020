@@ -31,7 +31,7 @@
   ],
   "parent": {
     "name": "Elevation",
-    "path": "folders/Objects/Collision3/Elevation.yy",
+    "path": "folders/Objects/Engine_Collision3/Elevation.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_e32x32_eN32_nobelow",

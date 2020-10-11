@@ -22,7 +22,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Particle Spawners",
-    "path": "folders/Objects/Effects/Particle Spawners.yy",
+    "path": "folders/Objects/Gameplay_Effects/Particle Spawners.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_fxTardropSpawners",

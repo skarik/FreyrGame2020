@@ -55,7 +55,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Backend",
-    "path": "folders/Objects/Effects/Light/Backend.yy",
+    "path": "folders/Objects/Gameplay_Effects/Light/Backend.yy",
   },
   "resourceVersion": "1.0",
   "name": "ob_lightRay",

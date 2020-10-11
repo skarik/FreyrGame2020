@@ -1,5 +1,11 @@
 /// @description draw sprite with depth
 
+if (!color_setup)
+{
+	m_color = color_multiply(target.image_blend, image_blend);
+	color_setup = true;
+}
+
 if (mask)
 	shader_set(sh_colormaskAlphatest);
 	
@@ -8,7 +14,7 @@ draw_sprite_ext(target.sprite_index, target.image_index,
 				target.x + xoffset, target.y - target.z_height + yoffset,
 				target.image_xscale, target.image_yscale,
 				target.image_angle,
-				color_multiply(target.image_blend, image_blend),
+				m_color,
 				target.image_alpha * image_alpha);
 				
 var draw_offsets_x = [-1, +1, 0,  0,
@@ -25,7 +31,7 @@ for (var i = 0; i < 12; ++i)
 					target.y - target.z_height + yoffset + draw_offsets_y[i],
 					target.image_xscale, target.image_yscale,
 					target.image_angle,
-					color_multiply(target.image_blend, image_blend),
+					m_color,
 					target.image_alpha * image_alpha * draw_offsets_a[i]);
 }
 				

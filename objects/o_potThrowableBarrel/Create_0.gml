@@ -15,6 +15,8 @@ kGroundFriction = 600;
 m_onGround = false;*/
 
 depthInit();
+depthSetShadowPredrawFunction(depthShadowPredrawCircle10);
+depthSetShadowDrawFunction(depthShadowDrawCircle10);
 
 // For the damage calculations
 m_isPlayer = false;

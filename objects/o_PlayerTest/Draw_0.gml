@@ -1,6 +1,8 @@
-var dx, dy;
+/// @description Debug information
+
+/*var dx, dy;
 dx = round(x);
-dy = round(y);
+dy = round(y);*/
 
 if (Debug.visible)
 {
@@ -8,7 +10,7 @@ if (Debug.visible)
 	draw_line(x, y - z_height, x, y);
 	draw_circle(x, y, 3, false);
 }
-
+/*
 // Draw the player
 var kPlayerSurfaceSize = 64;
 var kPlayerSurfaceCenter = 32;
@@ -77,11 +79,6 @@ else
 
 	gpu_set_blendmode(bm_normal);
 	gpu_set_alphatestenable(true);
-	/*draw_sprite_part(sprite_index, image_index,
-					 0, 0,
-					 sprite_get_width(sprite_index), sprite_get_height(sprite_index) - 8,
-					 x - sprite_get_xoffset(sprite_index),
-					 y - sprite_get_yoffset(sprite_index) + 4);*/
 	draw_surface_part(l_playerBuffer,
 					 0, 0,
 					 kPlayerSurfaceSize,
@@ -111,7 +108,7 @@ if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(
 						dy - z_height - 26 - i * balance_step_y);
 		}
 	}
-}
+}*/
 
 if (Debug.visible)
 {

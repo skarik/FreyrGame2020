@@ -24,7 +24,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Time",
-    "path": "folders/Objects/Effects/Time.yy",
+    "path": "folders/Objects/Gameplay_Effects/Time.yy",
   },
   "resourceVersion": "1.0",
   "name": "ob_timefx",

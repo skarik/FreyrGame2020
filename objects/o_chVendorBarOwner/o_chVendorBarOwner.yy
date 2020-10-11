@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Halfdescript",
-    "path": "folders/Objects/Characters/Halfdescript.yy",
+    "path": "folders/Objects/Gameplay_Characters/Halfdescript.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_chVendorBarOwner",

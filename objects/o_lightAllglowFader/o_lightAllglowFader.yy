@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dynamic - Animated",
-    "path": "folders/Objects/Effects/Light/Dynamic - Animated.yy",
+    "path": "folders/Objects/Gameplay_Effects/Light/Dynamic - Animated.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_lightAllglowFader",

@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Playground",
-    "path": "folders/Objects/Debug/Playground.yy",
+    "path": "folders/Objects/Engine_Debug/Playground.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_debugPlayground",

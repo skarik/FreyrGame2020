@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dispel Fades",
-    "path": "folders/Objects/Effects/Particle/Dispel Fades.yy",
+    "path": "folders/Objects/Gameplay_Effects/Particle/Dispel Fades.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_ptcCircleHit_Outline",

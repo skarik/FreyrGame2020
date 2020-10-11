@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Collision",
-    "path": "folders/Objects/Collision3/Collision.yy",
+    "path": "folders/Objects/Engine_Collision3/Collision.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_c32x32_nodepth",

@@ -111,9 +111,13 @@ if (surface_exists(m_darkness))
 	
 	with (ob_light)
 	{
-		this.xoffset = offset_x;
-		this.yoffset = offset_y;
-		event_user(0);
+		// Check if on-screen
+		if (point_on_camera_wide(x, y, abs(sprite_width) * 3, abs(sprite_height) * 3))
+		{
+			this.xoffset = offset_x;
+			this.yoffset = offset_y;
+			event_user(0);
+		}
 	}
 	
 	// reset blend modes and draw modes

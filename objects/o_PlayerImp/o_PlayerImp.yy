@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Gameplay_Player",
+    "path": "folders/Objects/Gameplay_Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_PlayerImp",

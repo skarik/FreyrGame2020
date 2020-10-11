@@ -1,5 +1,5 @@
 /// @description Draw the doodad
-
+/*
 if (!drawbuf_get_reflection())
 {
 	var height = sprite_get_height(sprite_index);
@@ -36,4 +36,4 @@ if (!drawbuf_get_reflection())
 
 gpu_set_blendmode(bm_normal);
 gpu_set_alphatestenable(true);
-draw_self();
+draw_self();*/

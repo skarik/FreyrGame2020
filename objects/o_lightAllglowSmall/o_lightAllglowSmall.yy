@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dynamic",
-    "path": "folders/Objects/Effects/Light/Dynamic.yy",
+    "path": "folders/Objects/Gameplay_Effects/Light/Dynamic.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_lightAllglowSmall",

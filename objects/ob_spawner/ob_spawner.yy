@@ -91,8 +91,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Spawners",
-    "path": "folders/Objects/Spawners.yy",
+    "name": "Gameplay_Spawners",
+    "path": "folders/Objects/Gameplay_Spawners.yy",
   },
   "resourceVersion": "1.0",
   "name": "ob_spawner",

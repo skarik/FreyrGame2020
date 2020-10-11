@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Followers",
-    "path": "folders/Objects/Characters/Followers.yy",
+    "path": "folders/Objects/Gameplay_Characters/Followers.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_chSamuel",

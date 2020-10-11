@@ -30,3 +30,5 @@ m_stateWaitingForEndOfCamp = false;
 
 depthInit();
 z = collision3_get_highest_position(x, y, 0);
+
+depthSetShadowDrawFunction(depthShadowDrawPropShadow);

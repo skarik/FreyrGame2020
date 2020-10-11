@@ -31,7 +31,7 @@
   ],
   "parent": {
     "name": "Gobbos",
-    "path": "folders/Objects/Spawners/Gobbos.yy",
+    "path": "folders/Objects/Gameplay_Spawners/Gobbos.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_spawnerGobKunai",

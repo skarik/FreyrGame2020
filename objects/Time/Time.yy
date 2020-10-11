@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Backend",
-    "path": "folders/Objects/Backend.yy",
+    "name": "Core_Backend",
+    "path": "folders/Objects/Core_Backend.yy",
   },
   "resourceVersion": "1.0",
   "name": "Time",

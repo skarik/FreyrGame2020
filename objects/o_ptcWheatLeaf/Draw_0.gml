@@ -1,6 +1,6 @@
 /// @description draw w/ depth
 //particleZDraw();
-
+/*
 var dx, dy;
 dx = round(x);
 dy = round(y);
@@ -18,9 +18,4 @@ draw_ellipse(floor(dx - 1 - shadow_w), floor(dy - 1 - shadow_h), ceil(dx + shado
 
 gpu_set_blendmode(bm_normal);
 gpu_set_alphatestenable(true);
-draw_sprite_ext(sprite_index, image_index,
-				dx, round(dy - z_height),
-				image_xscale, image_yscale,
-				image_angle,
-				image_blend,
-				image_alpha);
+*/

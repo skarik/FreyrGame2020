@@ -177,3 +177,129 @@ meleeAtk3Script = _playerMoAttack3;
 meleeAtk3Damage = 1;
 
 #endregion
+
+#region Rendering setup
+
+function depthWorldDraw_Player()
+{
+	var dx, dy;
+	dx = round(x);
+	dy = round(y);
+
+	// Draw the player
+	var kPlayerSurfaceSize = 64;
+	var kPlayerSurfaceCenter = 32;
+	var l_playerBuffer = surface_create(kPlayerSurfaceSize, kPlayerSurfaceSize);
+	surface_set_target(l_playerBuffer);
+	draw_clear_alpha(c_white, 0.0);
+	{
+		var ihead = pstats.m_head;
+		var ibody = pstats.m_body;
+		var igend = _gendToIndex(pstats.m_gender);
+	
+		if (sprite_index == s_heroSleepingH0)
+		{
+			var head = [s_heroSleepingH0, s_heroSleepingH1, s_heroSleepingH2];
+			var gend = [s_heroSleepingG0, s_heroSleepingG1, s_heroSleepingG2];
+			var bott = [s_heroSleepingB0, s_heroSleepingB1, s_heroSleepingB2];
+			_drawChara(head[ihead], image_index, kPlayerSurfaceCenter);
+			_drawChara(gend[igend], image_index, kPlayerSurfaceCenter);
+			_drawChara(bott[ibody], image_index, kPlayerSurfaceCenter);
+		}
+		else if (sprite_index == s_charHeroStand)
+		{
+			var head = [s_heroStandH0, s_heroStandH1, s_heroStandH2];
+			var body = [s_heroStandB0, s_heroStandB1, s_heroStandB2];
+			_drawChara(head[ihead], image_index, kPlayerSurfaceCenter);
+			_drawChara(body[ibody], image_index, kPlayerSurfaceCenter);
+		}
+		else
+		{
+			_drawChara(sprite_index, image_index, kPlayerSurfaceCenter);
+		}
+	}
+	surface_reset_target();
+
+	// Draw the actual composited player
+	if ((!inWater && !inTar) || z_height > 1)
+	{	
+		// Draw normal depth, but with the moAnimationYOffset change vs depthDrawSelf().
+		gpu_set_blendmode(bm_normal);
+		gpu_set_alphatestenable(true);
+		draw_surface(l_playerBuffer,
+					 dx - kPlayerSurfaceCenter,
+					 round(dy - z_height + moAnimationYOffset) - kPlayerSurfaceCenter);
+	}
+	else
+	{	// Draw in-liquid
+		gpu_set_alphatestenable(false);
+		gpu_set_blendenable(true);
+		gpu_set_blendmode_ext(bm_dest_color, bm_zero);
+		draw_set_color(c_ltgray);
+		draw_ellipse(dx - 7 - 2, dy - 2 - 4 - 1, dx + 6 + 2, dy + 2 - 4 + 1, false);
+
+		gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
+		draw_set_color(c_white);
+		draw_ellipse(dx - 7 + 1, dy - 2 - 4, dx + 6 - 1, dy + 2 - 4, false);
+
+		gpu_set_blendmode(bm_normal);
+		gpu_set_alphatestenable(true);
+		draw_surface_part(l_playerBuffer,
+						 0, 0,
+						 kPlayerSurfaceSize,
+						 kPlayerSurfaceCenter + 2 - 8,
+						 dx - kPlayerSurfaceCenter,
+						 round(dy - z_height + moAnimationYOffset) - kPlayerSurfaceCenter);
+	}
+
+	// Free up temp buffer used for player
+	surface_free(l_playerBuffer);
+
+	// Draw the held item
+	if (inventory.belt_selection >= 0 && inventory.belt_selection < array_length_1d(inventory.belt))
+	{
+		var balance_delta = m_itemBalanceSpringOffset;
+		var held_item = inventory.belt[inventory.belt_selection];
+		if (held_item.onUse == generalYeetableOnUse
+			&& held_item.object_index != o_pickupJunk_Rock)
+		{
+			var item_sprite = object_get_sprite(held_item.object);
+			var balance_step_x = 0.23 * balance_delta[0] + 0.4 * (sin(Time.time) + sin(Time.time * 0.74));
+			var balance_step_y = (8 - balance_delta[1] * 0.1) - sqr(abs(balance_step_x)) * 0.25;
+			for (var i = 0; i < held_item.count; ++i)
+			{
+				draw_sprite(item_sprite, 0,
+							dx + i * balance_step_x,
+							dy - z_height - 26 - i * balance_step_y);
+			}
+		}
+	}
+}
+function depthShadowDraw_Player()
+{
+	var dx, dy;
+	dx = round(x);
+	dy = round(y);
+
+	// Draw the actual composited player
+	if ((!inWater && !inTar) || z_height > 1)
+	{	// Draw normal depth, but with the moAnimationYOffset change vs depthDrawSelf().
+		var shadow_pct = max(0.75, sprite_height / 32.0);
+		shadow_pct /= (1.0 + max(0.0, z_height) / 32.0);
+		var shadow_w = shadow_pct * 6.0;
+		var shadow_h = shadow_pct * 2.0;
+
+		draw_sprite_ext(
+			slt_shadow_24x8, 0,
+			floor(dx), floor(dy),
+			shadow_w / 12, shadow_h / 4,
+			0.0,
+			shadowSillohuetteColor(),
+			image_alpha);
+	}
+}
+
+depthSetWorldDrawFunction(depthWorldDraw_Player);
+depthSetShadowDrawFunction(depthShadowDraw_Player);
+
+#endregion

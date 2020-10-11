@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "UI",
-    "path": "folders/Objects/Player/UI.yy",
+    "path": "folders/Objects/Gameplay_Player/UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_PlayerHud",

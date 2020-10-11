@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dynamic - Expensive",
-    "path": "folders/Objects/Effects/Light/Dynamic - Expensive.yy",
+    "path": "folders/Objects/Gameplay_Effects/Light/Dynamic - Expensive.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_lightRayOCave1",

@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Fauna",
-    "path": "folders/Objects/Characters/Fauna.yy",
+    "path": "folders/Objects/Gameplay_Characters/Fauna.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_chDayMoth",

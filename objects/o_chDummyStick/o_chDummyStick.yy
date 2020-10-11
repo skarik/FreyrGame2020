@@ -33,7 +33,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Proplike",
-    "path": "folders/Objects/Characters/Proplike.yy",
+    "path": "folders/Objects/Gameplay_Characters/Proplike.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_chDummyStick",

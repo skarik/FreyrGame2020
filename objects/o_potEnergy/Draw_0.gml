@@ -1,5 +1,5 @@
 /// @description Draw with depth
-image_index = 1;
+/*image_index = 1;
 depthDrawSelf();
 
 var dx, dy;
@@ -21,3 +21,4 @@ draw_sprite_ext(sprite_index, 3,
 				image_xscale, image_yscale,
 				image_angle,
 				image_blend, image_alpha);
+*/

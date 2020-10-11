@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shake",
-    "path": "folders/Objects/Effects/Shake.yy",
+    "path": "folders/Objects/Gameplay_Effects/Shake.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_fxControllershake",

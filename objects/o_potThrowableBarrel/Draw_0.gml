@@ -1,2 +1,2 @@
 /// @description Draw with depth
-depthDrawSelf();
+//depthDrawSelf();

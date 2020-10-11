@@ -53,8 +53,8 @@
     {"propertyId":{"name":"m_name","path":"objects/ob_characterGroundInteractable/ob_characterGroundInteractable.yy",},"objectId":{"name":"ob_characterGroundInteractable","path":"objects/ob_characterGroundInteractable/ob_characterGroundInteractable.yy",},"value":"Mithra Guard","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "Gameplay_Characters",
+    "path": "folders/Objects/Gameplay_Characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_chMithraGaurdNpc",

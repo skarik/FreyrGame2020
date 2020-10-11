@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Backend",
-    "path": "folders/Objects/Collision3/Backend.yy",
+    "path": "folders/Objects/Engine_Collision3/Backend.yy",
   },
   "resourceVersion": "1.0",
   "name": "ob_colliderNoDepth",

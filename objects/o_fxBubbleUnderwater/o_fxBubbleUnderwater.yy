@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Fx - Cutscene",
-    "path": "folders/Objects/Effects/Fx - Cutscene.yy",
+    "path": "folders/Objects/Gameplay_Effects/Fx - Cutscene.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_fxBubbleUnderwater",

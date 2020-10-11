@@ -31,7 +31,7 @@
   ],
   "parent": {
     "name": "Desert Tower",
-    "path": "folders/Objects/Spawners/Desert Tower.yy",
+    "path": "folders/Objects/Gameplay_Spawners/Desert Tower.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_spawnerRoboCrab",

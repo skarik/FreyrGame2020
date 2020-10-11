@@ -11,5 +11,7 @@ charges = 0;
 kMaxCharges = 10;
 
 depthInit();
+depthSetShadowPredrawFunction(depthShadowPredrawCircle10);
+depthSetShadowDrawFunction(depthShadowDrawCircle10);
 
 event_user(0);

@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Chunks",
-    "path": "folders/Objects/Effects/Particle/Chunks.yy",
+    "path": "folders/Objects/Gameplay_Effects/Particle/Chunks.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_ptcPebble",

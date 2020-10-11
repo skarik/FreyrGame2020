@@ -35,8 +35,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "Gameplay_Characters",
+    "path": "folders/Objects/Gameplay_Characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_chOasisNpc",

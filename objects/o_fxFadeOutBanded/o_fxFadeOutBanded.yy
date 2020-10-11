@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Screen",
-    "path": "folders/Objects/Effects/Screen.yy",
+    "path": "folders/Objects/Gameplay_Effects/Screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_fxFadeOutBanded",

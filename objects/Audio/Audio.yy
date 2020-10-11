@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Audio",
-    "path": "folders/Objects/Backend/Audio.yy",
+    "path": "folders/Objects/Core_Backend/Audio.yy",
   },
   "resourceVersion": "1.0",
   "name": "Audio",

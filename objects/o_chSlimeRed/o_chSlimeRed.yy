@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Enemies",
-    "path": "folders/Objects/Characters/Enemies.yy",
+    "path": "folders/Objects/Gameplay_Characters/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_chSlimeRed",

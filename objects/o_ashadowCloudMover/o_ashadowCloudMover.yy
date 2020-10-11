@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dynamic - Ambient Shadow",
-    "path": "folders/Objects/Effects/Light/Dynamic - Ambient Shadow.yy",
+    "path": "folders/Objects/Gameplay_Effects/Light/Dynamic - Ambient Shadow.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_ashadowCloudMover",

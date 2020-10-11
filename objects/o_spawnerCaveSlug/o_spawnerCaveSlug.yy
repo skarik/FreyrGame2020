@@ -30,7 +30,7 @@
   ],
   "parent": {
     "name": "Desert Caves",
-    "path": "folders/Objects/Spawners/Desert Caves.yy",
+    "path": "folders/Objects/Gameplay_Spawners/Desert Caves.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_spawnerCaveSlug",

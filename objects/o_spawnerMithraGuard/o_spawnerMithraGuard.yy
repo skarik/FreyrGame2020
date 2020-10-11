@@ -49,7 +49,7 @@
   ],
   "parent": {
     "name": "Mithra",
-    "path": "folders/Objects/Spawners/Mithra.yy",
+    "path": "folders/Objects/Gameplay_Spawners/Mithra.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_spawnerMithraGuard",

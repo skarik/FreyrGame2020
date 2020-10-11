@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Effects",
-    "path": "folders/Objects/Effects.yy",
+    "name": "Gameplay_Effects",
+    "path": "folders/Objects/Gameplay_Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_floaterDmgTicker",

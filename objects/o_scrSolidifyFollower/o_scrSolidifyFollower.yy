@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Follower Extra Logic",
-    "path": "folders/Objects/Characters/Follower Extra Logic.yy",
+    "path": "folders/Objects/Gameplay_Characters/Follower Extra Logic.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_scrSolidifyFollower",

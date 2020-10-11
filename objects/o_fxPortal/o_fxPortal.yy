@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Fx - Doodads",
-    "path": "folders/Objects/Effects/Fx - Doodads.yy",
+    "path": "folders/Objects/Gameplay_Effects/Fx - Doodads.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_fxPortal",

@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Debug",
-    "path": "folders/Objects/Debug.yy",
+    "name": "Engine_Debug",
+    "path": "folders/Objects/Engine_Debug.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_debugUiBase",

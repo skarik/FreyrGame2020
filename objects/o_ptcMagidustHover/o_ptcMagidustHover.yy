@@ -33,7 +33,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Particle",
-    "path": "folders/Objects/Effects/Particle.yy",
+    "path": "folders/Objects/Gameplay_Effects/Particle.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_ptcMagidustHover",

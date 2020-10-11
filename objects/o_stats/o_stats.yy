@@ -24,7 +24,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Backend",
-    "path": "folders/Objects/Characters/Backend.yy",
+    "path": "folders/Objects/Gameplay_Characters/Backend.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_stats",

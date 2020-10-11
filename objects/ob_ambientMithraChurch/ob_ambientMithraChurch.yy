@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ambient",
-    "path": "folders/Objects/Effects/Light/Ambient.yy",
+    "path": "folders/Objects/Gameplay_Effects/Light/Ambient.yy",
   },
   "resourceVersion": "1.0",
   "name": "ob_ambientMithraChurch",
