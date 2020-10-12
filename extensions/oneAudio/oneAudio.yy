@@ -142,6 +142,27 @@
         {"externalName":"AudioBufferGetLength","kind":1,"help":"buffer","hidden":false,"returnType":2,"argCount":0,"args":[
             2,
           ],"resourceVersion":"1.0","name":"faudioBufferGetLength","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"AudioEffectDestroy","kind":1,"help":"effect","hidden":false,"returnType":2,"argCount":0,"args":[
+            2,
+          ],"resourceVersion":"1.0","name":"faudioEffectDestroy","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"AudioEffectCreateLowPass1","kind":1,"help":"channel - kFAMixChannel","hidden":false,"returnType":2,"argCount":0,"args":[
+            2,
+          ],"resourceVersion":"1.0","name":"faudioEffectCreateLowPass1","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"AudioEffectLowPass1SetParams","kind":1,"help":"effect, cutoffPitch, cutoffFade, strength","hidden":false,"returnType":2,"argCount":0,"args":[
+            2,
+            2,
+            2,
+            2,
+          ],"resourceVersion":"1.0","name":"faudioEffectLowPass1SetParams","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"AudioEffectLowPass1GetCutoffPitch","kind":1,"help":"effect","hidden":false,"returnType":2,"argCount":0,"args":[
+            2,
+          ],"resourceVersion":"1.0","name":"faudioEffectLowPass1GetCutoffPitch","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"faudioEffectLowPass1GetCutoffFade","kind":1,"help":"effect","hidden":false,"returnType":2,"argCount":0,"args":[
+            2,
+          ],"resourceVersion":"1.0","name":"faudioEffectLowPass1GetCutoffFade","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"AudioEffectLowPass1GetCutoffStrength","kind":1,"help":"effect","hidden":false,"returnType":2,"argCount":0,"args":[
+            2,
+          ],"resourceVersion":"1.0","name":"faudioEffectLowPass1GetCutoffStrength","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[
         {"value":"0","hidden":false,"resourceVersion":"1.0","name":"kFAMixChannelDefault","tags":[],"resourceType":"GMExtensionConstant",},
         {"value":"1","hidden":false,"resourceVersion":"1.0","name":"kFAMixChannelPhysics","tags":[],"resourceType":"GMExtensionConstant",},
@@ -187,6 +208,12 @@
         {"name":"faudioSourceSetChannel","path":"extensions/oneAudio/oneAudio.yy",},
         {"name":"faudioSourceSetFalloff","path":"extensions/oneAudio/oneAudio.yy",},
         {"name":"faudioSourceSetFalloffModel","path":"extensions/oneAudio/oneAudio.yy",},
+        {"name":"faudioEffectDestroy","path":"extensions/oneAudio/oneAudio.yy",},
+        {"name":"faudioEffectCreateLowPass1","path":"extensions/oneAudio/oneAudio.yy",},
+        {"name":"faudioEffectLowPass1SetParams","path":"extensions/oneAudio/oneAudio.yy",},
+        {"name":"faudioEffectLowPass1GetCutoffPitch","path":"extensions/oneAudio/oneAudio.yy",},
+        {"name":"faudioEffectLowPass1GetCutoffFade","path":"extensions/oneAudio/oneAudio.yy",},
+        {"name":"faudioEffectLowPass1GetCutoffStrength","path":"extensions/oneAudio/oneAudio.yy",},
       ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
     {"filename":"oneCoreExt.dll","origname":"","init":"","final":"","kind":1,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
   ],
