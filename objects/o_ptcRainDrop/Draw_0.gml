@@ -1,5 +1,5 @@
 /// @description Draw raindrop
-
+/*
 if (step < 1)
 {
 	draw_set_color(c_white);
@@ -26,4 +26,4 @@ else if (step < 3)
 		draw_vertex_color(x, y, c_white, 1.0);
 		draw_vertex_color(x - wind[0] * 0.1, y - wind[1] * 0.1 - 60, c_white, 0.0);
 	draw_primitive_end();
-}
+}*/

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+/*
 gpu_set_alphatestenable(false);
 gpu_set_blendenable(true);
 gpu_set_blendmode_ext(bm_dest_color, bm_zero);
@@ -19,4 +19,4 @@ shader_reset();
 
 gpu_set_blendmode(bm_normal);
 gpu_set_alphatestenable(true);
-draw_self();
+draw_self();*/

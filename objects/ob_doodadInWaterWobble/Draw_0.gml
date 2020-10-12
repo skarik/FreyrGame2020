@@ -1,5 +1,5 @@
 /// @description Draw the doodad
-
+/*
 var x_float = round(sin(current_time * 0.00176 * wiggle_x_mod + id) * 1.1);
 var y_float = round(cos(current_time * 0.00233 * wiggle_y_mod + id) * 0.5 + 0.5);
 
@@ -46,3 +46,4 @@ draw_sprite_ext(
 	x + x_float, y + y_float,
 	image_xscale, image_yscale,
 	image_angle, image_blend, image_alpha);
+	*/
