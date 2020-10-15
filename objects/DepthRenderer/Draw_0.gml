@@ -24,13 +24,13 @@ var renderQueueSize = ds_list_size(m_renderQueue);
 	{
 		var object = m_renderQueue[|i];
 		
-		// Perform depth shift for each object
-		var mat_offset_depth = matrix_build(0, 0, object.depth, 0,0,0, 1,1,1);
-		var mat_offset_depth_world = matrix_multiply(mat_world_previous, mat_offset_depth);
-		matrix_set(matrix_world, mat_offset_depth_world);
-		
 		try
 		{
+			// Perform depth shift for each object
+			var mat_offset_depth = matrix_build(0, 0, object.depth, 0,0,0, 1,1,1);
+			var mat_offset_depth_world = matrix_multiply(mat_world_previous, mat_offset_depth);
+			matrix_set(matrix_world, mat_offset_depth_world);
+			
 			var func = object.m_depthState.worldDraw;
 			
 			// Do batched for special shaders

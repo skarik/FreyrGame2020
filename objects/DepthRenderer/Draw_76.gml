@@ -11,7 +11,7 @@ if (m_objectsDirty)
 	{
 		var object = m_objects[|i];
 		// Remove items that no longer exist
-		if (!iexists(object))
+		if (!instance_exists(object))
 		{
 			ds_list_delete(m_objects, i);
 			continue;
@@ -34,7 +34,7 @@ ds_list_clear(m_renderQueue);
 	for (var i = 0; i < list_size; ++i)
 	{
 		var object = m_objects[|i];
-		if (iexists(object))
+		if (instance_exists(object))
 		{
 			if (object.visible)
 			{	// If object is visible, add it to the render queue.

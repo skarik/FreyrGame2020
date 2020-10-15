@@ -6,10 +6,10 @@ function depthShadowDrawNone() {}
 function depthWorldDrawSelf()
 {
 	var dx, dy;
-	dx = round(x);
-	dy = round(y);
+	dx = int64(x);
+	dy = int64(y);
 	draw_sprite_ext(sprite_index, image_index,
-					dx, round(dy - z_height),
+					dx, int64(dy - z_height),
 					image_xscale, image_yscale,
 					image_angle,
 					image_blend,
@@ -20,8 +20,8 @@ function depthWorldDrawSelf()
 function depthWorldDrawSelfNoHeight()
 {
 	var dx, dy;
-	dx = round(x);
-	dy = round(y);
+	dx = int64(x);
+	dy = int64(y);
 	draw_sprite_ext(sprite_index, image_index,
 					dx, dy,
 					image_xscale, image_yscale,
@@ -39,14 +39,14 @@ function depthShadowPredrawCircle10()
 function depthShadowDrawCircle10()
 {
 	var dx, dy;
-	dx = round(x);
-	dy = round(y);
+	dx = int64(x);
+	dy = int64(y);
 	var shadow_w = m_shadowDrawPercent * 6.0;
 	var shadow_h = m_shadowDrawPercent * 2.0;
 
 	draw_sprite_ext(
 		slt_shadow_24x8, 0,
-		floor(dx), floor(dy),
+		dx, dy,
 		shadow_w / 12, shadow_h / 4,
 		0.0,
 		shadowSillohuetteColor(),
