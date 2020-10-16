@@ -3,6 +3,9 @@ function DepthState() constructor
 	// Set current draw depth
 	depth = 0;
 	
+	// Id in the draw system
+	index = 0;
+	
 	// Set default rendering routine
 	worldDraw = depthWorldDrawSelf;
 	
@@ -32,7 +35,8 @@ function depthInit()
 		ds_list_add(DepthRenderer.m_objects, id);
 		DepthRenderer.m_objectsDirty = true;
 	}*/
-	DepthRenderer.m_objects[array_length(DepthRenderer.m_objects)] = id;
+	m_depthState.index = array_length(DepthRenderer.m_objects);
+	DepthRenderer.m_objects[m_depthState.index] = id;
 	DepthRenderer.m_objectsDirty = true;
 	
 	depthUpdate(); // Force depth update now.
@@ -48,7 +52,15 @@ function depthReInit()
 ///@function depthFree()
 function depthFree()
 {
+	// Clear out the given object
+	if (DepthRenderer.m_objects[m_depthState.index] == id)
+	{
+		DepthRenderer.m_objects[m_depthState.index] = null;
+	}
+	// Mark the state as dirty and needs cleaning
 	DepthRenderer.m_objectsDirty = true;
+	
+	// No longer need the depth state
 	delete m_depthState;
 }
 

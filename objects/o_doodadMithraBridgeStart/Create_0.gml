@@ -25,8 +25,11 @@ for (var i = 0; i < m_plankCount; ++i)
 	m_planks[i].visible = true;
 	with (m_planks[i])
 	{
-		depthInit();
-		depthSetWorldDrawFunction(depthWorldDrawNone);
+		//depthInit();
+		//depthSetWorldDrawFunction(depthWorldDrawNone);
+		// TODO:
+		z = 0;
+		z_height = 0;
 	}
 }
 

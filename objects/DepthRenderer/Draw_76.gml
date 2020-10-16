@@ -28,9 +28,13 @@ if (m_objectsDirty)
 	for (var i_old = 0; i_old < list_size; ++i_old)
 	{
 		var object = m_objects[i_old];
-		if (instance_exists(object))
+		if (object != null && instance_exists(object))
 		{
+			// Save valid object
 			new_objects[i] = object;
+			// Set new depth system index
+			object.m_depthState.index = i;
+			// Prepare next index
 			i++;
 		}
 	}
@@ -50,7 +54,8 @@ if (m_objectsDirty)
 	{
 		//var object = m_objects[|i];
 		var object = m_objects[i];
-		if (instance_exists(object))
+		//if (instance_exists(object))
+		if (object != null) // Should always exist
 		{
 			if (object.visible)
 			{	// If object is visible, add it to the render queue.

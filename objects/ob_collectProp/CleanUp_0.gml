@@ -6,3 +6,5 @@ idelete(collider);
 //idelete(elevation);
 //source_layer = null;
 //index = null;
+
+depthFree();

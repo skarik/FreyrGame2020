@@ -29,6 +29,7 @@
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"o_potThrowableBarrel","path":"objects/o_potThrowableBarrel/o_potThrowableBarrel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":13,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_potThrowableBarrel","path":"objects/o_potThrowableBarrel/o_potThrowableBarrel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":16,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_potThrowableBarrel","path":"objects/o_potThrowableBarrel/o_potThrowableBarrel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"parent":{"name":"o_potThrowableBarrel","path":"objects/o_potThrowableBarrel/o_potThrowableBarrel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

@@ -12,6 +12,11 @@ function particleZMotionInit()
 	zgravity = 256.0;
 }
 
+function particleZMotionCleanup()
+{
+	depthFree();
+}
+
 function depthWorldDraw_Particle1()
 {
 	var dx, dy;

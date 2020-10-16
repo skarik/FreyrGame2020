@@ -10,7 +10,7 @@ else
 	bRunParticleSystem = !timeofdayIsDaytime();
 }
 
-if (bRunParticleSystem)
+if (bRunParticleSystem && point_on_camera_wide(x, y, 32, 32))
 {
 	flameTimer0 += 18.0 * Time.deltaTime;
 	smokeTimer0 += 8.0 * Time.deltaTime;

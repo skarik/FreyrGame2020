@@ -17,3 +17,5 @@ m_objects = array_create(0);
 m_renderQueue = array_create(0);
 
 m_objectsDirty = true;
+
+m_renderMatrices = array_create(0);

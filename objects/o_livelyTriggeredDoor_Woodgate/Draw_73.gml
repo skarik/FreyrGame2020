@@ -2,7 +2,8 @@
 
 if (!visible) exit;
 
-if (surface_exists(target_buffer))
+/*if (surface_exists(target_buffer))
 {
 	surface_free(target_buffer);
-}
+	target_buffer = null;
+}*/

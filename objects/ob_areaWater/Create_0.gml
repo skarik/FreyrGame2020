@@ -1,3 +1,4 @@
 /// @description Set up delayed depth init
-depthInit();
+z = 0;
+z_height = 0;
 alarm[0] = 1;

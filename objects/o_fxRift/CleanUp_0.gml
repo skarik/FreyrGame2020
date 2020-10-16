@@ -1,3 +1,5 @@
-/// @description Free emissive
+/// @description Free emissive & clean depth
 
 idelete(emissive);
+
+depthFree();

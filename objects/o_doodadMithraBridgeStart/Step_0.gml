@@ -31,6 +31,6 @@ for (var i = 0; i < m_plankCount; ++i)
 	with (m_planks[i])
 	{
 		z_height = 0;
-		depthUpdate();
+		//depthUpdate();
 	}
 }

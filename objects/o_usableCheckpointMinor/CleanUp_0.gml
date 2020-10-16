@@ -3,3 +3,5 @@
 event_inherited();
 
 idelete(m_collider);
+
+depthFree();

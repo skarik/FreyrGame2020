@@ -1,8 +1,17 @@
 /// @description Render depth objects
 
 var renderQueueSize = array_length(m_renderQueue);
-var renderMatrixStore = undefined;
 
+// Resize the matrix storage
+if (array_length(m_renderMatrices) < renderQueueSize)
+{
+	for (var i = array_length(m_renderMatrices); i < renderQueueSize; ++i)
+	{
+		m_renderMatrices[i] = matrix_build_identity();
+	}
+}
+
+// Do main pass
 {
 	gpu_set_blendmode(bm_normal);
 	gpu_set_alphatestenable(true);
@@ -17,9 +26,6 @@ var renderMatrixStore = undefined;
 	var mat_view_previous = matrix_get(matrix_view);
 	var mat_projection_previous = matrix_get(matrix_projection);
 	
-	// Set default world matrices
-	renderMatrixStore = array_create(renderQueueSize, mat_world_previous);
-	
 	// For tracking batching with specific shaders
 	var bDrawingWithTreeWiggle = false;
 
@@ -31,13 +37,10 @@ var renderMatrixStore = undefined;
 		try
 		{
 			// Perform depth shift for each object
-			//var mat_offset_depth = matrix_build(0, 0, object.depth, 0,0,0, 1,1,1);
-			//var mat_offset_depth_world = matrix_multiply(mat_world_previous, mat_offset_depth);
-			//matrix_set(matrix_world, mat_offset_depth_world);
-			var world_matx = renderMatrixStore[i];
-			world_matx[14] += object.depth;
-			matrix_set(matrix_world, world_matx);
-			renderMatrixStore[i] = world_matx;
+			m_renderMatrices[i][12] = 0;
+			m_renderMatrices[i][13] = 0;
+			m_renderMatrices[i][14] = object.depth;
+			matrix_set(matrix_world, m_renderMatrices[i]);
 			
 			var func = object.m_depthState.worldDraw;
 			
@@ -122,12 +125,10 @@ surface_set_target(shadow_surface);
 		var object = m_renderQueue[i];
 		
 		// Perform depth shift for each object
-		//var mat_offset_depth = matrix_build(0, 0, object.depth + 0.1, 0,0,0, 1,1,1);
-		//var mat_offset_depth_world = matrix_multiply(mat_offset_world, mat_offset_depth);
-		//matrix_set(matrix_world, mat_offset_depth_world);
-		var world_matx = renderMatrixStore[i];
-		world_matx[14] += 0.1;
-		matrix_set(matrix_world, world_matx);
+		m_renderMatrices[i][12] -= GameCamera.view_x;
+		m_renderMatrices[i][13] -= GameCamera.view_y;
+		m_renderMatrices[i][14] += 0.1;
+		matrix_set(matrix_world, m_renderMatrices[i]);
 		
 		var func = object.m_depthState.shadowDraw; // TODO: All shadows need to be drawn as sprites
 		with (object) func();

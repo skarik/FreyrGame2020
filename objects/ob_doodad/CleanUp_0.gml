@@ -7,3 +7,4 @@ idelete(elevation);
 idelete(particles);
 source_layer = null;
 index = null;
+depthFree();
