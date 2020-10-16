@@ -11,7 +11,9 @@ if (singleton_this()) exit;
 depth = -1;
 persistent = true;
 
-m_objects = ds_list_create();
-m_renderQueue = ds_list_create();
+//m_objects = ds_list_create();
+//m_renderQueue = ds_list_create();
+m_objects = array_create(0);
+m_renderQueue = array_create(0);
 
 m_objectsDirty = true;

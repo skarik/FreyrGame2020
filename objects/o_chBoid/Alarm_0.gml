@@ -1,7 +1,7 @@
 /// @description Update the depth
 
 // Re-Init depth
-depthInit();
+depthReInit();
 // Update depth
 z_height = m_placeHeight;
 y += m_placeHeight;

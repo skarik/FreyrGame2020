@@ -22,21 +22,34 @@ function depthInit()
 	
 	m_depthState = new DepthState();
 	
-	// 1. Get speed numbers with the current rendering
-	// 2. Get speed numbers with the new rendering as it is worked on.
-	
 	// Add item to the rendering list
 	if (!iexists(DepthRenderer))
 	{
 		inew(DepthRenderer);
 	}
-	if (ds_list_find_index(DepthRenderer.m_objects, id) == -1)
+	/*if (ds_list_find_index(DepthRenderer.m_objects, id) == -1)
 	{
 		ds_list_add(DepthRenderer.m_objects, id);
 		DepthRenderer.m_objectsDirty = true;
-	}
+	}*/
+	DepthRenderer.m_objects[array_length(DepthRenderer.m_objects)] = id;
+	DepthRenderer.m_objectsDirty = true;
 	
 	depthUpdate(); // Force depth update now.
+}
+
+///@function depthReinit()
+function depthReInit()
+{
+	z = 0;
+	z_height = 0;
+}
+
+///@function depthFree()
+function depthFree()
+{
+	DepthRenderer.m_objectsDirty = true;
+	delete m_depthState;
 }
 
 ///@function depthUpdate()
